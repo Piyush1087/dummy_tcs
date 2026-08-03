@@ -1,6 +1,6 @@
 id: identity_core_output_contract
-version: 1.0-working
-status: WORKING
+version: 1.0-frozen
+status: FROZEN
 processor: identity_core
 
 purpose: Define the machine-valid structured output for identity_core. Only fields in the active output scope are returned.
@@ -20,21 +20,39 @@ properties:
     type: [string, 'null']
   country:
     type: [string, 'null']
-    normalization: canonical_country_code_or_canonical_country_value_to_freeze
+    normalization: ISO_3166_1_alpha_2
+    examples: [IN, US, GB]
   business_geography:
     type: [object, 'null']
-    schema_status: TO_FREEZE
-    intended_shape:
-      label: string
-      locality: [string, 'null']
-      region: [string, 'null']
-      country: [string, 'null']
+    additional_properties: false
+    properties:
+      label:
+        type: string
+        description: Human-readable normalized place label suitable for UI display, e.g. Kanpur, Uttar Pradesh, India.
+      place_id:
+        type: [string, 'null']
+        description: External place identifier when geography has been resolved through the configured place provider; null is valid for AI-derived pre-confirmation geography.
+      locality:
+        type: [string, 'null']
+      region:
+        type: [string, 'null']
+      country_code:
+        type: [string, 'null']
+        normalization: ISO_3166_1_alpha_2
+      latitude:
+        type: [number, 'null']
+      longitude:
+        type: [number, 'null']
+    required: [label, place_id, locality, region, country_code, latitude, longitude]
+    note: The AI processor may return label/locality/region/country_code with place_id and coordinates null. User manual correction uses the configured Maps/Places search and may populate provider-backed place_id and coordinates without changing the Intelligence Object shape.
   primary_language:
     type: [string, 'null']
-    normalization: canonical_language_code_or_value_to_freeze
+    normalization: ISO_639_1_lowercase
+    examples: [en, hi, fr]
   website_currency:
     type: [string, 'null']
-    normalization: ISO_4217_currency_code
+    normalization: ISO_4217_uppercase
+    examples: [INR, USD, GBP]
   instagram_handle:
     type: [string, 'null']
   youtube_handle:
@@ -54,13 +72,25 @@ scope_validation:
   - Reject extra fields.
 
 normalization_rules:
+  country:
+    storage: ISO_3166_1_alpha_2
+    display: resolve_human_readable_country_name_in_application_layer
+  primary_language:
+    storage: ISO_639_1_lowercase
+    display: resolve_language_label_in_application_layer
+  website_currency:
+    storage: ISO_4217_uppercase
   social_handles:
-    instagram_handle: canonical_handle_without_url_or_at_prefix
-    tiktok_handle: canonical_handle_without_url_or_at_prefix
-    youtube_handle: canonical_channel_handle_or_identifier_to_freeze
-    facebook_handle: canonical_page_identifier_or_slug_to_freeze
-    linkedin_handle: canonical_company_identifier_or_slug_to_freeze
-  website_currency: uppercase_ISO_4217
+    instagram_handle: username_without_url_or_at_prefix
+    tiktok_handle: username_without_url_or_at_prefix
+    youtube_handle: prefer_at_handle_without_at_prefix_when_available_else_stable_channel_identifier
+    facebook_handle: page_slug_or_stable_page_identifier_without_full_url
+    linkedin_handle: company_slug_or_stable_company_identifier_without_full_url
+
+social_handle_rules:
+  - Store identifiers, not complete social URLs, so application URLs can be constructed independently.
+  - Preserve original casing only where platform identity requires it; otherwise use the platform canonical identifier returned/resolved from evidence.
+  - Do not synthesize a handle from brand_name.
 
 runtime_metadata_policy:
   note: Evidence references, model, tokens, latency and failure details are execution/runtime metadata and are not returned as Identity Objects by this contract.
