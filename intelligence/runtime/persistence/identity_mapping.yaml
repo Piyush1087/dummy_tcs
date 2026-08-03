@@ -1,189 +1,172 @@
 id: identity_persistence_mapping
-version: 0.1-working
+version: 0.2-working
 status: WORKING
 engine: brand_intelligence
 branch: identity
+schema_reference: Current Schema 0208 (2026-08-02)
 
-purpose: Map validated Identity Intelligence outputs into the existing canonical application PostgreSQL model wherever possible, while explicitly identifying the minimal backend schema additions/reconciliation still required. This mapping prevents creation of a duplicate Intelligence value store.
+purpose: Map validated Identity outputs into the existing canonical BrandProfile/DiscoveryLead storage and identify only the minimal schema additions required. No duplicate Intelligence value store is introduced.
 
 principles:
-  - Validated Intelligence is persisted into canonical application storage, not into a parallel copy of Brand values.
-  - Intelligence Object definitions govern production/lifecycle; persistence mapping governs where the canonical value lives.
-  - Existing frontend/backend field names must not be renamed merely to make Intelligence naming cleaner.
-  - Existing enum contracts must not be changed silently. Industry enum migration/reconciliation is a developer-controlled schema change.
-  - A mapping marked VERIFY does not authorize runtime persistence until the actual backend field/type has been confirmed.
-  - A mapping marked ADD requires a schema migration before persistence can be enabled for that object.
-  - Runtime provenance belongs to Execution/ProcessorExecution records, not duplicated beside every canonical Brand field for MVP.
-
-entity_target:
-  canonical_model: BrandProfile
-  entity_key: runtime.entity_id
-
-mapping_statuses:
-  EXISTING: existing backend field identified and usable subject to type validation
-  RECONCILE: existing field exists but semantics/type/enum must be reconciled before Intelligence writes
-  VERIFY: prior schema review indicated a likely existing field but exact current field/type must be confirmed
-  ADD: new canonical backend field/structure required
+  - Existing canonical backend fields remain canonical storage targets.
+  - Preserve existing field names and frontend/backend connections.
+  - IndustryVertical remains the current backend source-of-truth enum for industry persistence in MVP; BrandRoutingType remains a separate legacy/routing field and is not renamed or silently replaced.
+  - DiscoveryLead is the canonical pre-BrandProfile store for Gatekeeper/onboarding scan state; BrandProfile is the canonical verified Brand store.
+  - Existing Location rows are physical/service locations and must not be overloaded for business_geography or markets_served.
 
 objects:
   website_url:
-    source: application_input
-    persistence_mode: NO_AI_WRITE
-    target: BrandProfile.existing_field_to_verify
-    status: VERIFY
+    pre_brand_target: DiscoveryLead.normalizedUrl
+    brand_target: BrandProfile.domain
+    status: EXISTING
+    persistence_mode: APPLICATION_INPUT_ONLY
 
   brand_name:
-    source: identity_core.brand_name
-    target: BrandProfile.existing_field_to_verify
-    status: VERIFY
-    write_policy: validated_output_only
+    target: BrandProfile.name
+    db_column: brand_name
+    status: EXISTING
 
   brand_logo:
-    source: identity_core.brand_logo
-    target: BrandProfile.existing_field_to_verify
-    status: VERIFY
-    write_policy: validated_output_only; respect_manual_value_protection_on_refresh
+    target: BrandProfile.logoUrl
+    db_column: logo_url
+    status: EXISTING
 
   tagline:
-    source: identity_core.tagline
     target: BrandProfile.tagline
-    status: ADD
-    suggested_type: text_nullable
+    status: EXISTING
 
   industry:
-    source: industry_classification.gatekeeper.industry
-    target: BrandProfile.industry
-    status: RECONCILE
-    requirement: canonical Industry taxonomy must map to the existing backend enum/field without breaking current frontend/code connections; legacy brandRoutingType must not be silently replaced.
+    pre_brand_target: DiscoveryLead.industry
+    brand_target: BrandProfile.industry
+    type: IndustryVertical
+    status: EXISTING_WITH_CANONICAL_MAPPING
+    note: Intelligence canonical industry labels must map to the existing IndustryVertical values. Do not change enum names or BrandRoutingType connections in this migration.
 
   sub_industry:
-    source: industry_classification.gatekeeper.sub_industry
-    target: BrandProfile.subIndustry
-    status: VERIFY
-    requirement: confirm current field and allowed values before writes.
+    pre_brand_target: DiscoveryLead.subIndustry
+    brand_target: BrandProfile.subIndustry
+    status: EXISTING
 
   industry_niche:
-    source: industry_classification.industry_niche.industry_niche
-    target: BrandProfile.industryNiche
-    status: ADD
-    suggested_type: text_nullable
+    pre_brand_target: DiscoveryLead.industryNiche
+    brand_target: BrandProfile.industryNiche
+    status: EXISTING
 
   country:
-    source: identity_core.country
     target: BrandProfile.countryCode
-    status: RECONCILE
-    requirement: confirm countryCode semantics/type and ensure it represents Identity country rather than a different geography concept.
+    status: EXISTING
+    format: ISO_3166_1_ALPHA_2
 
   business_geography:
-    source: identity_core.business_geography
     target: BrandProfile.businessGeography
     status: ADD
-    suggested_type: jsonb_nullable
-    required_shape: {label: string, place_id: string|null, locality: string|null, region: string|null, country_code: ISO2|null, latitude: number|null, longitude: number|null}
-    note: Do not overload existing physical Location records.
+    prisma_type: Json?
+    db_column: business_geography
+    note: Do not overload Location.
 
   markets_served:
-    source: market_geography.markets_served
     target: BrandProfile.marketsServed
     status: ADD
-    suggested_type: jsonb
-    required_shape: array_of_market_objects_per_frozen_market_geography_contract
-    note: MVP JSONB is appropriate because market scope may represent locality/radius, region, country or global. Normalize to relational tables later only if querying/indexing requirements justify it.
+    prisma_type: Json?
+    db_column: markets_served
+    note: JSONB/Prisma Json is sufficient for MVP and supports locality/radius, region, country and global scopes.
 
   primary_language:
-    source: identity_core.primary_language
     target: BrandProfile.primaryLanguage
     status: ADD
-    suggested_type: varchar_2_nullable
+    prisma_type: String?
+    db_column: primary_language
+    format: ISO_639_1_lowercase
 
   website_currency:
-    source: identity_core.website_currency
     target: BrandProfile.websiteCurrency
     status: ADD
-    suggested_type: varchar_3_nullable_during_scan_required_before_onboarding_checkpoint_commit
-    semantics: website/catalogue currency only; not platform transaction/reporting currency
+    prisma_type: String?
+    db_column: website_currency
+    format: ISO_4217_uppercase
 
   reporting_currency:
-    source: deterministic_runtime.reporting_currency
     target: BrandProfile.currencyCode
-    status: RECONCILE
+    status: EXISTING
     allowed_values: [INR, USD]
-    semantics: Creator Shop reporting/transaction currency
-    requirement: confirm existing currencyCode currently has these semantics before reusing it.
+    note: Existing field is retained as platform reporting/transaction currency; default USD remains untouched by this patch.
 
   instagram_handle:
-    source: identity_core.instagram_handle
     target: BrandProfile.igHandle
     status: EXISTING
 
   youtube_handle:
-    source: identity_core.youtube_handle
     target: BrandProfile.ytHandle
     status: EXISTING
 
   tiktok_handle:
-    source: identity_core.tiktok_handle
     target: BrandProfile.tiktokHandle
     status: EXISTING
 
   facebook_handle:
-    source: identity_core.facebook_handle
     target: BrandProfile.facebookHandle
     status: ADD
-    suggested_type: text_nullable
+    prisma_type: String?
+    db_column: facebook_handle
 
   linkedin_handle:
-    source: identity_core.linkedin_handle
     target: BrandProfile.linkedinHandle
     status: ADD
-    suggested_type: text_nullable
+    prisma_type: String?
+    db_column: linkedin_handle
+
+schema_patch_required:
+  BrandProfile:
+    add:
+      - businessGeography Json? @map("business_geography")
+      - marketsServed Json? @map("markets_served")
+      - primaryLanguage String? @map("primary_language")
+      - websiteCurrency String? @map("website_currency")
+      - facebookHandle String? @map("facebook_handle")
+      - linkedinHandle String? @map("linkedin_handle")
+  no_change_required:
+    - domain
+    - name
+    - industry
+    - subIndustry
+    - industryNiche
+    - logoUrl
+    - tagline
+    - countryCode
+    - currencyCode
+    - igHandle
+    - ytHandle
+    - tiktokHandle
+    - brandRoutingType
+
+industry_compatibility:
+  backend_enum: IndustryVertical
+  existing_values_include: [D2C, SAAS_AI, HEALTHCARE, OFFLINE_SERVICES]
+  intelligence_to_backend:
+    D2C: D2C
+    AI_SAAS: SAAS_AI
+    HEALTHCARE: HEALTHCARE
+    OFFLINE_EXPERIENCES_SERVICES: OFFLINE_SERVICES
+  rule: This adapter mapping protects existing database/frontend enum contracts. Intelligence nomenclature does not require renaming the deployed enum.
 
 write_contract:
-  preconditions:
-    - processor output passed authoritative runtime validation
-    - entity_id resolves to the canonical BrandProfile
-    - target mapping status is EXISTING or a resolved VERIFY/RECONCILE/ADD migration is present in deployed schema
-    - write does not violate object lifecycle/manual-value protection
-  transaction_boundary:
-    - Persist all validated outputs from one processor execution atomically where they target the same canonical entity transaction.
-    - If persistence fails, ProcessorExecution becomes FAILED_PERSISTENCE; do not mark the processor successful.
-    - Outputs from independent parallel processors may commit independently after their own validation unless an Execution Profile explicitly requires atomic cross-processor commit.
-  null_behavior:
-    - Persist null only when the active output contract permits null and lifecycle/write policy permits replacement.
-    - Refresh execution must not overwrite a protected manual value with null.
-  extra_output_behavior: REJECT_BEFORE_PERSISTENCE
+  - Only authoritative validated output may persist.
+  - One processor execution writes atomically to its target entity.
+  - Refresh respects manual-value protection.
+  - Null cannot overwrite a protected manual value.
+  - Gatekeeper values may persist to DiscoveryLead before BrandProfile exists.
+  - Canonical BrandProfile values are committed according to onboarding verification/checkpoint lifecycle, not merely because an AI processor returned them.
 
 identity_test_policy:
   recommended_first_runs: persist_results=false
-  enable_canonical_writes_when:
-    - all Identity mappings used by the selected active outputs are resolved against the actual deployed backend schema
-    - required schema additions are migrated
-    - persistence adapter integration tests pass
-  note: identity_test can validate extraction/model/runtime before canonical writes are enabled.
-
-schema_change_summary_for_developer:
-  verify_existing:
-    - website URL field
-    - brand name field
-    - brand logo field
-    - subIndustry field
-  reconcile_existing:
-    - industry / legacy brandRoutingType enum relationship
-    - countryCode semantics
-    - currencyCode semantics as reporting_currency
-  add_if_not_already_present:
-    - tagline
-    - industryNiche
-    - businessGeography JSONB
-    - marketsServed JSONB
-    - primaryLanguage
-    - websiteCurrency
-    - facebookHandle
-    - linkedinHandle
+  persist_results_true_allowed_after:
+    - six new BrandProfile fields are deployed
+    - Industry canonical mapping is implemented in persistence adapter
+    - integration tests confirm existing field semantics
 
 non_goals:
-  - define the complete BrandProfile schema
-  - modify unrelated backend fields
-  - define frontend forms
-  - create provenance/history tables for every value
-  - replace existing Location models
+  - rename IndustryVertical
+  - rename/remove BrandRoutingType
+  - change existing frontend contracts
+  - alter Location model
+  - redesign unrelated BrandProfile fields
