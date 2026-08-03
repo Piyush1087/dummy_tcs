@@ -1,0 +1,37 @@
+id: industry_classification_taxonomy
+version: 1.0-working
+status: WORKING
+processor: industry_classification
+
+purpose: Canonical allowed classification hierarchy and precedence rules used by industry_classification.
+
+# IMPORTANT: taxonomy values below are not yet frozen. They must be reconciled with
+# the current Creator Shop supported-industry routing and the earlier taxonomy decisions
+# before this artifact becomes executable.
+
+classification_principles:
+  - Industry is the stable top-level business category.
+  - Sub-industry is constrained by industry.
+  - Industry niche is a more specific specialization and may be null.
+  - Taxonomy should classify the business, not merely the website content topic.
+  - D2C/ecommerce, AI/SaaS, Healthcare and Offline Experiences/Services require explicit precedence/routing treatment based on the platform's existing classification decisions.
+  - Pharma must not be silently classified as Healthcare; earlier architecture places Pharma under Manufacturing unless deliberately revised.
+
+hierarchy:
+  status: TO_POPULATE_FROM_CANONICAL_TAXONOMY
+  industries: []
+
+precedence_rules:
+  status: TO_RECONCILE
+  known_prior_rule:
+    - D2C
+    - AI_SaaS
+    - Healthcare
+    - Offline_Experiences_Services
+    - Others
+
+validation:
+  industry_must_exist_in_taxonomy: true
+  sub_industry_must_belong_to_industry: true
+  niche_must_be_compatible_with_industry_and_sub_industry: true
+  allow_null_niche: true
