@@ -1,0 +1,66 @@
+id: identity_core_output_contract
+version: 1.0-working
+status: WORKING
+processor: identity_core
+
+purpose: Define the machine-valid structured output for identity_core. Only fields in the active output scope are returned.
+
+response:
+  type: object
+  additional_properties: false
+  active_scope_only: true
+
+properties:
+  brand_name:
+    type: [string, 'null']
+  brand_logo:
+    type: [string, 'null']
+    description: Evidence-backed logo asset reference or URL.
+  tagline:
+    type: [string, 'null']
+  country:
+    type: [string, 'null']
+    normalization: canonical_country_code_or_canonical_country_value_to_freeze
+  business_geography:
+    type: [object, 'null']
+    schema_status: TO_FREEZE
+    intended_shape:
+      label: string
+      locality: [string, 'null']
+      region: [string, 'null']
+      country: [string, 'null']
+  primary_language:
+    type: [string, 'null']
+    normalization: canonical_language_code_or_value_to_freeze
+  website_currency:
+    type: [string, 'null']
+    normalization: ISO_4217_currency_code
+  instagram_handle:
+    type: [string, 'null']
+  youtube_handle:
+    type: [string, 'null']
+  tiktok_handle:
+    type: [string, 'null']
+  facebook_handle:
+    type: [string, 'null']
+  linkedin_handle:
+    type: [string, 'null']
+
+scope_validation:
+  - Return exactly the objects requested in active_output_scope.
+  - Do not return reporting_currency; it is deterministic post-processing from country.
+  - Do not return industry, sub_industry, industry_niche or markets; they are owned by other processor scopes.
+  - Nullable outputs are allowed where evidence is insufficient, subject to execution-profile requirements for onboarding-critical fields.
+  - Reject extra fields.
+
+normalization_rules:
+  social_handles:
+    instagram_handle: canonical_handle_without_url_or_at_prefix
+    tiktok_handle: canonical_handle_without_url_or_at_prefix
+    youtube_handle: canonical_channel_handle_or_identifier_to_freeze
+    facebook_handle: canonical_page_identifier_or_slug_to_freeze
+    linkedin_handle: canonical_company_identifier_or_slug_to_freeze
+  website_currency: uppercase_ISO_4217
+
+runtime_metadata_policy:
+  note: Evidence references, model, tokens, latency and failure details are execution/runtime metadata and are not returned as Identity Objects by this contract.
