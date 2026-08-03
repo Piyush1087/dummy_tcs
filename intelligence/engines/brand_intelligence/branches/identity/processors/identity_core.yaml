@@ -1,5 +1,6 @@
 id: identity_core
-version: 1.0-working
+version: 1.0-frozen
+status: FROZEN
 engine: brand_intelligence
 branch: identity
 executor: ai
@@ -30,20 +31,26 @@ inputs:
     - structured_metadata_evidence
 
 input_policy:
-  required_means: Processor cannot execute without this input.
+  required_means: Processor cannot execute the relevant scope without this input.
   optional_means: Absence does not block execution and must not cause fabricated output.
+
+execution:
+  can_run_independently: true
+  partial_output_supported: true
+  protected_output_policy: Compiler removes permanently locked or manual-protected objects from active output scope before execution.
+
+post_processing:
+  reporting_currency:
+    source: country
+    type: deterministic_derivation
+    rule: India=INR; United_States=USD; Rest_of_World=USD
+    note: reporting_currency is an Identity object but does not require its own processor or AI output.
 
 artifacts:
   reasoning: to_define
-  taxonomy: none_or_to_define_for_geography_language
+  taxonomy: to_define_only_where_needed
   examples: to_define_if_needed
   output_contract: to_define
-
-execution:
-  blocking: true
-  can_run_independently: true
-  partial_output_supported: true
-  note: Compiler may request only a subset of outputs and should remove protected/manual outputs from active scope before execution.
 
 failure_policy:
   fail_if_required_input_missing: true
