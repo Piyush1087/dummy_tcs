@@ -1,6 +1,6 @@
 id: identity_core_reasoning
-version: 1.0-working
-status: WORKING
+version: 1.0-frozen
+status: FROZEN
 processor: identity_core
 
 purpose: Resolve core owned-brand Identity Objects from normalized Website Evidence while preserving the distinction between explicit evidence, candidate signals and canonical intelligence.
@@ -48,6 +48,7 @@ object_reasoning:
 
   country:
     objective: Resolve the primary country in which the brand/business is based for Creator Shop identity and routing.
+    output_normalization: ISO_3166_1_alpha_2
     strong_signals:
       - explicit owned-site address/business location
       - contact/about/legal business information
@@ -63,17 +64,20 @@ object_reasoning:
       - Prefer explicit business/organization location evidence over market-facing claims.
 
   business_geography:
-    objective: Resolve useful business-base geography below/alongside country when evidence supports it.
+    objective: Resolve the primary business-base geography when evidence supports it.
     strong_signals:
       - explicit headquarters/business address
       - explicit clinic/store/studio/company base when representing the primary business base
     rules:
       - Do not convert every physical branch/location into the canonical business geography.
       - Do not use markets served as business geography.
+      - AI-derived geography may contain normalized label/locality/region/country while provider place_id and coordinates remain null.
+      - A later user correction through the configured Maps/Places search may resolve the same object to a provider-backed place without changing the object shape.
       - Return null when no stable primary business-base geography can be established.
 
   primary_language:
     objective: Identify the primary language actually used in owned brand communication.
+    output_normalization: ISO_639_1_lowercase
     strong_signals:
       - dominant language of homepage main content
       - dominant language across available core owned pages
@@ -83,6 +87,7 @@ object_reasoning:
 
   website_currency:
     objective: Resolve the primary currency displayed/transacted on the website for catalogue/context purposes.
+    output_normalization: ISO_4217_uppercase
     strong_signals:
       - explicit product/service prices with currency
       - checkout/catalogue currency signals available in Website Evidence
@@ -92,15 +97,10 @@ object_reasoning:
     rules:
       - Website currency is not reporting_currency.
       - Do not derive website currency solely from country.
-      - When multiple currencies are supported, select the site's observed primary/default currency according to the output contract; do not list every supported currency unless the object contract later changes.
+      - When multiple currencies are supported, select the site's observed primary/default currency; do not list every supported currency unless the Intelligence Object contract later changes.
 
   social_handles:
-    outputs:
-      - instagram_handle
-      - youtube_handle
-      - tiktok_handle
-      - facebook_handle
-      - linkedin_handle
+    outputs: [instagram_handle, youtube_handle, tiktok_handle, facebook_handle, linkedin_handle]
     objective: Resolve official brand-owned social profiles linked or strongly evidenced by the owned website.
     strong_signals:
       - social links in persistent header/footer/navigation
@@ -110,12 +110,13 @@ object_reasoning:
       - Prefer profiles directly linked from the owned website.
       - Do not infer a handle from the brand name alone.
       - Do not treat share buttons, creator/employee profiles or unrelated partner accounts as official brand handles.
-      - Normalize platform URLs to the canonical handle/page identifier expected by the output contract.
+      - Normalize platform URLs to the identifier format defined by the output contract.
       - Return null independently for any platform without defensible evidence.
 
 cross_object_consistency:
-  - brand_name, logo and social handles should describe the same represented brand/entity.
-  - country/business_geography must not be inferred from markets served.
+  - brand_name, brand_logo and social handles should describe the same represented brand/entity.
+  - country and business_geography must not be inferred from markets served.
+  - business_geography.country_code should agree with country when both are resolved; conflicting evidence must not be silently normalized away.
   - website_currency must not determine reporting_currency; reporting_currency is deterministic post-processing from canonical country.
   - Null on one optional object must not invalidate unrelated resolved objects.
 
