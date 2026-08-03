@@ -1,37 +1,89 @@
 id: industry_classification_taxonomy
-version: 1.0-working
+version: 1.1-working
 status: WORKING
 processor: industry_classification
 
-purpose: Canonical allowed classification hierarchy and precedence rules used by industry_classification.
+purpose: Canonical allowed classification hierarchy and compatibility mapping used by industry_classification.
 
-# IMPORTANT: taxonomy values below are not yet frozen. They must be reconciled with
-# the current Creator Shop supported-industry routing and the earlier taxonomy decisions
-# before this artifact becomes executable.
+canonical_industry_contract:
+  status: FROZEN
+  source_of_truth_for_new_intelligence: this_taxonomy
+  values:
+    - D2C
+    - AI_SAAS
+    - HEALTHCARE
+    - OFFLINE_EXPERIENCES
+
+  rule: All new Intelligence Engine outputs, artifacts and processor contracts must use only these canonical IDs. Legacy application enum names must not leak into new intelligence outputs.
+
+legacy_compatibility:
+  migration_status: DO_NOT_RENAME_EXISTING_ENUMS_YET
+  purpose: Allow the new Intelligence Engine to coexist with the current backend/frontend until the developer performs a controlled application migration.
+
+  BrandRoutingType:
+    D2C_SKINCARE: D2C
+    SAAS_PRODUCT: AI_SAAS
+    HEALTHCARE_TREATMENT: HEALTHCARE
+    OFFLINE_EXPERIENCE: OFFLINE_EXPERIENCES
+
+  CollaborationIndustryType:
+    D2C_ECOMMERCE: D2C
+    AI_SAAS: AI_SAAS
+    HEALTHCARE_CLINICAL: HEALTHCARE
+    OFFLINE_EXPERIENCES: OFFLINE_EXPERIENCES
+
+  adapter_rule: At legacy application boundaries, translate canonical Industry values to/from the legacy enum expected by that boundary. Do not change canonical Intelligence values to match legacy nomenclature.
+
+  future_migration_target:
+    recommended_enum_name: Industry
+    values:
+      - D2C
+      - AI_SAAS
+      - HEALTHCARE
+      - OFFLINE_EXPERIENCES
+    note: Exact Prisma field/enum migration is a developer task after repository-wide dependency audit. Existing enums should not be renamed or removed as part of building the Intelligence Engine.
 
 classification_principles:
-  - Industry is the stable top-level business category.
+  - Industry is the stable top-level platform business category.
   - Sub-industry is constrained by industry.
   - Industry niche is a more specific specialization and may be null.
-  - Taxonomy should classify the business, not merely the website content topic.
-  - D2C/ecommerce, AI/SaaS, Healthcare and Offline Experiences/Services require explicit precedence/routing treatment based on the platform's existing classification decisions.
-  - Pharma must not be silently classified as Healthcare; earlier architecture places Pharma under Manufacturing unless deliberately revised.
+  - Taxonomy classifies the business, not merely the website content topic.
+  - Canonical industry IDs are implementation-stable identifiers; user-facing labels may be formatted separately.
+  - Pharma must not be silently classified as HEALTHCARE. If future platform scope requires Pharma, its canonical placement must be deliberately defined rather than inferred from legacy nomenclature.
 
 hierarchy:
-  status: TO_POPULATE_FROM_CANONICAL_TAXONOMY
-  industries: []
+  industry_level:
+    status: FROZEN
+    industries:
+      - id: D2C
+        label: D2C
+      - id: AI_SAAS
+        label: AI / SaaS
+      - id: HEALTHCARE
+        label: Healthcare
+      - id: OFFLINE_EXPERIENCES
+        label: Offline Experiences / Services
+
+  sub_industry_level:
+    status: TO_DEFINE_NEXT
+    values: []
+
+  niche_level:
+    status: TO_DEFINE_AFTER_SUB_INDUSTRY
+    values: []
 
 precedence_rules:
-  status: TO_RECONCILE
-  known_prior_rule:
+  status: WORKING
+  order:
     - D2C
-    - AI_SaaS
-    - Healthcare
-    - Offline_Experiences_Services
-    - Others
+    - AI_SAAS
+    - HEALTHCARE
+    - OFFLINE_EXPERIENCES
+  note: Precedence applies only when a business plausibly matches multiple platform industries. Detailed boundary rules will be defined alongside sub-industry taxonomy/examples.
 
 validation:
-  industry_must_exist_in_taxonomy: true
+  industry_must_be_one_of_canonical_values: true
+  legacy_values_rejected_from_new_intelligence_output: true
   sub_industry_must_belong_to_industry: true
   niche_must_be_compatible_with_industry_and_sub_industry: true
   allow_null_niche: true
