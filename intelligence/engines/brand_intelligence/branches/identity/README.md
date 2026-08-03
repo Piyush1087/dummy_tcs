@@ -164,11 +164,10 @@ The Intelligence Compiler must not remain alive waiting for user action.
 ## Files
 
 - `objects.yaml` — canonical Identity object definitions and lifecycle/storage metadata.
-- `processors/` — processor definitions.
-- `evidence/evidence.yaml` — normalized Evidence contract.
-- `artifacts/` — processor reasoning/taxonomy/output contracts where required.
-- `validation.yaml` — Identity integrity rules.
-- `../../../execution_profiles/identity_onboarding.yaml` — machine-readable onboarding orchestration profile.
+- `processors/` — frozen processor definitions.
+- `evidence/evidence.yaml` — frozen normalized Evidence contract.
+- `artifacts/` — frozen processor reasoning/taxonomy/output contracts where required.
+- `../../../../execution_profiles/identity_onboarding.yaml` — frozen machine-readable onboarding orchestration profile.
 
 ## Freeze result
 
