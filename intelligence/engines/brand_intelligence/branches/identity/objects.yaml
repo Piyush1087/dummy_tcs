@@ -1,0 +1,186 @@
+version: 1.0-working
+engine: brand_intelligence
+branch: identity
+entity_type: brand
+
+objects:
+  - id: website_url
+    class: input_immutable
+    definition: Canonical website URL/domain used to identify the brand.
+    required: true
+    producer: user_input_normalization
+    checkpoint: display_only
+    editable: false
+    refreshable: false
+    backend: BrandProfile.existing_field_to_verify
+
+  - id: brand_name
+    class: confirm_once_lock
+    definition: Canonical consumer-facing brand name.
+    required: true
+    producer: identity_core
+    evidence_required: true
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.existing_field_to_verify
+
+  - id: brand_logo
+    class: asset
+    definition: Primary brand logo asset.
+    required: false
+    producer: identity_core
+    evidence_required: true
+    lifecycle: to_freeze
+    backend: BrandProfile.existing_field_to_verify
+
+  - id: tagline
+    class: intelligence
+    definition: Primary explicit brand tagline when supported by evidence.
+    required: false
+    producer: identity_core
+    evidence_required: true
+    lifecycle: to_freeze
+    backend: BrandProfile.field_to_verify_or_add
+
+  - id: industry
+    class: confirm_once_lock
+    definition: Canonical top-level industry used for platform routing and intelligence.
+    required: true
+    producer: industry_classification
+    evidence_required: true
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.brandRoutingType_to_reconcile
+
+  - id: sub_industry
+    class: confirm_once_lock
+    definition: Canonical sub-industry within the confirmed industry.
+    required: true
+    producer: industry_classification
+    evidence_required: true
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.existing_field_to_verify
+
+  - id: industry_niche
+    class: intelligence
+    definition: More specific operating niche within industry/sub-industry when useful downstream.
+    required: false
+    producer: industry_niche_classification
+    evidence_required: true
+    lifecycle: to_freeze
+    backend: BrandProfile.existing_field_to_verify
+
+  - id: country
+    class: confirm_once_lock
+    definition: Country in which the brand/business or parent organization is based for platform identity purposes.
+    required: true
+    producer: identity_core
+    evidence_required: true
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.existing_field_to_verify
+
+  - id: business_geography
+    class: intelligence
+    definition: More precise business-base geography when useful beyond country; not the markets served.
+    required: false
+    producer: identity_core
+    evidence_required: true
+    lifecycle: relationship_with_country_to_freeze
+    backend: structure_to_reconcile
+
+  - id: markets
+    class: intelligence
+    definition: Geographic markets actively served or targeted; supports local/radius, country, multi-country and global scope.
+    required: false
+    producer: market_geography
+    evidence_required: true
+    lifecycle: to_freeze
+    backend: new_field_or_model_required
+
+  - id: primary_language
+    class: intelligence
+    definition: Primary language used in the brand's owned communication.
+    required: false
+    producer: identity_core
+    evidence_required: true
+    lifecycle: to_freeze
+    backend: BrandProfile.new_field_likely_required
+
+  - id: website_currency
+    class: confirm_once_lock
+    definition: Primary currency displayed/transacted on the brand website; used as website/catalogue context.
+    required: true
+    producer: identity_core
+    evidence_required: true
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.currency_semantics_to_reconcile
+
+  - id: reporting_currency
+    class: derived_locked
+    definition: Platform reporting and transaction currency.
+    required: true
+    producer: platform_currency_resolver
+    allowed_values: [INR, USD]
+    depends_on: [country]
+    rule: India=INR; United_States=USD; Rest_of_World=USD
+    editable: false
+    refreshable: only_if_country_changes_before_confirmation
+    backend: BrandProfile.currency_semantics_to_reconcile
+
+  - id: instagram_handle
+    class: confirm_once_lock
+    required: false
+    producer: identity_core
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.igHandle
+
+  - id: youtube_handle
+    class: confirm_once_lock
+    required: false
+    producer: identity_core
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.ytHandle
+
+  - id: tiktok_handle
+    class: confirm_once_lock
+    required: false
+    producer: identity_core
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.tiktokHandle
+
+  - id: facebook_handle
+    class: confirm_once_lock
+    required: false
+    producer: identity_core
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.new_field_likely_required
+
+  - id: linkedin_handle
+    class: confirm_once_lock
+    required: false
+    producer: identity_core
+    checkpoint: editable_once
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    backend: BrandProfile.new_field_likely_required
+
+notes:
+  - supported_industry is a deterministic workflow eligibility decision derived from industry, not a canonical Identity object.
+  - existing Location records describe physical locations and are not assumed to represent served markets.
+  - lifecycle values marked to_freeze remain open until object semantics are reviewed.
