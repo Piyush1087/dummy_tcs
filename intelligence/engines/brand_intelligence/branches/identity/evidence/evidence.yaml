@@ -1,0 +1,241 @@
+version: 1.0-working
+status: WORKING
+engine: brand_intelligence
+branch: identity
+
+# Evidence is normalized factual input available to processors.
+# Evidence is not an Intelligence Object and does not itself represent a business conclusion.
+# Acquisition implementation may change without changing processor/output ownership.
+
+principles:
+  - Evidence should preserve source/provenance.
+  - Normalization should remove page noise without converting evidence into business conclusions.
+  - Missing optional evidence must remain missing; normalizers must not invent values.
+  - Processors may combine evidence from multiple sources.
+  - Observed audience/demand geography does not by itself prove that a market is commercially served.
+
+sources:
+  website_direct:
+    description: Website accessed directly by an AI model when a processor explicitly supports direct-web acquisition.
+    current_use:
+      - industry_classification gatekeeper scope
+    current_provider: Gemini
+    replaceable: true
+
+  website_normalized:
+    description: Website content acquired and converted into normalized evidence before processor reasoning.
+    current_acquisition: Zyte
+    current_normalization: Cheerio_and_deterministic_cleaning
+    replaceable: true
+
+  similarweb:
+    description: Normalized website traffic/geography signals obtained from the configured Similarweb acquisition path.
+    availability: optional
+
+  instagram:
+    description: Normalized Instagram signals obtained through approved Meta/API integrations.
+    availability: optional_and_connection_dependent
+
+contracts:
+  normalized_homepage_evidence:
+    source: website_normalized
+    page_type: homepage
+    required_for:
+      - identity_core
+      - market_geography
+      - industry_classification.industry_niche_scope
+    fields:
+      source_url: required
+      fetched_at: required
+      page_title: optional
+      meta_description: optional
+      canonical_url: optional
+      headings: optional_array
+      visible_text: optional
+      navigation_text: optional_array
+      internal_links: optional_array
+      external_links: optional_array
+      image_candidates: optional_array
+      social_link_candidates: optional_array
+      structured_data: optional
+      currency_signals: optional_array
+      geography_signals: optional_array
+      language_signals: optional_array
+    note: Raw HTML may be retained by acquisition/storage for traceability but is not the preferred processor input.
+
+  normalized_about_evidence:
+    source: website_normalized
+    page_type: about
+    required_for: []
+    optional_for:
+      - identity_core
+      - industry_classification
+      - market_geography
+    fields:
+      source_url: required
+      fetched_at: required
+      page_title: optional
+      headings: optional_array
+      visible_text: optional
+      organization_statements: optional_array
+      geography_signals: optional_array
+      language_signals: optional_array
+    absence_policy: No About page must not block any Identity processor.
+
+  normalized_contact_evidence:
+    source: website_normalized
+    page_type: contact
+    required_for: []
+    optional_for:
+      - identity_core
+      - market_geography
+    fields:
+      source_url: required
+      fetched_at: required
+      visible_text: optional
+      address_candidates: optional_array
+      phone_country_signals: optional_array
+      geography_signals: optional_array
+      social_link_candidates: optional_array
+    absence_policy: No Contact page must not block any Identity processor.
+
+  structured_metadata_evidence:
+    source: website_normalized
+    required_for: []
+    optional_for:
+      - identity_core
+    fields:
+      source_url: required
+      fetched_at: required
+      json_ld: optional
+      open_graph: optional
+      twitter_card: optional
+      favicon_candidates: optional_array
+      organization_name_candidates: optional_array
+      logo_candidates: optional_array
+      social_profile_candidates: optional_array
+    note: Structured metadata is evidence, not automatically authoritative identity.
+
+  normalized_offering_summary_evidence:
+    source: website_normalized
+    required_for: []
+    optional_for:
+      - industry_classification.industry_niche_scope
+      - market_geography
+    fields:
+      source_urls: required_array
+      fetched_at: required
+      offering_labels: optional_array
+      offering_descriptions: optional_array
+      service_area_statements: optional_array
+      shipping_statements: optional_array
+    note: This is a factual summary of observed offerings, not Product Intelligence.
+
+  normalized_location_evidence:
+    source: website_normalized
+    required_for: []
+    optional_for:
+      - market_geography
+    fields:
+      source_urls: required_array
+      fetched_at: required
+      location_candidates: optional_array
+      address_candidates: optional_array
+      locality_candidates: optional_array
+      region_candidates: optional_array
+      country_candidates: optional_array
+      radius_or_service_area_statements: optional_array
+    note: Physical business locations are not automatically equivalent to markets served.
+
+  normalized_shipping_or_service_area_evidence:
+    source: website_normalized
+    required_for: []
+    optional_for:
+      - market_geography
+    fields:
+      source_urls: required_array
+      fetched_at: required
+      shipping_destinations: optional_array
+      excluded_destinations: optional_array
+      service_areas: optional_array
+      radius_statements: optional_array
+      global_service_claim: optional_boolean
+    note: This evidence has stronger meaning for actual service availability than traffic or audience geography.
+
+  similarweb_geography_evidence:
+    source: similarweb
+    required_for: []
+    optional_for:
+      - market_geography
+    fields:
+      observed_at: required
+      domain: required
+      country_traffic_share: optional_array
+      top_countries: optional_array
+      source_method: required
+    interpretation: Observed website demand/traffic geography; does not independently prove commercial availability.
+
+  instagram_audience_geography_evidence:
+    source: instagram
+    required_for: []
+    optional_for:
+      - market_geography
+    fields:
+      observed_at: required
+      instagram_account_id: required
+      audience_country_distribution: optional_array
+      audience_city_distribution: optional_array
+      source_method: required
+    availability_policy: Empty/unavailable when required Meta permissions or connected account data are absent.
+    interpretation: Audience geography; supporting evidence only and not independent proof of markets served.
+
+processor_input_map:
+  industry_classification:
+    gatekeeper_scope:
+      acquisition: website_direct
+      required:
+        - website_url
+      optional: []
+    industry_niche_scope:
+      acquisition: website_normalized
+      required:
+        - normalized_homepage_evidence
+      intelligence_dependencies:
+        - industry
+        - sub_industry
+      optional:
+        - normalized_about_evidence
+        - normalized_offering_summary_evidence
+
+  identity_core:
+    acquisition: website_normalized
+    required:
+      - normalized_homepage_evidence
+    runtime_context:
+      - website_url
+    optional:
+      - normalized_about_evidence
+      - normalized_contact_evidence
+      - structured_metadata_evidence
+
+  market_geography:
+    acquisition: multi_source
+    required:
+      - normalized_homepage_evidence
+    intelligence_dependencies:
+      - country
+    optional:
+      - business_geography
+      - normalized_about_evidence
+      - normalized_contact_evidence
+      - normalized_location_evidence
+      - normalized_shipping_or_service_area_evidence
+      - normalized_offering_summary_evidence
+      - similarweb_geography_evidence
+      - instagram_audience_geography_evidence
+
+open_implementation_questions:
+  - Exact normalized evidence storage model and retention policy.
+  - Whether page-level evidence contracts remain one global website evidence schema with page_type instead of separate named contracts.
+  - Exact Similarweb acquisition implementation for MVP.
+  - Exact Meta audience geography fields available under approved permissions at implementation time.
