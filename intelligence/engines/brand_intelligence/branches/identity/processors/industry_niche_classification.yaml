@@ -1,0 +1,35 @@
+id: industry_niche_classification
+version: 1.0-working
+engine: brand_intelligence
+branch: identity
+executor: ai
+
+purpose: Identify the brand's more specific operating niche within its confirmed industry and sub-industry when evidence supports one.
+
+outputs:
+  - industry_niche
+
+inputs:
+  required:
+    - industry
+    - sub_industry
+    - normalized_homepage_evidence
+  optional:
+    - normalized_about_evidence
+    - normalized_offering_summary_evidence
+
+artifacts:
+  reasoning: to_define
+  taxonomy: to_define
+  examples: to_define_if_needed
+  output_contract: to_define
+
+execution:
+  blocking: false
+  can_run_independently: true
+  partial_output_supported: false
+
+failure_policy:
+  fail_if_required_input_missing: true
+  nullable_output_allowed: true
+  no_silent_default: true
