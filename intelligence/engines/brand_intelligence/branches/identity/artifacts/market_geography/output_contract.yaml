@@ -1,5 +1,5 @@
 id: market_geography_output_contract
-version: 1.0-frozen
+version: 1.1-frozen
 status: FROZEN
 processor: market_geography
 
@@ -18,22 +18,13 @@ response:
         additional_properties: false
         required: [scope, label, country_code, locality, region, radius_km, is_primary]
         properties:
-          scope:
-            type: string
-            enum: [LOCALITY, REGION, COUNTRY, GLOBAL]
-          label:
-            type: string
-          country_code:
-            type: [string, 'null']
-            normalization: ISO_3166_1_alpha_2
-          locality:
-            type: [string, 'null']
-          region:
-            type: [string, 'null']
-          radius_km:
-            type: [number, 'null']
-          is_primary:
-            type: boolean
+          scope: {type: string, enum: [LOCALITY, REGION, COUNTRY, GLOBAL]}
+          label: {type: string}
+          country_code: {type: [string, 'null'], normalization: ISO_3166_1_alpha_2}
+          locality: {type: [string, 'null']}
+          region: {type: [string, 'null']}
+          radius_km: {type: [number, 'null']}
+          is_primary: {type: boolean}
 
 invariants:
   - markets_served must contain at least one resolved market.
@@ -44,7 +35,8 @@ invariants:
   - REGION should include country_code when known and a non-null region.
   - Multiple markets may be marked primary when evidence supports multiple meaningful primary markets.
   - Similarweb or Instagram geography alone must not create a served market that contradicts owned-site commercial availability.
-  - Fallback to business_geography/country is valid when stronger market evidence is unavailable.
+  - When market evidence is insufficient, fallback must follow market_geography_reasoning business-model-aware policy: location-bound may use business_geography then country; nationally deliverable, digitally deliverable and multi-market businesses fall back to country rather than headquarters locality.
+  - GLOBAL must never be created merely because a digital product is technically accessible worldwide.
 
 examples:
   local_clinic:
@@ -53,7 +45,7 @@ examples:
   domestic_ecommerce:
     markets_served:
       - {scope: COUNTRY, label: India, country_code: IN, locality: null, region: null, radius_km: null, is_primary: true}
-  global_saas:
+  global_saas_when_supported_by_evidence:
     markets_served:
       - {scope: GLOBAL, label: Global, country_code: null, locality: null, region: null, radius_km: null, is_primary: true}
 
