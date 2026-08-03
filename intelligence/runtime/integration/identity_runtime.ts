@@ -8,11 +8,18 @@ export function createIdentityRuntime(deps: IdentityRuntimeDependencies) {
    try{
     const [processorDefinition,globalArtifacts,processorArtifacts,objects,modelRuntime,evidence]=await Promise.all([
      deps.definitions.loadProcessor(task.processorId,task.processorScope),deps.definitions.loadGlobalArtifacts(),deps.definitions.loadProcessorArtifacts(task.processorId,task.processorScope),deps.definitions.loadObjects(task.activeOutputs),deps.models.resolve(task.processorId,task.processorScope),deps.evidence.getEvidence({task,websiteUrl:request.websiteUrl,entityId:request.entityId})]);
-    const promptPackage=await deps.prompts.build({executionContext:{execution_id:executionId,processor_execution_id:processorExecutionId,entity_type:request.entityType,entity_id:request.entityId,processor_id:task.processorId,processor_scope:task.processorScope,active_outputs:task.activeOutputs},processorDefinition,globalArtifacts,processorArtifacts,intelligenceObjects:objects,canonicalDependencies,evidence,resolvedModelRuntime:modelRuntime});
+    const promptPackage=await deps.prompts.build({
+     executionContext:{execution_id:executionId,processor_execution_id:processorExecutionId,entity_type:request.entityType,entity_id:request.entityId,processor_id:task.processorId,processor_scope:task.processorScope,active_outputs:task.activeOutputs},
+     processorDefinition,globalArtifacts,processorArtifacts,intelligenceObjects:objects,canonicalDependencies,
+     requiredDependencyIds: task.canonicalDependencies ?? [],
+     evidence,
+     evidenceRequired: modelRuntime.access_mode === "normalized_evidence",
+     resolvedModelRuntime:modelRuntime
+    });
     const provider=await deps.provider.execute({promptPackage,resolvedModelRuntime:modelRuntime,websiteUrl:request.websiteUrl}); const validated=await deps.validator.validate({task,rawOutput:provider.output});
     if(!validated.ok||!validated.data){const result:TaskResult={taskId:task.id,state:"FAILED_VALIDATION",error:validated.error??{code:"OUTPUT_VALIDATION_FAILED",message:"Output failed validation"},metadata:provider.metadata};await deps.telemetry.taskFinished(processorExecutionId,result);return result;}
     try{await deps.persistence.persist({task,entityId:request.entityId,values:validated.data,persistResults});}catch(error){const result:TaskResult={taskId:task.id,state:"FAILED_PERSISTENCE",error:{code:"FAILED_PERSISTENCE",message:error instanceof Error?error.message:"Persistence failed"}};await deps.telemetry.taskFinished(processorExecutionId,result);return result;}
-    const result:TaskResult={taskId:task.id,state:"SUCCEEDED",values:validated.data,metadata:provider.metadata};await deps.telemetry.taskFinished(processorExecutionId,result);return result;
+    const result:TaskResult={taskId:task.id,state:"SUCCEEDED",values:validated.data,metadata:{...provider.metadata,prompt_build_id:promptPackage.prompt_build_id,prompt_metadata:promptPackage.metadata}};await deps.telemetry.taskFinished(processorExecutionId,result);return result;
    }catch(error){const result:TaskResult={taskId:task.id,state:"FAILED_PROVIDER",error:{code:"AI_TASK_FAILED",message:error instanceof Error?error.message:"AI task failed"}};await deps.telemetry.taskFinished(processorExecutionId,result);return result;}
   },
   async runDeterministicTask({executionId,task,request,canonicalDependencies,persistResults}):Promise<TaskResult>{
