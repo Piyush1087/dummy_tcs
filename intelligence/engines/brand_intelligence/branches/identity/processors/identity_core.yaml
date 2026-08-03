@@ -1,0 +1,52 @@
+id: identity_core
+version: 1.0-working
+engine: brand_intelligence
+branch: identity
+executor: ai
+
+purpose: Resolve the brand's core owned identity from normalized website evidence after eligibility classification.
+
+outputs:
+  - brand_name
+  - brand_logo
+  - tagline
+  - country
+  - business_geography
+  - primary_language
+  - website_currency
+  - instagram_handle
+  - youtube_handle
+  - tiktok_handle
+  - facebook_handle
+  - linkedin_handle
+
+inputs:
+  required:
+    - website_url
+    - normalized_homepage_evidence
+  optional:
+    - normalized_about_evidence
+    - normalized_contact_evidence
+    - structured_metadata_evidence
+
+input_policy:
+  required_means: Processor cannot execute without this input.
+  optional_means: Absence does not block execution and must not cause fabricated output.
+
+artifacts:
+  reasoning: to_define
+  taxonomy: none_or_to_define_for_geography_language
+  examples: to_define_if_needed
+  output_contract: to_define
+
+execution:
+  blocking: true
+  can_run_independently: true
+  partial_output_supported: true
+  note: Compiler may request only a subset of outputs and should remove protected/manual outputs from active scope before execution.
+
+failure_policy:
+  fail_if_required_input_missing: true
+  fail_if_output_contract_invalid: true
+  nullable_optional_outputs_allowed: true
+  no_silent_default: true
