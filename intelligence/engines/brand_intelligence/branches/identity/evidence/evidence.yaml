@@ -1,241 +1,268 @@
-version: 1.0-working
+version: 1.1-working
 status: WORKING
 engine: brand_intelligence
 branch: identity
 
-# Evidence is normalized factual input available to processors.
-# Evidence is not an Intelligence Object and does not itself represent a business conclusion.
-# Acquisition implementation may change without changing processor/output ownership.
+# Evidence is factual processor input, not an Intelligence Object.
+# Acquisition/discovery decides what to collect. Intelligence processors decide what it means.
 
 principles:
-  - Evidence should preserve source/provenance.
-  - Normalization should remove page noise without converting evidence into business conclusions.
-  - Missing optional evidence must remain missing; normalizers must not invent values.
-  - Processors may combine evidence from multiple sources.
-  - Observed audience/demand geography does not by itself prove that a market is commercially served.
+  - Evidence preserves source and acquisition provenance.
+  - Normalization removes technical/page noise but must not convert evidence into business conclusions.
+  - Website pages use one reusable page contract rather than branch-specific homepage/about/contact evidence types.
+  - Page discovery is an Evidence Acquisition capability, not an Intelligence processor.
+  - The Gemini used for page discovery is an acquisition-layer Gemini connection used with Zyte/Cheerio; it is separate from Intelligence Compiler LLM execution.
+  - Missing optional pages/evidence never cause fabricated values.
+  - Processors can filter Website Evidence by page type and can combine multiple evidence sources.
+  - Traffic/audience geography is supporting evidence and does not independently prove that a market is commercially served.
 
 sources:
   website_direct:
-    description: Website accessed directly by an AI model when a processor explicitly supports direct-web acquisition.
+    description: Direct website access by the configured AI provider for a processor scope that explicitly permits it.
     current_use:
-      - industry_classification gatekeeper scope
+      - industry_classification.gatekeeper_scope
     current_provider: Gemini
     replaceable: true
+    note: Current Gatekeeper reads only the homepage for speed.
 
-  website_normalized:
-    description: Website content acquired and converted into normalized evidence before processor reasoning.
-    current_acquisition: Zyte
-    current_normalization: Cheerio_and_deterministic_cleaning
-    replaceable: true
+  website_acquisition:
+    description: Website acquisition and normalization pipeline that builds reusable Website Evidence.
+    current_fetcher: Zyte
+    current_normalizer: Cheerio_and_deterministic_cleaning
+    page_discovery:
+      current_selector: Gemini
+      role: Select useful URLs/pages from normalized discovered links/content for subsequent Zyte acquisition.
+      architectural_layer: evidence_acquisition
+      intelligence_processor: false
+      separate_from_intelligence_llm: true
+    replaceable_components: true
 
   similarweb:
-    description: Normalized website traffic/geography signals obtained from the configured Similarweb acquisition path.
+    description: Normalized website traffic/geography evidence from the configured Similarweb acquisition path.
     availability: optional
 
   instagram:
-    description: Normalized Instagram signals obtained through approved Meta/API integrations.
+    description: Normalized Instagram evidence obtained through approved Meta/API integrations.
     availability: optional_and_connection_dependent
 
-contracts:
-  normalized_homepage_evidence:
-    source: website_normalized
-    page_type: homepage
-    required_for:
-      - identity_core
-      - market_geography
-      - industry_classification.industry_niche_scope
-    fields:
-      source_url: required
-      fetched_at: required
-      page_title: optional
-      meta_description: optional
-      canonical_url: optional
-      headings: optional_array
-      visible_text: optional
-      navigation_text: optional_array
-      internal_links: optional_array
-      external_links: optional_array
-      image_candidates: optional_array
-      social_link_candidates: optional_array
-      structured_data: optional
-      currency_signals: optional_array
-      geography_signals: optional_array
-      language_signals: optional_array
-    note: Raw HTML may be retained by acquisition/storage for traceability but is not the preferred processor input.
+website_evidence:
+  description: Reusable normalized representation of the brand website available across intelligence engines and branches.
 
-  normalized_about_evidence:
-    source: website_normalized
-    page_type: about
-    required_for: []
-    optional_for:
-      - identity_core
-      - industry_classification
-      - market_geography
+  page_contract:
+    id: website_page
     fields:
-      source_url: required
+      url: required
+      page_type: required
       fetched_at: required
-      page_title: optional
-      headings: optional_array
-      visible_text: optional
-      organization_statements: optional_array
-      geography_signals: optional_array
-      language_signals: optional_array
-    absence_policy: No About page must not block any Identity processor.
+      acquisition_status: required
 
-  normalized_contact_evidence:
-    source: website_normalized
-    page_type: contact
-    required_for: []
-    optional_for:
-      - identity_core
-      - market_geography
+      seo:
+        title: optional
+        meta_description: optional
+        canonical_url: optional
+        robots: optional
+        hreflang: optional_array
+        open_graph: optional
+        twitter_card: optional
+
+      structure:
+        header: optional
+        navigation: optional_array
+        main_content: optional
+        footer: optional
+
+      content:
+        headings: optional_array
+        visible_text: optional
+        structured_data: optional
+
+      links:
+        internal: optional_array
+        external: optional_array
+        social: optional_array
+
+      media:
+        images: optional_array
+        logo_candidates: optional_array
+
+      extracted_signals:
+        organization_name_candidates: optional_array
+        currency_signals: optional_array
+        geography_signals: optional_array
+        language_signals: optional_array
+        address_candidates: optional_array
+        phone_country_signals: optional_array
+        shipping_or_service_area_statements: optional_array
+        offering_labels: optional_array
+
+    normalization_rule: Extracted signals remain factual candidates/statements and must not become canonical intelligence during normalization.
+
+  page_types:
+    - homepage
+    - about
+    - contact
+    - product
+    - collection
+    - service
+    - offering
+    - pricing
+    - locations
+    - shipping
+    - faq
+    - policy
+    - blog
+    - other
+
+  site_structure:
     fields:
-      source_url: required
-      fetched_at: required
-      visible_text: optional
-      address_candidates: optional_array
-      phone_country_signals: optional_array
-      geography_signals: optional_array
-      social_link_candidates: optional_array
-    absence_policy: No Contact page must not block any Identity processor.
+      root_domain: required
+      homepage_url: required
+      discovered_urls: optional_array
+      navigation_links: optional_array
+      header_links: optional_array
+      footer_links: optional_array
+      page_relationships: optional_array
+      discovery_runs: optional_array
 
-  structured_metadata_evidence:
-    source: website_normalized
-    required_for: []
-    optional_for:
-      - identity_core
+  acquisition_metadata:
     fields:
-      source_url: required
-      fetched_at: required
-      json_ld: optional
-      open_graph: optional
-      twitter_card: optional
-      favicon_candidates: optional_array
-      organization_name_candidates: optional_array
-      logo_candidates: optional_array
-      social_profile_candidates: optional_array
-    note: Structured metadata is evidence, not automatically authoritative identity.
+      acquisition_run_id: required
+      started_at: required
+      completed_at: optional
+      fetcher: required
+      normalizer: required
+      discovery_selector: optional
+      pages_attempted: optional
+      pages_succeeded: optional
+      pages_failed: optional
 
-  normalized_offering_summary_evidence:
-    source: website_normalized
-    required_for: []
-    optional_for:
-      - industry_classification.industry_niche_scope
-      - market_geography
-    fields:
-      source_urls: required_array
-      fetched_at: required
-      offering_labels: optional_array
-      offering_descriptions: optional_array
-      service_area_statements: optional_array
-      shipping_statements: optional_array
-    note: This is a factual summary of observed offerings, not Product Intelligence.
+acquisition_flow:
+  on_website_submission:
+    parallel:
+      gatekeeper:
+        input: website_url
+        page_scope: homepage_only
+        method: Gemini_direct_website
+        output_destination: industry_classification_processor
 
-  normalized_location_evidence:
-    source: website_normalized
-    required_for: []
-    optional_for:
-      - market_geography
-    fields:
-      source_urls: required_array
-      fetched_at: required
-      location_candidates: optional_array
-      address_candidates: optional_array
-      locality_candidates: optional_array
-      region_candidates: optional_array
-      country_candidates: optional_array
-      radius_or_service_area_statements: optional_array
-    note: Physical business locations are not automatically equivalent to markets served.
+      website_indexing:
+        steps:
+          - Zyte_fetch_homepage
+          - Cheerio_normalize_homepage
+          - preserve_header_footer_navigation_SEO_metadata_links_and_main_content
+          - Gemini_page_discovery_over_normalized_acquisition_output
+          - Zyte_fetch_selected_pages
+          - normalize_selected_pages_into_website_page_contract
+        note: Website indexing starts while Gatekeeper is running to hide acquisition latency. If the brand is rejected, downstream acquisition work may be cancelled/discarded where practical.
 
-  normalized_shipping_or_service_area_evidence:
-    source: website_normalized
-    required_for: []
-    optional_for:
-      - market_geography
-    fields:
-      source_urls: required_array
-      fetched_at: required
-      shipping_destinations: optional_array
-      excluded_destinations: optional_array
-      service_areas: optional_array
-      radius_statements: optional_array
-      global_service_claim: optional_boolean
-    note: This evidence has stronger meaning for actual service availability than traffic or audience geography.
+  page_discovery:
+    input:
+      - normalized_homepage
+      - discovered_internal_links
+      - header_navigation
+      - footer_links
+    output:
+      - selected_urls
+      - predicted_page_types
+      - acquisition_priority
+    examples_of_targets:
+      - about
+      - contact
+      - product
+      - collection
+      - service
+      - pricing
+      - locations
+      - shipping
+      - faq
+    note: Page Discovery only decides what evidence to acquire. It does not create Brand/Product/Commercial Intelligence.
 
-  similarweb_geography_evidence:
+  product_candidate_discovery_support:
+    principle: Product Intelligence should begin from homepage/site-structure signals before deep PDP acquisition.
+    acquisition_signals_to_preserve:
+      - homepage_featured_product_links
+      - bestseller_labels
+      - new_launch_labels
+      - featured_collection_links
+      - navigation_prominence
+      - hero_or_promotion_links
+    note: These are evidence signals. Product Intelligence later determines product importance and canonical product objects.
+
+external_evidence:
+  similarweb_geography:
     source: similarweb
-    required_for: []
-    optional_for:
-      - market_geography
     fields:
       observed_at: required
       domain: required
       country_traffic_share: optional_array
       top_countries: optional_array
       source_method: required
-    interpretation: Observed website demand/traffic geography; does not independently prove commercial availability.
+    interpretation: Observed website traffic/demand geography; not independent proof of service availability.
 
-  instagram_audience_geography_evidence:
+  instagram_audience_geography:
     source: instagram
-    required_for: []
-    optional_for:
-      - market_geography
     fields:
       observed_at: required
       instagram_account_id: required
       audience_country_distribution: optional_array
       audience_city_distribution: optional_array
       source_method: required
-    availability_policy: Empty/unavailable when required Meta permissions or connected account data are absent.
+    availability_policy: Unavailable when required Meta permissions or connected account data are absent.
     interpretation: Audience geography; supporting evidence only and not independent proof of markets served.
 
 processor_input_map:
   industry_classification:
     gatekeeper_scope:
-      acquisition: website_direct
-      required:
+      source: website_direct
+      page_filter:
+        required: [homepage]
+      required_context:
         - website_url
-      optional: []
+      note: Current implementation does not wait for Website Evidence acquisition.
+
     industry_niche_scope:
-      acquisition: website_normalized
-      required:
-        - normalized_homepage_evidence
+      source: website_evidence
+      page_filter:
+        required: [homepage]
+        optional: [about, product, collection, service, offering]
       intelligence_dependencies:
         - industry
         - sub_industry
-      optional:
-        - normalized_about_evidence
-        - normalized_offering_summary_evidence
 
   identity_core:
-    acquisition: website_normalized
-    required:
-      - normalized_homepage_evidence
-    runtime_context:
+    source: website_evidence
+    page_filter:
+      required: [homepage]
+      optional: [about, contact, locations]
+    required_context:
       - website_url
-    optional:
-      - normalized_about_evidence
-      - normalized_contact_evidence
-      - structured_metadata_evidence
+    evidence_sections_of_interest:
+      - seo
+      - structure.header
+      - structure.navigation
+      - structure.main_content
+      - structure.footer
+      - content
+      - links.social
+      - media
+      - extracted_signals
 
   market_geography:
-    acquisition: multi_source
-    required:
-      - normalized_homepage_evidence
+    source: multi_source
+    website_page_filter:
+      required: [homepage]
+      optional: [about, contact, locations, shipping, service, offering, product, collection]
     intelligence_dependencies:
       - country
-    optional:
+    optional_intelligence_context:
       - business_geography
-      - normalized_about_evidence
-      - normalized_contact_evidence
-      - normalized_location_evidence
-      - normalized_shipping_or_service_area_evidence
-      - normalized_offering_summary_evidence
-      - similarweb_geography_evidence
-      - instagram_audience_geography_evidence
+    optional_external_evidence:
+      - similarweb_geography
+      - instagram_audience_geography
 
 open_implementation_questions:
-  - Exact normalized evidence storage model and retention policy.
-  - Whether page-level evidence contracts remain one global website evidence schema with page_type instead of separate named contracts.
+  - Exact persistence/retention model for Website Evidence and raw acquisition payloads.
+  - Whether page_type is deterministic, Gemini-assigned during Page Discovery, or resolved using both.
+  - Exact crawl budgets/limits by execution profile and page type.
   - Exact Similarweb acquisition implementation for MVP.
   - Exact Meta audience geography fields available under approved permissions at implementation time.
