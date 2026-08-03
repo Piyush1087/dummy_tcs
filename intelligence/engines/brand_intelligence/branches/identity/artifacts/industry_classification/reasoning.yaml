@@ -1,6 +1,6 @@
 id: industry_classification_reasoning
-version: 1.0-working
-status: WORKING
+version: 1.0-frozen
+status: FROZEN
 processor: industry_classification
 
 purpose: Define how the processor determines industry, sub-industry and industry niche without duplicating global evidence-grounding rules.
@@ -8,42 +8,50 @@ purpose: Define how the processor determines industry, sub-industry and industry
 scopes:
   gatekeeper:
     outputs: [industry, sub_industry]
-    objective: Rapidly classify the brand well enough to determine platform eligibility and establish canonical classification anchors for subsequent intelligence.
+    objective: Rapidly classify the brand into Creator Shop's supported Industry hierarchy and establish classification anchors for review/confirmation.
     evidence_mode: direct_homepage
 
     reasoning_order:
-      - Identify what the business primarily sells or delivers from homepage evidence.
-      - Identify the business model/context needed to interpret that offering correctly.
-      - Select the best-fitting canonical industry from the taxonomy.
-      - Select the best-fitting canonical sub-industry permitted under that industry.
-      - Prefer the brand's primary business over secondary categories, content topics, customer use cases or incidental offerings.
-      - If multiple businesses are represented, classify the consumer-facing brand/entity at the submitted domain rather than an unrelated parent/portfolio company unless the site itself represents the parent entity.
+      - Determine the primary business represented by the submitted website from homepage evidence.
+      - Identify what the business primarily sells or delivers and the business model/context required to interpret it correctly.
+      - Select exactly one canonical Industry from the taxonomy.
+      - Select exactly one canonical Sub-industry permitted under that Industry.
+      - Prefer the primary business over secondary categories, content topics, customer use cases, campaigns or incidental offerings.
+      - If multiple businesses are represented, classify the brand/entity represented by the submitted domain rather than an unrelated parent or portfolio company unless the website itself represents that parent entity.
 
     homepage_signals:
-      strong:
-        - explicit description of products/services
-        - homepage title/meta description
+      high_value:
+        - explicit product/service proposition
+        - homepage title and meta description
         - H1 and primary hero proposition
-        - primary navigation/category structure
-        - structured organization/product/service signals
+        - header and primary navigation/category structure
+        - footer business description and persistent site-wide business signals
+        - structured organization/product/service metadata when consistent with visible owned content
       supporting:
-        - footer business description
-        - prominent collection/service links
-        - repeated terminology across homepage sections
+        - prominent product, collection or service links
+        - repeated business terminology across homepage sections
+        - explicit customer/problem statements that clarify the offering
       weak_only:
         - isolated blog/article topics
         - generic marketing language
         - incidental partner/customer logos
+        - brand name without supporting business evidence
+
+    taxonomy_policy:
+      - Industry must be one of the four canonical Industry IDs.
+      - Sub-industry must belong to the selected Industry.
+      - Use the parent-specific OTHER Sub-industry when the Industry is defensible but none of the current MVP specific Sub-industries is a defensible fit.
+      - Do not invent a new Sub-industry value.
 
     ambiguity_policy:
-      - Do not force a narrow sub-industry when homepage evidence supports only the parent category.
-      - Do not infer industry from brand name alone.
-      - Use taxonomy definitions and precedence rules when a business plausibly spans categories.
-      - If classification cannot meet the output contract's minimum certainty/validity requirement, return the contract-defined unresolved state rather than inventing a category.
+      - Do not infer Industry from brand name alone.
+      - Apply canonical precedence rules only when the primary business genuinely spans multiple supported Industries.
+      - Prefer OTHER within the correct Industry over a knowingly incorrect specific Sub-industry.
+      - If the homepage does not provide enough evidence to determine a supported Industry at all, return UNRESOLVED according to the output contract rather than forcing eligibility.
 
   industry_niche:
     outputs: [industry_niche]
-    objective: Determine a useful specific niche after industry and sub-industry have become canonical inputs.
+    objective: Determine a useful specific specialization after Industry and Sub-industry have become canonical inputs.
     evidence_mode: normalized_website_evidence
 
     authoritative_inputs:
@@ -51,11 +59,12 @@ scopes:
       - sub_industry
 
     reasoning_order:
-      - Treat current canonical industry and sub-industry as fixed constraints; never reclassify them in this scope.
-      - Examine homepage plus available offering/product/service evidence for the brand's dominant specialization.
-      - Select a niche only if it adds meaningful specificity beyond sub-industry and is supported by evidence.
-      - Prefer a stable business specialization over temporary campaigns, individual products or marketing claims.
-      - Return null/unresolved when no meaningful niche can be supported.
+      - Treat current canonical Industry and Sub-industry as fixed constraints and do not reclassify them in this scope.
+      - Examine homepage plus available product, collection, service or offering evidence for the dominant specialization.
+      - Identify a niche only when it adds meaningful specificity beyond Sub-industry and is supported by recurring or explicit business/portfolio evidence.
+      - Prefer a stable specialization over a temporary campaign, isolated product, promotional claim or generic positioning statement.
+      - Keep the niche concise and descriptive rather than promotional.
+      - Return null when no useful evidence-supported niche can be established.
 
 manual_correction_rule:
-  description: If the user changes industry or sub-industry at the Identity checkpoint, later niche execution must use the corrected canonical values. Earlier AI classification must not remain an implicit constraint.
+  description: If the user changes Industry or Sub-industry at the one-time Identity checkpoint, subsequent niche execution must use those corrected canonical values. Earlier AI classification must not remain an implicit constraint.
