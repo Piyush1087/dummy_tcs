@@ -1,0 +1,38 @@
+id: market_geography
+version: 1.0-working
+engine: brand_intelligence
+branch: identity
+executor: ai
+
+purpose: Determine the geographic markets the brand actively serves or targets, distinct from the brand's own business-base geography.
+
+outputs:
+  - markets
+
+inputs:
+  required:
+    - country
+    - normalized_homepage_evidence
+  optional:
+    - business_geography
+    - normalized_about_evidence
+    - normalized_contact_evidence
+    - normalized_location_evidence
+    - normalized_shipping_or_service_area_evidence
+    - normalized_offering_summary_evidence
+
+artifacts:
+  reasoning: to_define
+  taxonomy: to_define
+  examples: to_define
+  output_contract: to_define
+
+execution:
+  blocking: false
+  can_run_independently: true
+  partial_output_supported: false
+
+failure_policy:
+  fail_if_required_input_missing: true
+  nullable_output_allowed: true
+  no_silent_default: true
