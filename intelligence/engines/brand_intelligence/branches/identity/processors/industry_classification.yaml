@@ -1,24 +1,48 @@
 id: industry_classification
-version: 1.0-working
+version: 1.0-frozen
+status: FROZEN
 engine: brand_intelligence
 branch: identity
 executor: ai
 
-purpose: Identify the brand's canonical industry and sub-industry for eligibility routing and downstream intelligence.
+purpose: Classify the brand within Creator Shop's industry hierarchy for eligibility routing and downstream intelligence.
 
 outputs:
   - industry
   - sub_industry
+  - industry_niche
+
+output_execution:
+  industry:
+    requires: [website_url]
+  sub_industry:
+    requires: [website_url]
+  industry_niche:
+    requires:
+      - industry
+      - sub_industry
+      - normalized_homepage_evidence
+    requirement_note: industry and sub_industry must use the current canonical values, including user-corrected values from the Identity checkpoint.
 
 inputs:
   required:
     - website_url
-  optional: []
+  optional:
+    - normalized_homepage_evidence
+    - normalized_about_evidence
+    - normalized_offering_summary_evidence
 
 acquisition_mode:
-  current_mvp: gemini_direct_website
+  current_mvp: gemini_direct_website_for_industry_and_sub_industry
   replaceable: true
-  note: The processor contract is independent of acquisition implementation. A future Zyte-first flow can replace direct website access with normalized homepage evidence without changing output ownership.
+  note: Acquisition is not processor identity. A future Zyte/evidence-first path may replace direct website access without changing this processor or its output ownership.
+
+execution:
+  can_run_independently: true
+  partial_output_supported: true
+  common_scopes:
+    gatekeeper: [industry, sub_industry]
+    post_confirmation_niche: [industry_niche]
 
 artifacts:
   reasoning: to_define
@@ -26,12 +50,7 @@ artifacts:
   examples: to_define_if_needed
   output_contract: to_define
 
-execution:
-  blocking: true
-  can_run_independently: true
-  partial_output_supported: false
-
 failure_policy:
-  fail_if_required_input_missing: true
+  fail_if_required_input_for_requested_output_missing: true
   fail_if_output_contract_invalid: true
   no_silent_default: true
