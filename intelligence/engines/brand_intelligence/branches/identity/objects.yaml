@@ -1,14 +1,24 @@
-version: 1.0-working
+version: 1.0-frozen
+status: FROZEN
 engine: brand_intelligence
 branch: identity
 entity_type: brand
+freeze_scope: object_semantics_and_lifecycle
+
+lifecycle_classes:
+  input_immutable: supplied identity key; never AI-overwritten
+  confirm_once_lock: may be corrected at the one-time Identity checkpoint; permanently locked after confirmation
+  derived_locked: deterministically derived from a confirmed anchor; not directly editable
+  confirmed_refreshable: confirmed at Identity checkpoint but may later be refreshed or manually changed without changing business identity
+  intelligence_refreshable: inferred context that may be refreshed when Identity is deliberately re-evaluated
 
 objects:
   - id: website_url
     class: input_immutable
-    definition: Canonical website URL/domain used to identify the brand.
+    definition: Canonical website URL/domain used to identify the brand and initiate Brand Intelligence.
     required: true
     producer: user_input_normalization
+    evidence_required: false
     checkpoint: display_only
     editable: false
     refreshable: false
@@ -16,7 +26,7 @@ objects:
 
   - id: brand_name
     class: confirm_once_lock
-    definition: Canonical consumer-facing brand name.
+    definition: Canonical consumer-facing brand display name used by Creator Shop.
     required: true
     producer: identity_core
     evidence_required: true
@@ -26,33 +36,39 @@ objects:
     backend: BrandProfile.existing_field_to_verify
 
   - id: brand_logo
-    class: asset
-    definition: Primary brand logo asset.
+    class: confirmed_refreshable
+    definition: Primary brand logo asset used to represent the brand in Creator Shop.
     required: false
     producer: identity_core
     evidence_required: true
-    lifecycle: to_freeze
+    checkpoint: editable
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
     backend: BrandProfile.existing_field_to_verify
 
   - id: tagline
-    class: intelligence
-    definition: Primary explicit brand tagline when supported by evidence.
+    class: intelligence_refreshable
+    definition: Primary explicit brand tagline or short positioning line when supported by owned-source evidence.
     required: false
     producer: identity_core
     evidence_required: true
-    lifecycle: to_freeze
+    checkpoint: not_required
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
     backend: BrandProfile.field_to_verify_or_add
 
   - id: industry
     class: confirm_once_lock
-    definition: Canonical top-level industry used for platform routing and intelligence.
+    definition: Canonical top-level industry used for platform routing and downstream intelligence.
     required: true
     producer: industry_classification
     evidence_required: true
     checkpoint: editable_once
     editable: until_identity_confirmation
     refreshable: false_after_confirmation
-    backend: BrandProfile.brandRoutingType_to_reconcile
+    backend: BrandProfile.industry_field_required; legacy_brandRoutingType_must_be_reconciled
 
   - id: sub_industry
     class: confirm_once_lock
@@ -63,124 +79,162 @@ objects:
     checkpoint: editable_once
     editable: until_identity_confirmation
     refreshable: false_after_confirmation
-    backend: BrandProfile.existing_field_to_verify
+    backend: BrandProfile.subIndustry_field_required_or_verify
 
   - id: industry_niche
-    class: intelligence
-    definition: More specific operating niche within industry/sub-industry when useful downstream.
+    class: intelligence_refreshable
+    definition: More specific operating niche within the confirmed industry and sub-industry when supported by evidence and useful downstream.
     required: false
     producer: industry_niche_classification
     evidence_required: true
-    lifecycle: to_freeze
-    backend: BrandProfile.existing_field_to_verify
+    checkpoint: not_required
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
+    backend: BrandProfile.field_to_verify_or_add
 
   - id: country
     class: confirm_once_lock
-    definition: Country in which the brand/business or parent organization is based for platform identity purposes.
+    definition: Primary country in which the brand/business is based for Creator Shop identity and platform routing purposes.
     required: true
     producer: identity_core
     evidence_required: true
     checkpoint: editable_once
     editable: until_identity_confirmation
     refreshable: false_after_confirmation
-    backend: BrandProfile.existing_field_to_verify
+    backend: BrandProfile.countryCode_candidate_to_reconcile
 
   - id: business_geography
-    class: intelligence
-    definition: More precise business-base geography when useful beyond country; not the markets served.
+    class: confirm_once_lock
+    definition: Canonical business-base geography below or alongside country when relevant, representing where the business operates from rather than where it sells.
     required: false
     producer: identity_core
     evidence_required: true
-    lifecycle: relationship_with_country_to_freeze
-    backend: structure_to_reconcile
+    checkpoint: editable_once_when_present
+    editable: until_identity_confirmation
+    refreshable: false_after_confirmation
+    structure: locality_state_region_country_as_applicable
+    backend: dedicated_identity_structure_required; do_not_overload_Location
 
   - id: markets
-    class: intelligence
-    definition: Geographic markets actively served or targeted; supports local/radius, country, multi-country and global scope.
+    class: intelligence_refreshable
+    definition: Geographic markets the brand actively serves or commercially targets; may be local/radius, country, multi-country or global.
     required: false
     producer: market_geography
     evidence_required: true
-    lifecycle: to_freeze
-    backend: new_field_or_model_required
+    checkpoint: not_identity_lock
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
+    backend: dedicated_field_or_model_required; do_not_overload_Location
 
   - id: primary_language
-    class: intelligence
-    definition: Primary language used in the brand's owned communication.
+    class: intelligence_refreshable
+    definition: Primary language used by the brand in owned communication, inferred from brand evidence rather than from country defaults.
     required: false
     producer: identity_core
     evidence_required: true
-    lifecycle: to_freeze
-    backend: BrandProfile.new_field_likely_required
+    checkpoint: not_required
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
+    backend: BrandProfile.new_field_required
 
   - id: website_currency
-    class: confirm_once_lock
-    definition: Primary currency displayed/transacted on the brand website; used as website/catalogue context.
+    class: confirmed_refreshable
+    definition: Primary currency displayed or transacted on the brand website; used as website and catalogue context only.
     required: true
     producer: identity_core
     evidence_required: true
-    checkpoint: editable_once
-    editable: until_identity_confirmation
-    refreshable: false_after_confirmation
-    backend: BrandProfile.currency_semantics_to_reconcile
+    checkpoint: editable
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
+    backend: dedicated_websiteCurrency_field_required
 
   - id: reporting_currency
     class: derived_locked
-    definition: Platform reporting and transaction currency.
+    definition: Creator Shop platform reporting and transaction currency for the brand.
     required: true
     producer: platform_currency_resolver
     allowed_values: [INR, USD]
     depends_on: [country]
     rule: India=INR; United_States=USD; Rest_of_World=USD
+    evidence_required: false
+    checkpoint: derived_from_confirmed_country
     editable: false
-    refreshable: only_if_country_changes_before_confirmation
-    backend: BrandProfile.currency_semantics_to_reconcile
+    refreshable: recompute_only_if_country_changes_before_identity_confirmation
+    backend: BrandProfile.currencyCode_candidate_to_reconcile_as_reporting_currency
 
   - id: instagram_handle
-    class: confirm_once_lock
+    class: confirmed_refreshable
+    definition: Canonical official Instagram handle for the brand.
     required: false
     producer: identity_core
-    checkpoint: editable_once
-    editable: until_identity_confirmation
-    refreshable: false_after_confirmation
+    evidence_required: true
+    checkpoint: editable
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
     backend: BrandProfile.igHandle
 
   - id: youtube_handle
-    class: confirm_once_lock
+    class: confirmed_refreshable
+    definition: Canonical official YouTube handle or channel identifier for the brand.
     required: false
     producer: identity_core
-    checkpoint: editable_once
-    editable: until_identity_confirmation
-    refreshable: false_after_confirmation
+    evidence_required: true
+    checkpoint: editable
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
     backend: BrandProfile.ytHandle
 
   - id: tiktok_handle
-    class: confirm_once_lock
+    class: confirmed_refreshable
+    definition: Canonical official TikTok handle for the brand.
     required: false
     producer: identity_core
-    checkpoint: editable_once
-    editable: until_identity_confirmation
-    refreshable: false_after_confirmation
+    evidence_required: true
+    checkpoint: editable
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
     backend: BrandProfile.tiktokHandle
 
   - id: facebook_handle
-    class: confirm_once_lock
+    class: confirmed_refreshable
+    definition: Canonical official Facebook page or handle for the brand.
     required: false
     producer: identity_core
-    checkpoint: editable_once
-    editable: until_identity_confirmation
-    refreshable: false_after_confirmation
-    backend: BrandProfile.new_field_likely_required
+    evidence_required: true
+    checkpoint: editable
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
+    backend: BrandProfile.new_field_required
 
   - id: linkedin_handle
-    class: confirm_once_lock
+    class: confirmed_refreshable
+    definition: Canonical official LinkedIn company page or identifier for the brand.
     required: false
     producer: identity_core
-    checkpoint: editable_once
-    editable: until_identity_confirmation
-    refreshable: false_after_confirmation
-    backend: BrandProfile.new_field_likely_required
+    evidence_required: true
+    checkpoint: editable
+    editable: true
+    refreshable: true
+    overwrite_rule: automatic_refresh_must_not_replace_manual_value
+    backend: BrandProfile.new_field_required
 
-notes:
-  - supported_industry is a deterministic workflow eligibility decision derived from industry, not a canonical Identity object.
-  - existing Location records describe physical locations and are not assumed to represent served markets.
-  - lifecycle values marked to_freeze remain open until object semantics are reviewed.
+freeze_decisions:
+  - All 18 objects remain in the Identity branch.
+  - website_url is the immutable identity key.
+  - Permanent business-classification anchors are brand_name, industry, sub_industry, country and business_geography when present.
+  - Logo and social handles are Identity objects but are not permanent business-classification anchors; brands can legitimately change them.
+  - website_currency is website/catalogue context and may change; it is not the platform transaction currency.
+  - reporting_currency is deterministic platform context derived only from confirmed country and restricted to INR or USD.
+  - markets means served/target markets and is distinct from business_geography and physical Location records.
+  - primary_language is based on owned brand communication, not country defaults.
+  - tagline and industry_niche remain Identity context but are refreshable intelligence rather than permanent anchors.
+  - supported_industry is workflow eligibility state derived from industry and is not an Identity object.
+  - homepage_metadata and evidence are acquisition/provenance artifacts, not Identity objects.
