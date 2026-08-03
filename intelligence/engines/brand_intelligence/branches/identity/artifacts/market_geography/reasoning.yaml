@@ -1,5 +1,5 @@
 id: market_geography_reasoning
-version: 1.0-frozen
+version: 1.1-frozen
 status: FROZEN
 processor: market_geography
 
@@ -8,10 +8,9 @@ purpose: Determine the markets the brand actually serves by combining owned Webs
 principles:
   - Apply global evidence_grounding rules.
   - markets_served means where the brand can meaningfully sell/deliver its products, services or experience; it is not simply where traffic or followers come from.
-  - Website Evidence is always a valid primary source and becomes the sole evidence source when Similarweb and Instagram evidence are unavailable.
+  - Website Evidence is the primary commercial-availability source and is sufficient when Similarweb and Instagram are unavailable.
   - Similarweb and Instagram are supporting/corroborating sources, not mandatory dependencies.
-  - Business geography is the complete fallback when no defensible market can be derived from available market evidence.
-  - Never return no market merely because external evidence is unavailable when canonical business geography exists.
+  - Fallback must respect the business delivery model; headquarters/local business geography must not incorrectly narrow a nationally or digitally deliverable business.
 
 inputs:
   canonical_intelligence:
@@ -52,7 +51,7 @@ reasoning_order:
   - If Instagram audience geography exists, use it as additional corroboration/relevance evidence.
   - Resolve granularity appropriate to the business: locality/region, country, multiple countries or GLOBAL.
   - If external evidence is absent, complete reasoning using Website Evidence only.
-  - If Website Evidence cannot establish a defensible market, fall back to canonical business_geography; if unavailable, fall back to canonical country.
+  - If Website Evidence cannot establish a defensible market, apply the business-model-aware fallback policy below.
 
 business_model_guidance:
   location_bound:
@@ -76,10 +75,20 @@ conflict_resolution:
   - When evidence remains ambiguous, prefer the narrower defensible market rather than an unsupported broad market.
 
 fallback_policy:
-  level_1: website_only_when_external_sources_absent
-  level_2: business_geography_when_market_not_resolvable_from_evidence
-  level_3: country_when_business_geography_is_unavailable
-  rule: Fallback values are valid resolved markets, not processor failures, because the brand's operating geography is the minimum defensible market assumption for MVP.
+  when_website_market_not_resolvable:
+    location_bound:
+      order: [business_geography, country]
+      rationale: The operating locality/region is the minimum defensible served market for a location-bound business when explicit service-area evidence is absent.
+    nationally_deliverable:
+      order: [country]
+      rationale: Headquarters locality must not narrow a business whose delivery model is national.
+    digitally_deliverable:
+      order: [country]
+      rationale: Headquarters locality is not a defensible digital market, while GLOBAL must not be assumed without evidence.
+    multi_market:
+      order: [country]
+      rationale: Do not invent additional countries/global availability when explicit multi-market evidence is absent.
+  rule: A fallback value is a valid resolved MVP market, not a processor failure, but the fallback must never imply broader availability than evidence supports or incorrectly reduce a non-location-bound business to its headquarters locality.
 
 non_goals:
   - Do not redefine country or business_geography.
