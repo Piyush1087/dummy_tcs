@@ -1,5 +1,5 @@
 id: industry_classification
-version: 1.0-frozen
+version: 1.1-frozen
 status: FROZEN
 engine: brand_intelligence
 branch: identity
@@ -7,48 +7,41 @@ executor: ai
 
 purpose: Classify the brand within Creator Shop's industry hierarchy for eligibility routing and downstream intelligence.
 
-outputs:
-  - industry
-  - sub_industry
-  - industry_niche
+outputs: [industry, sub_industry, industry_niche]
 
 output_execution:
   industry:
+    scope: gatekeeper
     requires: [website_url]
   sub_industry:
+    scope: gatekeeper
     requires: [website_url]
   industry_niche:
-    requires:
-      - industry
-      - sub_industry
-      - normalized_homepage_evidence
-    requirement_note: industry and sub_industry must use the current canonical values, including user-corrected values from the Identity checkpoint.
+    scope: industry_niche
+    requires: [industry, sub_industry, website_evidence.homepage]
+    requirement_note: industry and sub_industry must use current canonical post-checkpoint values, including verified user corrections.
 
 inputs:
-  required:
-    - website_url
-  optional:
-    - normalized_homepage_evidence
-    - normalized_about_evidence
-    - normalized_offering_summary_evidence
+  required: [website_url]
+  optional: [website_evidence.homepage, website_evidence.about, website_evidence.product, website_evidence.collection, website_evidence.service, website_evidence.offering]
 
 acquisition_mode:
-  current_mvp: gemini_direct_website_for_industry_and_sub_industry
+  gatekeeper_current_mvp: gemini_direct_website_homepage
+  industry_niche: normalized_website_evidence
   replaceable: true
-  note: Acquisition is not processor identity. A future Zyte/evidence-first path may replace direct website access without changing this processor or its output ownership.
+  note: Acquisition is not processor identity. A future evidence-first Gatekeeper path may replace direct website access without changing processor/output ownership.
 
 execution:
   can_run_independently: true
   partial_output_supported: true
-  common_scopes:
+  scopes:
     gatekeeper: [industry, sub_industry]
-    post_confirmation_niche: [industry_niche]
+    industry_niche: [industry_niche]
 
 artifacts:
-  reasoning: to_define
-  taxonomy: to_define
-  examples: to_define_if_needed
-  output_contract: to_define
+  location: artifacts/industry_classification/
+  status: FROZEN
+  note: Use the frozen reasoning, taxonomy and output-contract artifacts in this folder.
 
 failure_policy:
   fail_if_required_input_for_requested_output_missing: true
