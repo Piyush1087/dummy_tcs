@@ -11,6 +11,7 @@ const ARTIFACT_DIR: Record<string,string> = {
   identity_core: `${ROOT}/artifacts/identity_core`,
   market_geography: `${ROOT}/artifacts/market_geography`,
 };
+function versioned(id:string, raw:any){ return { id, version: raw?.version ?? "frozen", content: raw }; }
 
 export class IdentityRepositoryLoader {
   constructor(private readonly yaml: SafeYamlLoader) {}
@@ -21,7 +22,7 @@ export class IdentityRepositoryLoader {
     return {
       id: raw.id,
       persistResultsDefault: raw.defaults?.persist_results ?? false,
-      tasks: (raw.tasks ?? []).map((t:any) => ({ id:t.id, processorId:t.processor_id, processorScope:t.processor_scope, kind:t.kind, activeOutputs:t.active_outputs ?? [], dependsOn:t.dependencies ?? [], required:t.required !== false })),
+      tasks: (raw.tasks ?? []).map((t:any) => ({ id:t.id, processorId:t.processor_id, processorScope:t.processor_scope, kind:t.kind, activeOutputs:t.active_outputs ?? [], dependsOn:t.dependencies ?? [], canonicalDependencies:t.canonical_dependencies ?? [], required:t.required !== false })),
     };
   }
 
@@ -29,7 +30,7 @@ export class IdentityRepositoryLoader {
     const file = PROCESSORS[processorId];
     if (!file) throw new RuntimeConfigError("PROCESSOR_NOT_CONFIGURED", `Unknown processor '${processorId}'`);
     const definition:any = await this.yaml.load(file);
-    return { ...definition, processor_id: definition.id, processor_scope: scope, output_ownership: definition.outputs };
+    return { ...definition, processor_id: definition.id, processor_scope: scope, purpose: definition.purpose, input_contract: definition.inputs, output_ownership: definition.outputs };
   }
 
   async loadObjects(activeOutputs: string[]) {
@@ -45,10 +46,13 @@ export class IdentityRepositoryLoader {
 
   async loadGlobalArtifacts() {
     const base = "intelligence/runtime/artifacts";
+    const runtime_context:any = await this.yaml.load(`${base}/runtime_context.yaml`);
+    const evidence_grounding:any = await this.yaml.load(`${base}/evidence_grounding.yaml`);
+    const output_discipline:any = await this.yaml.load(`${base}/output_discipline.yaml`);
     return {
-      runtime_context: await this.yaml.load(`${base}/runtime_context.yaml`),
-      evidence_grounding: await this.yaml.load(`${base}/evidence_grounding.yaml`),
-      output_discipline: await this.yaml.load(`${base}/output_discipline.yaml`),
+      runtime_context: versioned("global.runtime_context", runtime_context),
+      evidence_grounding: versioned("global.evidence_grounding", evidence_grounding),
+      output_discipline: versioned("global.output_discipline", output_discipline),
     };
   }
 
@@ -56,15 +60,14 @@ export class IdentityRepositoryLoader {
     const dir = ARTIFACT_DIR[processorId];
     if (!dir) throw new RuntimeConfigError("ARTIFACT_PROCESSOR_NOT_CONFIGURED", `No artifact directory for '${processorId}'`);
     const prefix = scope ? `${scope}_` : "";
-    // Explicit allow-listed paths: no runtime/user-supplied repository paths.
     const reasoningCandidates = scope ? [`${dir}/${scope}/reasoning.yaml`, `${dir}/${prefix}reasoning.yaml`] : [`${dir}/reasoning.yaml`];
     let reasoning:any; let lastError:unknown;
     for (const candidate of reasoningCandidates) { try { reasoning = await this.yaml.load(candidate); break; } catch (e) { lastError=e; } }
     if (!reasoning) throw lastError ?? new RuntimeConfigError("ARTIFACT_MISSING", `Reasoning artifact missing for ${processorId}`);
-    const output_contract = await this.yaml.load(`${dir}/output_contract.yaml`);
+    const output_contract:any = await this.yaml.load(`${dir}/output_contract.yaml`);
     return {
-      reasoning: { id: `${processorId}${scope ? `.${scope}` : ""}.reasoning`, version: reasoning.version ?? "frozen", content: reasoning },
-      output_contract: { id: `${processorId}.output_contract`, version: output_contract.version ?? "frozen", content: output_contract },
+      reasoning: versioned(`${processorId}${scope ? `.${scope}` : ""}.reasoning`, reasoning),
+      output_contract: versioned(`${processorId}.output_contract`, output_contract),
     };
   }
 }
