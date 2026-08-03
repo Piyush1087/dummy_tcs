@@ -1,5 +1,6 @@
 id: market_geography
-version: 1.0-working
+version: 1.0-frozen
+status: FROZEN
 engine: brand_intelligence
 branch: identity
 executor: ai
@@ -20,17 +21,25 @@ inputs:
     - normalized_location_evidence
     - normalized_shipping_or_service_area_evidence
     - normalized_offering_summary_evidence
+    - similarweb_geography_evidence
+    - instagram_audience_geography_evidence
+
+input_policy:
+  commercial_service_evidence_priority: Website/service/shipping evidence describes where the brand can actually serve customers and should carry stronger market-availability meaning.
+  observed_demand_evidence: Similarweb geography may help identify where demand/traffic is concentrated but does not alone prove service availability.
+  audience_evidence: Instagram audience geography may support market inference but does not alone prove the brand serves that geography.
+  note: Exact weighting and inference rules belong in the reasoning artifact, not the processor definition.
+
+execution:
+  can_run_independently: true
+  partial_output_supported: false
+  multi_source_evidence_supported: true
 
 artifacts:
   reasoning: to_define
   taxonomy: to_define
   examples: to_define
   output_contract: to_define
-
-execution:
-  blocking: false
-  can_run_independently: true
-  partial_output_supported: false
 
 failure_policy:
   fail_if_required_input_missing: true
