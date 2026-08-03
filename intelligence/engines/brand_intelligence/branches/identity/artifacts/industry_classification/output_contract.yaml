@@ -1,6 +1,6 @@
 id: industry_classification_output_contract
-version: 1.0-working
-status: WORKING
+version: 1.0-frozen
+status: FROZEN
 processor: industry_classification
 
 purpose: Define the machine-valid structured output returned by the AI executor for each active processor scope.
@@ -12,15 +12,25 @@ contracts:
       type: object
       additional_properties: false
       required:
+        - status
         - industry
         - sub_industry
       properties:
+        status:
+          type: string
+          enum: [RESOLVED, UNRESOLVED]
         industry:
-          type: string
-          constraint: must_match_taxonomy
+          type: [string, 'null']
+          constraint: when_status_RESOLVED_must_match_canonical_industry_taxonomy
         sub_industry:
-          type: string
-          constraint: must_belong_to_industry
+          type: [string, 'null']
+          constraint: when_status_RESOLVED_must_belong_to_industry
+
+    invariants:
+      - RESOLVED requires non-null valid industry and sub_industry.
+      - UNRESOLVED requires industry=null and sub_industry=null.
+      - Parent-specific OTHER is a valid resolved Sub-industry when Industry is known but the MVP taxonomy lacks a defensible specific match.
+      - Legacy Industry enum values are invalid outputs.
 
   industry_niche:
     active_outputs: [industry_niche]
@@ -32,13 +42,19 @@ contracts:
       properties:
         industry_niche:
           type: [string, 'null']
-          constraint: must_be_compatible_with_canonical_industry_and_sub_industry
+          constraint: must_be_evidence_supported_and_compatible_with_canonical_industry_and_sub_industry
+
+    invariants:
+      - null is valid when no meaningful evidence-supported niche can be established.
+      - niche must not alter or contradict canonical Industry or Sub-industry.
 
 validation:
   reject_extra_fields: true
   reject_taxonomy_mismatch: true
   reject_invalid_parent_child_combination: true
-  gatekeeper_null_policy: unresolved_behavior_to_freeze
+  reject_legacy_industry_values: true
+  reject_partial_gatekeeper_resolution: true
   niche_null_allowed: true
 
-note: Evidence references/confidence are not added here until we decide whether they are universal runtime metadata, processor output, or evaluation-only fields. Avoid bloating every intelligence contract by default.
+runtime_metadata_policy:
+  note: Model, token usage, latency, failures, evidence/provenance references and other execution telemetry are not business intelligence fields in this output contract. They belong to execution/runtime records unless a later global contract explicitly requires otherwise.
