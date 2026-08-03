@@ -1,6 +1,6 @@
 export type TaskState = "PENDING"|"READY"|"RUNNING"|"SUCCEEDED"|"FAILED_PRECHECK"|"FAILED_PROVIDER"|"FAILED_VALIDATION"|"FAILED_PERSISTENCE"|"SKIPPED_DEPENDENCY";
 export type ExecutionState = "PENDING"|"RUNNING"|"SUCCEEDED"|"PARTIAL"|"FAILED";
-export type ExecutionTask = { id:string; processorId:string; processorScope?:string; kind:"AI"|"DETERMINISTIC"; activeOutputs:string[]; dependsOn?:string[]; required?:boolean; };
+export type ExecutionTask = { id:string; processorId:string; processorScope?:string; kind:"AI"|"DETERMINISTIC"; activeOutputs:string[]; dependsOn?:string[]; canonicalDependencies?:string[]; required?:boolean; };
 export type ExecutionProfile = { id:string; tasks:ExecutionTask[]; persistResultsDefault:boolean; };
 export type CompilerRequest = { entityType:string; entityId:string; websiteUrl:string; persistResults?:boolean; };
 export type TaskResult = { taskId:string; state:TaskState; values?:Record<string,unknown>; error?:{code:string;message:string}; metadata?:Record<string,unknown>; };
