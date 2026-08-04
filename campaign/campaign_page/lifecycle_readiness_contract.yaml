@@ -1,0 +1,132 @@
+version: "1.0"
+status: FROZEN
+module: campaign_page
+artifact: lifecycle_readiness_contract
+
+scope:
+  includes: [campaign_lifecycle, readiness_primitives, execution_readiness, workspace_dependency_order, share_readiness, reporting_surface_readiness]
+  excludes: [product_internal_logic, brief_internal_logic, discovery_internal_logic, applicants_internal_logic, collaborations_internal_logic, intelligence_calculation]
+
+lifecycle:
+  DRAFT:
+    operational_page: false
+    creator_facing_live: false
+    primary_action: CONTINUE_CAMPAIGN_CREATION
+  PUBLISHED:
+    definition: campaign_definition_published_but_execution_readiness_not_met
+    operational_page: true
+    creator_facing_live: false
+  LIVE:
+    requires: ACTIVE_PRODUCT_WITH_ACTIVE_BRIEF
+    meta_required: false
+  PAUSED:
+    new_creator_acquisition: false
+    new_applications: false
+    existing_applications_reviewable: true
+    existing_collaborations_operational: true
+    primary_action: RESUME_CAMPAIGN
+  COMPLETED:
+    creator_acquisition: false
+    new_applications: false
+    new_collaborations: false
+    reporting_available: true
+    intelligence_available: true
+    completion_trigger: DEFERRED
+  ARCHIVED:
+    execution: false
+    read_only: true
+    purpose: [REVIEW, HISTORY, REPORTING]
+    operational_ctas: hidden
+
+transitions:
+  - {from: DRAFT, to: PUBLISHED, trigger: PUBLISH_MANUAL_CAMPAIGN}
+  - {from: PUBLISHED, to: LIVE, trigger: EXECUTION_READINESS_MET}
+  - {from: LIVE, to: PAUSED, trigger: PAUSE}
+  - {from: PAUSED, to: LIVE, trigger: RESUME}
+  - {from: LIVE_OR_PAUSED, to: COMPLETED, trigger: DEFERRED}
+  - {from: COMPLETED, to: ARCHIVED, trigger: ARCHIVE}
+
+ai_recommended_entry:
+  behavior: CAMPAIGN_PRODUCT_BRIEF_ACCEPTED_AS_ONE_REVIEW_FLOW
+  resulting_state: LIVE
+  note: AI-recommended campaign does not persist an intermediate user-editable draft after all required review steps are accepted.
+
+readiness_primitives:
+  has_active_product:
+    type: boolean
+    derived: true
+    persisted_on_campaign: false
+    rule: EXISTS_ACTIVE_CAMPAIGN_PRODUCT
+  has_active_brief:
+    type: boolean
+    derived: true
+    persisted_on_campaign: false
+    rule: EXISTS_ACTIVE_PRODUCT_WITH_ACTIVE_BRIEF
+  execution_ready:
+    type: boolean
+    derived: true
+    rule: EXISTS_ACTIVE_PRODUCT_WITH_ACTIVE_BRIEF
+  meta_connection_state:
+    type: enum
+    values: [CONNECTED, NOT_CONNECTED, CONNECTION_UNAVAILABLE]
+    owner: INTEGRATION_DOMAIN
+    persisted_on_campaign: false
+  share_campaign_ready:
+    type: boolean
+    derived: true
+    rule: CAMPAIGN_STATUS_LIVE_AND_EXECUTION_READY
+  reporting_state:
+    type: enum
+    values: [INSUFFICIENT_DATA, AVAILABLE]
+    owner: REPORTING_PROVIDER
+  campaign_intelligence_state:
+    type: enum
+    values: [NOT_AVAILABLE, AVAILABLE, STALE]
+    owner: INTELLIGENCE_PROVIDER
+
+workspace_dependency_order:
+  - DISCOVERY
+  - APPLICANTS
+  - COLLABORATIONS
+  rules:
+    discovery_unlocked_when: CAMPAIGN_LIVE
+    applicants_cannot_precede: DISCOVERY_UNLOCK
+    applicants_activity_does_not_require_discovery_prospect_activity: true
+    collaborations_cannot_precede: APPLICANTS
+    collaboration_creation_requires: APPROVED_APPLICATION
+
+marketplace_capability:
+  rule: CAMPAIGN_LIVE_AND_META_CONNECTED
+  meta_not_connected_effect:
+    discovery_workspace: AVAILABLE
+    marketplace_sourcing: UNAVAILABLE
+    manual_sourcing: AVAILABLE
+    share_campaign: AVAILABLE
+
+runtime_counts:
+  persisted_on_campaign: false
+  fields:
+    - active_product_count
+    - active_brief_count
+    - active_prospect_count
+    - total_application_count
+    - pending_application_count
+    - rejected_application_count
+    - total_collaboration_count
+    - active_collaboration_count
+    - completed_collaboration_count
+
+prohibited_campaign_persistence:
+  - hasProduct
+  - hasBrief
+  - hasApplicants
+  - hasCollaborations
+  - discoveryReady
+  - applicantsReady
+  - collaborationsReady
+  - campaignPageState
+  - hydrationState
+  - currentPriorityModule
+  - metaConnected
+
+invariant: "Hydration/readiness are runtime projections over persisted domain state, never duplicated Campaign state."
