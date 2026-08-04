@@ -1,4 +1,4 @@
-import type { ExecutionProfile, CompilerRequest, CompilerRuntime, TaskResult, ExecutionTask } from "../compiler/compiler";
+import type { ExecutionProfile, CompilerRequest, TaskResult, ExecutionTask } from "../compiler/compiler";
 
 export interface ExecutionProfileLoader { load(profileId: string): Promise<ExecutionProfile>; }
 export interface DefinitionLoader {
@@ -14,7 +14,8 @@ export interface EvidenceRuntime {
 export interface ModelRuntimeResolver { resolve(processorId: string, scope?: string): Promise<any>; }
 export interface PromptBuilderPort { build(input: any): Promise<any> | any; }
 export interface AiProviderPort { execute(args: { promptPackage: any; resolvedModelRuntime: any; websiteUrl: string }): Promise<{ output: unknown; metadata?: Record<string, unknown> }>; }
-export interface OutputValidatorPort { validate(args: { task: ExecutionTask; rawOutput: unknown }): Promise<{ ok: boolean; data?: Record<string, unknown>; error?: { code: string; message: string } }>; }
+export type RuntimeValidationError = { code: string; message: string; validation_stage?: "STRUCTURAL"|"SEMANTIC"|"CONFIGURATION"; issues?: Array<{ path:Array<string|number>; code:string; message:string }> };
+export interface OutputValidatorPort { validate(args: { task: ExecutionTask; rawOutput: unknown }): Promise<{ ok: boolean; data?: Record<string, unknown>; error?: RuntimeValidationError }>; }
 export interface PersistencePort { persist(args: { task: ExecutionTask; entityId: string; values: Record<string, unknown>; persistResults: boolean }): Promise<void>; }
 export interface TelemetryPort {
   executionStarted(args: { profileId: string; request: CompilerRequest }): Promise<string>;
