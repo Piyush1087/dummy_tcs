@@ -1,0 +1,234 @@
+version: "1.0"
+status: FROZEN
+module: campaign_page
+artifact: backend_schema_reconciliation
+
+sources:
+  - backend/campaign_schema.prisma
+  - campaign/backend/schema_reconciliation.yaml
+  - campaign/campaign_page/lifecycle_readiness_contract.yaml
+  - campaign/campaign_page/hydration_state_machine.yaml
+  - campaign/campaign_page/orchestration_contract.yaml
+  - campaign/campaign_page/shell_domain_contract.yaml
+  - campaign/campaign_page/intelligence_reporting_contract.yaml
+  - campaign/campaign_page/responsive_runtime_contract.yaml
+
+principles:
+  - "Campaign Page is an orchestration domain, not a persistence aggregate."
+  - "Reuse the UceCampaign aggregate reconciled for Create Campaign."
+  - "Persist genuine Campaign lifecycle facts; derive readiness, hydration, visibility and priority at runtime."
+  - "Do not add placeholder relations/models for Product, Brief, Discovery, Applicants or Collaborations before those modules are reconciled."
+  - "Integration state remains Integration-owned; Intelligence/Reporting output remains provider-owned."
+
+decision_types: [KEEP, ADD, DERIVE, DEFER, EXTERNAL_OWNER]
+
+reconciliation:
+  campaign_status:
+    decision: KEEP
+    owner: CAMPAIGN
+    field: UceCampaign.status
+    enum: UceCampaignStatus
+    values: [DRAFT, PUBLISHED, LIVE, PAUSED, COMPLETED, ARCHIVED]
+
+  creation_source:
+    decision: KEEP
+    owner: CAMPAIGN
+    field: UceCampaign.creationSource
+    note: "Creation-source-dependent editability remains runtime/service-layer behavior."
+
+  published_at:
+    decision: ADD
+    owner: CAMPAIGN
+    field: publishedAt
+    type: DateTime?
+    semantics: "First successful transition from DRAFT to PUBLISHED for a manually created campaign. For AI-recommended acceptance flows that become LIVE atomically, record the accepted publication moment as well."
+
+  live_at:
+    decision: ADD
+    owner: CAMPAIGN
+    field: liveAt
+    type: DateTime?
+    semantics: "First moment Campaign execution readiness is satisfied and Campaign enters LIVE."
+
+  completed_at:
+    decision: ADD
+    owner: CAMPAIGN
+    field: completedAt
+    type: DateTime?
+    semantics: "Moment Campaign enters COMPLETED. Completion trigger remains deferred to lifecycle runtime design."
+
+  archived_at:
+    decision: ADD
+    owner: CAMPAIGN
+    field: archivedAt
+    type: DateTime?
+    semantics: "Moment Campaign enters ARCHIVED."
+
+  paused_at:
+    decision: DEFER
+    reason: "Pause/resume may occur repeatedly; a single pausedAt field is not a sufficient lifecycle-history model."
+
+  active_product_readiness:
+    decision: DEFER
+    future_owner: PRODUCT_DOMAIN
+    shell_behavior: DERIVE
+    rule: EXISTS_ACTIVE_CAMPAIGN_PRODUCT
+    campaign_boolean_column: false
+
+  active_brief_readiness:
+    decision: DEFER
+    future_owner: BRIEF_DOMAIN
+    shell_behavior: DERIVE
+    rule: EXISTS_ACTIVE_PRODUCT_WITH_ACTIVE_BRIEF
+    campaign_boolean_column: false
+
+  execution_ready:
+    decision: DERIVE
+    persisted: false
+    rule: EXISTS_ACTIVE_PRODUCT_WITH_ACTIVE_BRIEF
+
+  discovery_readiness:
+    decision: DERIVE
+    persisted: false
+    rule: CAMPAIGN_STATUS_LIVE
+
+  discovery_projection:
+    decision: DEFER
+    future_owner: DISCOVERY_DOMAIN
+    expected_runtime_projection: [instantiated, active_prospect_count, priority_signal]
+
+  applicants_instantiated:
+    decision: DEFER
+    future_owner: APPLICANTS_DOMAIN
+    shell_behavior: DERIVE
+    rule: EXISTS_ANY_APPLICATION_FOR_CAMPAIGN
+    campaign_boolean_column: false
+
+  applicants_projection:
+    decision: DEFER
+    future_owner: APPLICANTS_DOMAIN
+    expected_runtime_projection: [total_application_count, pending_application_count, priority_signal]
+
+  collaborations_instantiated:
+    decision: DEFER
+    future_owner: COLLABORATIONS_DOMAIN
+    shell_behavior: DERIVE
+    rule: EXISTS_ANY_COLLABORATION_FOR_CAMPAIGN
+    campaign_boolean_column: false
+
+  collaborations_projection:
+    decision: DEFER
+    future_owner: COLLABORATIONS_DOMAIN
+    expected_runtime_projection: [active_count, completed_count, priority_signal]
+
+  collaboration_provenance:
+    decision: DEFER
+    future_owner: COLLABORATIONS_DOMAIN
+    invariant: COLLABORATION_REQUIRES_APPROVED_APPLICATION
+
+  meta_connection_state:
+    decision: EXTERNAL_OWNER
+    owner: INTEGRATION_SETTINGS_DOMAIN
+    persisted_on_campaign: false
+    shell_consumes: [CONNECTED, NOT_CONNECTED, CONNECTION_UNAVAILABLE]
+
+  marketplace_enabled:
+    decision: DERIVE
+    persisted: false
+    rule: CAMPAIGN_LIVE_AND_META_CONNECTED
+
+  share_campaign_enabled:
+    decision: DERIVE
+    persisted: false
+    rule: CAMPAIGN_STATUS_LIVE_AND_EXECUTION_READY
+
+  reporting_highlight:
+    decision: EXTERNAL_OWNER
+    owner: REPORTING_INTELLIGENCE_PROVIDER
+    persisted_on_campaign: false
+    mvp_provider: CampaignReportingDummyProvider
+    target_provider: CampaignIntelligenceReportingProvider
+
+  campaign_priority_insight:
+    decision: EXTERNAL_OWNER
+    owner: MODULE_SIGNALS_AND_FUTURE_CAMPAIGN_INTELLIGENCE_ENGINE
+    persisted_on_campaign: false
+
+  hydration_state:
+    decision: DERIVE
+    persisted: false
+
+  primary_focus:
+    decision: DERIVE
+    persisted: false
+
+  workspace_navigation:
+    decision: DERIVE
+    persisted: false
+
+  workspace_visibility:
+    decision: DERIVE
+    persisted: false
+
+  responsive_state:
+    decision: EXTERNAL_OWNER
+    owner: FRONTEND_DESIGN_SYSTEM
+    persisted: false
+
+prohibited_campaign_columns:
+  - hasProduct
+  - hasBrief
+  - executionReady
+  - hasApplicants
+  - hasCollaborations
+  - discoveryReady
+  - applicantsReady
+  - collaborationsReady
+  - metaConnected
+  - shareEnabled
+  - campaignPageState
+  - hydrationState
+  - primaryFocus
+  - currentPriorityModule
+  - workspaceNavigation
+  - currentInsight
+  - insightSeverity
+  - recommendedAction
+  - reportingMetric
+  - reportingValue
+  - reportingInsight
+  - reportingSeverity
+  - reportingRecommendation
+
+prisma_delta:
+  model: UceCampaign
+  add:
+    - "publishedAt DateTime? @map(\"published_at\")"
+    - "liveAt DateTime? @map(\"live_at\")"
+    - "completedAt DateTime? @map(\"completed_at\")"
+    - "archivedAt DateTime? @map(\"archived_at\")"
+  add_relations_now: false
+  add_campaign_page_model: false
+
+service_layer_follow_up:
+  - "Enforce legal lifecycle transitions; frontend must not directly assign arbitrary status."
+  - "Set lifecycle timestamps atomically with successful transitions."
+  - "PUBLISHED -> LIVE must verify Product/Brief execution readiness once those modules are integrated."
+  - "Resolve Campaign Page projections/counts without duplicating them on UceCampaign."
+  - "Keep AI/Reporting provider failure non-blocking for Campaign Page load."
+
+migration_notes:
+  existing_rows:
+    lifecycle_timestamps_nullable: true
+    backfill_required_for_schema_validity: false
+    production_backfill_policy: DEFER_TO_INTEGRATION
+  timestamp_semantics:
+    first_transition_fact: true
+    overwrite_on_reentry: false
+    note: "liveAt records first entry to LIVE; pause/resume does not overwrite it."
+
+result:
+  campaign_page_specific_new_models: 0
+  campaign_page_specific_new_relations_now: 0
+  campaign_owned_new_fields: [publishedAt, liveAt, completedAt, archivedAt]
+  conclusion: "Campaign Page shell remains projection-driven; only genuine lifecycle event timestamps extend Campaign persistence."
