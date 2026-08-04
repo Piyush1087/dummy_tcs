@@ -1,20 +1,17 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.0
-// Status: CREATE CAMPAIGN RECONCILED WORKING SCHEMA
+// Version: 1.1
+// Status: CREATE CAMPAIGN + CAMPAIGN PAGE RECONCILED WORKING SCHEMA
 //
 // Purpose:
-// - Define the Campaign-owned persistence required by the frozen Create Campaign contracts.
+// - Define Campaign-owned persistence required by frozen Create Campaign and Campaign Page contracts.
 // - Sit alongside, not inside, backend/intelligence_schema.prisma.
 // - Reuse/evolve the production UCE Campaign aggregate during developer integration.
 //
 // IMPORTANT:
 // This is NOT a standalone replacement for the production Prisma schema.
 // Existing production models/relations must be merged by the developer using
-// campaign/backend/schema_reconciliation.yaml as the migration guide.
-
-// -----------------------------------------------------------------------------
-// ENUMS
-// -----------------------------------------------------------------------------
+// campaign/backend/schema_reconciliation.yaml and
+// campaign/campaign_page/backend_schema_reconciliation.yaml as migration guides.
 
 enum UceCampaignStatus {
   DRAFT
@@ -35,8 +32,6 @@ enum UcePublishingSchedule {
   SCHEDULED
 }
 
-// Canonical campaign objective. If CampaignObjective already exists in the
-// production schema with these exact values, REUSE it rather than duplicate it.
 enum CampaignObjective {
   PULSE
   PROOF
@@ -44,18 +39,12 @@ enum CampaignObjective {
   PUSH
 }
 
-// Reuse existing production UceMediaPlatform where present.
 enum UceMediaPlatform {
   INSTAGRAM
   TIKTOK
   YOUTUBE
 }
 
-// Reuse existing production UceVisibilityScope where present.
-// UI mapping:
-// EVERYONE -> PUBLIC
-// ELIGIBLE_ONLY -> ELIGIBLE_CREATORS_ONLY
-// INVITED_ONLY -> INVITE_ONLY
 enum UceVisibilityScope {
   EVERYONE
   ELIGIBLE_ONLY
@@ -68,14 +57,11 @@ enum UceAudienceGender {
   MALE
 }
 
-// Reuse existing production enum where present.
 enum UceCompensationType {
   FIXED_FEE
   NEGOTIABLE
 }
 
-// Existing values may be broader in production. IMMEDIATE may remain for other
-// consumers, but Create Campaign accepts NET_7/15/30/45/60 only.
 enum UcePayoutTerms {
   IMMEDIATE
   NET_7
@@ -92,10 +78,6 @@ enum UceBrandSupportType {
   ACCESS_SUBSCRIPTION
   OTHER
 }
-
-// -----------------------------------------------------------------------------
-// CAMPAIGN AGGREGATE ROOT
-// -----------------------------------------------------------------------------
 
 model UceCampaign {
   id             String   @id @default(cuid())
@@ -114,6 +96,15 @@ model UceCampaign {
   targeting   UceCampaignTargeting?
   commercials UceCampaignCommercials?
 
+  // Genuine lifecycle event facts used by Campaign Page/runtime/reporting.
+  // These are first-transition timestamps, not hydration/readiness flags.
+  // liveAt is not overwritten on pause/resume. A repeated pause history, if
+  // required later, must use a proper lifecycle-event/history model.
+  publishedAt DateTime? @map("published_at")
+  liveAt      DateTime? @map("live_at")
+  completedAt DateTime? @map("completed_at")
+  archivedAt  DateTime? @map("archived_at")
+
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
@@ -122,10 +113,6 @@ model UceCampaign {
   @@index([creationSource])
   @@map("uce_campaigns")
 }
-
-// -----------------------------------------------------------------------------
-// STEP 1 — CAMPAIGN STRATEGY
-// -----------------------------------------------------------------------------
 
 model UceCampaignStrategy {
   id         String @id @default(cuid())
@@ -137,8 +124,6 @@ model UceCampaignStrategy {
 
   coreObjective CampaignObjective @map("core_objective")
 
-  // Deterministically resolved from canonical KPI framework and frozen on
-  // publish so later library revisions do not reinterpret a live campaign.
   primaryKpiId     String   @map("primary_kpi_id")
   supportingKpiIds String[] @default([]) @map("supporting_kpi_ids")
 
@@ -154,15 +139,10 @@ model UceCampaignStrategy {
   @@map("uce_campaign_strategies")
 }
 
-// -----------------------------------------------------------------------------
-// STEP 2 — CREATOR STRATEGY / TARGETING
-// -----------------------------------------------------------------------------
-
 model UceCampaignTargeting {
   id         String @id @default(cuid())
   campaignId String @unique @map("campaign_id")
 
-  // Canonical IDs from campaign/canonical/creator_archetypes.yaml
   creatorArchetypes String[] @default([]) @map("creator_archetypes")
 
   minimumFollowers Int  @default(0) @map("minimum_followers")
@@ -173,18 +153,12 @@ model UceCampaignTargeting {
 
   audienceGender UceAudienceGender @default(ALL) @map("audience_gender")
 
-  // Canonical IDs from campaign/canonical/audience_affinities.yaml.
-  // Aliases are search vocabulary only and are never persisted here.
   audienceAffinityIds String[] @default([]) @map("audience_affinity_ids")
 
   // Structured array validated against the shared geography shape:
   // [{ scope, label, country_code, locality, region, radius_km, is_primary }]
-  // scope: LOCALITY | REGION | COUNTRY | GLOBAL
-  //
-  // Json is intentionally used in this working schema because the Intelligence
-  // contract defines the canonical object shape but not a shared physical DB
-  // model. During production merge, reuse an existing shared normalized
-  // geography model instead if one already exists.
+  // Json remains the working-schema persistence choice until production merge
+  // confirms whether a canonical shared normalized geography model exists.
   audienceGeographies Json @map("audience_geographies")
 
   campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
@@ -195,21 +169,17 @@ model UceCampaignTargeting {
   @@map("uce_campaign_targeting")
 }
 
-// -----------------------------------------------------------------------------
-// STEP 3 — COMMERCIAL STRATEGY
-// -----------------------------------------------------------------------------
-
 model UceCampaignCommercials {
   id         String @id @default(cuid())
   campaignId String @unique @map("campaign_id")
 
-  receivesBrandSupport        Boolean              @default(false) @map("receives_brand_support")
-  brandSupportType            UceBrandSupportType? @map("brand_support_type")
-  brandSupportEstimatedValue  Decimal?             @map("brand_support_estimated_value") @db.Decimal(12, 2)
+  receivesBrandSupport       Boolean              @default(false) @map("receives_brand_support")
+  brandSupportType           UceBrandSupportType? @map("brand_support_type")
+  brandSupportEstimatedValue Decimal?             @map("brand_support_estimated_value") @db.Decimal(12, 2)
 
   compensationType UceCompensationType @map("compensation_type")
 
-  // Campaign-wide offer. FIXED_FEE = final advertised creator payout;
+  // FIXED_FEE = final advertised creator payout;
   // NEGOTIABLE = minimum advertised payout. No maximum is stored here.
   commercialOffer Decimal @map("commercial_offer") @db.Decimal(12, 2)
 
@@ -218,9 +188,7 @@ model UceCampaignCommercials {
   advancePaymentPercentage Int            @default(0) @map("advance_payment_percentage")
   payoutTerms              UcePayoutTerms @map("payout_terms")
 
-  // Derived from Brand Centre country and persisted as campaign commercial
-  // context. Domain validation restricts this to INR or USD:
-  // IN -> INR; US -> USD; all other countries -> USD.
+  // Derived from Brand Centre country: IN -> INR; US -> USD; rest -> USD.
   currency String @db.VarChar(3)
 
   campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
@@ -232,9 +200,27 @@ model UceCampaignCommercials {
 }
 
 // -----------------------------------------------------------------------------
+// CAMPAIGN PAGE PERSISTENCE BOUNDARY
+// -----------------------------------------------------------------------------
+// Campaign Page introduces no CampaignPage model and no persisted hydration,
+// readiness, workspace-visibility, priority, Meta-capability, Reporting or
+// Intelligence fields. Those are derived/runtime/provider-owned.
+//
+// Product/Brief/Application/Collaboration relations are deliberately not guessed
+// here. Add them only when those modules are independently reconciled.
+//
+// Campaign Page adds only genuine Campaign lifecycle facts:
+// - publishedAt
+// - liveAt
+// - completedAt
+// - archivedAt
+//
+// pausedAt is intentionally absent because pause/resume may repeat; a single
+// timestamp would not represent lifecycle history correctly.
+
+// -----------------------------------------------------------------------------
 // PRODUCTION MERGE / DEPRECATION NOTES
 // -----------------------------------------------------------------------------
-//
 // Existing UCE fields superseded for Create Campaign:
 // - UceCampaignStatus.ACTIVE -> migrate semantic to LIVE
 // - UceTimelineStructure / timelineType -> UcePublishingSchedule
@@ -257,5 +243,5 @@ model UceCampaignCommercials {
 // - applicationScope
 // - UcePayoutTerms.IMMEDIATE
 //
-// Cross-field and creation_source-dependent edit rules belong to Zod/service
-// contracts, not Prisma constraints.
+// Cross-field, lifecycle-transition and creation_source-dependent edit rules
+// belong to Zod/service/runtime contracts, not Prisma constraints.
