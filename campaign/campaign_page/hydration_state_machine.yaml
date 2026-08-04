@@ -1,0 +1,123 @@
+version: "1.0"
+status: FROZEN
+module: campaign_page
+artifact: hydration_state_machine
+
+principle: "Nine deterministic hydration outcomes of one Campaign Page; never nine persisted backend Campaign states."
+
+states:
+  STATE_1_PRODUCT_SETUP:
+    lifecycle: PUBLISHED
+    entry: active_product_count == 0
+    primary_focus: PRODUCT
+    primary_action: ADD_PRODUCT
+    products_briefs: PROMINENT
+    discovery: HIDDEN
+    applicants: HIDDEN
+    collaborations: HIDDEN
+    reporting: HIDDEN
+    share_campaign: DISABLED
+    exit: active_product_count >= 1
+
+  STATE_2_BRIEF_SETUP:
+    lifecycle: PUBLISHED
+    entry: active_product_count >= 1 AND execution_ready == false
+    primary_focus: BRIEF
+    primary_action: ADD_BRIEF
+    products_briefs: PROMINENT
+    discovery: HIDDEN
+    applicants: HIDDEN
+    collaborations: HIDDEN
+    reporting: HIDDEN
+    share_campaign: DISABLED
+    exit: execution_ready == true
+    lifecycle_transition_on_exit: LIVE
+
+  STATE_3_CREATOR_ACQUISITION_SETUP:
+    lifecycle: LIVE
+    entry: active_prospect_count == 0 AND total_application_count == 0 AND total_collaboration_count == 0
+    primary_focus: DISCOVERY
+    products_briefs: BACKGROUND
+    discovery: PROMINENT
+    applicants: HIDDEN
+    collaborations: HIDDEN
+    reporting: AVAILABLE
+    share_campaign: ENABLED
+
+  STATE_4_DISCOVERY_ACTIVE:
+    lifecycle: LIVE
+    candidate_when: active_prospect_count > 0
+    primary_focus_candidate: DISCOVERY
+    discovery: PROMINENT_IF_PRIORITY_WINNER
+    applicants: VISIBLE_IF_INSTANTIATED
+    collaborations: VISIBLE_IF_INSTANTIATED
+    reporting: AVAILABLE
+
+  STATE_5_APPLICATIONS_ACTIVE:
+    lifecycle: LIVE
+    candidate_when: pending_application_count > 0
+    primary_focus_candidate: APPLICANTS
+    discovery: NORMAL
+    applicants: PROMINENT_IF_PRIORITY_WINNER
+    collaborations: VISIBLE_IF_INSTANTIATED
+    reporting: AVAILABLE
+
+  STATE_6_COLLABORATIONS_ACTIVE:
+    lifecycle: LIVE
+    candidate_when: active_collaboration_count > 0
+    primary_focus_candidate: COLLABORATIONS
+    discovery: NORMAL
+    applicants: NORMAL_IF_INSTANTIATED
+    collaborations: PROMINENT_IF_PRIORITY_WINNER
+    reporting: AVAILABLE
+
+  STATE_7_MATURE_CAMPAIGN:
+    lifecycle: LIVE
+    candidate_when: meaningful_optimization_intelligence_available == true
+    primary_focus_candidate: REPORTING_OR_INTELLIGENCE
+    reporting: PROMINENT_IF_PRIORITY_WINNER
+    note: "Maturity is not a fixed collaboration/count threshold. Provider determines whether meaningful optimization intelligence exists."
+
+  STATE_8_PAUSED_CAMPAIGN:
+    lifecycle: PAUSED
+    override: true
+    primary_focus: RESUME_OR_EXISTING_EXECUTION
+    new_discovery: DISABLED
+    share_campaign: DISABLED
+    new_applications: DISABLED
+    applicants: VISIBLE_IF_INSTANTIATED
+    collaborations: VISIBLE_IF_INSTANTIATED
+    reporting: AVAILABLE
+    intelligence: AVAILABLE_IF_PROVIDER_OUTPUT_EXISTS
+
+  STATE_9_HISTORICAL_CAMPAIGN:
+    lifecycle: [COMPLETED, ARCHIVED]
+    override: true
+    primary_focus: REVIEW_AND_REPORTING
+    operational_ctas: HIDDEN
+    products_briefs: HISTORICAL_COMPACT
+    discovery: HISTORICAL_IF_INSTANTIATED
+    applicants: HISTORICAL_IF_INSTANTIATED
+    collaborations: HISTORICAL_IF_INSTANTIATED
+    reporting: PROMINENT
+
+resolver_order:
+  - "ARCHIVED or COMPLETED -> STATE_9"
+  - "PAUSED -> STATE_8"
+  - "PUBLISHED and no active product -> STATE_1"
+  - "PUBLISHED and no valid active Product->Brief chain -> STATE_2"
+  - "LIVE -> evaluate STATE_3 through STATE_7 candidates using Priority Engine"
+
+non_linear_rule: "States 1-3 establish setup progression; States 4-7 are competing operational focus states; State 8 is pause override; State 9 is historical override."
+
+meta_rule: "Meta connection modifies Discovery marketplace capability; it never creates a hydration state."
+
+workspace_instantiation:
+  discovery:
+    visible_when: CAMPAIGN_LIVE_OR_HISTORICALLY_INSTANTIATED
+  applicants:
+    instantiated_when: EXISTS_ANY_APPLICATION_FOR_CAMPAIGN
+    persists_when_pending_count_zero: true
+  collaborations:
+    instantiated_when: EXISTS_ANY_COLLABORATION_FOR_CAMPAIGN
+    persists_when_active_count_zero: true
