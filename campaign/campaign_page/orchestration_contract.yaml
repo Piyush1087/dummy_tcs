@@ -1,16 +1,11 @@
-version: "1.0"
+version: "1.1"
 status: FROZEN
 module: campaign_page
 artifact: orchestration_contract
 
 goal: "Resolve what can be used, what deserves attention, and how prominently each Campaign Page surface should appear."
 
-pipeline:
-  - LIFECYCLE_OVERRIDE
-  - READINESS
-  - PRIORITY
-  - VISIBILITY
-  - HYDRATION_OUTPUT
+pipeline: [LIFECYCLE_OVERRIDE, READINESS, PRIORITY, VISIBILITY, HYDRATION_OUTPUT]
 
 lifecycle_override:
   ARCHIVED: STATE_9_HISTORICAL_CAMPAIGN
@@ -18,21 +13,30 @@ lifecycle_override:
   PAUSED: STATE_8_PAUSED_CAMPAIGN
   DRAFT: OUTSIDE_OPERATIONAL_CAMPAIGN_PAGE
   PUBLISHED: CONTINUE_READINESS
-  LIVE: CONTINUE_OPERATIONAL_ORCHESTRATION
+  LIVE: CONTINUE_CURRENT_READINESS_AND_OPERATIONAL_ORCHESTRATION
 
 readiness:
-  product_gate:
-    if: PUBLISHED AND active_product_count == 0
+  campaign_asset_gate:
+    if: PUBLISHED AND active_campaign_asset_count == 0
     result: STATE_1_PRODUCT_SETUP
     short_circuit: true
   brief_gate:
     if: PUBLISHED AND execution_ready == false
     result: STATE_2_BRIEF_SETUP
     short_circuit: true
-  execution_gate:
-    if: execution_ready == true
-    result: CAMPAIGN_LIVE
+  first_execution_gate:
+    if: PUBLISHED AND execution_ready == true
+    result: TRANSITION_CAMPAIGN_TO_LIVE
     enables: [DISCOVERY, SHARE_CAMPAIGN, REPORTING_SURFACE]
+  post_live_execution_gate:
+    if: LIVE AND execution_ready == false
+    result: BLOCKING_READINESS_MODE
+    lifecycle_change: NONE
+    blocks: [NEW_DISCOVERY, NEW_APPLICATIONS, SHARE_CAMPAIGN]
+    preserves: [INSTANTIATED_APPLICANTS, INSTANTIATED_COLLABORATIONS, REPORTING]
+    primary_action:
+      no_active_campaign_asset: ADD_OR_RESUME_PRODUCT
+      no_active_brief_path: ADD_OR_RESUME_BRIEF
 
   applicants:
     structurally_possible_after: DISCOVERY_UNLOCK
@@ -41,11 +45,11 @@ readiness:
     instantiated_when: EXISTS_ANY_COLLABORATION_FOR_CAMPAIGN
     provenance_requires: APPROVED_APPLICATION
   marketplace:
-    enabled_when: CAMPAIGN_LIVE_AND_META_CONNECTED
+    enabled_when: CAMPAIGN_LIVE_AND_EXECUTION_READY_AND_META_CONNECTED
 
 priority_classes:
   P0_BLOCKING:
-    examples: [NO_PRODUCT, NO_BRIEF]
+    examples: [NO_ACTIVE_CAMPAIGN_ASSET, NO_ACTIVE_BRIEF_PATH]
   P1_CRITICAL_ACTION:
     examples: [MODULE_REPORTED_CRITICAL_BLOCKER]
   P2_ACTION_REQUIRED:
@@ -96,6 +100,8 @@ hydration_output:
   persisted: false
   fields:
     lifecycle_status: enum
+    execution_ready: boolean
+    readiness_block: optional_runtime_condition
     hydration_state: runtime_enum
     primary_focus: runtime_surface
     surfaces:
@@ -112,4 +118,4 @@ hydration_output:
     reporting_highlight: optional_provider_output
     generated_at: timestamp
 
-invariant: "Readiness says what can happen; Priority says what deserves focus; Visibility says how it is presented."
+invariant: "Lifecycle records what the Campaign has become; Readiness says what can happen now; Priority says what deserves focus; Visibility says how it is presented."
