@@ -1,6 +1,6 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.2
-// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT RECONCILED WORKING SCHEMA
+// Version: 1.3
+// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF RECONCILED WORKING SCHEMA
 //
 // Purpose:
 // - Define Campaign-owned persistence required by frozen Campaign contracts.
@@ -87,6 +87,29 @@ enum UceCampaignAssetKind {
 enum UceCampaignAssetStatus {
   ACTIVE
   PAUSED
+}
+
+enum UceBriefStatus {
+  DRAFT
+  PUBLISHED
+  PAUSED
+}
+
+enum UceBriefCreationSource {
+  MANUAL
+  AI_RECOMMENDED
+}
+
+enum UceBriefType {
+  CREATOR_LED
+  BRAND_LED
+}
+
+enum UceDeliverableFormat {
+  REEL_VIDEO
+  STORY
+  PHOTOSHOOT
+  BANNER_CAROUSEL
 }
 
 model UceCampaign {
@@ -199,6 +222,7 @@ model UceCampaignAsset {
   brandOfferId   String? @map("brand_offer_id")
 
   campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  briefs   UceBrief[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
@@ -210,12 +234,82 @@ model UceCampaignAsset {
   @@map("uce_campaign_assets")
 }
 
+// Brief is owned by exactly one CampaignAsset. Campaign identity and all Campaign-owned
+// strategy/targeting/commercial values are resolved through CampaignAsset -> Campaign and are
+// intentionally not duplicated here. Required-for-publish authoring fields are nullable so an
+// incomplete autosaved DRAFT can be persisted; publish completeness is service/domain validated.
+model UceBrief {
+  id              String @id @default(cuid())
+  campaignAssetId String @map("campaign_asset_id")
+
+  status         UceBriefStatus         @default(DRAFT)
+  creationSource UceBriefCreationSource @default(MANUAL) @map("creation_source")
+
+  briefName      String?      @map("brief_name")
+  creativeIntent String?      @map("creative_intent")
+  creatorBrief   String?      @map("creator_brief")
+  briefType      UceBriefType? @map("brief_type")
+  platform       UceMediaPlatform?
+
+  // Validated structured value objects. JSON is a persistence boundary, not an
+  // untyped domain boundary; canonical Add Brief contracts validate before writes.
+  briefLevelGuidance Json? @map("brief_level_guidance")
+  referenceContent   Json? @map("reference_content")
+  usageRights        Json? @map("usage_rights")
+  creatorRequirements String? @map("creator_requirements")
+
+  campaignAsset UceCampaignAsset       @relation(fields: [campaignAssetId], references: [id], onDelete: Cascade)
+  deliverables  UceBriefDeliverable[]
+
+  publishedAt DateTime? @map("published_at")
+  pausedAt    DateTime? @map("paused_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([campaignAssetId, status])
+  @@index([creationSource])
+  @@map("uce_briefs")
+}
+
+// Each independently guided creator output is a separate Deliverable row. Multiple rows may use
+// the same format (e.g. two Reels with different guidance); do not add uniqueness on brief+format.
+// configuration and creativeGuidance are validated structured JSON value objects. Nested
+// Scene/Frame/Slide/Shot units remain inside creativeGuidance for MVP.
+model UceBriefDeliverable {
+  id      String @id @default(cuid())
+  briefId String @map("brief_id")
+
+  format       UceDeliverableFormat
+  displayOrder Int                  @map("display_order")
+
+  configuration    Json? @map("configuration")
+  creativeGuidance Json? @map("creative_guidance")
+
+  // Used only when a STORY with AMPLIFY_REEL intent references a Reel in the same Brief.
+  // The FK provides referential integrity; service/domain validation enforces source/target
+  // formats, same-Brief membership, intent and non-self-reference semantics.
+  amplifyTargetDeliverableId String? @map("amplify_target_deliverable_id")
+
+  brief UceBrief @relation(fields: [briefId], references: [id], onDelete: Cascade)
+
+  amplifyTargetDeliverable UceBriefDeliverable?  @relation("BriefDeliverableAmplifyTarget", fields: [amplifyTargetDeliverableId], references: [id], onDelete: Restrict)
+  amplifiedBy               UceBriefDeliverable[] @relation("BriefDeliverableAmplifyTarget")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([briefId, displayOrder])
+  @@index([amplifyTargetDeliverableId])
+  @@map("uce_brief_deliverables")
+}
+
 // -----------------------------------------------------------------------------
-// CAMPAIGN PAGE / CAMPAIGN ASSET PERSISTENCE BOUNDARY
+// CAMPAIGN PAGE / CAMPAIGN ASSET / ADD BRIEF PERSISTENCE BOUNDARY
 // -----------------------------------------------------------------------------
 // Readiness remains derived. Do not persist hasCampaignAsset, hasBrief,
-// executionReady, hydration state, workspace visibility, Meta capability,
-// Reporting output or Intelligence output on Campaign.
+// hasPublishedBrief, executionReady, effective availability, hydration state,
+// workspace visibility, Meta capability, Reporting output or Intelligence output.
 //
 // CampaignAsset identity is immutable and stores no Brand Centre snapshots.
 // Offering.type remains authoritative for Product/Treatment/Collection/etc.
@@ -224,7 +318,19 @@ model UceCampaignAsset {
 // exactly one of brand_profile_id, offering_id or brand_offer_id is populated and
 // that the populated reference matches kind (BRAND/OFFERING/OFFER).
 //
-// Brief relation is deliberately deferred until Add Brief schema reconciliation.
+// Brief platform reuses UceMediaPlatform. Backend validation must enforce that the
+// Brief platform is enabled by Campaign.strategy.platforms. Instagram is the only
+// operational Add Brief platform for MVP.
+//
+// Brief lifecycle persists only DRAFT/PUBLISHED/PAUSED. LIVE/ACTIVE/readiness are
+// not Brief states. PUBLISHED manual Briefs remain content-editable until creator
+// execution is instantiated. Application existence alone does not lock a Brief.
+// Mutability/lock state and creator execution state are derived, not persisted here.
+//
+// AI_RECOMMENDED and MANUAL Briefs use the same canonical models. AI recommendation
+// proposal state remains outside the launched Campaign aggregate until acceptance.
+// AI_RECOMMENDED Brief content is manually immutable while operational Pause/Resume
+// remains permitted by service/domain rules.
 //
 // LIVE + execution_ready=false is a valid runtime condition after launch; it does
 // not demote Campaign back to PUBLISHED.
@@ -246,6 +352,16 @@ model UceCampaignAsset {
 // - fixedFeeAmount/negotiableMinFee/negotiableMaxFee -> commercialOffer
 // - totalCampaignBudgetPool -> totalCampaignBudget
 // - advance default 30 -> default 0; validation allows 0/25/50/75/100
+//
+// Add Brief production reconciliation:
+// - Brief belongs to CampaignAsset, not directly to Campaign/Product.
+// - Purpose, Objective, Archetypes, Campaign terms and Commercials are not Brief fields.
+// - Multiple same-format Deliverables are independent rows when guidance differs.
+// - Usage Rights, format configuration and Creative Guidance are validated JSON value objects.
+// - Scene/Frame/Slide/Shot persistence remains nested JSON for MVP.
+// - AMPLIFY_REEL target is an explicit Deliverable self-relation.
+// - No Final Review persistence object is introduced.
+// - Draft nullability intentionally supports incomplete autosave; Publish validation is authoritative.
 //
 // PLAN vs current Brand Centre OfferingType.MODULE remains a Brand Centre taxonomy
 // reconciliation item and is intentionally not solved in Campaign persistence.
