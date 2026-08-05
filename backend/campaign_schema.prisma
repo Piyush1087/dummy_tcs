@@ -1,6 +1,6 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.5
-// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS FROZEN WORKING SCHEMA
+// Version: 1.6
+// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS + OUTREACH FROZEN WORKING SCHEMA
 // This is a working view, not a standalone replacement for the production Prisma schema.
 
 enum UceCampaignStatus { DRAFT PUBLISHED LIVE PAUSED COMPLETED ARCHIVED }
@@ -28,6 +28,10 @@ enum UceCreatorRecommendationRunStatus { RUNNING SUCCEEDED FAILED }
 enum UceCampaignCreatorImportStatus { PENDING VALIDATED IMPORTING COMPLETED FAILED }
 enum UceApplicationStatus { PENDING APPROVED REJECTED WITHDRAWN EXPIRED SUPERSEDED }
 enum UceApplicantIntelligenceStatus { PROCESSING READY UNAVAILABLE }
+enum UceOutreachChannel { PRIORITY_DM EMAIL }
+enum UceOutreachAttemptStatus { COMPOSE_INITIATED ACCEPTED SCHEDULED EXECUTED FAILED CANCELLED }
+enum UceOutreachTrackingEventType { LINK_CLICKED }
+enum UceApplicationSource { DIRECT OUTREACH }
 
 model UceCampaign {
   id String @id @default(cuid())
@@ -188,12 +192,15 @@ model UceCampaignCreator {
   reviewState UceCampaignCreatorReviewState @default(PENDING_REVIEW) @map("review_state")
   campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
   recommendations UceCampaignCreatorRecommendation[]
+  outreach UceOutreach?
   applications UceApplication[]
+  archivedAt DateTime? @map("archived_at")
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
   @@unique([campaignId, platform, normalizedSocialHandle])
   @@index([campaignId, reviewState])
   @@index([campaignId, source])
+  @@index([campaignId, archivedAt])
   @@index([creatorId])
   @@map("uce_campaign_creators")
 }
@@ -270,6 +277,64 @@ model UceCampaignCreatorImport {
   @@map("uce_campaign_creator_imports")
 }
 
+// One Campaign-level Outreach lifecycle per CampaignCreator. Workspace completion is derived, not persisted.
+model UceOutreach {
+  id String @id @default(cuid())
+  campaignCreatorId String @unique @map("campaign_creator_id")
+  channel UceOutreachChannel
+  composerVersion String? @map("composer_version")
+  composedSubject String? @map("composed_subject")
+  finalSubject String? @map("final_subject")
+  composedBody String @map("composed_body")
+  finalBody String @map("final_body")
+  trackingToken String @unique @map("tracking_token")
+  campaignCreator UceCampaignCreator @relation(fields: [campaignCreatorId], references: [id], onDelete: Cascade)
+  attempts UceOutreachAttempt[]
+  trackingEvents UceOutreachTrackingEvent[]
+  initiatedAt DateTime @default(now()) @map("initiated_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  @@index([channel, initiatedAt])
+  @@index([initiatedAt])
+  @@map("uce_outreach")
+}
+
+// Channel-aware execution evidence. Email MVP only records COMPOSE_INITIATED; Priority DM uses scheduler states.
+model UceOutreachAttempt {
+  id String @id @default(cuid())
+  outreachId String @map("outreach_id")
+  sequence Int
+  status UceOutreachAttemptStatus
+  destinationRef String? @map("destination_ref")
+  scheduledFor DateTime? @map("scheduled_for")
+  executedAt DateTime? @map("executed_at")
+  failedAt DateTime? @map("failed_at")
+  cancelledAt DateTime? @map("cancelled_at")
+  failureCode String? @map("failure_code")
+  cancellationCode String? @map("cancellation_code")
+  outreach UceOutreach @relation(fields: [outreachId], references: [id], onDelete: Cascade)
+  initiatedAt DateTime @default(now()) @map("initiated_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  @@unique([outreachId, sequence])
+  @@index([status, scheduledFor])
+  @@index([outreachId, initiatedAt])
+  @@map("uce_outreach_attempts")
+}
+
+// Append-only tracking evidence; click aggregates remain derived projections.
+model UceOutreachTrackingEvent {
+  id String @id @default(cuid())
+  outreachId String @map("outreach_id")
+  type UceOutreachTrackingEventType
+  outreach UceOutreach @relation(fields: [outreachId], references: [id], onDelete: Cascade)
+  occurredAt DateTime @default(now()) @map("occurred_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  @@index([outreachId, occurredAt])
+  @@index([type, occurredAt])
+  @@map("uce_outreach_tracking_events")
+}
+
 // Individual creator submission. CampaignCreator remains the Campaign-level grouping identity.
 model UceApplication {
   id String @id @default(cuid())
@@ -278,8 +343,7 @@ model UceApplication {
   campaignAssetId String @map("campaign_asset_id")
   briefId String @map("brief_id")
   status UceApplicationStatus @default(PENDING)
-  // Provisional until Outreach / creator entry-route source taxonomy is frozen.
-  source String?
+  source UceApplicationSource @default(DIRECT)
   supersededByApplicationId String? @map("superseded_by_application_id")
   campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Restrict)
   campaignCreator UceCampaignCreator @relation(fields: [campaignCreatorId], references: [id], onDelete: Restrict)
@@ -302,6 +366,7 @@ model UceApplication {
   @@index([campaignAssetId, status])
   @@index([briefId, status])
   @@index([campaignCreatorId, briefId, status])
+  @@index([source])
   @@index([appliedAt])
   @@index([supersededByApplicationId])
   @@map("uce_applications")
@@ -347,12 +412,27 @@ model UceApplicantIntelligence {
 // - Raw/reusable L1/L2/L3 pools, scans, caches and detailed processor execution remain Intelligence-owned.
 // - Manual single-add and CSV require email + social handle at runtime; social handle must pass lightweight crawl validation.
 // - Email remains nullable because Marketplace recommendations may not expose it.
-// - Campaign + platform + normalized social handle is the Campaign-level uniqueness key.
+// - Campaign + platform + normalized social handle is the Campaign-level uniqueness key; duplicate ingestion resolves/skips the existing CampaignCreator.
 // - Source records first successful entry; CSV is an ingestion method, not a source.
 // - Recommendation history is context-aware and non-destructive.
 // - NOT_STARTED is derived from absence of an applicable RecommendationRun.
 // - Runs are INITIAL or REPLENISHMENT; retry is execution behavior.
-// - Exact L1/L2/L3 reuse/invalidation, replenishment thresholds and cross-Campaign scheduling are deferred.
+// - Exact L1/L2/L3 reuse/invalidation and replenishment thresholds remain Intelligence/runtime concerns.
+// - Outreach is Campaign-level only; Product/CampaignAsset and Brief do not participate in Outreach matching or targeting.
+// - CampaignCreator owns at most one Outreach lifecycle; resolved channel is frozen at first successful Outreach initiation.
+// - Marketplace-capable creators use Priority DM; manual/CSV creators use Email when Marketplace capability is unavailable at initiation.
+// - Outreach message persistence retains both composer draft and Brand-approved final content; Brand editing is free-form in MVP.
+// - Email MVP records only Gmail compose initiation, max three attempts; it does not infer send/delivery/follow-up state.
+// - Priority DM MVP permits one attempt and internally records ACCEPTED/SCHEDULED/EXECUTED/FAILED/CANCELLED execution evidence.
+// - Outreach workspace completion is derived; no top-level Outreach status is persisted.
+// - CampaignCreator archive is orthogonal to reviewState and is persisted through archivedAt.
+// - Outreach daily business cap is max 50 first Outreach initiations per Campaign/day; Email compose attempts 2/3 do not consume additional quota.
+// - Priority DM execution pacing is max 4/Campaign/hour and max 12/Brand Meta account/hour; scheduler queues/buckets remain infrastructure-owned.
+// - Priority DM quota is consumed at scheduler acceptance; scheduler spillover does not consume the next day's Campaign quota again.
+// - Failed/cancelled Priority DM does not refund historical Campaign daily Outreach quota.
+// - Tracking token is opaque and unique; raw click events are persisted while click aggregates remain derived.
+// - A valid Application permanently suppresses future Campaign Outreach; Application remains structurally independent from Outreach.
+// - Application source is DIRECT unless entry evidence attributes the Application to the Outreach tracking path.
 // - Applicants persists Application identity/lifecycle, immutable submission snapshot, supersession provenance and published Applicant Intelligence projection.
 // - Applicant card, queues, counts, representative Application, Campaign/Brand history and Alerts remain derived projections.
 // - Applicant Match computation, weights, dimensions, raw scans and execution remain Intelligence-owned.
@@ -366,5 +446,6 @@ model UceApplicantIntelligence {
 // - Production merge must reconcile creatorId before reliable cross-Campaign Creator x Brand limit enforcement.
 // - Production merge must reconcile Brand/team actor identity before approvedBy/rejectedBy relations are added.
 // - Production migration must enforce cross-record CampaignCreator/CampaignAsset/Brief ancestry consistency, score range, snapshot existence, lifecycle transitions, predicate-aware application limits and same-Brief rules transactionally.
+// - Production migration must enforce Outreach channel×attempt-state rules, one Priority DM/max three Email compose attempts, daily quota, idempotency, scheduled-execution eligibility and application suppression transactionally/runtime-side.
 // - Production migration must validate score range, Campaign/context/run consistency and source-specific runtime rules.
 // - CampaignAsset production merge still requires the previously frozen exactly-one-reference CHECK constraint.
