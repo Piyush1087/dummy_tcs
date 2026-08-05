@@ -1,6 +1,6 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.4
-// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY FROZEN WORKING SCHEMA
+// Version: 1.5
+// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS FROZEN WORKING SCHEMA
 // This is a working view, not a standalone replacement for the production Prisma schema.
 
 enum UceCampaignStatus { DRAFT PUBLISHED LIVE PAUSED COMPLETED ARCHIVED }
@@ -26,6 +26,8 @@ enum UceRecommendationScoreBand { HIGH MEDIUM LOW }
 enum UceCreatorRecommendationRunType { INITIAL REPLENISHMENT }
 enum UceCreatorRecommendationRunStatus { RUNNING SUCCEEDED FAILED }
 enum UceCampaignCreatorImportStatus { PENDING VALIDATED IMPORTING COMPLETED FAILED }
+enum UceApplicationStatus { PENDING APPROVED REJECTED WITHDRAWN EXPIRED SUPERSEDED }
+enum UceApplicantIntelligenceStatus { PROCESSING READY UNAVAILABLE }
 
 model UceCampaign {
   id String @id @default(cuid())
@@ -40,6 +42,7 @@ model UceCampaign {
   commercials UceCampaignCommercials?
   assets UceCampaignAsset[]
   creators UceCampaignCreator[]
+  applications UceApplication[]
   recommendationContexts UceCampaignRecommendationContext[]
   recommendationRuns UceCreatorRecommendationRun[]
   creatorImports UceCampaignCreatorImport[]
@@ -117,6 +120,7 @@ model UceCampaignAsset {
   brandOfferId String? @map("brand_offer_id")
   campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
   briefs UceBrief[]
+  applications UceApplication[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
   @@unique([campaignId, brandProfileId])
@@ -142,6 +146,7 @@ model UceBrief {
   creatorRequirements String? @map("creator_requirements")
   campaignAsset UceCampaignAsset @relation(fields: [campaignAssetId], references: [id], onDelete: Cascade)
   deliverables UceBriefDeliverable[]
+  applications UceApplication[]
   publishedAt DateTime? @map("published_at")
   pausedAt DateTime? @map("paused_at")
   createdAt DateTime @default(now()) @map("created_at")
@@ -183,6 +188,7 @@ model UceCampaignCreator {
   reviewState UceCampaignCreatorReviewState @default(PENDING_REVIEW) @map("review_state")
   campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
   recommendations UceCampaignCreatorRecommendation[]
+  applications UceApplication[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
   @@unique([campaignId, platform, normalizedSocialHandle])
@@ -264,6 +270,77 @@ model UceCampaignCreatorImport {
   @@map("uce_campaign_creator_imports")
 }
 
+// Individual creator submission. CampaignCreator remains the Campaign-level grouping identity.
+model UceApplication {
+  id String @id @default(cuid())
+  campaignId String @map("campaign_id")
+  campaignCreatorId String @map("campaign_creator_id")
+  campaignAssetId String @map("campaign_asset_id")
+  briefId String @map("brief_id")
+  status UceApplicationStatus @default(PENDING)
+  // Provisional until Outreach / creator entry-route source taxonomy is frozen.
+  source String?
+  supersededByApplicationId String? @map("superseded_by_application_id")
+  campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Restrict)
+  campaignCreator UceCampaignCreator @relation(fields: [campaignCreatorId], references: [id], onDelete: Restrict)
+  campaignAsset UceCampaignAsset @relation(fields: [campaignAssetId], references: [id], onDelete: Restrict)
+  brief UceBrief @relation(fields: [briefId], references: [id], onDelete: Restrict)
+  snapshot UceApplicationSnapshot?
+  applicantIntelligence UceApplicantIntelligence?
+  supersededByApplication UceApplication? @relation("ApplicationSupersession", fields: [supersededByApplicationId], references: [id], onDelete: Restrict)
+  supersededApplications UceApplication[] @relation("ApplicationSupersession")
+  appliedAt DateTime @default(now()) @map("applied_at")
+  approvedAt DateTime? @map("approved_at")
+  rejectedAt DateTime? @map("rejected_at")
+  withdrawnAt DateTime? @map("withdrawn_at")
+  expiredAt DateTime? @map("expired_at")
+  supersededAt DateTime? @map("superseded_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  @@index([campaignId, status])
+  @@index([campaignCreatorId, status])
+  @@index([campaignAssetId, status])
+  @@index([briefId, status])
+  @@index([campaignCreatorId, briefId, status])
+  @@index([appliedAt])
+  @@index([supersededByApplicationId])
+  @@map("uce_applications")
+}
+
+// Immutable submission-time decision context; live Campaign/Asset/Brief models remain canonical operational state.
+model UceApplicationSnapshot {
+  id String @id @default(cuid())
+  applicationId String @unique @map("application_id")
+  campaignContext Json @map("campaign_context")
+  campaignAssetContext Json @map("campaign_asset_context")
+  briefContext Json @map("brief_context")
+  commercialContext Json @map("commercial_context")
+  creatorIdentity Json @map("creator_identity")
+  application UceApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+  @@map("uce_application_snapshots")
+}
+
+// Thin Campaign-facing projection of the authoritative Application-level Intelligence result.
+model UceApplicantIntelligence {
+  id String @id @default(cuid())
+  applicationId String @unique @map("application_id")
+  status UceApplicantIntelligenceStatus @default(PROCESSING)
+  score Decimal? @db.Decimal(5, 2)
+  strengths Json?
+  weaknesses Json?
+  breakdown Json?
+  intelligenceArtifactId String? @map("intelligence_artifact_id")
+  intelligenceVersion String? @map("intelligence_version")
+  evaluatedAt DateTime? @map("evaluated_at")
+  application UceApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  @@index([status])
+  @@index([score])
+  @@map("uce_applicant_intelligence")
+}
+
 // FROZEN PERSISTENCE BOUNDARY
 // - Readiness/workspace visibility/Meta capability/activeDiscovery remain derived.
 // - Discovery persists only CampaignCreator and published recommendation projection/provenance.
@@ -276,6 +353,18 @@ model UceCampaignCreatorImport {
 // - NOT_STARTED is derived from absence of an applicable RecommendationRun.
 // - Runs are INITIAL or REPLENISHMENT; retry is execution behavior.
 // - Exact L1/L2/L3 reuse/invalidation, replenishment thresholds and cross-Campaign scheduling are deferred.
+// - Applicants persists Application identity/lifecycle, immutable submission snapshot, supersession provenance and published Applicant Intelligence projection.
+// - Applicant card, queues, counts, representative Application, Campaign/Brand history and Alerts remain derived projections.
+// - Applicant Match computation, weights, dimensions, raw scans and execution remain Intelligence-owned.
+// - Applicant Intelligence readiness never gates a valid Brand Approve/Reject decision.
+// - Creator x Campaign limit is max 2 non-WITHDRAWN Applications; Creator x Brand limit is max 5 non-WITHDRAWN Applications.
+// - PENDING, APPROVED, REJECTED, EXPIRED and SUPERSEDED consume submission allowance; WITHDRAWN does not.
+// - Same-Brief reapplication is blocked after PENDING/APPROVED/REJECTED/SUPERSEDED and permitted after WITHDRAWN/EXPIRED, subject to other validation.
+// - Application snapshot is immutable after successful submission and remains authoritative for submission-time Campaign/Asset/Brief/commercial context.
+// - Approval must atomically APPROVE the selected Application, SUPERSEDE sibling PENDING Applications, and create at most one Campaign Collaboration for the CampaignCreator.
+// - Collaboration schema/relation remains deferred until the canonical Collaboration aggregate is reconciled; no placeholder Collaboration model/FK is introduced here.
+// - Production merge must reconcile creatorId before reliable cross-Campaign Creator x Brand limit enforcement.
+// - Production merge must reconcile Brand/team actor identity before approvedBy/rejectedBy relations are added.
+// - Production migration must enforce cross-record CampaignCreator/CampaignAsset/Brief ancestry consistency, score range, snapshot existence, lifecycle transitions, predicate-aware application limits and same-Brief rules transactionally.
 // - Production migration must validate score range, Campaign/context/run consistency and source-specific runtime rules.
-// - Production merge must reconcile creatorId and Application relations against verified production models.
 // - CampaignAsset production merge still requires the previously frozen exactly-one-reference CHECK constraint.
