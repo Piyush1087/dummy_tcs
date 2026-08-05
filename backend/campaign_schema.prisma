@@ -1,6 +1,6 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.6
-// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS + OUTREACH FROZEN WORKING SCHEMA
+// Version: 1.7
+// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS + OUTREACH + REPORTING FROZEN WORKING SCHEMA
 // This is a working view, not a standalone replacement for the production Prisma schema.
 
 enum UceCampaignStatus { DRAFT PUBLISHED LIVE PAUSED COMPLETED ARCHIVED }
@@ -32,6 +32,7 @@ enum UceOutreachChannel { PRIORITY_DM EMAIL }
 enum UceOutreachAttemptStatus { COMPOSE_INITIATED ACCEPTED SCHEDULED EXECUTED FAILED CANCELLED }
 enum UceOutreachTrackingEventType { LINK_CLICKED }
 enum UceApplicationSource { DIRECT OUTREACH }
+enum UceReportAvailability { AVAILABLE PARTIAL }
 
 model UceCampaign {
   id String @id @default(cuid())
@@ -50,6 +51,7 @@ model UceCampaign {
   recommendationContexts UceCampaignRecommendationContext[]
   recommendationRuns UceCreatorRecommendationRun[]
   creatorImports UceCampaignCreatorImport[]
+  report UceCampaignReport?
   publishedAt DateTime? @map("published_at")
   liveAt DateTime? @map("live_at")
   completedAt DateTime? @map("completed_at")
@@ -406,6 +408,48 @@ model UceApplicantIntelligence {
   @@map("uce_applicant_intelligence")
 }
 
+// Stable Campaign-level Reporting identity. Calculations are append-oriented; latestCalculation is the publication pointer.
+model UceCampaignReport {
+  id String @id @default(cuid())
+  campaignId String @unique @map("campaign_id")
+  latestCalculationId String? @unique @map("latest_calculation_id")
+  campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  calculations UceCampaignReportCalculation[] @relation("CampaignReportCalculations")
+  latestCalculation UceCampaignReportCalculation? @relation("LatestCampaignReportCalculation", fields: [latestCalculationId], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  @@map("uce_campaign_reports")
+}
+
+// Successful Intelligence-owned Campaign reporting snapshot. Failed/running jobs remain outside Campaign persistence.
+model UceCampaignReportCalculation {
+  id String @id @default(cuid())
+  reportId String @map("report_id")
+  version Int
+  objective CampaignObjective
+  primaryKpiId String @map("primary_kpi_id")
+  supportingKpiIds String[] @default([]) @map("supporting_kpi_ids")
+  reportingVersion String @map("reporting_version")
+  reportContextHash String? @map("report_context_hash")
+  availability UceReportAvailability
+  dataFrom DateTime @map("data_from")
+  dataThrough DateTime @map("data_through")
+  metrics Json
+  insights Json?
+  provenance Json?
+  isFinal Boolean @default(false) @map("is_final")
+  calculatedAt DateTime @map("calculated_at")
+  publishedAt DateTime? @map("published_at")
+  report UceCampaignReport @relation("CampaignReportCalculations", fields: [reportId], references: [id], onDelete: Cascade)
+  latestForReport UceCampaignReport? @relation("LatestCampaignReportCalculation")
+  createdAt DateTime @default(now()) @map("created_at")
+  @@unique([reportId, version])
+  @@index([reportId, calculatedAt])
+  @@index([availability])
+  @@index([isFinal])
+  @@map("uce_campaign_report_calculations")
+}
+
 // FROZEN PERSISTENCE BOUNDARY
 // - Readiness/workspace visibility/Meta capability/activeDiscovery remain derived.
 // - Discovery persists only CampaignCreator and published recommendation projection/provenance.
@@ -443,9 +487,21 @@ model UceApplicantIntelligence {
 // - Application snapshot is immutable after successful submission and remains authoritative for submission-time Campaign/Asset/Brief/commercial context.
 // - Approval must atomically APPROVE the selected Application, SUPERSEDE sibling PENDING Applications, and create at most one Campaign Collaboration for the CampaignCreator.
 // - Collaboration schema/relation remains deferred until the canonical Collaboration aggregate is reconciled; no placeholder Collaboration model/FK is introduced here.
+// - Reporting is Campaign-level and read-only; Intelligence Engine is the sole calculation authority.
+// - One logical CampaignReport may own append-oriented successful CampaignReportCalculations; failed/running jobs remain Intelligence-owned.
+// - latestCalculationId is the explicit Brand-facing publication pointer; Reporting Card and Full Report must read the same published calculation.
+// - Report calculations snapshot objective/KPI context and preserve reporting version, context hash, reporting window, freshness and structured metrics/insights/provenance.
+// - AVAILABLE/PARTIAL describe successful published-calculation evidence; absence of a published calculation represents not-yet-available Reporting.
+// - Zero, unavailable and not-yet-calculated metric semantics must remain distinct inside the validated metrics contract.
+// - Report publication is atomic; failed refreshes preserve the last-known-good latestCalculation pointer.
+// - Campaign Page load and View full report are read actions and never synchronously trigger Intelligence calculation.
+// - Reporting refresh scheduling, dirty detection, failed-job observability, settlement duration and source synchronization remain Intelligence/runtime concerns.
+// - Final Report semantics are calculation-level through isFinal; Campaign completion/archive does not delete historical Reporting.
+// - Reporting may consume Collaboration evidence but does not duplicate Collaboration entities or infer actual spend from planned Campaign commercials.
 // - Production merge must reconcile creatorId before reliable cross-Campaign Creator x Brand limit enforcement.
 // - Production merge must reconcile Brand/team actor identity before approvedBy/rejectedBy relations are added.
 // - Production migration must enforce cross-record CampaignCreator/CampaignAsset/Brief ancestry consistency, score range, snapshot existence, lifecycle transitions, predicate-aware application limits and same-Brief rules transactionally.
 // - Production migration must enforce Outreach channel×attempt-state rules, one Priority DM/max three Email compose attempts, daily quota, idempotency, scheduled-execution eligibility and application suppression transactionally/runtime-side.
+// - Production migration must validate Reporting metrics/insights/provenance payload contracts and atomic latest-publication consistency transactionally/runtime-side.
 // - Production migration must validate score range, Campaign/context/run consistency and source-specific runtime rules.
 // - CampaignAsset production merge still requires the previously frozen exactly-one-reference CHECK constraint.
