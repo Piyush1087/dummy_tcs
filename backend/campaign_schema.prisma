@@ -1,6 +1,6 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.7
-// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS + OUTREACH + REPORTING FROZEN WORKING SCHEMA
+// Version: 1.8
+// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS + OUTREACH + REPORTING + SHARE FROZEN WORKING SCHEMA
 // This is a working view, not a standalone replacement for the production Prisma schema.
 
 enum UceCampaignStatus { DRAFT PUBLISHED LIVE PAUSED COMPLETED ARCHIVED }
@@ -31,8 +31,10 @@ enum UceApplicantIntelligenceStatus { PROCESSING READY UNAVAILABLE }
 enum UceOutreachChannel { PRIORITY_DM EMAIL }
 enum UceOutreachAttemptStatus { COMPOSE_INITIATED ACCEPTED SCHEDULED EXECUTED FAILED CANCELLED }
 enum UceOutreachTrackingEventType { LINK_CLICKED }
-enum UceApplicationSource { DIRECT OUTREACH }
+enum UceApplicationSource { DIRECT OUTREACH SHARE }
 enum UceReportAvailability { AVAILABLE PARTIAL }
+enum UceCampaignShareChannel { COPY_LINK WHATSAPP INSTAGRAM NATIVE_SHARE }
+enum UceCampaignShareTrackingEventType { LINK_CLICKED }
 
 model UceCampaign {
   id String @id @default(cuid())
@@ -52,6 +54,7 @@ model UceCampaign {
   recommendationRuns UceCreatorRecommendationRun[]
   creatorImports UceCampaignCreatorImport[]
   report UceCampaignReport?
+  shares UceCampaignShare[]
   publishedAt DateTime? @map("published_at")
   liveAt DateTime? @map("live_at")
   completedAt DateTime? @map("completed_at")
@@ -337,6 +340,34 @@ model UceOutreachTrackingEvent {
   @@map("uce_outreach_tracking_events")
 }
 
+// One executed Campaign-scoped Share action. Recipient identity and composer drafts are intentionally not persisted.
+model UceCampaignShare {
+  id String @id @default(cuid())
+  campaignId String @map("campaign_id")
+  channel UceCampaignShareChannel
+  trackingToken String @unique @map("tracking_token")
+  campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  trackingEvents UceCampaignShareTrackingEvent[]
+  initiatedAt DateTime @default(now()) @map("initiated_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  @@index([campaignId, initiatedAt])
+  @@index([channel, initiatedAt])
+  @@map("uce_campaign_shares")
+}
+
+// Append-only Share click evidence; delivery/read/recipient state is not inferred.
+model UceCampaignShareTrackingEvent {
+  id String @id @default(cuid())
+  shareId String @map("share_id")
+  type UceCampaignShareTrackingEventType
+  share UceCampaignShare @relation(fields: [shareId], references: [id], onDelete: Cascade)
+  occurredAt DateTime @default(now()) @map("occurred_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  @@index([shareId, occurredAt])
+  @@index([type, occurredAt])
+  @@map("uce_campaign_share_tracking_events")
+}
+
 // Individual creator submission. CampaignCreator remains the Campaign-level grouping identity.
 model UceApplication {
   id String @id @default(cuid())
@@ -476,7 +507,7 @@ model UceCampaignReportCalculation {
 // - Failed/cancelled Priority DM does not refund historical Campaign daily Outreach quota.
 // - Tracking token is opaque and unique; raw click events are persisted while click aggregates remain derived.
 // - A valid Application permanently suppresses future Campaign Outreach; Application remains structurally independent from Outreach.
-// - Application source is DIRECT unless entry evidence attributes the Application to the Outreach tracking path.
+// - Application source is DIRECT unless entry evidence attributes the Application to an Outreach or Share tracking path.
 // - Applicants persists Application identity/lifecycle, immutable submission snapshot, supersession provenance and published Applicant Intelligence projection.
 // - Applicant card, queues, counts, representative Application, Campaign/Brand history and Alerts remain derived projections.
 // - Applicant Match computation, weights, dimensions, raw scans and execution remain Intelligence-owned.
@@ -498,10 +529,19 @@ model UceCampaignReportCalculation {
 // - Reporting refresh scheduling, dirty detection, failed-job observability, settlement duration and source synchronization remain Intelligence/runtime concerns.
 // - Final Report semantics are calculation-level through isFinal; Campaign completion/archive does not delete historical Reporting.
 // - Reporting may consume Collaboration evidence but does not duplicate Collaboration entities or infer actual spend from planned Campaign commercials.
+// - Share is Campaign-scoped distribution, not CampaignCreator-scoped Outreach; each executed Share action creates its own immutable CampaignShare evidence row.
+// - Share channels are COPY_LINK, WHATSAPP, INSTAGRAM and capability-dependent NATIVE_SHARE; external handoff does not imply delivery/read/recipient identity.
+// - Share composer drafts/content remain ephemeral in MVP; no composed/final body or composer-version audit fields are persisted.
+// - Every executed Share action receives a unique opaque tracking token; Share click evidence is append-only and click aggregates remain derived.
+// - Share does not consume Outreach quota, has no recipient dedupe, creates no CampaignCreator and has no Share attempt table or delivery status.
+// - Shareability derives from existing Campaign public-access/lifecycle rules; existing tracked URLs do not bypass current Campaign access rules.
+// - Campaign link preview metadata is Campaign-level and resolved from Campaign hero → primary Product image → Brand logo → Creator Shop fallback; it is not persisted per Share.
+// - Application source may be SHARE, but exact Share-to-Application FK attribution is deferred until Outreach and Share acquisition attribution are generalized together.
 // - Production merge must reconcile creatorId before reliable cross-Campaign Creator x Brand limit enforcement.
 // - Production merge must reconcile Brand/team actor identity before approvedBy/rejectedBy relations are added.
 // - Production migration must enforce cross-record CampaignCreator/CampaignAsset/Brief ancestry consistency, score range, snapshot existence, lifecycle transitions, predicate-aware application limits and same-Brief rules transactionally.
 // - Production migration must enforce Outreach channel×attempt-state rules, one Priority DM/max three Email compose attempts, daily quota, idempotency, scheduled-execution eligibility and application suppression transactionally/runtime-side.
 // - Production migration must validate Reporting metrics/insights/provenance payload contracts and atomic latest-publication consistency transactionally/runtime-side.
+// - Production migration must validate Share execution timing, Campaign shareability, opaque tracking-token generation and Application SHARE attribution runtime-side.
 // - Production migration must validate score range, Campaign/context/run consistency and source-specific runtime rules.
 // - CampaignAsset production merge still requires the previously frozen exactly-one-reference CHECK constraint.
