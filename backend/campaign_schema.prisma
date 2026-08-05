@@ -1,6 +1,6 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.3
-// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF RECONCILED WORKING SCHEMA
+// Version: 1.4
+// Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY RECONCILED WORKING SCHEMA
 //
 // Purpose:
 // - Define Campaign-owned persistence required by frozen Campaign contracts.
@@ -112,6 +112,48 @@ enum UceDeliverableFormat {
   BANNER_CAROUSEL
 }
 
+enum UceCampaignCreatorSource {
+  META_MARKETPLACE
+  MANUAL
+}
+
+enum UceCampaignCreatorIngestionMethod {
+  MARKETPLACE_RECOMMENDATION
+  MANUAL_SINGLE
+  MANUAL_CSV
+}
+
+enum UceCampaignCreatorReviewState {
+  PENDING_REVIEW
+  REVIEWED
+  REJECTED
+}
+
+enum UceRecommendationScoreBand {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum UceCreatorRecommendationRunType {
+  INITIAL
+  REPLENISHMENT
+}
+
+enum UceCreatorRecommendationRunStatus {
+  RUNNING
+  SUCCEEDED
+  FAILED
+}
+
+enum UceCampaignCreatorImportStatus {
+  PENDING
+  VALIDATED
+  IMPORTING
+  COMPLETED
+  FAILED
+}
+
 model UceCampaign {
   id             String   @id @default(cuid())
   brandProfileId String   @map("brand_profile_id")
@@ -127,6 +169,11 @@ model UceCampaign {
   targeting   UceCampaignTargeting?
   commercials UceCampaignCommercials?
   assets      UceCampaignAsset[]
+
+  creators               UceCampaignCreator[]
+  recommendationContexts UceCampaignRecommendationContext[]
+  recommendationRuns     UceCreatorRecommendationRun[]
+  creatorImports         UceCampaignCreatorImport[]
 
   publishedAt DateTime? @map("published_at")
   liveAt      DateTime? @map("live_at")
@@ -245,17 +292,17 @@ model UceBrief {
   status         UceBriefStatus         @default(DRAFT)
   creationSource UceBriefCreationSource @default(MANUAL) @map("creation_source")
 
-  briefName      String?      @map("brief_name")
-  creativeIntent String?      @map("creative_intent")
-  creatorBrief   String?      @map("creator_brief")
+  briefName      String?       @map("brief_name")
+  creativeIntent String?       @map("creative_intent")
+  creatorBrief   String?       @map("creator_brief")
   briefType      UceBriefType? @map("brief_type")
   platform       UceMediaPlatform?
 
   // Validated structured value objects. JSON is a persistence boundary, not an
   // untyped domain boundary; canonical Add Brief contracts validate before writes.
-  briefLevelGuidance Json? @map("brief_level_guidance")
-  referenceContent   Json? @map("reference_content")
-  usageRights        Json? @map("usage_rights")
+  briefLevelGuidance  Json?   @map("brief_level_guidance")
+  referenceContent    Json?   @map("reference_content")
+  usageRights         Json?   @map("usage_rights")
   creatorRequirements String? @map("creator_requirements")
 
   campaignAsset UceCampaignAsset       @relation(fields: [campaignAssetId], references: [id], onDelete: Cascade)
@@ -304,12 +351,146 @@ model UceBriefDeliverable {
   @@map("uce_brief_deliverables")
 }
 
+// CampaignCreator is the durable Campaign-to-creator bridge. It survives Discovery and can be
+// referenced by downstream Outreach/Application/Collaboration domains without duplicating creator
+// identity per workspace. creatorId intentionally remains an unresolved nullable production ID in
+// this working view until the canonical production Creator model is reconciled.
+model UceCampaignCreator {
+  id         String @id @default(cuid())
+  campaignId String @map("campaign_id")
+  creatorId  String? @map("creator_id")
+
+  platform               UceMediaPlatform
+  socialHandle           String @map("social_handle")
+  normalizedSocialHandle String @map("normalized_social_handle")
+  email                  String?
+
+  source          UceCampaignCreatorSource
+  ingestionMethod UceCampaignCreatorIngestionMethod @map("ingestion_method")
+  reviewState     UceCampaignCreatorReviewState      @default(PENDING_REVIEW) @map("review_state")
+
+  campaign        UceCampaign                         @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  recommendations UceCampaignCreatorRecommendation[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([campaignId, platform, normalizedSocialHandle])
+  @@index([campaignId, reviewState])
+  @@index([campaignId, source])
+  @@index([creatorId])
+  @@map("uce_campaign_creators")
+}
+
+// RecommendationContext identifies the Campaign recommendation context/version used by creator
+// Intelligence. It intentionally does not duplicate a Campaign snapshot in this working view.
+// Exact context composition/hash generation and artifact reuse/invalidation remain Intelligence
+// architecture concerns.
+model UceCampaignRecommendationContext {
+  id         String @id @default(cuid())
+  campaignId String @map("campaign_id")
+  version    Int
+  contextHash String? @map("context_hash")
+
+  campaign        UceCampaign                         @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  runs            UceCreatorRecommendationRun[]
+  recommendations UceCampaignCreatorRecommendation[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([campaignId, version])
+  @@index([campaignId])
+  @@map("uce_campaign_recommendation_contexts")
+}
+
+// Campaign-facing recommendation run. Detailed L1/L2/L3 execution, model/API provenance,
+// retries, cache/artifact lineage and processor errors belong to the Intelligence persistence
+// boundary; this object records only the Campaign business run required by Discovery.
+model UceCreatorRecommendationRun {
+  id                      String @id @default(cuid())
+  campaignId              String @map("campaign_id")
+  recommendationContextId String @map("recommendation_context_id")
+
+  type   UceCreatorRecommendationRunType
+  status UceCreatorRecommendationRunStatus
+
+  campaign              UceCampaign                       @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  recommendationContext UceCampaignRecommendationContext @relation(fields: [recommendationContextId], references: [id], onDelete: Cascade)
+  recommendations       UceCampaignCreatorRecommendation[]
+
+  startedAt   DateTime  @default(now()) @map("started_at")
+  completedAt DateTime? @map("completed_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([campaignId, status])
+  @@index([recommendationContextId])
+  @@map("uce_creator_recommendation_runs")
+}
+
+// Recommendation history is append-oriented across recommendation contexts. Numeric score is
+// persisted for internal ranking/replenishment while UI displays only the authoritative
+// HIGH/MEDIUM/LOW band supplied by Intelligence. Discovery must not independently derive bands.
+model UceCampaignCreatorRecommendation {
+  id                      String @id @default(cuid())
+  campaignCreatorId       String @map("campaign_creator_id")
+  recommendationRunId     String @map("recommendation_run_id")
+  recommendationContextId String @map("recommendation_context_id")
+
+  score       Decimal                    @db.Decimal(5, 2)
+  scoreBand   UceRecommendationScoreBand @map("score_band")
+  rank        Int
+  explanation String?
+  evaluatedAt DateTime @default(now()) @map("evaluated_at")
+
+  campaignCreator       UceCampaignCreator               @relation(fields: [campaignCreatorId], references: [id], onDelete: Cascade)
+  recommendationRun     UceCreatorRecommendationRun      @relation(fields: [recommendationRunId], references: [id], onDelete: Cascade)
+  recommendationContext UceCampaignRecommendationContext @relation(fields: [recommendationContextId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([campaignCreatorId, recommendationRunId])
+  @@index([recommendationRunId, rank])
+  @@index([recommendationContextId])
+  @@index([campaignCreatorId, evaluatedAt])
+  @@map("uce_campaign_creator_recommendations")
+}
+
+// CSV import persistence is intentionally lightweight: it records durable import/idempotency and
+// aggregate audit state. Mapping UI, preview rows and invalid-row detail remain outside the core
+// Campaign relational schema unless later operational requirements justify persistence.
+model UceCampaignCreatorImport {
+  id         String @id @default(cuid())
+  campaignId String @map("campaign_id")
+  status     UceCampaignCreatorImportStatus @default(PENDING)
+
+  totalRows     Int @default(0) @map("total_rows")
+  validRows     Int @default(0) @map("valid_rows")
+  importedRows  Int @default(0) @map("imported_rows")
+  invalidRows   Int @default(0) @map("invalid_rows")
+  duplicateRows Int @default(0) @map("duplicate_rows")
+
+  campaign UceCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  completedAt DateTime? @map("completed_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([campaignId, status])
+  @@map("uce_campaign_creator_imports")
+}
+
 // -----------------------------------------------------------------------------
-// CAMPAIGN PAGE / CAMPAIGN ASSET / ADD BRIEF PERSISTENCE BOUNDARY
+// CAMPAIGN PAGE / CAMPAIGN ASSET / ADD BRIEF / DISCOVERY PERSISTENCE BOUNDARY
 // -----------------------------------------------------------------------------
 // Readiness remains derived. Do not persist hasCampaignAsset, hasBrief,
 // hasPublishedBrief, executionReady, effective availability, hydration state,
-// workspace visibility, Meta capability, Reporting output or Intelligence output.
+// workspace visibility, Meta capability or Campaign Page Reporting output.
+//
+// Discovery intentionally persists only the published creator recommendation projection required
+// for CampaignCreator lifecycle, ranking, provenance and downstream Outreach. Raw/reusable L1/L2/L3
+// candidate universes, base scans, vision/media scans, Marketplace caches and detailed processor
+// execution remain Intelligence-owned and are not persisted in this Campaign working schema.
 //
 // CampaignAsset identity is immutable and stores no Brand Centre snapshots.
 // Offering.type remains authoritative for Product/Treatment/Collection/etc.
@@ -331,6 +512,26 @@ model UceBriefDeliverable {
 // proposal state remains outside the launched Campaign aggregate until acceptance.
 // AI_RECOMMENDED Brief content is manually immutable while operational Pause/Resume
 // remains permitted by service/domain rules.
+//
+// Discovery review state is PENDING_REVIEW/REVIEWED/REJECTED only. Application/contact/
+// collaboration lifecycle is not encoded into CampaignCreator.reviewState. Active Discovery
+// membership remains a derived projection; do not add isActiveInDiscovery/discoveryState flags.
+//
+// Manual single-add and CSV ingestion require both email and social handle at runtime. The social
+// handle must pass the frozen lightweight crawl validation before CampaignCreator creation. Email
+// remains nullable in persistence because Marketplace recommendations may not expose email yet.
+//
+// Campaign + platform + normalized social handle is the canonical Campaign-level uniqueness key.
+// Acquisition source records first successful entry and is not rewritten by later Marketplace or
+// Intelligence enrichment. CSV is an ingestion method, not a creator source.
+//
+// Recommendation history is context-aware. Historical scores are never silently rewritten as if
+// produced against a newer Campaign recommendation context. Exact context invalidation, L1/L2/L3
+// reuse policy, replenishment thresholds, deadline curves and cross-Campaign scheduling are deferred
+// to the Intelligence/Outreach scheduling architecture.
+//
+// NOT_STARTED recommendation runtime is derived from absence of a RecommendationRun row. Runs are
+// INITIAL or REPLENISHMENT; retry is execution behavior, not a separate business run type.
 //
 // LIVE + execution_ready=false is a valid runtime condition after launch; it does
 // not demote Campaign back to PUBLISHED.
@@ -362,6 +563,17 @@ model UceBriefDeliverable {
 // - AMPLIFY_REEL target is an explicit Deliverable self-relation.
 // - No Final Review persistence object is introduced.
 // - Draft nullability intentionally supports incomplete autosave; Publish validation is authoritative.
+//
+// Discovery production reconciliation:
+// - Reuse production UceMediaPlatform; do not introduce a parallel creator-platform enum.
+// - Reconcile creatorId to the canonical production Creator model before adding a relation/FK.
+// - Preserve CampaignCreator identity across downstream workspace lifecycles rather than duplicating
+//   Discovery/Applicant/Collaboration creator records.
+// - Reconcile Application relation later; a valid Application must not require prior active Discovery.
+// - Keep detailed Intelligence ProcessorExecution/L1/L2/L3 persistence outside Campaign schema.
+// - RecommendationContext is a Campaign-facing provenance primitive, not a duplicate Campaign snapshot.
+// - Add database/service validation for recommendation score range and cross-model Campaign/context
+//   consistency during production migration.
 //
 // PLAN vs current Brand Centre OfferingType.MODULE remains a Brand Centre taxonomy
 // reconciliation item and is intentionally not solved in Campaign persistence.
