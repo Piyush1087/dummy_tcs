@@ -34,9 +34,9 @@ const applicantReadySchema = z.object({
   evaluatedAt: dateTimeSchema,
 });
 
-const applicantNotReadySchema = z.object({
+const applicantProcessingSchema = z.object({
   applicationId: entityIdSchema,
-  status: z.enum(["PROCESSING", "UNAVAILABLE"]),
+  status: z.literal("PROCESSING"),
   score: z.null().optional(),
   strengths: z.null().optional(),
   weaknesses: z.null().optional(),
@@ -46,9 +46,14 @@ const applicantNotReadySchema = z.object({
   evaluatedAt: dateTimeSchema.optional().nullable(),
 });
 
+const applicantUnavailableSchema = applicantProcessingSchema.extend({
+  status: z.literal("UNAVAILABLE"),
+});
+
 export const publishApplicantIntelligenceInputSchema = z.discriminatedUnion("status", [
   applicantReadySchema,
-  applicantNotReadySchema,
+  applicantProcessingSchema,
+  applicantUnavailableSchema,
 ]);
 
 export const publishCampaignReportCalculationInputSchema = z.object({
