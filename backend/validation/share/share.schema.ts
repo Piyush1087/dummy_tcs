@@ -1,9 +1,10 @@
 import { z } from "zod";
-import { campaignShareChannelSchema, entityIdSchema } from "../shared/campaign.shared.schema";
+import { campaignShareChannelSchema, entityIdSchema, requestIdSchema } from "../shared/campaign.shared.schema";
 
 export const executeCampaignShareInputSchema = z.object({
   campaignId: entityIdSchema,
   channel: campaignShareChannelSchema,
+  requestId: requestIdSchema,
 });
 
 // trackingToken, initiatedAt and LINK_CLICKED evidence are server-owned.
