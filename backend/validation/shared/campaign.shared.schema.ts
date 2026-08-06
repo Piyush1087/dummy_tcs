@@ -12,6 +12,8 @@ export const campaignCreationSourceSchema = z.enum(["MANUAL", "AI_RECOMMENDED"])
 export const publishingScheduleSchema = z.enum(["EVERGREEN", "SCHEDULED"]);
 export const campaignObjectiveSchema = z.enum(["PULSE", "PROOF", "PRODUCTION", "PUSH"]);
 export const mediaPlatformSchema = z.enum(["INSTAGRAM", "TIKTOK", "YOUTUBE"]);
+// Persistence remains future-ready, while Brand-writable MVP Campaign publication is Instagram-only.
+export const mvpCampaignPlatformSchema = z.literal("INSTAGRAM");
 export const visibilityScopeSchema = z.enum(["EVERYONE", "ELIGIBLE_ONLY", "INVITED_ONLY"]);
 export const audienceGenderSchema = z.enum(["ALL", "FEMALE", "MALE"]);
 export const compensationTypeSchema = z.enum(["FIXED_FEE", "NEGOTIABLE"]);
@@ -34,11 +36,24 @@ export const campaignCurrencySchema = z.enum(["INR", "USD"]);
 // Taxonomy membership is service/reference-data owned; Zod validates only identifiers/cardinality.
 export const taxonomyIdSchema = z.string().trim().min(1);
 
-// Exact geography JSON contract is not frozen in the current Campaign artifacts.
-// Keep shape bounded to JSON-like object/array rather than inventing geography taxonomy fields.
+// Recursive JSON-safe boundary for Prisma Json fields. This rejects non-JSON JS values such as
+// Date, Map, Set, functions, symbols and undefined rather than accepting arbitrary nested unknowns.
+export type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
+export const jsonValueSchema: z.ZodType<JsonValue> = z.lazy(() =>
+  z.union([
+    z.string(),
+    z.number().finite(),
+    z.boolean(),
+    z.null(),
+    z.array(jsonValueSchema),
+    z.record(jsonValueSchema),
+  ]),
+);
+
+// Current Campaign artifacts require object/array containers at these structured JSON boundaries.
 export const structuredJsonSchema = z.union([
-  z.record(z.unknown()),
-  z.array(z.unknown()),
+  z.record(jsonValueSchema),
+  z.array(jsonValueSchema),
 ]);
 
 export const emailSchema = z.string().trim().email();
