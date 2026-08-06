@@ -1,11 +1,12 @@
 import { z } from "zod";
-import { entityIdSchema } from "../shared/campaign.shared.schema";
+import { entityIdSchema, requestIdSchema } from "../shared/campaign.shared.schema";
 
 export const createApplicationInputSchema = z.object({
   campaignId: entityIdSchema,
   campaignCreatorId: entityIdSchema,
   campaignAssetId: entityIdSchema,
   briefId: entityIdSchema,
+  requestId: requestIdSchema,
 });
 
 // Application source is derived server-side from valid DIRECT/OUTREACH/SHARE entry evidence.
