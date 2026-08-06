@@ -1,274 +1,268 @@
 # Campaign Backend — Canonical Implementation Map
 
-Status: CANONICAL
-Version: 1.0
-Purpose: consolidate implementation responsibilities without duplicating Prisma or Zod definitions.
+Status: CANONICAL / FROZEN THROUGH STEP 5B
+Version: 1.1
 
-## 1. Authority and role
+This file maps the frozen Campaign domain into backend implementation responsibilities. It does not duplicate field-level Prisma or Zod definitions.
 
-This file is the canonical map between Campaign product/domain contracts and backend implementation.
+## 1. Authority
 
-It does **not** duplicate field-level Prisma definitions or Zod schemas. Use:
+Use this order when artifacts overlap:
 
-- `backend/campaign_schema.prisma` for persistence structure;
-- `backend/validation/**/*.schema.ts` for executable validation;
-- focused `campaign/**` contracts for detailed surface behavior.
+1. `backend/campaign_schema.prisma` — persisted Campaign truth (v1.9).
+2. `backend/validation/**/*.schema.ts` — executable request/boundary validation.
+3. This file — service ownership, lifecycle, transactions, concurrency, orchestration and integrations.
+4. Focused frozen module contracts — detailed domain/runtime behavior.
+5. `*_schema_reconciliation.*` and `backend/reconciliation/*` — historical reconciliation only.
 
-Reconciliation documents are historical evidence and must not override these canonical layers.
+A conflict is a reconciliation issue; do not silently implement a lower-authority artifact.
 
-## 2. Aggregate ownership
+## 2. Aggregate and ownership
 
-### Campaign
+Campaign evolves the existing `UceCampaign` aggregate. Do not create a parallel AI Campaign aggregate.
 
-Canonical aggregate: existing `UceCampaign` family.
+Campaign owns accepted Campaign values, lifecycle, Campaign strategy/targeting/commercial configuration, Campaign Assets, Briefs, CampaignCreator workflow identity, Applications/Snapshots, Campaign-facing Outreach evidence, Share evidence/tracking and Campaign-facing Reporting/Intelligence projections.
 
-Do not create a second Campaign aggregate for AI-generated campaigns. AI recommendation provenance is lineage/context; once accepted, the Campaign remains a normal Campaign record.
+Brand-owned facts remain Brand context. Deliverables belong to Brief. Readiness/capabilities/Active Opportunity are derived unless explicitly persisted in Prisma.
 
-Campaign owns:
+Collaboration is a separate independent module. Campaign does not own Collaboration workflow, deliverable execution, product dispatch, content approval, creator payment or posting completion. Campaign Page may map/render the same Collaboration entity in its workspace, but no duplicate Collaboration aggregate or placeholder Campaign FK should be introduced now.
 
-- campaign identity/name;
-- lifecycle/status;
-- creation source and accepted AI lineage references;
-- campaign strategy/objective/KPIs;
-- creator targeting;
-- audience targeting;
-- platform selection;
-- campaign commercial configuration and budget;
-- visibility/application-facing Campaign configuration;
-- Campaign-to-product/brief relationships;
-- canonical accepted values used by Campaign workflows.
+## 3. Campaign lifecycle
 
-### Product and Brief
+Canonical lifecycle:
 
-A Campaign can host multiple products. A Campaign product can host multiple briefs.
+`DRAFT -> PUBLISHED -> LIVE <-> PAUSED -> COMPLETED -> ARCHIVED`
 
-Deliverables are Brief-owned. Do not reintroduce Campaign-level deliverable persistence merely because Create Campaign previously captured effort-oriented concepts.
+`PUBLISHED` is intentional: Campaign definition is published but execution readiness is not yet satisfied. `LIVE` requires the frozen execution-readiness conditions. AI-recommended Campaign acceptance may land directly in LIVE when Campaign + Asset + Brief are accepted coherently.
 
-### Brand context
+`publishedAt` and `liveAt` are distinct facts. `liveAt` represents first transition to LIVE and is not rewritten on resume.
 
-Brand-owned facts such as Brand industry are inherited/read as context. Campaign must not create duplicate canonical Brand fields.
+Services enforce legal transitions with authoritative current-state checks/conditional writes. UI disabling is never the enforcement boundary.
 
-Commercial currency follows the frozen Campaign policy derived from Brand Centre country and is persisted as Campaign commercial context. It is not the same concept as product/offering price currency.
+## 4. Core service boundaries
 
-## 3. Lifecycle implementation
+Logical code boundaries, not separate deployable services:
 
-Canonical Campaign lifecycle values are represented by the current Campaign Prisma schema. Services must enforce legal transitions rather than allowing arbitrary status writes.
+- `CampaignService` — Campaign creation/edit/lifecycle.
+- `OpportunityService` — Campaign Asset + Brief operations and Active Opportunity derivation.
+- `CampaignCreatorService` — Campaign-level creator identity/manual add/import/archive.
+- `RecommendationService` — Campaign-facing Discovery context/run/result orchestration.
+- `OutreachService` — Outreach eligibility, channel resolution, quota, composition and accepted evidence.
+- `PriorityDmScheduler` — already-accepted Priority DM execution pacing.
+- `ApplicationService` — submit/withdraw/approve/reject/supersede/expire and Snapshot orchestration.
+- `ApplicantIntelligenceService` — Campaign-facing AI Match projection acceptance.
+- `ShareService` — Share action/message/tracked-link evidence.
+- `ReportingService` — stable Report + immutable Calculation acceptance/latest pointer.
+- `CampaignTrackingService` — opaque tracked Campaign URLs and click attribution.
+- `CampaignQueryService` — Campaign Page/workspace read composition.
 
-Lifecycle mutation should be routed through Campaign application/service logic so transition-specific checks can run atomically.
+## 5. Validation split
 
-Important implementation rule: publishing/launching is not a simple field patch. Before a Campaign crosses into its published/live lifecycle, the service must validate all frozen publish-readiness requirements defined by the Campaign Page/Create Campaign contracts and executable validation layer.
+Zod owns request shape, enum/range/object validation and frozen cross-field rules represented in executable schemas.
 
-Completion/archive behavior must preserve historical references required by downstream collaboration/reporting flows.
+Services own authorization, ownership, eligibility, lifecycle, current-state rules, derived readiness, cross-record limits, channel resolution and orchestration.
 
-## 4. Create Campaign orchestration
+Prisma/PostgreSQL owns durable relations, uniqueness/referential integrity and transaction/concurrency enforcement.
 
-Create Campaign remains the three-step product flow:
+Frontend must not reproduce backend authority.
 
-1. Campaign Strategy
-2. Creator Strategy
-3. Commercial Strategy
+## 6. Campaign Page / read architecture
 
-The backend should treat the wizard as mutation of one Campaign aggregate, not as three independent domain objects.
+Campaign Page is a read/write surface over canonical entities, not a separate aggregate.
 
-### Draft behavior
+`CampaignQueryService` may compose Campaign, Assets, Briefs, Discovery, Outreach, Applicants, Collaboration references, Reporting and Intelligence projections into view DTOs. UI-only state is not persisted merely because a screen needs it.
 
-Draft persistence may be incomplete relative to publish requirements. Field-level/type validation still applies where values are present.
+The future Stitch/Codex integration should map UI states to query/view DTOs and commands after the frontend reference state is imported; it must not redesign Campaign domain rules.
 
-### Publish behavior
+## 7. Discovery / creator identity
 
-Publish performs the stronger aggregate validation/readiness check. Canonical references (for example KPI/taxonomy IDs) must be resolvable and valid before publication where the frozen contracts require them.
+`UceCampaignCreator` is the Campaign-level normalized creator identity used across Discovery, Outreach and Applicants.
 
-### AI-recommended creation
+Manual creator add/import must resolve against Campaign creator identity and reject/resolve duplicate creator identity rather than creating a second CampaignCreator for the same Campaign.
 
-AI recommendation generation is Intelligence-owned. Campaign owns acceptance and persistence.
+Recommendation Context -> Run -> Recommendation preserves Campaign-facing recommendation history. Detailed scans, reusable intelligence, processor execution, caches and computation remain Intelligence-owned.
 
-When Campaign is created from an AI recommendation:
+## 8. Outreach
 
-- persist creation source as AI-recommended;
-- retain recommendation lineage/version identifiers required for traceability;
-- validate the accepted recommendation through the same Campaign boundary rules as manually entered data;
-- persist accepted/resolved Campaign values in Campaign storage;
-- do not use the Intelligence recommendation record as the live Campaign value store.
+Backend resolves the canonical Outreach channel; frontend does not choose Email vs Priority DM.
 
-## 5. Edit Campaign orchestration
+Brand free-form instruction is accepted for composition. Email and Priority DM have separate deterministic composition because channel behavior differs. Both include a tracked Campaign URL.
 
-All post-launch edits must respect the frozen editability rules in the Campaign contracts.
+Email MVP semantics:
 
-The backend must not rely only on UI disabling. Service-layer authorization/validation must reject forbidden mutations.
+- Creator Shop opens/hands off a Gmail compose; it does not send the email.
+- strongest Campaign-owned truth is `COMPOSE_INITIATED`, never SENT/DELIVERED/OPENED;
+- maximum 3 Brand clicks/compose attempts;
+- Email attempts #2/#3 do not consume additional Campaign daily Outreach quota;
+- Email follow-up happens in Gmail and is outside the MVP Campaign workflow.
 
-Where an edit affects creator eligibility, applications, briefs, active collaborations, commercial expectations, or intelligence inputs, the owning service must execute the corresponding impact policy instead of blindly updating the Campaign row.
+Campaign daily Outreach capacity is max 50 first Outreach initiations per Campaign/day.
 
-Active collaboration terms must not silently change because the parent Campaign was edited later. Collaboration must retain/snapshot the agreed Campaign/Brief/commercial state required by its contract.
+Priority DM semantics:
 
-## 6. Campaign Page / workspace orchestration
+- accepted Outreach is persisted before scheduler execution;
+- scheduler pacing is max 12 Priority DMs per Brand Meta account/hour;
+- there is no 4/Campaign/hour rule;
+- Campaign lifecycle changes after acceptance do not cancel the already-accepted DM;
+- provider execution is normalized behind a Meta adapter.
 
-Campaign Page is an application read/write surface over the Campaign aggregate and related modules; it is not a separate persistence aggregate.
+`requestId` on Outreach Attempt protects replay of one command; deliberate Email attempts use new request IDs.
 
-Read models may compose Campaign, product, brief, applicant, outreach, collaboration, reporting, and Intelligence-derived data, but canonical ownership remains with the source domain.
+## 9. Applications
 
-Readiness/status indicators shown on Campaign Page should be derived from canonical state and frozen rules, not persisted as duplicate editable truth unless the Prisma schema explicitly defines a materialized field for a justified reason.
+Application submission creates Application + immutable `UceApplicationSnapshot` atomically. Applicant Intelligence evaluates the submission-time Snapshot, not later mutable Campaign state.
 
-## 7. Canonical taxonomy/reference resolution
+Limits exclude WITHDRAWN and are concurrency-safe service/database invariants:
 
-Campaign uses canonical reference libraries including:
+- max 2 Applications per creator per Campaign;
+- max 5 Applications per creator per Brand.
 
-- creator archetypes;
-- audience affinities;
-- KPI framework.
+Submission must serialize/protect both logical scopes: Creator x Campaign and Creator x Brand.
 
-Services must validate stored IDs against the canonical library/version expected by the relevant contract.
+`requestId` protects replay of one Apply command; it does not prevent a legitimate second Application.
 
-Do not convert canonical IDs into free-text copies as the primary persistence representation.
+Approval is atomic with sibling supersession in the frozen approval scope. Completion expires remaining PENDING Applications. Competing terminal transitions use authoritative transactional state checks so commit order determines the valid winner.
 
-Human-readable labels can be resolved for API/UI responses.
+Applicant Intelligence states are `PROCESSING`, `READY`, `UNAVAILABLE`; Intelligence must never gate Brand Approve/Reject.
 
-## 8. Geography
+## 10. Share
 
-Campaign audience geography semantically belongs to Campaign targeting while reusing the structured geography shape established by the shared Intelligence geography contract.
+Share is Campaign-owned action evidence, not delivery evidence.
 
-The working persistence may use JSON where defined by the canonical Prisma schema, but the service/Zod boundary must validate the exact frozen structured object rather than accepting arbitrary JSON.
+MVP channels are the frozen Share channels represented in Prisma/Zod. Each deliberate Share action gets its own tracking identity. `requestId` prevents technical replay of the same Share command while allowing unlimited intentional Shares.
 
-If the production application already has a canonical shared normalized geography model, the integrating developer may reconcile storage to that model without changing the frozen Campaign semantics.
+Backend owns deterministic message composition and tracked Campaign URL. Browser/platform handoff does not imply delivery/read status.
 
-## 9. Commercials
+Preview metadata may resolve a Campaign/Product visual, then Brand logo, then a default Campaign visual; this is rendering/resolution behavior and does not require a new persistence aggregate.
 
-Campaign commercial behavior must preserve the distinction between:
+## 11. Tracking
 
-- creator payout/commercial offer;
-- total Campaign budget;
-- brand support/value transferred before content creation;
-- payment timing/terms;
-- Campaign commercial currency.
+Tracked URLs use an opaque server-resolved token. Do not trust mutable client query parameters as attribution truth.
 
-For negotiable commercials, the stored advertised offer represents the frozen minimum/starting payout semantics defined by the Campaign contract. Do not invent an unapproved maximum negotiated payout field.
+Tracking identity survives Campaign PAUSED/COMPLETED/ARCHIVED states. A historical link records its click and then resolves current Campaign availability/state.
 
-Negotiation/application/collaboration services own the later creator-specific agreed amount where applicable.
+Outreach and Share share tracking infrastructure while retaining explicit origin attribution.
 
-## 10. Products and briefs
+## 12. Reporting
 
-Adding a product and adding a brief are separate Campaign-module operations.
+Intelligence owns calculation. Campaign owns the stable Report identity, immutable successful Calculation history and `latestCalculationId` pointer.
 
-Service rules must enforce parent existence and ownership:
+Accepting a new successful Calculation and advancing the latest pointer is atomic. Campaign does not invent report metrics.
 
-- product must belong to the Campaign/Brand context required by the frozen contract;
-- brief must belong to the intended Campaign product;
-- deliverables are validated and persisted at Brief level;
-- mutations must not orphan dependent active workflow records.
+Running/failed/retry execution evidence remains Intelligence-owned. Campaign must not add a Reporting job table merely to make itself self-contained.
 
-## 11. Discovery, Outreach and Applicants
+## 13. Intelligence boundary
 
-These are Campaign-adjacent workflow modules with their own validation/services while referencing canonical Campaign state.
+Campaign-side adapter capabilities:
 
-They must not duplicate Campaign targeting/commercial fields as independently editable Campaign truth.
+- request creator recommendations;
+- request Applicant Match;
+- request Report calculation.
 
-Where workflow records require historical stability, persist the specific snapshot/reference required by that workflow rather than making the workflow dependent on mutable current Campaign values.
+Campaign owns WHEN work is required, authoritative Campaign/Application context, Campaign-facing context/run/projection identity and validation/persistence of accepted results.
 
-Creator application commercial negotiation remains bounded by the frozen Campaign rules (including the MVP counter-offer policy) and must be enforced server-side.
+Intelligence owns HOW recommendations/scores/reports are calculated, processor/model/tool selection, reusable intelligence, artifacts, detailed execution telemetry, retry/failure state and computation lineage.
 
-## 12. Share
+Every required asynchronous Intelligence operation must eventually have durable Intelligence-owned execution evidence so a post-commit dispatch failure cannot silently lose required work. The current `backend/intelligence_schema.prisma` has not yet fully implemented that generic runtime persistence layer; do not solve that by adding Campaign job tables.
 
-Campaign sharing/visibility uses Campaign-owned visibility semantics. Share endpoints/services must enforce lifecycle and visibility/authorization rules server-side.
+Inbound Intelligence results must be context/version bound, replay-safe and unable to overwrite a newer accepted result merely because an older run finishes later.
 
-Public/share representations should expose only the fields approved by the share contract; do not serialize the full internal Campaign aggregate by default.
+## 14. Collaboration boundary
 
-## 13. Reporting
+Application APPROVED is the Campaign-side handoff point.
 
-Campaign owns reporting setup/context and the association of returned reporting intelligence with the Campaign.
+Campaign may expose approved Campaign/Application/Snapshot context through a future Collaboration handoff adapter, but Collaboration remains independently owned. Do not create Collaboration rows, snapshots or workflow transitions inside Campaign transactions until the Collaboration module itself is designed and its relation ownership is reconciled.
 
-The Creator Shop Intelligence Framework owns reporting intelligence computation.
+## 15. Transactions
 
-Implementation therefore needs an explicit adapter/contract boundary:
+Required atomic boundaries include:
 
-Campaign -> Intelligence:
-- canonical Campaign identifier and relevant frozen Campaign context;
-- relevant product/brief/collaboration/performance references/data allowed by the reporting contract;
-- trigger/event context and version/lineage metadata where required.
+- Application + Snapshot creation;
+- Application limit enforcement under protected Creator x Campaign and Creator x Brand scopes;
+- Application approval + sibling supersession;
+- Campaign completion + remaining PENDING -> EXPIRED consequences;
+- Campaign/Asset/Brief lifecycle state-conditioned transitions where races matter;
+- Outreach quota consumption together with accepted Outreach action;
+- Priority DM acceptance before scheduler execution;
+- Report Calculation creation + latest pointer update.
 
-Intelligence -> Campaign/application:
-- reporting output in the frozen response contract;
-- computation/version/lineage identifiers required for traceability;
-- status/error metadata required by the integration contract.
+Do not keep a database transaction open while calling Meta, Gmail handoff, Intelligence or other external systems.
 
-Do not duplicate Intelligence processor internals in Campaign persistence.
+## 16. Concurrency and request replay
 
-## 14. Marketplace score and AI Match score
+Use targeted protection rather than making the whole Campaign backend SERIALIZABLE.
 
-Marketplace section score and AI Match score are Intelligence-produced outputs.
+Critical scopes:
 
-Campaign/application code may request, consume, cache/reference, and render these outputs according to their contracts, but the scoring methodology and processor-owned evidence/provenance remain Intelligence-owned.
+- Creator x Campaign Application limit;
+- Creator x Brand Application limit;
+- Application approval sibling scope;
+- Campaign daily Outreach capacity;
+- Campaign/Asset/Brief lifecycle transitions.
 
-Any Campaign trigger must be explicit about:
+Lifecycle commands should use current-state/conditional transition semantics so stale writes cannot resurrect terminal states.
 
-- event that causes calculation/recalculation;
-- input snapshot/version;
-- expected output contract;
-- stale/retry/failure behavior;
-- lineage needed to explain which intelligence result was used.
+Durable `requestId` is persisted on Application, Outreach Attempt and Campaign Share. Same request replay resolves to existing command evidence; a deliberate repeated business action uses a new requestId.
 
-## 15. Transaction boundaries
+Do not add a generic Campaign command-execution/idempotency table for MVP.
 
-Use a database transaction whenever a business operation must atomically mutate multiple Campaign-owned records or enforce an invariant across them.
+## 17. Async execution rule
 
-Typical transaction candidates include:
+Required async consequences execute externally only after Campaign-domain commit.
 
-- publish/launch state transition plus required canonical freezes/references;
-- add/remove/reorder operations whose parent/child invariants must remain consistent;
-- acceptance of an application/negotiated commercial where multiple workflow records change together;
-- collaboration handoff/snapshot creation;
-- destructive edits that require dependent-record policy enforcement.
+Durable evidence of pending work must exist in the owning domain before/with the triggering transaction so work can be recovered. Prefer existing domain records as recoverable work sources rather than introducing a generic Campaign event/outbox platform for MVP.
 
-Do not hold a database transaction open while waiting for external Intelligence/network computation.
+Priority DM scheduler reads accepted unsent Attempts. Campaign-facing Intelligence context/run/projection records remain separate from Intelligence-owned processor execution evidence.
 
-## 16. Concurrency and idempotency
+## 18. Integration adapters
 
-Lifecycle transitions, acceptance actions, negotiation actions, and asynchronous result ingestion must be safe against duplicate requests.
+Provider/independent-system details sit behind logical adapters:
 
-Implementation should use the production backend's existing concurrency convention where available (for example optimistic version checks, conditional updates, uniqueness constraints, idempotency keys, or equivalent).
+- `IntelligenceAdapter` — Recommendations, Applicant Match, Reporting requests/results.
+- `PriorityDmProvider` — Meta authentication/request/response/error normalization only.
+- `EmailHandoffAdapter` — Gmail compose handoff only; never fabricates send evidence.
+- `CollaborationHandoff` — future boundary only; no Campaign-owned Collaboration aggregate.
 
-At minimum:
+Provider credentials and raw provider errors must not leak into Campaign DTOs/domain logic.
 
-- a Campaign cannot be published twice into conflicting states;
-- an application cannot be accepted/rejected through mutually conflicting concurrent mutations;
-- a negotiation counter cannot exceed the frozen allowed count because of racing requests;
-- an async Intelligence result must not overwrite a newer result/input version merely because it completes later.
+## 19. Error normalization
 
-## 17. Intelligence async boundary
+Adapters normalize provider failures into internal categories such as authentication required, rate limited, retryable failure, permanent failure, provider unavailable or invalid response. Domain services decide consequences.
 
-External Intelligence execution should occur outside the Campaign database transaction.
+External execution failure does not roll back already-committed Campaign truth. Example: a Meta failure updates Attempt execution evidence; it does not erase accepted Outreach/quota history.
 
-Recommended logical flow:
+## 20. Canonical implementation status
 
-1. Campaign service commits canonical state.
-2. A trigger/job/event is emitted or queued using the application's production integration pattern.
-3. Intelligence processes the versioned input.
-4. Result is returned with lineage/version/status.
-5. Ingestion validates contract and freshness before associating/serving the result.
+Current executable/persistence artifacts:
 
-Exact queue/vendor infrastructure is intentionally not prescribed here unless another frozen repository contract defines it.
+- `backend/campaign_schema.prisma` v1.9;
+- `backend/validation/shared/`;
+- `backend/validation/campaign/`;
+- `backend/validation/assets-briefs/`;
+- `backend/validation/discovery/`;
+- `backend/validation/outreach/`;
+- `backend/validation/applicants/`;
+- `backend/validation/share/`;
+- `backend/validation/intelligence/`.
 
-## 18. Validation boundary
+Reconciliation artifacts are SUPERSEDED FOR IMPLEMENTATION once represented in these canonical layers. Focused frozen domain/runtime contracts remain useful detailed specifications.
 
-Zod schemas are executable request/domain-boundary validation, not a replacement for database constraints or service invariants.
+## 21. Explicit non-goals for Campaign MVP
 
-Use all three layers:
+Do not introduce without a new frozen decision:
 
-- Zod: request shape, enum/range/object validation and frozen cross-field rules represented there;
-- service/domain logic: lifecycle, authorization, ownership, current-state and cross-record invariants;
-- Prisma/PostgreSQL: persistence types, relations, uniqueness/referential constraints and durable integrity.
+- duplicate Campaign aggregate;
+- Campaign-level deliverables;
+- persisted Active Opportunity/readiness/capability flags;
+- generic Campaign event bus/outbox platform;
+- generic Campaign idempotency table;
+- Campaign Reporting job table;
+- Campaign-level Priority-DM hourly quota bucket;
+- AI Brief provenance fields beyond the frozen `creationSource` contract;
+- placeholder/duplicate Collaboration aggregate;
+- Gmail delivery/open truth in MVP;
+- Intelligence scoring/calculation algorithms inside Campaign.
 
-## 19. Reconciliation-file status
+## 22. Developer integration rule
 
-The following class of artifacts is now **SUPERSEDED FOR IMPLEMENTATION** once its decisions are represented in the current canonical layers:
-
-- `campaign/**/backend_schema_reconciliation.*`
-- `campaign/backend/schema_reconciliation.yaml`
-- `backend/*_backend_schema_reconciliation.md`
-- `backend/reconciliation/*`
-
-They may remain in Git for traceability. Developers/Codex should not implement directly from them without checking the canonical authority order.
-
-## 20. Developer integration rule
-
-This repository is a handoff/reference repository, not the production application repository. The integrating developer must reconcile these Campaign artifacts with the actual production backend architecture before migration/application.
-
-Do not mechanically replace a production canonical model merely because this reference repository uses a working representation. Preserve the frozen domain semantics and map them into the production architecture deliberately.
+This repository is a handoff/reference repository, not automatically the production application repository. Integrate these frozen semantics into the production backend deliberately; do not mechanically replace production models merely because this repository uses a working representation.
