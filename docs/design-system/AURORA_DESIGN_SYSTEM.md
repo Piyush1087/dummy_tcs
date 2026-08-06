@@ -1,7 +1,7 @@
 # AURORA DESIGN SYSTEM
 
 **Version:** 5.0\
-**Status:** CANONICAL DRAFT --- reconciled from Aurora v4.1 and Aurora
+**Status:** CANONICAL
 v5 design review\
 **Product:** Creator Shop\
 **Purpose:** Canonical reusable interface system for Creator Shop
@@ -36,13 +36,13 @@ product surfaces
 22. Design Acceptance & Resilience Matrix\
 23. Visual Reference\
 24. AI / Design Tool Interpretation\
-## 25. Change Governance
+25. Change Governance
 
 ------------------------------------------------------------------------
 
-# 0. Authority, Scope & Conformance
+## 0. Authority, Scope & Conformance
 
-## 0.1 Purpose
+### 0.1 Purpose
 
 Aurora defines Creator Shop's reusable interface system. It standardizes
 visual primitives, component semantics, interaction behavior, responsive
@@ -60,7 +60,7 @@ Normative language:
     valid reason.
 -   **MAY** --- optional and context-dependent.
 
-## 0.2 Aurora release model
+### 0.2 Aurora release model
 
 A canonical Aurora release consists of synchronized representations:
 
@@ -86,7 +86,7 @@ If same-version artifacts materially disagree, that is a Design System
 inconsistency to resolve. An implementation or AI agent MUST NOT
 silently choose whichever artifact is most convenient.
 
-## 0.3 Relationship to other sources
+### 0.3 Relationship to other sources
 
 Authority boundaries:
 
@@ -100,7 +100,7 @@ Authority boundaries:
 A screen reference may compose Aurora components but does not create or
 override Aurora primitives.
 
-## 0.4 Product ownership boundary
+### 0.4 Product ownership boundary
 
 Aurora may define how a score, status, date, table, selector, or
 workflow state is presented. It MUST NOT define:
@@ -114,7 +114,7 @@ workflow state is presented. It MUST NOT define:
 -   feature-specific validation;
 -   final feature copy where an approved copy contract exists.
 
-## 0.5 Conformance
+### 0.5 Conformance
 
 A surface conforms to Aurora when it uses canonical tokens/components,
 preserves component semantics, follows applicable
@@ -125,9 +125,9 @@ higher authority requires change.
 Feature-specific composition is expected; feature-specific Design System
 drift is not.
 
-# 1. Foundations
+## 1. Foundations
 
-## 1.1 Design principles
+### 1.1 Design principles
 
 Aurora is **clear, consistent, calm, responsive by transformation,
 content-resilient, semantic, composable, and accessible by design**.
@@ -136,7 +136,7 @@ reflow rather than become miniature desktop layouts; components are
 chosen by meaning rather than resemblance; real content determines
 robustness.
 
-## 1.2 Visual hierarchy
+### 1.2 Visual hierarchy
 
 Use hierarchy deliberately:
 
@@ -149,7 +149,7 @@ Use hierarchy deliberately:
 Do not create hierarchy by arbitrary font sizes, extra colors, excessive
 cards, or multiple competing primary actions.
 
-## 1.3 Density
+### 1.3 Density
 
 Aurora is a dashboard system, not a mobile-native consumer app. Dense
 information is acceptable where it improves scanning and
@@ -159,7 +159,7 @@ interaction, or information hierarchy.
 Do not mechanically wrap every section in a Card. Spacing and section
 structure may provide sufficient grouping.
 
-## 1.4 Reuse
+### 1.4 Reuse
 
 Before introducing a new Aurora component, determine whether the
 requirement can be satisfied by:
@@ -173,12 +173,12 @@ Existing component
 
 ------------------------------------------------------------------------
 
-# 2. Foundation Tokens
+## 2. Foundation Tokens
 
 This section preserves the approved v4.1 visual foundation unless a
 future Aurora release explicitly changes a value.
 
-## 2.1 Color palette
+### 2.1 Color palette
 
   -----------------------------------------------------------------------
   Token                   Value                   Usage
@@ -230,7 +230,7 @@ Rules:
 -   Colors MUST NOT change merely because the viewport changes.
 -   Status meaning MUST NOT rely on color alone.
 
-## 2.2 Typography
+### 2.2 Typography
 
   -------------------------------------------------------------------------
   Role      Family           Desktop        Mobile Weight    Use
@@ -268,7 +268,7 @@ Rules:
     Font loading is an implementation concern governed by frontend
     engineering; the visual result MUST preserve the approved families.
 
-## 2.3 Spacing
+### 2.3 Spacing
 
 Base grid: **8px**.
 
@@ -293,7 +293,7 @@ unless a component contract explicitly defines otherwise. Responsive
 design should first reduce outer margins, columns, and arrangement
 rather than collapsing internal breathing room.
 
-## 2.4 Radius & borders
+### 2.4 Radius & borders
 
   ---------------------------------------------------------------------
   Component                                                      Radius
@@ -326,7 +326,7 @@ where their own geometry applies.
 Radius MUST NOT be reduced on mobile merely to save space. Avoid
 arbitrary sharp-corner variants.
 
-## 2.5 Canonical component geometry
+### 2.5 Canonical component geometry
 
   Token / property                  Value
   ------------------------------- -------
@@ -342,7 +342,7 @@ arbitrary sharp-corner variants.
   Dialog max width                  600px
   Textarea minimum height           120px
 
-## 2.6 Breakpoints
+### 2.6 Breakpoints
 
 ``` text
 Mobile:  < 768px
@@ -354,7 +354,7 @@ Breakpoints are classification boundaries, not permission to apply a
 fixed transformation mechanically. Content and task semantics still
 determine the correct responsive representation.
 
-## 2.7 Z-index baseline
+### 2.7 Z-index baseline
 
 Preserved baseline:
 
@@ -372,13 +372,13 @@ escalation.
 
 ------------------------------------------------------------------------
 
-# 3. Accessibility
+## 3. Accessibility
 
 Aurora owns design accessibility. Frontend engineering owns
 implementation details such as semantic HTML, ARIA, focus trapping, and
 DOM behavior.
 
-## 3.1 Core requirements
+### 3.1 Core requirements
 
 -   Interactive elements MUST have a clearly perceivable focus-visible
     state.
@@ -397,25 +397,25 @@ DOM behavior.
 -   Motion SHOULD be purposeful. Reduced-motion preferences must not
     make state changes incomprehensible.
 
-## 3.2 Typography & zoom resilience
+### 3.2 Typography & zoom resilience
 
 Do not solve constrained layouts by shrinking canonical body text.
 Components and compositions must tolerate increased text size, wrapping,
 and realistic browser zoom without semantic loss.
 
-## 3.3 Touch & pointer parity
+### 3.3 Touch & pointer parity
 
 Hover may enhance discoverability on pointer devices but MUST NOT be
 required to access essential information or primary actions.
 
 ------------------------------------------------------------------------
 
-# 4. Interaction State System
+## 4. Interaction State System
 
 This section is the canonical state vocabulary. Component sections
 specify only special or non-applicable states.
 
-## 4.1 Standard interactive states
+### 4.1 Standard interactive states
 
 Where applicable:
 
@@ -437,7 +437,7 @@ Loading
 Complete
 ```
 
-## 4.2 State rules
+### 4.2 State rules
 
 -   **Hover** supplements interaction; it is not required on touch.
 -   **Focus-visible** must be clearly perceivable and must not be
@@ -452,7 +452,7 @@ Complete
 -   **Loading** must not create duplicate execution where the action
     should be temporarily unavailable.
 
-## 4.3 State stability
+### 4.3 State stability
 
 State changes SHOULD preserve component geometry where practical.
 Loading a Button, validating a Field, or selecting a Card should not
@@ -460,9 +460,9 @@ cause unnecessary layout shift.
 
 ------------------------------------------------------------------------
 
-# 5. Layout System
+## 5. Layout System
 
-## 5.1 Page hierarchy
+### 5.1 Page hierarchy
 
 Canonical composition:
 
@@ -478,7 +478,7 @@ Domain nesting does not require visual container nesting. Avoid
 card-inside-card structures simply because the data model is
 hierarchical.
 
-## 5.2 Grid
+### 5.2 Grid
 
 Desktop may use 2--3 columns according to content density. Tablet
 normally reduces to 2 columns. Mobile normally uses one primary column.
@@ -492,7 +492,7 @@ Canonical gaps:
 These are defaults; component-specific layout may differ when semantics
 require it.
 
-## 5.3 Width & overflow
+### 5.3 Width & overflow
 
 Page-level horizontal scrolling SHOULD NOT be used as a general
 responsive strategy.
@@ -501,7 +501,7 @@ Components with inherently wide content may own horizontal scrolling
 where that preserves usability, but the page shell itself should remain
 within the usable viewport.
 
-## 5.4 Scroll ownership
+### 5.4 Scroll ownership
 
 Use the simplest scroll model:
 
@@ -515,14 +515,14 @@ Use the simplest scroll model:
 
 ------------------------------------------------------------------------
 
-# 6. Application Shell
+## 6. Application Shell
 
 Creator Shop is a responsive web dashboard that may run inside mobile
 Chrome/Safari. The usable viewport can therefore be reduced by browser
 chrome, address bars, tab/tool ribbons, virtual keyboards, and device
 safe areas.
 
-## 6.1 Desktop shell
+### 6.1 Desktop shell
 
 Typical desktop shell:
 
@@ -539,14 +539,14 @@ Typical desktop shell:
 Desktop Header height: 72px. Sidebar supports collapsed 80px and
 expanded 240px states.
 
-## 6.2 Tablet shell
+### 6.2 Tablet shell
 
 Tablet may hide the persistent Sidebar and expose global navigation
 through a menu/drawer while retaining an adapted Header. Bottom
 Navigation is not automatically required for every tablet width; use the
 application navigation contract.
 
-## 6.3 Mobile web shell
+### 6.3 Mobile web shell
 
 Mobile uses:
 
@@ -561,7 +561,7 @@ Mobile uses:
 Mobile design MUST account for **usable viewport**, not assume the CSS
 viewport is fully visible.
 
-## 6.4 Header
+### 6.4 Header
 
 Baseline visual treatment:
 
@@ -575,7 +575,7 @@ Nested mobile screens prioritize Back Navigation + current context. Do
 not show a redundant logo when a back-navigation context occupies the
 same hierarchy position.
 
-## 6.5 Sidebar
+### 6.5 Sidebar
 
 Visual baseline:
 
@@ -590,7 +590,7 @@ Visual baseline:
 Aurora owns Sidebar presentation and states. Application configuration
 owns destinations, ordering, permissions, and feature availability.
 
-## 6.6 Bottom Navigation
+### 6.6 Bottom Navigation
 
 Mobile Bottom Navigation:
 
@@ -601,7 +601,7 @@ Mobile Bottom Navigation:
 
 The application owns which destinations appear.
 
-## 6.7 Global Navigation Drawer
+### 6.7 Global Navigation Drawer
 
 The mobile global navigation drawer exposes destinations not represented
 in Bottom Navigation.
@@ -611,7 +611,7 @@ baseline visual pattern for the global navigation drawer where it
 matches the executable shell, but its exact width is not a universal
 rule for all Drawers.
 
-## 6.8 Breadcrumbs and Back Navigation
+### 6.8 Breadcrumbs and Back Navigation
 
 Desktop/tablet Breadcrumbs communicate hierarchy. Mobile nested screens
 use Back Navigation + current context rather than a traditional
@@ -620,7 +620,7 @@ breadcrumb trail.
 This resolves the v4.1 contradiction that both hid breadcrumbs on mobile
 and instructed mobile headers to retain/truncate them.
 
-## 6.9 Persistent Action Region
+### 6.9 Persistent Action Region
 
 A Persistent Action Region keeps a dominant workflow action reachable
 when natural page-end placement is insufficient.
@@ -638,19 +638,19 @@ persistence materially improves workflow completion.
 
 ------------------------------------------------------------------------
 
-# 7. Responsive Transformation System
+## 7. Responsive Transformation System
 
 Responsive behavior preserves product semantics while adapting
 composition to available space.
 
-## 7.1 Transformation vocabulary
+### 7.1 Transformation vocabulary
 
 Use **Stack** (horizontal → vertical), **Reflow** (rearrange), **Wrap**
 (additional lines), **Collapse** (compact without losing access),
 **Transform** (change representation, e.g. Table → Data Cards),
 **Reposition**, and **Progressive disclosure**.
 
-## 7.2 Responsive invariants
+### 7.2 Responsive invariants
 
 Responsive transformation MUST NOT, without an explicit product
 contract:
@@ -666,25 +666,25 @@ contract:
 Feature/product contracts determine information priority when not all
 information can remain simultaneously visible.
 
-## 7.3 Long mobile pages
+### 7.3 Long mobile pages
 
 A long mobile page is not inherently a design defect. Prefer readable
 vertical flow over compressing, hiding, or arbitrarily accordionizing
 content.
 
-## 7.4 Forms
+### 7.4 Forms
 
 Desktop may use 2--3 columns where field relationships support it.
 Tablet may use 1--2 columns. Mobile is primarily single-column.
 
-## 7.5 Tables
+### 7.5 Tables
 
 A Table may remain a Table where it remains readable and operable. Where
 column comparison becomes unusable, transform to a Data List/Data Card
 representation. The owning feature determines which fields are primary,
 secondary, or progressively disclosed.
 
-## 7.6 Overlays
+### 7.6 Overlays
 
 Overlay transformation depends on task complexity, not breakpoint alone:
 
@@ -698,12 +698,12 @@ There is no universal `70vh` mobile overlay rule.
 
 ------------------------------------------------------------------------
 
-# 8. Content Resilience
+## 8. Content Resilience
 
 Design examples are representative content, not maximum content
 contracts.
 
-## 8.1 Canonical responses to content pressure
+### 8.1 Canonical responses to content pressure
 
 Use intentionally:
 
@@ -714,14 +714,14 @@ Use intentionally:
 -   **Scroll** --- for bounded content where preserving geometry is more
     important than expansion.
 
-## 8.2 Dynamic content
+### 8.2 Dynamic content
 
 Components must tolerate realistic variation in names, titles,
 currencies/amounts, dates, counts, statuses, validation messages,
 metadata, and user-generated text. Do not invent abbreviations or
 rewrite approved copy to make a layout fit.
 
-## 8.3 Missing and partial data
+### 8.3 Missing and partial data
 
 Missing optional data must not collapse the surrounding composition into
 an invalid state. Use explicit placeholders only where the product
@@ -730,16 +730,16 @@ cleanly.
 
 Loading, empty, missing, unavailable, and error are different states.
 
-## 8.4 Fixed and persistent UI
+### 8.4 Fixed and persistent UI
 
 Persistent headers, actions, Bottom Navigation, browser chrome, and
 virtual keyboards must not make critical content or actions unreachable.
 
 ------------------------------------------------------------------------
 
-# 9. Components --- Actions
+## 9. Components --- Actions
 
-## 9.1 Button
+### 9.1 Button
 
 Buttons initiate actions. Navigation uses Link.
 
@@ -777,7 +777,7 @@ Mobile forms and isolated action regions MAY use full-width buttons.
 Inline Card actions may remain auto-width. Responsive action layout
 follows §7.
 
-## 9.2 Icon Button
+### 9.2 Icon Button
 
 An action represented primarily by an icon. Typical uses: Edit, Close,
 Share, More, Notifications, Menu.
@@ -787,13 +787,13 @@ remains at least 44×44px. Every Icon Button requires an accessible name
 in implementation. Tooltip may supplement discoverability but does not
 replace the accessible name.
 
-## 9.3 Link
+### 9.3 Link
 
 Links navigate to another page, route, resource, or meaningful location.
 They must remain distinguishable from surrounding non-interactive text
 and support standard navigation states.
 
-## 9.4 Action Group
+### 9.4 Action Group
 
 Groups related actions while preserving hierarchy. Horizontal groups may
 stack/reflow on constrained screens. Responsive transformation MUST NOT
@@ -801,9 +801,9 @@ change action semantics.
 
 ------------------------------------------------------------------------
 
-# 10. Components --- Form Controls
+## 10. Components --- Form Controls
 
-## 10.1 Field
+### 10.1 Field
 
 Field is the canonical form-control composition:
 
@@ -819,7 +819,7 @@ after entering a value.
 
 Field errors expand vertically and remain readable.
 
-## 10.2 Text Input
+### 10.2 Text Input
 
 Single-line entry.
 
@@ -843,7 +843,7 @@ States:
 
 Search variant may include a leading 16px muted search icon.
 
-## 10.3 Textarea
+### 10.3 Textarea
 
 Uses Field and Text Input visual language, except:
 
@@ -851,7 +851,7 @@ Uses Field and Text Input visual language, except:
 -   padding 12px 16px;
 -   vertical resize where supported by implementation.
 
-## 10.4 Select
+### 10.4 Select
 
 For choosing from a defined option set. Uses Text Input geometry with
 trailing 16px chevron. The option surface must remain within the usable
@@ -859,7 +859,7 @@ viewport and operable across input modes.
 
 Do not apply the old fixed `70vh` mobile sheet rule mechanically.
 
-## 10.5 Searchable Select / Combobox
+### 10.5 Searchable Select / Combobox
 
 Use where a large or dynamic option set benefits from filtering/search.
 Clearly distinguish search text, selected value(s), options, and
@@ -867,23 +867,23 @@ no-results state.
 
 Multi-select values may use Chips.
 
-## 10.6 Checkbox
+### 10.6 Checkbox
 
 For independent binary selection. Supports unchecked, checked, and
 indeterminate where meaningful. Multiple Checkboxes may be selected in
 one group.
 
-## 10.7 Radio
+### 10.7 Radio
 
 For mutually exclusive choices in a defined group. Use a clear group
 label.
 
-## 10.8 Switch
+### 10.8 Switch
 
 For an immediately applicable on/off setting. Do not use Switch merely
 as a modern-looking replacement for Checkbox.
 
-## 10.9 Date Input
+### 10.9 Date Input
 
 Uses Field/Input visual language with a trailing 16px calendar icon.
 Aurora owns presentation and date-selection surface behavior. Feature
@@ -893,22 +893,22 @@ validation.
 Feature-specific visual indicators such as a campaign "Fixed Date" dot
 are not universal Aurora behavior unless promoted through governance.
 
-## 10.10 Amount / Numeric Input
+### 10.10 Amount / Numeric Input
 
 Structured numeric entry. May include currency, percentage, or unit
 adornments. Feature contracts own allowed range, precision, currency,
 and business meaning.
 
-## 10.11 Search Field
+### 10.11 Search Field
 
 Text Input variant with search affordance and optional clear action.
 Clear uses Icon Button semantics.
 
 ------------------------------------------------------------------------
 
-# 11. Components --- Selection & Status
+## 11. Components --- Selection & Status
 
-## 11.1 Selection Card
+### 11.1 Selection Card
 
 Use when a choice benefits from description, visual identity, or
 stronger emphasis than a simple Radio/Checkbox.
@@ -930,7 +930,7 @@ Visual states:
 Selection cardinality is feature-owned; Selection Card itself may
 support single- or multi-select composition.
 
-## 11.2 Slider
+### 11.2 Slider
 
 For continuous/percentage selection where visual position is useful.
 
@@ -945,7 +945,7 @@ Baseline:
 Use numeric input when precise direct entry is more appropriate. Do not
 use Slider for binary state.
 
-## 11.3 Chip
+### 11.3 Chip
 
 Chip is interactive/selectable/removable compact content.
 
@@ -962,7 +962,7 @@ Selected Chip baseline: Aurora Green background with dark bold text.
 
 A removable Chip must expose an operable removal action.
 
-## 11.4 Badge
+### 11.4 Badge
 
 Badge is non-interactive status or metadata.
 
@@ -977,7 +977,7 @@ Status treatment may use:
 Controlled status vocabulary should remain concise. Color is not the
 only status cue where distinction is important.
 
-## 11.5 Chip vs Badge
+### 11.5 Chip vs Badge
 
 ``` text
 Chip  = interactive / selectable / removable
@@ -989,26 +989,26 @@ Tag primitive without demonstrated semantics distinct from both.
 
 ------------------------------------------------------------------------
 
-# 12. Components --- Navigation
+## 12. Components --- Navigation
 
-## 12.1 Header
+### 12.1 Header
 
 Uses the shell contract in §6. Root, nested, and overlay contexts may
 vary composition while preserving canonical geometry and hierarchy.
 
-## 12.2 Sidebar Item
+### 12.2 Sidebar Item
 
 Contains icon, label, and optional indicator. Supports standard
 interactive states plus Active. Collapsed Sidebar must retain
 understandable accessible navigation.
 
-## 12.3 Bottom Navigation Item
+### 12.3 Bottom Navigation Item
 
 Contains icon, short label, and optional approved indicator. Active
 destination must be distinguishable without relying only on subtle
 color.
 
-## 12.4 Breadcrumb
+### 12.4 Breadcrumb
 
 Desktop/tablet hierarchy component.
 
@@ -1022,12 +1022,12 @@ Baseline:
 
 Avoid unnecessary hierarchy levels.
 
-## 12.5 Back Navigation
+### 12.5 Back Navigation
 
 Mobile/nested navigation to parent context. Back is navigation; it is
 not interchangeable with Close/dismiss.
 
-## 12.6 Tabs
+### 12.6 Tabs
 
 Tabs switch between peer views in the same broader context.
 
@@ -1046,7 +1046,7 @@ navigation model only when Tabs themselves cease to be suitable.
 
 Tabs MUST NOT represent sequential workflow steps.
 
-## 12.7 Overflow Menu
+### 12.7 Overflow Menu
 
 Contains eligible lower-priority actions. Critical/high-frequency
 actions should remain directly discoverable where practical. Destructive
@@ -1054,9 +1054,9 @@ actions remain clearly distinguishable.
 
 ------------------------------------------------------------------------
 
-# 13. Components --- Containers
+## 13. Components --- Containers
 
-## 13.1 Card
+### 13.1 Card
 
 Groups related content into a bounded surface.
 
@@ -1073,41 +1073,41 @@ vertically according to §8.
 Do not wrap every section in a Card or nest Cards more deeply than the
 information hierarchy justifies.
 
-## 13.2 Interactive Card
+### 13.2 Interactive Card
 
 Use when the entire Card represents one coherent action or selection. It
 supports applicable hover/focus/pressed behavior. Avoid conflicting
 nested interactions without a deliberate model.
 
-## 13.3 Section Container
+### 13.3 Section Container
 
 Reusable composition for a major page region. May contain heading,
 description, actions, and content without automatically adding Card
 styling.
 
-## 13.4 Divider
+### 13.4 Divider
 
 Horizontal or vertical separation where spacing alone is insufficient.
 Uses canonical border tokens.
 
 ------------------------------------------------------------------------
 
-# 14. Components --- Disclosure
+## 14. Components --- Disclosure
 
-## 14.1 Accordion
+### 14.1 Accordion
 
 Progressively reveals independently understandable secondary content.
 Supports collapsed/expanded states.
 
 Do not introduce Accordion solely because a mobile page is long.
 
-## 14.2 Tooltip
+### 14.2 Tooltip
 
 Brief supplementary explanation for an existing element. Tooltips MUST
 NOT contain essential task information, prerequisites, or the only
 explanation of an error.
 
-## 14.3 Popover
+### 14.3 Popover
 
 Temporary non-modal surface anchored to a trigger. Use for compact
 contextual information or controls. It should remain connected to the
@@ -1116,9 +1116,9 @@ predictably.
 
 ------------------------------------------------------------------------
 
-# 15. Components --- Overlays
+## 15. Components --- Overlays
 
-## 15.1 Overlay taxonomy
+### 15.1 Overlay taxonomy
 
 Aurora distinguishes:
 
@@ -1130,7 +1130,7 @@ Aurora distinguishes:
 Choose by task complexity, relationship to underlying context, content
 length, and viewport---not visual preference.
 
-## 15.2 Dialog
+### 15.2 Dialog
 
 Focused temporary surface retaining conceptual relationship to the
 underlying page.
@@ -1148,14 +1148,14 @@ Baseline desktop treatment:
 Suitable for confirmations, concise decisions, and short focused forms.
 Content must scroll if it exceeds usable height.
 
-## 15.3 Confirmation Dialog
+### 15.3 Confirmation Dialog
 
 Dialog pattern containing consequence/explanation plus confirm and
 cancel/dismiss actions. Use when accidental activation has meaningful
 consequences. Do not add confirmation to routine reversible actions
 merely for perceived safety.
 
-## 15.4 Drawer
+### 15.4 Drawer
 
 Temporary edge surface maintaining strong context with the underlying
 page.
@@ -1167,7 +1167,7 @@ Suitable for contextual details, editing, and supporting workflows. A
 mobile Drawer generally transforms to a full/near-full-screen Sheet when
 side-panel geometry is no longer usable.
 
-## 15.5 Bottom Sheet
+### 15.5 Bottom Sheet
 
 Mobile temporary surface for short decisions, compact action sets,
 concise option selection, or lightweight contextual tasks.
@@ -1176,7 +1176,7 @@ Baseline: white surface, 12px top corners, 24px padding, optional 32×4px
 handle. Height is content-driven within safe viewport constraints; v5
 removes the universal v4.1 `70vh` rule.
 
-## 15.6 Full-screen Sheet
+### 15.6 Full-screen Sheet
 
 Preferred constrained-screen overlay for substantial temporary workflows
 such as long forms, complex editing, or detailed contextual tasks.
@@ -1184,7 +1184,7 @@ such as long forms, complex editing, or detailed contextual tasks.
 It may use a persistent header and Persistent Action Region where
 required while content owns the remaining scrollable area.
 
-## 15.7 Dismissal
+### 15.7 Dismissal
 
 Dismissal may use Close, Cancel, explicit action, safe outside
 interaction, or platform-appropriate escape behavior. Feature contracts
@@ -1193,7 +1193,7 @@ determine unsaved-work policy.
 A user must not accidentally lose meaningful unsaved work merely because
 an overlay supports casual dismissal.
 
-## 15.8 Virtual keyboard
+### 15.8 Virtual keyboard
 
 Editable mobile overlays must remain usable when the virtual keyboard
 appears. Focused controls, relevant validation, and workflow actions
@@ -1201,9 +1201,9 @@ must remain reachable.
 
 ------------------------------------------------------------------------
 
-# 16. Components --- Feedback & Progress
+## 16. Components --- Feedback & Progress
 
-## 16.1 Alert
+### 16.1 Alert
 
 Persistent contextual information requiring awareness or action.
 
@@ -1219,7 +1219,7 @@ Variants:
 Baseline: 8px radius, 16px padding, 20px leading icon, 12px icon/text
 gap, 14px body text. Optional action/close affordance may be included.
 
-## 16.2 Toast / Snackbar
+### 16.2 Toast / Snackbar
 
 Transient, non-blocking feedback such as save/copy confirmation. May
 include one concise contextual action such as Undo.
@@ -1227,20 +1227,20 @@ include one concise contextual action such as Undo.
 Do not use Toast as the sole representation of blocking errors,
 unresolved prerequisites, or information requiring later reference.
 
-## 16.3 Spinner
+### 16.3 Spinner
 
 Short operation with unknown duration. Place near the operation it
 represents. Do not use indefinite Spinner as the only explanation of a
 long-running asynchronous process.
 
-## 16.4 Skeleton
+### 16.4 Skeleton
 
 Represents expected content geometry while data loads. Primitive forms
 may include line, block, and avatar. Feature-specific Skeleton
 compositions should be built from these rather than promoted
 automatically.
 
-## 16.5 Linear Progress
+### 16.5 Linear Progress
 
 Known/measurable completion.
 
@@ -1253,7 +1253,7 @@ Preserved baseline:
 
 Do not imply false precision.
 
-## 16.6 Step Indicator
+### 16.6 Step Indicator
 
 Sequential workflow position. States may include Upcoming, Current,
 Complete, and Error.
@@ -1263,7 +1263,7 @@ Tabs are peer views; Step Indicator is workflow progression.
 Aurora owns presentation. Feature contracts own number of steps, labels,
 navigation rules, validation, and skip/revisit behavior.
 
-## 16.7 Processing State
+### 16.7 Processing State
 
 Long-running operation where a Spinner is insufficient.
 
@@ -1279,12 +1279,12 @@ May contain:
 A feature may map its lifecycle to states such as Queued, Processing,
 Complete, Failed. Do not display invented progress percentages.
 
-## 16.8 Section Error
+### 16.8 Section Error
 
 Contained failure that allows the broader page to remain usable. May
 include recovery action such as Retry.
 
-## 16.9 Feedback selection
+### 16.9 Feedback selection
 
   Situation                           Preferred presentation
   ----------------------------------- ------------------------
@@ -1301,9 +1301,9 @@ include recovery action such as Retry.
 
 ------------------------------------------------------------------------
 
-# 17. Components --- Data Display
+## 17. Components --- Data Display
 
-## 17.1 Table
+### 17.1 Table
 
 For structured data where comparison across rows/columns matters.
 
@@ -1316,7 +1316,7 @@ eligible secondary actions to Overflow Menu.
 A Table/data region should account for Loading, Populated, Empty, and
 Error states where applicable.
 
-## 17.2 Data List / Data Cards
+### 17.2 Data List / Data Cards
 
 For repeated structured items where individual-item comprehension
 matters more than strict column comparison. May also be the mobile
@@ -1325,7 +1325,7 @@ transformation of a Table.
 Aurora owns transformation mechanics. The feature contract owns which
 fields are primary, secondary, collapsible, or omitted.
 
-## 17.3 Metadata Group
+### 17.3 Metadata Group
 
 Compact related attributes. May contain optional icon, label, value, and
 Badge.
@@ -1333,7 +1333,7 @@ Badge.
 Desktop may be inline; constrained layouts wrap/stack while preserving
 label/value association.
 
-## 17.4 Metric / Stat
+### 17.4 Metric / Stat
 
 Prominent quantitative value with enough context to understand meaning,
 unit, and qualifier.
@@ -1342,7 +1342,7 @@ Change indicators must not assume `up = good` and `down = bad`; feature
 semantics determine interpretation. Color alone does not communicate
 direction/quality.
 
-## 17.5 Bar Chart
+### 17.5 Bar Chart
 
 Basic category comparison.
 
@@ -1357,7 +1357,7 @@ Preserved visual baseline:
 
 Avoid excessive categories where labels become unreadable.
 
-## 17.6 Donut Chart
+### 17.6 Donut Chart
 
 Part-to-whole visualization.
 
@@ -1375,13 +1375,13 @@ Preserved visual baseline:
 Avoid \>6 segments where interpretation suffers. If exact values matter,
 provide an appropriate data representation.
 
-## 17.7 Chart resilience
+### 17.7 Chart resilience
 
 Charts must handle long labels, missing/zero data, loading, error, and
 constrained width. Do not make labels unreadably small to preserve
 desktop geometry.
 
-## 17.8 Ownership boundary
+### 17.8 Ownership boundary
 
 Aurora defines presentation. Feature/reporting/Intelligence contracts
 define metric definitions, calculations, ranking, severity, scores,
@@ -1389,9 +1389,9 @@ aggregation, and interpretation.
 
 ------------------------------------------------------------------------
 
-# 18. Components --- Identity & Media
+## 18. Components --- Identity & Media
 
-## 18.1 Avatar
+### 18.1 Avatar
 
 Represents a person, brand, account, or comparable identity.
 
@@ -1405,7 +1405,7 @@ Equivalent identity types should use consistent geometry. Optional
 status indicators must not obscure the Avatar or rely solely on color
 for important meaning.
 
-## 18.2 Avatar + Identity
+### 18.2 Avatar + Identity
 
 Reusable pattern:
 
@@ -1416,7 +1416,7 @@ Reusable pattern:
 
 Feature composition determines which identity fields are shown.
 
-## 18.3 Image / Media
+### 18.3 Image / Media
 
 Canonical handling includes bounds, aspect-ratio behavior, crop/fit,
 radius, loading, and fallback.
@@ -1429,14 +1429,14 @@ Supported fit modes where applicable:
 Use according to content intent; logos and product imagery may require
 different fit behavior.
 
-## 18.4 Missing media
+### 18.4 Missing media
 
 Use approved fallback rather than broken image UI, collapsed geometry,
 or arbitrary replacement imagery.
 
 ------------------------------------------------------------------------
 
-# 19. Reusable Patterns
+## 19. Reusable Patterns
 
 Patterns are reusable compositions, not foundational primitives.
 
@@ -1465,7 +1465,7 @@ Patterns are reusable compositions, not foundational primitives.
                           Chips + removal         
   -----------------------------------------------------------------------
 
-## 19.1 Empty State
+### 19.1 Empty State
 
 Valid content region with no applicable data.
 
@@ -1481,7 +1481,7 @@ explanation, primary action, and secondary action.
 
 Do not use Empty State for Loading, Error, or unavailable permission.
 
-## 19.2 Pattern promotion
+### 19.2 Pattern promotion
 
 Promote a feature composition to Aurora when it appears across unrelated
 features, requires standardized interaction/responsive/accessibility
@@ -1491,7 +1491,7 @@ Repeated use inside one feature is not sufficient evidence.
 
 ------------------------------------------------------------------------
 
-# 20. Component Selection Guidance
+## 20. Component Selection Guidance
 
 Choose components by semantics and information structure.
 
@@ -1536,7 +1536,7 @@ heuristics, not universal semantics.
 
 ------------------------------------------------------------------------
 
-# 21. Responsive Component Matrix
+## 21. Responsive Component Matrix
 
 §7 remains authoritative.
 
@@ -1604,7 +1604,7 @@ deletion.
 
 ------------------------------------------------------------------------
 
-# 22. Design Acceptance & Resilience Matrix
+## 22. Design Acceptance & Resilience Matrix
 
 Apply only conditions relevant to the component or composition.
 
@@ -1662,7 +1662,7 @@ when their individual Aurora primitives already conform.
 
 ------------------------------------------------------------------------
 
-# 23. Visual Reference
+## 23. Visual Reference
 
 The Aurora Visual Reference provides visual grounding for designers,
 Stitch, Codex, Cursor, Antigravity, frontend engineers, and reviewers.
@@ -1690,7 +1690,7 @@ drift.
 
 ------------------------------------------------------------------------
 
-# 24. AI / Design Tool Interpretation
+## 24. AI / Design Tool Interpretation
 
 This section contains only Aurora-specific interpretation rules. General
 AI engineering behavior is governed by `AI_ENGINEERING_STANDARD.md`;
@@ -1716,9 +1716,9 @@ production frontend implementation is governed by
 
 ------------------------------------------------------------------------
 
-# 25. Change Governance
+## 25. Change Governance
 
-## 25.1 Change types
+### 25.1 Change types
 
 -   **Clarification:** wording improvement without intended behavior
     change.
@@ -1727,7 +1727,7 @@ production frontend implementation is governed by
 -   **Breaking change:** changes an established contract and may require
     migration.
 
-## 25.2 Feature composition first
+### 25.2 Feature composition first
 
 ``` text
 Can Aurora support it?
@@ -1740,14 +1740,14 @@ Can Aurora support it?
 
 Avoid premature abstraction.
 
-## 25.3 Promotion criteria
+### 25.3 Promotion criteria
 
 A feature composition is an Aurora candidate when the same semantic
 problem recurs across unrelated features and centralizing interaction,
 responsive, or accessibility behavior would prevent meaningful drift or
 repeated cost.
 
-## 25.4 Token creation
+### 25.4 Token creation
 
 New global tokens require reusable semantic meaning. Do not create
 tokens for isolated feature spacing, one-off visual adjustments, or
@@ -1755,7 +1755,7 @@ arbitrary generated values.
 
 Repeated copying of an arbitrary value does not make it canonical.
 
-## 25.5 Feature exceptions
+### 25.5 Feature exceptions
 
 Approved exceptions should document:
 
@@ -1767,7 +1767,7 @@ Approved exceptions should document:
 
 Exceptions do not silently become product-wide conventions.
 
-## 25.6 Deprecation
+### 25.6 Deprecation
 
 When replacing an Aurora component, Pattern, token, or behavior:
 
@@ -1777,7 +1777,7 @@ When replacing an Aurora component, Pattern, token, or behavior:
 4.  migrate existing work when justified;
 5.  remove it when compatibility permits.
 
-## 25.7 Versioning
+### 25.7 Versioning
 
 Use explicit semantic versions:
 
@@ -1786,7 +1786,7 @@ Use explicit semantic versions:
 -   **Patch:** clarification/correction without material contract
     change.
 
-## 25.8 Release synchronization
+### 25.8 Release synchronization
 
 ``` text
 Requirement → check Aurora → define contract → review responsive/accessibility/resilience
@@ -1797,7 +1797,7 @@ Requirement → check Aurora → define contract → review responsive/accessibi
 Same-version artifact conflicts must be resolved, not locally selected
 around.
 
-## 25.9 Canonical principle
+### 25.9 Canonical principle
 
 > Aurora standardizes reusable interface decisions so individual
 > features do not repeatedly solve them. It does not absorb the product
@@ -1805,7 +1805,7 @@ around.
 
 ------------------------------------------------------------------------
 
-# Appendix A --- Canonical Token Reference
+## Appendix A --- Canonical Token Reference
 
 ``` css
 :root {
@@ -1884,7 +1884,7 @@ the repository's established styling mechanism.
 
 ------------------------------------------------------------------------
 
-# Appendix B --- v5.0 Changelog
+## Appendix B --- v5.0 Changelog
 
 v5.0 preserves the v4.1 brand foundation while resolving responsive and
 semantic ambiguities: mobile nested hierarchy uses Back Navigation;
