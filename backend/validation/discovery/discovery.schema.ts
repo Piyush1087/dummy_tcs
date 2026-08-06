@@ -1,18 +1,18 @@
 import { z } from "zod";
 import { emailSchema, entityIdSchema, mediaPlatformSchema, socialHandleSchema } from "../shared/campaign.shared.schema";
 
-export const manualCreatorInputSchema = z.object({
-  campaignId: entityIdSchema,
+// Canonical manual Creator primitives. Manual single-add and CSV rows must reuse this exact contract.
+export const manualCreatorFieldsSchema = z.object({
   platform: mediaPlatformSchema,
   socialHandle: socialHandleSchema,
   email: emailSchema,
 });
 
-export const manualCreatorCsvRowSchema = z.object({
-  platform: mediaPlatformSchema,
-  socialHandle: socialHandleSchema,
-  email: emailSchema,
-});
+export const manualCreatorInputSchema = z.object({
+  campaignId: entityIdSchema,
+}).merge(manualCreatorFieldsSchema);
+
+export const manualCreatorCsvRowSchema = manualCreatorFieldsSchema;
 
 export const importCreatorsCsvInputSchema = z.object({
   campaignId: entityIdSchema,
