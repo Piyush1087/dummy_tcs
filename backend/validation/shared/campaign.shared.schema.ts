@@ -2,6 +2,9 @@ import { z } from "zod";
 
 // IDs are intentionally shape-only here. Production ID format/existence is service-owned.
 export const entityIdSchema = z.string().trim().min(1);
+// Client-generated command identity used for replay-safe side-effecting mutations.
+// Durable uniqueness and replay semantics are service/persistence-owned.
+export const requestIdSchema = z.string().trim().min(1).max(128);
 export const nonNegativeMoneySchema = z.coerce.number().finite().min(0);
 export const percentageSchema = z.coerce.number().int().min(0).max(100);
 export const dateTimeSchema = z.coerce.date();
