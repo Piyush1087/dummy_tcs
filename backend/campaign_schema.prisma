@@ -1,5 +1,5 @@
 // Creator Shop Campaign Prisma Working View
-// Version: 1.8
+// Version: 1.9
 // Status: CREATE CAMPAIGN + CAMPAIGN PAGE + ADD PRODUCT + ADD BRIEF + DISCOVERY + APPLICANTS + OUTREACH + REPORTING + SHARE FROZEN WORKING SCHEMA
 // This is a working view, not a standalone replacement for the production Prisma schema.
 
@@ -307,6 +307,7 @@ model UceOutreach {
 // Channel-aware execution evidence. Email MVP only records COMPOSE_INITIATED; Priority DM uses scheduler states.
 model UceOutreachAttempt {
   id String @id @default(cuid())
+  requestId String @unique @map("request_id")
   outreachId String @map("outreach_id")
   sequence Int
   status UceOutreachAttemptStatus
@@ -343,6 +344,7 @@ model UceOutreachTrackingEvent {
 // One executed Campaign-scoped Share action. Recipient identity and composer drafts are intentionally not persisted.
 model UceCampaignShare {
   id String @id @default(cuid())
+  requestId String @unique @map("request_id")
   campaignId String @map("campaign_id")
   channel UceCampaignShareChannel
   trackingToken String @unique @map("tracking_token")
@@ -371,6 +373,7 @@ model UceCampaignShareTrackingEvent {
 // Individual creator submission. CampaignCreator remains the Campaign-level grouping identity.
 model UceApplication {
   id String @id @default(cuid())
+  requestId String @unique @map("request_id")
   campaignId String @map("campaign_id")
   campaignCreatorId String @map("campaign_creator_id")
   campaignAssetId String @map("campaign_asset_id")
@@ -502,7 +505,7 @@ model UceCampaignReportCalculation {
 // - Outreach workspace completion is derived; no top-level Outreach status is persisted.
 // - CampaignCreator archive is orthogonal to reviewState and is persisted through archivedAt.
 // - Outreach daily business cap is max 50 first Outreach initiations per Campaign/day; Email compose attempts 2/3 do not consume additional quota.
-// - Priority DM execution pacing is max 4/Campaign/hour and max 12/Brand Meta account/hour; scheduler queues/buckets remain infrastructure-owned.
+// - Priority DM execution pacing is max 12/Brand Meta account/hour; scheduler queues/buckets remain infrastructure-owned.
 // - Priority DM quota is consumed at scheduler acceptance; scheduler spillover does not consume the next day's Campaign quota again.
 // - Failed/cancelled Priority DM does not refund historical Campaign daily Outreach quota.
 // - Tracking token is opaque and unique; raw click events are persisted while click aggregates remain derived.
@@ -537,11 +540,12 @@ model UceCampaignReportCalculation {
 // - Shareability derives from existing Campaign public-access/lifecycle rules; existing tracked URLs do not bypass current Campaign access rules.
 // - Campaign link preview metadata is Campaign-level and resolved from Campaign hero → primary Product image → Brand logo → Creator Shop fallback; it is not persisted per Share.
 // - Application source may be SHARE, but exact Share-to-Application FK attribution is deferred until Outreach and Share acquisition attribution are generalized together.
+// - requestId on Application, OutreachAttempt and CampaignShare is command replay protection, not business-domain deduplication; deliberate repeat actions use a new requestId.
 // - Production merge must reconcile creatorId before reliable cross-Campaign Creator x Brand limit enforcement.
 // - Production merge must reconcile Brand/team actor identity before approvedBy/rejectedBy relations are added.
 // - Production migration must enforce cross-record CampaignCreator/CampaignAsset/Brief ancestry consistency, score range, snapshot existence, lifecycle transitions, predicate-aware application limits and same-Brief rules transactionally.
-// - Production migration must enforce Outreach channel×attempt-state rules, one Priority DM/max three Email compose attempts, daily quota, idempotency, scheduled-execution eligibility and application suppression transactionally/runtime-side.
+// - Production migration must enforce Outreach channel×attempt-state rules, one Priority DM/max three Email compose attempts, daily quota, request replay safety, scheduled-execution eligibility and application suppression transactionally/runtime-side.
 // - Production migration must validate Reporting metrics/insights/provenance payload contracts and atomic latest-publication consistency transactionally/runtime-side.
-// - Production migration must validate Share execution timing, Campaign shareability, opaque tracking-token generation and Application SHARE attribution runtime-side.
+// - Production migration must validate Share execution timing, Campaign shareability, request replay safety, opaque tracking-token generation and Application SHARE attribution runtime-side.
 // - Production migration must validate score range, Campaign/context/run consistency and source-specific runtime rules.
 // - CampaignAsset production merge still requires the previously frozen exactly-one-reference CHECK constraint.
