@@ -8,7 +8,7 @@ import {
   compensationTypeSchema,
   dateTimeSchema,
   entityIdSchema,
-  mediaPlatformSchema,
+  mvpCampaignPlatformSchema,
   nonNegativeMoneySchema,
   payoutTermsSchema,
   percentageSchema,
@@ -26,7 +26,7 @@ export const campaignStrategyInputSchema = z.object({
   primaryKpiId: taxonomyIdSchema,
   supportingKpiIds: z.array(taxonomyIdSchema).default([]),
   // MVP Campaign creation is Instagram-only. Future platforms remain persistence-ready but not writable here.
-  platforms: z.array(z.literal("INSTAGRAM")).min(1).max(1).default(["INSTAGRAM"]),
+  platforms: z.array(mvpCampaignPlatformSchema).min(1).max(1).default(["INSTAGRAM"]),
   visibilityScope: visibilityScopeSchema.default("EVERYONE"),
 }).superRefine((value, ctx) => {
   if (value.publishingSchedule === "EVERGREEN" && value.publishUntil != null) {
