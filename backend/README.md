@@ -1,21 +1,42 @@
-# Backend Schema — Intelligence Working View
+# Creator Shop Backend Reference
 
-This directory tracks only the portion of the Creator Shop backend schema that is encountered while building the Intelligence Platform.
+Status: CANONICAL NAVIGATION
 
-## Rule
+This directory contains backend implementation/reference artifacts for Creator Shop domains currently being designed in this repository. It is no longer Intelligence-only.
 
-1. If an existing backend model/field is required by an intelligence object or runtime capability, include/reference it here.
-2. If Intelligence requires a new backend field/model, add it here and clearly mark it as new/proposed until implemented.
-3. Do not copy unrelated application schema into this directory.
-4. Canonical application values should continue to use the existing backend schema wherever possible; do not create a duplicate Intelligence value store without a specific need.
-5. Runtime provenance/history and processor telemetry may require dedicated intelligence tables because those concerns are not canonical product-facing fields.
+## Canonical Campaign implementation
 
-## Files
+- `campaign_schema.prisma` — current Campaign persistence working view (v1.9).
+- `validation/**` — executable Campaign request/domain-boundary Zod schemas.
+- `../campaign/backend/implementation_map.md` — canonical Campaign service, lifecycle, transaction, concurrency, orchestration and integration map.
+- `../campaign/README.md` — Campaign module entry point and authority order.
 
-- `intelligence_schema.prisma` — focused Prisma working view of schema touched/required by Intelligence.
+For Campaign implementation, these layers take precedence over historical `*_schema_reconciliation.*` artifacts.
+
+## Intelligence persistence
+
+- `intelligence_schema.prisma` — focused Intelligence persistence working view.
+
+Detailed Intelligence processor execution, retry/failure telemetry, reusable intelligence state/history and artifact lineage remain Intelligence-owned. Campaign must not duplicate those concerns merely to make Campaign persistence self-contained.
+
+## Focused domain contracts
+
+This directory also contains frozen contracts for Campaign-adjacent modules such as Discovery, Outreach, Applicants, Reporting and Share. These remain useful detailed domain/runtime specifications where they do not conflict with the higher-authority Campaign Prisma, executable Zod schemas or Campaign implementation map.
+
+## Reconciliation artifacts
+
+Files named `*_schema_reconciliation.*`, files under `backend/reconciliation/`, and equivalent Campaign reconciliation artifacts record how canonical schemas were reached. They are **SUPERSEDED FOR IMPLEMENTATION** once their decisions are represented in the current canonical layers.
+
+Keep them for traceability unless a later cleanup explicitly removes them; do not implement directly from them without checking current canonical artifacts.
 
 ## Developer workflow
 
-This file is an implementation reference, not automatically the production Prisma source of truth. The developer should reconcile each proposed change with the actual current Prisma schema and create normal reviewed migrations in the application repository.
+This repository is an implementation/reference repository, not automatically the production application's Prisma source of truth.
 
-As each intelligence branch is frozen, its canonical destinations and required schema additions will be added here.
+When integrating into the production application:
+
+1. read the relevant module entry point and canonical implementation map;
+2. reconcile the working Prisma/Zod artifacts with the production backend architecture;
+3. preserve frozen domain semantics and ownership boundaries;
+4. use normal reviewed migrations rather than mechanically replacing production schema files;
+5. do not create duplicate stores for values already canonically owned by Campaign, Intelligence, Brand or Collaboration.
