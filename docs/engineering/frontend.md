@@ -104,3 +104,6 @@ In addition to the universal Definition of Done, verify where applicable:
 - relevant frontend tests/build/type checks.
 
 Only report checks actually performed.
+
+## 15. Canonical path
+Use `docs/design-system/AURORA_DESIGN_SYSTEM.md` as the canonical Aurora Design System path in repository references and prompts.
