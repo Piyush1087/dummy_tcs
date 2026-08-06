@@ -2,7 +2,6 @@
 
 **Version:** 5.0\
 **Status:** CANONICAL
-v5 design review\
 **Product:** Creator Shop\
 **Purpose:** Canonical reusable interface system for Creator Shop
 product surfaces
