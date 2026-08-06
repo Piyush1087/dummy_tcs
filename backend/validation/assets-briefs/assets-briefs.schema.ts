@@ -1,9 +1,9 @@
 import { z } from "zod";
 import {
   briefTypeSchema,
-  deliverableFormatSchema,
   entityIdSchema,
   mediaPlatformSchema,
+  mvpCampaignPlatformSchema,
   structuredJsonSchema,
 } from "../shared/campaign.shared.schema";
 
@@ -13,6 +13,8 @@ export const addCampaignAssetInputSchema = z.discriminatedUnion("kind", [
   z.object({ campaignId: entityIdSchema, kind: z.literal("OFFER"), brandOfferId: entityIdSchema }),
 ]);
 
+// Domain command name is "deactivate"; campaign_schema.prisma v1.8 persists this as
+// UceCampaignAsset.status = PAUSED. There is intentionally no invented INACTIVE Prisma state.
 export const deactivateCampaignAssetInputSchema = z.object({
   campaignId: entityIdSchema,
   campaignAssetId: entityIdSchema,
@@ -40,6 +42,7 @@ const briefDraftFields = z.object({
   creativeIntent: z.string().trim().min(1).optional().nullable(),
   creatorBrief: z.string().trim().min(1).optional().nullable(),
   briefType: briefTypeSchema.optional().nullable(),
+  // Draft persistence remains future-ready. Publication is Instagram-only for MVP.
   platform: mediaPlatformSchema.optional().nullable(),
   briefLevelGuidance: structuredJsonSchema.optional().nullable(),
   referenceContent: structuredJsonSchema.optional().nullable(),
@@ -64,7 +67,7 @@ export const publishBriefInputSchema = z.object({
   creativeIntent: z.string().trim().min(1),
   creatorBrief: z.string().trim().min(1),
   briefType: briefTypeSchema,
-  platform: mediaPlatformSchema,
+  platform: mvpCampaignPlatformSchema,
   deliverables: z.array(briefDeliverableInputSchema).min(1),
   briefLevelGuidance: structuredJsonSchema.optional().nullable(),
   referenceContent: structuredJsonSchema.optional().nullable(),
