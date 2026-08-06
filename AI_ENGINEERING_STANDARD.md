@@ -27,7 +27,7 @@ AI MUST determine what type of decision is being made before deciding which sour
 | Explicit approved human decision | Intentional product/engineering change |
 | Product/domain contracts | What the product does |
 | Approved UI copy | What the product says |
-| Aurora Design System | Reusable visual system |
+| `docs/design-system/AURORA_DESIGN_SYSTEM.md` | Reusable visual system |
 | Approved Stitch/UI reference | Screen composition |
 | Zod/API/types/Prisma | Executable implementation contracts |
 | Existing code/schema | How the system currently works |
@@ -37,7 +37,7 @@ AI MUST determine what type of decision is being made before deciding which sour
 Canonical product definitions, module contracts, runtime contracts, field contracts, lifecycle rules and approved taxonomies define product behavior. Implementation MUST NOT silently reinterpret them.
 
 ### 1.2 Design authority
-Aurora is canonical for reusable Design System decisions. Approved Stitch/reference screens generally govern screen composition. **Stitch/reference owns screen composition; Aurora owns reusable visual primitives and system behavior.** Generated Stitch code has no architectural authority.
+`docs/design-system/AURORA_DESIGN_SYSTEM.md` is canonical for reusable Design System decisions. Approved Stitch/reference screens generally govern screen composition. **Stitch/reference owns screen composition; Aurora owns reusable visual primitives and system behavior.** Generated Stitch code has no architectural authority.
 
 Within Aurora itself, the repository's declared canonical/versioned source determines authority. If documentation and executable Design System implementation conflict and no version authority resolves it, surface the discrepancy.
 
