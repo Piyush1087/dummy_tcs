@@ -24,12 +24,17 @@ export interface CampaignPageView {
     primaryFocus: string;
     postLiveReadinessBlocked: boolean;
   };
-  productsBriefsSummary: SurfaceSummary;
-  copilotSummary: SurfaceSummary;
-  performanceSummary: SurfaceSummary;
+  productsBriefsSummary: ProductsBriefsSummary;
+  copilotSummary: CopilotSummary;
+  performanceSummary: PerformanceSummaryView;
   workspaces: WorkspaceSummary[];
   share: { capability: Capability; supportedChannels: string[] };
 }
+
+export interface ProductsBriefsSummary extends SurfaceSummary { products: Array<{ campaignAssetId: string; name: string; briefs: Array<{ briefId: string; name: string }> }>; }
+export interface CopilotSummary extends SurfaceSummary { summary?: string; actions: Array<{ id: string; label: string; context?: string; action: string }> }
+export interface PerformanceSummaryView extends SurfaceSummary { metrics: Array<{ metricId: string; label: string; value: string; tone: "neutral" | "success" | "attention" }> }
+export interface CreatorCardView { campaignCreatorId: string; name: string; category: string; followers: string; engagement: string; avatarInitials: string; contextLabel?: string; }
 
 export interface SurfaceSummary {
   state: SurfaceState;
@@ -48,9 +53,9 @@ export interface WorkspaceSummary extends SurfaceSummary {
 export interface CampaignDetailsView { campaignId: string; state: SurfaceState; }
 export interface ProductDetailsView { campaignAssetId: string; state: SurfaceState; }
 export interface BriefDetailsView { briefId: string; state: SurfaceState; }
-export interface DiscoveryWorkspaceView { state: SurfaceState; creatorIds: string[]; nextCursor?: string; }
+export interface DiscoveryWorkspaceView { state: SurfaceState; creators: CreatorCardView[]; nextCursor?: string; }
 export interface CreatorProfileView { campaignCreatorId: string; state: SurfaceState; }
 export interface OutreachComposerView { campaignCreatorId: string; state: SurfaceState; capability: Capability; }
-export interface ApplicantsWorkspaceView { state: SurfaceState; applicationIds: string[]; nextCursor?: string; }
+export interface ApplicantsWorkspaceView { state: SurfaceState; applicants: Array<CreatorCardView & { applicationId: string; intelligenceStatus: "PROCESSING" | "READY" | "UNAVAILABLE"; intelligenceLabel?: string }>; nextCursor?: string; }
 export interface ReportingDetailView { campaignId: string; state: SurfaceState; }
 export interface CollaborationReferenceView { collaborationId: string; label: string; state: SurfaceState; open: Capability; }
