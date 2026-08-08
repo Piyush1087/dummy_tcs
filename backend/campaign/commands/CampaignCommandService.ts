@@ -21,7 +21,7 @@ import {
   type PauseBriefInput,
 } from "./services";
 
-/** Typed command faÃ§ade. Focused services retain validation and domain/state ownership. */
+/** Typed command façade. Focused services retain validation and domain/state ownership. */
 export class CampaignCommandService {
   readonly campaign:CampaignService;
   readonly creators:CampaignCreatorService;
