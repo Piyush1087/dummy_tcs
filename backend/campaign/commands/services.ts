@@ -53,7 +53,6 @@ export class CampaignService {
   complete(input:CampaignLifecycleInput):CommandResult<{status:Lifecycle}>{const parsed=completeCampaignInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);return this.lifecycle("COMPLETED");}
   archive(input:CampaignLifecycleInput):CommandResult<{status:Lifecycle}>{const parsed=archiveCampaignInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);return this.lifecycle("ARCHIVED");}
   lifecycle(target:Lifecycle):CommandResult<{status:Lifecycle}>{const current=this.repo.campaign.status;if(!transition[current].includes(target))return{ok:false,category:"STATE_CONFLICT",message:"Campaign transition is not allowed."};if(target==="LIVE"&&!this.repo.campaign.executionReady)return{ok:false,category:"CAPABILITY_UNAVAILABLE",message:"Campaign is not execution ready."};this.repo.campaign.status=target;return{ok:true,data:{status:target}};}
-  edit():CommandResult{return{ok:true,data:{}};}
 }
 
 export class CampaignCreatorService {
