@@ -15,7 +15,7 @@ export function App() {
 
   return (
     <ApplicationShell>
-      {view ? <CampaignPage view={view} /> : <p className="loadingState">Loading Campaign content area…</p>}
+      {view ? <CampaignPage adapter={adapter} view={view} /> : <p className="loadingState">Loading Campaign content area…</p>}
     </ApplicationShell>
   );
 }
