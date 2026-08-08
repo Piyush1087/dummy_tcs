@@ -10,5 +10,8 @@ export class StagingCommandRepository {
   constructor(private readonly store: StagingCampaignStore = stagingCampaignStore) {}
 
   get campaign(){return this.store.campaign;}
-  getReplay<T>(id:string):T|undefined{return this.campaign.replays.get(id) as T|undefined;} saveReplay(id:string,value:unknown){this.campaign.replays.set(id,value);}
+  getOutreachReplay<T>(requestId:string):T|undefined{return this.campaign.outreachReplays.get(requestId) as T|undefined;}
+  saveOutreachReplay(requestId:string,value:unknown){this.campaign.outreachReplays.set(requestId,value);}
+  getShareReplay<T>(requestId:string):T|undefined{return this.campaign.shareReplays.get(requestId) as T|undefined;}
+  saveShareReplay(requestId:string,value:unknown){this.campaign.shareReplays.set(requestId,value);}
 }
