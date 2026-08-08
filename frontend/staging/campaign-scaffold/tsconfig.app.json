@@ -12,10 +12,14 @@
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "paths": {
+      "zod": ["./node_modules/zod"]
+    },
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "../../../backend/campaign/query/**/*.ts"]
+  "include": ["src", "../../../backend/campaign/query/**/*.ts"],
+  "exclude": ["../../../backend/**/*.test.ts"]
 }
