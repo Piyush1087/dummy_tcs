@@ -22,8 +22,12 @@ export type StagingCampaignState = {
   discovery: StagingSurfaceState;
   applicants: StagingSurfaceState;
   creators: Set<string>;
+  creatorRecords: Map<string, { id:string; platform:"INSTAGRAM"|"TIKTOK"|"YOUTUBE"; socialHandle:string; email:string; archived:boolean }>;
   applications: Map<string, StagingApplicationStatus>;
   outreachReplays: Map<string, unknown>;
+  priorityDmReplays: Map<string, unknown>;
+  emailRetryReplays: Map<string, unknown>;
+  outreachPaths: Map<string, "EMAIL"|"PRIORITY_DM">;
   shareReplays: Map<string, unknown>;
   suppliedProjections: {
     intelligence: { discovery: StagingSurfaceState; applicants: StagingSurfaceState };
@@ -51,8 +55,12 @@ export function createStagingCampaignStore(): StagingCampaignStore {
       discovery: "READY",
       applicants: "READY",
       creators: new Set<string>(),
+      creatorRecords: new Map([["creator-anya",{id:"creator-anya",platform:"INSTAGRAM",socialHandle:"anya",email:"anya@example.com",archived:false}]]),
       applications: new Map<string, StagingApplicationStatus>([["application-anya", "PENDING"]]),
       outreachReplays: new Map<string, unknown>(),
+      priorityDmReplays: new Map<string, unknown>(),
+      emailRetryReplays: new Map<string, unknown>(),
+      outreachPaths: new Map([["creator-anya","EMAIL"],["creator-priority","PRIORITY_DM"]]),
       shareReplays: new Map<string, unknown>(),
       suppliedProjections: {
         intelligence: { discovery: "READY", applicants: "READY" },
