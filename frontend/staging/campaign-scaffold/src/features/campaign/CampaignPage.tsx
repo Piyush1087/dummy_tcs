@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { CampaignUiAction, CampaignUiActionHandler } from "./actionModel";
+import type { CampaignUiAction, CampaignUiActionHandler, CampaignUiActionResult } from "./actionModel";
 import type { CampaignReadAdapter } from "./readAdapter";
 import type { CampaignPageView } from "./types";
 import { ApplicantsWorkspace } from "./components/ApplicantsWorkspace";
@@ -15,13 +15,14 @@ export function CampaignPage({ view, adapter, onAction }: { view: CampaignPageVi
   const [workspace, setWorkspace] = useState<"DISCOVERY" | "APPLICANTS" | "COLLABORATIONS">("DISCOVERY");
   const [notice, setNotice] = useState<string>();
 
-  const act = async (action: CampaignUiAction) => {
+  const act: CampaignUiActionHandler = async (action: CampaignUiAction): Promise<CampaignUiActionResult> => {
     if (action.type === "OPEN_WORKSPACE") {
       setWorkspace(action.workspace);
-      return;
+      return { ok: true };
     }
     const result = await onAction(action);
     if (!result.ok) setNotice(result.message ?? "This action requires its approved detail surface or staging input.");
+    return result;
   };
 
   useEffect(() => {
