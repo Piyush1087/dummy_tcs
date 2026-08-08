@@ -73,4 +73,21 @@ describe("CampaignCommandService",()=>{
     expect(commands.pauseBrief({briefId:"brief-reel"})).toEqual({ok:true,data:{briefId:"brief-reel",status:"PAUSED"}});
     expect(commands.editPublishedBrief({briefId:"brief-reel",briefName:"Updated"})).toMatchObject({ok:false,category:"STATE_CONFLICT"});
   });
+
+  it("imports and archives Campaign creators without deleting identity",()=>{
+    const store=createStagingCampaignStore();const commands=new CampaignCommandService(new StagingCommandRepository(store));
+    expect(commands.importCreatorsCsv({campaignId:"campaign-staging",rows:[{platform:"INSTAGRAM",socialHandle:"mira",email:"mira@example.com"},{platform:"INSTAGRAM",socialHandle:"mira",email:"mira@example.com"}]})).toEqual({ok:true,data:{accepted:1,duplicates:1}});
+    expect(commands.importCreatorsCsv({campaignId:"campaign-staging",rows:[]})).toMatchObject({ok:false,category:"VALIDATION"});
+    expect(commands.archiveCampaignCreator({campaignCreatorId:"creator-mira"})).toEqual({ok:true,data:{campaignCreatorId:"creator-mira"}});
+    expect(store.campaign.creatorRecords.get("creator-mira")?.archived).toBe(true);
+  });
+
+  it("keeps Priority DM, email initiation and email retry replay scopes separate",()=>{
+    const commands=createCommands();
+    expect(commands.confirmPriorityDmOutreach({campaignCreatorId:"creator-priority",requestId:"dm-1",finalBody:"Hello"})).toEqual({ok:true,data:{status:"COMPOSE_INITIATED"}});
+    expect(commands.confirmPriorityDmOutreach({campaignCreatorId:"creator-priority",requestId:"dm-1",finalBody:"Hello"})).toEqual({ok:true,data:{status:"COMPOSE_INITIATED"}});
+    expect(commands.confirmPriorityDmOutreach({campaignCreatorId:"creator-anya",requestId:"dm-2",finalBody:"Hello"})).toMatchObject({ok:false,category:"STATE_CONFLICT"});
+    expect(commands.retryEmailCompose({campaignCreatorId:"creator-anya",requestId:"dm-1"})).toEqual({ok:true,data:{status:"COMPOSE_INITIATED"}});
+    expect(commands.retryEmailCompose({campaignCreatorId:"creator-anya",requestId:""})).toMatchObject({ok:false,category:"VALIDATION"});
+  });
 });
