@@ -3,7 +3,22 @@ import { createStagingCampaignCommandAdapter } from "./commandAdapter";
 import type { CampaignUiAction } from "./actionModel";
 
 describe("Campaign UI actions", () => {
-  it("preserves canonical IDs through applicant command invocation", async () => {
+  it("retains canonical entity IDs in typed action payloads", () => {
+    const actions: CampaignUiAction[] = [
+      { type: "VIEW_PRODUCT_DETAILS", campaignId: "campaign-staging", campaignAssetId: "asset-serum" },
+      { type: "VIEW_BRIEF_DETAILS", campaignId: "campaign-staging", briefId: "brief-reel" },
+      { type: "COMPOSE_OUTREACH", campaignId: "campaign-staging", campaignCreatorId: "creator-anya" },
+      { type: "APPROVE_APPLICANT", campaignId: "campaign-staging", applicationId: "application-anya" },
+    ];
+    expect(actions).toMatchObject([
+      { campaignId: "campaign-staging", campaignAssetId: "asset-serum" },
+      { campaignId: "campaign-staging", briefId: "brief-reel" },
+      { campaignId: "campaign-staging", campaignCreatorId: "creator-anya" },
+      { campaignId: "campaign-staging", applicationId: "application-anya" },
+    ]);
+  });
+
+  it("invokes Applicant approval with the original applicationId only", async () => {
     const observed: Array<{ applicationId: string }> = [];
     const adapter = {
       approveApplicant: async (input: { applicationId: string }) => {
@@ -21,7 +36,7 @@ describe("Campaign UI actions", () => {
     expect(observed).toEqual([{ applicationId: "application-anya" }]);
   });
 
-  it("does not require synthetic DTO fields for the applicant adapter", async () => {
+  it("uses no synthetic DTO fields at the staging adapter boundary", async () => {
     const adapter = createStagingCampaignCommandAdapter();
     expect(await adapter.approveApplicant({ applicationId: "application-anya" })).toMatchObject({ ok: true });
   });
