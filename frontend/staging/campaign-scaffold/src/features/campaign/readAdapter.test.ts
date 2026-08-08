@@ -6,7 +6,7 @@ describe("mock Campaign read adapter", () => {
     const page = await createMockCampaignReadAdapter().getCampaignPage("campaign-1");
 
     expect(page.campaign.id).toBe("campaign-1");
-    expect(page.hydration.outcome).toBe("STATE_1_PRODUCT_SETUP");
+    expect(page.hydration.outcome).toBe("STATE_4_DISCOVERY_ACTIVE");
     expect(page.workspaces).toHaveLength(3);
   });
 });
