@@ -56,5 +56,5 @@ export class CampaignCommandService {
   retryEmailCompose(input:RetryEmailComposeInput):CommandResult<{status:"COMPOSE_INITIATED"}>{return this.outreach.retryEmailCompose(input);}
   approveApplicant(input:ApplicantDecisionInput):CommandResult<{status:ApplicationStatus}>{return this.applications.approve(input);}
   rejectApplicant(input:ApplicantDecisionInput):CommandResult<{status:ApplicationStatus}>{return this.applications.reject(input);}
-  executeShare(input:CampaignShareInput):CommandResult<{message:string;trackedLink:string}>{return this.share.execute(input);}
+  executeShare(input:CampaignShareInput):CommandResult<{message:string;accepted:true}>{return this.share.execute(input);}
 }
