@@ -4,17 +4,21 @@ import {
   approveApplicationInputSchema,
   archiveCampaignInputSchema,
   completeCampaignInputSchema,
+  confirmPriorityDmOutreachInputSchema,
   composeOutreachInputSchema,
   createBriefDraftInputSchema,
   deactivateCampaignAssetInputSchema,
   executeCampaignShareInputSchema,
   initiateEmailOutreachInputSchema,
   manualCreatorInputSchema,
+  importCreatorsCsvInputSchema,
+  archiveCampaignCreatorInputSchema,
   pauseCampaignInputSchema,
   pauseBriefInputSchema,
   publishBriefInputSchema,
   rejectApplicationInputSchema,
   resumeCampaignInputSchema,
+  retryEmailComposeInputSchema,
   updateBriefDraftInputSchema,
   updatePublishedBriefInputSchema,
 } from "../../validation";
@@ -33,6 +37,10 @@ export type UpdateBriefDraftInput = z.input<typeof updateBriefDraftInputSchema>;
 export type PublishBriefInput = z.input<typeof publishBriefInputSchema>;
 export type UpdatePublishedBriefInput = z.input<typeof updatePublishedBriefInputSchema>;
 export type PauseBriefInput = z.input<typeof pauseBriefInputSchema>;
+export type ImportCreatorsCsvInput = z.input<typeof importCreatorsCsvInputSchema>;
+export type ArchiveCampaignCreatorInput = z.input<typeof archiveCampaignCreatorInputSchema>;
+export type ConfirmPriorityDmInput = z.input<typeof confirmPriorityDmOutreachInputSchema>;
+export type RetryEmailComposeInput = z.input<typeof retryEmailComposeInputSchema>;
 
 const transition:Record<Lifecycle,Lifecycle[]>={DRAFT:["PUBLISHED"],PUBLISHED:["LIVE"],LIVE:["PAUSED","COMPLETED"],PAUSED:["LIVE","COMPLETED"],COMPLETED:["ARCHIVED"],ARCHIVED:[]};
 const validationFailure=(error:{issues:Array<{message:string}>}):CommandFailure=>({ok:false,category:"VALIDATION",message:error.issues[0]?.message??"Command input is invalid."});
@@ -52,8 +60,8 @@ export class CampaignCreatorService {
   constructor(private repo:StagingCommandRepository){}
 
   addManual(input:ManualCreatorInput):CommandResult{const parsed=manualCreatorInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);const key=parsed.data.socialHandle.toLowerCase();if(this.repo.campaign.creators.has(key))return{ok:false,category:"DUPLICATE",message:"Creator already exists for this Campaign."};this.repo.campaign.creators.add(key);return{ok:true,data:{}};}
-  archive():CommandResult{return{ok:true,data:{}};}
-  importCsv():CommandResult{return{ok:true,data:{}};}
+  archive(input:ArchiveCampaignCreatorInput):CommandResult<{campaignCreatorId:string}>{const parsed=archiveCampaignCreatorInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);const creator=this.repo.campaign.creatorRecords.get(parsed.data.campaignCreatorId);if(!creator)return{ok:false,category:"NOT_FOUND",message:"Campaign Creator was not found."};if(creator.archived)return{ok:false,category:"STATE_CONFLICT",message:"Campaign Creator is already archived."};creator.archived=true;return{ok:true,data:{campaignCreatorId:creator.id}};}
+  importCsv(input:ImportCreatorsCsvInput):CommandResult<{accepted:number;duplicates:number}>{const parsed=importCreatorsCsvInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);let accepted=0,duplicates=0;for(const row of parsed.data.rows){const key=row.socialHandle.toLowerCase();if(this.repo.campaign.creators.has(key)){duplicates++;continue;}this.repo.campaign.creators.add(key);const id=`creator-${key}`;this.repo.campaign.creatorRecords.set(id,{id,platform:row.platform,socialHandle:key,email:row.email,archived:false});accepted++;}return{ok:true,data:{accepted,duplicates}};}
 }
 
 /** Campaign Asset and Brief ownership stays at the Opportunity boundary. */
@@ -77,6 +85,8 @@ export class OutreachService {
 
   compose(input:ComposeOutreachInput):CommandResult<{path:"EMAIL"|"PRIORITY_DM"}>{const parsed=composeOutreachInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);return{ok:true,data:{path:"EMAIL"}};}
   initiate(input:InitiateEmailOutreachInput):CommandResult<{status:"COMPOSE_INITIATED"}>{const parsed=initiateEmailOutreachInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);const replay=this.repo.getOutreachReplay<CommandResult<{status:"COMPOSE_INITIATED"}>>(parsed.data.requestId);if(replay)return replay;const result:CommandResult<{status:"COMPOSE_INITIATED"}>={ok:true,data:{status:"COMPOSE_INITIATED"}};this.repo.saveOutreachReplay(parsed.data.requestId,result);return result;}
+  confirmPriorityDm(input:ConfirmPriorityDmInput):CommandResult<{status:"COMPOSE_INITIATED"}>{const parsed=confirmPriorityDmOutreachInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);if(this.repo.campaign.outreachPaths.get(parsed.data.campaignCreatorId)!=="PRIORITY_DM")return{ok:false,category:"STATE_CONFLICT",message:"Priority DM is not available for this creator."};const replay=this.repo.getPriorityDmReplay<CommandResult<{status:"COMPOSE_INITIATED"}>>(parsed.data.requestId);if(replay)return replay;const result:CommandResult<{status:"COMPOSE_INITIATED"}>={ok:true,data:{status:"COMPOSE_INITIATED"}};this.repo.savePriorityDmReplay(parsed.data.requestId,result);return result;}
+  retryEmailCompose(input:RetryEmailComposeInput):CommandResult<{status:"COMPOSE_INITIATED"}>{const parsed=retryEmailComposeInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);if(this.repo.campaign.outreachPaths.get(parsed.data.campaignCreatorId)!=="EMAIL")return{ok:false,category:"STATE_CONFLICT",message:"Email compose is not available for this creator."};const replay=this.repo.getEmailRetryReplay<CommandResult<{status:"COMPOSE_INITIATED"}>>(parsed.data.requestId);if(replay)return replay;const result:CommandResult<{status:"COMPOSE_INITIATED"}>={ok:true,data:{status:"COMPOSE_INITIATED"}};this.repo.saveEmailRetryReplay(parsed.data.requestId,result);return result;}
 }
 
 export class ApplicationService {
