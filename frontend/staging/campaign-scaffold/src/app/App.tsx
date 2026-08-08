@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { ApplicationShell } from "./ApplicationShell";
 import { CampaignPage } from "../features/campaign/CampaignPage";
 import type { CampaignUiAction, CampaignUiActionResult } from "../features/campaign/actionModel";
@@ -11,11 +11,11 @@ import { scenarioIds, scenarioLabel, type ScenarioId } from "../features/campaig
 export function App() {
   const [scenario, setScenario] = useState<ScenarioId | "normal">("normal");
   const [view, setView] = useState<CampaignPageView>();
-  const adapter = scenario === "normal" ? createExecutableCampaignReadAdapter() : createScenarioCampaignReadAdapter(scenario);
-  const commands = createStagingCampaignCommandAdapter();
+  const adapter = useMemo(() => scenario === "normal" ? createExecutableCampaignReadAdapter() : createScenarioCampaignReadAdapter(scenario), [scenario]);
+  const commands = useMemo(() => createStagingCampaignCommandAdapter(), []);
+  const refresh = useCallback(async () => { setView(await adapter.getCampaignPage("campaign-staging")); }, [adapter]);
 
-  const refresh = async () => { setView(await adapter.getCampaignPage("campaign-staging")); };
-  useEffect(() => { setView(undefined); void refresh(); }, [scenario]);
+  useEffect(() => { setView(undefined); void refresh(); }, [refresh]);
 
   const handleAction = async (action: CampaignUiAction): Promise<CampaignUiActionResult> => {
     if (scenario !== "normal") return { ok: false, category: "STAGING_SCENARIO", message: "Commands are disabled while a visual scenario fixture is selected." };
