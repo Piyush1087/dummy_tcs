@@ -14,4 +14,8 @@ export class StagingCommandRepository {
   saveOutreachReplay(requestId:string,value:unknown){this.campaign.outreachReplays.set(requestId,value);}
   getShareReplay<T>(requestId:string):T|undefined{return this.campaign.shareReplays.get(requestId) as T|undefined;}
   saveShareReplay(requestId:string,value:unknown){this.campaign.shareReplays.set(requestId,value);}
+  getPriorityDmReplay<T>(requestId:string):T|undefined{return this.campaign.priorityDmReplays.get(requestId) as T|undefined;}
+  savePriorityDmReplay(requestId:string,value:unknown){this.campaign.priorityDmReplays.set(requestId,value);}
+  getEmailRetryReplay<T>(requestId:string):T|undefined{return this.campaign.emailRetryReplays.get(requestId) as T|undefined;}
+  saveEmailRetryReplay(requestId:string,value:unknown){this.campaign.emailRetryReplays.set(requestId,value);}
 }
