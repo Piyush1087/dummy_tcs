@@ -18,8 +18,8 @@ export type StagingCampaignState = {
   applicants: StagingSurfaceState;
   creators: Set<string>;
   applications: Map<string, StagingApplicationStatus>;
-  /** Existing command replay compatibility. Scoped evidence is added in a later checkpoint. */
-  replays: Map<string, unknown>;
+  outreachReplays: Map<string, unknown>;
+  shareReplays: Map<string, unknown>;
   suppliedProjections: {
     intelligence: { discovery: StagingSurfaceState; applicants: StagingSurfaceState };
     performance: { reach: string; engagement: string };
@@ -47,7 +47,8 @@ export function createStagingCampaignStore(): StagingCampaignStore {
       applicants: "READY",
       creators: new Set<string>(),
       applications: new Map<string, StagingApplicationStatus>([["application-anya", "PENDING"]]),
-      replays: new Map<string, unknown>(),
+      outreachReplays: new Map<string, unknown>(),
+      shareReplays: new Map<string, unknown>(),
       suppliedProjections: {
         intelligence: { discovery: "READY", applicants: "READY" },
         performance: { reach: "124K", engagement: "5.8%" },
