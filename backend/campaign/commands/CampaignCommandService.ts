@@ -19,6 +19,10 @@ import {
   type PublishBriefInput,
   type UpdatePublishedBriefInput,
   type PauseBriefInput,
+  type ImportCreatorsCsvInput,
+  type ArchiveCampaignCreatorInput,
+  type ConfirmPriorityDmInput,
+  type RetryEmailComposeInput,
 } from "./services";
 
 /** Typed command façade. Focused services retain validation and domain/state ownership. */
@@ -37,6 +41,8 @@ export class CampaignCommandService {
   complete(input:CampaignLifecycleInput):CommandResult<{status:Lifecycle}>{return this.campaign.complete(input);}
   archive(input:CampaignLifecycleInput):CommandResult<{status:Lifecycle}>{return this.campaign.archive(input);}
   addManualCreator(input:ManualCreatorInput):CommandResult{return this.creators.addManual(input);}
+  importCreatorsCsv(input:ImportCreatorsCsvInput):CommandResult<{accepted:number;duplicates:number}>{return this.creators.importCsv(input);}
+  archiveCampaignCreator(input:ArchiveCampaignCreatorInput):CommandResult<{campaignCreatorId:string}>{return this.creators.archive(input);}
   addProduct(input:AddCampaignAssetInput):CommandResult<{campaignAssetId:string}>{return this.opportunities.addProduct(input);}
   deactivateProduct(input:DeactivateCampaignAssetInput):CommandResult<{campaignAssetId:string;status:"PAUSED"}>{return this.opportunities.deactivateProduct(input);}
   createBriefDraft(input:CreateBriefDraftInput):CommandResult<{briefId:string}>{return this.opportunities.createBriefDraft(input);}
@@ -46,6 +52,8 @@ export class CampaignCommandService {
   pauseBrief(input:PauseBriefInput):CommandResult<{briefId:string;status:"PAUSED"}>{return this.opportunities.pauseBrief(input);}
   composeOutreach(input:ComposeOutreachInput):CommandResult<{path:"EMAIL"|"PRIORITY_DM"}>{return this.outreach.compose(input);}
   initiateEmailOutreach(input:InitiateEmailOutreachInput):CommandResult<{status:"COMPOSE_INITIATED"}>{return this.outreach.initiate(input);}
+  confirmPriorityDmOutreach(input:ConfirmPriorityDmInput):CommandResult<{status:"COMPOSE_INITIATED"}>{return this.outreach.confirmPriorityDm(input);}
+  retryEmailCompose(input:RetryEmailComposeInput):CommandResult<{status:"COMPOSE_INITIATED"}>{return this.outreach.retryEmailCompose(input);}
   approveApplicant(input:ApplicantDecisionInput):CommandResult<{status:ApplicationStatus}>{return this.applications.approve(input);}
   rejectApplicant(input:ApplicantDecisionInput):CommandResult<{status:ApplicationStatus}>{return this.applications.reject(input);}
   executeShare(input:CampaignShareInput):CommandResult<{message:string;trackedLink:string}>{return this.share.execute(input);}
