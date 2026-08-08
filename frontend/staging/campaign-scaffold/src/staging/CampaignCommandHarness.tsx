@@ -16,7 +16,10 @@ export function CampaignCommandHarness({ adapter, commands, enabled, onRefresh, 
   const products = view.productsBriefsSummary.products;
   const [assetId, setAssetId] = useState(products[0]?.campaignAssetId ?? "");
   const [briefId, setBriefId] = useState(products[0]?.briefs[0]?.briefId ?? "");
-  const [creatorId, setCreatorId] = useState("");\n  const [platform, setPlatform] = useState<"INSTAGRAM" | "TIKTOK" | "YOUTUBE">("INSTAGRAM");\n  const [offeringId, setOfferingId] = useState("offering-serum");\n  const [brandInstruction, setBrandInstruction] = useState("");
+  const [creatorId, setCreatorId] = useState("");
+  const [platform, setPlatform] = useState<"INSTAGRAM" | "TIKTOK" | "YOUTUBE">("INSTAGRAM");
+  const [offeringId, setOfferingId] = useState("offering-serum");
+  const [brandInstruction, setBrandInstruction] = useState("");
   const [creators, setCreators] = useState<DiscoveryWorkspaceView["creators"]>([]);
   const [feedback, setFeedback] = useState<string>();
   const [briefName, setBriefName] = useState("Staging brief");
