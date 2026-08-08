@@ -12,12 +12,12 @@ describe("CampaignQueryService",()=>{
     const commands=new CampaignCommandService(new StagingCommandRepository(store));
     const query=new CampaignQueryService(new StagingCampaignReadRepository(store));
 
-    expect(commands.command("PAUSE",{})).toEqual({ok:true,data:{status:"PAUSED"}});
+    expect(commands.pause({campaignId:"campaign-staging"})).toEqual({ok:true,data:{status:"PAUSED"}});
     const paused=await query.getCampaignPage("campaign-staging");
     expect(paused.campaign.lifecycleStatus).toBe("PAUSED");
     expect(paused.hydration.outcome).toBe("STATE_8_PAUSED_CAMPAIGN");
 
-    expect(commands.command("RESUME",{})).toEqual({ok:true,data:{status:"LIVE"}});
+    expect(commands.resume({campaignId:"campaign-staging"})).toEqual({ok:true,data:{status:"LIVE"}});
     expect((await query.getCampaignPage("campaign-staging")).campaign.lifecycleStatus).toBe("LIVE");
   });
 });
