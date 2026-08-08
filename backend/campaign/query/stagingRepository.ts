@@ -1,6 +1,9 @@
+Exit code: 0
+Wall time: 0.6 seconds
+Output:
 import { stagingCampaignStore, type StagingCampaignStore } from "../staging/stagingCampaignStore";
 
-export type CampaignRecord = { id:string; name:string; status:"DRAFT"|"PUBLISHED"|"LIVE"|"PAUSED"|"COMPLETED"|"ARCHIVED"; executionReady:boolean; products:Array<{id:string;name:string;briefs:Array<{id:string;name:string}>}>; discovery:"READY"|"EMPTY"|"UNAVAILABLE"|"ERROR"; applicants:"READY"|"EMPTY"|"UNAVAILABLE"|"ERROR" };
+export type CampaignRecord = { id:string; name:string; status:"DRAFT"|"PUBLISHED"|"LIVE"|"PAUSED"|"COMPLETED"|"ARCHIVED"; executionReady:boolean; products:Array<{id:string;name:string;status:"ACTIVE"|"PAUSED";briefs:Array<{id:string;name:string;status:"DRAFT"|"PUBLISHED"|"PAUSED"}>}>; discovery:"READY"|"EMPTY"|"UNAVAILABLE"|"ERROR"; applicants:"READY"|"EMPTY"|"UNAVAILABLE"|"ERROR" };
 
 export interface CampaignReadRepository { findCampaign(id:string): Promise<CampaignRecord | undefined>; }
 
@@ -10,6 +13,7 @@ export class StagingCampaignReadRepository implements CampaignReadRepository {
 
   async findCampaign(id:string): Promise<CampaignRecord> {
     const campaign=this.store.campaign;
-    return { id, name:campaign.name, status:campaign.status, executionReady:campaign.executionReady, products:campaign.products, discovery:campaign.discovery, applicants:campaign.applicants };
+    return { id, name:campaign.name, status:campaign.status, executionReady:campaign.executionReady, products:campaign.products.map(product=>({id:product.id,name:product.name,status:product.status,briefs:product.briefs.map(brief=>({id:brief.id,name:brief.name,status:brief.status}))})), discovery:campaign.discovery, applicants:campaign.applicants };
   }
 }
+
