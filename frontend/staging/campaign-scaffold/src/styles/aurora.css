@@ -1,0 +1,32 @@
+:root {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  color: #0E1214;
+  background: #F8F8F8;
+  --color-primary: #34D399;
+  --surface-page: #F8F8F8;
+  --surface-card: #FFFFFF;
+  --border-default: #E5E7EB;
+  --text-high: #0E1214;
+  --text-muted: #6B7280;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: var(--surface-page); }
+button, input, textarea, select { font: inherit; }
+
+.applicationShell { min-height: 100dvh; background: var(--surface-page); }
+.contentArea { max-width: 1440px; margin: 0 auto; padding: 32px; }
+.campaignPage { border: 1px solid var(--border-default); border-radius: 12px; background: var(--surface-card); padding: 24px; }
+.eyebrow { margin: 0 0 8px; color: var(--text-muted); font: 700 14px/1.2 "Satoshi", Arial, sans-serif; }
+h1 { margin: 0; font: 700 32px/1.2 "Satoshi", Arial, sans-serif; }
+.bodyText, .loadingState { color: var(--text-muted); font-size: 14px; line-height: 1.5; }
+.proofGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 24px 0 0; }
+.proofGrid div { border: 1px solid var(--border-default); border-radius: 8px; padding: 16px; }
+.proofGrid dt { color: var(--text-muted); font-size: 12px; font-weight: 600; }
+.proofGrid dd { margin: 4px 0 0; font-weight: 700; }
+
+@media (max-width: 767px) {
+  .contentArea { padding: 16px; }
+  h1 { font-size: 28px; }
+  .proofGrid { grid-template-columns: 1fr; }
+}
