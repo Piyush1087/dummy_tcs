@@ -90,4 +90,22 @@ describe("CampaignCommandService",()=>{
     expect(commands.retryEmailCompose({campaignCreatorId:"creator-anya",requestId:"dm-1"})).toEqual({ok:true,data:{status:"COMPOSE_INITIATED"}});
     expect(commands.retryEmailCompose({campaignCreatorId:"creator-anya",requestId:""})).toMatchObject({ok:false,category:"VALIDATION"});
   });
+
+  it("keeps applicant decisions non-blocking and exposes their shared-state status",async()=>{
+    const store=createStagingCampaignStore();store.campaign.suppliedProjections.intelligence.applicants="UNAVAILABLE";
+    const commands=new CampaignCommandService(new StagingCommandRepository(store));const query=new CampaignQueryService(new StagingCampaignReadRepository(store));
+    expect(commands.approveApplicant({applicationId:"application-anya"})).toEqual({ok:true,data:{status:"APPROVED"}});
+    expect((await query.getApplicants("campaign-staging")).applicants[0].applicationStatus).toBe("APPROVED");
+    expect(commands.rejectApplicant({applicationId:"application-anya"})).toMatchObject({ok:false,category:"STATE_CONFLICT"});
+  });
+
+  it("records distinct accepted Share evidence without fabricating tracking links",()=>{
+    const store=createStagingCampaignStore();const commands=new CampaignCommandService(new StagingCommandRepository(store));
+    const one={campaignId:"campaign-staging",channel:"COPY_LINK" as const,requestId:"share-1"};
+    expect(commands.executeShare({...one,requestId:""})).toMatchObject({ok:false,category:"VALIDATION"});
+    expect(commands.executeShare(one)).toEqual({ok:true,data:{message:"Join Summer Glow Launch",accepted:true}});
+    expect(commands.executeShare(one)).toEqual({ok:true,data:{message:"Join Summer Glow Launch",accepted:true}});
+    expect(commands.executeShare({...one,requestId:"share-2"})).toEqual({ok:true,data:{message:"Join Summer Glow Launch",accepted:true}});
+    expect(store.campaign.shareEvidence.size).toBe(2);
+  });
 });
