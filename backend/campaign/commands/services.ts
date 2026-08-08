@@ -100,5 +100,5 @@ export class ApplicationService {
 export class ShareService {
   constructor(private repo:StagingCommandRepository){}
 
-  execute(input:CampaignShareInput):CommandResult<{message:string;trackedLink:string}>{const parsed=executeCampaignShareInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);const replay=this.repo.getShareReplay<CommandResult<{message:string;trackedLink:string}>>(parsed.data.requestId);if(replay)return replay;const result:CommandResult<{message:string;trackedLink:string}>={ok:true,data:{message:"Join Summer Glow Launch",trackedLink:`/campaign/t/${parsed.data.requestId}`}};this.repo.saveShareReplay(parsed.data.requestId,result);return result;}
+  execute(input:CampaignShareInput):CommandResult<{message:string;accepted:true}>{const parsed=executeCampaignShareInputSchema.safeParse(input);if(!parsed.success)return validationFailure(parsed.error);const replay=this.repo.getShareReplay<CommandResult<{message:string;accepted:true}>>(parsed.data.requestId);if(replay)return replay;const result:CommandResult<{message:string;accepted:true}>={ok:true,data:{message:"Join Summer Glow Launch",accepted:true}};this.repo.campaign.shareEvidence.set(parsed.data.requestId,{campaignId:parsed.data.campaignId,channel:parsed.data.channel});this.repo.saveShareReplay(parsed.data.requestId,result);return result;}
 }
