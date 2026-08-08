@@ -11,6 +11,8 @@ import type {
   ReportingDetailView,
 } from "./types";
 import { applyScenario, type ScenarioId } from "./scenarios";
+import { CampaignQueryService } from "../../../../../../backend/campaign/query/CampaignQueryService";
+import { StagingCampaignReadRepository } from "../../../../../../backend/campaign/query/stagingRepository";
 
 export interface CampaignReadAdapter {
   getCampaignPage(campaignId: string): Promise<CampaignPageView>;
@@ -72,4 +74,10 @@ export function createScenarioCampaignReadAdapter(scenario: ScenarioId): Campaig
     async getDiscovery(id) { if (scenario === "loading") return new Promise<DiscoveryWorkspaceView>(() => undefined); if (scenario === "no-results") return { state:"EMPTY", creators:[] }; if (scenario === "unavailable") return { state:"ERROR", creators:[] }; return base.getDiscovery(id); },
     async getApplicants(id) { if (scenario === "loading") return new Promise<ApplicantsWorkspaceView>(() => undefined); if (scenario === "unavailable") return { state:"ERROR", applicants:[] }; return base.getApplicants(id); },
   };
+}
+
+/** Small in-process staging transport. Production maps this adapter to its controller/auth boundary. */
+export function createExecutableCampaignReadAdapter(): CampaignReadAdapter {
+  const query = new CampaignQueryService(new StagingCampaignReadRepository());
+  return { getCampaignPage: (id) => query.getCampaignPage(id), getDiscovery: (id) => query.getDiscovery(id), getApplicants: (id) => query.getApplicants(id), async getCampaignDetails(campaignId){ return { campaignId, ...(await query.getDetails(campaignId)) }; }, async getProductDetails(campaignAssetId){ return { campaignAssetId,state:"READY" }; }, async getBriefDetails(briefId){ return { briefId,state:"READY" }; }, async getCreatorProfile(campaignCreatorId){ return { campaignCreatorId,state:"READY" }; }, async getOutreachComposer(campaignCreatorId){ return { campaignCreatorId,state:"UNAVAILABLE",capability:{available:false,presentation:"DISABLED",reasonCategory:"CAPABILITY_UNAVAILABLE"} }; }, async getReporting(campaignId){ return { campaignId,state:"READY" }; }, async getCollaborationReferences(){ return []; } };
 }
