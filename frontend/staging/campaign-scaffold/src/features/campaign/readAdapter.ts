@@ -10,6 +10,7 @@ import type {
   ProductDetailsView,
   ReportingDetailView,
 } from "./types";
+import { applyScenario, type ScenarioId } from "./scenarios";
 
 export interface CampaignReadAdapter {
   getCampaignPage(campaignId: string): Promise<CampaignPageView>;
@@ -61,5 +62,14 @@ export function createMockCampaignReadAdapter(): CampaignReadAdapter {
     async getApplicants() { return { state: "READY", applicants: [{ applicationId: "application-anya", campaignCreatorId: "creator-anya", name: "Anya Kapoor", category: "Beauty & Skincare", followers: "128K", engagement: "6.4%", avatarInitials: "AK", intelligenceStatus: "READY", intelligenceLabel: "Strong audience fit" }, { applicationId: "application-isha", campaignCreatorId: "creator-isha", name: "Isha Mehta", category: "Skincare", followers: "64K", engagement: "7.5%", avatarInitials: "IM", intelligenceStatus: "PROCESSING" }] }; },
     async getReporting(campaignId) { return { campaignId, state: "UNAVAILABLE" }; },
     async getCollaborationReferences() { return []; },
+  };
+}
+
+export function createScenarioCampaignReadAdapter(scenario: ScenarioId): CampaignReadAdapter {
+  const base = createMockCampaignReadAdapter();
+  return { ...base,
+    async getCampaignPage(id) { return applyScenario(await base.getCampaignPage(id), scenario); },
+    async getDiscovery(id) { if (scenario === "loading") return new Promise<DiscoveryWorkspaceView>(() => undefined); if (scenario === "no-results") return { state:"EMPTY", creators:[] }; if (scenario === "unavailable") return { state:"ERROR", creators:[] }; return base.getDiscovery(id); },
+    async getApplicants(id) { if (scenario === "loading") return new Promise<ApplicantsWorkspaceView>(() => undefined); if (scenario === "unavailable") return { state:"ERROR", applicants:[] }; return base.getApplicants(id); },
   };
 }
