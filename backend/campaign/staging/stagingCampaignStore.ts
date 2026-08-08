@@ -1,11 +1,19 @@
+Exit code: 0
+Wall time: 0.6 seconds
+Output:
 export type StagingCampaignLifecycle = "DRAFT"|"PUBLISHED"|"LIVE"|"PAUSED"|"COMPLETED"|"ARCHIVED";
 export type StagingApplicationStatus = "PENDING"|"APPROVED"|"REJECTED";
 export type StagingSurfaceState = "READY"|"EMPTY"|"UNAVAILABLE"|"ERROR";
 
+export type StagingCampaignAssetStatus = "ACTIVE"|"PAUSED";
+export type StagingBriefStatus = "DRAFT"|"PUBLISHED"|"PAUSED";
 export type StagingCampaignProduct = {
   id: string;
   name: string;
-  briefs: Array<{ id: string; name: string }>;
+  kind: "BRAND"|"OFFERING"|"OFFER";
+  sourceId: string;
+  status: StagingCampaignAssetStatus;
+  briefs: Array<{ id: string; name: string; status: StagingBriefStatus; fields: Record<string, unknown> }>;
 };
 
 export type StagingCampaignState = {
@@ -40,8 +48,8 @@ export function createStagingCampaignStore(): StagingCampaignStore {
       status: "LIVE",
       executionReady: true,
       products: [
-        { id: "asset-serum", name: "Glow Face Serum", briefs: [{ id: "brief-reel", name: "Instagram Reel" }, { id: "brief-story", name: "Story + Link" }] },
-        { id: "asset-cream", name: "Night Repair Cream", briefs: [{ id: "brief-ugc", name: "UGC Video" }] },
+        { id: "asset-serum", name: "Glow Face Serum", kind:"OFFERING", sourceId:"offering-serum", status:"ACTIVE", briefs: [{ id: "brief-reel", name: "Instagram Reel", status:"PUBLISHED", fields:{} }, { id: "brief-story", name: "Story + Link", status:"PUBLISHED", fields:{} }] },
+        { id: "asset-cream", name: "Night Repair Cream", kind:"OFFERING", sourceId:"offering-cream", status:"ACTIVE", briefs: [{ id: "brief-ugc", name: "UGC Video", status:"PUBLISHED", fields:{} }] },
       ],
       discovery: "READY",
       applicants: "READY",
@@ -58,3 +66,4 @@ export function createStagingCampaignStore(): StagingCampaignStore {
 }
 
 export const stagingCampaignStore = createStagingCampaignStore();
+
