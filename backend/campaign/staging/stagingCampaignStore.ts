@@ -29,6 +29,7 @@ export type StagingCampaignState = {
   emailRetryReplays: Map<string, unknown>;
   outreachPaths: Map<string, "EMAIL"|"PRIORITY_DM">;
   shareReplays: Map<string, unknown>;
+  shareEvidence: Map<string, { campaignId:string; channel:"COPY_LINK"|"WHATSAPP"|"INSTAGRAM"|"NATIVE_SHARE" }>;
   suppliedProjections: {
     intelligence: { discovery: StagingSurfaceState; applicants: StagingSurfaceState };
     performance: { reach: string; engagement: string };
@@ -62,6 +63,7 @@ export function createStagingCampaignStore(): StagingCampaignStore {
       emailRetryReplays: new Map<string, unknown>(),
       outreachPaths: new Map([["creator-anya","EMAIL"],["creator-priority","PRIORITY_DM"]]),
       shareReplays: new Map<string, unknown>(),
+      shareEvidence: new Map(),
       suppliedProjections: {
         intelligence: { discovery: "READY", applicants: "READY" },
         performance: { reach: "124K", engagement: "5.8%" },
