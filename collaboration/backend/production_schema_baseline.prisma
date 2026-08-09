@@ -1,0 +1,552 @@
+// ============================================================================
+// CREATOR SHOP — COLLABORATION PRODUCTION SCHEMA BASELINE
+// ============================================================================
+// Source repository:
+// AatishBrianDSilva/creator-commerce-backend-v2-clone
+// Source file: prisma/schema.prisma
+// Source blob SHA: a0bdff95ed5734ae34ba514994cc11fa7b697b8f
+//
+// PURPOSE
+// -------
+// This file is a BASELINE EXTRACTION of Collaboration-relevant production
+// Prisma definitions. It records what production contains before canonical
+// Collaboration schema changes are applied.
+//
+// IMPORTANT
+// ---------
+// 1. Do not treat this file as the canonical target schema.
+// 2. Do not silently clean up legacy/duplicate structures in this baseline.
+// 3. Modification instructions live separately in schema_reconciliation.md.
+// 4. Some referenced upstream models (BrandProfile, User, UceCampaign,
+//    UceCampaignBrief, UceCampaignProduct, CreatorProfile, etc.) are defined in
+//    the full production schema and are intentionally not duplicated here.
+// 5. This excerpt is therefore evidence/reference, not a standalone Prisma
+//    schema intended to compile by itself.
+
+// ============================================================================
+// RELEVANT PRODUCTION ENUMS
+// ============================================================================
+
+enum UceCollabStatus {
+  PROSPECT_CURATED
+  PROSPECT_INVITED
+  APPLICANT_PENDING
+  APPLICANT_SHORTLISTED
+  APPLICANT_REJECTED
+  ACTIVE_WORKFLOW
+  TERMINATED_CANCELED
+  ARCHIVED_COMPLETE
+}
+
+enum UceMilestoneStage {
+  STAGE_1_NEGOTIATION
+  STAGE_2_SECUREMENT
+  STAGE_3_LOGISTICS
+  STAGE_4_CONTENT_REVIEW
+  STAGE_5_PUBLISHING
+  STAGE_6_FEEDBACK_SYNC
+}
+
+enum UcePipelineHealthStatus {
+  ON_TRACK
+  APPROACHING_DEADLINE
+  ACTION_OVERDUE
+  SYSTEM_HOLD
+}
+
+enum UceNegotiationSubState {
+  BRAND_COUNTER
+  CREATOR_COUNTER
+  FINAL_OFFER_PENDING
+}
+
+enum UceSecurementSubState {
+  AWAITING_FUNDING
+  AWAITING_SIGNATURE
+}
+
+enum UceLogisticsSubState {
+  AWAITING_DISPATCH
+  IN_TRANSIT
+  DELIVERY_EXCEPTION
+}
+
+enum UceReviewSubState {
+  INITIAL_DRAFT_SUBMITTED
+  REVISION_ROUND_ACTIVE
+  CONTENT_HALTED_LOCK
+}
+
+enum UcePublishingSubState {
+  AWAITING_LIVE_POST
+  COMPLIANCE_CHECK_ACTIVE
+}
+
+enum UceProductionPhase {
+  INBOUND_INVITE
+  APPLICATION_REVIEW
+  SHORTLISTED
+  LOGISTICS_TRANSIT
+  CONTENT_DRAFTING
+  SAFETY_REVIEW
+  LIVE_SCRAPING
+  ARCHIVED_COMPLETED
+  ARCHIVED_CLOSED
+}
+
+enum UceWorkflowActionRole {
+  CREATOR
+  BRAND
+  NONE
+}
+
+enum UceDraftReviewStatus {
+  AWAITING_REVIEW
+  APPROVED
+  REVISION_REQUESTED
+}
+
+enum UceMediaPlatform {
+  INSTAGRAM
+  TIKTOK
+  YOUTUBE
+}
+
+enum CollaborationPayoutMode {
+  ESCROW
+  MANUAL
+  BARTER
+}
+
+enum CollaborationIndustryType {
+  D2C_ECOMMERCE
+  HEALTHCARE_CLINICAL
+  AI_SAAS
+  OFFLINE_EXPERIENCES
+}
+
+enum FulfillmentIssueType {
+  DAMAGED
+  INVALID_CODE
+  LOST
+  TECH_ERROR
+  NO_SHOW
+}
+
+enum CollaborationMediaPhase {
+  SCRIPTING
+  MEDIA
+}
+
+enum CollaborationMediaReviewStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum CollaborationEscrowStatus {
+  AWAITING_FUNDS
+  FUNDED
+  PARTIAL_RELEASE
+  SETTLED
+  REFUNDED
+}
+
+enum CollaborationMessageKind {
+  USER
+  SYSTEM
+}
+
+enum EscrowTransactionType {
+  VBA_TOPUP_WIRE
+  GATEWAY_TOPUP_CARD
+  CONTRACT_LOCK_RESERVE
+  TRANCHE_ADVANCE_RELEASE
+  TRANCHE_FINAL_RELEASE
+  PLATFORM_FEE_CAPTURE
+  TDS_BUFFER_REVERSAL
+  FAILED_COLLAB_REFUND
+}
+
+enum EscrowTransactionStatus {
+  PROCESSING_GATEWAY
+  CLEARED
+  FAILED
+  REVERSED
+}
+
+enum EscrowPayoutTranche {
+  ADVANCE_30
+  FINAL_70
+  PLATFORM_COMMISSION
+}
+
+enum IdempotencyExecutionState {
+  IN_FLIGHT
+  COMPLETED
+  FAILED
+}
+
+// ============================================================================
+// LEGACY / CAMPAIGN-PIPELINE COLLABORATION STRUCTURE PRESENT IN PRODUCTION
+// ============================================================================
+
+model UceCampaignCollaboration {
+  id         String              @id @default(uuid()) @map("collaboration_id")
+  campaignId String              @map("campaign_id")
+  campaign   UceCampaign         @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  briefId    String              @map("brief_id")
+  brief      UceCampaignBrief    @relation(fields: [briefId], references: [id], onDelete: Restrict)
+  productId  String?             @map("product_id")
+  product    UceCampaignProduct? @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  creatorProfileId String?         @map("creator_profile_id")
+  creatorProfile   CreatorProfile? @relation(fields: [creatorProfileId], references: [id], onDelete: SetNull)
+
+  instagramHandle String  @map("instagram_handle")
+  creatorEmail    String  @map("creator_email")
+  matchScore      Decimal @default(0) @map("match_score") @db.Decimal(5, 2)
+  contentFormatType String? @map("content_format_type") @db.VarChar(50)
+  vettingRemark   String? @map("vetting_remark")
+  rejectionReason String? @map("rejection_reason")
+
+  collabStatus     UceCollabStatus         @default(PROSPECT_CURATED) @map("collab_status")
+  currentPhase     UceProductionPhase      @default(APPLICATION_REVIEW) @map("current_phase")
+  actionRequiredByRole UceWorkflowActionRole @default(BRAND) @map("action_required_by_role")
+  currentMilestone UceMilestoneStage       @default(STAGE_1_NEGOTIATION) @map("current_milestone")
+  pipelineHealth   UcePipelineHealthStatus @default(ON_TRACK) @map("pipeline_health")
+
+  negotiationState UceNegotiationSubState? @map("negotiation_state")
+  securementState  UceSecurementSubState?  @map("securement_state")
+  logisticsState   UceLogisticsSubState?   @map("logistics_state")
+  reviewState      UceReviewSubState?      @map("review_state")
+  publishingState  UcePublishingSubState?  @map("publishing_state")
+
+  negotiationRoundCount Int @default(0) @map("negotiation_round_count")
+  fulfillmentIssueCount Int @default(0) @map("fulfillment_issue_count")
+  revisionRoundCount    Int @default(0) @map("revision_round_count")
+
+  totalQuote     Decimal @default(0) @map("total_quote") @db.Decimal(12, 2)
+  advance30Value Decimal @default(0) @map("advance_30_value") @db.Decimal(12, 2)
+  balance70Value Decimal @default(0) @map("balance_70_value") @db.Decimal(12, 2)
+
+  logisticsCarrier        String? @map("logistics_carrier")
+  logisticsTrackingNumber String? @map("logistics_tracking_number")
+  contentDraftUrl         String? @map("content_draft_url")
+  livePublishedUrl        String? @map("live_published_url")
+  complianceVerified      Boolean @default(false) @map("compliance_verified")
+
+  autoApprovalDeadline72h  DateTime? @map("auto_approval_deadline_72h")
+  currentMilestoneDeadline DateTime  @map("current_milestone_deadline")
+  productionDeadlineAt     DateTime? @map("production_deadline_at")
+
+  invitationToken         String? @unique @map("invitation_token")
+  invitationSourceChannel String? @map("invitation_source_channel")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  auditLogs       UceCollaborationAuditLog[]
+  reportingAssets UceCampaignReportingAssetGallery[]
+  workflowCollaboration Collaboration?
+  logisticsRegistry UceCollaborationLogistics?
+  contentDrafts     UceCollaborationContentDraft[]
+  liveTelemetry     UceCollaborationLiveTelemetry?
+
+  @@unique([campaignId, instagramHandle])
+  @@index([campaignId, collabStatus, currentMilestone])
+  @@index([pipelineHealth, currentMilestoneDeadline])
+  @@index([creatorProfileId, actionRequiredByRole, productionDeadlineAt], map: "idx_panic_panel_evaluation")
+  @@index([creatorProfileId, currentPhase], map: "idx_workspace_phase_router")
+  @@map("uce_campaign_collaborations")
+}
+
+model UceCollaborationLogistics {
+  id              String                   @id @default(uuid())
+  collaborationId String                   @unique @map("collaboration_id")
+  collaboration   UceCampaignCollaboration @relation(fields: [collaborationId], references: [id], onDelete: Restrict)
+  carrierName     String                   @map("carrier_name") @db.VarChar(100)
+  trackingId      String                   @map("tracking_id") @db.VarChar(100)
+  estimatedDeliveryAt DateTime?            @map("estimated_delivery_at")
+  actualDeliveredAt   DateTime?            @map("actual_delivered_at")
+  isReceivedByCreator Boolean              @default(false) @map("is_received_by_creator")
+  isPackageDamaged    Boolean              @default(false) @map("is_package_damaged")
+  createdAt       DateTime                 @default(now()) @map("created_at")
+  updatedAt       DateTime                 @updatedAt @map("updated_at")
+
+  @@map("uce_collaboration_logistics")
+}
+
+model UceCollaborationContentDraft {
+  id                  String                   @id @default(uuid())
+  collaborationId     String                   @map("collaboration_id")
+  collaboration       UceCampaignCollaboration @relation(fields: [collaborationId], references: [id], onDelete: Restrict)
+  draftUrl            String                   @map("draft_url") @db.Text
+  submissionVersion   Int                      @default(1) @map("submission_version")
+  reviewState         UceDraftReviewStatus     @default(AWAITING_REVIEW) @map("review_state")
+  brandSafetyFeedback String?                  @map("brand_safety_feedback") @db.Text
+  submissionNotes     String?                  @map("submission_notes") @db.Text
+  submittedAt         DateTime                 @default(now()) @map("submitted_at")
+  reviewedAt          DateTime?                @map("reviewed_at")
+
+  @@index([collaborationId, reviewState], map: "idx_draft_review_lookup")
+  @@map("uce_collaboration_content_drafts")
+}
+
+model UceCollaborationLiveTelemetry {
+  id              String                   @id @default(uuid())
+  collaborationId String                   @unique @map("collaboration_id")
+  collaboration   UceCampaignCollaboration @relation(fields: [collaborationId], references: [id], onDelete: Restrict)
+  contentLiveUrl  String                   @map("content_live_url") @db.Text
+  totalViews      Int                      @default(0) @map("total_views")
+  totalReach      Int                      @default(0) @map("total_reach")
+  engagementRate  Decimal                  @default(0.00) @map("engagement_rate") @db.Decimal(5, 2)
+  daysPublicCount Int                      @default(0) @map("days_public_count")
+  lastScrapedAt   DateTime                 @default(now()) @map("last_scraped_at")
+  createdAt       DateTime                 @default(now()) @map("created_at")
+  updatedAt       DateTime                 @updatedAt @map("updated_at")
+
+  @@map("uce_collaboration_live_telemetry")
+}
+
+model UceCollaborationAuditLog {
+  id              String                   @id @default(uuid()) @map("log_id")
+  collaborationId String                   @map("collaboration_id")
+  collaboration   UceCampaignCollaboration @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+  stageContext    UceMilestoneStage        @map("stage_context")
+  systemEventTag  String                   @map("system_event_tag")
+  messagePayload  String                   @map("log_message_payload") @db.Text
+  actorIdentifier String                   @map("actor_identifier")
+  loggedAt        DateTime                 @default(now()) @map("logged_at")
+
+  @@index([collaborationId, loggedAt])
+  @@map("uce_collaboration_audit_logs")
+}
+
+// ============================================================================
+// OPERATIONAL COLLABORATION WORKFLOW STRUCTURE PRESENT IN PRODUCTION
+// ============================================================================
+
+model Collaboration {
+  id             String       @id @default(uuid())
+  brandProfileId String       @map("brand_id")
+  brandProfile   BrandProfile @relation(fields: [brandProfileId], references: [id], onDelete: Cascade)
+  creatorUserId  String       @map("creator_id")
+  creatorUser    User         @relation("CollaborationCreator", fields: [creatorUserId], references: [id], onDelete: Restrict)
+  campaignId     String       @map("campaign_id")
+  campaign       UceCampaign  @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  briefId        String       @map("brief_id")
+  brief          UceCampaignBrief @relation(fields: [briefId], references: [id], onDelete: Restrict)
+  productId      String?      @map("product_id")
+  product        UceCampaignProduct? @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  ucePipelineCollaborationId String?                  @unique @map("uce_pipeline_collaboration_id")
+  ucePipelineCollaboration   UceCampaignCollaboration? @relation(fields: [ucePipelineCollaborationId], references: [id], onDelete: SetNull)
+
+  currentStage UceMilestoneStage       @default(STAGE_1_NEGOTIATION) @map("current_stage")
+  payoutMode   CollaborationPayoutMode @default(ESCROW) @map("payout_mode")
+  industry     CollaborationIndustryType
+
+  negotiationRound      Int @default(0) @map("negotiation_round")
+  fulfillmentIssueCount Int @default(0) @map("fulfillment_issue_count")
+  revisionCount         Int @default(0) @map("revision_count")
+
+  unreadCountBrand   Int     @default(0) @map("unread_count_brand")
+  unreadCountCreator Int     @default(0) @map("unread_count_creator")
+  lastMessageSnippet String? @map("last_message_snippet")
+  lastMessageAt      DateTime? @map("last_message_at")
+  stageUpdatedAt     DateTime @default(now()) @map("stage_updated_at")
+
+  isPaused      Boolean @default(false) @map("is_paused")
+  isTerminated  Boolean @default(false) @map("is_terminated")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  commercials    CollaborationCommercial?
+  logistics      CollaborationLogistics?
+  media          CollaborationMedia[]
+  finalization   CollaborationFinalization?
+  messages       CollaborationMessage[]
+  escrowLock     CollaborationEscrowLock?
+
+  @@unique([campaignId, creatorUserId])
+  @@index([brandProfileId, currentStage])
+  @@index([creatorUserId, currentStage])
+  @@index([lastMessageAt])
+  @@map("collaborations")
+}
+
+model CollaborationCommercial {
+  id               String        @id @default(uuid())
+  collaborationId  String        @unique @map("collaboration_id")
+  collaboration    Collaboration @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+
+  initialQuote       Decimal? @map("initial_quote") @db.Decimal(12, 2)
+  brandCounterOffer  Decimal? @map("brand_counter_offer") @db.Decimal(12, 2)
+  finalQuote         Decimal? @map("final_quote") @db.Decimal(12, 2)
+  productRetailValue Decimal  @default(0) @map("product_retail_value") @db.Decimal(12, 2)
+  isFinalOffer       Boolean  @default(false) @map("is_final_offer")
+
+  advance30Amount Decimal @default(0) @map("advance_30_amount") @db.Decimal(12, 2)
+  balance70Amount Decimal @default(0) @map("balance_70_amount") @db.Decimal(12, 2)
+
+  creatorBankDetailsId String?            @map("creator_bank_details_id")
+  creatorBankDetails   CreatorBankDetails? @relation(fields: [creatorBankDetailsId], references: [id], onDelete: SetNull)
+  escrowVaultId        String?            @map("escrow_vault_id")
+  escrowStatus         CollaborationEscrowStatus? @map("escrow_status")
+  advanceReceiptUrl    String?            @map("advance_receipt_url") @db.Text
+  finalReceiptUrl      String?            @map("final_receipt_url") @db.Text
+  agreementPdfUrl      String?            @map("agreement_pdf_url") @db.Text
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("collaboration_commercials")
+}
+
+model CollaborationLogistics {
+  id              String        @id @default(uuid())
+  collaborationId String        @unique @map("collaboration_id")
+  collaboration   Collaboration @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+
+  trackingId               String?              @map("tracking_id")
+  courierName              String?              @map("courier_name")
+  digitalAccessCredentials String?              @map("digital_access_credentials") @db.Text
+  redemptionCode           String?              @map("redemption_code")
+
+  isReceivedConfirmed Boolean              @default(false) @map("is_received_confirmed")
+  confirmedAt         DateTime?            @map("confirmed_at")
+  lastReportedIssue   FulfillmentIssueType? @map("last_reported_issue")
+  issueDescription    String?              @map("issue_description") @db.Text
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("collaboration_logistics")
+}
+
+model CollaborationMedia {
+  id              String        @id @default(uuid())
+  collaborationId String        @map("collaboration_id")
+  collaboration   Collaboration @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+
+  phase                  CollaborationMediaPhase        @map("phase")
+  versionNumber          Int                            @default(1) @map("version_number")
+  mediaUrl               String                         @map("media_url") @db.Text
+  deliverableType        String?                        @map("deliverable_type")
+  status                 CollaborationMediaReviewStatus @default(PENDING)
+  brandFeedback          String?                        @map("brand_feedback") @db.Text
+  isAspectRatioVerified  Boolean                        @default(false) @map("is_aspect_ratio_verified")
+  autoApprovalDeadline DateTime?                      @map("auto_approval_deadline")
+  createdAt              DateTime                       @default(now()) @map("created_at")
+  updatedAt              DateTime                       @updatedAt @map("updated_at")
+
+  @@index([collaborationId, phase, versionNumber])
+  @@map("collaboration_media")
+}
+
+model CollaborationFinalization {
+  id              String        @id @default(uuid())
+  collaborationId String        @unique @map("collaboration_id")
+  collaboration   Collaboration @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+
+  livePostUrl              String?  @map("live_post_url") @db.Text
+  partnershipAdCode        String?  @map("partnership_ad_code")
+  isComplianceVerified     Boolean  @default(false) @map("is_compliance_verified")
+  isFinalPayoutReleased    Boolean  @default(false) @map("is_final_payout_released")
+
+  creatorRating      Int?    @map("creator_rating")
+  creatorReviewText  String? @map("creator_review_text") @db.Text
+  brandRating        Int?    @map("brand_rating")
+  brandReviewText    String? @map("brand_review_text") @db.Text
+  reviewsVisible     Boolean @default(false) @map("reviews_visible")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("collaboration_finalization")
+}
+
+model CollaborationMessage {
+  id              String                   @id @default(uuid())
+  collaborationId String                   @map("collaboration_id")
+  collaboration   Collaboration            @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+  senderUserId    String?                  @map("sender_user_id")
+  kind            CollaborationMessageKind @default(USER)
+  body            String                   @db.Text
+  systemEventTag  String?                  @map("system_event_tag")
+  createdAt       DateTime                 @default(now()) @map("created_at")
+
+  @@index([collaborationId, createdAt])
+  @@map("collaboration_messages")
+}
+
+// ============================================================================
+// COLLABORATION-RELEVANT ESCROW / PAYOUT STRUCTURES PRESENT IN PRODUCTION
+// ============================================================================
+
+model CollaborationEscrowLock {
+  id                      String        @id @default(uuid()) @map("lock_id")
+  collaborationId         String        @unique @map("collaboration_id")
+  collaboration           Collaboration @relation(fields: [collaborationId], references: [id], onDelete: Restrict)
+  brandProfileId          String        @map("brand_id")
+  grossCreatorQuote       Decimal       @map("gross_creator_quote") @db.Decimal(15, 4)
+  platformCommissionFee   Decimal       @map("platform_commission_fee") @db.Decimal(15, 4)
+  platformCommissionGst   Decimal       @default(0) @map("platform_commission_gst") @db.Decimal(15, 4)
+  totalEscrowLockedAmount Decimal       @map("total_escrow_locked_amount") @db.Decimal(15, 4)
+  expectedTdsPercentage   Decimal       @default(0) @map("expected_tds_percentage") @db.Decimal(4, 2)
+  calculatedTdsDeduction  Decimal       @default(0) @map("calculated_tds_deduction") @db.Decimal(15, 4)
+  netCreatorPayoutPool    Decimal       @map("net_creator_payout_pool") @db.Decimal(15, 4)
+  advanceTrancheDisbursed Boolean       @default(false) @map("advance_tranche_disbursed")
+  finalTrancheDisbursed   Boolean       @default(false) @map("final_tranche_disbursed")
+  lockReleasedViaRefund   Boolean       @default(false) @map("lock_released_via_refund")
+  createdAt               DateTime      @default(now()) @map("created_at")
+  updatedAt               DateTime      @updatedAt @map("updated_at")
+
+  @@index([collaborationId])
+  @@index([brandProfileId])
+  @@map("collaboration_escrow_locks")
+}
+
+model EscrowTransactionLedger {
+  id                         String                  @id @default(uuid()) @map("transaction_id")
+  vaultId                    String                  @map("vault_id")
+  vault                      BrandEscrowVault        @relation(fields: [vaultId], references: [id], onDelete: Restrict)
+  brandProfileId             String                  @map("brand_id")
+  collaborationId            String?                 @map("collaboration_id")
+  transactionType            EscrowTransactionType   @map("transaction_type")
+  payoutTrancheTarget        EscrowPayoutTranche?    @map("payout_tranche_target")
+  amount                     Decimal                 @db.Decimal(15, 4)
+  currency                   String                  @db.VarChar(3)
+  gatewayProcessingSurcharge Decimal                 @default(0) @map("gateway_processing_surcharge") @db.Decimal(15, 4)
+  gatewaySurchargeGst        Decimal                 @default(0) @map("gateway_surcharge_gst") @db.Decimal(15, 4)
+  idempotencyKey             String                  @unique @map("idempotency_key")
+  gatewayReferenceId         String?                 @unique @map("gateway_reference_id")
+  transactionStatus          EscrowTransactionStatus @default(PROCESSING_GATEWAY) @map("transaction_status")
+  errorDiagnosticPayload     Json?                   @map("error_diagnostic_payload")
+  createdAt                  DateTime                @default(now()) @map("created_at")
+
+  @@index([vaultId])
+  @@index([brandProfileId, collaborationId, transactionType])
+  @@index([collaborationId])
+  @@map("escrow_transaction_ledger")
+}
+
+model IdempotencyRegistry {
+  idempotencyKey String                    @id @map("idempotency_key")
+  requestPath    String                    @map("request_path")
+  executionState IdempotencyExecutionState @default(IN_FLIGHT) @map("execution_state")
+  cachedResponse Json?                     @map("cached_response")
+  lockedAt       DateTime                  @default(now()) @map("locked_at")
+  updatedAt      DateTime                  @updatedAt @map("updated_at")
+
+  @@map("idempotency_registry")
+}
+
+// Relevant external ownership models present in production and intentionally
+// referenced rather than copied in full here:
+// - CreatorBankDetails
+// - CreatorSettlementProfile
+// - CreatorShippingAddress
+// - BrandEscrowVault
+// - UceCampaign / UceCampaignCommercials / UceCampaignBrief / UceCampaignProduct
