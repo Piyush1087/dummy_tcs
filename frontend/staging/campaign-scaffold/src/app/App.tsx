@@ -3,10 +3,11 @@ import { ApplicationShell } from "./ApplicationShell";
 import { CampaignPage } from "../features/campaign/CampaignPage";
 import type { CampaignUiAction, CampaignUiActionResult } from "../features/campaign/actionModel";
 import { createStagingCampaignCommandAdapter } from "../features/campaign/commandAdapter";
-import { createExecutableCampaignReadAdapter, createScenarioCampaignReadAdapter } from "../features/campaign/readAdapter";
+import { createExecutableCampaignReadAdapter } from "../features/campaign/readAdapter";
 import type { CampaignPageView } from "../features/campaign/types";
 import { CampaignCommandHarness } from "../staging/CampaignCommandHarness";
-import { scenarioIds, scenarioLabel, type ScenarioId } from "../features/campaign/scenarios";
+import { scenarioIds, scenarioLabel, type ScenarioId } from "../staging/scenarioFixtures";
+import { createScenarioCampaignReadAdapter } from "../staging/scenarioReadAdapter";
 
 export function App() {
   const [scenario, setScenario] = useState<ScenarioId | "normal">("normal");
@@ -28,7 +29,7 @@ export function App() {
     return result;
   };
 
-  return <ApplicationShell><label className="scenarioSelector">Staging scenario <select onChange={(event) => setScenario(event.target.value as ScenarioId | "normal")} value={scenario}><option value="normal">Normal executable read</option>{scenarioIds.map((id) => <option key={id} value={id}>{scenarioLabel[id]}</option>)}</select></label>
+  return <ApplicationShell><div className="stagingScenarioControls" aria-label="Development-only Campaign scenario controls"><p className="eyebrow">Development only</p><label className="scenarioSelector">Visual scenario <select onChange={(event) => setScenario(event.target.value as ScenarioId | "normal")} value={scenario}><option value="normal">Normal executable read</option>{scenarioIds.map((id) => <option key={id} value={id}>{scenarioLabel[id]}</option>)}</select></label><p className="harnessHint">Scenario fixtures are presentation-only. Commands are disabled outside normal executable mode.</p></div>
     {view ? <><CampaignPage adapter={adapter} onAction={handleAction} view={view} /><CampaignCommandHarness adapter={adapter} commands={commands} enabled={scenario === "normal"} onRefresh={refresh} view={view}/></> : <p className="loadingState">Loading Campaign content area…</p>}
   </ApplicationShell>;
 }
