@@ -1,8 +1,8 @@
-version: "1.1"
+version: "1.2"
 status: FROZEN
 module: create_campaign
 contract: field_object_contract
-phase: PHASE_1A_RECONCILED
+phase: PHASE_1D_EXECUTABLE_RECONCILED
 
 campaign:
   aggregate_root: true
@@ -152,12 +152,15 @@ ai_recommendation:
   abandonment: {campaign_created: false, original_recommendation_retained: true}
 
 backend_mapping:
-  status: PHASE_1A_RECONCILIATION_REQUIRED
+  status: PHASE_1D_EXECUTABLE_VALIDATION_RECONCILED
   canonical_product_semantics: THIS_FILE
   executable_validation_target: backend/validation/campaign/campaign.schema.ts
   shared_validation_target: backend/validation/shared/campaign.shared.schema.ts
   persistence_target: backend/campaign_schema.prisma
-  reconciliation_notes:
-    - "Do not change persistence solely to rename product-facing enum labels when an explicit translation boundary is sufficient."
-    - "System-derived KPI and currency fields must not become frontend/business-user authority merely because historical executable schemas currently accept them."
-    - "Executable reconciliation should be applied together with affected fixtures/tests to preserve the verified Campaign Page staging package."
+  persistence_structural_change_required_in_phase_1: false
+  executable_notes:
+    - "Campaign Create/Edit boundary now uses canonical product visibility and compensation vocabulary; adapters translate to historical persistence enum names."
+    - "System-derived KPI and currency are removed from Brand-authored Campaign input authority."
+    - "Draft input permits incomplete but structurally valid field patches; step-completion schemas enforce required presence."
+    - "Publish service remains responsible for loaded aggregate readiness, taxonomy membership, derived KPI/currency readiness, and creation publish-from vs today."
+    - "Normalized geography service/adapter validation remains dependent on the shared geography contract; generic JSON storage is not treated as product semantics."
