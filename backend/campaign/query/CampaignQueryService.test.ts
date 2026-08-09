@@ -20,4 +20,24 @@ describe("CampaignQueryService",()=>{
     expect(commands.resume({campaignId:"campaign-staging"})).toEqual({ok:true,data:{status:"LIVE"}});
     expect((await query.getCampaignPage("campaign-staging")).campaign.lifecycleStatus).toBe("LIVE");
   });
+
+  it("reports active Campaign Product and published Brief counts after deactivation",async()=>{
+    const store=createStagingCampaignStore();
+    const commands=new CampaignCommandService(new StagingCommandRepository(store));
+    const query=new CampaignQueryService(new StagingCampaignReadRepository(store));
+
+    expect((await query.getCampaignPage("campaign-staging")).campaign).toMatchObject({productCount:2,briefCount:3});
+    expect(commands.deactivateProduct({campaignId:"campaign-staging",campaignAssetId:"asset-serum"})).toEqual({ok:true,data:{campaignAssetId:"asset-serum",status:"PAUSED"}});
+    expect((await query.getCampaignPage("campaign-staging")).campaign).toMatchObject({productCount:1,briefCount:1});
+  });
+
+  it("projects Applicant terminal state after an authoritative decision",async()=>{
+    const store=createStagingCampaignStore();
+    const commands=new CampaignCommandService(new StagingCommandRepository(store));
+    const query=new CampaignQueryService(new StagingCampaignReadRepository(store));
+
+    expect(commands.approveApplicant({applicationId:"application-anya"})).toEqual({ok:true,data:{status:"APPROVED"}});
+    const applicants=await query.getApplicants("campaign-staging");
+    expect(applicants.applicants[0]?.applicationStatus).toBe("APPROVED");
+  });
 });
