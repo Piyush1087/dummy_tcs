@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:campaign-schema": "vitest run ../../../backend/validation/campaign/campaign.schema.test.ts"
   },
   "dependencies": {
     "react": "latest",
@@ -22,8 +23,8 @@
     "@types/react-dom": "latest",
     "@vitejs/plugin-react": "latest",
     "eslint": "latest",
-    "typescript": "latest",
-    "typescript-eslint": "latest",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.66.0",
     "vitest": "latest"
   }
 }
