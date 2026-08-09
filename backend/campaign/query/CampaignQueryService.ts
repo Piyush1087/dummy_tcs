@@ -33,13 +33,13 @@ export class CampaignQueryService {
 
     const share=operational?enabled:disabled;
     const supportedChannels: Array<"COPY_LINK" | "WHATSAPP" | "INSTAGRAM"> = operational?["COPY_LINK","WHATSAPP","INSTAGRAM"]:[];
-    const applicantsInstantiated=campaign.applicationStatuses!=null&&Object.keys(campaign.applicationStatuses).length>0;
+    const applicantsInstantiated=Object.keys(campaign.applicationStatuses).length>0;
     const discoveryInstantiated=campaign.discovery!=="UNAVAILABLE";
     const preserveOperationalWorkspaces=isLive||paused||historical;
     const discoveryVisible=preserveOperationalWorkspaces&&discoveryInstantiated;
     const applicantsVisible=preserveOperationalWorkspaces&&applicantsInstantiated;
     const reportingAvailable=isLive||paused||historical;
-    const intelligenceAvailable=(operational||paused)&&campaign.suppliedProjections.intelligence.discovery!=="UNAVAILABLE";
+    const intelligenceAvailable=(operational||paused)&&campaign.discovery!=="UNAVAILABLE";
 
     return {
       campaign:{
