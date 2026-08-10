@@ -1,7 +1,7 @@
 # Creator Shop Collaboration Module — Canonical Entry Point
 
 Status: CANONICAL / FROZEN FOR IMPLEMENTATION
-Version: 1.0
+Version: 1.1
 
 This directory is the canonical entry point for the Creator Shop Collaboration module. It defines the independent operational aggregate created from one approved Application and the execution workflow from commercial agreement through securement, fulfillment, production, publishing/settlement, completion and post-completion feedback.
 
@@ -31,13 +31,14 @@ Canonical lifecycle is independent from workflow stage:
 
 When Collaboration artifacts overlap, use this order:
 
-1. `collaboration/backend/collaboration_schema.prisma` — canonical persisted Collaboration truth, v1.1 frozen.
-2. `backend/validation/collaboration/collaboration.schema.ts` — executable input/query boundary validation.
-3. `collaboration/backend/command_contract.md` and `collaboration/backend/read_model_contract.md` — canonical mutation/query contracts.
-4. `collaboration/backend/implementation_map.md` — production NestJS migration/orchestration instructions.
-5. Frozen domain contracts under `collaboration/contracts/` — product/domain semantics and ownership boundaries.
-6. Frontend contracts under `frontend/collaboration/` — UI state, interaction, copy, hydration and production modification behavior.
-7. Reconciliation/review/baseline artifacts under `collaboration/backend/` — implementation evidence and traceability; they do not override the canonical layers above.
+1. `collaboration/backend/collaboration_schema.prisma` — canonical persisted Collaboration truth, v1.2 frozen.
+2. `collaboration/backend/financial_boundary_reconciliation.md`, `collaboration/backend/financial_schema_delta.md` and `collaboration/backend/financial_contract_reconciliation.md` — canonical Phase 3.1 financial ownership/schema/runtime overlay for pricing, India commission/GST, Escrow reserve and future Payout boundaries.
+3. `backend/validation/collaboration/collaboration.schema.ts` — executable input/query boundary validation.
+4. `collaboration/backend/command_contract.md` and `collaboration/backend/read_model_contract.md` — canonical mutation/query contracts, read together with the Phase 3.1 financial overlay above.
+5. `collaboration/backend/implementation_map.md` — production NestJS migration/orchestration instructions.
+6. Frozen domain contracts under `collaboration/contracts/` — product/domain semantics and ownership boundaries, read together with the Phase 3.1 financial overlay where Securement/financial semantics are affected.
+7. Frontend contracts under `frontend/collaboration/` — UI state, interaction, copy, hydration and production modification behavior.
+8. Other reconciliation/review/baseline artifacts under `collaboration/backend/` — implementation evidence and traceability; they do not override the canonical layers above.
 
 If a lower-authority file conflicts with a higher-authority file, do not silently implement the lower-authority version. Resolve the conflict against the frozen product decision first.
 
@@ -51,6 +52,12 @@ If a lower-authority file conflicts with a higher-authority file, do not silentl
 
 These five contracts define aggregate identity, lifecycle/workflow, runtime transition rules, commercial/escrow/resolution policy and cross-module ownership.
 
+For Phase 3.1 financial semantics, the canonical overlay is:
+
+- `collaboration/backend/financial_boundary_reconciliation.md`
+- `collaboration/backend/financial_schema_delta.md`
+- `collaboration/backend/financial_contract_reconciliation.md`
+
 ## Canonical backend package
 
 Implementation-authority files:
@@ -58,6 +65,9 @@ Implementation-authority files:
 - `collaboration/backend/collaboration_schema.prisma`
 - `collaboration/backend/command_contract.md`
 - `collaboration/backend/read_model_contract.md`
+- `collaboration/backend/financial_boundary_reconciliation.md`
+- `collaboration/backend/financial_schema_delta.md`
+- `collaboration/backend/financial_contract_reconciliation.md`
 - `collaboration/backend/implementation_map.md`
 - `backend/validation/collaboration/collaboration.schema.ts`
 - `backend/validation/collaboration/collaboration.schema.test.ts`
@@ -93,16 +103,22 @@ Frontend implementation principle: retain and adapt the existing Collaboration w
 - Collaboration retains source references plus a locked execution snapshot; later Campaign edits do not silently mutate active obligations.
 - Backend commands own transitions; clients never PATCH lifecycle/stage/substate directly.
 - `actionRequiredBy` and `availableActions` are derived read-model outputs, not persisted workflow authority.
-- Full agreed Creator cash fee is secured in escrow when the platform/escrow rail applies.
+- For the platform/escrow rail, Securement locks 100% of the Collaboration commercial reserve, not merely the Creator fee.
+- For India MVP, commercial reserve = Creator gross fee + plan-owned platform commission + GST on platform commission only.
+- Current Founder's Plan platform commission = 7%, resolved outside Collaboration and snapshotted when terms lock.
+- Current India platform-commission GST = 18%; GST is not applied to Creator gross fee.
+- Gateway/card acquisition charges remain Escrow-owned and outside Collaboration reserve/refund; the current card processing charge is non-refundable.
+- Commission and GST follow Creator gross entitlement/refund proportionally.
+- Creator TDS/withholding is deliberately deferred from MVP Collaboration runtime and remains future Payout-owned logic.
 - Advance percentage is configuration, not a fixed 30/70 payment split.
 - BARTER is not a payment rail; zero-cash + product/service consideration represents barter-like value exchange naturally.
 - Fulfillment comes from frozen Create Campaign Brand Support configuration, never Brand industry.
-- The second unresolved Fulfillment failure hard-stops normal execution with Creator entitlement 0 and full Brand refund; fault adjudication is not required for this MVP outcome.
+- The second unresolved Fulfillment failure hard-stops normal execution with Creator entitlement 0 and full Brand commercial refund entitlement; fault adjudication is not required for this MVP outcome.
 - Production is per locked Deliverable. Each Deliverable has independent submissions/version history and a maximum of two Brand-requested revision rounds.
 - Every submitted version gets a 72h Brand review deadline.
 - `AUTO_APPROVED` satisfies Production but does not itself authorize public posting.
 - Publishing/compliance is Deliverable-aware; there is no universal Collaboration-level live-post URL.
-- Financial entitlement is Collaboration-owned; money movement is Payout-owned.
+- Financial entitlement is Collaboration-owned; Escrow owns reserve/ledger movement and Payout owns payout/refund execution.
 - Completion depends on required execution + authoritative financial settlement, not feedback.
 - Feedback is post-completion and double-blind until both submit or the 48h window expires.
 - Persisted HTTP/backend reads reconstruct the Collaboration. WebSocket is notification/invalidation only.
@@ -116,19 +132,23 @@ The module is frozen for implementation while preserving several intentionally o
 2. **Pause semantics.** Lifecycle value exists; pause/resume authority, timer behavior and deadline effects remain unassigned.
 3. **Scheduler technology.** 72h auto-approval and 48h feedback reveal require stale-safe SYSTEM commands; the queue/cron/worker technology is implementation-owned.
 4. **Asset provider.** Collaboration persists provider-neutral asset/evidence references; storage/upload provider remains outside Collaboration.
-5. **Exact Payout/FX API/event shapes.** Commercial entitlement and evidence boundaries are frozen; provider-specific execution contracts may be reconciled during implementation.
+5. **Exact Payout/FX API/event shapes.** Gross commercial entitlement/refund and evidence boundaries are frozen; provider-specific execution contracts may be reconciled during implementation.
+6. **India Creator TDS implementation.** TDS/withholding is intentionally deferred for MVP and belongs to the later dedicated Payout phase.
+7. **Non-India financial policies.** The v1.2 financial model is geography-extensible, but only India commission/GST/escrow policy is frozen here.
 
 These are not permission to invent competing domain semantics.
 
 ## Production migration principle
 
-Production already contains working Collaboration infrastructure. Use `collaboration/backend/implementation_map.md` and `frontend/collaboration/implementation_map.md` to evolve it via RETAIN / ADAPT / SPLIT / RETIRE / MOVE / NEW classifications.
+Production already contains working Collaboration, Subscription and Escrow infrastructure. Use the canonical backend artifacts and frontend implementation map to evolve it via RETAIN / ADAPT / SPLIT / RETIRE / MOVE / NEW classifications.
 
-Do not create parallel operational aggregates, a new frontend from scratch, a generic state-update API, or a second escrow/payment domain.
+Do not create parallel operational aggregates, a new frontend from scratch, a generic state-update API, a second escrow/payment domain, or a second subscription/pricing domain.
 
 ## Developer/Codex handoff
 
 Use `collaboration/developer_handoff_manifest.md` as the implementation reading order and task boundary. It distinguishes canonical inputs from production evidence and specifies what may and may not be inferred.
+
+For Phase 3 financial correction, Codex/developers must additionally read the three Phase 3.1 financial artifacts before changing Negotiation/Securement code.
 
 ## Change discipline
 
