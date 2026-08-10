@@ -1,7 +1,7 @@
 // ============================================================================
 // CREATOR SHOP — COLLABORATION PRISMA WORKING VIEW
 // ============================================================================
-// Version: 1.1
+// Version: 1.2
 // Status: CANONICAL / FROZEN
 //
 // Sources:
@@ -10,6 +10,8 @@
 // - collaboration/contracts/collaboration_workflow_state_contract.md
 // - collaboration/contracts/collaboration_commercial_resolution_contract.md
 // - collaboration/contracts/collaboration_integration_contract.md
+// - collaboration/backend/financial_boundary_reconciliation.md
+// - collaboration/backend/financial_schema_delta.md
 // - collaboration/backend/production_schema_baseline.prisma
 // - collaboration/backend/schema_reconciliation.md
 // - collaboration/backend/dependency_check.md
@@ -20,8 +22,20 @@
 // -------
 // Canonical TARGET WORKING VIEW for Collaboration persistence. It remains
 // separate from the untouched production baseline and migration instructions.
-// Referenced Campaign/User/Brand/Payout models may be declared elsewhere in the
-// integrated production schema.
+// Referenced Campaign/User/Brand/Escrow/Payout models may be declared elsewhere
+// in the integrated production schema.
+//
+// FINANCIAL MODEL — V1.2
+// ----------------------
+// Creator-specific commercial obligation now snapshots the pricing tier,
+// business geography, platform commission and geography-specific tax applied to
+// that commission. For India MVP, requiredSecuredAmount means Creator gross fee
+// + platform commission + GST on platform commission. Gateway/card acquisition
+// fees remain Escrow-owned and are NOT part of Collaboration reserve.
+//
+// Creator TDS/withholding is deliberately deferred for MVP. Collaboration owns
+// gross entitlement/refund policy; Payout remains the future withholding/net-
+// disbursement authority.
 //
 // IMPORTANT OPEN PRODUCT-DATA GAP
 // --------------------------------
@@ -308,15 +322,41 @@ model CollaborationCommercialAgreement {
 
   nonCashConsideration Json? @map("non_cash_consideration")
 
+  // Financial-policy snapshots are resolved when Creator-specific terms lock.
+  // They are nullable for legacy/pre-lock rows, but required by runtime before
+  // PLATFORM_ESCROW Securement proceeds for new canonical Collaborations.
+  pricingTierSnapshot String? @map("pricing_tier_snapshot") @db.VarChar(80)
+  businessCountryCodeSnapshot String? @map("business_country_code_snapshot") @db.VarChar(2)
+  financialPolicyVersionSnapshot String? @map("financial_policy_version_snapshot") @db.VarChar(80)
+
+  // Percentage points: 7.0000 means 7%.
+  platformCommissionRateSnapshot Decimal? @map("platform_commission_rate_snapshot") @db.Decimal(7, 4)
+  platformCommissionAmount Decimal? @map("platform_commission_amount") @db.Decimal(14, 2)
+
+  // Geography-owned tax applied only to platform commission. For India MVP,
+  // 18.0000 means 18%; GST is NOT applied to agreedCreatorFee.
+  platformCommissionGstRateSnapshot Decimal? @map("platform_commission_gst_rate_snapshot") @db.Decimal(7, 4)
+  platformCommissionGstAmount Decimal? @map("platform_commission_gst_amount") @db.Decimal(14, 2)
+
   paymentRail CollaborationPaymentRail @default(PLATFORM_ESCROW) @map("payment_rail")
 
   // Null means Securement has not yet been evaluated. NOT_REQUIRED is a real
   // evaluated outcome and must not be used as a synonym for not started.
   securementState CollaborationSecurementState? @map("securement_state")
 
+  // V1.2 canonical meaning for PLATFORM_ESCROW:
+  // agreedCreatorFee + platformCommissionAmount + platformCommissionGstAmount.
+  // Gateway/card acquisition charges and TDS are excluded.
   requiredSecuredAmount Decimal? @map("required_secured_amount") @db.Decimal(14, 2)
   confirmedSecuredAmount Decimal? @map("confirmed_secured_amount") @db.Decimal(14, 2)
 
+  // Stable reference to the Escrow-owned Collaboration reserve/lock execution.
+  escrowLockRef String? @map("escrow_lock_ref")
+
+  // Retained transport/evidence references. For PLATFORM_ESCROW these may be
+  // compatibility/integration references, but the canonical operation is a
+  // reserve/lock from the pooled Brand Escrow vault rather than per-Collab
+  // direct Razorpay collection.
   fundingInstructionRef String? @map("funding_instruction_ref")
   fundingConfirmationRef String? @map("funding_confirmation_ref")
   manualPaymentEvidenceRef String? @map("manual_payment_evidence_ref")
@@ -330,6 +370,7 @@ model CollaborationCommercialAgreement {
 
   @@index([negotiationState])
   @@index([securementState])
+  @@index([pricingTierSnapshot, businessCountryCodeSnapshot])
   @@map("collaboration_commercial_agreements")
 }
 
@@ -489,8 +530,23 @@ model CollaborationFinancialResolution {
   status CollaborationResolutionStatus @default(NOT_REQUIRED)
   outcome CollaborationFinancialOutcome?
 
+  // Compatibility aliases retained for legacy consumers. New canonical runtime
+  // populates these atomically from the richer decomposition below.
   creatorEntitlementAmount Decimal? @map("creator_entitlement_amount") @db.Decimal(14, 2)
   brandRefundEntitlementAmount Decimal? @map("brand_refund_entitlement_amount") @db.Decimal(14, 2)
+
+  // Canonical commercial entitlement decomposition.
+  creatorGrossEntitlementAmount Decimal? @map("creator_gross_entitlement_amount") @db.Decimal(14, 2)
+  creatorCommercialRefundAmount Decimal? @map("creator_commercial_refund_amount") @db.Decimal(14, 2)
+
+  platformCommissionRetainedAmount Decimal? @map("platform_commission_retained_amount") @db.Decimal(14, 2)
+  platformCommissionRefundAmount Decimal? @map("platform_commission_refund_amount") @db.Decimal(14, 2)
+
+  platformCommissionGstRetainedAmount Decimal? @map("platform_commission_gst_retained_amount") @db.Decimal(14, 2)
+  platformCommissionGstRefundAmount Decimal? @map("platform_commission_gst_refund_amount") @db.Decimal(14, 2)
+
+  brandCommercialRefundEntitlementAmount Decimal? @map("brand_commercial_refund_entitlement_amount") @db.Decimal(14, 2)
+
   currency String? @db.VarChar(3)
 
   reasonCode String? @map("reason_code")
@@ -521,6 +577,8 @@ model CollaborationSettlement {
 
   state CollaborationSettlementState @default(NOT_ELIGIBLE)
 
+  // MVP remains gross-at-Collaboration-boundary because Creator TDS is deferred.
+  // A later Payout phase owns withholding/net-disbursement fields and evidence.
   creatorSettlementAmount Decimal? @map("creator_settlement_amount") @db.Decimal(14, 2)
   brandRefundAmount Decimal? @map("brand_refund_amount") @db.Decimal(14, 2)
   currency String? @db.VarChar(3)
@@ -654,11 +712,13 @@ model CollaborationEvent {
 // - No storage-provider identity in submission records.
 // - No Stage 6 Feedback execution stage.
 // - No assumption that persisted deadlines execute themselves.
-// - No direct Payout money-movement ownership.
+// - No direct Escrow ledger or Payout money-movement ownership.
+// - No gateway/card acquisition fee inside requiredSecuredAmount.
+// - No Creator TDS/withholding calculation in Collaboration for MVP.
 // - No PAUSE behavior beyond preserving the lifecycle capability.
 // - Inbox cache fields are projections and never workflow authority.
 //
 // Existing production escrow locks, ledger and idempotency infrastructure are
-// migration/reuse targets and remain Payout/infrastructure-owned; they should be
-// generalized away from fixed 30/70 policy rather than duplicated here.
+// migration/reuse targets and remain Escrow/Payout/infrastructure-owned; they
+// should be generalized away from fixed 30/70 policy rather than duplicated.
 // ============================================================================
