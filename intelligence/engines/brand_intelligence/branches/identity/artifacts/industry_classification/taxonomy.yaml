@@ -1,32 +1,36 @@
 id: industry_classification_taxonomy
-version: 1.0-frozen
+version: 1.1-frozen
 status: FROZEN
 processor: industry_classification
 
-purpose: Canonical Industry and MVP Sub-industry taxonomy used by industry_classification. The Sub-industry list is intentionally small for MVP and is designed to be expanded without processor or object-model changes.
+purpose: Controlled downstream Industry/Sub-industry taxonomy for supported brands after Gatekeeper admission. Top-level Industry uses the existing production backend IndustryVertical vocabulary; this file does not define a new persisted Industry enum.
 
 canonical_industry_contract:
   status: FROZEN
-  values:
+  source_of_truth: production Prisma IndustryVertical
+  supported_values:
     - D2C
-    - AI_SAAS
+    - SAAS_AI
     - HEALTHCARE
-    - OFFLINE_EXPERIENCES
-  rule: All new Intelligence Engine outputs and artifacts use only these canonical IDs. Legacy application enum names must not leak into new intelligence outputs.
+    - OFFLINE_SERVICES
+  rule: Downstream Brand Intelligence executes only for these confirmed supported IndustryVertical values.
 
-legacy_compatibility:
-  migration_status: DO_NOT_RENAME_EXISTING_ENUMS_YET
+admission_boundary:
+  gatekeeper_taxonomy_contract: intelligence/runtime/admission/taxonomy_contract.yaml
+  rule: Gatekeeper admission is outside the Identity/Surface-Deep branch. Gatekeeper Sub-industry is provisional free text and is not validated against this controlled list.
+
+legacy_application_enums:
   BrandRoutingType:
     D2C_SKINCARE: D2C
-    SAAS_PRODUCT: AI_SAAS
+    SAAS_PRODUCT: SAAS_AI
     HEALTHCARE_TREATMENT: HEALTHCARE
-    OFFLINE_EXPERIENCE: OFFLINE_EXPERIENCES
+    OFFLINE_EXPERIENCE: OFFLINE_SERVICES
   CollaborationIndustryType:
     D2C_ECOMMERCE: D2C
-    AI_SAAS: AI_SAAS
+    AI_SAAS: SAAS_AI
     HEALTHCARE_CLINICAL: HEALTHCARE
-    OFFLINE_EXPERIENCES: OFFLINE_EXPERIENCES
-  adapter_rule: Translate canonical values to/from legacy enums only at existing application boundaries until a controlled migration is completed.
+    OFFLINE_EXPERIENCES: OFFLINE_SERVICES
+  adapter_rule: Legacy/specialized enums remain inside their existing application domains. They are not additional canonical Industry taxonomies.
 
 hierarchy:
   D2C:
@@ -43,7 +47,7 @@ hierarchy:
       - id: OTHER_D2C
         label: Other D2C
 
-  AI_SAAS:
+  SAAS_AI:
     label: AI / SaaS
     sub_industries:
       - id: MARKETING_SALES
@@ -54,7 +58,7 @@ hierarchy:
         label: Finance & FinTech
       - id: HR_RECRUITMENT
         label: HR & Recruitment
-      - id: OTHER_AI_SAAS
+      - id: OTHER_SAAS_AI
         label: Other AI / SaaS
 
   HEALTHCARE:
@@ -71,7 +75,7 @@ hierarchy:
       - id: OTHER_HEALTHCARE
         label: Other Healthcare
 
-  OFFLINE_EXPERIENCES:
+  OFFLINE_SERVICES:
     label: Offline Experiences / Services
     sub_industries:
       - id: FITNESS_WELLNESS
@@ -82,43 +86,37 @@ hierarchy:
         label: Education & Training
       - id: EVENTS_ENTERTAINMENT
         label: Events & Entertainment
-      - id: OTHER_OFFLINE_EXPERIENCES
+      - id: OTHER_OFFLINE_SERVICES
         label: Other Offline Experiences / Services
 
 sub_industry_policy:
   status: MVP_FROZEN
   controlled_taxonomy: true
+  stage: downstream_intelligence_after_supported_industry_confirmation
   user_edit_control: dependent_searchable_dropdown
   ai_output_control: must_select_from_taxonomy
-  expansion_rule: New sub-industries may be added as taxonomy data without changing the processor contract or Intelligence Object definition.
-  fallback_rule: Use the parent-specific OTHER value when the brand belongs to the canonical Industry but no current MVP sub-industry is a defensible fit. Do not force an incorrect specific category.
+  expansion_rule: Add recurring categories based on production scan evidence/OTHER frequency without changing the processor or IndustryVertical.
+  fallback_rule: Use the parent-specific OTHER value when no current specific category is defensible. Never reject a supported brand because a more specific Sub-industry is absent.
 
 industry_niche_policy:
   status: FROZEN
   controlled_taxonomy: false
   type: evidence_grounded_nullable_string
-  rule: Industry niche is a specific evidence-supported specialization within the confirmed Industry and Sub-industry. It is not restricted to a fixed list and may be null when no useful niche is supported.
+  rule: Industry niche provides specific evidence-supported specialization and may carry useful detail missing from the intentionally coarse Sub-industry taxonomy.
 
 classification_principles:
-  - Industry is the stable top-level platform business category.
-  - Sub-industry is a controlled functional/business sector constrained by Industry.
-  - Industry niche is a more specific evidence-supported specialization and may be null.
+  - Industry is the stable production IndustryVertical value.
+  - Gatekeeper Sub-industry is provisional and free text.
+  - Downstream Sub-industry is controlled and constrained by confirmed Industry.
+  - Industry niche is free-form, evidence-grounded specificity.
   - Taxonomy classifies the business, not merely website content topics.
-  - Pharma must not be silently classified as HEALTHCARE; its placement requires a deliberate future taxonomy decision.
-
-precedence_rules:
-  status: FROZEN_FOR_MVP
-  order:
-    - D2C
-    - AI_SAAS
-    - HEALTHCARE
-    - OFFLINE_EXPERIENCES
-  note: Apply precedence only when a business genuinely spans multiple canonical industries; processor reasoning must still classify the primary business represented by the submitted brand/domain.
+  - Pharma placement remains a deliberate future taxonomy decision.
 
 validation:
-  industry_must_be_one_of_canonical_values: true
-  legacy_values_rejected_from_new_intelligence_output: true
-  sub_industry_must_belong_to_industry: true
+  gatekeeper_legacy_rejection_rule_removed: true
+  note: Provider aliases are normalized at the admission/provider boundary; canonical IndustryVertical values must never be rejected because the same string also appears in another legacy/specialized enum.
+  downstream_industry_must_be_supported_industry_vertical: true
+  downstream_sub_industry_must_belong_to_industry: true
   other_sub_industry_must_match_parent_industry: true
   niche_must_be_compatible_with_confirmed_industry_and_sub_industry: true
   allow_null_niche: true
