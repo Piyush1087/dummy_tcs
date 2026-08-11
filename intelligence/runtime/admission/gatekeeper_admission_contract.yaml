@@ -1,0 +1,131 @@
+id: gatekeeper_admission_contract
+version: 1.0-frozen
+status: FROZEN
+scope: pre_intelligence_onboarding_admission
+
+purpose: Define the production admission flow that occurs before Surface/Deep Brand Intelligence. Gatekeeper decides whether a submitted domain is eligible to enter the Intelligence journey; it is not part of the Identity branch.
+
+production_alignment:
+  existing_backend_entrypoints:
+    - POST /api/v1/discovery/resolve
+    - POST /api/v1/discovery/validate
+  reuse_existing_services:
+    - gateAndNormalizeBrandUrl
+    - BrandScanGateService
+    - DiscoveryReachabilityService
+    - existing Gemini Gatekeeper provider binding
+  frontend_entry: landing URL capture / Analyze My Brand
+  rule: Preserve existing frontend/backend admission contracts where possible and replace internal classification/orchestration behind them incrementally.
+
+flow:
+  - id: normalize_and_static_gate
+    type: DETERMINISTIC
+    responsibilities:
+      - trim URL and strip query/hash tracking noise
+      - add protocol when absent
+      - normalize www and canonical apex URL
+      - reject invalid syntax/credentials/protocol
+      - reject private/reserved/local targets
+      - reject blocked social hosts
+      - reject known marketplace host labels
+      - reject hard-blocked government/military/education suffixes
+      - reject configured suspicious TLDs
+    terminal_on_failure: true
+
+  - id: application_scan_gate
+    type: APPLICATION_POLICY
+    responsibilities:
+      - detect claimed organization
+      - detect existing verified brand
+      - enforce scan/domain/IP safeguards
+      - resume eligible recent unverified scans
+      - allow new submission
+    terminal_or_resume_outcomes: true
+
+  - id: reachability_and_content_gate
+    type: DETERMINISTIC_HTTP
+    responsibilities:
+      - verify reachable public site
+      - detect infrastructure failure / redirect hijack
+      - detect parked domain
+      - detect unreadable content
+      - detect foreign-language-only storefront according to current product policy
+    note: Preserve production behavior initially; may later be optimized if direct-provider retrieval proves sufficient and security/reliability is not reduced.
+
+  - id: ai_site_and_industry_classification
+    type: AI
+    access_mode: website_direct
+    model_profile: fast_classification
+    responsibilities:
+      - classify site/business type sufficiently to reject unsupported website classes not caught by static blocklists
+      - classify IndustryVertical
+      - return provisional short sub-industry label
+      - return confidence
+    output_contract:
+      industry: IndustryVertical
+      sub_industry: provisional_free_text
+      confidence: integer_0_100
+      supported: derived_or_validated_against_industry_bucket
+      site_type: optional_initially_required_when_new_gatekeeper_prompt_is_upgraded
+    no_crawl: true
+
+  - id: admission_decision
+    type: DETERMINISTIC
+    responsibilities:
+      - supported IndustryVertical -> eligible_for_user_industry_confirmation
+      - unsupported IndustryVertical -> reject/waitlist according to current policy
+      - hard-blocked IndustryVertical -> hard block
+      - UNKNOWN -> do not enter Intelligence journey
+    rule: Controlled Sub-industry membership is never an admission criterion.
+
+user_confirmation_boundary:
+  required_before_surface_deep_execution: true
+  required_field: industry
+  source: gatekeeper provisional classification
+  on_user_confirm_supported_industry: allow Surface/Deep Intelligence execution
+  on_user_disagree: route to correction/appeal flow to be designed before production freeze
+  note: Do not let a user freely self-select a supported Industry solely to bypass rejection; manual-review/override mechanics will be defined separately.
+
+execution_boundary:
+  gatekeeper_profile: gatekeeper_scan
+  downstream_profile: surface_deep_intelligence
+  invariant: surface_deep_intelligence is invoked only after a supported IndustryVertical has passed admission and the required user-confirmation boundary.
+  downstream_input: confirmed IndustryVertical plus canonical domain/admission context
+
+persistence_alignment:
+  discovery_session_model: DiscoveryLead
+  relevant_existing_fields:
+    - rawUrl
+    - normalizedUrl
+    - status
+    - isSupported
+    - industry
+    - subIndustry
+    - securityScore
+    - temporaryPayload
+    - expiresAt
+    - classificationEvidence
+  rule: Reuse existing DiscoveryLead/session structures for Gatekeeper state unless a concrete missing field requires migration.
+
+rejection_families:
+  blocked_url_or_security:
+    examples: [INVALID_URL, SOCIAL_OR_MARKETPLACE, PRIVATE_OR_LOCAL_HOST, BLOCKED_TLD]
+  existing_account_or_control:
+    examples: [ORG_CLAIMED, BRAND_ACTIVE, VERIFICATION_REQUIRED, RESUME]
+  infrastructure:
+    examples: [HTTP_STATUS, DNS_OR_TIMEOUT, REDIRECT_HIJACK]
+  content_waitlist:
+    examples: [PARKED_DOMAIN, CONTENT_UNREADABLE, FOREIGN_LANGUAGE]
+  business_admission:
+    examples: [UNSUPPORTED_INDUSTRY, BLOCKED_INDUSTRY, UNKNOWN_INDUSTRY]
+  note: Existing HTTP/UI response names should be preserved initially even if internal reason taxonomy becomes more structured.
+
+manual_override_extension_point:
+  status: RESERVED_FOR_NEXT_JOURNEY_DESIGN_PASS
+  intent: allow a rejected brand to raise an "industry mapped incorrectly" concern without enabling self-service bypass
+  expected_components:
+    - appeal submission
+    - manual review
+    - auditable domain-level override/whitelist
+    - invitation/retry mechanism
+  rule: override must be deterministic and domain-specific; it must not modify the global Industry classifier merely to admit one exception.
