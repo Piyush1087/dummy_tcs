@@ -1,125 +1,137 @@
 # Campaign Phases 1–3 — Production Integration Review Manifest
 
-**Status:** Production implementation handoff for contract review  
+**Status:** Remediated production implementation snapshot; static review complete, runtime acceptance pending  
 **Branch:** `campaign/production-integration-review`  
-**Prepared:** 2026-08-12
+**Updated:** 2026-08-12
 
-## Source repositories
+## Current authoritative source branches
 
-| Role | Repository | Branch | Commit SHA |
-|------|------------|--------|------------|
-| Backend (clone — primary review) | `Piyush1087/creator-commerce-backend-v2-clone` | `feature/campaign-phase-1-3-be` | `efb89a333e1adf420b62673fe777c3ebcb9ce4ac` |
-| Backend (growth-verse) | `growth-verse/creator-commerce-backend-v2` | `feature/campaign-phase-1-3-be` | `efb89a333e1adf420b62673fe777c3ebcb9ce4ac` |
-| Frontend (clone — primary review) | `Piyush1087/creator-commerce-frontend-v2-clone` | `feature/campaign-phase-1-3-fe` | `e40839d11753da1fd26cbe25b5cb0712bde19521` |
-| Frontend (growth-verse) | `growth-verse/creator-commerce-frontend-v2` | `feature/campaign-phase-1-3-fe` | `e40839d11753da1fd26cbe25b5cb0712bde19521` |
+| Role | Repository | Branch | Reviewed head |
+|------|------------|--------|---------------|
+| Backend implementation | `Piyush1087/creator-commerce-backend-v2-clone` | `feature/campaign-phase-1-3-be` | `7533af6373fac9093d7c9d083f4f669545e9f7d2` |
+| Frontend implementation | `Piyush1087/creator-commerce-frontend-v2-clone` | `feature/campaign-phase-1-3-fe` | `351f280c98da6ae1a28c09bb2d78572b24e6d463` |
+| Review mirror | `Piyush1087/dummy_tcs` | `campaign/production-integration-review` | this branch; mirror updated after the source changes listed below |
 
-Clone and growth-verse remotes carry identical commit objects for this handoff.
+The older `growth-verse/**` remotes are not treated as current authority in this review because the remediation work in this session was written to the Piyush-owned clone feature branches. Do not assume those remotes are byte-identical without a separate comparison.
 
-## Package layout
+## Package purpose
 
 ```text
 production-integration/
-├── manifest.md          (this file)
-├── backend/             (34 files — production-relative paths preserved)
-└── frontend/            (18 files — production-relative paths preserved)
+├── manifest.md
+├── R2_STATIC_COMPLIANCE.md
+├── R2_APPROVAL_ATOMICITY.md
+├── backend/             production-relative Campaign/backend files
+└── frontend/            production-relative Campaign/frontend files
 ```
 
-Existing reference material under `campaign/**`, `docs/**`, handoffs, playbook, migration map, and `frontend/staging/**` was **not modified**.
+The mirror is a review package, not a standalone runnable application. Existing canonical material under `campaign/**`, `docs/**`, Phase 1–3 handoffs, the production migration playbook/map, and `frontend/staging/**` remains the comparison authority and was not replaced by the implementation snapshot.
 
----
+## Remediation incorporated after the original developer handoff
 
-## Backend files
+### Phase 1 / Create Campaign
 
-| Original path | Classification | Phase(s) | Reason |
-|---------------|----------------|----------|--------|
-| `docs/campaigns/backend-canonical-mapping.md` | NEW | 1 | Frozen BE→canonical field and lifecycle mapping decisions |
-| `prisma/schema.prisma` | MODIFIED | 1, 2, 3 | Campaign status enum (PUBLISHED/LIVE), Application and Share models |
-| `prisma/migrations/20260810120000_uce_campaign_status_published_live/migration.sql` | NEW | 1 | Add PUBLISHED and LIVE campaign statuses |
-| `prisma/migrations/20260810120000_uce_campaign_status_published_live/apply_step1.sql` | NEW | 1 | Migration helper for status enum transition |
-| `prisma/migrations/20260810120100_uce_campaign_status_drop_active/migration.sql` | NEW | 1 | Remove legacy ACTIVE status |
-| `prisma/migrations/20260811120000_uce_application_and_share/migration.sql` | NEW | 3 | Application-owned applicants and persisted Share tracking |
-| `src/features/brand-uce/validation/shared/campaign.shared.schema.ts` | NEW | 1 | Shared Zod primitives aligned to canonical contracts |
-| `src/features/brand-uce/validation/campaign/campaign.schema.ts` | NEW | 1 | Campaign domain Zod validation |
-| `src/features/brand-uce/validation/campaign/campaign.schema.test.ts` | NEW | 1 | Phase 1 validation test coverage |
-| `src/features/brand-uce/validation/campaign/run-campaign-schema-smoke.ts` | NEW | 1 | Local schema smoke runner |
-| `src/features/brand-uce/validation/applicants/application.schema.ts` | NEW | 3 | Application domain Zod validation |
-| `src/features/brand-uce/validation/index.ts` | NEW | 1 | Validation module exports |
-| `src/features/brand-uce/services/campaign-query.service.ts` | NEW | 2, 3 | Campaign read model — page, discovery, applications hydration |
-| `src/features/brand-uce/services/campaign-query.hydration.ts` | NEW | 2 | Capabilities, workspaces, readiness hydration helpers |
-| `src/features/brand-uce/services/campaign-query.hydration.smoke.ts` | NEW | 2 | Hydration smoke runner |
-| `src/features/brand-uce/services/campaign-command.service.ts` | NEW | 3 | Share execute and outreach compose commands |
-| `src/features/brand-uce/services/campaign-application.service.ts` | NEW | 3 | Application-owned applicants; approve/reject with Collaboration handoff |
-| `src/features/brand-uce/brand-uce.controller.ts` | MODIFIED | 2, 3 | Routes for page, discovery, applications, lifecycle, share, outreach |
-| `src/features/brand-uce/brand-uce.module.ts` | MODIFIED | 2, 3 | Wire query, command, and application services |
-| `src/features/brand-uce/services/brand-uce-campaign.service.ts` | MODIFIED | 1, 3 | Publish/go-live/pause/resume; Phase 1 create wizard adapters |
-| `src/features/brand-uce/schemas/uce-wizard.schema.ts` | MODIFIED | 1 | Visibility, compensation, currency aligned to Phase 1 contracts |
-| `src/features/co-pilot/core/ai-module.contract.ts` | MODIFIED | 1 | Campaign status ACTIVE→LIVE in co-pilot contract |
-| `src/features/co-pilot/modules/uce-campaign-list/campaign-list-validation.ts` | MODIFIED | 1 | Campaign list validation uses LIVE status |
-| `src/features/co-pilot/modules/uce-campaign-list/campaign-list.intents.ts` | MODIFIED | 1 | Campaign list intents use LIVE status |
-| `src/features/co-pilot/modules/uce-campaign-list/campaign-list.tools.ts` | MODIFIED | 1 | Campaign list tools use LIVE status |
-| `src/features/co-pilot/modules/uce-campaign-list/uce-campaign-list.ai-module.ts` | MODIFIED | 1 | AI module campaign status vocabulary update |
-| `src/features/co-pilot/services/co-pilot-campaign-classifier.service.ts` | MODIFIED | 1 | Classifier uses LIVE status |
-| `src/features/co-pilot/services/co-pilot-hitl.service.ts` | MODIFIED | 1 | HITL service uses LIVE status |
-| `src/features/creator-marketplace/services/creator-marketplace.service.ts` | MODIFIED | 1 | Campaign status read aligned to LIVE |
-| `src/features/creator-marketplace/services/creator-invitation.service.ts` | MODIFIED | 1 | Campaign status read aligned to LIVE |
-| `src/features/creator-uce/services/creator-uce-campaigns.service.ts` | MODIFIED | 1 | Creator campaign list status vocabulary |
-| `src/features/public-brand/public-brand.service.ts` | MODIFIED | 1 | Public brand campaign status read |
-| `src/features/brand-settings/services/brand-settings-integrations.service.ts` | MODIFIED | 1 | Minor integration touchpoint for campaign context |
-| `tsconfig.build.json` | MODIFIED | 1 | Include validation module in build |
+The production Create Campaign path was reconciled toward the frozen Campaign contract rather than leaving the canonical schema disconnected from the real wizard. The implementation now includes the canonical manual Draft/autosave/publish runtime, canonical objective/targeting/commercial semantics, derived currency handling, the canonical Creator Archetype library, canonical Affinity selection, and Google Places-normalized geography. The existing production Create Campaign presentation was adapted rather than replaced wholesale.
 
----
+Key implementation areas include:
 
-## Frontend files
+- canonical Campaign validation/schema and Create service/controller;
+- canonical draft API/runtime and Draft → Publish boundary;
+- production Create Campaign wizard/state/validation/mappers;
+- canonical archetype and affinity selectors;
+- Google Places geography selector and normalized geography validation.
 
-| Original path | Classification | Phase(s) | Reason |
-|---------------|----------------|----------|--------|
-| `src/features/uce/campaign-page/CanonicalCampaignPage.tsx` | NEW | 3 | Canonical Campaign Page shell consuming View DTO |
-| `src/features/uce/campaign-page/CreatorCard.tsx` | NEW | 3 | Creator card primitive for Campaign Page |
-| `src/features/uce/campaign-page/campaign-page.css` | NEW | 3 | Scoped Campaign Page styles |
-| `src/features/uce/campaign-page/types.ts` | NEW | 3 | View DTO and page-local types |
-| `src/pages/brand/uce/BrandUceCampaignDetailPage.tsx` | REPLACED | 3 | Detail page loads View DTO and composes CanonicalCampaignPage |
-| `src/pages/brand/uce/BrandUceCampaignDetailPage.css` | MODIFIED | 3 | Page padding and mobile shell clearance |
-| `src/features/uce/api/brand-uce-client.ts` | MODIFIED | 2, 3 | Page, discovery, applications, lifecycle, share, outreach API client |
-| `src/features/uce/contracts/brand-uce.contracts.ts` | MODIFIED | 1 | PUBLISHED/LIVE status types; View DTO contracts |
-| `src/features/uce/mappers/phase1-campaign-adapters.ts` | NEW | 1 | Phase 1 field adapters (visibility, compensation, KPI, currency) |
-| `src/features/uce/mappers/map-wizard-to-payload.ts` | MODIFIED | 1 | Wizard payload mapping via Phase 1 adapters |
-| `src/features/uce/schemas/campaign-wizard-schema.ts` | MODIFIED | 1 | Visibility and compensation schema aligned to contracts |
-| `src/features/uce/components/CampaignShareRouterModal.tsx` | MODIFIED | 3 | Share opens modal; execute on deliberate channel action |
-| `src/features/uce/components/CampaignShareRouterModal.css` | MODIFIED | 3 | Share modal styling |
-| `src/features/uce/components/CampaignListTabs.tsx` | MODIFIED | 1 | Tab filters use PUBLISHED/LIVE lifecycle |
-| `src/features/uce/utils/uce-format.ts` | MODIFIED | 1 | Status label formatting for new lifecycle |
-| `src/features/uce/components/CampaignWorkspaceZone1.tsx` | MODIFIED | 3 | Retired from detail page composition; minor status alignment |
-| `src/features/uce/uce-responsive.css` | MODIFIED | 3 | Responsive adjustments for Campaign Page layout |
-| `src/features/uce/RETIRED_CAMPAIGN_PIPELINE.md` | NEW | 3 | Documents pipeline/Zone1 retirement from detail page composition |
+### Phase 2 / state and command correctness
 
----
+The following contract-critical corrections are reflected in the source branches and mirror:
 
-## Unchanged dependencies (inspected, not modified)
+- `executionReady` = active Campaign Asset with active Brief;
+- Campaign Page Product/Brief counts use active/published semantics;
+- Applicants workspace state/counts are Application-owned;
+- Campaign `creationSource` is persisted/read rather than hard-coded;
+- Application approval, sibling supersession and canonical Collaboration provisioning are transaction-coordinated;
+- Collaboration provisioning supports an existing Prisma transaction and strict new-creation semantics;
+- stale Campaign lifecycle vocabulary was reconciled to `DRAFT / PUBLISHED / LIVE / PAUSED / COMPLETED / ARCHIVED`;
+- fabricated Campaign Copilot summaries/actions were removed. `copilotSummary` is `UNAVAILABLE` until an accepted Campaign Intelligence projection exists.
 
-| Original path | Classification | Phase(s) | Reason |
-|---------------|----------------|----------|--------|
-| `src/routes/app-routes.tsx` | UNCHANGED_DEPENDENCY | — | Campaign routes already existed; no route changes required |
-| `src/layouts/app-shell/**` | UNCHANGED_DEPENDENCY | — | Production AppShell retained; Campaign Page integrates within existing shell |
-| `src/design-system/aurora/**` | UNCHANGED_DEPENDENCY | — | Aurora primitives reused; no DS changes for Campaign handoff |
-| `src/features/brand-centre/**` | UNCHANGED_DEPENDENCY | — | Add Product integration unchanged; lazy detail endpoints only |
-| `src/features/creator-centre/**` | UNCHANGED_DEPENDENCY | — | Creator profile presentation reference only |
-| `src/features/collaboration/**` | UNCHANGED_DEPENDENCY | 3 | Collaboration handoff on Application approve; module not modified in FE |
+### Intelligence ownership decision
 
----
+AI-recommended Campaign generation and recommendation-to-Campaign translation are **not Campaign-module responsibilities**. They are owned by the Creator Shop Intelligence Engine. Existing Co-Pilot/HITL logic that translates recommendation-like data into the legacy Campaign wizard path is flagged as legacy/deprecation debt and must not be treated as the canonical AI-recommended Campaign creation implementation.
 
-## Deleted files
+Campaign retains only the persistence/integration surface required to accept authoritative Intelligence output, such as `creationSource = AI_RECOMMENDED` and future recommendation provenance.
 
-No production files were git-deleted in this handoff. Campaign pipeline/Zone1 components remain in the repository but are **retired from detail page composition** (see `RETIRED_CAMPAIGN_PIPELINE.md`).
+### Phase 3 / production frontend reconciliation
 
----
+The production Campaign Page now uses explicit Campaign-facing surface boundaries while retaining the production shell/Aurora primitives:
+
+- `CanonicalCampaignPage.tsx` — canonical Campaign page composition;
+- `CampaignDetailsDrawer.tsx` — Campaign Details drawer boundary;
+- `CreatorProfileDrawer.tsx` — Campaign-context creator profile boundary;
+- `OutreachComposerDrawer.tsx` — backend-resolved composer boundary; final send/DM execution remains disabled until canonical execution commands exist;
+- `ReportingDrawer.tsx` — bounded Campaign reporting surface. The legacy SaaS reporting payload is intentionally not consumed by the new Campaign Page; detailed Reporting waits for the accepted Reporting/Intelligence projection;
+- `CreatorCard.tsx` — compact Discovery/Applicants creator surface;
+- `campaign-page.css` — scoped responsive layout/drawer styles;
+- Aurora `SideDrawer` is reused via the shared Aurora export rather than duplicated inside Campaign.
+
+Product and Brief view/add flows remain connected through the retained/adapted production surfaces.
+
+## Important current classifications
+
+| Surface / boundary | Current classification | Notes |
+|--------------------|------------------------|-------|
+| Production AppShell/navigation | KEEP | Campaign renders inside the existing product shell |
+| Create Campaign UI | ADAPT | Production presentation retained; field/runtime semantics reconciled to Phase 1 |
+| Add Product | KEEP / ADAPT | Retain mature production flow; canonical Campaign Asset semantics remain authority |
+| Add Brief | KEEP / ADAPT | Retain mature production flow; canonical Brief semantics remain authority |
+| Campaign Page | REPLACE | New canonical Campaign Page architecture |
+| Discovery / Applicants | REPLACE / ADAPT | New Campaign-facing cards/workspaces; Application is applicant truth |
+| Creator Profile | ADD / REPLACE | Campaign-context SideDrawer |
+| Campaign Details | ADD | Lazy/read-oriented SideDrawer surface |
+| Reporting | REPLACE | Compact deterministic summary retained; detailed legacy SaaS reporting not reused |
+| Outreach | ADAPT | Composer boundary present; final Email/Priority DM execution deferred to owned command implementation |
+| Campaign Copilot | DEFER TO INTELLIGENCE | No fabricated Campaign Intelligence output |
+| AI recommendation → Campaign translation | DEFER TO INTELLIGENCE | Legacy translation path flagged for later retirement |
+
+## Source files materially added/changed by remediation
+
+This section records the most important additions after the original Phase 1–3 developer snapshot; it is not intended to duplicate every dependency already present in the mirror.
+
+### Backend
+
+- `src/features/brand-uce/services/campaign-query.service.ts`
+- `src/features/brand-uce/services/campaign-application.service.ts`
+- `src/features/collaboration/services/collaboration-provision.service.ts`
+- canonical Campaign Create/Draft controller/service/schema/migration files under `src/features/brand-uce/**` and `prisma/**`
+- Campaign lifecycle classifier vocabulary touchpoints under `src/features/co-pilot/**`
+
+### Frontend
+
+- `src/features/uce/campaign-page/CanonicalCampaignPage.tsx`
+- `src/features/uce/campaign-page/CampaignDetailsDrawer.tsx`
+- `src/features/uce/campaign-page/CreatorProfileDrawer.tsx`
+- `src/features/uce/campaign-page/OutreachComposerDrawer.tsx`
+- `src/features/uce/campaign-page/ReportingDrawer.tsx`
+- `src/features/uce/campaign-page/CreatorCard.tsx`
+- `src/features/uce/campaign-page/types.ts`
+- `src/features/uce/campaign-page/campaign-page.css`
+- `src/features/uce/api/brand-uce-client.ts`
+- production Create Campaign wizard/schema/validation/mappers and canonical picker files under `src/features/uce/**`
+- `src/design-system/aurora/index.ts` (SideDrawer public export only; existing shared primitive retained)
+
+## Runtime acceptance status
+
+GitHub currently reports no commit status checks for either reviewed source head. Therefore this package is **statically reviewed, not runtime-verified**.
+
+Before merge, execute repository-native typecheck/lint/build plus focused Campaign tests and end-to-end lifecycle/Application scenarios. See `R2_STATIC_COMPLIANCE.md` for the required acceptance commands and scenarios.
 
 ## Review guidance
 
-Compare `production-integration/**` against:
+Compare this implementation package against:
 
-- Canonical specs: `campaign/**`
-- Design authority: `docs/design-system/AURORA_DESIGN_SYSTEM.md`
-- Phase handoffs: `campaign/phase_*_developer_handoff_files.md`
-- Staging reference: `frontend/staging/**`
+- canonical specs: `campaign/**`;
+- design authority: `docs/design-system/AURORA_DESIGN_SYSTEM.md`;
+- Phase handoffs: `campaign/phase_*_developer_handoff_files.md`;
+- production migration playbook/map;
+- staging reference only where it remains relevant.
 
-Do not treat this package as a runnable application — it is a mirrored snapshot of production-integrated files for contract validation.
+Do not infer missing Intelligence, provider execution, or Collaboration semantics in the frontend. A surface may legitimately remain `UNAVAILABLE` until its owning subsystem supplies the canonical projection/command.
