@@ -121,7 +121,7 @@ export function mergeCanonicalDraftIntoWizardData(
     minimumFollowers: typeof targeting.minimum_followers === "number" ? targeting.minimum_followers : base.minimumFollowers,
     maximumFollowers: typeof targeting.maximum_followers === "number" || targeting.maximum_followers === null ? targeting.maximum_followers as number | null : base.maximumFollowers,
     audienceAgeMin: typeof targeting.audience_age_min === "number" ? targeting.audience_age_min : base.audienceAgeMin,
-    audienceAgeMax: typeof targeting.audience_age_max === "number" ? targeting.audience_age_max as number : base.audienceAgeMax,
+    audienceAgeMax: typeof targeting.audience_age_max === "number" ? targeting.audience_age_max : base.audienceAgeMax,
     audienceGender: typeof targeting.audience_gender === "string" ? targeting.audience_gender as WizardData["audienceGender"] : base.audienceGender,
     affinityIds: Array.isArray(targeting.audience_affinity_ids) ? targeting.audience_affinity_ids.map(String) : base.affinityIds,
     audienceGeographies: geographies,
