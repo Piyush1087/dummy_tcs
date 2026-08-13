@@ -37,8 +37,9 @@ The supplied SHA must contain:
 docs/engineering/PHASE_G_PRODUCT_READINESS_STANDARD.md
 collaboration/phase_g/agent_context_manifest.md
 collaboration/phase_g/developer_bootstrap_package.md
-collaboration/phase_g/prompts/g0_0_g0_1_reality_audit.md
 ```
+
+The first G0.0 + G0.1 Cursor prompt is supplied externally with the developer handoff/email. This keeps the execution instruction separate from canonical governance and module context.
 
 Do not substitute a newer `main` ref during a Phase G run unless Product explicitly approves it.
 
@@ -156,18 +157,12 @@ Before the first prompt, verify that the pinned `dummy_tcs` checkout contains:
 ```text
 docs/engineering/PHASE_G_PRODUCT_READINESS_STANDARD.md
 collaboration/phase_g/agent_context_manifest.md
-collaboration/phase_g/prompts/g0_0_g0_1_reality_audit.md
+collaboration/phase_g/developer_bootstrap_package.md
 ```
 
-### Step 7 — Run the G0.0 + G0.1 prompt
+### Step 7 — Run the supplied G0.0 + G0.1 prompt
 
-Paste the contents of:
-
-```text
-collaboration/phase_g/prompts/g0_0_g0_1_reality_audit.md
-```
-
-into Cursor Agent from the multi-root workspace.
+Paste the complete G0.0 + G0.1 prompt supplied in the Product handoff/email into Cursor Agent from the multi-root workspace.
 
 Do not append an instruction such as “continue until complete Phase G”. The prompt intentionally stops after G0.1 for Product review.
 
