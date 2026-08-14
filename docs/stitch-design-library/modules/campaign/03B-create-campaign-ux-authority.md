@@ -217,7 +217,7 @@ Validation authority:
 
 - Scheduled requires both dates;
 - Publish Until must not precede Publish From;
-- the current frontend schema does not encode a `Publish From ≥ today` rule, so Stitch must not present that rule as frozen until product/backend authority confirms it.
+- when creating the Campaign, Publish From must not precede today.
 
 Do not use the legacy Fixed/Milestone or Dynamic timeline model.
 
@@ -242,7 +242,7 @@ Each card includes a concise outcome-oriented description. Selection uses Aurora
 
 Validation: exactly one Objective is required.
 
-**Success metrics:** The canonical payload does not currently store a user-selected success metric in Create Campaign. Stitch may show a compact read-only objective explanation only if the Screen Brief supplies approved derived content. It must not add editable KPI fields, frontend business logic, or speculative metrics.
+**Success metrics:** Primary and supporting KPIs are system-derived from the selected Campaign Objective through the canonical KPI framework. They are not Brand-authored payload fields. After Objective selection, show a compact read-only success-metric surface with resolving, ready, and failure states. KPI resolution failure blocks Step 1 completion. Stitch must not add editable KPI fields, frontend business logic, or speculative metrics.
 
 ### 5.6 Platform
 
@@ -284,7 +284,7 @@ Meaning:
 - Eligible Creators Only: discoverable only to creators meeting Campaign eligibility;
 - Invite Only: accessible only through Brand invitation.
 
-One selection is required. The final default must follow the canonical initial-state contract used for implementation; Stitch must not infer a default from visual emphasis if the Screen Brief does not specify it.
+One selection is required. Canonical default: Public.
 
 ### 5.8 Step 1 exclusions
 
@@ -344,7 +344,7 @@ Canonical fields:
 - `minimum_followers`: non-negative integer;
 - `maximum_followers`: non-negative integer or null.
 
-UX rule: when a maximum exists, it must be logically greater than or equal to the minimum. The current reviewed frontend schema validates each bound but does not yet encode that relationship; implementation reconciliation must close this gap before final QA.
+When a maximum exists, it must be strictly greater than the minimum. Any production frontend validator that does not yet enforce this relationship is implementation drift to reconcile after design approval.
 
 Do not use Nano, Micro, Mid-tier, or Macro as persisted targeting controls. Presets may be considered later only as shortcuts that resolve to numeric values.
 
@@ -473,7 +473,7 @@ Other
 
 Canonical field currently holds one support type, not an array. Therefore the current design must use single selection unless Phase G deliberately changes the contract.
 
-Estimated Value is a non-negative monetary value when supplied. Currency display follows the Campaign/Brand currency context; Stitch must not hardcode `$` or `₹` as universal.
+Estimated Value is optional and must be a non-negative monetary value when supplied. Currency display follows the system-derived Campaign currency; Stitch must not hardcode `$` or `₹` as universal.
 
 When No, support type and estimated value are hidden/cleared according to implementation rules.
 
@@ -514,7 +514,7 @@ Negotiable has one starting offer only. Creators may submit one counter-offer ac
 
 Do not add a maximum negotiable fee.
 
-The current schema accepts a non-negative value. Whether zero is publishable should be confirmed through backend/publish authority; Stitch must not invent a stricter numeric minimum.
+Canonical minimum is zero. Stitch must not invent a stricter numeric minimum.
 
 ### 7.6 Total Campaign Budget
 
@@ -809,18 +809,13 @@ These gaps are implementation-reconciliation inputs after Stitch approval; they 
 
 The following are not delegated to Stitch:
 
-1. exact Visibility default;
-2. exact initial defaults for Schedule, Objective, audience, compensation, advance, and payout terms;
-3. whether `commercial_offer = 0` may publish;
-4. whether support estimated value is required when Brand support is Yes;
-5. exact currency source and representative Campaign currency;
-6. whether Coming Soon platforms should appear or be omitted;
-7. exact exit destination and any confirmation behavior;
-8. exact autosave debounce/status timing and Retry mechanism;
-9. whether a read-only derived success-metric explanation appears;
-10. final Google Places blocked/fallback behavior;
-11. final follower maximum relationship (`≥` or strictly `>` minimum);
-12. exact copy capitalization and punctuation.
+1. exact initial defaults for Schedule, Objective, archetypes, follower range, age, compensation, advance, and payout terms where not frozen by the canonical contracts;
+2. representative Brand country and therefore INR/USD currency used in Stitch frames;
+3. whether Coming Soon platforms should appear or be omitted;
+4. exact exit destination and any confirmation behavior;
+5. exact autosave debounce/status timing and Retry mechanism;
+6. final Google Places provider-blocked fallback behavior;
+7. exact copy capitalization and punctuation.
 
 Codex must resolve these from current product/runtime authority or explicitly mark them in the Screen Brief. Stitch must not decide them implicitly.
 
