@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "10-commercial-fixed-mobile-payment-terms.zip",
+    "screenshot_sha256":  "A737B863E700D2C90DDF555AE3E771C726E828B35BF01E752BFC2944BE5C4BBD",
+    "html_sha256":  "590F8F7D5A9EF852785476E6FBD1C41EB9B0A0E5A9E701C6C7CC84E7C1DB7D12",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

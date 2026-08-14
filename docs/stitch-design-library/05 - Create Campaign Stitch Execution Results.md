@@ -1,0 +1,1 @@
+Create Campaign Stitch Execution Results. Manual ZIP preservation workflow; font substitution and full-page exports are known Stitch limitations; visual evidence overrides connector self-report; reconcile with Aurora 5.0 and canonical documents.

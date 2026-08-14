@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "14-validation-save-failure-mobile.zip",
+    "screenshot_sha256":  "508AA72F2BCEB36AE3DC639A7F473CB4C96ACC55EA53AC4388C4531F527DAB28",
+    "html_sha256":  "A1020425AA870534C6558E473BF478B744D1D449724602C6150BBBD5C82FA60A",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

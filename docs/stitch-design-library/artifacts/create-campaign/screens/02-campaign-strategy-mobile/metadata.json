@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "02-campaign-strategy-mobile.zip",
+    "screenshot_sha256":  "E8369A06B2C44601A30FD7EF25C852805AEDD06E257F600B50450B6E14FAE901",
+    "html_sha256":  "2E73A1B0A96187B2AE5EA01A705753D69F72F3C0995188BA38D0CF1A894D3F12",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

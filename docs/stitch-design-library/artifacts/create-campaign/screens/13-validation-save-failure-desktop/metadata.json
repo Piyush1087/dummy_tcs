@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "13-validation-save-failure-desktop.zip",
+    "screenshot_sha256":  "8A2AFB4B00974928740E389159F4F85128DFFBA333AE93104CC130E3DD92491C",
+    "html_sha256":  "4CAF6F6E9A486C95DF56F70282D0CC29D2609446BD551D82F7E8F7F0393BA5BC",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Campaign Creator - Error State</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9ff",
+                        "primary-container": "#34d399",
+                        "on-primary-container": "#00563b",
+                        "on-primary-fixed": "#002114",
+                        "on-background": "#151c27",
+                        "surface-dim": "#d3daea",
+                        "surface-container": "#e7eefe",
+                        "tertiary": "#904c16",
+                        "primary": "#006c4b",
+                        "success": "#059669",
+                        "background": "#F9FAFB",
+                        "error-container": "#FFF6F6",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-primary-fixed-variant": "#005137",
+                        "secondary-container": "#d9dff5",
+                        "secondary-fixed": "#dce2f7",
+                        "on-error-container": "#CA0F1C",
+                        "on-secondary-fixed": "#141b2b",
+                        "surface-variant": "#dce2f3",
+                        "primary-fixed-dim": "#45dfa4",
+                        "surface-tint": "#006c4b",
+                        "secondary": "#575e70",
+                        "on-tertiary-fixed": "#311300",
+                        "outline-variant": "#bbcac0",
+                        "inverse-surface": "#2a313d",
+                        "surface-container-low": "#f0f3ff",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "outline": "#6c7a71",
+                        "inverse-primary": "#45dfa4",
+                        "error": "#CA0F1C",
+                        "on-secondary-container": "#5c6274",
+                        "surface-container-high": "#e2e8f8",
+                        "border": "#E5E7EB",
+                        "on-surface-variant": "#3c4a42",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#151c27",
+                        "surface-container-highest": "#dce2f3",
+                        "on-tertiary-container": "#783901",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdcc7",
+                        "primary-fixed": "#68fcbf",
+                        "on-secondary-fixed-variant": "#404758",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "tertiary-container": "#ffa668",
+                        "on-primary": "#ffffff",
+                        "surface": "#FFFFFF"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "section-margin": "24px",
+                        "container-padding": "16px",
+                        "stack-gap": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Satoshi"],
+                        "label-sm": ["\"Source Sans 3\""],
+                        "headline-lg": ["Satoshi"],
+                        "body-md": ["\"Source Sans 3\""],
+                        "body-lg": ["\"Source Sans 3\""],
+                        "label-md": ["\"Source Sans 3\""],
+                        "headline-sm": ["Satoshi"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Source Sans 3', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-satoshi { font-family: 'Satoshi', sans-serif; }
+        /* Hide scrollbar for clean UI */
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased flex justify-center w-full min-h-screen">
+<!-- Mobile Container (Max 390px) -->
+<div class="w-full max-w-[390px] bg-surface min-h-screen relative shadow-lg overflow-hidden flex flex-col">
+<!-- TopAppBar (from JSON) -->
+<header class="flex justify-between items-center px-container-padding w-full h-[56px] sticky top-0 z-50 bg-surface border-b border-border transition-colors duration-200">
+<div class="flex items-center gap-3">
+<button class="w-[48px] h-[48px] flex items-center justify-center -ml-3 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-headline-sm text-headline-sm text-on-surface">Campaign Creator</h1>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">error</span>
+<span class="font-label-sm text-label-sm text-error">Couldn't save changes · <button class="underline">Retry</button></span>
+</div>
+</div>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">
+                Step 1 of 3
+            </div>
+</header>
+<!-- Main Scrollable Canvas -->
+<main class="flex-1 overflow-y-auto pb-[140px]">
+<!-- Context Header -->
+<div class="px-container-padding py-6">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Create Strategy</h2>
+<!-- Progress Indicator -->
+<div class="flex gap-2 mb-6">
+<div class="h-1 flex-1 bg-primary-container rounded-full"></div>
+<div class="h-1 flex-1 bg-surface-variant rounded-full"></div>
+<div class="h-1 flex-1 bg-surface-variant rounded-full"></div>
+</div>
+<!-- Collapsed Summary Disclosure -->
+<button class="w-full flex items-center justify-between p-4 border border-border rounded-lg bg-surface hover:bg-surface-container-low transition-colors mb-6 text-left">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Campaign summary</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate max-w-[250px]">Summer Collection — Creator Seeding</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</button>
+<!-- Validation Banner -->
+<div class="flex items-start gap-3 p-4 bg-error-container border border-error rounded-lg mb-8">
+<span class="material-symbols-outlined text-on-error-container">warning</span>
+<p class="font-body-md text-body-md text-on-error-container">Complete the highlighted fields to continue.</p>
+</div>
+<!-- Form Section -->
+<div class="flex flex-col gap-8">
+<!-- Campaign Name (Error State) -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="campaign-name">Campaign Name</label>
+<input class="w-full h-touch-target-min px-4 bg-surface border-2 border-error rounded-lg focus:outline-none focus:border-error font-body-md text-body-md text-on-surface" id="campaign-name" placeholder="e.g. Fall Launch 2024" type="text" value=""/>
+<div class="flex justify-between items-center mt-1">
+<span class="font-body-md text-body-md text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">error</span> Enter a campaign name.
+                            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0 / 60</span>
+</div>
+</div>
+<!-- Publishing Schedule -->
+<div class="flex flex-col gap-4">
+<label class="font-label-md text-label-md text-on-surface">Publishing Schedule</label>
+<div class="flex flex-col gap-stack-gap">
+<!-- Evergreen Card -->
+<label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="w-5 h-5 text-primary-container border-border focus:ring-primary-container focus:ring-offset-0 mr-3" name="schedule" type="radio"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Evergreen</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">No end date</span>
+</div>
+</label>
+<!-- Scheduled Card (Selected) -->
+<label class="flex items-start p-4 border-2 border-primary-container rounded-lg cursor-pointer bg-surface relative">
+<div class="flex items-center h-[20px] absolute right-4 top-4">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+</div>
+<input checked="" class="w-5 h-5 text-primary-container border-border focus:ring-primary-container focus:ring-offset-0 mr-3 mt-1 opacity-0 absolute" name="schedule" type="radio"/>
+<div class="flex flex-col w-full pr-8">
+<span class="font-body-md text-body-md font-semibold text-on-surface mb-4">Scheduled</span>
+<!-- Date Inputs -->
+<div class="flex flex-col gap-4 w-full">
+<!-- Publish From (Valid) -->
+<div class="flex flex-col gap-1 w-full">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Publish From</label>
+<div class="relative w-full">
+<input class="w-full h-touch-target-min px-4 bg-surface border border-border rounded-lg focus:outline-none focus:border-primary-container font-body-md text-body-md text-on-surface" readonly="" type="text" value="15 Sep 2026"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">calendar_today</span>
+</div>
+</div>
+<!-- Publish Until (Error) -->
+<div class="flex flex-col gap-1 w-full">
+<label class="font-label-sm text-label-sm text-error">Publish Until</label>
+<div class="relative w-full">
+<input class="w-full h-touch-target-min px-4 bg-surface border-2 border-error rounded-lg focus:outline-none focus:border-error font-body-md text-body-md text-on-surface" readonly="" type="text" value="14 Sep 2026"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-error">calendar_today</span>
+</div>
+<span class="font-body-md text-body-md text-error flex items-start gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] mt-[2px]">error</span>
+<span>Publish Until must be after Publish From.</span>
+</span>
+</div>
+</div>
+</div>
+</label>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">These dates define the creator-content publishing window.</p>
+</div>
+<hr class="border-border"/>
+<!-- Preserved Lower Sections -->
+<!-- Campaign Objective -->
+<div class="flex flex-col gap-4 opacity-75">
+<label class="font-label-md text-label-md text-on-surface">Campaign Objective</label>
+<div class="grid grid-cols-2 gap-stack-gap">
+<div class="p-4 border-2 border-primary-container rounded-lg bg-surface text-center flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary-container">campaign</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Pulse</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Awareness &amp; Reach</span>
+</div>
+<div class="p-4 border border-border rounded-lg bg-surface text-center flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">verified</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Proof</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Social Proof</span>
+</div>
+</div>
+</div>
+<!-- Platform -->
+<div class="flex flex-col gap-4 opacity-75">
+<label class="font-label-md text-label-md text-on-surface">Platform</label>
+<div class="p-4 border-2 border-primary-container rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">photo_camera</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Instagram</span>
+</div>
+<span class="material-symbols-outlined text-primary-container">lock</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Persistent Action Region -->
+<div class="fixed bottom-[64px] w-full max-w-[390px] bg-surface border-t border-border p-4 flex gap-4 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-40">
+<button class="flex-1 h-touch-target-min border border-border bg-surface text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+                Cancel
+            </button>
+<button class="flex-1 h-touch-target-min bg-surface-variant text-on-surface-variant rounded-lg font-label-md text-label-md cursor-not-allowed opacity-50" disabled="">
+                Continue
+            </button>
+</div>
+<!-- BottomNavBar (from JSON) -->
+<nav class="fixed bottom-0 w-full max-w-[390px] h-[64px] flex justify-around items-center px-4 pb-safe bg-surface border-t border-border z-50">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</button>
+<!-- Active Navigation Item -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-colors duration-200">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-label-sm text-label-sm">Campaigns</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined mb-1">analytics</span>
+<span class="font-label-sm text-label-sm">Reports</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined mb-1">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</button>
+</nav>
+</div>
+</body></html>

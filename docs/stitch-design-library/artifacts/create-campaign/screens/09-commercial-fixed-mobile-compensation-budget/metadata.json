@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "09-commercial-fixed-mobile-compensation-budget.zip",
+    "screenshot_sha256":  "2DDF39A78E31E588566BCDBE62FE582603EBE8A2D53E56F8557DA3D3BED98085",
+    "html_sha256":  "3CCAC0106AE634A76841658858A5A0A54AE0B24C09BE2BE601E7F5E8A564D8A7",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

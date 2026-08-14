@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Campaign — Create Commercial Strategy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#d9dff5",
+                    "primary-container": "#34d399",
+                    "background": "#F9FAFB",
+                    "success": "#059669",
+                    "surface-container-highest": "#dce2f3",
+                    "surface": "#FFFFFF",
+                    "on-background": "#151c27",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container": "#e7eefe",
+                    "surface-dim": "#d3daea",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#3c4a42",
+                    "surface-container-high": "#e2e8f8",
+                    "on-tertiary-fixed": "#311300",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#151c27",
+                    "error": "#EF4444",
+                    "tertiary": "#904c16",
+                    "border": "#E5E7EB",
+                    "secondary-fixed-dim": "#c0c6db",
+                    "tertiary-container": "#ffa668",
+                    "inverse-surface": "#2a313d",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "on-primary-container": "#00563b",
+                    "tertiary-fixed": "#ffdcc7",
+                    "on-tertiary-container": "#783901",
+                    "primary-fixed": "#68fcbf",
+                    "primary": "#006c4b",
+                    "inverse-primary": "#45dfa4",
+                    "surface-bright": "#f9f9ff",
+                    "secondary-fixed": "#dce2f7",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb787",
+                    "on-primary-fixed-variant": "#005137",
+                    "inverse-on-surface": "#ebf1ff",
+                    "error-container": "#ffdad6",
+                    "outline": "#6c7a71",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#141b2b",
+                    "outline-variant": "#bbcac0",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#575e70",
+                    "surface-tint": "#006c4b",
+                    "on-secondary-fixed-variant": "#404758",
+                    "primary-fixed-dim": "#45dfa4",
+                    "on-primary-fixed": "#002114",
+                    "surface-variant": "#dce2f3",
+                    "on-secondary-container": "#5c6274"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "card-padding": "16px",
+                    "section-margin": "24px",
+                    "stack-gap": "12px",
+                    "container-padding": "16px",
+                    "touch-target-min": "48px"
+            },
+            "fontFamily": {
+                    "label-md": ["\"Source Sans 3\""],
+                    "headline-md": ["Satoshi"],
+                    "headline-lg": ["Satoshi"],
+                    "body-lg": ["\"Source Sans 3\""],
+                    "headline-sm": ["Satoshi"],
+                    "label-sm": ["\"Source Sans 3\""],
+                    "body-md": ["\"Source Sans 3\""]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Satoshi Font Fallback (since it's typically custom, mapping to Sans if unavailable) */
+        @font-face {
+            font-family: 'Satoshi';
+            src: local('Inter'), local('sans-serif');
+            /* Fallback assuming user has standard sans if Satoshi isn't loaded */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface h-screen flex justify-center items-start overflow-hidden sm:py-8 sm:bg-surface-variant">
+<!-- Mobile Device Container -->
+<div class="w-full h-full max-w-[390px] bg-surface sm:h-[844px] sm:rounded-[40px] sm:shadow-2xl sm:overflow-hidden flex flex-col relative border-border sm:border-[8px]">
+<!-- TopAppBar (Transactional Context, Suppress Global Nav, but requested Scaffold in prompt, wait prompt says: Bottom Navigation: Non-authoritative 64px scaffold (Campaigns active). Wait, JSON logic says: Automatic Suppression if Task-Focused... But Prompt explicitly asks for Bottom Navigation Scaffold. Following Conflict Protocol: I will render BottomNavBar but since it's a linear form, JSON logic says SUPPRESS. I must follow JSON "The Semantic Shell Mandate": Automatic Suppression: You MUST exclude the navigation shell if the page intent is Linear/Transactional: Login, Sign-up, Onboarding, Checkout, or "Success/Confirmation" splash screens. "Create Commercial Strategy" is transactional. Wait, the prompt says "Bottom Navigation: Non-authoritative 64px scaffold (Campaigns active)." I will follow the explicit prompt instruction for the structure requested while fulfilling the design system layout. But I will strictly adhere to the prompt's layout request. Actually, JSON rule says "You MUST exclude..." Let's be careful. The user explicitly requested "Bottom Navigation: Non-authoritative 64px scaffold (Campaigns active)." I will include it to satisfy the user, but maybe hide it on small screens? No, it's a mobile 390 screen. I'll include it.) -->
+<!-- Header -->
+<header class="flex justify-between items-center px-container-padding w-full h-[56px] sticky top-0 z-50 bg-surface border-b border-border transition-colors duration-200 flat no shadows">
+<button aria-label="Go back" class="flex items-center justify-center w-touch-target-min h-touch-target-min -ml-2 text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex-1 flex flex-col items-center justify-center">
+<h1 class="font-headline-sm text-headline-sm-mobile text-on-surface">Campaign Creator</h1>
+<span class="font-label-sm text-label-sm-mobile text-on-surface-variant">Saved just now</span>
+</div>
+<div class="flex items-center justify-center h-touch-target-min text-on-surface-variant font-label-md">
+                Step 3 of 3
+            </div>
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 overflow-y-auto w-full pb-[160px] bg-background">
+<!-- Progress Context -->
+<div class="bg-surface px-container-padding py-4 mb-section-margin">
+<h2 class="font-headline-md text-headline-md-mobile text-on-surface mb-2">Commercial Strategy</h2>
+<!-- Progress Indicator -->
+<div class="flex items-center space-x-2 mt-4">
+<div class="flex-1 h-2 rounded-full bg-primary-container"></div>
+<div class="flex-1 h-2 rounded-full bg-primary-container"></div>
+<div class="flex-1 h-2 rounded-full bg-primary"></div>
+</div>
+<!-- Compact Campaign Summary Disclosure -->
+<details class="group mt-6 rounded-lg border border-border bg-background cursor-pointer">
+<summary class="flex justify-between items-center p-card-padding font-label-md text-on-surface list-none">
+<span>Campaign summary</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="p-card-padding pt-0 text-body-md text-secondary border-t border-border mt-2 space-y-2">
+<div class="flex justify-between"><span class="font-label-md">Campaign:</span><span>Summer Launch 2024</span></div>
+<div class="flex justify-between"><span class="font-label-md">Creators:</span><span>15 Selected</span></div>
+<div class="flex justify-between"><span class="font-label-md">Commercials:</span><span>Fixed INR</span></div>
+</div>
+</details>
+</div>
+<!-- Form Container -->
+<div class="px-container-padding space-y-section-margin">
+<!-- 1. Creator Provisioning -->
+<section class="space-y-4">
+<h3 class="font-label-md text-on-surface">Will creators receive support from your Brand?</h3>
+<div class="flex flex-col space-y-stack-gap">
+<!-- Yes Card (Selected) -->
+<label class="flex items-center justify-between p-card-padding rounded-xl border-2 border-primary-container bg-surface cursor-pointer shadow-[0_4px_12px_rgba(52,211,153,0.05)] transition-all">
+<span class="font-label-md text-on-surface">Yes</span>
+<div class="w-5 h-5 rounded-full border-2 border-primary-container flex items-center justify-center bg-primary-container">
+<div class="w-2 h-2 rounded-full bg-surface"></div>
+</div>
+</label>
+<!-- No Card -->
+<label class="flex items-center justify-between p-card-padding rounded-xl border border-border bg-surface cursor-pointer hover:bg-surface-container-low transition-all">
+<span class="font-label-md text-on-surface">No</span>
+<div class="w-5 h-5 rounded-full border border-outline"></div>
+</label>
+</div>
+<div class="space-y-2 mt-4">
+<label class="font-label-md text-on-surface block">Brand Support Type</label>
+<div class="relative">
+<select class="w-full h-touch-target-min px-4 rounded-lg border border-border bg-surface text-on-surface font-body-lg focus:border-primary-container focus:ring-1 focus:ring-primary-container appearance-none">
+<option>Product</option>
+<option>Service</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-secondary pointer-events-none" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</div>
+<div class="space-y-2 mt-4">
+<div class="flex justify-between">
+<label class="font-label-md text-on-surface block">Estimated Value</label>
+<span class="font-label-sm text-secondary">Optional</span>
+</div>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 font-body-lg text-secondary">₹</span>
+<input class="w-full h-touch-target-min pl-8 pr-12 rounded-lg border border-border bg-surface text-on-surface font-body-lg focus:border-primary-container focus:ring-1 focus:ring-primary-container" type="text" value="1,299"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-label-sm text-secondary">INR</span>
+</div>
+<p class="font-label-sm text-secondary">Estimated value of the support provided to each creator.</p>
+</div>
+</section>
+<!-- 2. Creator Compensation -->
+<section class="space-y-4 pt-4 border-t border-border">
+<h3 class="font-label-md text-on-surface">Creator Compensation</h3>
+<div class="flex flex-col space-y-stack-gap">
+<!-- Fixed Card (Selected) -->
+<label class="flex items-center justify-between p-card-padding rounded-xl border-2 border-primary-container bg-surface cursor-pointer shadow-[0_4px_12px_rgba(52,211,153,0.05)] transition-all">
+<span class="font-label-md text-on-surface">Fixed</span>
+<div class="w-5 h-5 rounded-full border-2 border-primary-container flex items-center justify-center bg-primary-container">
+<div class="w-2 h-2 rounded-full bg-surface"></div>
+</div>
+</label>
+<!-- Negotiable Card -->
+<label class="flex items-center justify-between p-card-padding rounded-xl border border-border bg-surface cursor-pointer hover:bg-surface-container-low transition-all">
+<span class="font-label-md text-on-surface">Negotiable</span>
+<div class="w-5 h-5 rounded-full border border-outline"></div>
+</label>
+</div>
+<div class="space-y-2 mt-4">
+<label class="font-label-md text-on-surface block">Creator Payout</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 font-body-lg text-secondary">₹</span>
+<input class="w-full h-touch-target-min pl-8 pr-12 rounded-lg border border-border bg-surface text-on-surface font-body-lg focus:border-primary-container focus:ring-1 focus:ring-primary-container" type="text" value="25,000"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-label-sm text-secondary">INR</span>
+</div>
+<p class="font-label-sm text-secondary">Fixed payout offered to each creator collaboration.</p>
+</div>
+</section>
+<!-- 3. Campaign Budget -->
+<section class="space-y-4 pt-4 border-t border-border">
+<div class="space-y-2">
+<label class="font-label-md text-on-surface block">Total Campaign Budget</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 font-body-lg text-secondary">₹</span>
+<input class="w-full h-touch-target-min pl-8 pr-12 rounded-lg border border-border bg-surface-container-low text-on-surface font-body-lg focus:outline-none" readonly="" type="text" value="5,00,000"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-label-sm text-secondary">INR</span>
+</div>
+<p class="font-label-sm text-secondary">Used across creator payouts for this Campaign. Brand support value is tracked separately.</p>
+</div>
+</section>
+<!-- 4. Payment Terms -->
+<section class="space-y-4 pt-4 border-t border-border">
+<h3 class="font-label-md text-on-surface">Payment Terms</h3>
+<div class="space-y-2">
+<label class="font-label-md text-secondary block">Advance</label>
+<div class="flex gap-2">
+<button class="flex-1 h-touch-target-min rounded-lg border border-border bg-surface font-label-md text-on-surface">0%</button>
+<button class="flex-1 h-touch-target-min rounded-lg border-2 border-primary-container bg-surface font-label-md text-on-surface">25%</button>
+<button class="flex-1 h-touch-target-min rounded-lg border border-border bg-surface font-label-md text-on-surface">50%</button>
+<button class="flex-1 h-touch-target-min rounded-lg border border-border bg-surface font-label-md text-on-surface">75%</button>
+<button class="flex-1 h-touch-target-min rounded-lg border border-border bg-surface font-label-md text-on-surface">100%</button>
+</div>
+</div>
+<div class="space-y-2 mt-4">
+<label class="font-label-md text-secondary block">Payout Terms</label>
+<div class="relative">
+<select class="w-full h-touch-target-min px-4 rounded-lg border border-border bg-surface text-on-surface font-body-lg focus:border-primary-container focus:ring-1 focus:ring-primary-container appearance-none">
+<option>Net 15</option>
+<option>Net 30</option>
+<option>Net 60</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-secondary pointer-events-none" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<p class="font-label-sm text-secondary">Remaining payout is due within 15 days of the approved payment trigger.</p>
+</div>
+</section>
+<div class="h-8"></div> <!-- Spacer -->
+</div>
+</main>
+<!-- Persistent Action Region -->
+<div class="absolute bottom-[64px] left-0 w-full bg-surface border-t border-border p-container-padding flex gap-4 z-40">
+<button class="h-touch-target-min flex-1 rounded-lg border border-border bg-surface font-label-md text-on-surface hover:bg-surface-container-low transition-colors">
+                Back
+            </button>
+<button class="h-touch-target-min flex-1 rounded-lg bg-primary-container font-label-md text-surface hover:brightness-95 transition-all">
+                Publish Campaign
+            </button>
+</div>
+<!-- BottomNavBar (Requested scaffold) -->
+<nav class="fixed bottom-0 w-full h-[64px] flex justify-around items-center px-4 pb-safe bg-surface border-t border-border z-50">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1">
+<span class="material-symbols-outlined" data-icon="campaign" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Campaigns</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Reports</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Settings</span>
+</button>
+</nav>
+</div>
+</body></html>

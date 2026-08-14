@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "03-creator-strategy-desktop.zip",
+    "screenshot_sha256":  "11AE4BA77EA5DC325FC37B815BA9A881D936AA42536886070F325CE61CE701A9",
+    "html_sha256":  "9C558246E08BF62E8C128286841498091A856D3CC2DD8F6B530F4EF3FCE73F1E",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campaign — Create Creator Strategy — Desktop 1440 — Geography Results — v1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed": "#ffdbcf",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "secondary-container": "#cbe4e9",
+                        "outline-variant": "#bbcac0",
+                        "primary-fixed-dim": "#45dfa4",
+                        "background": "#f7fafc",
+                        "primary": "#006c4b",
+                        "on-surface": "#181c1e",
+                        "on-surface-variant": "#3c4a42",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#4f676b",
+                        "on-background": "#181c1e",
+                        "surface-container-low": "#f1f4f7",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-primary-container": "#00563b",
+                        "outline": "#6c7a71",
+                        "on-secondary-fixed": "#061f23",
+                        "surface": "#f7fafc",
+                        "secondary": "#4b6267",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eef1f4",
+                        "tertiary-container": "#ffa483",
+                        "secondary-fixed": "#cee7ec",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#45dfa4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#006c4b",
+                        "on-tertiary-container": "#7d3418",
+                        "on-primary-fixed": "#002114",
+                        "surface-container": "#ebeef1",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e8eb",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "tertiary": "#964729",
+                        "on-primary-fixed-variant": "#005137",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "inverse-surface": "#2d3133",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d7dadd",
+                        "primary-container": "#34d399",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed": "#68fcbf",
+                        "surface-bright": "#f7fafc"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "xl": "48px",
+                        "sm": "16px",
+                        "margin-mobile": "16px",
+                        "lg": "32px",
+                        "base": "8px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "margin-desktop": "48px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-lg": ["\"Source Sans 3\""],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["\"Source Sans 3\""],
+                        "label-sm": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f4f7;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #bbcac0;
+            border-radius: 4px;
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #006c4b;
+            cursor: pointer;
+            margin-top: -6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #e0e3e5;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F8F8] text-on-background min-h-screen flex flex-col font-['Source_Sans_3'] antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex items-center px-margin-desktop h-[72px] bg-white border-b border-outline-variant"><span class="font-['Satoshi'] text-headline-md font-bold text-primary">Creator Shop</span></header>
+<div class="flex pt-20 h-screen overflow-hidden">
+<!-- SideNavBar (Collapsed Rail) -->
+<aside class="w-20 flex-shrink-0 bg-white border-r border-outline-variant flex flex-col py-lg items-center z-40">
+<nav class="flex flex-col gap-sm w-full px-xs">
+<a class="flex justify-center p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95 group relative" href="#" title="Campaign Info">
+<span class="material-symbols-outlined">info</span>
+</a>
+<a class="flex justify-center p-sm rounded-lg bg-primary-container text-on-primary-container font-bold transition-all active:scale-95 group relative" href="#" title="Audience">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</a>
+<a class="flex justify-center p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95 group relative" href="#" title="Creative Assets">
+<span class="material-symbols-outlined">palette</span>
+</a>
+<a class="flex justify-center p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95 group relative" href="#" title="Budget &amp; Schedule">
+<span class="material-symbols-outlined">payments</span>
+</a>
+<a class="flex justify-center p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95 group relative" href="#" title="Review">
+<span class="material-symbols-outlined">fact_check</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-sm w-full px-xs">
+<a class="flex justify-center p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" href="#" title="Support">
+<span class="material-symbols-outlined">help</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto custom-scrollbar bg-surface px-margin-desktop py-lg relative">
+<div class="max-w-[1040px] mx-auto flex flex-col gap-md pb-24">
+<!-- Breadcrumbs & Header -->
+<div class="flex flex-col gap-xs mb-sm"><div class="flex items-center justify-between w-full"><div class="flex flex-col gap-xs"><div class="flex items-center gap-xs font-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Campaigns</a><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface">New Campaign</span></div><h1 class="font-['Satoshi'] text-[32px] font-bold text-on-surface">Create Campaign</h1></div><span class="text-label-sm text-on-surface-variant">Saved just now</span></div></div>
+<!-- Step Indicator -->
+<div class="flex items-center gap-sm mb-lg">
+<div class="flex items-center gap-sm flex-1">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary-container text-on-primary-container font-label-md">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-md text-on-surface">Campaign Strategy</span>
+</div>
+<div class="h-px bg-outline-variant w-16"></div>
+<div class="flex items-center gap-sm flex-1">
+<div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-primary text-primary font-label-md">2</div>
+<span class="font-label-md text-primary">Creator Strategy</span>
+</div>
+<div class="h-px bg-surface-variant w-16"></div>
+<div class="flex items-center gap-sm flex-1 opacity-50">
+<div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-surface-variant text-on-surface-variant font-label-md">3</div>
+<span class="font-label-md text-on-surface-variant">Commercial Strategy</span>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-12 gap-gutter items-start">
+<!-- Left Column (Form) -->
+<div class="col-span-8 flex flex-col gap-lg">
+<!-- Creator Profile Section -->
+<section class="bg-white border border-outline-variant rounded-xl p-lg flex flex-col gap-lg"><h2 class="font-['Satoshi'] text-headline-sm text-on-surface">Creator Profile</h2><div class="flex flex-col gap-md"><div><label class="block font-label-md text-on-surface mb-xs">Creator Archetypes</label><div class="flex flex-wrap gap-xs mb-xs"><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface">Beauty Educator<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface">Skincare Reviewer<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface">Lifestyle Storyteller<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div></div><div class="relative"><span class="material-symbols-outlined absolute left-sm top-3 text-on-surface-variant">search</span><input class="w-full h-12 pl-xl pr-sm bg-white border border-outline-variant rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md text-on-surface" placeholder="Search creator archetypes" type="text"/></div></div><div><label class="block font-label-md text-on-surface mb-xs">Follower Range</label><div class="grid grid-cols-2 gap-sm"><div class="flex flex-col gap-xs"><span class="text-label-sm text-on-surface-variant">Minimum followers</span><input class="w-full h-12 px-sm bg-white border border-outline-variant rounded-lg font-body-md text-on-surface" type="text" value="20,000"/></div><div class="flex flex-col gap-xs"><span class="text-label-sm text-on-surface-variant">Maximum followers</span><input class="w-full h-12 px-sm bg-white border border-outline-variant rounded-lg font-body-md text-on-surface" type="text" value="250,000"/></div></div></div></div></section>
+<!-- Audience Match Section -->
+<section class="bg-white border border-outline-variant rounded-xl p-lg flex flex-col gap-lg"><h2 class="font-['Satoshi'] text-headline-sm text-on-surface">Audience Match</h2><div class="flex flex-col gap-lg"><div><label class="block font-label-md text-on-surface mb-sm">Gender</label><div class="flex gap-sm"><button class="flex-1 h-12 rounded-lg border border-outline-variant bg-white text-on-surface font-label-md">All</button><button class="flex-1 h-12 rounded-lg border-2 border-primary bg-primary-container text-on-primary-container font-label-md flex items-center justify-center gap-xs">Female <span class="material-symbols-outlined text-[18px]">check_circle</span></button><button class="flex-1 h-12 rounded-lg border border-outline-variant bg-white text-on-surface font-label-md">Male</button></div></div><div><label class="block font-label-md text-on-surface mb-xs">Age</label><div class="grid grid-cols-2 gap-sm"><div class="flex flex-col gap-xs"><span class="text-label-sm text-on-surface-variant">Minimum age</span><input class="w-full h-12 px-sm bg-white border border-outline-variant rounded-lg font-body-md text-on-surface" type="number" value="24"/></div><div class="flex flex-col gap-xs"><span class="text-label-sm text-on-surface-variant">Maximum age</span><input class="w-full h-12 px-sm bg-white border border-outline-variant rounded-lg font-body-md text-on-surface" type="number" value="34"/></div></div></div><div class="relative z-10"><label class="block font-label-md text-on-surface mb-xs">Geography Target</label><div class="flex flex-wrap gap-xs mb-xs"><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface"><span class="material-symbols-outlined text-[16px]">public</span> India<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface"><span class="material-symbols-outlined text-[16px]">location_on</span> Mumbai, Maharashtra, India<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div></div><div class="relative"><span class="material-symbols-outlined absolute left-sm top-3 text-on-surface-variant">search</span><input class="w-full h-12 pl-xl pr-sm bg-white border border-primary ring-1 ring-primary rounded-lg focus:outline-none font-body-md text-on-surface" type="text" value="Mum"/><div class="absolute top-full left-0 w-full mt-1 bg-white border border-outline-variant rounded-lg shadow-lg overflow-hidden z-20"><button class="w-full text-left px-sm py-3 bg-surface-container flex items-center justify-between group"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-on-surface-variant">location_city</span><div><span class="font-body-md text-on-surface block">Mumbai / City</span><span class="font-label-sm text-on-surface-variant block">Maharashtra, India</span></div></div><span class="material-symbols-outlined text-primary">check</span></button><button class="w-full text-left px-sm py-3 hover:bg-surface-container flex items-center justify-between group"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-on-surface-variant">location_city</span><div><span class="font-body-md text-on-surface block">Navi Mumbai / City</span><span class="font-label-sm text-on-surface-variant block">Maharashtra, India</span></div></div></button><button class="w-full text-left px-sm py-3 hover:bg-surface-container flex items-center justify-between group"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-on-surface-variant">map</span><div><span class="font-body-md text-on-surface block">Mumbai Suburban / District</span><span class="font-label-sm text-on-surface-variant block">Maharashtra, India</span></div></div></button></div></div></div><div class="mt-4"><label class="block font-label-md text-on-surface mb-xs flex items-center gap-xs">(Optional) Affinities</label><div class="flex flex-wrap gap-xs mb-xs"><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface">Skincare<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface">Beauty &amp; Cosmetics<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div><div class="inline-flex items-center gap-xs bg-surface-container px-sm py-1.5 rounded-full font-label-sm text-on-surface">Wellness<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button></div></div><div class="relative"><span class="material-symbols-outlined absolute left-sm top-3 text-on-surface-variant">search</span><input class="w-full h-12 pl-xl pr-sm bg-white border border-outline-variant rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md text-on-surface" placeholder="Search affinities" type="text"/></div></div></div></section>
+</div>
+<!-- Right Column (Summary) -->
+<div class="col-span-4 flex flex-col gap-md">
+<div class="sticky top-md bg-surface-container-lowest border border-outline-variant rounded-lg p-md shadow-sm"><h3 class="font-['Satoshi'] text-headline-sm text-on-surface mb-md">Campaign Summary</h3><div class="flex flex-col gap-lg"><div class="flex flex-col gap-xs"><span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Campaign</span><div class="font-label-md text-on-surface">Name: Summer Collection — Creator Seeding</div><div class="font-body-md text-on-surface-variant">Objective: Pulse — Awareness &amp; Reach</div></div><div class="flex flex-col gap-xs"><span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Creators</span><ul class="flex flex-col gap-2"><li class="font-body-md text-on-surface">3 Archetypes</li><li class="font-body-md text-on-surface">20K–250K followers</li><li class="font-body-md text-on-surface">Female · 24–34</li><li class="font-body-md text-on-surface">India · Mumbai</li></ul></div></div></div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-lg pt-lg border-t border-outline-variant"><button class="h-12 px-lg rounded-lg border border-outline text-on-surface font-label-md hover:bg-surface-container-low transition-colors">Back</button><button class="h-12 px-xl rounded-lg bg-primary text-on-primary font-label-md shadow-sm hover:opacity-90 transition-opacity">Continue</button></div></div>
+<!-- Sticky Bottom Actions -->
+</main>
+</div>
+</body></html>

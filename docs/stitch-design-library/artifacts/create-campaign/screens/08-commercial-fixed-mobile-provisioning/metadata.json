@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "08-commercial-fixed-mobile-provisioning.zip",
+    "screenshot_sha256":  "5EBAC082D7DC6C49F6C68FF9DEBC82800CBD9113AE5BC090DD45AA8CFF52C01A",
+    "html_sha256":  "06AF1D46CE145490B7B95CDBC0FADB793B3D1C302EDF7C90FFCFB904638F6F62",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

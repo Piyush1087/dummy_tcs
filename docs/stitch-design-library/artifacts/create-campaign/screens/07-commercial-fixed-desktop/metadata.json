@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "07-commercial-fixed-desktop.zip",
+    "screenshot_sha256":  "9D6B5F898CFA2551EEE3BCFF9E6CB1AADA7357D5BCFB273F2F3B7E235D6FC0E8",
+    "html_sha256":  "A91CC7783759DAF269863881719194D98DF9996736B2C862E8B53D1058A0316C",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

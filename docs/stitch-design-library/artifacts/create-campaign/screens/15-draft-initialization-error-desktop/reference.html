@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campaign — Create — Desktop 1440 — Draft Initialization Error — v1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#eef1f4",
+                        "primary-fixed": "#68fcbf",
+                        "on-secondary-fixed": "#061f23",
+                        "secondary": "#4b6267",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-background": "#181c1e",
+                        "outline-variant": "#bbcac0",
+                        "primary-fixed-dim": "#45dfa4",
+                        "inverse-primary": "#45dfa4",
+                        "outline": "#6c7a71",
+                        "on-surface-variant": "#3c4a42",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-bright": "#f7fafc",
+                        "on-surface": "#181c1e",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "on-primary-fixed": "#002114",
+                        "surface-container-low": "#f1f4f7",
+                        "on-primary-fixed-variant": "#005137",
+                        "on-secondary-container": "#4f676b",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#cee7ec",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "primary-container": "#34d399",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-dim": "#d7dadd",
+                        "surface-container-high": "#e6e8eb",
+                        "on-tertiary-container": "#7d3418",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f7fafc",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "primary": "#006c4b",
+                        "tertiary-container": "#ffa483",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#006c4b",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "tertiary": "#964729",
+                        "secondary-container": "#cbe4e9",
+                        "on-primary-container": "#00563b",
+                        "surface-container": "#ebeef1",
+                        "surface": "#f7fafc",
+                        "custom-error-bg": "#FFF6F6",
+                        "custom-error-icon": "#CA0F1C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "48px",
+                        "lg": "32px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "sm": "16px",
+                        "margin-mobile": "16px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["\"Source Sans 3\""],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-md": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F8F8F8; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top NavBar (Minimal) -->
+<header class="h-[72px] w-full bg-surface-container-lowest border-b border-outline-variant flex items-center px-lg fixed top-0 z-50">
+<div class="font-headline-sm text-headline-sm text-primary font-bold">
+            Creator Shop
+        </div>
+</header>
+<div class="flex flex-1 pt-[72px]">
+<!-- Collapsed Navigation Rail -->
+<nav class="w-[80px] h-full fixed left-0 bg-surface-container-lowest border-r border-outline-variant flex flex-col items-center py-md z-40 hidden md:flex">
+<!-- Reference shell only, no actual functional links for this flow -->
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-[80px] p-lg flex flex-col">
+<!-- Breadcrumbs -->
+<nav class="flex items-center space-x-xs text-on-surface-variant font-label-md text-label-md mb-xs">
+<a class="hover:text-primary transition-colors" href="#">Campaigns</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface">New Campaign</span>
+</nav>
+<!-- Page Title -->
+<h1 class="font-headline-md text-headline-md text-on-surface mb-xl">
+                Create Campaign
+            </h1>
+<!-- Error State Container -->
+<div class="flex-1 flex items-center justify-center">
+<div class="w-full max-w-[600px] bg-custom-error-bg border border-[#FEE2E2] rounded-xl p-xl flex flex-col items-center text-center shadow-sm">
+<div class="w-16 h-16 rounded-full bg-[#FEE2E2] flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-custom-error-icon text-[32px]">warning</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-xs">
+                        Campaign setup couldn't be loaded
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-md mx-auto">
+                        We couldn't prepare your Campaign Draft. Retry, or return to Campaigns. No Campaign changes have been saved.
+                    </p>
+<div class="flex items-center space-x-sm w-full justify-center">
+<button class="h-[48px] px-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container-low transition-colors">
+                            Back to Campaigns
+                        </button>
+<button class="h-[48px] px-lg bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg hover:opacity-90 transition-opacity">
+                            Retry
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

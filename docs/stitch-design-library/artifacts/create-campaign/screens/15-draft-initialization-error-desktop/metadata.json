@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "15-draft-initialization-error-desktop.zip",
+    "screenshot_sha256":  "1E0FCDBD2A0B3DB2DFC4C80253333FFCC5FA8D200A136F2BFDBC3F63C75019FE",
+    "html_sha256":  "1DB83CB469B8561BD6B712120E23A734E43F91061A7068100942867B34CE70D2",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

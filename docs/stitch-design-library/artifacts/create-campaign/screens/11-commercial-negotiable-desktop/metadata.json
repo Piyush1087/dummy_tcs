@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "11-commercial-negotiable-desktop.zip",
+    "screenshot_sha256":  "5BDD747CBD34D2E78723E85ED9540A618DCAA742F4C8858D64230B0F2A955F3F",
+    "html_sha256":  "7F39CF7EBAF2DC7800A0D30ACE4C87BCA6E03E99EE7879DA080C1E2D5612DB11",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

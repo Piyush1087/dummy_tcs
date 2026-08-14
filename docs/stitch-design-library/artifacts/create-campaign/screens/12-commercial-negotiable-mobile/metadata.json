@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "12-commercial-negotiable-mobile.zip",
+    "screenshot_sha256":  "C82F6180F57CC8E9AB67BBD193B6151EBF1999DBCA8B609085C95D882E023155",
+    "html_sha256":  "26E2B103F896D5541BA9A49E6A8E55F798C29212DA7CE50563E91A8F9F48B6E9",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

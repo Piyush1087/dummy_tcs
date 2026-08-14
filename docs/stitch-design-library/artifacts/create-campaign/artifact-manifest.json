@@ -1,0 +1,77 @@
+[
+    {
+        "Name":  "01-campaign-strategy-desktop"
+    },
+    {
+        "Name":  "02-campaign-strategy-mobile"
+    },
+    {
+        "Name":  "03-creator-strategy-desktop"
+    },
+    {
+        "Name":  "04-creator-strategy-geography-desktop"
+    },
+    {
+        "Name":  "05-creator-strategy-geography-mobile"
+    },
+    {
+        "Name":  "06-commercial-fixed-desktop"
+    },
+    {
+        "Name":  "07-commercial-fixed-desktop"
+    },
+    {
+        "Name":  "07-commercial-fixed-mobile-provisioning"
+    },
+    {
+        "Name":  "08-commercial-fixed-mobile-compensation-budget"
+    },
+    {
+        "Name":  "08-commercial-fixed-mobile-provisioning"
+    },
+    {
+        "Name":  "09-commercial-fixed-mobile-compensation-budget"
+    },
+    {
+        "Name":  "09-commercial-fixed-mobile-payment-terms"
+    },
+    {
+        "Name":  "10-commercial-fixed-mobile-payment-terms"
+    },
+    {
+        "Name":  "10-commercial-negotiable-desktop"
+    },
+    {
+        "Name":  "11-commercial-negotiable-desktop"
+    },
+    {
+        "Name":  "11-commercial-negotiable-mobile"
+    },
+    {
+        "Name":  "12-commercial-negotiable-mobile"
+    },
+    {
+        "Name":  "12-validation-save-failure-desktop"
+    },
+    {
+        "Name":  "13-validation-save-failure-desktop"
+    },
+    {
+        "Name":  "13-validation-save-failure-mobile"
+    },
+    {
+        "Name":  "14-draft-initialization-error-desktop"
+    },
+    {
+        "Name":  "14-validation-save-failure-mobile"
+    },
+    {
+        "Name":  "15-draft-initialization-error-desktop"
+    },
+    {
+        "Name":  "15-draft-initialization-error-mobile"
+    },
+    {
+        "Name":  "16-draft-initialization-error-mobile"
+    }
+]

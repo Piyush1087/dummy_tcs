@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "16-draft-initialization-error-mobile.zip",
+    "screenshot_sha256":  "AC3292666EE4F6CFF58F94A68701C1F09D2CE416AC680062307764E62E50E194",
+    "html_sha256":  "7188779982F5352D917838050407D67C14AAB74DAD150F09B80ABD8E4820B869",
+    "verification":  "archive safety inspection; inert HTML text only"
+}

@@ -1,0 +1,7 @@
+{
+    "reference_only":  true,
+    "source_zip":  "01-campaign-strategy-desktop.zip",
+    "screenshot_sha256":  "B72D33C7EA04F519507F60915E8B6F85B0A4142B07AB08DACF2C28CC15B2DB8D",
+    "html_sha256":  "53B09A78E23ACE0E7D5D30E3FE874C8FFF0E117C7468D24B5BD6EB87F7EC662F",
+    "verification":  "archive safety inspection; inert HTML text only"
+}
