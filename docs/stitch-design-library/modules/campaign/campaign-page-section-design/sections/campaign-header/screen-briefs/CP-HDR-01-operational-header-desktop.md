@@ -13,11 +13,18 @@ Use the Header fixture from [representative data](../../../08-representative-dat
 - supplied Campaign name;
 - separate `Live` lifecycle and `Ready` readiness Badges;
 - truthful summary unavailable treatment unless exact summary copy is supplied;
-- Objective, Audience, Schedule, and Platform in four equal columns;
+- Objective, Audience, Schedule, and Platform in an easily scanned responsive grid or grouped layout;
 - `View Campaign`, `Edit` when supplied, `Share` when supplied, and capability-driven lifecycle action;
 - collapsed `2 Products` / supplied active Brief count summary, expand/collapse, and `View Product setup`.
 
-Keep identity/summary about 65-70% of the first row and actions about 30-35%. Keep the Header compact enough for part of the Attention Layer to remain visible below it.
+Outcome-based acceptance:
+
+- Campaign identity is dominant.
+- Campaign actions are immediately discoverable.
+- All four facts are easy to scan.
+- The Asset/Brief disclosure is clearly secondary.
+- The Header remains compact enough for part of the Attention Layer to remain visible below it.
+- Stitch may optimize grouping and proportions within Aurora and AppShell boundaries.
 
 ## Independent interaction states
 

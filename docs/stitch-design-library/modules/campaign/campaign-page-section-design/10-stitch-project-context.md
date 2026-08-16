@@ -10,6 +10,8 @@ Use only supplied authoritative data. Never fabricate metrics, AI summaries, rec
 
 Follow Aurora Design System 5.0 for reusable primitives and Creator Shop AppShell boundaries. Generate feature Content Area only; do not recreate global navigation. Desktop authority is `1440 x 900` with 72px Header, 80px collapsed Sidebar, and 32px page padding. Mobile authority is `390 x 844` with 56px Header, 64px Bottom Navigation plus safe area, and 16px page padding.
 
+Treat required information, ownership, actions, states, and interaction behavior as fixed. Optimize visual hierarchy, grouping, proportions, spacing, component composition, and responsive treatment. Do not mechanically reproduce a wireframe; prefer a strong first-pass Aurora design. Exact dimensions or placements are mandatory only when explicitly identified as AppShell, viewport, accessibility, or interaction constraints.
+
 Use progressive disclosure. Desktop contextual detail may use a right drawer; adapt it to a full/near-full-screen mobile sheet. Mobile filter controls use an accessible sheet. Avoid page-level horizontal overflow and keep sticky actions clear of Bottom Navigation.
 
 Lifecycle, readiness, and capability remain distinct. Show actions and workspace operability only when supplied capability permits; do not use a generic Campaign toggle.

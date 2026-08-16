@@ -10,19 +10,20 @@ The Header is the persistent Campaign identity and control surface. It lets a Br
 
 ## Desktop composition
 
-Use the full Campaign content width inside AppShell. The first row divides approximately:
+Use the full Campaign content width inside AppShell. As directional starting guidance, the identity and summary may occupy roughly two-thirds of the first row while contextual actions use the remaining space. This is not a fixed split: Stitch may optimize grouping and proportions to create the strongest hierarchy within Aurora and AppShell constraints.
 
-- **65-70%:** Campaign identity, lifecycle/readiness badges, and supplied summary or truthful unavailable treatment.
-- **30-35%:** contextual actions with one clear capability-driven primary lifecycle action.
+Design the strongest Aurora 5.0 Campaign Header for this information and interaction contract. Optimize hierarchy, scanning, compactness and action discoverability. Keep enough of the following Attention Layer visible in the initial desktop viewport.
 
 The Campaign name may wrap to at most two balanced lines. Keep lifecycle and readiness visually distinct and text-labeled.
 
-Below the first row, present exactly four equal core-fact columns:
+All four supplied core facts must remain clearly scannable:
 
 1. Objective
 2. Audience
 3. Schedule
 4. Platform
+
+Stitch may choose the strongest responsive grid or grouped layout. The facts must not compete with Campaign identity or actions.
 
 The full-width bottom row is the Product/Campaign Asset -> Brief disclosure. In the default state it communicates Product/Asset count and active Brief count, offers expand/collapse, and provides `View Product setup`. `Link Campaign Asset` appears only at Campaign ownership level in the expanded state.
 
