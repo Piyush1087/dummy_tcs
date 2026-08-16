@@ -1,5 +1,7 @@
 # Campaign Page Stitch screen registry
 
+> **Historical registry — superseded for execution.** Existing Campaign Page artifacts, including CP-ST-01, are preserved but rejected as corrected-screen lineage authority. Use [`../campaign-page-reconciliation/registry.md`](../campaign-page-reconciliation/registry.md). No historical row or artifact is deleted or rewritten.
+
 Project: `Creator Shop — Campaign`  
 Project ID: `8396755977547935397`
 

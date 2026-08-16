@@ -1,5 +1,7 @@
 # Campaign Page authority and state manifest
 
+> **Superseded for execution.** Retained as historical evidence and rejected as corrected-screen lineage authority. Current authority is [`../campaign-page-reconciliation/01-source-authority-and-precedence-manifest.md`](../campaign-page-reconciliation/01-source-authority-and-precedence-manifest.md) and its eight-screen registry.
+
 ## Product model
 
 The Brand journey is:

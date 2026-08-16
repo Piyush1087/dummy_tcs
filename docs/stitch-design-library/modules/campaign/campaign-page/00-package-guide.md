@@ -1,5 +1,7 @@
 # Campaign Page Stitch execution package
 
+> **Superseded for execution.** Retained as historical proposal evidence and rejected as corrected-screen lineage authority. Use [`../campaign-page-reconciliation/00-package-guide.md`](../campaign-page-reconciliation/00-package-guide.md). Do not delete or rewrite this package or reuse its CP-ST-01 as a corrected parent.
+
 Status: Draft for repository review  
 Module: Campaign  
 Active surface: Brand-side Campaign Page only  
