@@ -7,7 +7,7 @@
 **Purpose:** Route Campaign design work to the current canonical authority without requiring Stitch to ingest the complete Campaign library for every screen  
 **Last material update:** 14 August 2026
 
-> **Current Phase G / Stitch execution boundary:** Phase G has been completed only for **Create Campaign**. The present Stitch exercise is therefore limited to generating the three-step Create Campaign experience and its approved states. Shared Campaign context may be used to ground the retained Campaign Stitch project. Campaign List and Campaign Workspace surfaces—including Assets, Briefs, Prospects, Applicants, Collaborations, and Reporting—remain planning inventory only and must not be used as screen-generation or implementation authority until their own Phase G work is completed.
+> **Current Phase G / Stitch execution boundary:** Phase G is complete for **Create Campaign** and the **Campaign Page / Campaign Workspace**. Both surfaces may use the retained `Creator Shop — Campaign` Stitch project. Campaign Page generation is governed by its dedicated execution package, compact grounding, fourteen screen contracts and accepted G1/G2 source checkpoints. Campaign List and any populated Discovery or Reporting provider experience remain outside active screen-generation authority.
 
 ## 1. Role of this Manifest
 
@@ -581,7 +581,7 @@ Do not let Stitch decide these.
 
 ## 12. Context routing by task
 
-For the current execution cycle, only the **Create Campaign** row below is active. All other rows are future routing guidance.
+For the current execution cycle, **Create Campaign** and the approved **Campaign Page / Campaign Workspace** rows are active. Campaign List and provider-populated Discovery/Reporting remain future routing guidance.
 
 | Stitch task | Attach with this Manifest |
 |---|---|

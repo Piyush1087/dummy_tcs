@@ -58,6 +58,13 @@ Stitch Design Library
 
 Section `05 — Implementation Consumption` is a later phase. It must not be mixed into prompts sent to Stitch.
 
+### Active Campaign packages
+
+- [Create Campaign screen briefs](modules/campaign/screen-briefs/create-campaign/README.md)
+- [Campaign Page execution package](modules/campaign/campaign-page/00-package-guide.md)
+- [Campaign Page screen briefs](modules/campaign/screen-briefs/campaign-page/README.md)
+- [Campaign Page artifact registry](artifacts/campaign-page/registry.md)
+
 ## 3. Document audiences
 
 Each document must have one primary audience.
