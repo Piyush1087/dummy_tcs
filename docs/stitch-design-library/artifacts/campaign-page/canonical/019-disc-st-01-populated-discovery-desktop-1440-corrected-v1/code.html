@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creator Shop - Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "forest-mint": "#005137",
+                        "outline-variant": "#bbcac0",
+                        "blossom-pink": "#FFF6F6",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-high": "#e6e8eb",
+                        "secondary-fixed": "#cee7ec",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#00563b",
+                        "secondary-container": "#cbe4e9",
+                        "inverse-primary": "#45dfa4",
+                        "tertiary-container": "#ffa483",
+                        "on-tertiary-container": "#7d3418",
+                        "crimson-red": "#CA0F1C",
+                        "aurora-green": "#34D399",
+                        "on-primary-fixed-variant": "#005137",
+                        "surface-dim": "#d7dadd",
+                        "on-secondary-container": "#4f676b",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "surface-bright": "#f7fafc",
+                        "primary-fixed-dim": "#45dfa4",
+                        "on-secondary-fixed": "#061f23",
+                        "inverse-on-surface": "#eef1f4",
+                        "soft-gray-border": "#E5E7EB",
+                        "tertiary": "#964729",
+                        "on-primary-fixed": "#002114",
+                        "background": "#f7fafc",
+                        "light-mint": "#F0FDF4",
+                        "surface-container-low": "#f1f4f7",
+                        "error-container": "#ffdad6",
+                        "off-white-canvas": "#F8F8F8",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#181c1e",
+                        "slate-gray": "#6B7280",
+                        "primary-fixed": "#68fcbf",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#f7fafc",
+                        "surface-tint": "#006c4b",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "pure-white": "#FFFFFF",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#34d399",
+                        "midnight-black": "#061F23",
+                        "on-surface-variant": "#3c4a42",
+                        "secondary": "#4b6267",
+                        "tertiary-fixed": "#ffdbcf",
+                        "outline": "#6c7a71",
+                        "surface-container": "#ebeef1",
+                        "sunset-orange": "#F5926E",
+                        "carbon-black": "#0E1214",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "primary": "#006c4b",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "on-surface": "#181c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sidebar-expanded": "240px",
+                        "bottom-nav": "64px",
+                        "sidebar-collapsed": "80px",
+                        "lg": "32px",
+                        "header-desktop": "72px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "xl": "48px",
+                        "header-mobile": "56px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "tab-nav": ["Satoshi Variable"],
+                        "headline-h2-desktop": ["Satoshi Variable"],
+                        "input-text": ["\"Source Sans 3\""],
+                        "headline-h1-desktop": ["Satoshi Variable"],
+                        "body-base": ["\"Source Sans 3\""],
+                        "eyebrow-caps": ["Satoshi Variable"],
+                        "label-ui": ["Satoshi Variable"],
+                        "headline-h2-mobile": ["Satoshi Variable"],
+                        "caption": ["\"Source Sans 3\""],
+                        "headline-h1-mobile": ["Satoshi Variable"],
+                        "body-bold": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "tab-nav": ["16px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-h2-desktop": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "input-text": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-h1-desktop": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-base": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "eyebrow-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700"}],
+                        "label-ui": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-h2-mobile": ["20px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-h1-mobile": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-bold": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Source Sans 3', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .satoshi { font-family: 'Satoshi Variable', sans-serif; }
+    </style>
+</head>
+<body class="bg-off-white-canvas text-on-surface antialiased flex flex-col md:flex-row min-h-screen overflow-x-hidden">
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex bg-midnight-black dark:bg-carbon-black w-sidebar-expanded min-h-screen flex-col border-r border-outline-variant fixed left-0 top-0 h-full z-30">
+<div class="p-md flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-aurora-green flex items-center justify-center text-midnight-black font-bold">CS</div>
+<div>
+<h1 class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">Creator Shop</h1>
+<p class="font-caption text-caption text-surface-variant">Management Console</p>
+</div>
+</div>
+<nav class="flex-1 px-sm mt-md space-y-1">
+<a class="flex items-center gap-sm font-label-ui text-label-ui text-surface-variant hover:text-aurora-green mx-2 my-1 px-3 py-2 rounded-xl hover:bg-on-secondary-fixed-variant transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+                Home
+            </a>
+<a class="flex items-center gap-sm font-label-ui text-label-ui text-surface-variant hover:text-aurora-green mx-2 my-1 px-3 py-2 rounded-xl hover:bg-on-secondary-fixed-variant transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">storefront</span>
+                Brands
+            </a>
+<a class="flex items-center gap-sm font-label-ui text-label-ui bg-primary-container text-on-primary-fixed rounded-xl mx-2 my-1 px-3 py-2 scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+                Campaigns
+            </a>
+<a class="flex items-center gap-sm font-label-ui text-label-ui text-surface-variant hover:text-aurora-green mx-2 my-1 px-3 py-2 rounded-xl hover:bg-on-secondary-fixed-variant transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">group</span>
+                Collabs
+            </a>
+</nav>
+<div class="mt-auto p-sm space-y-1 border-t border-on-secondary-fixed-variant">
+<a class="flex items-center gap-sm font-label-ui text-label-ui text-surface-variant hover:text-aurora-green mx-2 my-1 px-3 py-2 rounded-xl hover:bg-on-secondary-fixed-variant transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">payments</span>
+                Earnings
+            </a>
+<a class="flex items-center gap-sm font-label-ui text-label-ui text-surface-variant hover:text-aurora-green mx-2 my-1 px-3 py-2 rounded-xl hover:bg-on-secondary-fixed-variant transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+                Settings
+            </a>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1 flex flex-col md:ml-sidebar-expanded min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-pure-white dark:bg-surface-container-lowest h-header-desktop w-full border-b border-soft-gray-border flex justify-between items-center px-md sticky top-0 z-20">
+<div class="flex items-center gap-md">
+<div class="font-headline-h2-desktop text-headline-h2-desktop font-bold text-on-surface md:hidden">The Creator Shop</div>
+<nav class="hidden md:flex items-center gap-lg h-full">
+<a class="font-body-base text-body-base text-slate-gray hover:text-primary transition-colors py-4" href="#">Dashboard</a>
+<a class="font-body-base text-body-base text-primary font-bold border-b-2 border-primary py-4" href="#">Analytics</a>
+<a class="font-body-base text-body-base text-slate-gray hover:text-primary transition-colors py-4" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-gray hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="bg-primary-container text-on-primary-fixed font-label-ui text-label-ui px-4 py-2 rounded-lg opacity-80 active:opacity-100 transition-opacity">Upgrade</button>
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover border border-soft-gray-border" data-alt="A professional headshot of a young woman with dark hair in a modern office setting. Soft, natural lighting. High quality corporate portrait style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb4c-D8ksAedVbPxyXxrXUV187mgsF19K20AsRbuc50mt0nmyum_M8AqAbd_ettM3AbyaWuEr_qpQQEAhlHoWEaYi6aFEw6nm6Fo17hwnilNuUxPuAQNllzCGVdOoTe3X2-kFREucenvUJWTJbwq5cPRvl6vYSUL0aaraPCCtkd8VaH6uEGQmFMrr2eUVzFeYWr90sAsRNqGZImKIKIOEDX2veYlAdFc7L2VX9TaW8baE2FjHv5aU31aT9zpv0rpyKGLlloc5mZPk"/>
+</div>
+</header>
+<!-- Content Layout -->
+<div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+<!-- Left Workspace Selector -->
+<div class="w-full md:w-[200px] border-b md:border-b-0 md:border-r border-soft-gray-border bg-surface-bright flex-shrink-0 p-sm overflow-x-auto md:overflow-y-auto">
+<div class="flex md:flex-col gap-2">
+<button class="w-full text-left px-4 py-3 rounded-lg bg-light-mint border border-aurora-green text-on-primary-container font-label-ui text-label-ui flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-[20px]">search</span>
+                        Discovery
+                    </button>
+<button class="w-full text-left px-4 py-3 rounded-lg text-slate-gray hover:bg-surface-container-low font-label-ui text-label-ui flex items-center gap-2 whitespace-nowrap transition-colors">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+                        Applicants
+                    </button>
+<button class="w-full text-left px-4 py-3 rounded-lg text-slate-gray hover:bg-surface-container-low font-label-ui text-label-ui flex items-center gap-2 whitespace-nowrap transition-colors">
+<span class="material-symbols-outlined text-[20px]">handshake</span>
+                        Collaborations
+                    </button>
+</div>
+</div>
+<!-- Discovery Main Area -->
+<div class="flex-1 p-md md:p-lg overflow-y-auto">
+<div class="max-w-[1280px] mx-auto space-y-md">
+<!-- Header Area -->
+<div class="space-y-sm">
+<!-- Row 1 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface">Discovery</h2>
+<span class="bg-surface-container-high text-on-surface-variant font-caption text-caption px-2 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                                    Meta connected
+                                </span>
+</div>
+<div class="flex gap-sm">
+<button class="px-4 py-2 bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui rounded-lg hover:bg-surface-container-low transition-colors">Add Creator</button>
+<button class="px-4 py-2 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui rounded-lg hover:opacity-90 transition-opacity">Discover Creators</button>
+</div>
+</div>
+<!-- Row 2: Filters & Search -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-sm">
+<div class="flex flex-1 flex-col sm:flex-row gap-sm max-w-2xl">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-soft-gray-border focus:border-aurora-green focus:ring-1 focus:ring-aurora-green font-input-text text-input-text" placeholder="Search by creator name or Instagram handle" type="text"/>
+</div>
+<div class="flex gap-sm">
+<select class="px-4 py-3 rounded-lg border border-soft-gray-border bg-pure-white font-input-text text-input-text focus:border-aurora-green focus:ring-1 focus:ring-aurora-green text-on-surface">
+<option>Status: All</option>
+</select>
+<select class="px-4 py-3 rounded-lg border border-soft-gray-border bg-pure-white font-input-text text-input-text focus:border-aurora-green focus:ring-1 focus:ring-aurora-green text-on-surface">
+<option>Source: All</option>
+</select>
+</div>
+</div>
+<div class="text-slate-gray font-body-base text-body-base">
+                                4 creators
+                            </div>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-md pt-sm">
+<!-- Card 1 -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4 items-center">
+<img alt="Maya Kapoor" class="w-[56px] h-[56px] rounded-full object-cover border border-soft-gray-border" data-alt="Close up portrait of a young Indian woman with glowing skin, smiling, wearing natural makeup and a simple white top against a bright studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_9h2qfwOHUfknJFj9p-2tIPeD6jK9Ri-FY3rxSEcFB6477UmbC_kUqO7IWEOzusRLXiugEx0xmrqyd64ygBtRhavzJz5n3ukd6SbkK6M4Ip4zlQsFuGbYIkgMkYk71tdPXjYpD2IhneTLn3xo6l1yTHdypX_t0YLrTRRS249DhCGzdnaTk99vpseF5Lwo4fYEvYZdPVWXENSMySp9fqAwJ4_mXHY9MVvskJLxI9FCbCHb6BFzgsBj_mZa5O-9UaZYpKh83eN8lSI"/>
+<div>
+<div class="flex items-center gap-1">
+<h3 class="font-label-ui text-label-ui text-on-surface">Maya Kapoor</h3>
+<span class="material-symbols-outlined text-[16px] text-slate-gray">photo_camera</span>
+</div>
+<p class="font-body-base text-body-base text-slate-gray">@mayaglow</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-caption text-caption px-2 py-1 rounded">Marketplace</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-caption text-caption text-slate-gray">Match Potential</span>
+<span class="bg-light-mint text-forest-mint font-caption text-caption px-2 py-0.5 rounded">High</span>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant">Recommended because: Strong audience overlap with this Campaign’s target.</p>
+</div>
+<div class="flex items-center gap-3 pt-2 border-t border-soft-gray-border">
+<button class="flex-1 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui py-2 rounded-lg hover:opacity-90 transition-opacity">Send DM</button>
+<button class="flex-1 bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui py-2 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+<button class="p-2 text-slate-gray hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4 items-center">
+<img alt="Rhea Shah" class="w-[56px] h-[56px] rounded-full object-cover border border-soft-gray-border" data-alt="Portrait of a modern South Asian woman with minimalist skincare aesthetic, soft natural lighting, clean white background, professional styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYPbFIpz-QhGMhiiuKJvqL3MmKIxnNq-1tdYiB4DezBjzCjAAxTIGTBwShXsd2Y2aYknvyCGhNXdnXDIYSZtrAULmovfMd3eh3Q8qr_fdXFj3Ca73KbtGzVswnkxJjGaanqMBsFyJ9QSafvsf_jdORCcB0yxjAgEIcSgGpdUf08kLVyRwIbh5lUwMfPTAGLL3HF4oEHVp5F_gcBf2fpeDHCviBNcbhdfCudQc2vHdIBDOWvEtVK15zc_GwLLTLYd9GCFf3-h3qcWM"/>
+<div>
+<div class="flex items-center gap-1">
+<h3 class="font-label-ui text-label-ui text-on-surface">Rhea Shah</h3>
+<span class="material-symbols-outlined text-[16px] text-slate-gray">photo_camera</span>
+</div>
+<p class="font-body-base text-body-base text-slate-gray">@rheaskinnotes</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-caption text-caption px-2 py-1 rounded">Marketplace</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-caption text-caption text-slate-gray">Match Potential</span>
+<span class="bg-secondary-container text-on-secondary-container font-caption text-caption px-2 py-0.5 rounded">Medium</span>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant">Recommended because: Content style aligns with this Campaign’s objective.</p>
+</div>
+<div class="flex items-center gap-3 pt-2 border-t border-soft-gray-border">
+<button class="flex-1 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui py-2 rounded-lg hover:opacity-90 transition-opacity">Send Email</button>
+<button class="flex-1 bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui py-2 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+<button class="p-2 text-slate-gray hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4 items-center">
+<div class="w-[56px] h-[56px] rounded-full bg-surface-container-low border border-soft-gray-border flex items-center justify-center text-on-surface font-bold text-[20px]">AR</div>
+<div>
+<div class="flex items-center gap-1">
+<h3 class="font-label-ui text-label-ui text-on-surface">Anika Rao</h3>
+<span class="material-symbols-outlined text-[16px] text-slate-gray">photo_camera</span>
+</div>
+<p class="font-body-base text-body-base text-slate-gray">@anikarao</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-caption text-caption px-2 py-1 rounded">Manual</span>
+</div>
+<div class="flex-1">
+<p class="font-body-base text-body-base text-slate-gray italic">Creator intelligence pending</p>
+</div>
+<div class="flex items-center gap-3 pt-2 border-t border-soft-gray-border">
+<button class="flex-1 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui py-2 rounded-lg hover:opacity-90 transition-opacity">Send Email</button>
+<button class="flex-1 bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui py-2 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+<button class="p-2 text-slate-gray hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4 items-center">
+<img alt="Tara Mehta" class="w-[56px] h-[56px] rounded-full object-cover border border-soft-gray-border" data-alt="Lifestyle portrait of a fitness and wellness influencer in activewear, bright outdoor lighting, healthy and energetic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5o8P_7LIFTKw3XOZXu-lMsewjlLHj7mR7lHLV7Jo5X0lmZPt4u20GdHnXtV3TP3myHizwPg0Zw3iEuc6MhoAQGk_Oy1cqgI31sbHgMft8aE4IpxNHhYV4LRxjvbwd75yJqZAbQHhuBZZjquLa9K7oXFzIy2AVQD_4d07ZWlkFEo_w92cTc7W5eiBaRwvDHxH9EY-0OnegPCHYx6KS_29vhk_TxAr1ORJ3W--hA-hTaKS0TwMMnStRi0zE2O25OqcH5-_2WFucdiQ"/>
+<div>
+<div class="flex items-center gap-1">
+<h3 class="font-label-ui text-label-ui text-on-surface">Tara Mehta</h3>
+<span class="material-symbols-outlined text-[16px] text-slate-gray">photo_camera</span>
+</div>
+<p class="font-body-base text-body-base text-slate-gray">@tarawellness</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-caption text-caption px-2 py-1 rounded">CSV</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-caption text-caption text-slate-gray">Match Potential</span>
+<span class="bg-blossom-pink text-crimson-red font-caption text-caption px-2 py-0.5 rounded">Low</span>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant">Recommended because: Limited overlap with the current Campaign audience.</p>
+</div>
+<div class="flex items-center gap-3 pt-2 border-t border-soft-gray-border">
+<button class="flex-1 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui py-2 rounded-lg hover:opacity-90 transition-opacity">Send Email</button>
+<button class="flex-1 bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui py-2 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+<button class="p-2 text-slate-gray hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

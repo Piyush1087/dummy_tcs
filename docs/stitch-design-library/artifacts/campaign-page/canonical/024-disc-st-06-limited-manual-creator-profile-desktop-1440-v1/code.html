@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DISC-ST-06 — Limited Manual Creator Profile — Desktop 1440 — v1</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Note: Satoshi is a commercial font, falling back to sans-serif structurally for this mockup if not loaded, but referencing it strictly in config -->
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config injected from instructions -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#00563b",
+                        "surface-container-low": "#f1f4f7",
+                        "crimson-red": "#CA0F1C",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "on-surface": "#181c1e",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed": "#68fcbf",
+                        "tertiary-container": "#ffa483",
+                        "surface-container-high": "#e6e8eb",
+                        "secondary-fixed": "#cee7ec",
+                        "primary-fixed-dim": "#45dfa4",
+                        "on-primary-fixed": "#002114",
+                        "midnight-black": "#061F23",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary": "#4b6267",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "carbon-black": "#0E1214",
+                        "surface-dim": "#d7dadd",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "blossom-pink": "#FFF6F6",
+                        "on-secondary-fixed": "#061f23",
+                        "on-error": "#ffffff",
+                        "sunset-orange": "#F5926E",
+                        "on-tertiary-container": "#7d3418",
+                        "background": "#f7fafc",
+                        "primary-container": "#34d399",
+                        "inverse-primary": "#45dfa4",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#4f676b",
+                        "outline-variant": "#bbcac0",
+                        "surface-bright": "#f7fafc",
+                        "error": "#ba1a1a",
+                        "primary": "#006c4b",
+                        "secondary-container": "#cbe4e9",
+                        "off-white-canvas": "#F8F8F8",
+                        "surface": "#f7fafc",
+                        "on-primary-fixed-variant": "#005137",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-tertiary-fixed": "#380d00",
+                        "pure-white": "#FFFFFF",
+                        "light-mint": "#F0FDF4",
+                        "tertiary": "#964729",
+                        "surface-variant": "#e0e3e5",
+                        "on-background": "#181c1e",
+                        "surface-tint": "#006c4b",
+                        "aurora-green": "#34D399",
+                        "on-secondary": "#ffffff",
+                        "forest-mint": "#005137",
+                        "slate-gray": "#6B7280",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#ebeef1",
+                        "outline": "#6c7a71",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eef1f4",
+                        "on-surface-variant": "#3c4a42",
+                        "soft-gray-border": "#E5E7EB",
+                        "on-tertiary-fixed-variant": "#783114"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "header-mobile": "56px",
+                        "md": "24px",
+                        "xl": "48px",
+                        "header-desktop": "72px",
+                        "sidebar-collapsed": "80px",
+                        "lg": "32px",
+                        "bottom-nav": "64px",
+                        "xs": "8px",
+                        "sidebar-expanded": "240px"
+                    },
+                    "fontFamily": {
+                        "input-text": ["\"Source Sans 3\""],
+                        "tab-nav": ["Satoshi Variable", "sans-serif"],
+                        "headline-h2-mobile": ["Satoshi Variable", "sans-serif"],
+                        "headline-h2-desktop": ["Satoshi Variable", "sans-serif"],
+                        "headline-h1-desktop": ["Satoshi Variable", "sans-serif"],
+                        "body-base": ["\"Source Sans 3\"", "sans-serif"],
+                        "caption": ["\"Source Sans 3\"", "sans-serif"],
+                        "headline-h1-mobile": ["Satoshi Variable", "sans-serif"],
+                        "label-ui": ["Satoshi Variable", "sans-serif"],
+                        "eyebrow-caps": ["Satoshi Variable", "sans-serif"],
+                        "body-bold": ["\"Source Sans 3\"", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background font-body-base text-body-base text-on-surface antialiased flex h-screen overflow-hidden selection:bg-light-mint selection:text-forest-mint">
+<!-- 
+      ======================================================================
+      NAVIGATION SHELL (Strictly mapped from JSON)
+      ======================================================================
+    -->
+<!-- SideNavBar -->
+<nav class="bg-midnight-black dark:bg-carbon-black w-sidebar-expanded min-h-screen flex flex-col border-r border-outline-variant fixed left-0 top-0 h-full z-30">
+<!-- Header -->
+<div class="h-header-desktop flex items-center px-md border-b border-surface-variant/20">
+<div class="flex items-center gap-xs">
+<!-- Using a stylized icon for the logo as requested by JSON structure -->
+<span class="material-symbols-outlined font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">view_cozy</span>
+<div class="flex flex-col">
+<span class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green text-sm tracking-tight leading-tight">Creator Shop</span>
+<span class="font-caption text-caption text-surface-variant opacity-70">Management Console</span>
+</div>
+</div>
+</div>
+<!-- Main Tabs (Active context: Campaigns) -->
+<div class="flex-1 py-md flex flex-col gap-1 overflow-y-auto">
+<!-- Home -->
+<a class="flex items-center gap-sm px-3 py-2 mx-2 my-1 rounded-lg text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+<!-- Brands -->
+<a class="flex items-center gap-sm px-3 py-2 mx-2 my-1 rounded-lg text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">storefront</span>
+                Brands
+            </a>
+<!-- Campaigns (Active) -->
+<a class="flex items-center gap-sm px-3 py-2 mx-2 my-1 rounded-xl bg-primary-container text-on-primary-fixed scale-95 duration-150 ease-in-out font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+                Campaigns
+            </a>
+<!-- Collabs -->
+<a class="flex items-center gap-sm px-3 py-2 mx-2 my-1 rounded-lg text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">group</span>
+                Collabs
+            </a>
+</div>
+<!-- Footer Tabs -->
+<div class="py-sm border-t border-surface-variant/20 flex flex-col gap-1">
+<a class="flex items-center gap-sm px-3 py-2 mx-2 my-1 rounded-lg text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">payments</span>
+                Earnings
+            </a>
+<a class="flex items-center gap-sm px-3 py-2 mx-2 my-1 rounded-lg text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Main Content Area Wrapper -->
+<div class="flex-1 flex flex-col ml-sidebar-expanded min-w-0 bg-off-white-canvas relative">
+<!-- TopNavBar -->
+<header class="bg-pure-white dark:bg-surface-container-lowest h-header-desktop w-full border-b border-soft-gray-border flex justify-between items-center px-md sticky top-0 z-20">
+<div class="flex items-center gap-lg h-full">
+<h1 class="font-headline-h2-desktop text-headline-h2-desktop font-bold text-on-surface mr-lg">The Creator Shop</h1>
+<!-- Nav Links (Active Context: Dashboard) -->
+<nav class="flex h-full">
+<a class="h-full flex items-center px-sm text-primary font-bold border-b-2 border-primary opacity-80 active:opacity-100 font-label-ui text-label-ui" href="#">Dashboard</a>
+<a class="h-full flex items-center px-sm text-slate-gray hover:text-primary transition-colors opacity-80 active:opacity-100 font-label-ui text-label-ui" href="#">Analytics</a>
+<a class="h-full flex items-center px-sm text-slate-gray hover:text-primary transition-colors opacity-80 active:opacity-100 font-label-ui text-label-ui" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<button class="bg-primary-container text-on-primary-fixed font-label-ui text-label-ui rounded-[8px] px-4 py-2 hover:bg-inverse-primary transition-colors h-[48px] flex items-center justify-center">
+                    Upgrade
+                </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-slate-gray hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-soft-gray-border">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A small, professional portrait photograph of a young woman with dark hair smiling gently, serving as a user profile avatar in a minimalist light-mode dashboard UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3lZU_K9xuMTTGQgzlDI5AkKQoesyhRBpygnXblmNVai9Beq8K0JrCNbJheH7VpHj77Gc6mZ7CyOKKQ0fJ_-4RalO-mUqhaNMEGrhhgV2tOl0SUkNY-A2cKaWNDGzoXYJvX8BZCwVfxoG7RcP75pFa6m6VfhQ1-GhunFfm6wCqghtmtZf4Siae2C0-70m2VX4lgGSHRv8LVTbRuXVYxVWBeruruulq2GOHsKEaG2U1JLWKaFFQzEkaN5gckCxMbuxexQvQQd16GM"/>
+</div>
+</div>
+</header>
+<!-- 
+          ======================================================================
+          BACKGROUND CANVAS (Blurred Discovery Dashboard Context)
+          ======================================================================
+        -->
+<main class="flex-1 p-xl overflow-auto select-none pointer-events-none filter blur-[3px] opacity-60">
+<div class="max-w-[1200px] mx-auto flex flex-col gap-lg">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface mb-2">Discovery</h2>
+<p class="font-body-base text-body-base text-slate-gray">Searching active campaign applicants and marketplace creators.</p>
+</div>
+</div>
+<!-- Faux Data Grid -->
+<div class="grid grid-cols-3 gap-md mt-md">
+<!-- Card 1 -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div class="flex-1">
+<div class="h-4 bg-surface-variant rounded w-2/3 mb-1"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+</div>
+</div>
+<div class="h-16 bg-surface-container-low rounded mt-2"></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div class="flex-1">
+<div class="h-4 bg-surface-variant rounded w-3/4 mb-1"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/3"></div>
+</div>
+</div>
+<div class="h-16 bg-surface-container-low rounded mt-2"></div>
+</div>
+<!-- Card 3 -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div class="flex-1">
+<div class="h-4 bg-surface-variant rounded w-1/2 mb-1"></div>
+<div class="h-3 bg-surface-container-highest rounded w-2/3"></div>
+</div>
+</div>
+<div class="h-16 bg-surface-container-low rounded mt-2"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- 
+          ======================================================================
+          MODAL OVERLAY (The core task)
+          ======================================================================
+        -->
+<div class="absolute inset-0 z-50 flex items-center justify-center bg-midnight-black/40 backdrop-blur-sm p-xl">
+<!-- Modal Container -->
+<div class="bg-pure-white rounded-xl shadow-2xl border border-soft-gray-border w-full max-w-[640px] flex flex-col overflow-hidden animate-[fadeIn_0.2s_ease-out]">
+<!-- Modal Header -->
+<div class="px-xl pt-xl pb-md border-b border-soft-gray-border flex items-start gap-md bg-pure-white relative">
+<!-- Close button top right -->
+<button class="absolute top-md right-md text-slate-gray hover:text-on-surface transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined">close</span>
+</button>
+<!-- Avatar Initials -->
+<div class="w-[88px] h-[88px] shrink-0 rounded-full bg-surface-container flex items-center justify-center text-on-surface font-headline-h1-desktop text-headline-h1-desktop border border-surface-variant">
+                        AR
+                    </div>
+<!-- Creator Identity -->
+<div class="flex flex-col pt-1">
+<div class="flex items-center gap-sm mb-1">
+<h2 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface">Anika Rao</h2>
+<!-- Platform Indicator -->
+<div class="text-slate-gray flex items-center justify-center" title="Instagram">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</div>
+</div>
+<span class="font-body-base text-body-base text-slate-gray mb-3">@anikarao</span>
+<!-- Badges -->
+<div class="flex items-center gap-xs">
+<span class="bg-surface-container-low border border-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-caption text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person_add</span>
+                                Manual
+                            </span>
+</div>
+</div>
+</div>
+<!-- Modal Body -->
+<div class="p-xl flex flex-col gap-lg overflow-y-auto max-h-[614px] bg-off-white-canvas/50">
+<!-- Section 1: Known Creator Information -->
+<section class="flex flex-col gap-sm">
+<h3 class="font-label-ui text-label-ui text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-slate-gray">contact_page</span>
+                            Known creator information
+                        </h3>
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-3">
+<!-- Only specified data allowed here -->
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-slate-gray w-6">alternate_email</span>
+<span class="font-body-base text-body-base text-on-surface">@anikarao</span>
+</div>
+<div class="w-full h-[1px] bg-soft-gray-border"></div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-slate-gray w-6">person_add</span>
+<span class="font-body-base text-body-base text-on-surface">Added manually</span>
+</div>
+<div class="w-full h-[1px] bg-soft-gray-border"></div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-slate-gray w-6">mail</span>
+<span class="font-body-base text-body-base text-on-surface">Email available</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Creator Intelligence Status (Aurora Info Panel) -->
+<section>
+<div class="bg-pure-white border border-outline-variant rounded-xl p-md flex items-start gap-md shadow-sm relative overflow-hidden">
+<!-- Subtle decorative left border -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="text-secondary shrink-0 pt-1">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-label-ui text-label-ui text-on-surface">Creator intelligence pending</h4>
+<p class="font-body-base text-body-base text-secondary">
+                                    Profile, audience and content intelligence will appear when an authoritative creator profile is resolved.
+                                </p>
+<p class="font-body-bold text-body-bold text-on-surface-variant mt-2 text-[13px]">
+                                    No Match Potential is currently available.
+                                </p>
+</div>
+</div>
+</section>
+<!-- Section 3: Application History -->
+<section class="flex flex-col gap-sm mt-2">
+<h3 class="font-label-ui text-label-ui text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-slate-gray">history</span>
+                            Application history
+                        </h3>
+<!-- Empty State -->
+<div class="bg-pure-white border border-dashed border-soft-gray-border rounded-xl p-xl flex flex-col items-center justify-center text-center py-12">
+<span class="material-symbols-outlined text-[32px] text-surface-variant mb-3">folder_open</span>
+<p class="font-body-base text-body-base text-slate-gray">No application history for this Campaign.</p>
+</div>
+</section>
+</div>
+<!-- Modal Footer -->
+<div class="p-md border-t border-soft-gray-border bg-pure-white flex justify-end gap-sm items-center">
+<button class="bg-pure-white border border-soft-gray-border text-on-surface hover:bg-surface-container-lowest font-label-ui text-label-ui rounded-[8px] h-[48px] px-6 transition-colors flex items-center justify-center">
+                        Close
+                    </button>
+<button class="bg-primary-container text-on-primary-fixed hover:bg-inverse-primary font-label-ui text-label-ui rounded-[8px] h-[48px] px-6 transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">send</span>
+                        Send Email
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

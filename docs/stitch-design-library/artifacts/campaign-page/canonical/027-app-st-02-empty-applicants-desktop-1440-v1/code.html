@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Creator Shop - Applicants Empty State</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#68fcbf",
+                      "soft-gray-border": "#E5E7EB",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#cbe4e9",
+                      "crimson-red": "#CA0F1C",
+                      "on-secondary-container": "#4f676b",
+                      "on-surface": "#181c1e",
+                      "on-tertiary-fixed-variant": "#783114",
+                      "surface": "#f7fafc",
+                      "tertiary-container": "#ffa483",
+                      "secondary": "#4b6267",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container": "#ebeef1",
+                      "midnight-black": "#061F23",
+                      "primary": "#006c4b",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "surface-dim": "#d7dadd",
+                      "sunset-orange": "#F5926E",
+                      "error": "#ba1a1a",
+                      "background": "#f7fafc",
+                      "surface-tint": "#006c4b",
+                      "aurora-green": "#34D399",
+                      "outline": "#6c7a71",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed": "#061f23",
+                      "surface-container-high": "#e6e8eb",
+                      "tertiary": "#964729",
+                      "off-white-canvas": "#F8F8F8",
+                      "on-primary-fixed-variant": "#005137",
+                      "on-tertiary-fixed": "#380d00",
+                      "light-mint": "#F0FDF4",
+                      "inverse-primary": "#45dfa4",
+                      "pure-white": "#FFFFFF",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#f7fafc",
+                      "outline-variant": "#bbcac0",
+                      "tertiary-fixed": "#ffdbcf",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#34d399",
+                      "on-primary-container": "#00563b",
+                      "on-tertiary-container": "#7d3418",
+                      "secondary-fixed": "#cee7ec",
+                      "carbon-black": "#0E1214",
+                      "surface-container-low": "#f1f4f7",
+                      "on-primary-fixed": "#002114",
+                      "inverse-surface": "#2d3133",
+                      "blossom-pink": "#FFF6F6",
+                      "slate-gray": "#6B7280",
+                      "forest-mint": "#005137",
+                      "primary-fixed-dim": "#45dfa4",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#eef1f4",
+                      "on-surface-variant": "#3c4a42",
+                      "on-background": "#181c1e",
+                      "surface-container-highest": "#e0e3e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "32px",
+                      "xs": "8px",
+                      "sidebar-expanded": "240px",
+                      "sidebar-collapsed": "80px",
+                      "header-desktop": "72px",
+                      "xl": "48px",
+                      "header-mobile": "56px",
+                      "sm": "16px",
+                      "bottom-nav": "64px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "headline-h2-mobile": [
+                              "Satoshi Variable"
+                      ],
+                      "tab-nav": [
+                              "Satoshi Variable"
+                      ],
+                      "input-text": [
+                              "\"Source Sans 3\""
+                      ],
+                      "body-base": [
+                              "\"Source Sans 3\""
+                      ],
+                      "body-bold": [
+                              "\"Source Sans 3\""
+                      ],
+                      "label-ui": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h2-desktop": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h1-desktop": [
+                              "Satoshi Variable"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\""
+                      ],
+                      "eyebrow-caps": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h1-mobile": [
+                              "Satoshi Variable"
+                      ]
+              },
+              "fontSize": {
+                      "headline-h2-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "tab-nav": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "input-text": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-base": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h2-desktop": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h1-desktop": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "eyebrow-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h1-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-off-white-canvas text-on-surface font-body-base min-h-screen flex selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- SideNavBar -->
+<nav class="hidden md:flex w-sidebar-expanded min-h-screen flex-col bg-midnight-black dark:bg-carbon-black border-r border-outline-variant fixed left-0 top-0 h-full z-30">
+<!-- Brand Header -->
+<div class="h-header-desktop flex items-center px-md border-b border-on-secondary-fixed-variant">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-aurora-green text-3xl font-variation-settings-'FILL'1">token</span>
+<div>
+<h1 class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">Creator Shop</h1>
+<p class="font-caption text-caption text-surface-variant opacity-80 -mt-1">Management Console</p>
+</div>
+</div>
+</div>
+<!-- Main Navigation -->
+<div class="flex-1 py-md overflow-y-auto">
+<ul class="flex flex-col gap-1 px-xs">
+<li>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl font-label-ui text-label-ui text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined">home</span>
+                        Home
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl font-label-ui text-label-ui text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined">storefront</span>
+                        Brands
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl font-label-ui text-label-ui bg-primary-container text-on-primary-fixed mx-2 my-1 scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined font-variation-settings-'FILL'1">campaign</span>
+                        Campaigns
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl font-label-ui text-label-ui text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined">group</span>
+                        Collabs
+                    </a>
+</li>
+</ul>
+</div>
+<!-- Footer Navigation -->
+<div class="p-xs border-t border-on-secondary-fixed-variant">
+<ul class="flex flex-col gap-1">
+<li>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl font-label-ui text-label-ui text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined">payments</span>
+                        Earnings
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl font-label-ui text-label-ui text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined">settings</span>
+                        Settings
+                    </a>
+</li>
+</ul>
+<!-- User Profile Snippet in Sidebar Footer -->
+<div class="mt-sm px-md py-sm flex items-center gap-xs cursor-pointer hover:bg-on-secondary-fixed-variant rounded-xl transition-colors">
+<img alt="User Profile" class="w-8 h-8 rounded-full object-cover border border-surface-variant" data-alt="A small, professional headshot of an individual, framed in a circular avatar format. The person is looking forward with a neutral expression. Lighting is soft and bright, suited for a professional software dashboard. The background is a clean, neutral gray tone. 100 words max." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABbpVOwvH7l4bvU24lWW48xPocCLlgCYpQQy9RKuTqRMQ_VI1aKXTNsROjGRdSq2dftiEqC_m8yrCJJ86nNattmLd4bYw9z8NNBo9PyDfVz4sJZweek07uQHBcjnSsr8sOE443NfnL_7Wb2xnZtB87uT2VUml95Pah1UTFsSSLlSOohZtBWgguKY_GQ1bRvmfkVHjwD52drbXMhxHZgjrBc0pWX_okPuHhhgOE8YmpbCL1b_vMSHeyejmXjlSKNIKAi2dUUHAJLww"/>
+<div class="flex-1 min-w-0">
+<p class="font-label-ui text-label-ui text-pure-white truncate">Alex Mercer</p>
+<p class="font-caption text-caption text-surface-variant truncate">Admin</p>
+</div>
+<span class="material-symbols-outlined text-surface-variant text-sm">unfold_more</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-sidebar-expanded flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="h-header-desktop w-full bg-pure-white dark:bg-surface-container-lowest border-b border-soft-gray-border flex justify-between items-center px-md sticky top-0 z-20">
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden p-xs text-slate-gray hover:text-primary transition-colors opacity-80 active:opacity-100">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Breadcrumb / Context (Desktop) -->
+<div class="hidden md:flex items-center gap-xs text-slate-gray font-body-base">
+<a class="hover:text-primary transition-colors" href="#">Campaigns</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-bold text-on-surface">Summer Launch '24</span>
+</div>
+<!-- Page Context (Mobile) -->
+<div class="md:hidden font-headline-h2-mobile text-headline-h2-mobile font-bold text-on-surface">
+                Summer Launch
+            </div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-sm">
+<!-- Search (Hidden as per JSON, but keeping space if needed) -->
+<button class="p-xs text-slate-gray hover:text-primary transition-colors opacity-80 active:opacity-100">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hidden sm:block h-xl px-md bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui rounded-lg hover:bg-primary-fixed transition-colors shadow-sm">
+                    Upgrade
+                </button>
+</div>
+</header>
+<!-- Workspace Navigation (Tabs) -->
+<div class="bg-pure-white border-b border-soft-gray-border px-md">
+<div class="max-w-7xl mx-auto flex overflow-x-auto no-scrollbar">
+<a class="h-xl px-sm flex items-center justify-center font-tab-nav text-tab-nav text-slate-gray hover:text-primary transition-colors whitespace-nowrap border-b-2 border-transparent" href="#">
+                    Overview
+                </a>
+<a class="h-xl px-sm flex items-center justify-center font-tab-nav text-tab-nav text-primary font-bold border-b-2 border-primary whitespace-nowrap ml-sm" href="#">
+                    Applicants <span class="ml-xs px-2 py-0.5 bg-surface-container-low text-on-surface-variant font-caption text-caption rounded-full">0</span>
+</a>
+<a class="h-xl px-sm flex items-center justify-center font-tab-nav text-tab-nav text-slate-gray hover:text-primary transition-colors whitespace-nowrap border-b-2 border-transparent ml-sm" href="#">
+                    Approved <span class="ml-xs px-2 py-0.5 bg-surface-container-low text-on-surface-variant font-caption text-caption rounded-full">12</span>
+</a>
+<a class="h-xl px-sm flex items-center justify-center font-tab-nav text-tab-nav text-slate-gray hover:text-primary transition-colors whitespace-nowrap border-b-2 border-transparent ml-sm" href="#">
+                    Content <span class="ml-xs px-2 py-0.5 bg-surface-container-low text-on-surface-variant font-caption text-caption rounded-full">4</span>
+</a>
+</div>
+</div>
+<!-- Scrollable Workspace Area -->
+<div class="flex-1 overflow-y-auto p-md sm:p-lg">
+<div class="max-w-7xl mx-auto h-full flex flex-col">
+<!-- Workspace Header -->
+<div class="mb-md">
+<h2 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface">Applicants</h2>
+<p class="font-body-base text-body-base text-slate-gray mt-1">Review creator applications and make Campaign-specific decisions.</p>
+</div>
+<!-- Toolbar (Adapted for Empty State) -->
+<div class="flex flex-col sm:flex-row gap-sm mb-lg">
+<!-- Search -->
+<div class="relative flex-1 max-w-md opacity-50 pointer-events-none">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-slate-gray">search</span>
+<input class="w-full h-xl pl-10 pr-sm rounded-lg border border-soft-gray-border bg-surface-container-low text-on-surface focus:outline-none focus:ring-1 focus:ring-aurora-green focus:border-aurora-green font-input-text text-input-text" disabled="" placeholder="Search applicants..." type="text"/>
+</div>
+<!-- Filters/Sort -->
+<div class="flex gap-sm opacity-50 pointer-events-none">
+<button class="h-xl px-sm flex items-center gap-xs border border-soft-gray-border bg-surface-container-low rounded-lg font-body-bold text-body-bold text-slate-gray" disabled="">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                            Filter
+                        </button>
+<button class="h-xl px-sm flex items-center gap-xs border border-soft-gray-border bg-surface-container-low rounded-lg font-body-bold text-body-bold text-slate-gray" disabled="">
+<span class="material-symbols-outlined text-sm">sort</span>
+                            Sort
+                        </button>
+</div>
+</div>
+<!-- Empty State Region -->
+<div class="flex-1 flex flex-col items-center justify-center p-xl border border-dashed border-soft-gray-border rounded-xl bg-pure-white min-h-[400px]">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-3xl text-slate-gray">inbox</span>
+</div>
+<h3 class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface mb-2 text-center">No applications yet</h3>
+<p class="font-body-base text-body-base text-slate-gray text-center max-w-md mb-lg">Creator applications for this Campaign will appear here when they are submitted.</p>
+<button class="h-xl px-md bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui rounded-lg hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">travel_explore</span>
+                        View Discovery
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full h-bottom-nav bg-pure-white border-t border-soft-gray-border flex justify-around items-center z-30 pb-safe">
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-caption text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-caption text-[10px] mt-1">Brands</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-primary font-bold" href="#">
+<div class="px-3 py-1 bg-primary-container rounded-full mb-0.5">
+<span class="material-symbols-outlined text-on-primary-fixed font-variation-settings-'FILL'1">campaign</span>
+</div>
+<span class="font-caption text-[10px]">Campaigns</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-caption text-[10px] mt-1">Collabs</span>
+</a>
+</nav>
+</body></html>

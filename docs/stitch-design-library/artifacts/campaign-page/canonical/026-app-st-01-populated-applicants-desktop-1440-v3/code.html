@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>APP-ST-01 — Populated Applicants — Desktop 1440 — v2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "forest-mint": "#005137",
+                      "pure-white": "#FFFFFF",
+                      "on-tertiary-fixed-variant": "#783114",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "background": "#f7fafc",
+                      "carbon-black": "#0E1214",
+                      "secondary-fixed": "#cee7ec",
+                      "aurora-green": "#34D399",
+                      "secondary-container": "#cbe4e9",
+                      "on-tertiary-fixed": "#380d00",
+                      "primary": "#006c4b",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "surface-container-low": "#f1f4f7",
+                      "inverse-on-surface": "#eef1f4",
+                      "soft-gray-border": "#E5E7EB",
+                      "on-secondary-container": "#4f676b",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#3c4a42",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#002114",
+                      "on-primary-container": "#00563b",
+                      "secondary": "#4b6267",
+                      "on-primary-fixed-variant": "#005137",
+                      "surface-dim": "#d7dadd",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "crimson-red": "#CA0F1C",
+                      "tertiary-fixed": "#ffdbcf",
+                      "on-error": "#ffffff",
+                      "on-background": "#181c1e",
+                      "primary-fixed-dim": "#45dfa4",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "on-surface": "#181c1e",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-variant": "#e0e3e5",
+                      "slate-gray": "#6B7280",
+                      "tertiary": "#964729",
+                      "surface-bright": "#f7fafc",
+                      "outline-variant": "#bbcac0",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#34d399",
+                      "sunset-orange": "#F5926E",
+                      "surface-container-high": "#e6e8eb",
+                      "outline": "#6c7a71",
+                      "on-secondary-fixed": "#061f23",
+                      "inverse-primary": "#45dfa4",
+                      "blossom-pink": "#FFF6F6",
+                      "surface-tint": "#006c4b",
+                      "surface": "#f7fafc",
+                      "surface-container": "#ebeef1",
+                      "inverse-surface": "#2d3133",
+                      "on-tertiary-container": "#7d3418",
+                      "light-mint": "#F0FDF4",
+                      "primary-fixed": "#68fcbf",
+                      "midnight-black": "#061F23",
+                      "tertiary-container": "#ffa483",
+                      "off-white-canvas": "#F8F8F8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "header-mobile": "56px",
+                      "sidebar-expanded": "240px",
+                      "sidebar-collapsed": "80px",
+                      "bottom-nav": "64px",
+                      "sm": "16px",
+                      "xl": "48px",
+                      "header-desktop": "72px",
+                      "xs": "8px",
+                      "md": "24px",
+                      "lg": "32px"
+              },
+              "fontFamily": {
+                      "tab-nav": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "headline-h1-desktop": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "headline-h1-mobile": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "headline-h2-mobile": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "input-text": [
+                              "\"Source Sans 3\"", "sans-serif"
+                      ],
+                      "label-ui": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "body-bold": [
+                              "\"Source Sans 3\"", "sans-serif"
+                      ],
+                      "eyebrow-caps": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "headline-h2-desktop": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\"", "sans-serif"
+                      ],
+                      "body-base": [
+                              "\"Source Sans 3\"", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "tab-nav": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h1-desktop": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h1-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h2-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "input-text": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "eyebrow-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h2-desktop": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-base": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-off-white-canvas text-on-surface font-body-base antialiased min-h-screen flex">
+<!-- Global App Shell Sidebar -->
+<nav class="w-sidebar-expanded min-h-screen flex flex-col bg-midnight-black dark:bg-carbon-black border-r border-outline-variant fixed left-0 top-0 h-full z-30 shadow-none scale-100 duration-150 ease-in-out hidden md:flex">
+<!-- Sidebar Header -->
+<div class="h-header-desktop flex items-center px-md border-b border-on-secondary-fixed-variant">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-aurora-green flex items-center justify-center text-midnight-black font-bold">CS</div>
+<div>
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">Creator Shop</h2>
+<p class="font-caption text-caption text-surface-variant">Management Console</p>
+</div>
+</div>
+</div>
+<!-- Sidebar Navigation -->
+<div class="flex-1 py-4 flex flex-col gap-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-4 py-3 mx-2 my-1 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">home</span>
+<span class="font-label-ui text-label-ui">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 mx-2 my-1 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">storefront</span>
+<span class="font-label-ui text-label-ui">Brands</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 mx-2 my-1 rounded-xl bg-primary-container text-on-primary-fixed group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-label-ui text-label-ui">Campaigns</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 mx-2 my-1 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">group</span>
+<span class="font-label-ui text-label-ui">Collabs</span>
+</a>
+</div>
+<!-- Sidebar Footer -->
+<div class="mt-auto border-t border-on-secondary-fixed-variant py-4">
+<a class="flex items-center gap-3 px-4 py-3 mx-2 my-1 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">payments</span>
+<span class="font-label-ui text-label-ui">Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 mx-2 my-1 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">settings</span>
+<span class="font-label-ui text-label-ui">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col ml-sidebar-expanded min-w-0">
+<!-- Global Top Navbar -->
+<header class="h-header-desktop w-full bg-pure-white dark:bg-surface-container-lowest border-b border-soft-gray-border flex justify-between items-center px-md sticky top-0 z-20 shadow-none hidden md:flex">
+<div class="flex items-center gap-6">
+<!-- Breadcrumb or Workspace Context Context -->
+<div class="flex items-center gap-2 text-slate-gray font-body-base text-body-base">
+<span>Campaigns</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-bold text-primary">Lumina Skin Summer Push</span>
+</div>
+</div>
+<!-- Global Actions -->
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-gray hover:text-primary transition-colors bg-surface-container-low hover:bg-surface-container-high">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-soft-gray-border">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of a professional corporate user. High-key lighting, bright pristine corporate environment, sharp focus. Modern, reliable, confident." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0pxK3XoVjGoGh1QT-RQtUT7NI3Po44jidzHoTMe49gWLYR9nKN2WSbOq4AVlfH_utroJg8FhpvzCO2DJkI44yvPdjCnqnJ7tgckCqvAZsQJaYbXI9f57YJo8iB7W4l4n3TE47cYwy-UY_UDJ93wmwhDUJ8qcD6dwQf9pKMIwziFIC0QSqnKynp9jeu8wyE52A-65HM7jFohW54JobQizeRpkCGM9rcEWTLGXNbcMVVgRgUyQR2Q19rVz7hJblg6TT-XyXs8WKjKQ"/>
+</div>
+</div>
+</header>
+<!-- Workspace Layout -->
+<div class="flex flex-1 overflow-hidden">
+<!-- Workspace Navigation (Vertical Tabs) -->
+<aside class="w-64 bg-surface-container-lowest border-r border-soft-gray-border flex flex-col pt-6 hidden lg:flex">
+<nav class="px-4 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-gray hover:text-primary hover:bg-surface-container-low transition-colors font-body-bold text-body-bold" href="#">
+<span class="material-symbols-outlined">search</span>
+                        Discovery
+                    </a>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg bg-light-mint text-primary font-body-bold text-body-bold border-l-4 border-primary" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+                            Applicants
+                        </div>
+<span class="bg-aurora-green text-on-primary-fixed text-xs font-bold px-2 py-0.5 rounded-full">3</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-gray hover:text-primary hover:bg-surface-container-low transition-colors font-body-bold text-body-bold" href="#">
+<span class="material-symbols-outlined">handshake</span>
+                        Collaborations
+                    </a>
+</nav>
+</aside>
+<!-- Workspace Canvas -->
+<div class="flex-1 overflow-y-auto p-md lg:p-lg bg-off-white-canvas">
+<!-- Page Header -->
+<div class="mb-8 max-w-5xl mx-auto">
+<h1 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface mb-2">Applicants</h1>
+<p class="font-body-base text-body-base text-slate-gray">Review creator applications and make Campaign-specific decisions.</p>
+</div>
+<!-- Controls & Filters -->
+<div class="mb-6 max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-pure-white p-4 rounded-xl border border-soft-gray-border">
+<div class="flex-1 w-full sm:w-auto relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray">search</span>
+<input class="w-full pl-10 pr-4 h-12 rounded-lg border border-soft-gray-border bg-pure-white text-input-text font-input-text focus:border-aurora-green focus:ring-1 focus:ring-aurora-green outline-none transition-colors" placeholder="Search applicants" type="text"/>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<div class="relative">
+<select class="appearance-none h-12 pl-4 pr-10 rounded-lg border border-soft-gray-border bg-pure-white text-body-bold font-body-bold text-on-surface focus:border-aurora-green focus:ring-1 focus:ring-aurora-green outline-none cursor-pointer">
+<option>Pending Review</option>
+<option>Approved</option>
+<option>Rejected</option>
+<option>All Statuses</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-gray pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none h-12 pl-4 pr-10 rounded-lg border border-soft-gray-border bg-pure-white text-body-bold font-body-bold text-on-surface focus:border-aurora-green focus:ring-1 focus:ring-aurora-green outline-none cursor-pointer">
+<option>Newest first</option>
+<option>Oldest first</option>
+<option>Match Score</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-gray pointer-events-none">sort</span>
+</div>
+</div>
+</div>
+<!-- Decision Queue Header -->
+<div class="max-w-5xl mx-auto mb-4 flex items-center justify-between px-2">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase tracking-wider">4 applications</span>
+</div>
+<!-- Decision Queue List -->
+<div class="max-w-5xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-6 pb-12">
+<!-- Row 1: Maya Kapoor (Ready) -->
+<div class="bg-pure-white rounded-xl border border-soft-gray-border p-6 flex flex-col gap-5 hover:border-aurora-green transition-colors group">
+<!-- Header -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border border-soft-gray-border shrink-0">
+<img alt="Maya Kapoor Avatar" class="w-full h-full object-cover" data-alt="A portrait of a confident young female lifestyle creator. Warm natural lighting, clean minimal background, light-mode corporate aesthetic, bright and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCncjBnosMp3MaQui88MTh6jOJ1TracEFKroMtNq0VLrl95vMUBWSk6OlpDUoDFQQtpNwf6Q27q5Ca2sqTk7Z0Pp49vTCRIXvfUZdjMmwR-Mwg-cTAbVW-zS65m-UL8QO0AjOkuZm-y3rSA0-zja_-nL5QfZn5g9rHNZV-KcNUzlsyt9KOA-x3vafg9k3cwz2MSrkDac7aEixzogrbGXrnXrzA2vNjKRW0VnnZHdPdf95WuS4zcUETGRdaGSLSc_4Vb3egIZ63BMI8"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-body-bold text-body-bold text-on-surface truncate">Maya Kapoor</h3>
+<p class="font-caption text-caption text-slate-gray truncate">@mayaglow</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-sunset-orange"></span>
+<span class="font-caption text-caption text-on-surface-variant">Pending Review</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Applied</p>
+<p class="font-body-base text-body-base text-on-surface whitespace-nowrap">2 days ago</p>
+</div>
+</div>
+<!-- Application Context -->
+<div class="bg-surface-container-lowest border border-soft-gray-border rounded-lg p-3">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Asset</p>
+<p class="font-body-bold text-body-bold text-on-surface">Milky Ceramide Cleanser</p>
+</div>
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Brief</p>
+<p class="font-caption text-caption text-slate-gray">UGC Testimonial Reel</p>
+</div>
+</div>
+</div>
+<!-- AI Insight (Supporting) -->
+<div class="w-full bg-surface-container-low rounded-lg p-3 shrink-0 flex flex-col justify-center border border-outline-variant flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-aurora-green text-sm">auto_awesome</span>
+<span class="font-body-bold text-body-bold text-primary">AI Match: 91 / 100</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant leading-snug">Strong audience and content alignment with this Campaign.</p>
+</div>
+<!-- Actions -->
+<div class="flex flex-row gap-3 pt-2 mt-auto">
+<button class="h-10 px-4 rounded-lg bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui hover:bg-primary-fixed transition-colors flex-1 text-center">Approve</button>
+<button class="h-10 px-4 rounded-lg bg-pure-white border border-crimson-red text-crimson-red font-label-ui text-label-ui hover:bg-blossom-pink transition-colors flex-1 text-center">Reject</button>
+<button class="h-10 px-4 rounded-lg bg-transparent text-slate-gray hover:text-primary font-label-ui text-label-ui transition-colors flex-1 text-center">View App</button>
+</div>
+</div>
+<!-- Row 2: Rhea Shah (Processing) -->
+<div class="bg-pure-white rounded-xl border border-soft-gray-border p-6 flex flex-col gap-5 hover:border-aurora-green transition-colors group">
+<!-- Header -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border border-soft-gray-border shrink-0">
+<img alt="Rhea Shah Avatar" class="w-full h-full object-cover" data-alt="A portrait of a trendy female beauty creator. Soft bright lighting, professional studio look, light-mode dashboard aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBerk8eXG1dX-KwH-AD1dZJnvNHp_9bEijXsmOAvE2ELX2usEJb-x61KPBSqOawg3amaZiNonHPXiw0Gmmmb3pXoat6Ds_CzWBtALFRXjK5Kee9YBFf6sfoV2I0EuOsUx04ywxFNbT8sMa2cWWQoEAqT462AfKNjBHBu0hquZDZWTqvAfsmQf7IxXqNyY39TBnVhE8X5lBce0kslz2hKJRfWqgKzd0bO0KaQh6LuUJHzQzlao1mByAXjus9ODFsWmy15_AvAwEYJXM"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-body-bold text-body-bold text-on-surface truncate">Rhea Shah</h3>
+<p class="font-caption text-caption text-slate-gray truncate">@rheaskinnotes</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-sunset-orange"></span>
+<span class="font-caption text-caption text-on-surface-variant">Pending Review</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Applied</p>
+<p class="font-body-base text-body-base text-on-surface whitespace-nowrap">Today</p>
+</div>
+</div>
+<!-- Application Context -->
+<div class="bg-surface-container-lowest border border-soft-gray-border rounded-lg p-3">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Asset</p>
+<p class="font-body-bold text-body-bold text-on-surface">Milky Ceramide Cleanser</p>
+</div>
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Brief</p>
+<p class="font-caption text-caption text-slate-gray">Morning Routine Reel</p>
+</div>
+</div>
+</div>
+<!-- AI Insight (Processing) -->
+<div class="w-full bg-surface-container-low rounded-lg p-3 shrink-0 flex flex-col justify-center border border-outline-variant opacity-80 flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-slate-gray text-sm animate-spin">hourglass_top</span>
+<span class="font-body-bold text-body-bold text-slate-gray">AI Match: Processing</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant leading-snug">AI Match is being calculated.</p>
+</div>
+<!-- Actions -->
+<div class="flex flex-row gap-3 pt-2 mt-auto">
+<button class="h-10 px-4 rounded-lg bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui hover:bg-primary-fixed transition-colors flex-1 text-center">Approve</button>
+<button class="h-10 px-4 rounded-lg bg-pure-white border border-crimson-red text-crimson-red font-label-ui text-label-ui hover:bg-blossom-pink transition-colors flex-1 text-center">Reject</button>
+<button class="h-10 px-4 rounded-lg bg-transparent text-slate-gray hover:text-primary font-label-ui text-label-ui transition-colors flex-1 text-center">View App</button>
+</div>
+</div>
+<!-- Row 3: Anika Rao (Unavailable) -->
+<div class="bg-pure-white rounded-xl border border-soft-gray-border p-6 flex flex-col gap-5 hover:border-aurora-green transition-colors group">
+<!-- Header -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center border border-soft-gray-border shrink-0">
+<span class="font-headline-h2-desktop text-headline-h2-desktop text-secondary">AR</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-body-bold text-body-bold text-on-surface truncate">Anika Rao</h3>
+<p class="font-caption text-caption text-slate-gray truncate">@anikarao</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-sunset-orange"></span>
+<span class="font-caption text-caption text-on-surface-variant">Pending Review</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Applied</p>
+<p class="font-body-base text-body-base text-on-surface whitespace-nowrap">3 days ago</p>
+</div>
+</div>
+<!-- Application Context -->
+<div class="bg-surface-container-lowest border border-soft-gray-border rounded-lg p-3">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Asset</p>
+<p class="font-body-bold text-body-bold text-on-surface">Lumina Skin</p>
+</div>
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Brief</p>
+<p class="font-caption text-caption text-slate-gray">Brand Story</p>
+</div>
+</div>
+</div>
+<!-- AI Insight (Unavailable) -->
+<div class="w-full bg-surface-container-low rounded-lg p-3 shrink-0 flex flex-col justify-center border border-outline-variant opacity-70 flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-slate-gray text-sm">cloud_off</span>
+<span class="font-body-bold text-body-bold text-slate-gray">AI Match: Unavailable</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant leading-snug">AI Match unavailable. You can still review and decide.</p>
+</div>
+<!-- Actions -->
+<div class="flex flex-row gap-3 pt-2 mt-auto">
+<button class="h-10 px-4 rounded-lg bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui hover:bg-primary-fixed transition-colors flex-1 text-center">Approve</button>
+<button class="h-10 px-4 rounded-lg bg-pure-white border border-crimson-red text-crimson-red font-label-ui text-label-ui hover:bg-blossom-pink transition-colors flex-1 text-center">Reject</button>
+<button class="h-10 px-4 rounded-lg bg-transparent text-slate-gray hover:text-primary font-label-ui text-label-ui transition-colors flex-1 text-center">View App</button>
+</div>
+</div>
+<!-- Row 4: Tara Mehta (Approved / Historical) -->
+<div class="bg-surface-container-low rounded-xl border border-soft-gray-border p-6 flex flex-col gap-5 opacity-75">
+<!-- Header -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border border-soft-gray-border shrink-0 grayscale">
+<img alt="Tara Mehta Avatar" class="w-full h-full object-cover" data-alt="A portrait of an elegant wellness creator. Soft neutral lighting, calm studio environment, desaturated professional light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK2vBBb33LDsXB8cQn3PFpXujvHQV1lNRg_151l25NRASo2KAYLikMhE2CzdtDSj338-SEV6EXRvZNJ6MAKnyOs2UeSUP_6f9WgQHdspS4rPOi0Joip7VjlcWD1x9V5MI9KaHZ79b9iTf5qPPIWLBqInfDH1Az6ggjTXkIrWronRDo4xSHZeAixhPwTkbIceZojNou-tvPQeFjfWfucZCpq1bmbDowLCEt57CabFaZWx-KLZ19c3M72r9lIQTWzSaP1q848fPAOY0"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-body-bold text-body-bold text-on-surface truncate">Tara Mehta</h3>
+<p class="font-caption text-caption text-slate-gray truncate">@tarawellness</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-forest-mint"></span>
+<span class="font-caption text-caption text-forest-mint font-bold">Approved</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Applied</p>
+<p class="font-body-base text-body-base text-on-surface whitespace-nowrap">5 days ago</p>
+</div>
+</div>
+<!-- Application Context -->
+<div class="bg-surface-container-lowest border border-soft-gray-border rounded-lg p-3">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Asset</p>
+<p class="font-body-bold text-body-bold text-on-surface">Milky Ceramide Cleanser</p>
+</div>
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Campaign Brief</p>
+<p class="font-caption text-caption text-slate-gray">UGC Testimonial Reel</p>
+</div>
+</div>
+</div>
+<!-- AI Insight (Historical) -->
+<div class="w-full bg-surface-container-low rounded-lg p-3 shrink-0 flex flex-col justify-center flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-slate-gray text-sm">auto_awesome</span>
+<span class="font-body-bold text-body-bold text-slate-gray">AI Match: 82 / 100</span>
+</div>
+</div>
+<!-- Actions (Limited) -->
+<div class="flex flex-row gap-3 pt-2 mt-auto justify-end">
+<button class="h-10 px-4 rounded-lg bg-pure-white border border-soft-gray-border text-slate-gray font-label-ui text-label-ui hover:bg-surface-container-highest transition-colors text-center">View App</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

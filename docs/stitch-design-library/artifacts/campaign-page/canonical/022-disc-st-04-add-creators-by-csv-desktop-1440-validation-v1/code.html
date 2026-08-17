@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Creators by CSV - Validation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#45dfa4",
+                      "on-secondary-fixed": "#061f23",
+                      "tertiary-container": "#ffa483",
+                      "surface-container-highest": "#e0e3e5",
+                      "outline": "#6c7a71",
+                      "surface-variant": "#e0e3e5",
+                      "primary": "#006c4b",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "surface": "#f7fafc",
+                      "forest-mint": "#005137",
+                      "surface-dim": "#d7dadd",
+                      "blossom-pink": "#FFF6F6",
+                      "surface-container-high": "#e6e8eb",
+                      "on-primary-fixed": "#002114",
+                      "tertiary": "#964729",
+                      "tertiary-fixed": "#ffdbcf",
+                      "carbon-black": "#0E1214",
+                      "secondary-fixed": "#cee7ec",
+                      "on-primary-fixed-variant": "#005137",
+                      "on-tertiary-fixed-variant": "#783114",
+                      "on-primary-container": "#00563b",
+                      "surface-container-low": "#f1f4f7",
+                      "inverse-surface": "#2d3133",
+                      "pure-white": "#FFFFFF",
+                      "sunset-orange": "#F5926E",
+                      "secondary-container": "#cbe4e9",
+                      "inverse-on-surface": "#eef1f4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#181c1e",
+                      "on-background": "#181c1e",
+                      "on-tertiary-container": "#7d3418",
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "aurora-green": "#34D399",
+                      "primary-fixed-dim": "#45dfa4",
+                      "primary-fixed": "#68fcbf",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#3c4a42",
+                      "on-primary": "#ffffff",
+                      "slate-gray": "#6B7280",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#006c4b",
+                      "surface-container": "#ebeef1",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "off-white-canvas": "#F8F8F8",
+                      "on-tertiary-fixed": "#380d00",
+                      "on-error-container": "#93000a",
+                      "light-mint": "#F0FDF4",
+                      "surface-bright": "#f7fafc",
+                      "midnight-black": "#061F23",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#34d399",
+                      "outline-variant": "#bbcac0",
+                      "background": "#f7fafc",
+                      "secondary": "#4b6267",
+                      "on-secondary-container": "#4f676b",
+                      "crimson-red": "#CA0F1C",
+                      "soft-gray-border": "#E5E7EB"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "24px",
+                      "header-desktop": "72px",
+                      "xs": "8px",
+                      "header-mobile": "56px",
+                      "sm": "16px",
+                      "lg": "32px",
+                      "sidebar-expanded": "240px",
+                      "xl": "48px",
+                      "bottom-nav": "64px",
+                      "sidebar-collapsed": "80px"
+              },
+              "fontFamily": {
+                      "body-bold": [
+                              "\"Source Sans 3\""
+                      ],
+                      "body-base": [
+                              "\"Source Sans 3\""
+                      ],
+                      "tab-nav": [
+                              "Satoshi Variable"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\""
+                      ],
+                      "headline-h1-mobile": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h2-desktop": [
+                              "Satoshi Variable"
+                      ],
+                      "label-ui": [
+                              "Satoshi Variable"
+                      ],
+                      "input-text": [
+                              "\"Source Sans 3\""
+                      ],
+                      "eyebrow-caps": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h2-mobile": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h1-desktop": [
+                              "Satoshi Variable"
+                      ]
+              },
+              "fontSize": {
+                      "body-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-base": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "tab-nav": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-h1-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h2-desktop": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "input-text": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "eyebrow-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h2-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h1-desktop": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-off-white-canvas font-body-base text-body-base text-on-surface antialiased overflow-hidden">
+<!-- Background Context (Dimmed) -->
+<div class="fixed inset-0 z-0">
+<!-- Placeholder for background content -->
+<div class="w-full h-full bg-surface-container opacity-50 flex items-center justify-center">
+<span class="text-slate-gray font-caption text-caption">Background Context: {{DATA:SCREEN:SCREEN_2}}</span>
+</div>
+</div>
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-md">
+<!-- Modal Container -->
+<div class="bg-pure-white rounded-xl shadow-lg w-full max-w-[720px] flex flex-col max-h-[921px] overflow-hidden border border-soft-gray-border">
+<!-- Modal Header -->
+<div class="px-md py-md border-b border-soft-gray-border flex items-start justify-between bg-pure-white shrink-0">
+<div>
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface mb-xs">Add creators</h2>
+<p class="font-body-base text-body-base text-slate-gray">Upload creators directly to this Campaign’s Discovery workspace.</p>
+</div>
+<button class="text-slate-gray hover:text-on-surface transition-colors p-xs rounded-lg hover:bg-surface-container-low">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Content (Scrollable) -->
+<div class="p-md flex-1 overflow-y-auto space-y-lg">
+<!-- Method Selector -->
+<div class="flex p-1 bg-surface-container-low rounded-lg w-full max-w-sm">
+<button class="flex-1 py-2 px-4 rounded-md font-label-ui text-label-ui text-slate-gray hover:text-on-surface transition-colors">
+                        Add individually
+                    </button>
+<button class="flex-1 py-2 px-4 rounded-md bg-pure-white shadow-sm font-label-ui text-label-ui text-on-surface border border-soft-gray-border">
+                        Upload CSV
+                    </button>
+</div>
+<!-- Uploaded File Area -->
+<div class="border border-soft-gray-border rounded-xl p-md bg-surface flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-slate-gray">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-body-bold text-body-bold text-on-surface">campaign-creators.csv</p>
+<p class="font-caption text-caption text-slate-gray">48 rows</p>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="font-label-ui text-label-ui text-slate-gray hover:text-on-surface transition-colors px-3 py-2 rounded-lg hover:bg-surface-container-low">
+                            Replace file
+                        </button>
+<button class="font-label-ui text-label-ui text-crimson-red hover:bg-blossom-pink transition-colors px-3 py-2 rounded-lg border border-soft-gray-border">
+                            Remove
+                        </button>
+</div>
+</div>
+<!-- Column Mapping Section -->
+<div>
+<h3 class="font-label-ui text-label-ui text-on-surface mb-sm">Column mapping</h3>
+<div class="border border-soft-gray-border rounded-xl overflow-hidden bg-pure-white">
+<table class="w-full text-left">
+<tbody class="divide-y divide-soft-gray-border">
+<tr class="hover:bg-surface-container-lowest">
+<td class="py-3 px-4 font-body-base text-body-base text-slate-gray w-1/3">Instagram Handle</td>
+<td class="py-3 px-4 w-12 text-center text-slate-gray"><span class="material-symbols-outlined text-[16px]">arrow_forward</span></td>
+<td class="py-3 px-4 font-body-bold text-body-bold text-on-surface">Instagram handle</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<span class="font-caption text-caption text-slate-gray">Required</span>
+<span class="material-symbols-outlined text-aurora-green text-[16px]">check_circle</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest">
+<td class="py-3 px-4 font-body-base text-body-base text-slate-gray w-1/3">Email</td>
+<td class="py-3 px-4 w-12 text-center text-slate-gray"><span class="material-symbols-outlined text-[16px]">arrow_forward</span></td>
+<td class="py-3 px-4 font-body-bold text-body-bold text-on-surface">Email</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<span class="font-caption text-caption text-slate-gray">Optional</span>
+<span class="material-symbols-outlined text-aurora-green text-[16px]">check_circle</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Validation Summary & Table -->
+<div class="space-y-sm">
+<div class="flex items-center gap-xs">
+<span class="inline-flex items-center px-2 py-1 rounded bg-light-mint text-forest-mint font-caption text-caption border border-aurora-green">42 ready</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-blossom-pink text-crimson-red font-caption text-caption border border-sunset-orange">4 invalid</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-caption text-caption border border-tertiary-fixed-dim">2 duplicates</span>
+</div>
+<div class="border border-soft-gray-border rounded-xl overflow-hidden bg-pure-white">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low border-b border-soft-gray-border">
+<tr>
+<th class="py-2 px-4 font-caption text-caption text-slate-gray font-semibold">Handle</th>
+<th class="py-2 px-4 font-caption text-caption text-slate-gray font-semibold">Email</th>
+<th class="py-2 px-4 font-caption text-caption text-slate-gray font-semibold text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-soft-gray-border">
+<tr class="hover:bg-surface-container-lowest">
+<td class="py-3 px-4 font-body-base text-body-base text-on-surface">@maya_glow</td>
+<td class="py-3 px-4 font-body-base text-body-base text-slate-gray">maya@example.com</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center px-2 py-1 rounded bg-light-mint text-forest-mint font-caption text-caption">Ready</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest">
+<td class="py-3 px-4 font-body-base text-body-base text-on-surface">rheaskinnotes</td>
+<td class="py-3 px-4 font-body-base text-body-base text-slate-gray">-</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center px-2 py-1 rounded bg-light-mint text-forest-mint font-caption text-caption">Ready</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest">
+<td class="py-3 px-4 font-body-base text-body-base text-on-surface">-</td>
+<td class="py-3 px-4 font-body-base text-body-base text-slate-gray">creator@example.com</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center px-2 py-1 rounded bg-blossom-pink text-crimson-red font-caption text-caption">Missing Instagram handle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest">
+<td class="py-3 px-4 font-body-base text-body-base text-on-surface">@maya_glow</td>
+<td class="py-3 px-4 font-body-base text-body-base text-slate-gray">another email</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-caption text-caption">Duplicate</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Policy Note -->
+<div class="flex items-center justify-between pt-sm">
+<p class="font-caption text-caption text-slate-gray">Invalid and duplicate rows will not be imported.</p>
+<button class="font-label-ui text-label-ui text-primary hover:text-forest-mint transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">download</span>
+                        Download errors
+                    </button>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-md py-md border-t border-soft-gray-border bg-surface flex justify-end gap-sm shrink-0">
+<button class="px-6 h-12 rounded-lg bg-pure-white border border-soft-gray-border font-label-ui text-label-ui text-on-surface hover:bg-surface-container-low transition-colors">
+                    Cancel
+                </button>
+<button class="px-6 h-12 rounded-lg bg-aurora-green font-label-ui text-label-ui text-on-primary-fixed hover:bg-primary-container transition-colors">
+                    Import 42 creators
+                </button>
+</div>
+</div>
+</div>
+</body></html>

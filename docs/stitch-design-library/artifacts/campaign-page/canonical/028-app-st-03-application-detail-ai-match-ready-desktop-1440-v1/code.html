@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>APP-ST-03 — Application Detail — AI Match Ready</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#34d399",
+                        "surface-container-high": "#e6e8eb",
+                        "on-secondary-fixed": "#061f23",
+                        "surface": "#f7fafc",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "sunset-orange": "#F5926E",
+                        "on-error": "#ffffff",
+                        "blossom-pink": "#FFF6F6",
+                        "surface-bright": "#f7fafc",
+                        "on-tertiary-container": "#7d3418",
+                        "inverse-primary": "#45dfa4",
+                        "on-tertiary": "#ffffff",
+                        "midnight-black": "#061F23",
+                        "inverse-on-surface": "#eef1f4",
+                        "surface-container": "#ebeef1",
+                        "pure-white": "#FFFFFF",
+                        "outline": "#6c7a71",
+                        "on-primary-fixed": "#002114",
+                        "on-secondary-container": "#4f676b",
+                        "outline-variant": "#bbcac0",
+                        "secondary-container": "#cbe4e9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f1f4f7",
+                        "primary-fixed": "#68fcbf",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#00563b",
+                        "aurora-green": "#34D399",
+                        "tertiary-fixed": "#ffdbcf",
+                        "secondary-fixed": "#cee7ec",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-surface": "#181c1e",
+                        "light-mint": "#F0FDF4",
+                        "soft-gray-border": "#E5E7EB",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#3c4a42",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "forest-mint": "#005137",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#964729",
+                        "crimson-red": "#CA0F1C",
+                        "on-background": "#181c1e",
+                        "carbon-black": "#0E1214",
+                        "background": "#f7fafc",
+                        "slate-gray": "#6B7280",
+                        "on-error-container": "#93000a",
+                        "off-white-canvas": "#F8F8F8",
+                        "tertiary-container": "#ffa483",
+                        "on-primary-fixed-variant": "#005137",
+                        "surface-tint": "#006c4b",
+                        "secondary": "#4b6267",
+                        "primary-fixed-dim": "#45dfa4",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d7dadd",
+                        "primary": "#006c4b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "48px",
+                        "sidebar-collapsed": "80px",
+                        "sm": "16px",
+                        "header-desktop": "72px",
+                        "lg": "32px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "bottom-nav": "64px",
+                        "sidebar-expanded": "240px",
+                        "drawer": "600px"
+                    },
+                    "fontFamily": {
+                        "body-base": ["\"Source Sans 3\""],
+                        "input-text": ["\"Source Sans 3\""],
+                        "headline-h2-mobile": ["Satoshi"],
+                        "caption": ["\"Source Sans 3\""],
+                        "tab-nav": ["Satoshi"],
+                        "label-ui": ["Satoshi"],
+                        "headline-h2-desktop": ["Satoshi"],
+                        "headline-h1-mobile": ["Satoshi"],
+                        "body-bold": ["\"Source Sans 3\""],
+                        "headline-h1-desktop": ["Satoshi"],
+                        "eyebrow-caps": ["Satoshi"]
+                    },
+                    "fontSize": {
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .drawer-slide-in {
+            animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-base overflow-hidden flex h-screen w-full">
+<!-- Dimmed Background Image -->
+<div class="fixed inset-0 z-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq97zj7jWMvkJXBuzl_MqwtjBEtKlK4JIdaQgNvyVfJCyxdcNSssQBr12u8THtpxwv7Is241Rq3MgKG2PYUnaVtV2F-A26P5baK8AXpkKLbYla7YrBHV-B7TDVAmO1EX4fQjWbU_5fTAuV2rlyYYlOfBUmJN9do30bKdSbz4W54KXFwqRPAmVG7J2g4d8WOT2y9GZWCfh-yHiBLlrVb1QWzuh4yoe2Gly0sBqpvgLqCQTcG8I1gaBJy8CuU3OoViAUsIjMv6rgnCg');">
+<!-- Overlay to dim the background -->
+<div class="absolute inset-0 bg-black/50 z-0"></div>
+</div>
+<!-- Drawer Container -->
+<div class="fixed inset-y-0 right-0 z-50 flex w-drawer shadow-2xl drawer-slide-in bg-pure-white border-l border-soft-gray-border flex-col">
+<!-- Header -->
+<header class="flex items-start justify-between p-md border-b border-soft-gray-border bg-pure-white shrink-0">
+<div class="flex items-center gap-sm">
+<img class="w-12 h-12 rounded-full object-cover border border-soft-gray-border" data-alt="A professional headshot of a female creator named Maya Kapoor, smiling warmly. The lighting is soft and bright, emphasizing a clean, modern aesthetic suitable for a beauty influencer profile. The background is a subtle, out-of-focus studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq97zj7jWMvkJXBuzl_MqwtjBEtKlK4JIdaQgNvyVfJCyxdcNSssQBr12u8THtpxwv7Is241Rq3MgKG2PYUnaVtV2F-A26P5baK8AXpkKLbYla7YrBHV-B7TDVAmO1EX4fQjWbU_5fTAuV2rlyYYlOfBUmJN9do30bKdSbz4W54KXFwqRPAmVG7J2g4d8WOT2y9GZWCfh-yHiBLlrVb1QWzuh4yoe2Gly0sBqpvgLqCQTcG8I1gaBJy8CuU3OoViAUsIjMv6rgnCg"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface">Maya Kapoor</h2>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded font-caption text-caption flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1">schedule</span> Pending Review
+                        </span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-base text-body-base text-slate-gray">@mayaglow</span>
+<span class="text-soft-gray-border">•</span>
+<span class="font-body-base text-body-base text-slate-gray">Applied 2 days ago</span>
+</div>
+</div>
+</div>
+<button aria-label="Close drawer" class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<!-- Scrollable Body -->
+<div class="flex-1 overflow-y-auto p-md space-y-lg bg-surface">
+<!-- 1. Application Context -->
+<section class="bg-pure-white border border-soft-gray-border rounded-xl p-md">
+<h3 class="font-label-ui text-label-ui text-on-surface mb-sm">Application Details</h3>
+<div class="grid grid-cols-1 gap-y-3">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">campaign</span>
+<div>
+<span class="font-caption text-caption text-slate-gray block uppercase tracking-wider">Campaign Asset</span>
+<a class="font-body-bold text-body-bold text-primary hover:underline flex items-center gap-1 group" href="#">
+                                Milky Ceramide Cleanser
+                                <span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">assignment</span>
+<div>
+<span class="font-caption text-caption text-slate-gray block uppercase tracking-wider">Campaign Brief</span>
+<a class="font-body-bold text-body-bold text-primary hover:underline flex items-center gap-1 group" href="#">
+                                UGC Testimonial Reel
+                                <span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="w-full h-px bg-soft-gray-border my-2"></div>
+<div>
+<span class="font-caption text-caption text-slate-gray block mb-1 uppercase tracking-wider">Submission Note</span>
+<p class="font-body-base text-body-base text-on-surface-variant italic border-l-2 border-surface-container-high pl-3 py-1">
+                            "I've been using ceramide products for years and my audience loves when I break down the science behind gentle cleansers. I have some great ideas for a compelling testimonial!"
+                        </p>
+</div>
+</div>
+</section>
+<!-- 2. AI Match (READY State) -->
+<section class="bg-light-mint border border-aurora-green/30 rounded-xl p-md relative overflow-hidden">
+<!-- Decorative background elements -->
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-aurora-green/10 rounded-full blur-2xl"></div>
+<div class="absolute -left-10 -bottom-10 w-32 h-32 bg-primary-fixed/20 rounded-full blur-xl"></div>
+<div class="relative z-10 flex flex-col items-center text-center space-y-4">
+<div class="flex flex-col items-center">
+<span class="font-eyebrow-caps text-eyebrow-caps text-forest-mint tracking-widest uppercase mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+                            AI Match
+                        </span>
+<div class="text-5xl font-headline-h1-desktop text-on-primary-container leading-none">
+                            91 <span class="text-2xl text-forest-mint/60 font-body-bold">/ 100</span>
+</div>
+</div>
+<p class="font-body-bold text-body-bold text-on-primary-fixed max-w-md">
+                        Strong audience and content alignment with this Campaign.
+                    </p>
+<div class="bg-white/60 rounded-lg p-3 w-full backdrop-blur-sm border border-white/40 mt-2">
+<p class="font-caption text-caption text-on-primary-fixed-variant flex items-start gap-2 text-left">
+<span class="material-symbols-outlined text-[16px] mt-0.5 shrink-0">info</span>
+                            AI Match helps evaluate fit using Campaign and creator intelligence. The final decision is yours.
+                        </p>
+</div>
+</div>
+</section>
+<!-- 3 & 4. Strengths & Areas to consider (Bento Grid Style) -->
+<div class="grid grid-cols-2 gap-sm">
+<!-- Strengths -->
+<section class="bg-pure-white border border-soft-gray-border rounded-xl p-sm flex flex-col h-full">
+<h3 class="font-label-ui text-label-ui text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-aurora-green bg-light-mint p-1 rounded-md text-[18px]">check_circle</span>
+                        Strengths
+                    </h3>
+<ul class="space-y-3 font-body-base text-body-base text-on-surface-variant flex-1">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-gray mt-0.5">arrow_right</span>
+<span>Strong audience overlap with the Campaign target</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-gray mt-0.5">arrow_right</span>
+<span>Content style aligns with the Campaign Brief</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-gray mt-0.5">arrow_right</span>
+<span>Consistent short-form skincare content</span>
+</li>
+</ul>
+</section>
+<!-- Areas to consider -->
+<section class="bg-pure-white border border-soft-gray-border rounded-xl p-sm flex flex-col h-full">
+<h3 class="font-label-ui text-label-ui text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sunset-orange bg-blossom-pink p-1 rounded-md text-[18px]">warning</span>
+                        Areas to consider
+                    </h3>
+<ul class="space-y-3 font-body-base text-body-base text-on-surface-variant flex-1">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-gray mt-0.5">arrow_right</span>
+<span>Limited prior experience with cleanser demonstrations</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-gray mt-0.5">arrow_right</span>
+<span>Audience reach extends beyond the Campaign’s target geography</span>
+</li>
+</ul>
+</section>
+</div>
+<!-- 5. Creator Context -->
+<section class="bg-pure-white border border-soft-gray-border rounded-xl p-md">
+<h3 class="font-label-ui text-label-ui text-on-surface mb-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">person</span>
+                    Creator Context
+                </h3>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<span class="font-caption text-caption text-slate-gray block uppercase tracking-wider">Location</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Mumbai, India</span>
+</div>
+<div>
+<span class="font-caption text-caption text-slate-gray block uppercase tracking-wider">Followers</span>
+<span class="font-body-base text-body-base text-on-surface-variant">124K</span>
+</div>
+<div>
+<span class="font-caption text-caption text-slate-gray block uppercase tracking-wider">Niche</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Skincare education</span>
+</div>
+<div>
+<span class="font-caption text-caption text-slate-gray block uppercase tracking-wider">Formats</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Reels and Stories</span>
+</div>
+<div class="col-span-2">
+<span class="font-caption text-caption text-slate-gray block uppercase tracking-wider">Primary Audience</span>
+<span class="font-body-base text-body-base text-on-surface-variant bg-surface-container px-2 py-1 rounded inline-block mt-1">Women 24–34</span>
+</div>
+</div>
+</section>
+<!-- 6. Quiet Footer Info -->
+<div class="pt-4 pb-2 text-center">
+<p class="font-caption text-caption text-slate-gray">
+                    This Application is evaluated against the Campaign opportunity as it existed when the creator applied.
+                </p>
+</div>
+</div>
+<!-- Persistent Footer -->
+<footer class="flex items-center justify-between p-md border-t border-soft-gray-border bg-pure-white shrink-0">
+<button class="h-12 px-6 rounded-lg font-label-ui text-label-ui text-crimson-red border border-soft-gray-border hover:bg-blossom-pink transition-colors">
+                Reject
+            </button>
+<button class="h-12 px-6 rounded-lg font-label-ui text-label-ui text-on-primary-fixed bg-aurora-green hover:bg-primary-fixed transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">check</span>
+                Approve
+            </button>
+</footer>
+</div>
+</body></html>

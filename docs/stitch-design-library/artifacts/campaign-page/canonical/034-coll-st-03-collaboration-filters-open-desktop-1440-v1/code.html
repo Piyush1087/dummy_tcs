@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COLL-ST-03 — Collaboration Filters Open — Desktop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e3e5",
+                        "primary": "#006c4b",
+                        "off-white-canvas": "#F8F8F8",
+                        "slate-gray": "#6B7280",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#181c1e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "crimson-red": "#CA0F1C",
+                        "surface-container-low": "#f1f4f7",
+                        "surface-bright": "#f7fafc",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-error": "#ffffff",
+                        "light-mint": "#F0FDF4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#ffa483",
+                        "on-surface-variant": "#3c4a42",
+                        "pure-white": "#FFFFFF",
+                        "on-background": "#181c1e",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "secondary-fixed": "#cee7ec",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#4b6267",
+                        "surface-container-high": "#e6e8eb",
+                        "surface-tint": "#006c4b",
+                        "on-primary-fixed-variant": "#005137",
+                        "midnight-black": "#061F23",
+                        "forest-mint": "#005137",
+                        "soft-gray-border": "#E5E7EB",
+                        "sunset-orange": "#F5926E",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-fixed": "#380d00",
+                        "blossom-pink": "#FFF6F6",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#bbcac0",
+                        "primary-container": "#34d399",
+                        "tertiary": "#964729",
+                        "inverse-primary": "#45dfa4",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-tertiary-container": "#7d3418",
+                        "on-primary-container": "#00563b",
+                        "on-secondary-fixed": "#061f23",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed-dim": "#45dfa4",
+                        "surface-dim": "#d7dadd",
+                        "surface-container": "#ebeef1",
+                        "carbon-black": "#0E1214",
+                        "background": "#f7fafc",
+                        "aurora-green": "#34D399",
+                        "on-primary": "#ffffff",
+                        "surface": "#f7fafc",
+                        "on-secondary-container": "#4f676b",
+                        "primary-fixed": "#68fcbf",
+                        "inverse-on-surface": "#eef1f4",
+                        "secondary-container": "#cbe4e9",
+                        "outline": "#6c7a71"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xs": "8px",
+                        "sidebar-collapsed": "80px",
+                        "md": "24px",
+                        "bottom-nav": "64px",
+                        "lg": "32px",
+                        "header-mobile": "56px",
+                        "sidebar-expanded": "240px",
+                        "xl": "48px",
+                        "header-desktop": "72px"
+                    },
+                    "fontFamily": {
+                        "input-text": ["\"Source Sans 3\""],
+                        "headline-h2-desktop": ["Satoshi"],
+                        "body-bold": ["\"Source Sans 3\""],
+                        "caption": ["\"Source Sans 3\""],
+                        "headline-h2-mobile": ["Satoshi"],
+                        "tab-nav": ["Satoshi"],
+                        "label-ui": ["Satoshi"],
+                        "body-base": ["\"Source Sans 3\""],
+                        "headline-h1-desktop": ["Satoshi"],
+                        "eyebrow-caps": ["Satoshi"],
+                        "headline-h1-mobile": ["Satoshi"]
+                    },
+                    "fontSize": {
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-off-white-canvas text-on-surface font-body-base antialiased flex">
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col w-sidebar-expanded bg-midnight-black border-r border-outline-variant z-30">
+<div class="h-header-desktop flex items-center px-md border-b border-on-surface-variant/20">
+<span class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">Creator Shop</span>
+</div>
+<nav class="flex-1 px-2 py-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="font-label-ui text-label-ui">Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span class="font-label-ui text-label-ui">Brands</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl bg-primary-container text-on-primary-fixed group" href="#">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+<span class="font-label-ui text-label-ui">Campaigns</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="font-label-ui text-label-ui">Collabs</span>
+</a>
+</nav>
+<div class="p-2 border-t border-on-surface-variant/20 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+<span class="font-label-ui text-label-ui">Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-ui text-label-ui">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-sidebar-expanded flex-1 min-h-screen flex flex-col relative">
+<!-- Top App Bar -->
+<header class="h-header-desktop w-full flex justify-between items-center px-md sticky top-0 z-20 bg-pure-white border-b border-soft-gray-border">
+<div class="flex items-center gap-8">
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-6 h-full items-center">
+<a class="font-body-base text-body-base text-slate-gray hover:text-primary transition-colors py-6" href="#">Dashboard</a>
+<a class="font-body-base text-body-base text-slate-gray hover:text-primary transition-colors py-6" href="#">Analytics</a>
+<a class="font-body-base text-body-base text-slate-gray hover:text-primary transition-colors py-6" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-gray hover:text-primary transition-colors relative h-10 w-10 flex items-center justify-center rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-crimson-red rounded-full"></span>
+</button>
+<button class="h-10 px-4 rounded bg-aurora-green text-on-primary-fixed font-body-bold text-body-bold hover:opacity-90 transition-opacity">
+                    Upgrade
+                </button>
+<div class="w-10 h-10 rounded-full bg-surface-variant border border-soft-gray-border overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a user in a well-lit modern office environment, wearing a smart casual outfit, soft high-key lighting emphasizing a modern, clean, light-mode dashboard context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDquQb_wb03tG1tdXU5SyRlWa2VxxzfUWbxL6iLRypvJ2FQQX6Llo4uPx6u22CrSBGPgNtXCar9ZtXnUYmzJutirTHqc2zbMRInn3GdCEV3WF8HXvJ-jNQ0MWB5n9BFvRht15Ftu0wID9FvH5DQ6DeTkAa6D6PKqyrk3_FHpjDa1RRAjlRplquO7Cxrrkof_i5H3ayOShBk9S8Cqqmu8ArLrH2ILYJps6WFIekce_Ei3H6V2UI6IRVW-twoeTq2nHV3snMfznwuRbc"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-lg max-w-[1440px] mx-auto w-full flex-1">
+<!-- Header Section -->
+<div class="flex flex-col gap-6 mb-8">
+<div class="flex justify-between items-end">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase tracking-wider">Campaign Workspace</span>
+<span class="text-soft-gray-border material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-eyebrow-caps text-eyebrow-caps text-primary uppercase tracking-wider">Milky Ceramide Cleanser</span>
+</div>
+<h1 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface flex items-baseline gap-4">
+                            Collaborations
+                            <span class="font-headline-h2-desktop text-headline-h2-desktop text-slate-gray font-normal tracking-normal">42 Active</span>
+</h1>
+</div>
+<div class="flex gap-3">
+<button class="h-12 px-6 rounded-lg bg-pure-white border border-soft-gray-border text-on-surface font-body-bold text-body-bold hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                            Export
+                        </button>
+<button class="h-12 px-6 rounded-lg bg-aurora-green text-on-primary-fixed font-body-bold text-body-bold hover:bg-primary-fixed transition-colors flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                            New Collab
+                        </button>
+</div>
+</div>
+<!-- Workspace Navigation Tabs -->
+<div class="flex border-b border-soft-gray-border gap-8">
+<a class="pb-4 font-tab-nav text-tab-nav text-slate-gray hover:text-primary transition-colors" href="#">
+                        Discovery
+                        <span class="ml-2 inline-flex items-center justify-center bg-surface-container px-2 py-0.5 rounded-full text-caption font-caption text-slate-gray">210</span>
+</a>
+<a class="pb-4 font-tab-nav text-tab-nav text-slate-gray hover:text-primary transition-colors" href="#">
+                        Applicants
+                        <span class="ml-2 inline-flex items-center justify-center bg-surface-container px-2 py-0.5 rounded-full text-caption font-caption text-slate-gray">18</span>
+</a>
+<a class="pb-4 font-tab-nav text-tab-nav text-primary border-b-2 border-primary" href="#">
+                        Collaborations
+                    </a>
+</div>
+</div>
+<!-- Table Toolbar & Filters -->
+<div class="bg-pure-white border border-soft-gray-border rounded-t-xl p-4 flex justify-between items-center relative">
+<div class="flex items-center gap-3">
+<!-- Search -->
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-pure-white border border-soft-gray-border text-input-text font-input-text focus:outline-none focus:border-aurora-green focus:ring-1 focus:ring-aurora-green transition-all" placeholder="Search creators..." type="text"/>
+</div>
+<div class="h-6 w-px bg-soft-gray-border mx-2"></div>
+<!-- Quick Filters (Chips) -->
+<button class="h-8 px-3 rounded-full bg-light-mint border border-aurora-green text-forest-mint font-caption text-caption flex items-center gap-1 hover:bg-aurora-green/20 transition-colors">
+                        Stage: Production
+                        <span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-light-mint border border-aurora-green text-forest-mint font-caption text-caption flex items-center gap-1 hover:bg-aurora-green/20 transition-colors">
+                        Status: Action Needed
+                        <span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button class="h-8 px-3 rounded-full border border-soft-gray-border text-slate-gray font-caption text-caption hover:bg-surface-container-low transition-colors border-dashed">
+                        + Add Filter
+                    </button>
+</div>
+<div class="flex items-center gap-3 relative">
+<!-- Advanced Filter Button (Active) -->
+<button class="h-10 px-4 rounded-lg bg-surface-container-low border border-soft-gray-border text-on-surface font-body-bold text-body-bold hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+                        Filters
+                        <span class="w-5 h-5 rounded-full bg-primary text-white text-[10px] flex items-center justify-center font-bold">3</span>
+</button>
+<!-- POPUP OVERLAY FOR FILTERS -->
+<div class="absolute top-full right-0 mt-2 w-[420px] bg-pure-white border border-soft-gray-border rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-50 flex flex-col overflow-hidden">
+<!-- Popover Header -->
+<div class="px-5 py-4 border-b border-soft-gray-border flex justify-between items-center bg-off-white-canvas">
+<h3 class="font-label-ui text-label-ui text-on-surface">Advanced Filters</h3>
+<button class="text-slate-gray hover:text-on-surface transition-colors flex items-center justify-center h-8 w-8 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Popover Body -->
+<div class="p-5 max-h-[400px] overflow-y-auto space-y-6">
+<!-- Filter Group: Stage -->
+<div class="space-y-3">
+<label class="font-label-ui text-label-ui text-on-surface block">Stage</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">Negotiation</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">Securement</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">Fulfillment</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg bg-light-mint border border-aurora-green/30 transition-colors">
+<input checked="" class="w-4 h-4 rounded border-aurora-green text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-forest-mint font-medium">Production</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">Publishing</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">Completed</span>
+</label>
+</div>
+</div>
+<hr class="border-soft-gray-border"/>
+<!-- Filter Group: Action Status -->
+<div class="space-y-3">
+<label class="font-label-ui text-label-ui text-on-surface block">Action status</label>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg bg-light-mint border border-aurora-green/30 transition-colors">
+<input checked="" class="w-4 h-4 border-aurora-green text-aurora-green focus:ring-aurora-green" name="action_status" type="radio"/>
+<span class="font-body-base text-body-base text-forest-mint font-medium">Needs your action</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 border-soft-gray-border text-aurora-green focus:ring-aurora-green" name="action_status" type="radio"/>
+<span class="font-body-base text-body-base text-on-surface">No action needed</span>
+</label>
+</div>
+</div>
+<hr class="border-soft-gray-border"/>
+<!-- Filter Group: Campaign Asset -->
+<div class="space-y-3">
+<label class="font-label-ui text-label-ui text-on-surface block">Campaign Asset</label>
+<select class="w-full h-10 px-3 rounded-lg bg-pure-white border border-soft-gray-border text-input-text font-input-text focus:outline-none focus:border-aurora-green focus:ring-1 focus:ring-aurora-green">
+<option selected="" value="milky_ceramide">Milky Ceramide Cleanser</option>
+<option value="lumina_skin">Lumina Skin</option>
+</select>
+</div>
+<hr class="border-soft-gray-border"/>
+<!-- Filter Group: Campaign Brief -->
+<div class="space-y-3">
+<label class="font-label-ui text-label-ui text-on-surface block">Campaign Brief</label>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">UGC Testimonial Reel</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">Morning Routine Reel</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+<span class="font-body-base text-body-base text-on-surface">Brand Story</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Popover Footer -->
+<div class="px-5 py-4 border-t border-soft-gray-border bg-off-white-canvas flex justify-between items-center">
+<span class="font-caption text-caption text-slate-gray">3 filters active</span>
+<div class="flex items-center gap-4">
+<button class="font-body-bold text-body-bold text-slate-gray hover:text-on-surface transition-colors">Clear all</button>
+<button class="h-10 px-4 rounded bg-aurora-green text-on-primary-fixed font-body-bold text-body-bold hover:opacity-90 transition-opacity">Apply filters</button>
+</div>
+</div>
+</div>
+<!-- END POPUP OVERLAY -->
+<button class="h-10 px-4 rounded-lg bg-pure-white border border-soft-gray-border text-on-surface font-body-bold text-body-bold hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">sort</span>
+                        Sort
+                    </button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="bg-pure-white border border-t-0 border-soft-gray-border rounded-b-xl overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-soft-gray-border bg-off-white-canvas">
+<th class="py-3 px-4 font-caption text-caption text-slate-gray uppercase tracking-wider font-semibold w-12">
+<input class="rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+</th>
+<th class="py-3 px-4 font-caption text-caption text-slate-gray uppercase tracking-wider font-semibold">Creator</th>
+<th class="py-3 px-4 font-caption text-caption text-slate-gray uppercase tracking-wider font-semibold">Stage</th>
+<th class="py-3 px-4 font-caption text-caption text-slate-gray uppercase tracking-wider font-semibold">Next Action</th>
+<th class="py-3 px-4 font-caption text-caption text-slate-gray uppercase tracking-wider font-semibold text-right">Fee</th>
+<th class="py-3 px-4 w-10"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-soft-gray-border">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-4 px-4">
+<input class="rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A bright, cheerful portrait of a female content creator holding a small skincare product, minimalist white background, soft lighting, modern social media aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFR_h9U1qIbKiUsAhlV-ReZXuOvyyEYi7MEnajb5uP4dDM4f94gwPe1sV-aXOo1U08wTHLvC9Zt42o8rQs5vINmo7WUAjLOclzBIA1cNfLhXW4ifeKBs2WuE6UEJtWVQ5bvyFqRi5grrl1fuPEi98No_kmUn_aPPAAltuN6-RSwFJQa6Qg2jAGNyVjP2i_KS3F4wxUCkz2tQx4fBov2lNMCUmXVMne76uu9RgNPui0d99ia_5g6SRg_-hE_QASEdOR1EhZ4VS710s"/>
+</div>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Priya Sharma</div>
+<div class="font-caption text-caption text-slate-gray">@priyaglows</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-low border border-soft-gray-border font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-aurora-green"></span>
+                                    Production
+                                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-blossom-pink text-crimson-red font-caption text-caption font-bold border border-crimson-red/20">Review Draft</span>
+<span class="font-caption text-caption text-slate-gray">Due Today</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="font-body-base text-body-base text-on-surface">$1,200</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-slate-gray hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-4 px-4">
+<input class="rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A stylish, modern portrait of a female influencer with glowing skin, neutral tones, high-key lighting, professional aesthetic suitable for a dashboard avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk_cprOL2oAFd0YS81AhIrgGGCHEYrkom7QMFCeW-4FJQIaaiUDPhR0_7Adi65Oac8z9H2qz6ZNnKRQ40NBT55fnPrF9LY67pVgBAPUhgjXA7gySPzBWcY0YWJTeXcZJm7Jn1yCchTVtGm_eHeWpUEK17WaFgq882DBIApWqDBVU-7ZRRzsVmp9dfBCSh94PMHA9Kc-BiivowPz7pPmxh_8fN-art5KTx6o9sIhKVUg-Zb-djMMm5msBo-SXOTRU46HuH3V-taKVw"/>
+</div>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Neha Rao</div>
+<div class="font-caption text-caption text-slate-gray">@nehabeauty</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-low border border-soft-gray-border font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-aurora-green"></span>
+                                    Production
+                                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-blossom-pink text-crimson-red font-caption text-caption font-bold border border-crimson-red/20">Approve Concept</span>
+<span class="font-caption text-caption text-slate-gray">Overdue (1d)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="font-body-base text-body-base text-on-surface">$850</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-slate-gray hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-4 px-4">
+<input class="rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden flex items-center justify-center text-primary font-body-bold bg-secondary-container">
+                                        KS
+                                    </div>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Kavya Singh</div>
+<div class="font-caption text-caption text-slate-gray">@kavya.create</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-low border border-soft-gray-border font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-aurora-green"></span>
+                                    Production
+                                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-surface-container-high text-on-surface font-caption text-caption font-bold border border-soft-gray-border">Awaiting Creator</span>
+<span class="font-caption text-caption text-slate-gray">Draft Due Tomorrow</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="font-body-base text-body-base text-on-surface">$2,500</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-slate-gray hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-4 px-4">
+<input class="rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A vibrant lifestyle shot of a female content creator in a modern bathroom setting, natural light, soft focus background, clean and professional look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGcCW_NKZthgtcG47QI2rjAmQyX8c1oP5XgIWpyuT_UeC0-QABomAWllXy4_RmXh6HBDuJwMBRkUMbD4nf9lGD6GB2OYRcNaQU6Jq1NKkjdYhBqAvxsn4gMs_rh_ZB2to7S6DKLHWUEo1ucSoXpryLlqokvnTbRnNgtRp9Glrcr9dzorDYvoukIyK3d69C2LJ6BYLkUrJiDBbBPpHAX-VurS8UQKWiyah5Kan_stUGHm6-M8bnw9Q4z8F-kaYSFORenAyY9C_D0Es"/>
+</div>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Ananya Mehta</div>
+<div class="font-caption text-caption text-slate-gray">@ananyalife</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-low border border-soft-gray-border font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-aurora-green"></span>
+                                    Production
+                                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-blossom-pink text-crimson-red font-caption text-caption font-bold border border-crimson-red/20">Review Revisions</span>
+<span class="font-caption text-caption text-slate-gray">Due Today</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="font-body-base text-body-base text-on-surface">$1,500</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-slate-gray hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-4 px-4">
+<input class="rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden flex items-center justify-center text-tertiary font-body-bold bg-tertiary-fixed">
+                                        RS
+                                    </div>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Riya Sen</div>
+<div class="font-caption text-caption text-slate-gray">@riya.vlogs</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-low border border-soft-gray-border font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-aurora-green"></span>
+                                    Production
+                                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-surface-container-high text-on-surface font-caption text-caption font-bold border border-soft-gray-border">Awaiting Creator</span>
+<span class="font-caption text-caption text-slate-gray">Revisions Due</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="font-body-base text-body-base text-on-surface">$950</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-slate-gray hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-4 px-4">
+<input class="rounded border-soft-gray-border text-aurora-green focus:ring-aurora-green" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, highly professional headshot of a female creator, soft studio lighting, light off-white background, confident expression, designed for a modern UI interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfdzSnOdeDnxOMJe0M7Bd5Ys7tPkeC2eDOJhnepV2e-GrWkCcF56zKcT9KQbOfCZvGHwEeC_-jIHe3HUrWiOF9XSJtO4JoZTjumgArO_V2HsUtuVb68GsdJ6axJAs8nC9D9fDf303QvEjcpPTcO9yJVKc_APdC-iCznVUYIGsAJSMT8OBF-gVg4ijurRb8sy9tu4WEJCdaKXnSum-EkFjFxpiPw4yQICpkFUV6dVyE9QuUL60Rgg7PwgsnyhdbqALLgCA28rBn6dQ"/>
+</div>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Tara Mehta</div>
+<div class="font-caption text-caption text-slate-gray">@tara.skincare</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-low border border-soft-gray-border font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-aurora-green"></span>
+                                    Production
+                                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-blossom-pink text-crimson-red font-caption text-caption font-bold border border-crimson-red/20">Review Final</span>
+<span class="font-caption text-caption text-slate-gray">Due Tomorrow</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="font-body-base text-body-base text-on-surface">$1,800</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-slate-gray hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="flex justify-between items-center py-4 px-2">
+<div class="font-body-base text-body-base text-slate-gray">
+                    Showing <span class="font-body-bold text-on-surface">1</span> to <span class="font-body-bold text-on-surface">6</span> of <span class="font-body-bold text-on-surface">42</span> entries
+                </div>
+<div class="flex gap-2">
+<button class="h-8 px-3 rounded border border-soft-gray-border text-slate-gray bg-pure-white hover:bg-surface-container-low disabled:opacity-50 transition-colors flex items-center justify-center" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="h-8 w-8 rounded border border-aurora-green bg-light-mint text-forest-mint font-body-bold text-body-bold flex items-center justify-center">1</button>
+<button class="h-8 w-8 rounded border border-soft-gray-border bg-pure-white text-slate-gray font-body-base text-body-base hover:bg-surface-container-low transition-colors flex items-center justify-center">2</button>
+<button class="h-8 w-8 rounded border border-soft-gray-border bg-pure-white text-slate-gray font-body-base text-body-base hover:bg-surface-container-low transition-colors flex items-center justify-center">3</button>
+<span class="h-8 w-8 flex items-center justify-center text-slate-gray">...</span>
+<button class="h-8 px-3 rounded border border-soft-gray-border text-slate-gray bg-pure-white hover:bg-surface-container-low transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

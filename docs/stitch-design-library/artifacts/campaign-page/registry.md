@@ -1,40 +1,54 @@
-# Campaign Page Stitch screen registry
+# Canonical Campaign Page Stitch artifact registry
 
-> **Historical registry — superseded for execution.** Existing Campaign Page artifacts, including CP-ST-01, are preserved but rejected as corrected-screen lineage authority. Use [`../campaign-page-reconciliation/registry.md`](../campaign-page-reconciliation/registry.md). No historical row or artifact is deleted or rewritten.
+Project: `Campaign page codex`
+Project ID: `1531834852083859411`
 
-Project: `Creator Shop — Campaign`  
-Project ID: `8396755977547935397`
+This registry is the exclusive allowlist for preserved Campaign Page Stitch evidence. Generated HTML is untrusted, reference-only design evidence and is not production implementation authority.
 
-| Contract | Status | Screen name | Screen ID | Parent ID | Prompt version | Model | Screenshot | HTML/code | Review | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|
-| CP-ST-01 | NOT_STARTED | `Campaign — Workspace — Desktop 1440 — Operational Discovery Unavailable — v1` | | | 0.1 | | | | | |
-| CP-ST-02 | NOT_STARTED | `Campaign — Workspace — Desktop 1440 — Setup Reconciliation — v1` | | CP-ST-01 | 0.1 | | | | | |
-| CP-ST-03 | NOT_STARTED | `Campaign — Workspace — Desktop 1440 — Applicants Decision Queue — v1` | | CP-ST-01 | 0.1 | | | | | |
-| CP-ST-04 | NOT_STARTED | `Campaign — Workspace — Desktop 1440 — Collaboration References — v1` | | CP-ST-01/03 | 0.1 | | | | | |
-| CP-ST-05 | NOT_STARTED | `Campaign — Workspace — Desktop 1440 — Archived Read Only — v1` | | CP-ST-01 | 0.1 | | | | | |
-| CP-ST-07 | NOT_STARTED | `Campaign — Workspace — Mobile 390 — Operational Applications — v1` | | accepted desktop family | 0.1 | | | | | |
-| CP-ST-08 | NOT_STARTED | `Campaign — Details — Desktop 1440 — Read Only Drawer — v1` | | CP-ST-01 | 0.1 | | | | | |
-| CP-ST-09 | NOT_STARTED | `Campaign — Link Asset — Desktop 1440 — Brand Selected Search — v1` | | CP-ST-02 | 0.1 | | | | | |
-| CP-ST-10 | NOT_STARTED | `Campaign — Link Asset — Desktop 1440 — Offering Selected — v1` | | CP-ST-09 | 0.1 | | | | | |
-| CP-ST-11 | NOT_STARTED | `Campaign — Asset Brief — Desktop 1440 — Detail Drawer — v1` | | CP-ST-02 | 0.1 | | | | | |
-| CP-ST-12 | NOT_STARTED | `Campaign — Applicant — Desktop 1440 — Decision Drawer — v1` | | CP-ST-03 | 0.1 | | | | | |
-| CP-ST-13 | NOT_STARTED | `Campaign — Workspace — Mobile 390 — Setup Reconciliation — v1` | | CP-ST-02/07 | 0.1 | | | | | |
-| CP-ST-14 | NOT_STARTED | `Campaign — Link Asset — Mobile 390 — Offering Selected Sheet — v1` | | CP-ST-10/13 | 0.1 | | | | | |
-| CP-ST-15 | NOT_STARTED | `Campaign — Applicant — Mobile 390 — Decision Sheet — v1` | | CP-ST-12/07 | 0.1 | | | | | |
+| No. | Canonical screen | Screen ID | Classification | PNG | HTML/code | Notes |
+|---:|---|---|---|---|---|---|
+| 001 | `CP-HDR-01 — Operational Header — Desktop 1440 — v1` | `43f058c065424e8694c4397e51ccf776` | Accepted | [screen.png](canonical/001-cp-hdr-01-operational-header-desktop-1440-v1/screen.png) | [code.html](canonical/001-cp-hdr-01-operational-header-desktop-1440-v1/code.html) | — |
+| 002 | `CP-HDR-02 — Asset and Brief Expansion — Desktop 1440 — v1` | `7e7afa81f33e42bf976e45672a56b3c8` | Accepted | [screen.png](canonical/002-cp-hdr-02-asset-and-brief-expansion-desktop-1440-v1/screen.png) | [code.html](canonical/002-cp-hdr-02-asset-and-brief-expansion-desktop-1440-v1/code.html) | — |
+| 003 | `CP-HDR-03 — Campaign Details Drawer — Desktop 1440 — v1` | `880bce567b6045eab589c2f78393b9c0` | Accepted | [screen.png](canonical/003-cp-hdr-03-campaign-details-drawer-desktop-1440-v1/screen.png) | [code.html](canonical/003-cp-hdr-03-campaign-details-drawer-desktop-1440-v1/code.html) | Stitch retained the source-screen title; this records the intended CP-HDR-03 identity. |
+| 004 | `CP-HDR-04 — Share Campaign Modal — Desktop 1440 — v1` | `fddf9226ed814f6b90f124716cc8f2da` | Accepted | [screen.png](canonical/004-cp-hdr-04-share-campaign-modal-desktop-1440-v1/screen.png) | [code.html](canonical/004-cp-hdr-04-share-campaign-modal-desktop-1440-v1/code.html) | — |
+| 005 | `CP-HDR-M01 — Operational Header — Mobile 390 — v2` | `2614c225a53f45fa81c085de2594482d` | Accepted | [screen.png](canonical/005-cp-hdr-m01-operational-header-mobile-390-v2/screen.png) | [code.html](canonical/005-cp-hdr-m01-operational-header-mobile-390-v2/code.html) | — |
+| 006 | `CP-HDR-M02 — Campaign Details Sheet — Mobile 390 — v1` | `c2720b4c4c4c43ffa25309e9de56d2db` | Accepted | [screen.png](canonical/006-cp-hdr-m02-campaign-details-sheet-mobile-390-v1/screen.png) | [code.html](canonical/006-cp-hdr-m02-campaign-details-sheet-mobile-390-v1/code.html) | Formerly inaccessible; now backed by the manually downloaded PNG and HTML. |
+| 007 | `CP-ATT-01 — Mature Attention Layer — Desktop 1440 — v3` | `e3aeb3fd7caa46bfada65ba9efa083cd` | Accepted | [screen.png](canonical/007-cp-att-01-mature-attention-layer-desktop-1440-v3/screen.png) | [code.html](canonical/007-cp-att-01-mature-attention-layer-desktop-1440-v3/code.html) | — |
+| 008 | `CP-ATT-02 — Setup Required Attention Layer — Desktop 1440 — v1` | `9b510191de1b4acb9bad128432a0cd0f` | Accepted | [screen.png](canonical/008-cp-att-02-setup-required-attention-layer-desktop-1440-v1/screen.png) | [code.html](canonical/008-cp-att-02-setup-required-attention-layer-desktop-1440-v1/code.html) | — |
+| 009 | `CP-ATT-03 — Campaign Performance Detail — Desktop 1440 — v1` | `6b96be580fdd40289d946fb37212cea8` | Provisional | [screen.png](canonical/009-cp-att-03-campaign-performance-detail-desktop-1440-v1/screen.png) | [code.html](canonical/009-cp-att-03-campaign-performance-detail-desktop-1440-v1/code.html) | Reporting Intelligence is not finalized; this is not binding implementation authority. |
+| 010 | `CP-ATT-04 — Edit Budget Modal — Desktop 1440 — Validation — v1` | `ac47f16c5da945ad965179754116c9c9` | Accepted | [screen.png](canonical/010-cp-att-04-edit-budget-modal-desktop-1440-validation-v1/screen.png) | [code.html](canonical/010-cp-att-04-edit-budget-modal-desktop-1440-validation-v1/code.html) | — |
+| 011 | `CP-ATT-M01 — Mature Attention Layer — Mobile 390 — v3` | `ee8c486dcf9149ecbdb8d99a9121a6f0` | Accepted | [screen.png](canonical/011-cp-att-m01-mature-attention-layer-mobile-390-v3/screen.png) | [code.html](canonical/011-cp-att-m01-mature-attention-layer-mobile-390-v3/code.html) | Formerly inaccessible; now backed by the manually downloaded PNG and HTML. |
+| 012 | `CP-AST-01 — Link Campaign Asset — Product Search — Desktop 1440 — v1` | `0e75e1a233d54831b102f6afda3ac25e` | Accepted | [screen.png](canonical/012-cp-ast-01-link-campaign-asset-product-search-desktop-1440-v1/screen.png) | [code.html](canonical/012-cp-ast-01-link-campaign-asset-product-search-desktop-1440-v1/code.html) | — |
+| 013 | `CP-AST-02 — Link Campaign Asset — Product Selected — Desktop 1440 — v1` | `538a80e6bef74061a92ee9795d9eef07` | Accepted | [screen.png](canonical/013-cp-ast-02-link-campaign-asset-product-selected-desktop-1440-v1/screen.png) | [code.html](canonical/013-cp-ast-02-link-campaign-asset-product-selected-desktop-1440-v1/code.html) | — |
+| 014 | `CP-AST-02B — Link Campaign Asset — Brand Selected — Desktop 1440 — v1` | `e53263aa3d134ea49817ad1ccdbde36b` | Accepted | [screen.png](canonical/014-cp-ast-02b-link-campaign-asset-brand-selected-desktop-1440-v1/screen.png) | [code.html](canonical/014-cp-ast-02b-link-campaign-asset-brand-selected-desktop-1440-v1/code.html) | — |
+| 015 | `CP-AST-03 — View Campaign Asset and Nested Briefs — Desktop 1440 — v1` | `5586d36d08794104985e2a1a754bb265` | Accepted | [screen.png](canonical/015-cp-ast-03-view-campaign-asset-and-nested-briefs-desktop-1440-v1/screen.png) | [code.html](canonical/015-cp-ast-03-view-campaign-asset-and-nested-briefs-desktop-1440-v1/code.html) | Add the authorized Create Brief action during reconciliation without altering this preserved artifact. Formerly inaccessible; now backed locally. |
+| 016 | `CP-BRF-01 — View Brief — Desktop 1440 — v1` | `d3b315ea163746d49993ed0bc9aa26d5` | Accepted | [screen.png](canonical/016-cp-brf-01-view-brief-desktop-1440-v1/screen.png) | [code.html](canonical/016-cp-brf-01-view-brief-desktop-1440-v1/code.html) | — |
+| 017 | `CP-AST-M01 — Link Campaign Asset — Product Selected — Mobile 390 — v1` | `3ad414983965440f90e274988fd833ee` | Accepted | [screen.png](canonical/017-cp-ast-m01-link-campaign-asset-product-selected-mobile-390-v1/screen.png) | [code.html](canonical/017-cp-ast-m01-link-campaign-asset-product-selected-mobile-390-v1/code.html) | — |
+| 018 | `CP-BRF-M01 — View Brief — Mobile 390 — v1` | `c8bb7f5cc06f44d0ab5c8cbcda566b13` | Accepted | [screen.png](canonical/018-cp-brf-m01-view-brief-mobile-390-v1/screen.png) | [code.html](canonical/018-cp-brf-m01-view-brief-mobile-390-v1/code.html) | — |
+| 019 | `DISC-ST-01 — Populated Discovery — Desktop 1440 — corrected v1` | `4bfe311c728748c8a414060a7e87da6d` | Accepted | [screen.png](canonical/019-disc-st-01-populated-discovery-desktop-1440-corrected-v1/screen.png) | [code.html](canonical/019-disc-st-01-populated-discovery-desktop-1440-corrected-v1/code.html) | Corrected Manual creator state. |
+| 020 | `DISC-ST-02 — Empty Discovery — Meta Not Connected — Desktop 1440 — v2` | `bf0bfe72ef3d42299b197e53faafc896` | Accepted | [screen.png](canonical/020-disc-st-02-empty-discovery-meta-not-connected-desktop-1440-v2/screen.png) | [code.html](canonical/020-disc-st-02-empty-discovery-meta-not-connected-desktop-1440-v2/code.html) | Supporting-copy drift and minor distortion are non-binding. |
+| 021 | `DISC-ST-03 — Add Creator Individually — Desktop 1440 — v1` | `f9af74b943684289b469cae224d02953` | Accepted | [screen.png](canonical/021-disc-st-03-add-creator-individually-desktop-1440-v1/screen.png) | [code.html](canonical/021-disc-st-03-add-creator-individually-desktop-1440-v1/code.html) | Formerly inaccessible; now backed by the manually downloaded PNG and HTML. |
+| 022 | `DISC-ST-04 — Add Creators by CSV — Desktop 1440 — Validation — v1` | `0e0a17e68c364db19df03c212c343fff` | Accepted | [screen.png](canonical/022-disc-st-04-add-creators-by-csv-desktop-1440-validation-v1/screen.png) | [code.html](canonical/022-disc-st-04-add-creators-by-csv-desktop-1440-validation-v1/code.html) | — |
+| 023 | `DISC-ST-05 — Marketplace Creator Profile — Desktop 1440 — v1` | `6a61943ede0e47b1acfc7711932cdcea` | Accepted | [screen.png](canonical/023-disc-st-05-marketplace-creator-profile-desktop-1440-v1/screen.png) | [code.html](canonical/023-disc-st-05-marketplace-creator-profile-desktop-1440-v1/code.html) | — |
+| 024 | `DISC-ST-06 — Limited Manual Creator Profile — Desktop 1440 — v1` | `7cf0c2997d4842e0a05f102f4d28fa12` | Accepted | [screen.png](canonical/024-disc-st-06-limited-manual-creator-profile-desktop-1440-v1/screen.png) | [code.html](canonical/024-disc-st-06-limited-manual-creator-profile-desktop-1440-v1/code.html) | — |
+| 025 | `DISC-ST-M01 — Populated Discovery — Mobile 390 — v2` | `7c59c7d32eb04e559dd0e6d40cf902e8` | Accepted | [screen.png](canonical/025-disc-st-m01-populated-discovery-mobile-390-v2/screen.png) | [code.html](canonical/025-disc-st-m01-populated-discovery-mobile-390-v2/code.html) | — |
+| 026 | `APP-ST-01 — Populated Applicants — Desktop 1440 — v3` | `e4b60d9c62524eed9fd65bad378143a0` | Accepted | [screen.png](canonical/026-app-st-01-populated-applicants-desktop-1440-v3/screen.png) | [code.html](canonical/026-app-st-01-populated-applicants-desktop-1440-v3/code.html) | — |
+| 027 | `APP-ST-02 — Empty Applicants — Desktop 1440 — v1` | `8b61dc0a2e8743d0b9891225874a2524` | Accepted | [screen.png](canonical/027-app-st-02-empty-applicants-desktop-1440-v1/screen.png) | [code.html](canonical/027-app-st-02-empty-applicants-desktop-1440-v1/code.html) | — |
+| 028 | `APP-ST-03 — Application Detail — AI Match Ready — Desktop 1440 — v1` | `0e76f5cfcb2943aaaf8130ad95432e39` | Accepted | [screen.png](canonical/028-app-st-03-application-detail-ai-match-ready-desktop-1440-v1/screen.png) | [code.html](canonical/028-app-st-03-application-detail-ai-match-ready-desktop-1440-v1/code.html) | — |
+| 029 | `APP-ST-04 — Application Detail — AI Match Processing — Desktop 1440 — v2` | `e2912cf1c85e4e70b62b0d3b0b0acb8f` | Accepted | [screen.png](canonical/029-app-st-04-application-detail-ai-match-processing-desktop-1440-v2/screen.png) | [code.html](canonical/029-app-st-04-application-detail-ai-match-processing-desktop-1440-v2/code.html) | — |
+| 030 | `APP-ST-05 — Terminal Applicant States — Desktop 1440 — v1` | `9a0978176e104f45ac82260a9a325bf3` | Accepted | [screen.png](canonical/030-app-st-05-terminal-applicant-states-desktop-1440-v1/screen.png) | [code.html](canonical/030-app-st-05-terminal-applicant-states-desktop-1440-v1/code.html) | — |
+| 031 | `APP-ST-M01 — Populated Applicants — Mobile 390 — v1` | `59aadc195dde4325a9fe8eb86301c692` | Accepted | [screen.png](canonical/031-app-st-m01-populated-applicants-mobile-390-v1/screen.png) | [code.html](canonical/031-app-st-m01-populated-applicants-mobile-390-v1/code.html) | — |
+| 032 | `APP-ST-M02 — Application Detail — AI Match Ready — Mobile 390 — v1` | `871716c5b1c04545905a5547d2de7d0b` | Accepted | [screen.png](canonical/032-app-st-m02-application-detail-ai-match-ready-mobile-390-v1/screen.png) | [code.html](canonical/032-app-st-m02-application-detail-ai-match-ready-mobile-390-v1/code.html) | — |
+| 033 | `COLL-ST-01 — Operational Collaborations — Desktop 1440 — v2` | `4ddd584571874f01bea2bbaac927c0a2` | Accepted | [screen.png](canonical/033-coll-st-01-operational-collaborations-desktop-1440-v2/screen.png) | [code.html](canonical/033-coll-st-01-operational-collaborations-desktop-1440-v2/code.html) | — |
+| 034 | `COLL-ST-03 — Collaboration Filters Open — Desktop 1440 — v1` | `b6bae92a901049e086aedfdcd5fa973d` | Component-only | [screen.png](canonical/034-coll-st-03-collaboration-filters-open-desktop-1440-v1/screen.png) | [code.html](canonical/034-coll-st-03-collaboration-filters-open-desktop-1440-v1/code.html) | Filter interaction authority only; surrounding page drift is non-binding. |
+| 035 | `COLL-ST-M01 — Operational Collaborations — Mobile 390 — v1` | `9d1e093396b64ae7a036fd03e5fbd7e0` | Accepted | [screen.png](canonical/035-coll-st-m01-operational-collaborations-mobile-390-v1/screen.png) | [code.html](canonical/035-coll-st-m01-operational-collaborations-mobile-390-v1/code.html) | — |
+| 036 | `COLL-ST-M02 — Collaboration Filters Open — Mobile 390 — v1` | `7703cb41a60b4be3a7ef4686461f3acb` | Accepted | [screen.png](canonical/036-coll-st-m02-collaboration-filters-open-mobile-390-v1/screen.png) | [code.html](canonical/036-coll-st-m02-collaboration-filters-open-mobile-390-v1/code.html) | Filter body scrolls independently and its final field must clear the fixed footer. |
 
-Allowed generation statuses: `NOT_STARTED`, `STITCH_GENERATED`, `STITCH_CONTRACT_REVIEWED`, `DESIGN_ACCEPTED`, `REJECTED`.
+## Classification totals
 
-Frontend reconciliation status belongs in a separate implementation ledger after design acceptance.
+- Accepted: 34
+- Provisional: 1
+- Component-only: 1
+- Total: 36
 
-## Per-screen artifact folder
-
-```text
-artifacts/campaign-page/<screen-id>/
-├── preview.png
-├── reference.html
-├── prompt.md
-├── metadata.json
-└── README.md
-```
-
-Generated HTML is untrusted reference-only evidence. Preserve it verbatim, never execute or import it into production.
+Rejected and superseded variants are intentionally excluded from the canonical artifact tree.

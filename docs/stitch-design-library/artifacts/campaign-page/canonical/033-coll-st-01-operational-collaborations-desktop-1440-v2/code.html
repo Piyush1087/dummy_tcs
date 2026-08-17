@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COLL-ST-01 — Operational Collaborations — Desktop 1440 — v1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#181c1e",
+                        "surface-bright": "#f7fafc",
+                        "inverse-primary": "#45dfa4",
+                        "inverse-on-surface": "#eef1f4",
+                        "tertiary-fixed": "#ffdbcf",
+                        "primary-fixed-dim": "#45dfa4",
+                        "surface": "#f7fafc",
+                        "on-secondary-fixed": "#061f23",
+                        "on-primary-fixed": "#002114",
+                        "tertiary": "#964729",
+                        "blossom-pink": "#FFF6F6",
+                        "on-primary-fixed-variant": "#005137",
+                        "forest-mint": "#005137",
+                        "surface-tint": "#006c4b",
+                        "secondary-container": "#cbe4e9",
+                        "surface-container-high": "#e6e8eb",
+                        "outline-variant": "#bbcac0",
+                        "sunset-orange": "#F5926E",
+                        "primary": "#006c4b",
+                        "on-error-container": "#93000a",
+                        "off-white-canvas": "#F8F8F8",
+                        "light-mint": "#F0FDF4",
+                        "on-tertiary-fixed": "#380d00",
+                        "slate-gray": "#6B7280",
+                        "surface-container-low": "#f1f4f7",
+                        "outline": "#6c7a71",
+                        "on-secondary": "#ffffff",
+                        "pure-white": "#FFFFFF",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#7d3418",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "crimson-red": "#CA0F1C",
+                        "on-primary-container": "#00563b",
+                        "primary-fixed": "#68fcbf",
+                        "carbon-black": "#0E1214",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#ffa483",
+                        "soft-gray-border": "#E5E7EB",
+                        "surface-container": "#ebeef1",
+                        "on-surface-variant": "#3c4a42",
+                        "on-background": "#181c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#cee7ec",
+                        "on-secondary-container": "#4f676b",
+                        "surface-dim": "#d7dadd",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "background": "#f7fafc",
+                        "on-tertiary": "#ffffff",
+                        "midnight-black": "#061F23",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "aurora-green": "#34D399",
+                        "secondary": "#4b6267",
+                        "primary-container": "#34d399",
+                        "inverse-surface": "#2d3133"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "sidebar-collapsed": "80px",
+                        "sidebar-expanded": "240px",
+                        "md": "24px",
+                        "xl": "48px",
+                        "lg": "32px",
+                        "header-mobile": "56px",
+                        "xs": "8px",
+                        "header-desktop": "72px",
+                        "bottom-nav": "64px"
+                    },
+                    "fontFamily": {
+                        "caption": ["\"Source Sans 3\""],
+                        "headline-h1-desktop": ["Satoshi"],
+                        "headline-h2-mobile": ["Satoshi"],
+                        "label-ui": ["Satoshi"],
+                        "input-text": ["\"Source Sans 3\""],
+                        "eyebrow-caps": ["Satoshi"],
+                        "body-base": ["\"Source Sans 3\""],
+                        "body-bold": ["\"Source Sans 3\""],
+                        "headline-h1-mobile": ["Satoshi"],
+                        "tab-nav": ["Satoshi"],
+                        "headline-h2-desktop": ["Satoshi"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-off-white-canvas font-body-base text-body-base text-on-surface antialiased flex">
+<!-- Sidebar Component from JSON -->
+<aside class="bg-midnight-black dark:bg-carbon-black w-sidebar-expanded min-h-screen flex flex-col border-r border-outline-variant fixed left-0 top-0 h-full z-30 shadow-none hidden md:flex">
+<div class="px-md py-lg flex items-center gap-sm">
+<div class="w-8 h-8 bg-aurora-green rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-midnight-black" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+<div>
+<h1 class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">Creator Shop</h1>
+<p class="font-caption text-caption text-surface-variant opacity-80 mt-1">Management Console</p>
+</div>
+</div>
+<nav class="flex-1 px-sm mt-md flex flex-col gap-xs font-label-ui text-label-ui">
+<!-- Home -->
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out flex items-center gap-sm p-sm rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</a>
+<!-- Brands -->
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out flex items-center gap-sm p-sm rounded-xl" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span>Brands</span>
+</a>
+<!-- Campaigns (Selected) -->
+<a class="bg-primary-container text-on-primary-fixed rounded-xl mx-2 my-1 scale-95 duration-150 ease-in-out flex items-center gap-sm p-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span>Campaigns</span>
+</a>
+<!-- Collabs -->
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out flex items-center gap-sm p-sm rounded-xl" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Collabs</span>
+</a>
+</nav>
+<div class="p-sm mt-auto border-t border-outline-variant/20 font-label-ui text-label-ui">
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out flex items-center gap-sm p-sm rounded-xl" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Earnings</span>
+</a>
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors scale-95 duration-150 ease-in-out flex items-center gap-sm p-sm rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="ml-sidebar-expanded w-full flex flex-col min-h-screen">
+<!-- TopNavBar Component from JSON -->
+<header class="bg-pure-white dark:bg-surface-container-lowest h-header-desktop w-full border-b border-soft-gray-border flex justify-between items-center px-md sticky top-0 z-20 shadow-none font-body-base text-body-base">
+<div class="flex items-center gap-lg h-full">
+<span class="font-headline-h2-desktop text-headline-h2-desktop font-bold text-on-surface md:hidden">The Creator Shop</span>
+<!-- Workspace Navigation -->
+<nav class="hidden md:flex h-full items-center gap-lg">
+<a class="text-slate-gray hover:text-primary transition-colors opacity-80 active:opacity-100 flex items-center h-full px-xs" href="#">Discovery</a>
+<a class="text-slate-gray hover:text-primary transition-colors opacity-80 active:opacity-100 flex items-center h-full px-xs" href="#">Applicants</a>
+<a class="text-primary font-bold border-b-2 border-primary opacity-80 active:opacity-100 flex items-center h-full px-xs" href="#">Collaborations</a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<!-- Search Icon (Search bar hidden per JSON) -->
+<button class="p-xs text-slate-gray hover:text-primary transition-colors rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-xs text-slate-gray hover:text-primary transition-colors rounded-full hover:bg-surface-container-low relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-crimson-red rounded-full"></span>
+</button>
+<button class="ml-sm font-label-ui text-label-ui bg-aurora-green text-on-primary-fixed px-sm py-xs rounded-lg hover:opacity-90 transition-opacity">
+                    Upgrade
+                </button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden ml-sm cursor-pointer">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A clean, professional headshot of a user against a bright, modern office background. High contrast, well-lit, conveying competence and approachability within a corporate utility workspace context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuqyOFMbynkw-vBPwRbl5IKrc4f-eoRyP3Yhx8Iyxof-Z-qBLf7tQXz-MzNagXkkaizNYDi4s7mfF-9-_rSOfaZjkmD4_Zfb7OJanalLEemSLsCYdMWX8gJrpe40Qp430sa-fuVqkle2riYgAuN2ZRKRvIjhsXkoVvVpI7WpK3RlsweIwuuyCMRD3BT6s4HUrujd6FIH0BrQbnl4_TFKFHyuHCzeScM4ktuxih8wIAwznse392XdcWwuEV-ZhxnMr2CLSY9zfFmL0"/>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<main class="flex-1 p-lg max-w-[1440px] mx-auto w-full flex flex-col gap-md">
+<!-- Header Section -->
+<div class="flex flex-col gap-xs mb-sm">
+<h2 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface">Collaborations</h2>
+<div class="flex items-center gap-md">
+<p class="text-slate-gray">Track creator work connected to this Campaign.</p>
+<div class="h-4 w-px bg-soft-gray-border"></div>
+<p class="font-body-bold text-body-bold text-on-surface">12 active <span class="text-slate-gray font-body-base mx-1">•</span> <span class="text-sunset-orange">3 need your action</span></p>
+</div>
+</div>
+<!-- Control Row -->
+<div class="flex flex-wrap items-center gap-sm bg-pure-white p-sm rounded-xl border border-soft-gray-border shadow-sm">
+<div class="flex-1 min-w-[280px] relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray">search</span>
+<input class="w-full h-12 pl-10 pr-4 rounded-lg border border-soft-gray-border bg-pure-white focus:ring-2 focus:ring-aurora-green focus:border-aurora-green outline-none font-input-text text-input-text" placeholder="Search by creator name or handle" type="text"/>
+</div>
+<div class="flex items-center gap-sm border-l border-soft-gray-border pl-sm">
+<select class="h-12 px-4 rounded-lg border border-soft-gray-border bg-pure-white focus:ring-2 focus:ring-aurora-green outline-none font-label-ui text-label-ui appearance-none pr-10 relative">
+<option>All stages</option>
+<option>Negotiation</option>
+<option>Securement</option>
+<option>Fulfillment</option>
+<option>Production</option>
+<option>Publishing</option>
+</select>
+</div>
+<button class="h-10 px-4 rounded-full bg-pure-white border border-soft-gray-border text-on-surface hover:bg-surface-container-low transition-colors font-label-ui text-label-ui flex items-center gap-xs">Needs your action</button>
+<button class="h-10 px-4 rounded-full bg-pure-white border border-soft-gray-border text-on-surface hover:bg-surface-container-low transition-colors font-label-ui text-label-ui">
+                    Product
+                </button>
+<button class="h-10 px-4 rounded-full bg-pure-white border border-soft-gray-border text-on-surface hover:bg-surface-container-low transition-colors font-label-ui text-label-ui">
+                    Brief
+                </button>
+<button class="h-10 w-10 flex justify-center items-center rounded-full bg-pure-white border border-soft-gray-border text-slate-gray hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+<div class="ml-auto flex items-center gap-xs text-slate-gray font-label-ui text-label-ui cursor-pointer hover:text-on-surface transition-colors">
+                    Sort: <span class="text-on-surface">Needs action first</span>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Dense Operational Table -->
+<div class="bg-pure-white rounded-xl border border-soft-gray-border overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-soft-gray-border bg-surface-bright font-eyebrow-caps text-eyebrow-caps text-slate-gray">
+<th class="py-4 px-md font-medium">Creator</th>
+<th class="py-4 px-md font-medium">Stage</th>
+<th class="py-4 px-md font-medium">Time in stage</th>
+<th class="py-4 px-md font-medium">Action needed</th>
+<th class="py-4 px-md font-medium">Latest activity</th>
+<th class="py-4 px-md font-medium text-right">Open</th>
+</tr>
+</thead>
+<tbody class="font-body-base text-body-base divide-y divide-soft-gray-border">
+<!-- Row 1 -->
+<tr class="h-[76px] hover:bg-surface-container-lowest transition-colors group">
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden shrink-0">
+<img alt="Priya Sharma" class="w-full h-full object-cover" data-alt="A clean, professional headshot of an individual, likely a creator, against a neutral background. High contrast, sharp focus, suitable for a corporate directory or user avatar in a modern software interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAurAoLSKlp5ElNuU4b3pMxhSHJiHNJmaVVKnMQ7lLeNgk6UPJTbLpDvi1FbG0PhQgnUeqMCuidQkdJU6GOjXPPT_r_Q_OAJLodY6CiyQ_IhclbTPxriNVMzzWGczyDJVOyykyjaJUMJYj2z9H1hs45y2ABakpmdmpkpDrSEFekc2B0Pq9raUXBOPAvpvfOzOUvgJQPpUzFtw-9WGXy9w_Yz2Vyg_IRzuvXSM7_gGXsYa2ndxixrALUfux546xuTQrCt3yBTzEenjA"/>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface">Priya Sharma</p>
+<p class="text-slate-gray text-caption font-caption">@priyasharma</p>
+</div>
+</div>
+</td>
+<td class="px-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface text-caption font-caption">Production</span>
+</td>
+<td class="px-md text-slate-gray">3d</td>
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<span class="text-sunset-orange font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">error</span>
+                                        Review submitted content
+                                    </span>
+<button class="h-8 px-3 bg-pure-white border border-soft-gray-border rounded text-label-ui font-label-ui text-on-surface hover:bg-surface-container-low transition-colors">Review</button>
+</div>
+</td>
+<td class="px-md text-slate-gray">Reel 1 submitted • 2h ago</td>
+<td class="px-md text-right">
+<button class="text-primary font-label-ui text-label-ui hover:underline group-hover:opacity-100 transition-opacity flex items-center justify-end gap-1 ml-auto">
+                                    Open collaboration <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="h-[76px] hover:bg-surface-container-lowest transition-colors group">
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden shrink-0">
+<img alt="Neha Rao" class="w-full h-full object-cover" data-alt="A clean, professional headshot of an individual, likely a creator, against a neutral background. High contrast, sharp focus, suitable for a corporate directory or user avatar in a modern software interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA9q77vtDGOH2o4e25ZTm16sSvlH3ZiuljF4WRwmoQM6d-jW07kDLPwYFNZ4tAWmAjlpOHK96P-V_Tb72D-lr0lRTk6FyrYwhi1G1o7ycMhO_oNRFE8eci5CWsgxVRGaaSQg8ZIbUfXa4iOdQwi0Lr49WnI-KOREzDIrmwOXs9d7uRI3sL46cLl8w0KuE6IvXn5omFCrOuRVs0vfZlGawCCEbrB5H-BajX1ZzPKtS-GSlI43HmC085W6w20DbqZIN-o4JAswEV2j4"/>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface">Neha Rao</p>
+<p class="text-slate-gray text-caption font-caption">@neharao</p>
+</div>
+</div>
+</td>
+<td class="px-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface text-caption font-caption">Fulfillment</span>
+</td>
+<td class="px-md text-slate-gray">1d</td>
+<td class="px-md text-slate-gray">No action needed</td>
+<td class="px-md text-slate-gray">Dispatch confirmed • Yesterday</td>
+<td class="px-md text-right">
+<button class="text-primary font-label-ui text-label-ui hover:underline group-hover:opacity-100 transition-opacity flex items-center justify-end gap-1 ml-auto">
+                                    Open collaboration <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="h-[76px] hover:bg-surface-container-lowest transition-colors group">
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden shrink-0">
+<img alt="Kavya Singh" class="w-full h-full object-cover" data-alt="A clean, professional headshot of an individual, likely a creator, against a neutral background. High contrast, sharp focus, suitable for a corporate directory or user avatar in a modern software interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg_yt2VZylNpZsZaliDt15mlrXVS21wR2vp3j36Jr-Ibva81BbqaJMCrBkzpbdoM6VAdW9Rarbgd_dO-nJuHLF0K5jUnSWDh73R5VVejRB4AjheTQMu-BahoM4KifY2NIMtTGlFSkEN6CBtu8RU4J1jvluKvVIJdbVPe2Az_FTa1L2BboWUEZgBfeLe1U9WADTbd5dSip_cFxSnQl27DIFaQMSe86t8a-Wk2r3iBjggYrJw0Du8cLkhofdf4j_2RVHO3oqs1ADbqI"/>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface">Kavya Singh</p>
+<p class="text-slate-gray text-caption font-caption">@kavya</p>
+</div>
+</div>
+</td>
+<td class="px-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface text-caption font-caption">Publishing</span>
+</td>
+<td class="px-md text-slate-gray">6h</td>
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<span class="text-sunset-orange font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">error</span>
+                                        2 actions required
+                                    </span>
+<button class="h-8 px-3 bg-pure-white border border-soft-gray-border rounded text-label-ui font-label-ui text-on-surface hover:bg-surface-container-low transition-colors">Review</button>
+</div>
+</td>
+<td class="px-md text-slate-gray">Caption submitted • 45m ago</td>
+<td class="px-md text-right">
+<button class="text-primary font-label-ui text-label-ui hover:underline group-hover:opacity-100 transition-opacity flex items-center justify-end gap-1 ml-auto">
+                                    Open collaboration <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="h-[76px] hover:bg-surface-container-lowest transition-colors group">
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden shrink-0">
+<img alt="Ananya Mehta" class="w-full h-full object-cover" data-alt="A clean, professional headshot of an individual, likely a creator, against a neutral background. High contrast, sharp focus, suitable for a corporate directory or user avatar in a modern software interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVxIjlrubmxrOicIWas_uQetOao91FTOCY3ZTtPT-SNd0tVj5vsr1SMUu1gvqXdqsrR12HoW6blQNOnPRsw8NxRSJ-ab1l3uCbuR3jAP-oqbVsAQ03f5widShoL4kHuv6bisLeiOKA_KQCYUaM6Uf5XMyP-bppvGLAn486CsglRAQYy-n3AF3nOd1WNaST49Gc6A_Ovbl4JKJQJImOsut5ng7_7dle-5Fh73yzeE-EKUvswl19_F3JprRcXABjSDO0xUpEZAIpJJg"/>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface">Ananya Mehta</p>
+<p class="text-slate-gray text-caption font-caption">@ananyam</p>
+</div>
+</div>
+</td>
+<td class="px-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface text-caption font-caption">Securement</span>
+</td>
+<td class="px-md text-slate-gray">8d</td>
+<td class="px-md text-slate-gray">No action needed</td>
+<td class="px-md text-slate-gray">Terms confirmed • 8d ago</td>
+<td class="px-md text-right">
+<button class="text-primary font-label-ui text-label-ui hover:underline group-hover:opacity-100 transition-opacity flex items-center justify-end gap-1 ml-auto">
+                                    Open collaboration <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="h-[76px] hover:bg-surface-container-lowest transition-colors group">
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden shrink-0">
+<img alt="Riya Sen" class="w-full h-full object-cover" data-alt="A clean, professional headshot of an individual, likely a creator, against a neutral background. High contrast, sharp focus, suitable for a corporate directory or user avatar in a modern software interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmMxrNQwxdmHS2e2Bn7hL0gari1lSxclt7DwTnCVoHuONqgj4C6B_e_1equISoufJAMqDvQbE3BIc5eto-OcfD7AUNnRwZ29xfyyfwy-eWTgrwN1zFt8fWw15kBgDkWQ-AJ9G0vUUxLhOaCRjw6RN5-Sdz6nBB4LJuCq_RYSSL8KbxWIgu5zLwId8F0SW0zs9RS1IikNCuR6Hec5dKK3r7KxHyHjDkxUFCD-YdxNmLLArO8ItB1b2JmAisYZOomARVSkxSopOyyoE"/>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface">Riya Sen</p>
+<p class="text-slate-gray text-caption font-caption">@riyasen</p>
+</div>
+</div>
+</td>
+<td class="px-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface text-caption font-caption">Negotiation</span>
+</td>
+<td class="px-md text-slate-gray">4h</td>
+<td class="px-md text-slate-gray">No action needed</td>
+<td class="px-md text-slate-gray">Collaboration opened • 4h ago</td>
+<td class="px-md text-right">
+<button class="text-primary font-label-ui text-label-ui hover:underline group-hover:opacity-100 transition-opacity flex items-center justify-end gap-1 ml-auto">
+                                    Open collaboration <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="h-[76px] bg-surface-bright/50 hover:bg-surface-container-lowest transition-colors group opacity-70">
+<td class="px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden shrink-0 grayscale">
+<img alt="Tara Mehta" class="w-full h-full object-cover" data-alt="A clean, professional headshot of an individual, likely a creator, against a neutral background. High contrast, sharp focus, suitable for a corporate directory or user avatar in a modern software interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxaLSEdfvANS1iGZnrt0k0Nwt1bHXPyGtPhmAB8hZEP10UcHKTkuaQ2cWYiG67EScH0ZHX-efCPJM1QFcZMq3XkfluEmrPFdp13RGiitj_WQopdeVGvOhZUUmFAB_uZT2nDUXMpkRDWfGzMItmnuAcCsIfgB0BZDEnLhIQJ52Qa5Ok6wG4QHxBF83vGbuaQpjzZhwD6PKYyBqkRj011QXXaUDNPlIaiJdd3TgSF7y6VK43Ia_Sg8fsSv-C9nln2X3_n3mMpsCEJ4k"/>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface">Tara Mehta</p>
+<p class="text-slate-gray text-caption font-caption">@tarawellness</p>
+</div>
+</div>
+</td>
+<td class="px-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant text-caption font-caption">Completed</span>
+</td>
+<td class="px-md text-slate-gray">-</td>
+<td class="px-md text-slate-gray italic">No active action</td>
+<td class="px-md text-slate-gray">Final content approved • 3d ago</td>
+<td class="px-md text-right">
+<button class="text-primary font-label-ui text-label-ui hover:underline group-hover:opacity-100 transition-opacity flex items-center justify-end gap-1 ml-auto">
+                                    Open collaboration <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer simple -->
+<div class="flex justify-between items-center text-slate-gray font-caption text-caption mt-sm">
+<p>Showing 6 of 12 collaborations</p>
+<div class="flex gap-sm">
+<button class="w-8 h-8 rounded border border-soft-gray-border flex items-center justify-center hover:bg-pure-white transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded border border-soft-gray-border flex items-center justify-center hover:bg-pure-white transition-colors bg-pure-white">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

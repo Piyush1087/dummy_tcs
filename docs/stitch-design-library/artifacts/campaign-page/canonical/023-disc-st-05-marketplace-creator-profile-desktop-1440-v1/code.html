@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creator Shop - Marketplace Creator Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "on-surface": "#181c1e",
+                        "aurora-green": "#34D399",
+                        "midnight-black": "#061F23",
+                        "on-tertiary-container": "#7d3418",
+                        "error": "#ba1a1a",
+                        "soft-gray-border": "#E5E7EB",
+                        "primary-container": "#34d399",
+                        "surface": "#f7fafc",
+                        "on-primary": "#ffffff",
+                        "light-mint": "#F0FDF4",
+                        "secondary-container": "#cbe4e9",
+                        "on-error": "#ffffff",
+                        "forest-mint": "#005137",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-secondary-container": "#4f676b",
+                        "inverse-primary": "#45dfa4",
+                        "inverse-on-surface": "#eef1f4",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdbcf",
+                        "crimson-red": "#CA0F1C",
+                        "carbon-black": "#0E1214",
+                        "tertiary-container": "#ffa483",
+                        "on-surface-variant": "#3c4a42",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "primary-fixed-dim": "#45dfa4",
+                        "secondary-fixed": "#cee7ec",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "surface-variant": "#e0e3e5",
+                        "pure-white": "#FFFFFF",
+                        "on-background": "#181c1e",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#006c4b",
+                        "outline": "#6c7a71",
+                        "on-primary-fixed-variant": "#005137",
+                        "blossom-pink": "#FFF6F6",
+                        "secondary": "#4b6267",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#006c4b",
+                        "primary-fixed": "#68fcbf",
+                        "surface-dim": "#d7dadd",
+                        "off-white-canvas": "#F8F8F8",
+                        "surface-bright": "#f7fafc",
+                        "background": "#f7fafc",
+                        "on-secondary-fixed": "#061f23",
+                        "surface-container-high": "#e6e8eb",
+                        "on-primary-fixed": "#002114",
+                        "surface-container": "#ebeef1",
+                        "outline-variant": "#bbcac0",
+                        "slate-gray": "#6B7280",
+                        "on-primary-container": "#00563b",
+                        "sunset-orange": "#F5926E",
+                        "surface-container-low": "#f1f4f7",
+                        "tertiary": "#964729"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "32px",
+                        "sidebar-collapsed": "80px",
+                        "sm": "16px",
+                        "header-desktop": "72px",
+                        "bottom-nav": "64px",
+                        "sidebar-expanded": "240px",
+                        "xs": "8px",
+                        "header-mobile": "56px",
+                        "md": "24px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "input-text": ["\"Source Sans 3\""],
+                        "body-bold": ["\"Source Sans 3\""],
+                        "caption": ["\"Source Sans 3\""],
+                        "tab-nav": ["Satoshi Variable"],
+                        "label-ui": ["Satoshi Variable"],
+                        "body-base": ["\"Source Sans 3\""],
+                        "headline-h1-mobile": ["Satoshi Variable"],
+                        "headline-h2-mobile": ["Satoshi Variable"],
+                        "headline-h1-desktop": ["Satoshi Variable"],
+                        "headline-h2-desktop": ["Satoshi Variable"],
+                        "eyebrow-caps": ["Satoshi Variable"]
+                    },
+                    "fontSize": {
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for modal body */
+        .modal-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .modal-scroll::-webkit-scrollbar-thumb {
+            background-color: #d7dadd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-off-white-canvas text-on-surface font-body-base h-screen w-full overflow-hidden relative selection:bg-light-mint selection:text-forest-mint">
+<!-- Dimmed Background (Placeholder for SCREEN_8) -->
+<div aria-hidden="true" class="absolute inset-0 bg-black/50 z-40 w-full h-full">
+<!-- This div simulates the SCREEN_8 background being dimmed -->
+<img alt="Background Screen" class="w-full h-full object-cover opacity-30 mix-blend-overlay hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd0n-Dfqf8UrnW-RvqkQCCI38IBD6ltemkUvwZUCL3-iYNA44WWv54epBxchupTFz4x1n8EbTH_mPOv7nfcXIGepmkpjE55lwges4tm06munaqC9eEd3s8Z8EaU6ZoOKGVXt874gVZtywVI3kjYRb3CKlbqpXgUbVxUur8DmnY5s-nSFmBsNElgrVcDckZmNC-wifBWkIHhTtywsb0mKc5yXP7wuECxqTNv9yt-u7SxBbPxsp-Gpo7EX0lrhEbKG8wJynzaEbq1VQ"/>
+</div>
+<!-- Modal Container -->
+<div aria-labelledby="modal-title" aria-modal="true" class="absolute inset-0 z-50 flex items-center justify-center p-md" role="dialog">
+<!-- Modal Surface -->
+<div class="bg-pure-white w-full max-w-[800px] max-h-[921px] rounded-xl border border-soft-gray-border shadow-2xl flex flex-col overflow-hidden animate-[fadeIn_0.2s_ease-out]">
+<!-- Fixed Header -->
+<div class="flex items-center justify-between p-md border-b border-soft-gray-border bg-pure-white shrink-0">
+<div class="flex items-center gap-sm">
+<img class="w-12 h-12 rounded-full object-cover border border-soft-gray-border" data-alt="A professional, bright headshot of a young Indian woman with glowing skin, smiling subtly against a clean white studio background. The lighting is soft and even, typical of high-end skincare or beauty photography. The overall aesthetic is clean, modern, and light-themed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3q9u3Cafso4BkHm_oFDEUdbvslw0Enkjbh3m-VrOnDl9y5ady3iNnNWA_MoAyCAquHG6W3vwhoFonWj9eePSCrWCt5kJ0VRmv8zpRONJXxzQ2YQ5qr8NgWXg2TjuxTVrd-Hz37rG9FViTikWBlbUBJOx7EoN0Z-lOLlE6DiylVYftC-ZV9aEMURUl3mifQ--m0N8t9Zt3I10OygHcbmTetxsBRKDeFDZl3m1nXEQsJbAmmLyPCCdOOXJWib4gc5HPbt4Wh3oRKD8"/>
+<div>
+<div class="flex items-center gap-xs">
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface" id="modal-title">Maya Kapoor</h2>
+<span class="bg-surface-container px-2 py-1 rounded text-xs font-body-bold text-slate-gray flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">storefront</span> Marketplace
+                            </span>
+</div>
+<div class="flex items-center gap-xs text-slate-gray mt-1">
+<span class="font-body-base">@mayaglow</span>
+<span class="text-slate-gray/50">•</span>
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</div>
+</div>
+</div>
+<button aria-label="Close modal" class="text-slate-gray hover:text-on-surface transition-colors p-2 rounded-full hover:bg-surface">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Scrollable Body -->
+<div class="flex-1 overflow-y-auto modal-scroll p-md flex flex-col gap-lg bg-surface-bright">
+<!-- Section 1: Profile Summary -->
+<section class="bg-pure-white p-md rounded-lg border border-soft-gray-border">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="col-span-1 md:col-span-2">
+<h3 class="font-label-ui text-label-ui text-slate-gray uppercase tracking-wider mb-xs">Bio</h3>
+<p class="font-body-base text-on-surface">Skincare educator sharing practical routines, ingredient explainers and honest product experiences.</p>
+</div>
+<div>
+<h3 class="font-label-ui text-label-ui text-slate-gray uppercase tracking-wider mb-xs">Geography</h3>
+<p class="font-body-base text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-slate-gray">location_on</span>
+                                Mumbai, India
+                            </p>
+</div>
+<div>
+<h3 class="font-label-ui text-label-ui text-slate-gray uppercase tracking-wider mb-xs">Followers</h3>
+<p class="font-body-base text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-slate-gray">group</span>
+                                124K
+                            </p>
+</div>
+<div>
+<h3 class="font-label-ui text-label-ui text-slate-gray uppercase tracking-wider mb-xs">Primary Content</h3>
+<p class="font-body-base text-on-surface">Skincare education</p>
+</div>
+<div>
+<h3 class="font-label-ui text-label-ui text-slate-gray uppercase tracking-wider mb-xs">Formats</h3>
+<p class="font-body-base text-on-surface">Reels · Stories</p>
+</div>
+</div>
+<div class="mt-md pt-sm border-t border-soft-gray-border">
+<p class="font-caption text-caption text-slate-gray italic flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                            Profile and audience details supplied via Marketplace.
+                        </p>
+</div>
+</section>
+<!-- Section 2: Audience & Content -->
+<section class="bg-pure-white p-md rounded-lg border border-soft-gray-border">
+<h3 class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface mb-md">Audience &amp; Content</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest border border-soft-gray-border p-sm rounded-lg flex flex-col justify-center items-start">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Primary Audience</span>
+<span class="font-body-bold text-on-surface">Women 24–34</span>
+</div>
+<div class="bg-surface-container-lowest border border-soft-gray-border p-sm rounded-lg flex flex-col justify-center items-start">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Top Geography</span>
+<span class="font-body-bold text-on-surface">Mumbai</span>
+</div>
+<div class="bg-surface-container-lowest border border-soft-gray-border p-sm rounded-lg flex flex-col justify-center items-start">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Content Focus</span>
+<span class="font-body-bold text-on-surface">Skincare · Beauty education</span>
+</div>
+<div class="bg-surface-container-lowest border border-soft-gray-border p-sm rounded-lg flex flex-col justify-center items-start">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray mb-1">Typical Formats</span>
+<span class="font-body-bold text-on-surface">Reels · Stories</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Campaign Recommendation -->
+<section class="bg-light-mint p-md rounded-lg border border-aurora-green/30 relative overflow-hidden">
+<!-- Subtle abstract background for recommendation -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+<div class="relative z-10 flex flex-col gap-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-aurora-green fill">auto_awesome</span>
+<h3 class="font-label-ui text-label-ui text-on-primary-container uppercase tracking-wider">Match Potential: High</h3>
+</div>
+<p class="font-body-base text-on-primary-fixed">Strong audience overlap with this Campaign’s women 24–34 audience in Mumbai.</p>
+<div class="flex flex-wrap gap-xs mt-sm">
+<span class="bg-pure-white border border-aurora-green/20 text-on-primary-fixed font-caption px-3 py-1 rounded-full shadow-sm">Audience alignment</span>
+<span class="bg-pure-white border border-aurora-green/20 text-on-primary-fixed font-caption px-3 py-1 rounded-full shadow-sm">Relevant skincare content</span>
+<span class="bg-pure-white border border-aurora-green/20 text-on-primary-fixed font-caption px-3 py-1 rounded-full shadow-sm">Instagram available</span>
+</div>
+</div>
+</section>
+<!-- Section 4: Application History -->
+<section class="bg-pure-white p-md rounded-lg border border-soft-gray-border flex flex-col items-center justify-center text-center py-xl">
+<span class="material-symbols-outlined text-[48px] text-slate-gray/30 mb-sm">history</span>
+<p class="font-body-base text-slate-gray">No application history for this Campaign.</p>
+</section>
+</div>
+<!-- Fixed Footer -->
+<div class="flex items-center justify-end gap-sm p-md border-t border-soft-gray-border bg-pure-white shrink-0">
+<button class="bg-pure-white border border-soft-gray-border text-on-surface font-body-bold text-body-bold px-6 py-3 rounded-lg hover:bg-surface transition-colors focus:outline-none focus:ring-2 focus:ring-aurora-green focus:ring-offset-2">
+                    Close
+                </button>
+<button class="bg-aurora-green text-on-primary-fixed font-body-bold text-body-bold px-6 py-3 rounded-lg hover:bg-primary-container transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-aurora-green focus:ring-offset-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">send</span>
+                    Send DM
+                </button>
+</div>
+</div>
+</div>
+</body></html>

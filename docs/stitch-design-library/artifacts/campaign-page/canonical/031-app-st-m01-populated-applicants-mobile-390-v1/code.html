@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>APP-ST-M01 — Populated Applicants — Mobile 390 — v1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&display=swap');
+  @font-face {
+    font-family: 'Satoshi Variable';
+    src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KQT/7QYGPUVTECGABJIY6P5TOHDZAALAKMTT/PT4V7L2UUXR6V3TGEZ427D3L35QYGH72.woff2') format('woff2');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+  }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-tertiary-fixed": "#380d00",
+                "forest-mint": "#005137",
+                "on-tertiary": "#ffffff",
+                "secondary": "#4b6267",
+                "outline-variant": "#bbcac0",
+                "surface-tint": "#006c4b",
+                "surface-bright": "#f7fafc",
+                "tertiary-container": "#ffa483",
+                "off-white-canvas": "#F8F8F8",
+                "primary-fixed": "#68fcbf",
+                "on-primary-fixed": "#002114",
+                "tertiary": "#964729",
+                "on-secondary-container": "#4f676b",
+                "surface-dim": "#d7dadd",
+                "inverse-primary": "#45dfa4",
+                "sunset-orange": "#F5926E",
+                "blossom-pink": "#FFF6F6",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "crimson-red": "#CA0F1C",
+                "secondary-container": "#cbe4e9",
+                "on-error": "#ffffff",
+                "on-primary-container": "#00563b",
+                "light-mint": "#F0FDF4",
+                "on-tertiary-container": "#7d3418",
+                "surface": "#f7fafc",
+                "on-background": "#181c1e",
+                "primary-fixed-dim": "#45dfa4",
+                "surface-container": "#ebeef1",
+                "secondary-fixed-dim": "#b2cbd0",
+                "on-primary": "#ffffff",
+                "soft-gray-border": "#E5E7EB",
+                "error-container": "#ffdad6",
+                "aurora-green": "#34D399",
+                "on-surface-variant": "#3c4a42",
+                "secondary-fixed": "#cee7ec",
+                "on-secondary-fixed": "#061f23",
+                "inverse-surface": "#2d3133",
+                "on-secondary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-tertiary-fixed-variant": "#783114",
+                "inverse-on-surface": "#eef1f4",
+                "carbon-black": "#0E1214",
+                "on-secondary-fixed-variant": "#334a4f",
+                "surface-container-low": "#f1f4f7",
+                "tertiary-fixed": "#ffdbcf",
+                "pure-white": "#FFFFFF",
+                "on-primary-fixed-variant": "#005137",
+                "tertiary-fixed-dim": "#ffb59b",
+                "surface-container-high": "#e6e8eb",
+                "outline": "#6c7a71",
+                "surface-container-highest": "#e0e3e5",
+                "midnight-black": "#061F23",
+                "primary": "#006c4b",
+                "surface-variant": "#e0e3e5",
+                "on-surface": "#181c1e",
+                "background": "#f7fafc",
+                "slate-gray": "#6B7280",
+                "primary-container": "#34d399"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "xl": "48px",
+                "md": "24px",
+                "header-desktop": "72px",
+                "sidebar-expanded": "240px",
+                "xs": "8px",
+                "lg": "32px",
+                "bottom-nav": "64px",
+                "sidebar-collapsed": "80px",
+                "sm": "16px",
+                "header-mobile": "56px"
+        },
+        "fontFamily": {
+                "headline-h2-mobile": [
+                        "Satoshi Variable"
+                ],
+                "headline-h1-desktop": [
+                        "Satoshi Variable"
+                ],
+                "caption": [
+                        "\"Source Sans 3\""
+                ],
+                "body-bold": [
+                        "\"Source Sans 3\""
+                ],
+                "headline-h1-mobile": [
+                        "Satoshi Variable"
+                ],
+                "eyebrow-caps": [
+                        "Satoshi Variable"
+                ],
+                "input-text": [
+                        "\"Source Sans 3\""
+                ],
+                "tab-nav": [
+                        "Satoshi Variable"
+                ],
+                "headline-h2-desktop": [
+                        "Satoshi Variable"
+                ],
+                "body-base": [
+                        "\"Source Sans 3\""
+                ],
+                "label-ui": [
+                        "Satoshi Variable"
+                ]
+        },
+        "fontSize": {
+                "headline-h2-mobile": [
+                        "20px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-h1-desktop": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "caption": [
+                        "12px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-bold": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-h1-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "eyebrow-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.04em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "input-text": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "400"
+                        }
+                ],
+                "tab-nav": [
+                        "16px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-h2-desktop": [
+                        "24px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-base": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-ui": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-off-white-canvas text-on-surface font-body-base antialiased min-h-screen flex flex-col w-[390px] mx-auto border-x border-soft-gray-border relative overflow-x-hidden">
+<!-- Mobile Top Header -->
+<header class="h-header-mobile bg-pure-white flex justify-between items-center px-4 sticky top-0 z-20 w-full border-b border-soft-gray-border">
+<div class="flex items-center gap-2">
+<span class="font-headline-h2-mobile text-headline-h2-mobile font-bold text-on-surface">Creator Shop</span>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button class="opacity-80 active:opacity-100 p-2 -mr-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 overflow-y-auto pb-[calc(64px+24px)] flex flex-col">
+<!-- Workspace Nav -->
+<div class="bg-pure-white border-b border-soft-gray-border overflow-x-auto hide-scrollbar sticky top-header-mobile z-10">
+<div class="flex px-4 min-w-max">
+<button class="px-4 py-3 font-label-ui text-label-ui text-slate-gray whitespace-nowrap border-b-2 border-transparent transition-colors hover:text-primary">Discovery</button>
+<button class="px-4 py-3 font-label-ui text-label-ui text-primary font-bold whitespace-nowrap border-b-2 border-primary flex items-center gap-1.5 transition-colors">
+          Applicants
+          <span class="bg-aurora-green text-on-primary-fixed text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none">3</span>
+</button>
+<button class="px-4 py-3 font-label-ui text-label-ui text-slate-gray whitespace-nowrap border-b-2 border-transparent transition-colors hover:text-primary">Collaborations</button>
+</div>
+</div>
+<!-- Page Header & Controls -->
+<div class="px-4 py-6 flex flex-col gap-4">
+<div>
+<h1 class="font-headline-h1-mobile text-headline-h1-mobile text-on-surface mb-2">Applicants</h1>
+<p class="font-body-base text-body-base text-slate-gray">Review creator applications and make Campaign-specific decisions.</p>
+</div>
+<div class="flex gap-2 w-full">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray pointer-events-none" style="font-variation-settings: 'FILL' 0; font-size: 20px;">search</span>
+<input class="w-full h-12 pl-10 pr-4 bg-pure-white border border-soft-gray-border rounded-lg font-input-text text-input-text text-on-surface placeholder:text-slate-gray focus:outline-none focus:ring-1 focus:ring-aurora-green focus:border-aurora-green transition-shadow shadow-sm" placeholder="Search applicants" type="text"/>
+</div>
+<button class="h-12 px-4 bg-pure-white border border-soft-gray-border rounded-lg flex items-center gap-2 text-on-surface hover:bg-surface transition-colors shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 20px;">tune</span>
+<span class="font-label-ui text-label-ui">Filters</span>
+</button>
+</div>
+</div>
+<!-- Applicants List -->
+<div class="px-4 flex flex-col gap-4 pb-4">
+<!-- Card 1 -->
+<article class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-4 shadow-sm">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover border border-soft-gray-border flex-shrink-0 bg-surface-container" data-alt="A high-quality, closely cropped headshot of a young creative professional woman with warm, glowing skin, wearing a modern minimalist white top against a clean, light studio background. Soft, bright, flattering light-mode illumination. The image feels polished, friendly, and suitable for a professional creator dashboard profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDjDGn1UvCIP1NW-Erf4HQu83ld9sB_Eu6yWbbfSoQxX5HBzG-Q9ZJPpG1YW9yx_NhuwpMIauFFcg89YgTAmoIkTn83h1KuJI4QaRXXz4T2ptVft61gT9Yrq01nyrqTAhilanc3gEzA11v8A6TSSlGH6sU2hOdXmiF_9EjL1a4Q4eeM5MfKmu-EY1VAimUYkIOIA1AAogYw2qiAf8sGKR6kSvhOzPHkLOWKoX4Kx5Da7mgeg7TvZF5Cp-nmmtzxt4TPQQxrGSizm8"/>
+<div class="flex flex-col">
+<span class="font-headline-h2-mobile text-headline-h2-mobile text-on-surface leading-tight">Maya Kapoor</span>
+<span class="font-body-base text-body-base text-slate-gray">@mayaglow</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface-variant font-caption text-caption whitespace-nowrap">Applied 2 days ago</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded-[8px] bg-surface-container text-on-surface-variant font-caption text-caption border border-soft-gray-border">Pending Review</span>
+</div>
+<div class="grid grid-cols-1 gap-1">
+<div class="flex items-start gap-2">
+<span class="font-caption text-caption text-slate-gray w-24 flex-shrink-0 pt-0.5">Campaign Asset</span>
+<span class="font-body-bold text-body-bold text-on-surface">Milky Ceramide Cleanser</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-caption text-caption text-slate-gray w-24 flex-shrink-0 pt-0.5">Campaign Brief</span>
+<span class="font-body-bold text-body-bold text-on-surface">UGC Testimonial Reel</span>
+</div>
+</div>
+</div>
+<div class="bg-light-mint border border-aurora-green rounded-lg p-3 flex flex-col gap-1 relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-light-mint to-transparent pointer-events-none opacity-50 flex items-center justify-end pr-2">
+<span class="material-symbols-outlined text-aurora-green opacity-20" style="font-size: 48px;">auto_awesome</span>
+</div>
+<div class="flex items-center gap-1.5 relative z-10">
+<span class="material-symbols-outlined text-forest-mint" style="font-variation-settings: 'FILL' 1; font-size: 16px;">robot_2</span>
+<span class="font-label-ui text-label-ui text-forest-mint">AI Match: 91/100</span>
+</div>
+<p class="font-body-base text-body-base text-forest-mint text-sm relative z-10">Strong audience and content alignment with this Campaign.</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2 border-t border-soft-gray-border mt-1">
+<button class="flex-1 h-12 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors active:scale-95 duration-150 ease-in-out">Approve</button>
+<button class="flex-1 h-12 bg-pure-white text-crimson-red border border-crimson-red font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors active:scale-95 duration-150 ease-in-out">Reject</button>
+<button class="w-full h-12 bg-transparent text-slate-gray border border-transparent font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors hover:bg-surface-container active:scale-95 duration-150 ease-in-out">View Application</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-4 shadow-sm">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover border border-soft-gray-border flex-shrink-0 bg-surface-container" data-alt="A professional profile picture of a stylish woman looking directly at the camera. She has clear skin and a modern aesthetic, set against an airy, bright, minimalist background. The lighting is soft and flat, perfect for a digital UI avatar in a light-mode layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5jLybF3FaMmDnBjh2YLfku9hGHI-QbFphQc77DAJ16GlS6OsDtnK4RwGo0ZSUY9SXTP0EDAocBcu9MN7nG3lzgzOEs5ypX0QSigbgqEz7LsHdJw2WwPK4alREa09Dyb1zB4FjIntWN_x3Q4OLnM3KPF6vNLVsxqGzGKobrTqjCLdArGce2f4aWrBfD65kzIm91Wulbw9vSU7FpLIHMv6DJ0gzJSu4fqAoHTuWaOMOV9cqE7BfofS3JYKvWhDmz9UhZ7r_Cc_Iksg"/>
+<div class="flex flex-col">
+<span class="font-headline-h2-mobile text-headline-h2-mobile text-on-surface leading-tight">Rhea Shah</span>
+<span class="font-body-base text-body-base text-slate-gray">@rheaskinnotes</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface-variant font-caption text-caption whitespace-nowrap">Applied Today</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded-[8px] bg-surface-container text-on-surface-variant font-caption text-caption border border-soft-gray-border">Pending Review</span>
+</div>
+<div class="grid grid-cols-1 gap-1">
+<div class="flex items-start gap-2">
+<span class="font-caption text-caption text-slate-gray w-24 flex-shrink-0 pt-0.5">Campaign Asset</span>
+<span class="font-body-bold text-body-bold text-on-surface">Milky Ceramide Cleanser</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-caption text-caption text-slate-gray w-24 flex-shrink-0 pt-0.5">Campaign Brief</span>
+<span class="font-body-bold text-body-bold text-on-surface">Morning Routine Reel</span>
+</div>
+</div>
+</div>
+<div class="bg-surface border border-soft-gray-border rounded-lg p-3 flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-gray animate-spin" style="font-variation-settings: 'FILL' 0; font-size: 16px;">progress_activity</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant">AI Match: Processing</span>
+</div>
+<p class="font-body-base text-body-base text-slate-gray text-sm">AI Match is being calculated.</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2 border-t border-soft-gray-border mt-1">
+<button class="flex-1 h-12 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors active:scale-95 duration-150 ease-in-out">Approve</button>
+<button class="flex-1 h-12 bg-pure-white text-crimson-red border border-crimson-red font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors active:scale-95 duration-150 ease-in-out">Reject</button>
+<button class="w-full h-12 bg-transparent text-slate-gray border border-transparent font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors hover:bg-surface-container active:scale-95 duration-150 ease-in-out">View Application</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-pure-white border border-soft-gray-border rounded-xl p-md flex flex-col gap-4 shadow-sm">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full border border-soft-gray-border flex-shrink-0 bg-surface-container flex items-center justify-center text-slate-gray font-headline-h2-mobile">
+                AR
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-h2-mobile text-headline-h2-mobile text-on-surface leading-tight">Anika Rao</span>
+<span class="font-body-base text-body-base text-slate-gray">@anikarao</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface-variant font-caption text-caption whitespace-nowrap">Applied 3 days ago</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded-[8px] bg-surface-container text-on-surface-variant font-caption text-caption border border-soft-gray-border">Pending Review</span>
+</div>
+<div class="grid grid-cols-1 gap-1">
+<div class="flex items-start gap-2">
+<span class="font-caption text-caption text-slate-gray w-24 flex-shrink-0 pt-0.5">Campaign Asset</span>
+<span class="font-body-bold text-body-bold text-on-surface">Lumina Skin</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-caption text-caption text-slate-gray w-24 flex-shrink-0 pt-0.5">Campaign Brief</span>
+<span class="font-body-bold text-body-bold text-on-surface">Brand Story</span>
+</div>
+</div>
+</div>
+<div class="bg-surface border border-soft-gray-border rounded-lg p-3 flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-gray" style="font-variation-settings: 'FILL' 0; font-size: 16px;">info</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant">AI Match unavailable</span>
+</div>
+<p class="font-body-base text-body-base text-slate-gray text-sm">You can still review and decide.</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2 border-t border-soft-gray-border mt-1">
+<button class="flex-1 h-12 bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors active:scale-95 duration-150 ease-in-out">Approve</button>
+<button class="flex-1 h-12 bg-pure-white text-crimson-red border border-crimson-red font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors active:scale-95 duration-150 ease-in-out">Reject</button>
+<button class="w-full h-12 bg-transparent text-slate-gray border border-transparent font-label-ui text-label-ui rounded-lg flex items-center justify-center transition-colors hover:bg-surface-container active:scale-95 duration-150 ease-in-out">View Application</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Mobile Bottom Nav -->
+<nav class="fixed bottom-0 w-[390px] h-bottom-nav bg-pure-white border-t border-soft-gray-border flex justify-around items-center px-2 z-30 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-primary transition-colors">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-caption text-[10px]">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-primary transition-colors">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">storefront</span>
+<span class="font-caption text-[10px]">Brands</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-primary">
+<div class="px-4 py-1 rounded-full bg-primary-container/20 mb-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">campaign</span>
+</div>
+<span class="font-caption text-[10px] font-bold">Campaigns</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-primary transition-colors">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">group</span>
+<span class="font-caption text-[10px]">Collabs</span>
+</button>
+</nav>
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    /* Add safe area padding for modern phones */
+    .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+  </style>
+</body></html>

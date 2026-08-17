@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creator Shop - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#45dfa4",
+                    "on-primary-fixed-variant": "#005137",
+                    "error-container": "#ffdad6",
+                    "aurora-green": "#34D399",
+                    "pure-white": "#FFFFFF",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#181c1e",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "inverse-primary": "#45dfa4",
+                    "tertiary": "#964729",
+                    "secondary-fixed": "#cee7ec",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-container": "#34d399",
+                    "crimson-red": "#CA0F1C",
+                    "on-secondary-container": "#4f676b",
+                    "primary-fixed": "#68fcbf",
+                    "surface-dim": "#d7dadd",
+                    "carbon-black": "#0E1214",
+                    "surface-container-low": "#f1f4f7",
+                    "forest-mint": "#005137",
+                    "on-tertiary-fixed-variant": "#783114",
+                    "on-secondary-fixed": "#061f23",
+                    "surface-container-high": "#e6e8eb",
+                    "surface": "#f7fafc",
+                    "light-mint": "#F0FDF4",
+                    "secondary-fixed-dim": "#b2cbd0",
+                    "primary": "#006c4b",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#eef1f4",
+                    "surface-variant": "#e0e3e5",
+                    "error": "#ba1a1a",
+                    "soft-gray-border": "#E5E7EB",
+                    "tertiary-container": "#ffa483",
+                    "slate-gray": "#6B7280",
+                    "on-tertiary-container": "#7d3418",
+                    "surface-container": "#ebeef1",
+                    "surface-tint": "#006c4b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#181c1e",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-primary-fixed": "#002114",
+                    "surface-bright": "#f7fafc",
+                    "sunset-orange": "#F5926E",
+                    "off-white-canvas": "#F8F8F8",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-fixed": "#380d00",
+                    "midnight-black": "#061F23",
+                    "outline": "#6c7a71",
+                    "secondary-container": "#cbe4e9",
+                    "on-surface-variant": "#3c4a42",
+                    "outline-variant": "#bbcac0",
+                    "background": "#f7fafc",
+                    "on-primary": "#ffffff",
+                    "blossom-pink": "#FFF6F6",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#00563b",
+                    "secondary": "#4b6267",
+                    "on-secondary-fixed-variant": "#334a4f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "header-desktop": "72px",
+                    "sidebar-collapsed": "80px",
+                    "md": "24px",
+                    "sm": "16px",
+                    "lg": "32px",
+                    "header-mobile": "56px",
+                    "xs": "8px",
+                    "sidebar-expanded": "240px",
+                    "bottom-nav": "64px",
+                    "xl": "48px"
+            },
+            "fontFamily": {
+                    "body-bold": ["\"Source Sans 3\""],
+                    "headline-h1-mobile": ["Satoshi Variable"],
+                    "body-base": ["\"Source Sans 3\""],
+                    "label-ui": ["Satoshi Variable"],
+                    "headline-h2-desktop": ["Satoshi Variable"],
+                    "headline-h1-desktop": ["Satoshi Variable"],
+                    "input-text": ["\"Source Sans 3\""],
+                    "tab-nav": ["Satoshi Variable"],
+                    "headline-h2-mobile": ["Satoshi Variable"],
+                    "eyebrow-caps": ["Satoshi Variable"],
+                    "caption": ["\"Source Sans 3\""]
+            },
+            "fontSize": {
+                    "body-bold": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "headline-h1-mobile": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-base": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-ui": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-h2-desktop": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-h1-desktop": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "input-text": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "tab-nav": ["16px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-h2-mobile": ["20px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "eyebrow-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+        @font-face {
+            font-family: 'Satoshi Variable';
+            src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KQT/7QYRJOI3JIMOX5PN29CEKJAPP5EQCGJI/KE68M43PSRWOK5RZYMUA253RGE4GEGYX.woff2') format('woff2');
+            font-weight: 300 900;
+            font-display: swap;
+            font-style: normal;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-off-white-canvas text-on-surface antialiased min-h-screen flex flex-col font-body-base pb-[64px] md:pb-0">
+<!-- TopNavBar (Mobile Header) -->
+<header class="bg-pure-white flex justify-between items-center px-md sticky top-0 z-20 w-full h-header-mobile border-b border-soft-gray-border md:hidden">
+<div class="flex items-center gap-xs">
+<span class="font-headline-h2-mobile text-headline-h2-mobile font-bold text-on-surface">The Creator Shop</span>
+</div>
+<div class="flex items-center gap-sm">
+<button aria-label="notifications" class="text-primary hover:text-primary transition-colors opacity-80 active:opacity-100 flex items-center justify-center w-11 h-11">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Upgrade" class="text-primary hover:text-primary transition-colors font-label-ui text-label-ui font-bold px-3 py-2 bg-light-mint rounded-lg">
+                Upgrade
+            </button>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden border border-soft-gray-border ml-1 flex-shrink-0">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A detailed headshot portrait of a professional individual in a corporate setting. Clean lighting, subtle gray background. Sharp focus on face. The person looks approachable and confident, perfect for a high-end corporate dashboard profile avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9awmNenijrL-Ha7yK35D2E64q-iCtwSFiy6tYl7u0ifAyeHKQeyFqHJNxn7Ecgf01lws3HjOuxql8cBLaMZxt5Mp4KFNhFen-uHAIdPA102_wZ0chl9pusWKCHAcGAavOJ511o7ULUlc2bKSKReW0zvYkFQ1fe05f-A_moeoVWLnPIZzLuG_WWiBT5p3dhtc3ihGVnwWv83sd2hp_a97QUgctnE3OXc_VuHU296MLGBgFmGXfj5sfd-Rd7G8FE7YnMUtUQxbCftU"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Desktop Shell - Hidden on Mobile) -->
+<nav class="hidden md:flex bg-midnight-black text-aurora-green font-label-ui text-label-ui font-headline-h2-desktop text-headline-h2-desktop text-aurora-green w-sidebar-expanded min-h-screen flex flex-col border-r border-outline-variant fixed left-0 top-0 h-full z-30">
+<div class="p-md flex items-center gap-sm mt-4">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center overflow-hidden flex-shrink-0">
+<img alt="The Creator Shop Logo" class="w-full h-full object-cover" data-alt="A sleek minimalist corporate logo mark featuring geometric shapes in shades of deep green and pure white. High contrast, sharp edges. Perfect for a premium SaaS application interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE8dBvDvvmIAzIT5Clr9okZiM3yp1vLp2hzQsVmMGFV3vZjeGhM5o8_rTzdCOlxp5xy8tf4FheGZwouYEsUzEB4SV-3RJGPs4lqMuR-3Pf4BilKJmRqFopPgWtxMPxOkVHez-8jgvSDALurlz7_dt3_scv28pq64i_wc3D_zfFZBJ_Otk2WzxvrH705AvG8MelCB7B1-Zi9xRqe5cTtE_d_mUkBcik0kK6QbY1a5Sx8-bXo0Jdoqo90bYkG3lyYcd4lDIIFg8f0ic"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-h2-desktop text-headline-h2-desktop font-bold text-aurora-green">Creator Shop</span>
+<span class="font-caption text-caption text-surface-variant font-normal">Management Console</span>
+</div>
+</div>
+<div class="flex-1 mt-md flex flex-col gap-1 px-2">
+<a class="bg-primary-container text-on-primary-fixed rounded-xl mx-2 my-1 px-4 py-3 flex items-center gap-3 transition-colors scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+                Home
+            </a>
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors px-4 py-3 flex items-center gap-3 rounded-xl scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+                Brands
+            </a>
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors px-4 py-3 flex items-center gap-3 rounded-xl scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+                Campaigns
+            </a>
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors px-4 py-3 flex items-center gap-3 rounded-xl scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+                Collabs
+            </a>
+</div>
+<div class="mb-lg px-2 flex flex-col gap-1 border-t border-on-secondary-fixed-variant pt-sm">
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors px-4 py-3 flex items-center gap-3 rounded-xl scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                Earnings
+            </a>
+<a class="text-surface-variant hover:text-aurora-green mx-2 my-1 hover:bg-on-secondary-fixed-variant transition-colors px-4 py-3 flex items-center gap-3 rounded-xl scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Desktop Header Extension (Only visible on MD+) -->
+<header class="hidden md:flex bg-pure-white h-header-desktop w-full border-b border-soft-gray-border ml-sidebar-expanded flex justify-between items-center px-md sticky top-0 z-20">
+<div class="flex items-center gap-xl">
+<nav class="flex gap-lg h-full items-end">
+<a class="text-primary font-bold border-b-2 border-primary pb-sm hover:text-primary transition-colors opacity-80 active:opacity-100 font-body-base text-body-base" href="#">Dashboard</a>
+<a class="text-slate-gray pb-sm hover:text-primary transition-colors opacity-80 active:opacity-100 font-body-base text-body-base" href="#">Analytics</a>
+<a class="text-slate-gray pb-sm hover:text-primary transition-colors opacity-80 active:opacity-100 font-body-base text-body-base" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<button aria-label="notifications" class="text-slate-gray hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui px-4 py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center h-10">
+                Upgrade
+            </button>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-soft-gray-border ml-2 flex-shrink-0">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A detailed headshot portrait of a professional individual in a corporate setting. Clean lighting, subtle gray background. Sharp focus on face. The person looks approachable and confident, perfect for a high-end corporate dashboard profile avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj_8l0vnljq6Iaj3oGOwDB6-IIu977vA6ibH9cyoz5ozmr1P71IWYK1Gv7kn6X1v9VchtLiOr3Heed7HjPpMmHBlZCQ0fnL2KeJ2ll2-s8S3GfKMrt0jx61UkZGbH9bWTRjmHb6KLMShJpu8mhIBYILXFKXw_3aG_TGmfe5FQDjbL_sJsrY49QanReYJ2TyCUqMGijtnGmUSxkkWz2xZSv3Z-HqlmRSbDNJPicw9GEhR1ocx_aFXsMz8A_gAJCJlbyXbCV0T1iXUE"/>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 w-full md:ml-sidebar-expanded p-sm md:p-md bg-off-white-canvas max-w-[1440px] mx-auto flex flex-col gap-sm">
+<!-- Breadcrumb / Context Row -->
+<div class="flex items-center gap-2 text-slate-gray font-caption text-caption mb-2">
+<span>Product</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span>Campaign Asset</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface font-body-bold text-body-bold">Brief</span>
+</div>
+<!-- Attention Layer: Actionables -->
+<section class="flex flex-col gap-2">
+<h2 class="font-label-ui text-label-ui text-on-surface">Actionables</h2>
+<div class="flex flex-col border-t border-soft-gray-border">
+<div class="flex items-center justify-between h-11 border-b border-soft-gray-border">
+<span class="text-body-base text-on-surface">1 applicant waiting for review. <a class="text-primary font-body-bold hover:text-aurora-green transition-colors min-h-[44px] inline-flex items-center" href="#">Review applicant</a></span>
+</div>
+<div class="flex items-center justify-between h-11 border-b border-soft-gray-border">
+<span class="text-body-base text-on-surface">Revised content ready. <a class="text-primary font-body-bold hover:text-aurora-green transition-colors min-h-[44px] inline-flex items-center" href="#">Open collaboration</a></span>
+</div>
+<div class="flex items-center justify-between h-11 border-b border-soft-gray-border">
+<span class="text-body-base text-on-surface">1 Campaign Brief in Draft. <a class="text-primary font-body-bold hover:text-aurora-green transition-colors min-h-[44px] inline-flex items-center" href="#">Review Brief</a></span>
+</div>
+</div>
+</section>
+<!-- Summary Surfaces -->
+<div class="flex flex-col gap-2 mt-sm">
+<div class="flex gap-4 border-b border-soft-gray-border">
+<button class="font-label-ui text-label-ui text-primary border-b-2 border-primary pb-1 min-h-[44px]">Performance</button>
+<button class="font-label-ui text-label-ui text-slate-gray pb-1 min-h-[44px]">Budget</button>
+</div>
+<div class="flex flex-col gap-2 py-2">
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-body-base">
+<span class="text-on-surface font-body-bold">Reach — 1,24,000</span>
+<span class="text-slate-gray">Discover Reach — 78,400</span>
+<span class="text-slate-gray">Impressions — 1,86,300</span>
+</div>
+<a class="text-primary font-label-ui text-label-ui hover:text-aurora-green transition-colors min-h-[44px] flex items-center" href="#">View Full Report</a>
+</div>
+</div>
+<!-- Spacer for future content to ensure scrolling ability -->
+<div class="h-32 w-full"></div>
+</main>
+<!-- Bottom Nav Bar (Mobile Shell) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-[64px] bg-pure-white border-t border-soft-gray-border flex justify-around items-center z-40 px-2 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center w-full h-full text-aurora-green min-w-[44px] min-h-[44px]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-caption text-caption text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-aurora-green min-w-[44px] min-h-[44px] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="storefront">storefront</span>
+<span class="font-caption text-caption text-[10px]">Brands</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-aurora-green min-w-[44px] min-h-[44px] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="campaign">campaign</span>
+<span class="font-caption text-caption text-[10px]">Campaigns</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-aurora-green min-w-[44px] min-h-[44px] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="group">group</span>
+<span class="font-caption text-caption text-[10px]">Collabs</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-gray hover:text-aurora-green min-w-[44px] min-h-[44px] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu">menu</span>
+<span class="font-caption text-caption text-[10px]">More</span>
+</a>
+</nav>
+</body></html>

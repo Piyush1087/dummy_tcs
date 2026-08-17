@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creator Shop - Campaign Details Drawer</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-primary": "#ffffff",
+                  "tertiary-container": "#ffa483",
+                  "on-tertiary-container": "#7d3418",
+                  "surface-dim": "#d7dadd",
+                  "sunset-orange": "#F5926E",
+                  "forest-mint": "#005137",
+                  "slate-gray": "#6B7280",
+                  "secondary-fixed": "#cee7ec",
+                  "error-container": "#ffdad6",
+                  "inverse-surface": "#2d3133",
+                  "on-secondary-container": "#4f676b",
+                  "off-white-canvas": "#F8F8F8",
+                  "primary": "#006c4b",
+                  "on-error": "#ffffff",
+                  "on-error-container": "#93000a",
+                  "pure-white": "#FFFFFF",
+                  "on-tertiary-fixed": "#380d00",
+                  "on-tertiary-fixed-variant": "#783114",
+                  "on-background": "#181c1e",
+                  "primary-container": "#34d399",
+                  "tertiary": "#964729",
+                  "on-secondary": "#ffffff",
+                  "on-surface-variant": "#3c4a42",
+                  "on-surface": "#181c1e",
+                  "secondary": "#4b6267",
+                  "on-tertiary": "#ffffff",
+                  "on-secondary-fixed-variant": "#334a4f",
+                  "primary-fixed": "#68fcbf",
+                  "surface-container-highest": "#e0e3e5",
+                  "tertiary-fixed": "#ffdbcf",
+                  "surface-container-high": "#e6e8eb",
+                  "on-primary-fixed": "#002114",
+                  "surface-container-lowest": "#ffffff",
+                  "aurora-green": "#34D399",
+                  "outline": "#6c7a71",
+                  "secondary-container": "#cbe4e9",
+                  "on-secondary-fixed": "#061f23",
+                  "background": "#f7fafc",
+                  "soft-gray-border": "#E5E7EB",
+                  "carbon-black": "#0E1214",
+                  "outline-variant": "#bbcac0",
+                  "surface": "#f7fafc",
+                  "light-mint": "#F0FDF4",
+                  "inverse-primary": "#45dfa4",
+                  "midnight-black": "#061F23",
+                  "crimson-red": "#CA0F1C",
+                  "surface-tint": "#006c4b",
+                  "surface-container": "#ebeef1",
+                  "on-primary-container": "#00563b",
+                  "surface-container-low": "#f1f4f7",
+                  "blossom-pink": "#FFF6F6",
+                  "tertiary-fixed-dim": "#ffb59b",
+                  "on-primary-fixed-variant": "#005137",
+                  "surface-bright": "#f7fafc",
+                  "surface-variant": "#e0e3e5",
+                  "primary-fixed-dim": "#45dfa4",
+                  "error": "#ba1a1a",
+                  "secondary-fixed-dim": "#b2cbd0",
+                  "inverse-on-surface": "#eef1f4"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "sidebar-collapsed": "80px",
+                  "lg": "32px",
+                  "sidebar-expanded": "240px",
+                  "sm": "16px",
+                  "header-desktop": "72px",
+                  "xs": "8px",
+                  "xl": "48px",
+                  "md": "24px",
+                  "header-mobile": "56px",
+                  "bottom-nav": "64px"
+          },
+          "fontFamily": {
+                  "headline-h2-desktop": [
+                          "Satoshi", "sans-serif"
+                  ],
+                  "headline-h1-mobile": [
+                          "Satoshi", "sans-serif"
+                  ],
+                  "headline-h1-desktop": [
+                          "Satoshi", "sans-serif"
+                  ],
+                  "body-base": [
+                          "\"Source Sans 3\"", "sans-serif"
+                  ],
+                  "tab-nav": [
+                          "Satoshi", "sans-serif"
+                  ],
+                  "caption": [
+                          "\"Source Sans 3\"", "sans-serif"
+                  ],
+                  "label-ui": [
+                          "Satoshi", "sans-serif"
+                  ],
+                  "headline-h2-mobile": [
+                          "Satoshi", "sans-serif"
+                  ],
+                  "eyebrow-caps": [
+                          "Satoshi", "sans-serif"
+                  ],
+                  "body-bold": [
+                          "\"Source Sans 3\"", "sans-serif"
+                  ],
+                  "input-text": [
+                          "\"Source Sans 3\"", "sans-serif"
+                  ]
+          },
+          "fontSize": {
+                  "headline-h2-desktop": [
+                          "24px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "letterSpacing": "-0.01em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "headline-h1-mobile": [
+                          "28px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "letterSpacing": "-0.02em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "headline-h1-desktop": [
+                          "32px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "letterSpacing": "-0.02em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "body-base": [
+                          "14px",
+                          {
+                                  "lineHeight": "1.5",
+                                  "fontWeight": "400"
+                          }
+                  ],
+                  "tab-nav": [
+                          "16px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "caption": [
+                          "12px",
+                          {
+                                  "lineHeight": "1.4",
+                                  "fontWeight": "500"
+                          }
+                  ],
+                  "label-ui": [
+                          "14px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "headline-h2-mobile": [
+                          "20px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "letterSpacing": "-0.01em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "eyebrow-caps": [
+                          "12px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "letterSpacing": "0.04em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "body-bold": [
+                          "14px",
+                          {
+                                  "lineHeight": "1.5",
+                                  "fontWeight": "600"
+                          }
+                  ],
+                  "input-text": [
+                          "14px",
+                          {
+                                  "lineHeight": "1.4",
+                                  "fontWeight": "400"
+                          }
+                  ]
+          }
+  },
+      },
+    }
+  </script>
+</head>
+<body class="bg-off-white-canvas text-on-surface antialiased font-body-base h-screen overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex w-sidebar-expanded min-h-screen flex-col bg-midnight-black dark:bg-carbon-black border-r border-outline-variant fixed left-0 top-0 h-full z-30">
+<div class="px-md py-lg">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-aurora-green flex items-center justify-center text-midnight-black">
+<span class="material-symbols-outlined font-bold text-sm">rocket_launch</span>
+</div>
+<div>
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">Creator Shop</h2>
+<p class="font-caption text-caption text-surface-variant">Management Console</p>
+</div>
+</div>
+</div>
+<div class="flex-1 px-2 py-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors font-label-ui text-label-ui scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors font-label-ui text-label-ui scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">storefront</span>
+<span>Brands</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl bg-primary-container text-on-primary-fixed font-label-ui text-label-ui scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span>Campaigns</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors font-label-ui text-label-ui scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">group</span>
+<span>Collabs</span>
+</a>
+</div>
+<div class="px-2 py-4 space-y-1 border-t border-outline/20">
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors font-label-ui text-label-ui scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">payments</span>
+<span>Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors font-label-ui text-label-ui scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="md:ml-sidebar-expanded h-full flex flex-col relative bg-off-white-canvas">
+<!-- TopNavBar -->
+<header class="bg-pure-white dark:bg-surface-container-lowest h-header-desktop w-full flex justify-between items-center px-md sticky top-0 z-20 border-b border-soft-gray-border">
+<div class="flex items-center gap-6">
+<h1 class="font-headline-h2-desktop text-headline-h2-desktop font-bold text-on-surface md:hidden">The Creator Shop</h1>
+<div class="hidden md:flex items-center gap-8 h-full">
+<a class="h-header-desktop flex items-center text-slate-gray font-body-base text-body-base hover:text-primary transition-colors opacity-80 active:opacity-100" href="#">Dashboard</a>
+<a class="h-header-desktop flex items-center text-slate-gray font-body-base text-body-base hover:text-primary transition-colors opacity-80 active:opacity-100" href="#">Analytics</a>
+<a class="h-header-desktop flex items-center text-slate-gray font-body-base text-body-base hover:text-primary transition-colors opacity-80 active:opacity-100" href="#">Reports</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Upgrade</button>
+<button class="text-slate-gray hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-soft-gray-border">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A close-up, professional headshot of an individual in a bright, modern studio setting. The lighting is soft and even, typical of a high-end corporate profile picture. The background is a very light, neutral gray, keeping the focus entirely on the subject." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_aj4U2BpXB9YvYfc_q27pBVS4aGSZHg3RSfS0jguzwJ3Cyi3VOF_xl1SDiiuxqpU_jr5GBlu7r8MInw8uaS_0klLDsAcMEvQwQ760IPrjSi3TR4IdKIuR9qCndjFRXoLRPCVTb1by7aZOloybS9VoPKu97vQUv8PGiO5LrbN_4J-Ry3qcx1Yarkd36R7UxiF7OXvpItaqUmJuEOqo3ihooDf-N_9fWRw-CgbaNZ7bZzu2gB8p-x97kC12bOI4XbbMZe6LltXeGTI"/>
+</div>
+</div>
+</header>
+<!-- Page Content (Subordinate under drawer) -->
+<div class="flex-1 overflow-auto p-lg max-w-[1440px] mx-auto w-full relative z-10">
+<!-- Campaign Header Shell (From Screen 3) -->
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-md mb-lg">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase tracking-wider mb-2">Campaign</p>
+<h1 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface mb-2">Summer Collection — Creator Seeding</h1>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center px-2 py-1 rounded bg-light-mint text-forest-mint font-caption text-caption border border-aurora-green/20">Live</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-light-mint text-forest-mint font-caption text-caption border border-aurora-green/20">Ready</span>
+<span class="text-slate-gray font-caption text-caption flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">visibility</span> Eligible Creators Only</span>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui px-4 h-[48px] rounded-lg hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+<button class="bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui px-6 h-[48px] rounded-lg hover:opacity-90 transition-opacity">
+                Manage Creators
+             </button>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-6 py-6 border-y border-soft-gray-border mb-6">
+<div>
+<p class="font-caption text-caption text-slate-gray mb-1">Objective</p>
+<p class="font-body-bold text-body-bold text-on-surface">Pulse — Awareness &amp; Reach</p>
+</div>
+<div>
+<p class="font-caption text-caption text-slate-gray mb-1">Schedule</p>
+<p class="font-body-bold text-body-bold text-on-surface">15 Sep 2026 – 15 Oct 2026</p>
+</div>
+<div>
+<p class="font-caption text-caption text-slate-gray mb-1">Budget</p>
+<p class="font-body-bold text-body-bold text-on-surface">₹5,00,000</p>
+</div>
+<div>
+<p class="font-caption text-caption text-slate-gray mb-1">Platform</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-pink-500">photo_camera</span>
+<span class="font-body-bold text-body-bold text-on-surface">Instagram</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2 flex items-center justify-center gap-2 text-primary font-label-ui text-label-ui hover:bg-surface-variant rounded transition-colors">
+          View Full Brief <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- Empty State below header -->
+<div class="flex flex-col items-center justify-center h-64 border-2 border-dashed border-soft-gray-border rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-4xl text-slate-gray mb-4">group_add</span>
+<p class="font-body-bold text-body-bold text-on-surface mb-2">No Creators Seeded Yet</p>
+<p class="font-body-base text-body-base text-slate-gray mb-4">Start inviting creators to this campaign.</p>
+<button class="bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui px-4 py-2 rounded-lg hover:bg-surface-variant transition-colors">Find Creators</button>
+</div>
+</div>
+<!-- Backdrop Overlay -->
+<div class="absolute inset-0 bg-midnight-black/50 z-40 backdrop-blur-[1px] transition-opacity"></div>
+<!-- Right Side Aurora Drawer -->
+<div class="absolute right-0 top-0 bottom-0 w-[480px] bg-pure-white shadow-[-8px_0_24px_rgba(0,0,0,0.12)] z-50 flex flex-col transform transition-transform border-l border-soft-gray-border">
+<!-- Drawer Header -->
+<div class="sticky top-0 bg-pure-white border-b border-soft-gray-border px-6 py-5 z-10">
+<div class="flex justify-between items-start mb-2">
+<p class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase tracking-wider">Campaign Details</p>
+<button class="text-slate-gray hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface mb-3">Summer Collection — Creator Seeding</h2>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-light-mint text-forest-mint font-caption text-caption border border-aurora-green/20">Live</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-light-mint text-forest-mint font-caption text-caption border border-aurora-green/20">Ready</span>
+</div>
+</div>
+<!-- Drawer Body -->
+<div class="flex-1 overflow-y-auto px-6 py-6 space-y-8">
+<!-- Section 1: Campaign Strategy -->
+<section>
+<h3 class="font-label-ui text-label-ui text-on-surface border-b border-soft-gray-border pb-2 mb-4 uppercase tracking-wider text-xs">Campaign Strategy</h3>
+<div class="grid grid-cols-2 gap-y-4 gap-x-6">
+<div>
+<dt class="font-caption text-caption text-slate-gray">Publishing Schedule</dt>
+<dd class="font-body-bold text-body-bold text-on-surface">Scheduled</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Platform</dt>
+<dd class="font-body-bold text-body-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-pink-500">photo_camera</span> Instagram
+               </dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Publish From</dt>
+<dd class="font-body-base text-body-base text-on-surface">15 Sep 2026</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Publish Until</dt>
+<dd class="font-body-base text-body-base text-on-surface">15 Oct 2026</dd>
+</div>
+<div class="col-span-2">
+<dt class="font-caption text-caption text-slate-gray">Objective</dt>
+<dd class="font-body-bold text-body-bold text-on-surface">Pulse — Awareness &amp; Reach</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Primary KPI</dt>
+<dd class="font-body-base text-body-base text-on-surface">Reach</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Visibility</dt>
+<dd class="font-body-base text-body-base text-on-surface">Eligible Creators Only</dd>
+</div>
+<div class="col-span-2">
+<dt class="font-caption text-caption text-slate-gray">Supporting KPIs</dt>
+<dd class="font-body-base text-body-base text-on-surface">Discover Reach; Impressions; Profile Visits; New Followers</dd>
+</div>
+</div>
+</section>
+<!-- Section 2: Creator Strategy -->
+<section>
+<h3 class="font-label-ui text-label-ui text-on-surface border-b border-soft-gray-border pb-2 mb-4 uppercase tracking-wider text-xs">Creator Strategy</h3>
+<div class="space-y-4">
+<div>
+<dt class="font-caption text-caption text-slate-gray mb-2">Creator Archetypes</dt>
+<dd class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-soft-gray-border text-on-surface font-caption text-caption">Beauty Educator</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-soft-gray-border text-on-surface font-caption text-caption">Skincare Reviewer</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-soft-gray-border text-on-surface font-caption text-caption">Lifestyle Storyteller</span>
+</dd>
+</div>
+<div class="grid grid-cols-2 gap-y-4 gap-x-6">
+<div>
+<dt class="font-caption text-caption text-slate-gray">Follower Range</dt>
+<dd class="font-body-bold text-body-bold text-on-surface">20,000–250,000</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Geography</dt>
+<dd class="font-body-base text-body-base text-on-surface">India; Mumbai</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Audience Gender</dt>
+<dd class="font-body-base text-body-base text-on-surface">Women</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Audience Age</dt>
+<dd class="font-body-base text-body-base text-on-surface">24–34</dd>
+</div>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray mb-2">Affinities</dt>
+<dd class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-soft-gray-border text-on-surface font-caption text-caption">Skincare</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-soft-gray-border text-on-surface font-caption text-caption">Beauty &amp; Cosmetics</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-soft-gray-border text-on-surface font-caption text-caption">Wellness</span>
+</dd>
+</div>
+</div>
+</section>
+<!-- Section 3: Commercial Strategy -->
+<section>
+<h3 class="font-label-ui text-label-ui text-on-surface border-b border-soft-gray-border pb-2 mb-4 uppercase tracking-wider text-xs">Commercial Strategy</h3>
+<div class="grid grid-cols-2 gap-y-4 gap-x-6">
+<div>
+<dt class="font-caption text-caption text-slate-gray">Brand Support</dt>
+<dd class="font-body-bold text-body-bold text-on-surface">Product</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Estimated Support Value</dt>
+<dd class="font-body-base text-body-base text-on-surface">₹1,299 per creator</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Compensation</dt>
+<dd class="font-body-bold text-body-bold text-on-surface">Fixed</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Creator Payout</dt>
+<dd class="font-body-bold text-body-bold text-on-surface text-primary">₹25,000</dd>
+</div>
+<div class="col-span-2 border-t border-soft-gray-border pt-4 mt-2"></div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Total Campaign Budget</dt>
+<dd class="font-body-bold text-body-bold text-on-surface">₹5,00,000</dd>
+</div>
+<div></div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Advance</dt>
+<dd class="font-body-base text-body-base text-on-surface">25%</dd>
+</div>
+<div>
+<dt class="font-caption text-caption text-slate-gray">Payout Terms</dt>
+<dd class="font-body-base text-body-base text-on-surface">Net 15</dd>
+</div>
+</div>
+</section>
+</div>
+<!-- Drawer Footer -->
+<div class="border-t border-soft-gray-border p-6 bg-surface-bright flex justify-end gap-3 mt-auto">
+<button class="bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui px-6 h-[48px] rounded-lg hover:bg-surface-variant transition-colors">
+          Close
+        </button>
+<button class="bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui px-6 h-[48px] rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">edit</span> Edit Campaign
+        </button>
+</div>
+</div>
+</main>
+</body></html>

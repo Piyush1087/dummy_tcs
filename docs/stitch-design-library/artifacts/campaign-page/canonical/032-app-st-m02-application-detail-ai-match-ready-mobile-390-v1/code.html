@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Detail — AI Match Ready</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#061f23",
+                      "tertiary": "#964729",
+                      "primary-fixed-dim": "#45dfa4",
+                      "tertiary-fixed": "#ffdbcf",
+                      "surface": "#f7fafc",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "aurora-green": "#34D399",
+                      "blossom-pink": "#FFF6F6",
+                      "outline-variant": "#bbcac0",
+                      "surface-container-low": "#f1f4f7",
+                      "secondary-fixed": "#cee7ec",
+                      "primary": "#006c4b",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d7dadd",
+                      "primary-fixed": "#68fcbf",
+                      "forest-mint": "#005137",
+                      "slate-gray": "#6B7280",
+                      "inverse-on-surface": "#eef1f4",
+                      "pure-white": "#FFFFFF",
+                      "off-white-canvas": "#F8F8F8",
+                      "on-tertiary-container": "#7d3418",
+                      "on-background": "#181c1e",
+                      "primary-container": "#34d399",
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "on-surface": "#181c1e",
+                      "background": "#f7fafc",
+                      "on-surface-variant": "#3c4a42",
+                      "on-tertiary-fixed": "#380d00",
+                      "surface-bright": "#f7fafc",
+                      "on-primary-fixed-variant": "#005137",
+                      "light-mint": "#F0FDF4",
+                      "midnight-black": "#061F23",
+                      "tertiary-container": "#ffa483",
+                      "surface-variant": "#e0e3e5",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#45dfa4",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#006c4b",
+                      "sunset-orange": "#F5926E",
+                      "soft-gray-border": "#E5E7EB",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "on-secondary-container": "#4f676b",
+                      "on-secondary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#002114",
+                      "outline": "#6c7a71",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "surface-container": "#ebeef1",
+                      "on-primary-container": "#00563b",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "on-tertiary-fixed-variant": "#783114",
+                      "surface-container-high": "#e6e8eb",
+                      "secondary": "#4b6267",
+                      "carbon-black": "#0E1214",
+                      "secondary-container": "#cbe4e9",
+                      "crimson-red": "#CA0F1C",
+                      "surface-container-highest": "#e0e3e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "32px",
+                      "xs": "8px",
+                      "sidebar-expanded": "240px",
+                      "sidebar-collapsed": "80px",
+                      "bottom-nav": "64px",
+                      "sm": "16px",
+                      "md": "24px",
+                      "xl": "48px",
+                      "header-desktop": "72px",
+                      "header-mobile": "56px"
+              },
+              "fontFamily": {
+                      "body-base": [
+                              "\"Source Sans 3\""
+                      ],
+                      "label-ui": [
+                              "Satoshi Variable"
+                      ],
+                      "body-bold": [
+                              "\"Source Sans 3\""
+                      ],
+                      "headline-h1-desktop": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h2-mobile": [
+                              "Satoshi Variable"
+                      ],
+                      "headline-h1-mobile": [
+                              "Satoshi Variable"
+                      ],
+                      "eyebrow-caps": [
+                              "Satoshi Variable"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\""
+                      ],
+                      "input-text": [
+                              "\"Source Sans 3\""
+                      ],
+                      "headline-h2-desktop": [
+                              "Satoshi Variable"
+                      ],
+                      "tab-nav": [
+                              "Satoshi Variable"
+                      ]
+              },
+              "fontSize": {
+                      "body-base": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-h1-desktop": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h2-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-h1-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "eyebrow-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "input-text": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-h2-desktop": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "tab-nav": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-off-white-canvas text-on-surface antialiased w-full h-[844px] max-w-[390px] mx-auto overflow-hidden relative shadow-2xl">
+<!-- Dimmed Background Representation -->
+<div aria-hidden="true" class="absolute inset-0 bg-black/50 z-40">
+<!-- Assuming background content is obscured -->
+<img alt="Background Workspace" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_aK4lxs-w-KVWXLH42hCGOYwjo9SnyPSkBwYp8Cp_M5_w_lJasSXJEZM_V6NlS0oaQ1vQfzKpOKqzmvXsD4uB9uq8YuehrYUosHlCOS6GbzHItZ95Y4sBQDMqjnaiq8vlxnYvfreUTHmH8iutDEclQ2Sq1w_KDutH_s97LdCqtcjFdr643kEaSwi90OnxI7VSR207k_5ovNvs95ncQNOPeqiCEYTkcVYoXxdDT0eiBWA5XSQNPvEpHSai2QSRQDlkurg_Xyz4xYU"/>
+</div>
+<!-- Sheet Overlay -->
+<div class="absolute bottom-0 left-0 right-0 h-[800px] bg-pure-white z-50 rounded-t-3xl flex flex-col shadow-[0_-4px_24px_rgba(0,0,0,0.1)]">
+<!-- Sheet Handle -->
+<div class="flex justify-center pt-3 pb-2 flex-shrink-0">
+<div class="w-12 h-1.5 bg-surface-variant rounded-full"></div>
+</div>
+<!-- Fixed Header -->
+<div class="px-md pb-md border-b border-soft-gray-border flex-shrink-0">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-sm">
+<img class="w-12 h-12 rounded-full object-cover border border-soft-gray-border" data-alt="A portrait of a young Indian woman with glowing skin, smiling subtly in bright, soft lighting, representing a skincare creator. Modern, professional aesthetic with a clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_sO8Nyn_fkNPQXgjJ6892pMcdzMZWpTbGMxwd6H8NjHoMX7VQxEj-j5BtrluhdOUE2ErPYIXaG_h1hAitKcJni6YDa7dgDjs814bf3YgEtn_nmfjywOCVoEA74mKaCGA-OrY69gAI6G0mRyPu3NZCK7orTQ4ljBwRVjbAdSuzb5NUkzZNtfWJU9DClTIxNCv9tQjmsf0ArQwYsxMWsiBH-GF0BkXWGYV2UegPAeQXSx391BNxmN1hE77yp23VFbQIR-im0Ht_tWI"/>
+<div>
+<h2 class="font-headline-h2-mobile text-headline-h2-mobile text-on-surface">Maya Kapoor</h2>
+<p class="font-body-base text-body-base text-slate-gray">@mayaglow</p>
+</div>
+</div>
+<button class="p-2 text-slate-gray hover:text-on-surface transition-colors rounded-full hover:bg-surface-container-lowest">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<div class="mt-xs flex items-center gap-xs">
+<span class="inline-flex items-center px-2 py-1 rounded-sm bg-surface-container-high text-on-surface font-caption text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-gray mr-1"></span>
+                    Pending Review
+                </span>
+<span class="font-caption text-caption text-slate-gray">Applied 2 days ago</span>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-md py-md space-y-md">
+<!-- Application Details -->
+<section class="space-y-sm">
+<div class="grid grid-cols-2 gap-sm">
+<div class="space-y-1">
+<h3 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Campaign Asset</h3>
+<p class="font-body-bold text-body-bold text-on-surface">Milky Ceramide Cleanser</p>
+</div>
+<div class="space-y-1">
+<h3 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Campaign Brief</h3>
+<p class="font-body-bold text-body-bold text-on-surface">UGC Testimonial Reel</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-soft-gray-border p-sm rounded-lg relative mt-sm">
+<span class="material-symbols-outlined absolute top-sm right-sm text-slate-gray text-xl">format_quote</span>
+<h3 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase mb-xs">Submission Note</h3>
+<p class="font-body-base text-body-base text-on-surface-variant italic">
+                        "I've been using ceramide products for years and my audience loves when I break down the science behind gentle cleansers. I have some great ideas for a compelling testimonial!"
+                    </p>
+</div>
+</section>
+<!-- AI Match Section -->
+<section class="bg-light-mint border border-aurora-green rounded-xl p-md">
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-forest-mint text-2xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-label-ui text-label-ui text-forest-mint">AI Match Insights</h3>
+</div>
+<div class="flex items-baseline gap-1 bg-white px-2 py-1 rounded-sm border border-aurora-green/30">
+<span class="font-headline-h2-mobile text-headline-h2-mobile text-forest-mint">91</span>
+<span class="font-caption text-caption text-slate-gray">/ 100</span>
+</div>
+</div>
+<p class="font-body-bold text-body-bold text-on-primary-fixed-variant mb-4">
+                    Strong audience and content alignment with this Campaign.
+                </p>
+<div class="space-y-4">
+<div>
+<h4 class="font-eyebrow-caps text-eyebrow-caps text-forest-mint uppercase mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                            Strengths
+                        </h4>
+<ul class="space-y-1">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-aurora-green text-xs mt-0.5" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Strong audience overlap with the Campaign target</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-aurora-green text-xs mt-0.5" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Content style aligns with the Campaign Brief</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-aurora-green text-xs mt-0.5" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Consistent short-form skincare content</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-eyebrow-caps text-eyebrow-caps text-tertiary uppercase mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">info</span>
+                            Areas to consider
+                        </h4>
+<ul class="space-y-1">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sunset-orange text-xs mt-0.5" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Limited prior experience with cleanser demonstrations</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sunset-orange text-xs mt-0.5" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-body-base text-body-base text-on-surface-variant">Audience reach extends beyond the Campaign's target geography</span>
+</li>
+</ul>
+</div>
+</div>
+<p class="font-caption text-caption text-slate-gray mt-4 pt-3 border-t border-aurora-green/20 italic">
+                    AI Match assists evaluation; the final decision belongs to the Brand.
+                </p>
+</section>
+<!-- Creator Context -->
+<section class="border border-soft-gray-border rounded-lg p-sm bg-pure-white">
+<h3 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase mb-xs">Creator Context</h3>
+<div class="grid grid-cols-2 gap-y-sm gap-x-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-gray text-lg">location_on</span>
+<div>
+<p class="font-caption text-caption text-slate-gray">Location</p>
+<p class="font-body-base text-body-base text-on-surface font-medium">Mumbai, India</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-gray text-lg">group</span>
+<div>
+<p class="font-caption text-caption text-slate-gray">Followers</p>
+<p class="font-body-base text-body-base text-on-surface font-medium">124K</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-gray text-lg">trending_up</span>
+<div>
+<p class="font-caption text-caption text-slate-gray">Engagement</p>
+<p class="font-body-base text-body-base text-on-surface font-medium">4.2%</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-gray text-lg">category</span>
+<div>
+<p class="font-caption text-caption text-slate-gray">Primary Niche</p>
+<p class="font-body-base text-body-base text-on-surface font-medium">Skincare</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Padding for bottom nav/footer -->
+<div class="h-24"></div>
+</div>
+<!-- Persistent Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-pure-white border-t border-soft-gray-border p-md flex gap-sm items-center shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<button class="h-12 px-6 flex-1 bg-white border border-soft-gray-border text-crimson-red font-label-ui text-label-ui rounded-lg hover:bg-blossom-pink transition-colors focus:ring-2 focus:ring-crimson-red/20 outline-none flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">close</span>
+                Reject
+            </button>
+<button class="h-12 px-6 flex-[2] bg-aurora-green text-on-primary-fixed font-label-ui text-label-ui rounded-lg hover:bg-primary-fixed transition-colors focus:ring-2 focus:ring-aurora-green/50 outline-none flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-lg">check</span>
+                Approve Application
+            </button>
+</div>
+</div>
+</body></html>

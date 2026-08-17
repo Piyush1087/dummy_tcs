@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campaign Brief Detail Sheet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "secondary-container": "#cbe4e9",
+                            "crimson-red": "#CA0F1C",
+                            "on-surface": "#181c1e",
+                            "on-error-container": "#93000a",
+                            "surface-container-low": "#f1f4f7",
+                            "on-tertiary-fixed-variant": "#783114",
+                            "on-secondary-fixed": "#061f23",
+                            "tertiary-fixed-dim": "#ffb59b",
+                            "on-tertiary-container": "#7d3418",
+                            "blossom-pink": "#FFF6F6",
+                            "pure-white": "#FFFFFF",
+                            "surface-variant": "#e0e3e5",
+                            "on-background": "#181c1e",
+                            "tertiary-container": "#ffa483",
+                            "midnight-black": "#061F23",
+                            "tertiary-fixed": "#ffdbcf",
+                            "surface-dim": "#d7dadd",
+                            "primary-container": "#34d399",
+                            "on-secondary-container": "#4f676b",
+                            "on-primary-fixed-variant": "#005137",
+                            "outline-variant": "#bbcac0",
+                            "surface-bright": "#f7fafc",
+                            "light-mint": "#F0FDF4",
+                            "on-tertiary": "#ffffff",
+                            "on-tertiary-fixed": "#380d00",
+                            "surface-tint": "#006c4b",
+                            "outline": "#6c7a71",
+                            "aurora-green": "#34D399",
+                            "inverse-primary": "#45dfa4",
+                            "on-surface-variant": "#3c4a42",
+                            "on-primary": "#ffffff",
+                            "forest-mint": "#005137",
+                            "off-white-canvas": "#F8F8F8",
+                            "tertiary": "#964729",
+                            "on-error": "#ffffff",
+                            "surface-container-highest": "#e0e3e5",
+                            "inverse-surface": "#2d3133",
+                            "error": "#ba1a1a",
+                            "error-container": "#ffdad6",
+                            "primary": "#006c4b",
+                            "secondary-fixed-dim": "#b2cbd0",
+                            "secondary": "#4b6267",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-container": "#ebeef1",
+                            "inverse-on-surface": "#eef1f4",
+                            "primary-fixed": "#68fcbf",
+                            "surface": "#f7fafc",
+                            "background": "#f7fafc",
+                            "on-primary-container": "#00563b",
+                            "carbon-black": "#0E1214",
+                            "secondary-fixed": "#cee7ec",
+                            "slate-gray": "#6B7280",
+                            "surface-container-high": "#e6e8eb",
+                            "primary-fixed-dim": "#45dfa4",
+                            "on-secondary-fixed-variant": "#334a4f",
+                            "on-primary-fixed": "#002114",
+                            "soft-gray-border": "#E5E7EB",
+                            "sunset-orange": "#F5926E",
+                            "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "sm": "16px",
+                            "header-desktop": "72px",
+                            "xs": "8px",
+                            "header-mobile": "56px",
+                            "sidebar-collapsed": "80px",
+                            "xl": "48px",
+                            "bottom-nav": "64px",
+                            "md": "24px",
+                            "sidebar-expanded": "240px",
+                            "lg": "32px"
+                    },
+                    "fontFamily": {
+                            "tab-nav": ["Satoshi", "sans-serif"],
+                            "input-text": ["\"Source Sans 3\"", "sans-serif"],
+                            "headline-h1-mobile": ["Satoshi", "sans-serif"],
+                            "body-base": ["\"Source Sans 3\"", "sans-serif"],
+                            "headline-h2-desktop": ["Satoshi", "sans-serif"],
+                            "body-bold": ["\"Source Sans 3\"", "sans-serif"],
+                            "label-ui": ["Satoshi", "sans-serif"],
+                            "eyebrow-caps": ["Satoshi", "sans-serif"],
+                            "caption": ["\"Source Sans 3\"", "sans-serif"],
+                            "headline-h2-mobile": ["Satoshi", "sans-serif"],
+                            "headline-h1-desktop": ["Satoshi", "sans-serif"]
+                    },
+                    "fontSize": {
+                            "tab-nav": ["16px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                            "input-text": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                            "headline-h1-mobile": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-base": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                            "headline-h2-desktop": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                            "body-bold": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                            "label-ui": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                            "eyebrow-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700"}],
+                            "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                            "headline-h2-mobile": ["20px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                            "headline-h1-desktop": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: #000; /* Dimmed background behind sheet */
+        }
+        h1, h2, h3, h4, h5, h6, .satoshi {
+            font-family: 'Satoshi', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex justify-center w-full">
+<!-- Dimmed Background Overlay -->
+<div class="fixed inset-0 bg-black/60 z-0"></div>
+<!-- Mobile Container Constraint (390x844) -->
+<div class="relative w-full max-w-[390px] h-screen max-h-[844px] bg-off-white-canvas overflow-hidden flex flex-col z-10 shadow-2xl rounded-t-xl mt-4 md:mt-12 mx-auto">
+<!-- Header -->
+<header class="bg-pure-white px-sm pt-sm pb-md border-b border-soft-gray-border flex-shrink-0 z-20">
+<!-- Top Nav Row -->
+<div class="flex justify-between items-center mb-md">
+<button class="flex items-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px] mr-xs">arrow_back</span>
+<span class="font-label-ui text-label-ui">Campaign Asset</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Header Content -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">CAMPAIGN BRIEF</span>
+<span class="bg-light-mint text-forest-mint font-caption text-caption px-2 py-0.5 rounded-[8px] border border-aurora-green/30">Active</span>
+</div>
+<h1 class="font-headline-h1-mobile text-headline-h1-mobile text-on-surface">UGC Testimonial Reel</h1>
+<p class="font-caption text-caption text-slate-gray mt-1">Summer Collection — Creator Seeding → Milky Ceramide Cleanser</p>
+</div>
+</header>
+<!-- Scrollable Content Canvas -->
+<main class="flex-grow overflow-y-auto pb-bottom-nav">
+<div class="flex flex-col">
+<!-- 1. Brief Overview -->
+<section class="p-sm md:p-md bg-pure-white border-b border-soft-gray-border">
+<div class="mb-sm">
+<h2 class="font-body-bold text-body-bold text-on-surface mb-xs">Content Theme</h2>
+<p class="font-body-base text-body-base text-slate-gray">Barrier-friendly morning cleansing routine</p>
+</div>
+<div class="mb-sm">
+<h2 class="font-body-bold text-body-bold text-on-surface mb-xs">Creative Direction</h2>
+<p class="font-body-base text-body-base text-slate-gray leading-relaxed">Show the cleanser as the first step of a simple morning routine. Keep the demonstration natural, educational and experience-led.</p>
+</div>
+<div class="mb-sm">
+<h2 class="font-body-bold text-body-bold text-on-surface mb-xs">Tone</h2>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 bg-surface-container-low border border-soft-gray-border rounded-full font-caption text-caption text-on-surface-variant">Clear</span>
+<span class="px-3 py-1 bg-surface-container-low border border-soft-gray-border rounded-full font-caption text-caption text-on-surface-variant">Reassuring</span>
+<span class="px-3 py-1 bg-surface-container-low border border-soft-gray-border rounded-full font-caption text-caption text-on-surface-variant">Authentic</span>
+</div>
+</div>
+<div class="mt-sm">
+<a class="inline-flex items-center text-primary font-label-ui text-label-ui hover:underline" href="#">
+                            View Campaign Asset <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 2. Deliverables -->
+<section class="p-sm md:p-md bg-pure-white border-b border-soft-gray-border">
+<h2 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase mb-sm tracking-wider">Deliverables</h2>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">movie</span>
+<div>
+<h3 class="font-body-bold text-body-bold text-on-surface">1 Instagram Reel</h3>
+<p class="font-caption text-caption text-slate-gray">Format 9:16 vertical — Duration 20–30 seconds</p>
+</div>
+</div>
+<div class="w-full h-px bg-soft-gray-border ml-8"></div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">amp_stories</span>
+<div>
+<h3 class="font-body-bold text-body-bold text-on-surface">2 Instagram Stories</h3>
+<p class="font-caption text-caption text-slate-gray">Format 9:16 vertical — Duration Up to 15 seconds each</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Content Requirements -->
+<section class="p-sm md:p-md bg-pure-white border-b border-soft-gray-border">
+<h2 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase mb-sm tracking-wider">Content Requirements</h2>
+<div class="mb-sm bg-light-mint/30 p-sm border border-aurora-green/20 rounded-lg">
+<h3 class="font-label-ui text-label-ui text-forest-mint mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> MUST INCLUDE
+                        </h3>
+<ul class="list-disc list-inside font-body-base text-body-base text-on-surface-variant space-y-1 ml-1">
+<li>Product shown clearly in use</li>
+<li>Mention ceramide complex</li>
+<li>Explain gentle, non-stripping cleansing</li>
+<li>End with a simple morning-routine recommendation</li>
+</ul>
+</div>
+<div class="bg-blossom-pink/30 p-sm border border-crimson-red/20 rounded-lg">
+<h3 class="font-label-ui text-label-ui text-crimson-red mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">cancel</span> AVOID
+                        </h3>
+<ul class="list-disc list-inside font-body-base text-body-base text-on-surface-variant space-y-1 ml-1">
+<li>Medical cure claims</li>
+<li>Dermatologist-approved claims unless separately authorized</li>
+</ul>
+</div>
+</section>
+<!-- 4. Timeline & Review -->
+<section class="p-sm md:p-md bg-pure-white border-b border-soft-gray-border">
+<h2 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase mb-sm tracking-wider">Timeline &amp; Review</h2>
+<div class="grid grid-cols-2 gap-y-4 gap-x-2">
+<div>
+<p class="font-caption text-caption text-slate-gray">Due</p>
+<p class="font-body-bold text-body-bold text-on-surface">10 Oct 2026</p>
+</div>
+<div>
+<p class="font-caption text-caption text-slate-gray">Review window</p>
+<p class="font-body-bold text-body-bold text-on-surface">2 business days</p>
+</div>
+<div>
+<p class="font-caption text-caption text-slate-gray">Publishing</p>
+<p class="font-body-bold text-body-bold text-on-surface">15 Sep – 15 Oct 2026</p>
+</div>
+<div>
+<p class="font-caption text-caption text-slate-gray">Revisions</p>
+<p class="font-body-bold text-body-bold text-on-surface">1 included</p>
+</div>
+</div>
+</section>
+<!-- 5. Usage & Attachments -->
+<section class="p-sm md:p-md bg-pure-white border-b border-soft-gray-border">
+<h2 class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase mb-sm tracking-wider">Usage &amp; Attachments</h2>
+<div class="flex flex-col gap-sm">
+<div class="flex justify-between items-center py-xs border-b border-soft-gray-border/50">
+<span class="font-body-base text-body-base text-slate-gray">Organic rights</span>
+<span class="font-body-bold text-body-bold text-on-surface">90 days</span>
+</div>
+<div class="flex justify-between items-center py-xs border-b border-soft-gray-border/50">
+<span class="font-body-base text-body-base text-slate-gray">Paid amplification</span>
+<span class="font-body-bold text-body-bold text-on-surface">Not included</span>
+</div>
+<div class="flex justify-between items-center py-xs border-b border-soft-gray-border/50">
+<span class="font-body-base text-body-base text-slate-gray">Exclusivity</span>
+<span class="font-body-bold text-body-bold text-on-surface">None</span>
+</div>
+<div class="mt-xs">
+<span class="font-caption text-caption text-slate-gray block mb-2">Attachments</span>
+<button class="w-full flex items-center justify-between p-3 border border-soft-gray-border rounded-lg bg-surface-container-lowest hover:bg-surface-variant transition-colors">
+<div class="flex items-center gap-2 overflow-hidden">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="font-body-base text-body-base text-on-surface truncate">Lumina Skin Creator Guidelines.pdf</span>
+</div>
+<span class="material-symbols-outlined text-slate-gray">download</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Extra padding for sticky footer -->
+<div class="h-24 bg-pure-white"></div>
+</div>
+</main>
+<!-- Sticky Footer -->
+<footer class="absolute bottom-0 w-full p-sm bg-pure-white border-t border-soft-gray-border z-30 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<button class="w-full h-xl flex items-center justify-center bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui rounded-lg hover:bg-surface-container-low transition-colors">
+                Close
+            </button>
+</footer>
+</div>
+</body></html>

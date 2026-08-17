@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>The Creator Shop - Campaign Header Mobile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Satoshi+Variable:wght@100..900&amp;family=Source+Sans+3:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#783114",
+                        "surface-dim": "#d7dadd",
+                        "surface-variant": "#e0e3e5",
+                        "crimson-red": "#CA0F1C",
+                        "primary-fixed": "#68fcbf",
+                        "surface-container-high": "#e6e8eb",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "midnight-black": "#061F23",
+                        "tertiary-container": "#ffa483",
+                        "primary-container": "#34d399",
+                        "inverse-primary": "#45dfa4",
+                        "soft-gray-border": "#E5E7EB",
+                        "outline-variant": "#bbcac0",
+                        "on-primary-fixed-variant": "#005137",
+                        "sunset-orange": "#F5926E",
+                        "secondary-fixed": "#cee7ec",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-fixed": "#002114",
+                        "secondary": "#4b6267",
+                        "aurora-green": "#34D399",
+                        "background": "#f7fafc",
+                        "on-tertiary-fixed": "#380d00",
+                        "surface-container": "#ebeef1",
+                        "primary-fixed-dim": "#45dfa4",
+                        "carbon-black": "#0E1214",
+                        "slate-gray": "#6B7280",
+                        "on-primary": "#ffffff",
+                        "off-white-canvas": "#F8F8F8",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary": "#006c4b",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#181c1e",
+                        "pure-white": "#FFFFFF",
+                        "surface-tint": "#006c4b",
+                        "inverse-surface": "#2d3133",
+                        "surface-bright": "#f7fafc",
+                        "blossom-pink": "#FFF6F6",
+                        "secondary-container": "#cbe4e9",
+                        "on-background": "#181c1e",
+                        "on-primary-container": "#00563b",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3c4a42",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7fafc",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#964729",
+                        "on-tertiary-container": "#7d3418",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "forest-mint": "#005137",
+                        "on-error": "#ffffff",
+                        "light-mint": "#F0FDF4",
+                        "surface-container-low": "#f1f4f7",
+                        "outline": "#6c7a71",
+                        "inverse-on-surface": "#eef1f4",
+                        "on-secondary-fixed": "#061f23",
+                        "on-secondary-container": "#4f676b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "header-desktop": "72px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "lg": "32px",
+                        "sidebar-collapsed": "80px",
+                        "sidebar-expanded": "240px",
+                        "xs": "8px",
+                        "xl": "48px",
+                        "bottom-nav": "64px",
+                        "header-mobile": "56px"
+                    },
+                    "fontFamily": {
+                        "headline-h2-mobile": ["Satoshi Variable"],
+                        "headline-h1-mobile": ["Satoshi Variable"],
+                        "caption": ["\"Source Sans 3\""],
+                        "headline-h2-desktop": ["Satoshi Variable"],
+                        "eyebrow-caps": ["Satoshi Variable"],
+                        "tab-nav": ["Satoshi Variable"],
+                        "headline-h1-desktop": ["Satoshi Variable"],
+                        "body-base": ["\"Source Sans 3\""],
+                        "label-ui": ["Satoshi Variable"],
+                        "body-bold": ["\"Source Sans 3\""],
+                        "input-text": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Mobile specific constraints */
+        body {
+            width: 390px;
+            height: 844px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #f7fafc; /* bg-background */
+        }
+        .scrollable-content {
+            height: calc(844px - 56px - 64px); /* Header and Bottom Nav */
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        /* Custom scrollbar for mobile feel if needed, usually hidden on actual devices */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-base text-on-surface bg-off-white-canvas flex flex-col relative">
+<!-- TopNavBar (Mobile Transform) -->
+<header class="h-header-mobile w-full bg-pure-white flex justify-between items-center px-sm sticky top-0 z-20 flex-shrink-0" style="box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+<div class="flex items-center gap-xs">
+<button class="p-2 -ml-2 text-primary focus:outline-none focus:ring-2 focus:ring-primary-container rounded-full opacity-80 active:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="font-headline-h2-mobile text-headline-h2-mobile font-bold text-on-surface">The Creator Shop</div>
+</div>
+<div class="flex items-center gap-xs">
+<button class="p-2 text-primary focus:outline-none focus:ring-2 focus:ring-primary-container rounded-full opacity-80 active:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<img alt="User Profile" class="w-8 h-8 rounded-full border border-soft-gray-border object-cover ml-1" data-alt="A small circular user profile picture featuring a professional headshot of a young professional in a modern, well-lit studio environment. High contrast lighting with a clean, light mode aesthetic, matching a corporate dashboard design. The subject is slightly smiling, conveying approachability and competence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTxaL-ZFic0TdtcAvBoOcNDYlAG0q0zYvFXU7ILn-MBh6HPDeCNeLLXnWW0WtkdA5To34AhZMWUFJt1LO5mvR8Gd0NpyS1g_lkLMv_ntNQgJcW9dACRvaqXsQ6e662ji1yaC3LUitbYgcTTekRgMqmTOitB2q2mO8R3m6glxmKa7QWQAoW1-7CSdq6zPBbCulm-QmkteKjf7FKlsyMBonxCEMolxKzsQOfLJXN9_nrWiJ5W7WOx68-El4mjSb-ZaV0eV1N4npAVPA"/>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="scrollable-content w-full flex-grow relative bg-off-white-canvas pb-md">
+<!-- Campaign Header Section -->
+<section class="bg-pure-white w-full px-md py-md flex flex-col gap-sm" style="box-shadow: 0 1px 2px rgba(0,0,0,0.05);"><!-- Breadcrumb -->
+<div class="flex items-center gap-2 text-slate-gray font-caption text-caption mb-1">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Campaigns</span>
+</div>
+<!-- (1) Name + Utilities -->
+<div class="flex justify-between items-start gap-4">
+<h1 class="font-headline-h2-mobile text-[20px] text-on-surface flex-1 line-clamp-2">Summer Collection — Creator Seeding</h1>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="w-10 h-10 bg-pure-white border border-soft-gray-border text-on-surface rounded-lg flex justify-center items-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">visibility</span>
+</button>
+<button class="w-10 h-10 bg-pure-white border border-soft-gray-border text-on-surface rounded-lg flex justify-center items-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">edit</span>
+</button>
+<button class="w-10 h-10 bg-pure-white border border-soft-gray-border text-on-surface rounded-lg flex justify-center items-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">share</span>
+</button>
+</div>
+</div>
+<!-- (2) Live/Ready/Pause -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2">
+<span class="bg-light-mint text-forest-mint px-2 py-1 rounded-lg font-caption text-caption border border-outline-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-aurora-green"></span>
+            Live
+        </span>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-1 rounded-lg font-caption text-caption border border-soft-gray-border">
+            Ready
+        </span>
+</div>
+<button class="h-[44px] px-4 bg-pure-white border border-soft-gray-border text-on-surface font-label-ui text-label-ui rounded-lg flex justify-center items-center gap-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">pause</span>
+        Pause
+    </button>
+</div>
+<!-- (3) Summary -->
+<p class="font-body-base text-body-base text-slate-gray leading-snug max-w-full line-clamp-2">
+    An Instagram awareness Campaign using skincare creator partnerships to grow reach and discovery among women aged 24–34 in Mumbai.
+</p>
+<!-- Divider -->
+<hr class="border-t border-soft-gray-border my-1"/>
+<!-- (4) Disclosure -->
+<div class="flex items-center justify-between p-2 -mx-2 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer active:bg-surface-container">
+<div class="flex flex-col gap-1">
+<div class="font-label-ui text-label-ui text-on-surface flex items-center gap-1">
+            Product / Campaign Asset
+            <span class="material-symbols-outlined text-[16px] text-slate-gray">arrow_forward</span>
+            Brief
+        </div>
+<div class="font-caption text-caption text-slate-gray flex items-center gap-2">
+<span>2 Products · 3 Briefs</span>
+<span class="w-1 h-1 rounded-full bg-slate-gray"></span>
+<span class="text-primary hover:underline">View Product setup</span>
+</div>
+</div>
+<button class="p-2 text-slate-gray rounded-full focus:outline-none hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined transition-transform duration-200" style="font-variation-settings: 'FILL' 0;">expand_more</span>
+</button>
+</div></section>
+<!-- Intentionally leaving bottom empty to simulate real app feel before scroll -->
+<div class="h-20"></div>
+</main>
+<!-- BottomNavBar (Mobile Transform) -->
+<nav class="h-bottom-nav w-full bg-pure-white flex justify-around items-center absolute bottom-0 z-30 flex-shrink-0" style="box-shadow: 0 -1px 3px rgba(0,0,0,0.05);">
+<!-- Inactive Tab -->
+<a class="flex flex-col items-center justify-center w-full h-full text-surface-variant hover:text-aurora-green transition-colors scale-95 duration-150 ease-in-out group" href="#">
+<div class="px-4 py-1 rounded-full group-hover:bg-surface-container-low transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">home</span>
+</div>
+<span class="font-caption text-[10px] mt-1 font-medium group-hover:text-aurora-green">Home</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex flex-col items-center justify-center w-full h-full text-surface-variant hover:text-aurora-green transition-colors scale-95 duration-150 ease-in-out group" href="#">
+<div class="px-4 py-1 rounded-full group-hover:bg-surface-container-low transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">storefront</span>
+</div>
+<span class="font-caption text-[10px] mt-1 font-medium group-hover:text-aurora-green">Brands</span>
+</a>
+<!-- Active Tab (Campaigns) -->
+<a class="flex flex-col items-center justify-center w-full h-full text-on-primary-fixed transition-colors scale-95 duration-150 ease-in-out" href="#">
+<div class="px-4 py-1 rounded-full bg-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px] text-on-primary-fixed" style="font-variation-settings: 'FILL' 1;">campaign</span>
+</div>
+<span class="font-caption text-[10px] mt-1 font-medium text-on-surface">Campaigns</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex flex-col items-center justify-center w-full h-full text-surface-variant hover:text-aurora-green transition-colors scale-95 duration-150 ease-in-out group" href="#">
+<div class="px-4 py-1 rounded-full group-hover:bg-surface-container-low transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">group</span>
+</div>
+<span class="font-caption text-[10px] mt-1 font-medium group-hover:text-aurora-green">Collabs</span>
+</a>
+</nav>
+<script>
+        // Simple JS for disclosure toggle interaction (visual only for mockup)
+        document.querySelector('.cursor-pointer').addEventListener('click', function() {
+            const icon = this.querySelector('button .material-symbols-outlined');
+            if(icon.innerText === 'expand_more') {
+                icon.innerText = 'expand_less';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.innerText = 'expand_more';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    </script>
+</body></html>

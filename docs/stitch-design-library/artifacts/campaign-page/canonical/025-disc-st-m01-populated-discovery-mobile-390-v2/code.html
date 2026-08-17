@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DISC-ST-M01 — Populated Discovery — Mobile 390 — v1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "off-white-canvas": "#F8F8F8",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline-variant": "#bbcac0",
+                    "inverse-on-surface": "#eef1f4",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d7dadd",
+                    "on-tertiary-container": "#7d3418",
+                    "tertiary-container": "#ffa483",
+                    "primary-fixed": "#68fcbf",
+                    "on-tertiary-fixed-variant": "#783114",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f7fafc",
+                    "secondary": "#4b6267",
+                    "surface-container-low": "#f1f4f7",
+                    "on-error": "#ffffff",
+                    "primary-container": "#34d399",
+                    "on-secondary-fixed-variant": "#334a4f",
+                    "on-primary-container": "#00563b",
+                    "error-container": "#ffdad6",
+                    "midnight-black": "#061F23",
+                    "secondary-container": "#cbe4e9",
+                    "primary": "#006c4b",
+                    "light-mint": "#F0FDF4",
+                    "background": "#f7fafc",
+                    "soft-gray-border": "#E5E7EB",
+                    "slate-gray": "#6B7280",
+                    "on-tertiary": "#ffffff",
+                    "blossom-pink": "#FFF6F6",
+                    "sunset-orange": "#F5926E",
+                    "forest-mint": "#005137",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#b2cbd0",
+                    "on-primary-fixed-variant": "#005137",
+                    "surface-tint": "#006c4b",
+                    "on-tertiary-fixed": "#380d00",
+                    "on-secondary-container": "#4f676b",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#ebeef1",
+                    "tertiary": "#964729",
+                    "secondary-fixed": "#cee7ec",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#6c7a71",
+                    "pure-white": "#FFFFFF",
+                    "on-surface": "#181c1e",
+                    "on-primary-fixed": "#002114",
+                    "crimson-red": "#CA0F1C",
+                    "primary-fixed-dim": "#45dfa4",
+                    "surface-container-high": "#e6e8eb",
+                    "surface": "#f7fafc",
+                    "on-background": "#181c1e",
+                    "on-secondary-fixed": "#061f23",
+                    "on-surface-variant": "#3c4a42",
+                    "aurora-green": "#34D399",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "inverse-primary": "#45dfa4",
+                    "surface-variant": "#e0e3e5",
+                    "carbon-black": "#0E1214"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "32px",
+                    "header-desktop": "72px",
+                    "sm": "16px",
+                    "sidebar-expanded": "240px",
+                    "bottom-nav": "64px",
+                    "sidebar-collapsed": "80px",
+                    "xl": "48px",
+                    "xs": "8px",
+                    "md": "24px",
+                    "header-mobile": "56px"
+            },
+            "fontFamily": {
+                    "input-text": [
+                            "\"Source Sans 3\""
+                    ],
+                    "headline-h1-desktop": [
+                            "Satoshi Variable"
+                    ],
+                    "tab-nav": [
+                            "Satoshi Variable"
+                    ],
+                    "headline-h2-desktop": [
+                            "Satoshi Variable"
+                    ],
+                    "eyebrow-caps": [
+                            "Satoshi Variable"
+                    ],
+                    "caption": [
+                            "\"Source Sans 3\""
+                    ],
+                    "body-bold": [
+                            "\"Source Sans 3\""
+                    ],
+                    "body-base": [
+                            "\"Source Sans 3\""
+                    ],
+                    "headline-h2-mobile": [
+                            "Satoshi Variable"
+                    ],
+                    "headline-h1-mobile": [
+                            "Satoshi Variable"
+                    ],
+                    "label-ui": [
+                            "Satoshi Variable"
+                    ]
+            },
+            "fontSize": {
+                    "input-text": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-h1-desktop": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "tab-nav": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-h2-desktop": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "eyebrow-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "caption": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-bold": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-base": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-h2-mobile": [
+                            "20px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-h1-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-ui": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
+        @font-face {
+            font-family: 'Satoshi Variable';
+            src: url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap');
+            font-weight: 400 900;
+            font-display: swap;
+            font-style: normal;
+        }
+        body {
+            /* Mobile constraint for demonstration */
+            max-width: 390px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F8F8F8; /* off-white-canvas */
+            min-height: 844px;
+        }
+        /* Hide scrollbar for workspace selector */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-off-white-canvas font-body-base text-on-surface flex flex-col h-screen overflow-hidden">
+<!-- Top Navigation Bar (Mobile Header) -->
+<header class="h-header-mobile w-full bg-pure-white flex justify-between items-center px-sm sticky top-0 z-20 border-b border-soft-gray-border flex-shrink-0">
+<button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="flex items-center gap-2">
+<img alt="The Creator Shop Logo" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLARbafk4OXq7cZ_vvWHnctsr0MF_zWHMnYrD4zPvu6SUIeW3EUIuf0t0zmaoKt_jMJCDowWiiaGA1aTyoWV9Hi8gHaLnVBKAXSIwniCzOx6ak15GJCNKMUBilvZsuJ4iaZFuTigJrld6PYfZqJDvwF97IfAqilHHprKrerLI1PiGqijRb2-5ZutDP1JhGgXxpZiOKBe3I31rYBrFn0zypsQtF-4jvcIXT46FF6vyVRkUQqeY85kwI6tvH_mE6pHapUSRZVqsFjjI"/>
+<span class="font-headline-h2-mobile text-headline-h2-mobile font-bold text-on-surface">Creator Shop</span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center text-slate-gray">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden border border-soft-gray-border ml-1 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A close up headshot portrait of a young professional woman with dark hair, soft natural lighting, a pure white background, wearing a modern dark blazer, sharp focus, corporate aesthetic, highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbnjPVvMd3R1uXl6b82R6VQa6Dowm_ku7hU3f7T-R8CKFuz2kNn4slRWYzgIig29AsZr-ZxwwSbOgsWdV5_q_eEhPp1xBV8V673kPIsiYP6tS30DyV8dfg6xgglPbD84XWcyEy1r5HzExuUSw5MWxuMBbSpo1ibixSedToaNzfIhJHCUqug2v26n1D62HnLf1WlqXKSRnypTrMu1_m8wT0E697F3dhv_8Ji5WlFezOghPrjvJcnQiw6cByWm6g0NGa3_Dc4TTOd2A"/>
+</div>
+</div>
+</header>
+<!-- Workspace Selector -->
+<div class="bg-pure-white w-full border-b border-soft-gray-border flex-shrink-0">
+<nav aria-label="Workspace Tabs" class="flex overflow-x-auto no-scrollbar px-sm">
+<button aria-current="page" class="px-4 py-3 font-tab-nav text-tab-nav text-primary font-bold border-b-2 border-primary whitespace-nowrap">Discovery</button>
+<button class="px-4 py-3 font-tab-nav text-tab-nav text-slate-gray hover:text-primary transition-colors whitespace-nowrap">Applicants (1)</button>
+<button class="px-4 py-3 font-tab-nav text-tab-nav text-slate-gray hover:text-primary transition-colors whitespace-nowrap">Collaborations</button>
+</nav>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto pb-bottom-nav">
+<div class="p-4 flex flex-col gap-4">
+<!-- Discovery Header Section -->
+<section class="flex flex-col gap-2">
+<div class="flex flex-col gap-1">
+<h1 class="font-headline-h1-mobile text-headline-h1-mobile text-on-surface">Discovery</h1>
+<div class="flex items-center gap-1 text-slate-gray">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-caption text-caption text-secondary">Meta connected</span>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 px-4 bg-pure-white border border-soft-gray-border rounded text-on-surface font-body-bold text-body-bold flex items-center justify-center hover:bg-surface-container-low transition-colors h-[44px]">
+                        Add Creator
+                    </button>
+<button class="flex-1 px-4 bg-primary-container text-on-primary-fixed rounded font-body-bold text-body-bold flex items-center justify-center hover:bg-primary-fixed-dim transition-colors h-[44px]">
+                        Discover Creators
+                    </button>
+</div>
+</section>
+<!-- Search & Filters -->
+<section class="flex flex-col gap-2">
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="w-full pl-10 pr-4 bg-pure-white border border-soft-gray-border rounded-lg font-input-text text-input-text text-on-surface focus:outline-none focus:border-aurora-green focus:ring-1 focus:ring-aurora-green transition-colors h-[48px]" placeholder="Search by creator name or Instagram handle" type="text"/>
+</div>
+<!-- Filters & Metadata -->
+<div class="flex justify-between items-center">
+<div class="flex gap-2">
+<button class="h-[36px] px-3 bg-pure-white border border-soft-gray-border rounded-full flex items-center gap-1 hover:bg-surface-container-low transition-colors">
+<span class="font-body-base text-body-base text-on-surface">Status: All</span>
+<span class="material-symbols-outlined text-[18px] text-slate-gray" style="font-variation-settings: 'FILL' 0;">arrow_drop_down</span>
+</button>
+<button class="h-[36px] px-3 bg-pure-white border border-soft-gray-border rounded-full flex items-center gap-1 hover:bg-surface-container-low transition-colors">
+<span class="font-body-base text-body-base text-on-surface">Source: All</span>
+<span class="material-symbols-outlined text-[18px] text-slate-gray" style="font-variation-settings: 'FILL' 0;">arrow_drop_down</span>
+</button>
+</div>
+<span class="font-caption text-caption text-slate-gray">4 creators</span>
+</div>
+</section>
+<!-- Creator Feed -->
+<section class="flex flex-col gap-4">
+<!-- Card 1: Marketplace -->
+<article class="bg-pure-white border border-soft-gray-border rounded-xl flex flex-col p-4 gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-soft-gray-border flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A candid profile photo of an elegant young woman outdoors, smiling brightly, natural sunlight, shallow depth of field blurred background, wearing a casual stylish white top, modern authentic influencer style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWww91gEzqZNBvyEHukqfjrSQN1uCCkl4SHOHVvA_g_5EeV0XuGtuKFus3rzcnbL1aHlCixDvhkIjAIjcDvqaKts5V1gR10d-gHha1ZKMAcJzV_k5hyZLxaRwxVLvs6_reBu7JjOEiemwz1l-OdhFDUkc7H-qYhIqz3rttzSIG0G_LAJ7xH14ORrQIjls_OE9qu37a7F6EJaAJe4KqIskMKT6YkBxkZD4f8fQv5orCoPaDrDhjeuzmfT3Gqy-WDk9XU55QNGs_zw"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Maya Kapoor</span>
+<span class="font-caption text-caption text-slate-gray">@mayaglow</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded text-secondary">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z"></path></svg>
+</div>
+<span class="px-2 py-1 bg-surface-container-lowest border border-soft-gray-border rounded text-secondary font-caption text-caption">Marketplace</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption text-slate-gray">Match Potential:</span>
+<span class="px-2 py-[2px] bg-light-mint text-forest-mint border border-primary-container rounded font-caption text-caption">High</span>
+</div>
+<p class="font-body-base text-body-base text-on-surface">Strong audience overlap with this Campaign’s target.</p>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<button class="flex-1 h-[44px] bg-primary-container text-on-primary-fixed rounded font-body-bold text-body-bold flex items-center justify-center hover:bg-primary-fixed-dim transition-colors">
+                            Send DM
+                        </button>
+<button class="flex-1 h-[44px] bg-pure-white border border-soft-gray-border text-on-surface rounded font-body-bold text-body-bold flex items-center justify-center hover:bg-surface-container-low transition-colors">
+                            View Profile
+                        </button>
+<button aria-label="More options" class="w-[44px] h-[44px] bg-pure-white border border-soft-gray-border text-slate-gray rounded flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">more_horiz</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Manual -->
+<article class="bg-pure-white border border-soft-gray-border rounded-xl flex flex-col p-4 gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-secondary font-headline-h2-mobile text-headline-h2-mobile">
+                                AR
+                            </div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Anika Rao</span>
+<span class="font-caption text-caption text-slate-gray">@anikarao</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded text-secondary">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z"></path></svg>
+</div>
+<span class="px-2 py-1 bg-surface-container-lowest border border-soft-gray-border rounded text-secondary font-caption text-caption">Manual</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-body-base text-body-base text-slate-gray italic">Creator intelligence pending</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<button class="flex-1 h-[44px] bg-primary-container text-on-primary-fixed rounded font-body-bold text-body-bold flex items-center justify-center hover:bg-primary-fixed-dim transition-colors">
+                            Send Email
+                        </button>
+<button class="flex-1 h-[44px] bg-pure-white border border-soft-gray-border text-on-surface rounded font-body-bold text-body-bold flex items-center justify-center hover:bg-surface-container-low transition-colors">
+                            View Profile
+                        </button>
+<button aria-label="More options" class="w-[44px] h-[44px] bg-pure-white border border-soft-gray-border text-slate-gray rounded flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">more_horiz</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Marketplace (Below fold visual representation) -->
+<article class="bg-pure-white border border-soft-gray-border rounded-xl flex flex-col opacity-90 p-4 gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-soft-gray-border flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A bright studio portrait of a woman with curly hair, soft pastel lighting background, looking directly at the camera, highly professional yet approachable influencer aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASY369XNt1eXfDvQPaxRb6vgdfo9oWv0kxClxrSbzyMdcAvpcNpQMh311M9THRvmfmS3i1PQO3rEK-6DrJwLL4BgDMIlo599QMwjy7d6yV0DiVyRLRZZGFllAsAYtQFuaZgawhd7C80_9jIeQOQlsYVkvLJKb_0vU3fvUhqH9lpDGJWTJKuQS1DKes4jIfC1jgTdcVEXrnO14lpUo3onvWDkYJhGDhy4wnFQRZQFc6ipuYdouYHPLilaJGnrFrxTgmoW-YEy2dcp0"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Rhea Shah</span>
+<span class="font-caption text-caption text-slate-gray">@rheashah_</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-1 bg-surface-container-lowest border border-soft-gray-border rounded text-secondary font-caption text-caption">Marketplace</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption text-slate-gray">Match Potential:</span>
+<span class="px-2 py-[2px] bg-surface-container text-secondary border border-soft-gray-border rounded font-caption text-caption">Medium</span>
+</div>
+</article>
+<!-- Card 4: CSV (Below fold visual representation) -->
+<article class="bg-pure-white border border-soft-gray-border rounded-xl flex flex-col opacity-80 p-4 gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-soft-gray-border flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A dramatic moody portrait of a female creator, high contrast lighting with deep shadows, dark modern aesthetic, looking away from camera, corporate creative style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ6O-HZYgfY3sCAFO_ZyjYfnG2tGK1kA0Da2kZC3yXDm78-5xZfRM0uu9iKX60XTKXUBqbrs9-a2o85qTHF5ag4ujbDETcwwfZkc_uQayvrtNO5I_Y67FEY5uAFOtQ9uJ5a9IDFHfqJ0T1aZTbCZnsFK_LO234NdIhnEvYxhV96MrTfsmcx36zxEXszVO8qPpPtmP46msbl6vF_7g9nvKqHlAC44zZWgxhmxZI_pPtF8NXXEXPULxihjPAC5OS4DPm1Sbo6BDIpIc"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Tara Mehta</span>
+<span class="font-caption text-caption text-slate-gray">@taram_creates</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-1 bg-surface-container-lowest border border-soft-gray-border rounded text-secondary font-caption text-caption">CSV</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption text-slate-gray">Match Potential:</span>
+<span class="px-2 py-[2px] bg-blossom-pink text-sunset-orange border border-error-container rounded font-caption text-caption">Low</span>
+</div>
+</article>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile Shell) -->
+<nav class="fixed bottom-0 w-full h-bottom-nav bg-pure-white flex justify-around items-center border-t border-soft-gray-border z-20 pb-safe">
+<a class="flex flex-col items-center justify-center w-16 h-full text-slate-gray hover:text-aurora-green transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-caption text-[10px] leading-none">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-16 h-full text-slate-gray hover:text-aurora-green transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">storefront</span>
+<span class="font-caption text-[10px] leading-none">Brands</span>
+</a>
+<a class="flex flex-col items-center justify-center w-16 h-full text-primary font-bold" href="#">
+<div class="bg-primary-container text-on-primary-fixed rounded-xl px-4 py-1 mb-1 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+</div>
+<span class="font-caption text-[10px] leading-none">Campaigns</span>
+</a>
+<a class="flex flex-col items-center justify-center w-16 h-full text-slate-gray hover:text-aurora-green transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">group</span>
+<span class="font-caption text-[10px] leading-none">Collabs</span>
+</a>
+</nav>
+<!-- Safe area padding for newer iPhones -->
+<style>
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</body></html>

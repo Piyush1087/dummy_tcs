@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creator Shop - Link Campaign Asset</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#68fcbf",
+                        "primary": "#006c4b",
+                        "outline": "#6c7a71",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-container": "#00563b",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#34d399",
+                        "surface-container-highest": "#e0e3e5",
+                        "midnight-black": "#061F23",
+                        "on-secondary-container": "#4f676b",
+                        "background": "#f7fafc",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002114",
+                        "tertiary": "#964729",
+                        "soft-gray-border": "#E5E7EB",
+                        "tertiary-container": "#ffa483",
+                        "on-surface-variant": "#3c4a42",
+                        "secondary": "#4b6267",
+                        "surface-container-low": "#f1f4f7",
+                        "primary-fixed-dim": "#45dfa4",
+                        "surface-container-lowest": "#ffffff",
+                        "off-white-canvas": "#F8F8F8",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "carbon-black": "#0E1214",
+                        "on-primary-fixed-variant": "#005137",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-dim": "#d7dadd",
+                        "outline-variant": "#bbcac0",
+                        "on-secondary": "#ffffff",
+                        "forest-mint": "#005137",
+                        "on-background": "#181c1e",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "inverse-surface": "#2d3133",
+                        "slate-gray": "#6B7280",
+                        "surface-container": "#ebeef1",
+                        "on-tertiary-fixed": "#380d00",
+                        "blossom-pink": "#FFF6F6",
+                        "pure-white": "#FFFFFF",
+                        "surface-tint": "#006c4b",
+                        "secondary-container": "#cbe4e9",
+                        "error": "#ba1a1a",
+                        "crimson-red": "#CA0F1C",
+                        "surface-container-high": "#e6e8eb",
+                        "light-mint": "#F0FDF4",
+                        "on-error": "#ffffff",
+                        "sunset-orange": "#F5926E",
+                        "surface-bright": "#f7fafc",
+                        "inverse-primary": "#45dfa4",
+                        "surface": "#f7fafc",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eef1f4",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "aurora-green": "#34D399",
+                        "on-secondary-fixed": "#061f23",
+                        "on-tertiary-container": "#7d3418",
+                        "secondary-fixed": "#cee7ec",
+                        "on-surface": "#181c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "header-mobile": "56px",
+                        "sm": "16px",
+                        "bottom-nav": "64px",
+                        "sidebar-expanded": "240px",
+                        "sidebar-collapsed": "80px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "lg": "32px",
+                        "xl": "48px",
+                        "header-desktop": "72px"
+                    },
+                    "fontFamily": {
+                        "tab-nav": ["Satoshi Variable", "sans-serif"],
+                        "body-base": ["\"Source Sans 3\"", "sans-serif"],
+                        "label-ui": ["Satoshi Variable", "sans-serif"],
+                        "headline-h2-mobile": ["Satoshi Variable", "sans-serif"],
+                        "body-bold": ["\"Source Sans 3\"", "sans-serif"],
+                        "headline-h1-desktop": ["Satoshi Variable", "sans-serif"],
+                        "input-text": ["\"Source Sans 3\"", "sans-serif"],
+                        "eyebrow-caps": ["Satoshi Variable", "sans-serif"],
+                        "headline-h2-desktop": ["Satoshi Variable", "sans-serif"],
+                        "headline-h1-mobile": ["Satoshi Variable", "sans-serif"],
+                        "caption": ["\"Source Sans 3\"", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&display=swap');
+        @font-face {
+            font-family: 'Satoshi Variable';
+            src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KQU/7QKERVWQONI3ChC4XQ4YQ4W6Z4K5W5O5/PTIT5Q4O4Y5W6Z4K5W5O5.woff2') format('woff2');
+            font-weight: 300 900;
+            font-display: swap;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-off-white-canvas text-on-surface font-body-base h-screen overflow-hidden flex selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- Sidebar Navigation Shell -->
+<nav class="w-sidebar-expanded min-h-screen flex flex-col border-r border-outline-variant bg-midnight-black dark:bg-carbon-black flex-shrink-0 z-50">
+<div class="h-header-desktop flex items-center px-md">
+<span class="material-symbols-outlined text-aurora-green text-3xl mr-xs" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<div class="flex flex-col">
+<span class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green">Creator Shop</span>
+</div>
+</div>
+<div class="flex-1 py-md flex flex-col gap-xs overflow-y-auto">
+<a class="bg-primary-container text-on-primary-fixed rounded-xl mx-2 my-1 flex items-center px-sm py-3 font-label-ui text-label-ui transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+                Home
+            </a>
+<a class="text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors rounded-xl mx-2 my-1 flex items-center px-sm py-3 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined mr-3 text-xl" data-icon="storefront">storefront</span>
+                Brands
+            </a>
+<a class="text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors rounded-xl mx-2 my-1 flex items-center px-sm py-3 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined mr-3 text-xl" data-icon="campaign">campaign</span>
+                Campaigns
+            </a>
+<a class="text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors rounded-xl mx-2 my-1 flex items-center px-sm py-3 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined mr-3 text-xl" data-icon="group">group</span>
+                Collabs
+            </a>
+</div>
+<div class="pb-md pt-xs border-t border-on-secondary-fixed-variant flex flex-col gap-xs">
+<a class="text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors rounded-xl mx-2 my-1 flex items-center px-sm py-3 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined mr-3 text-xl" data-icon="payments">payments</span>
+                Earnings
+            </a>
+<a class="text-surface-variant hover:text-aurora-green hover:bg-on-secondary-fixed-variant transition-colors rounded-xl mx-2 my-1 flex items-center px-sm py-3 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined mr-3 text-xl" data-icon="settings">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col h-screen relative">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center px-md sticky top-0 z-20 w-full h-header-desktop bg-pure-white dark:bg-surface-container-lowest border-b border-soft-gray-border flex-shrink-0">
+<div class="flex items-center gap-sm">
+<span class="font-body-bold text-body-bold text-on-surface">Home</span>
+<span class="material-symbols-outlined text-slate-gray text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="font-body-base text-body-base text-slate-gray">Dashboard</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="bg-primary-container text-on-primary-fixed font-label-ui text-label-ui px-6 py-2 rounded-lg hover:bg-primary-fixed transition-colors h-10 flex items-center justify-center">
+                    Upgrade
+                </button>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-80 active:opacity-100 flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-xl" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-soft-gray-border cursor-pointer">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A small, professional headshot of a smiling young adult creator with short dark hair, wearing a casual but neat t-shirt against a clean, well-lit light gray background, suitable for a professional dashboard profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt71u74nMDyElb2OwLPDCi3kEWKYJXFlUkc6oGYd9JbEXCCSDl-3T8FEt_PwT6-U8tLerT9QlRtCzOH8kFcjM6ZT8isp_Y3R6dEgCCPUD8USuICXGt6Ygsa7pMiJm2yuPP58BdPdePzcz1YZSb4JHRkXD1V3uIq56mDwVJO1NrxCSzFVW8rH0LXzoHjPy5MmNBC6mAVmQOfBc2yLxrJcGVmNH2zTbfDPBQkta1N7qKNzbyGpWCIHDh39HrOZc6otlT9PXxec27r9k"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Canvas (Background Context) -->
+<main class="flex-1 overflow-y-auto p-md lg:p-lg z-0 relative">
+<div class="max-w-7xl mx-auto space-y-lg">
+<!-- Welcome Card -->
+<div class="bg-pure-white rounded-xl border border-soft-gray-border p-xl">
+<h1 class="font-headline-h1-desktop text-headline-h1-desktop text-on-surface mb-sm">Welcome back, Creative.</h1>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-2xl">Your brand partnerships are flourishing. You have 3 new campaign invitations waiting for your review.</p>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-light-mint rounded-xl border border-aurora-green p-md flex flex-col justify-between h-40">
+<span class="material-symbols-outlined text-forest-mint text-2xl" data-icon="trending_up">trending_up</span>
+<div>
+<p class="font-body-bold text-body-bold text-forest-mint mb-1">Total Earnings</p>
+<p class="font-headline-h2-desktop text-headline-h2-desktop text-on-primary-fixed">$12,450.00</p>
+</div>
+</div>
+<div class="bg-pure-white rounded-xl border border-soft-gray-border p-md flex flex-col justify-between h-40">
+<span class="material-symbols-outlined text-tertiary text-2xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<div>
+<p class="font-body-bold text-body-bold text-on-surface-variant mb-1">Active Campaigns</p>
+<p class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface">14</p>
+</div>
+</div>
+</div>
+<!-- Milestones Card -->
+<div class="bg-midnight-black rounded-xl p-md lg:p-xl flex flex-col">
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-aurora-green mb-md">Upcoming Milestones</h2>
+<div class="space-y-sm flex-1">
+<div class="flex items-start gap-md p-sm rounded-lg hover:bg-carbon-black transition-colors">
+<div class="w-12 h-12 rounded-lg bg-on-secondary-fixed-variant flex items-center justify-center flex-shrink-0 text-aurora-green">
+<span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-pure-white mb-1">Video Delivery</p>
+<p class="font-caption text-caption text-secondary-fixed-dim">TechX Review - Due in 2 days</p>
+</div>
+</div>
+<div class="flex items-start gap-md p-sm rounded-lg hover:bg-carbon-black transition-colors">
+<div class="w-12 h-12 rounded-lg bg-on-secondary-fixed-variant flex items-center justify-center flex-shrink-0 text-aurora-green">
+<span class="material-symbols-outlined" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-pure-white mb-1">Contract Signed</p>
+<p class="font-caption text-caption text-secondary-fixed-dim">Lumina Glow Summer Campaign</p>
+</div>
+</div>
+</div>
+<button class="mt-xl w-full bg-transparent border border-aurora-green text-aurora-green font-label-ui text-label-ui h-12 rounded-lg hover:bg-aurora-green hover:bg-opacity-10 transition-colors flex items-center justify-center">
+                        View Full Schedule
+                    </button>
+</div>
+</div>
+</main>
+<!-- Drawer Backdrop -->
+<div class="absolute inset-0 bg-midnight-black bg-opacity-50 z-30 transition-opacity"></div>
+<!-- Right Side Drawer -->
+<aside class="absolute top-0 right-0 h-full w-full max-w-[520px] bg-pure-white shadow-2xl z-40 flex flex-col transform transition-transform border-l border-soft-gray-border overflow-hidden">
+<!-- Drawer Header -->
+<div class="px-md py-lg border-b border-soft-gray-border bg-pure-white flex-shrink-0 relative">
+<button aria-label="Close drawer" class="absolute top-md right-md text-slate-gray hover:text-on-surface transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary-container">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<p class="font-eyebrow-caps text-eyebrow-caps text-primary uppercase tracking-widest mb-2">Campaign Asset</p>
+<h2 class="font-headline-h2-desktop text-headline-h2-desktop text-on-surface mb-2">Link Campaign Asset</h2>
+<p class="font-body-base text-body-base text-on-surface-variant mb-4">Choose an existing Brand Centre entity to use in this Campaign.</p>
+<div class="flex items-center gap-2 text-slate-gray bg-surface-container-low px-3 py-2 rounded-lg inline-flex">
+<span class="material-symbols-outlined text-sm" data-icon="campaign">campaign</span>
+<span class="font-caption text-caption">Campaign: Summer Collection — Creator Seeding</span>
+</div><div class="flex border-b border-soft-gray-border mt-4 -mx-md px-md">
+<button class="px-4 py-2 border-b-2 border-aurora-green text-primary font-label-ui text-label-ui">Brand</button>
+<button class="px-4 py-2 text-slate-gray font-label-ui text-label-ui hover:text-on-surface transition-colors">Product</button>
+<button class="px-4 py-2 text-slate-gray font-label-ui text-label-ui hover:text-on-surface transition-colors">Collection</button>
+<button class="px-4 py-2 text-slate-gray font-label-ui text-label-ui hover:text-on-surface transition-colors">Offer</button>
+</div>
+</div>
+<!-- Drawer Body -->
+<div class="flex-1 overflow-y-auto p-md space-y-xl bg-off-white-canvas"><!-- Brand Identity Section -->
+<section class="space-y-md">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase tracking-widest">Current Brand Centre Brand</span>
+<a class="font-label-ui text-label-ui text-primary hover:text-forest-mint transition-colors inline-flex items-center gap-1 group" href="#">
+      View in Brand Centre
+      <span class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="bg-pure-white border border-soft-gray-border rounded-xl p-4 flex gap-4 shadow-sm">
+<div class="w-16 h-16 rounded-lg bg-midnight-black flex items-center justify-center flex-shrink-0 overflow-hidden">
+<span class="material-symbols-outlined text-aurora-green text-3xl">flare</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline-h2-mobile text-headline-h2-mobile text-on-surface mb-0.5">Lumina Skin</h4>
+<p class="font-body-base text-body-base text-on-surface-variant">D2C Skincare · India</p>
+<div class="flex items-center gap-1 mt-1 text-primary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="font-caption text-caption">luminaskin.example</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Positioning Section -->
+<section class="pt-md border-t border-outline-variant space-y-sm">
+<h3 class="font-label-ui text-label-ui text-on-surface">Brand Positioning</h3>
+<div class="space-y-3">
+<div>
+<p class="font-caption text-caption text-slate-gray uppercase tracking-wider mb-1">Description</p>
+<p class="font-body-base text-body-base text-on-surface-variant">Barrier-supporting skincare designed for simple, gentle daily routines.</p>
+</div>
+<div>
+<p class="font-caption text-caption text-slate-gray uppercase tracking-wider mb-1">Core Positioning</p>
+<p class="font-body-base text-body-base text-on-surface-variant">Accessible science-led skincare for sensitive and barrier-compromised skin.</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-3 py-1 bg-light-mint border border-aurora-green rounded-full font-caption text-caption text-forest-mint">Clear</span>
+<span class="px-3 py-1 bg-light-mint border border-aurora-green rounded-full font-caption text-caption text-forest-mint">Reassuring</span>
+<span class="px-3 py-1 bg-light-mint border border-aurora-green rounded-full font-caption text-caption text-forest-mint">Evidence-aware</span>
+</div>
+</div>
+</section>
+<!-- Creator Guidance Section -->
+<section class="pt-md border-t border-outline-variant space-y-sm">
+<h3 class="font-label-ui text-label-ui text-on-surface">Creator Guidance</h3>
+<div class="space-y-4">
+<div class="bg-light-mint border border-aurora-green rounded-lg p-4">
+<p class="font-label-ui text-label-ui text-forest-mint flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+        Approved Guidance
+      </p>
+<ul class="list-disc list-inside font-body-base text-body-base text-on-surface-variant space-y-1">
+<li>Emphasize simple routines and barrier support.</li>
+<li>Use measured, educational language.</li>
+</ul>
+</div>
+<div class="bg-blossom-pink border border-error-container rounded-lg p-4">
+<p class="font-label-ui text-label-ui text-error flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm">warning</span>
+        Statements to avoid
+      </p>
+<ul class="list-disc list-inside font-body-base text-body-base text-on-surface-variant space-y-1">
+<li>Do not make medical cure claims.</li>
+<li>Do not claim clinical or dermatologist approval unless supplied by Brand Centre.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Read-only Notice -->
+<div class="flex items-start gap-3 bg-surface-container-low p-4 rounded-lg border border-soft-gray-border">
+<span class="material-symbols-outlined text-slate-gray text-xl flex-shrink-0 mt-0.5">info</span>
+<p class="font-caption text-caption text-on-surface-variant">Brand information is managed in Brand Centre and is read-only here.</p>
+</div></div>
+<!-- Fixed Footer -->
+<div class="px-md py-md border-t border-soft-gray-border bg-pure-white flex items-center justify-end gap-sm flex-shrink-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-20"><button class="font-label-ui text-label-ui text-on-surface bg-pure-white border border-soft-gray-border px-6 py-2 rounded-lg h-12 hover:bg-surface-container-low transition-colors">
+    Cancel
+</button>
+<button class="font-label-ui text-label-ui text-on-primary-fixed bg-primary-container px-6 py-2 rounded-lg h-12 hover:bg-primary-fixed transition-colors">
+    Link Campaign Asset
+</button></div>
+</aside>
+</div>
+</body></html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COLL-ST-M01 — Operational Collaborations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Satoshi+Variable:wght@100..900&family=Source+Sans+3:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#ebeef1",
+                        "on-primary-fixed-variant": "#005137",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-container": "#ffa483",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#380d00",
+                        "forest-mint": "#005137",
+                        "midnight-black": "#061F23",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#00563b",
+                        "inverse-primary": "#45dfa4",
+                        "surface-container-high": "#e6e8eb",
+                        "pure-white": "#FFFFFF",
+                        "inverse-on-surface": "#eef1f4",
+                        "primary": "#006c4b",
+                        "light-mint": "#F0FDF4",
+                        "aurora-green": "#34D399",
+                        "surface-dim": "#d7dadd",
+                        "surface-bright": "#f7fafc",
+                        "outline-variant": "#bbcac0",
+                        "error-container": "#ffdad6",
+                        "slate-gray": "#6B7280",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f1f4f7",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-tint": "#006c4b",
+                        "on-surface-variant": "#3c4a42",
+                        "on-secondary-fixed": "#061f23",
+                        "surface": "#f7fafc",
+                        "on-primary-fixed": "#002114",
+                        "on-surface": "#181c1e",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "blossom-pink": "#FFF6F6",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#4b6267",
+                        "on-secondary-container": "#4f676b",
+                        "primary-fixed": "#68fcbf",
+                        "on-tertiary-container": "#7d3418",
+                        "secondary-container": "#cbe4e9",
+                        "primary-fixed-dim": "#45dfa4",
+                        "on-background": "#181c1e",
+                        "on-secondary": "#ffffff",
+                        "soft-gray-border": "#E5E7EB",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "off-white-canvas": "#F8F8F8",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "sunset-orange": "#F5926E",
+                        "secondary-fixed": "#cee7ec",
+                        "tertiary": "#964729",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-tertiary": "#ffffff",
+                        "carbon-black": "#0E1214",
+                        "crimson-red": "#CA0F1C",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "primary-container": "#34d399",
+                        "background": "#f7fafc",
+                        "outline": "#6c7a71"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sidebar-collapsed": "80px",
+                        "bottom-nav": "64px",
+                        "md": "24px",
+                        "lg": "32px",
+                        "sm": "16px",
+                        "header-desktop": "72px",
+                        "sidebar-expanded": "240px",
+                        "header-mobile": "56px",
+                        "xs": "8px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "input-text": ["\"Source Sans 3\""],
+                        "headline-h2-mobile": ["Satoshi Variable"],
+                        "body-base": ["\"Source Sans 3\""],
+                        "label-ui": ["Satoshi Variable"],
+                        "headline-h2-desktop": ["Satoshi Variable"],
+                        "body-bold": ["\"Source Sans 3\""],
+                        "tab-nav": ["Satoshi Variable"],
+                        "eyebrow-caps": ["Satoshi Variable"],
+                        "headline-h1-mobile": ["Satoshi Variable"],
+                        "headline-h1-desktop": ["Satoshi Variable"],
+                        "caption": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "input-text": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-h2-desktop": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "tab-nav": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "eyebrow-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "headline-h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-h1-desktop": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Source Sans 3', sans-serif; }
+        .satoshi { font-family: 'Satoshi Variable', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-off-white-canvas h-full flex flex-col text-on-surface md:hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-[200] bg-midnight-black dark:bg-carbon-black flex items-center justify-between px-sm h-header-mobile border-b border-soft-gray-border">
+<button class="w-[44px] h-[44px] flex items-center justify-center text-aurora-green hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-h2-mobile text-headline-h2-mobile font-bold text-pure-white truncate">The Creator Shop</h1>
+<button class="w-[44px] h-[44px] flex items-center justify-center hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-soft-gray-border">
+<img alt="Profile Photo" class="object-cover w-full h-full" data-alt="A small circular avatar placeholder image showing a generic profile silhouette in a modern minimal style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzfSKz31oTqlF9_A9CSrrxJlP9DrOP03O7-wEXdvXk_8_SgeMfclSZEEpxtiRjLFBqAai1je5ahluK2dVgyVqSMOm2E6GoWBn48J28ItSgytLnoM-UPMB8VkihfQ9g9rqNOdq_qvhY_E2MrMwPlJ3SxDJGjpxnBRqDpuRsR6zKCXgrCsS7rs6v8BQsLggwvVpOP3iuppA2tVnwxQYlTcHz-N56fyM7MqD2uc7p0l1Xt0S5Eg7Ip4SJC2k_CN46WeGW6WFkOZn40wM"/>
+</div>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 mt-header-mobile mb-bottom-nav overflow-y-auto w-full max-w-md mx-auto relative flex flex-col">
+<!-- Workspace Navigation Tabs -->
+<div class="bg-pure-white border-b border-soft-gray-border sticky top-0 z-[150]">
+<div class="flex">
+<button class="flex-1 py-3 text-center text-slate-gray font-tab-nav text-tab-nav hover:bg-surface-container-low transition-colors">Discovery</button>
+<button class="flex-1 py-3 text-center text-slate-gray font-tab-nav text-tab-nav hover:bg-surface-container-low transition-colors">Applicants</button>
+<button class="flex-1 py-3 text-center text-primary border-b-2 border-primary font-tab-nav text-tab-nav relative">Collaborations</button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-6">
+<!-- Content Header -->
+<section class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline-h1-mobile text-headline-h1-mobile text-on-surface">Collaborations</h2>
+<p class="font-body-base text-body-base text-slate-gray mt-1">Track creator work connected to this Campaign.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mt-3 flex items-center justify-between border border-soft-gray-border">
+<span class="font-body-bold text-body-bold text-on-surface">12 active</span>
+<div class="flex items-center gap-1.5 text-sunset-orange">
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">error</span>
+<span class="font-body-bold text-body-bold">3 need your action</span>
+</div>
+</div>
+</section>
+<!-- Toolbar -->
+<section class="flex flex-col gap-3">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray">search</span>
+<input class="w-full h-[48px] pl-10 pr-4 rounded-lg border border-soft-gray-border focus:border-aurora-green focus:ring-1 focus:ring-aurora-green font-input-text text-input-text bg-pure-white" placeholder="Search by creator name or handle" type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-[44px] flex items-center justify-center gap-2 bg-pure-white border border-soft-gray-border rounded-lg text-on-surface font-body-bold text-body-bold hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filters
+                    </button>
+<button class="flex-1 h-[44px] flex items-center justify-center gap-2 bg-pure-white border border-soft-gray-border rounded-lg text-on-surface font-body-bold text-body-bold hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+                        Sort
+                    </button>
+</div>
+</section>
+<!-- Collaboration Cards List -->
+<section class="flex flex-col gap-4 pb-4">
+<!-- Card 1 -->
+<article class="bg-pure-white border border-soft-gray-border rounded-[12px] p-md flex flex-col gap-4 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait shot of a young professional creator against a bright background, modern minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw2MFaNRkdWSh7mSBEcx7100PypWWtOsQhdaJ9eKd8SAMVXW5VnhpMKybbdbNv6pxCoDbqowHZ0uNvABB3UMA4SAMZx3yyYwpkvYCDW1WEwvKqtFylTOOiBoxZ_HauXny2d7wbgRZZB_v-T4JFyakEW-AaOkzbzQCAU9L_IdbXR7czsIdMOv7dTkyk6amYFBgz71xCpCyUNfPo-HGpcBwmq-bhzqC9QnQx-0lH41I-7_T_nvog1gyb8oKhLTZZtVCXbmXcOWkNYbI"/>
+</div>
+<div>
+<h3 class="font-body-bold text-body-bold text-on-surface">Priya Sharma</h3>
+<p class="font-caption text-caption text-slate-gray">@priyasharma</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-low text-on-surface-variant font-caption text-caption rounded">Production</span>
+</div>
+<div class="grid grid-cols-2 gap-y-3">
+<div class="flex flex-col">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Time in stage</span>
+<span class="font-body-base text-body-base text-on-surface">3d</span>
+</div>
+<div class="flex flex-col col-span-2 bg-blossom-pink p-2 rounded-lg border border-error-container">
+<span class="font-eyebrow-caps text-eyebrow-caps text-sunset-orange uppercase flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">warning</span> Action status</span>
+<span class="font-body-bold text-body-bold text-crimson-red">Review submitted content</span>
+</div>
+<div class="flex flex-col col-span-2">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Latest activity</span>
+<span class="font-body-base text-body-base text-on-surface">Reel 1 submitted · <span class="text-slate-gray text-xs">2h ago</span></span>
+</div>
+</div>
+<button class="w-full h-[44px] flex items-center justify-center text-primary font-body-bold text-body-bold border border-soft-gray-border rounded-lg mt-2 hover:bg-surface-container-low transition-colors">
+                        Open collaboration →
+                    </button>
+</article>
+<!-- Card 2 -->
+<article class="bg-pure-white border border-soft-gray-border rounded-[12px] p-md flex flex-col gap-4 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait shot of a creative professional in a well-lit studio environment, modern minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXz6NenyBR8LO9teCXt_aQPUrmjO9cm4NsdFZQhF_0W9KwddbkU-XXCe8CD6IUFaXEx42gAesMKwAeYyPNltE-y6qKUiI6tXI_NG-uY8dM4VFyI2aoyUnfuqSpd6IEJKBlm0vB_TYsK9kb-6MVmLR4ds-_4ySJUjSZYFPLyVql9JvXDlQKXmk0CN6XoDMboN5B_Q0bQQNpHZYstqMZvrl98qUab99fhlVRHEdtKoXqxhq6ehROL8vT_4BYivlV311xwcBXdRmeAyE"/>
+</div>
+<div>
+<h3 class="font-body-bold text-body-bold text-on-surface">Neha Rao</h3>
+<p class="font-caption text-caption text-slate-gray">@neharao</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-low text-on-surface-variant font-caption text-caption rounded">Fulfillment</span>
+</div>
+<div class="grid grid-cols-2 gap-y-3">
+<div class="flex flex-col">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Time in stage</span>
+<span class="font-body-base text-body-base text-on-surface">1d</span>
+</div>
+<div class="flex flex-col col-span-2 p-2 rounded-lg bg-surface-bright border border-soft-gray-border">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">check_circle</span> Action status</span>
+<span class="font-body-base text-body-base text-slate-gray">No action needed</span>
+</div>
+<div class="flex flex-col col-span-2">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Latest activity</span>
+<span class="font-body-base text-body-base text-on-surface">Dispatch confirmed · <span class="text-slate-gray text-xs">Yesterday</span></span>
+</div>
+</div>
+<button class="w-full h-[44px] flex items-center justify-center text-primary font-body-bold text-body-bold border border-soft-gray-border rounded-lg mt-2 hover:bg-surface-container-low transition-colors">
+                        Open collaboration →
+                    </button>
+</article>
+<!-- Card 3 -->
+<article class="bg-pure-white border border-soft-gray-border rounded-[12px] p-md flex flex-col gap-4 shadow-sm opacity-90 scale-[0.98] translate-y-2">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait shot of an influencer with a warm lighting setup, modern minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBew0gXLoUA10-qnAwzN7xVZUmSM72Iab_Lm1IYO8NLjYifXXMfWcZ8cYB6i5cTgeWsqI5OIoI1CpspBNjLHoK05ES3unEa_0-m9NXqhkBuBpGPk2mqLjPP6nTtS8qu_8ID2I_I4vtZMMg8MygakgOBXjb18hGm_2sPexSC6eyWxobDnjN87JmQxNhjBVIvSs1jowpo7VLxtq9Ph3lSi5-C2zz-cZwtZd1mBk-u86FDcMLXrt4AtrzxL8b8idRLfgIPfvoWLoOVUMk"/>
+</div>
+<div>
+<h3 class="font-body-bold text-body-bold text-on-surface">Kavya Singh</h3>
+<p class="font-caption text-caption text-slate-gray">@kavya.create</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-low text-on-surface-variant font-caption text-caption rounded">Publishing</span>
+</div>
+<div class="grid grid-cols-2 gap-y-3">
+<div class="flex flex-col">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Time in stage</span>
+<span class="font-body-base text-body-base text-on-surface">6h</span>
+</div>
+<div class="flex flex-col col-span-2 bg-blossom-pink p-2 rounded-lg border border-error-container">
+<span class="font-eyebrow-caps text-eyebrow-caps text-sunset-orange uppercase flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">warning</span> Action status</span>
+<span class="font-body-bold text-body-bold text-crimson-red">2 actions required</span>
+</div>
+<div class="flex flex-col col-span-2">
+<span class="font-eyebrow-caps text-eyebrow-caps text-slate-gray uppercase">Latest activity</span>
+<span class="font-body-base text-body-base text-on-surface">Caption submitted · <span class="text-slate-gray text-xs">45m ago</span></span>
+</div>
+</div>
+<button class="w-full h-[44px] flex items-center justify-center text-primary font-body-bold text-body-bold border border-soft-gray-border rounded-lg mt-2 hover:bg-surface-container-low transition-colors">
+                        Open collaboration →
+                    </button>
+</article>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-[1000] h-bottom-nav bg-pure-white dark:bg-inverse-surface border-t border-soft-gray-border shadow-md flex justify-around items-center px-xs">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-90 duration-150 w-[44px] h-[44px]">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-ui text-label-ui mt-0.5 text-[10px]">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-90 duration-150 w-[44px] h-[44px]">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-label-ui text-label-ui mt-0.5 text-[10px]">Brands</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary font-bold hover:bg-surface-container-low transition-colors active:scale-90 duration-150 w-[44px] h-[44px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-label-ui text-label-ui mt-0.5 text-[10px]">Campaigns</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-90 duration-150 w-[44px] h-[44px]">
+<span class="material-symbols-outlined">handshake</span>
+<span class="font-label-ui text-label-ui mt-0.5 text-[10px]">Collabs</span>
+</button>
+</nav>
+</body></html>
