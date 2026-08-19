@@ -1,134 +1,86 @@
-# Identity Runtime Readiness — Gap-Closing Pass
+# Identity Runtime Readiness
 
-Status: NOT YET RUNNABLE end-to-end. Architecture is sufficiently closed; remaining blockers are concrete application adapters/configuration rather than new architecture.
+**Status:** LIVE IDENTITY TEST EXECUTED END-TO-END AGAINST REAL WEBSITES.  
+The reference Identity runtime is operational for `identity_test`. Remaining work is production hardening/integration and known defect correction, not proof that the architecture can execute.
 
-## Correction completed in this pass
+## What has been proven
 
-The real `executionId` is now threaded from `executionStarted()` through the Compiler into every AI/deterministic task, Prompt Builder context and ProcessorExecution telemetry. The previous `runtime_execution` placeholder is removed.
+The current reference runtime has successfully executed the Identity path end-to-end against real websites, including the shared execution stack used by `identity_test`.
 
-## Readiness matrix
+The runtime foundation includes:
 
-| Component | Contract/design | Reference code | Concrete app binding | First dry-run blocker? |
-|---|---|---|---|---|
-| Identity Execution Profile | YES | YAML | loader missing | YES |
-| Compiler DAG | YES | YES | generic | NO |
-| Execution ID propagation | YES | YES | generic | NO |
-| Global LLM artifacts | YES | files exist | loader missing | YES |
-| Processor definitions/artifacts | YES | files exist | loader missing | YES |
-| Intelligence Object definitions | YES | files exist | loader missing | YES |
-| Model Registry | YES | models.yaml | resolver missing | YES |
-| Prompt Builder | YES | reference TS | direct binding missing | YES |
-| Gatekeeper website-direct provider | YES | provider boundary defined | real Gemini SDK/capability binding not verified | YES |
-| Normalized evidence runtime | YES | evidence definitions exist | Zyte/Cheerio runtime/store binding missing | YES |
-| Output validation | YES | Zod reference implementation | direct binding + taxonomy loader missing | YES |
-| Canonical persistence | YES | mapping + adapter boundary | Prisma binding/migration unresolved | NO for dry run; YES for writes |
-| Execution telemetry | YES | port defined | DB/log implementation missing | YES for traceable test |
-| API/service trigger | YES | service.ts | framework route missing | YES for UI-triggered test |
-| Scan admission/reuse/abuse rules | previously defined onboarding policy | not integrated here | production wrapper missing | NO for identity_test; YES for onboarding |
+- execution-profile and artifact/Object/processor loading;
+- Compiler dependency/DAG execution;
+- real execution ID propagation;
+- Model Registry resolution;
+- Prompt Builder integration;
+- provider execution through runtime boundaries;
+- normalized Evidence consumption;
+- structural/semantic validation;
+- telemetry integration;
+- developer/test execution entry path.
 
-## P0 — blockers before first real `identity_test`
+`identity_test` should therefore no longer be described as unimplemented, not runnable, or not live-tested.
 
-### 1. Repository/config loaders
-Implement a server-only loader that resolves:
-- `execution_profiles/identity_test.yaml`
-- global artifacts
-- processor definitions
-- processor artifacts
-- active Intelligence Object definitions
-- Industry/Sub-industry taxonomy
-- `models.yaml`
+## Current interpretation of runtime maturity
 
-Do not dynamically accept repository paths from request input.
+| Area | Current state | Meaning |
+|---|---|---|
+| Identity architecture/contracts | FROZEN reference implementation | Canonical branch authority exists |
+| Shared Compiler/runtime | IMPLEMENTED reference runtime | Executes dependency-aware Intelligence tasks |
+| `identity_test` | LIVE-TESTED | Has run end-to-end against real websites |
+| Prompt/model/validation/telemetry path | IMPLEMENTED for reference runtime | Proven sufficiently for Identity test execution |
+| Production canonical writes | NOT GENERALLY CLEARED | Requires current backend audit and resolved persistence mappings |
+| Production onboarding wrapper | NOT IMPLIED BY `identity_test` | Admission, verification, reuse, lifecycle and authorization remain application concerns |
+| Future branches/profiles | NOT AUTOMATICALLY APPROVED | Must follow frozen product authority |
 
-### 2. EvidenceRuntime concrete adapter
-Bind the existing extraction path to the runtime port:
-- `prepareIdentityEvidence()` starts homepage/about/header/footer acquisition/normalization immediately.
-- `getEvidence()` awaits the evidence bundle required by the active processor.
-- evidence bundle returns stable refs/run IDs plus normalized content.
-- Gatekeeper `website_direct` must not wait for this evidence.
+## Known defect — Gatekeeper taxonomy validator
 
-A failed warm-up must not be swallowed invisibly: warm-up may run asynchronously, but `getEvidence()` must surface the actual acquisition failure to the consuming task.
+The frozen runtime profile `intelligence/runtime/execution_profiles/gatekeeper_scan.yaml` defines Gatekeeper classification with:
 
-### 3. Gemini provider adapter
-Bind the provider port to the actual Google Gemini SDK/API and environment secret.
-Required before test:
-- confirm configured model ID is accepted by the deployed provider account
-- implement `website_direct` capability used by Gatekeeper
-- implement normalized-evidence structured request
-- timeout/retry policy from Model Registry
-- usage/latency metadata
-- no API key in prompts/logs
+- controlled production Industry vocabulary;
+- `provisional_sub_industry` as a provisional/free-form value;
+- an explicit rule that Gatekeeper must **not** require controlled Sub-industry membership.
 
-### 4. Prompt Builder binding
-Use the existing Prompt Builder implementation rather than reconstructing prompts in the integration adapter. Resolve active output schema before provider call.
+The current Identity validation bridge still applies canonical Industry -> Sub-industry membership validation to the Gatekeeper scope. That is inconsistent with the frozen `gatekeeper_scan` contract.
 
-### 5. Validator binding
-Route by processor/scope into `validateProcessorOutput()` and load canonical taxonomy for Gatekeeper semantic validation. Convert structured validator issues into task error metadata without losing paths/codes.
+**Classification:** KNOWN BOUNDED VALIDATOR DEFECT.
 
-### 6. Telemetry adapter
-Minimum dry-run telemetry must create an Execution and ProcessorExecution representation (DB rows if current schema supports them, otherwise structured server logs for the first developer test) with:
-- execution/profile/task IDs
-- start/end/duration
-- model/profile/model ID
-- prompt_build_id
-- evidence refs
-- artifact versions
-- provider latency/usage when available
-- validation status/error
-- persistence skipped flag
+Do not treat the validator's stricter behavior as product authority. Do not redesign the shared runtime because of this defect. Correct it only when Gatekeeper work resumes against frozen product decisions.
 
-### 7. Developer test entry point
-Before wiring a frontend button, create one authenticated/dev-only server command or API endpoint that calls `IntelligenceService.execute()` with `persistResults=false`. This is the shortest path to proving the runtime.
+## Production persistence status
 
-## P1 — required before enabling canonical writes
+Identity Object mappings intentionally still contain markers such as VERIFY / RECONCILE / field-to-add / dedicated-structure-required where production storage was not conclusively settled.
 
-- Apply/verify the six-field Identity BrandProfile schema patch.
-- Resolve all VERIFY/RECONCILE persistence mappings against deployed Prisma schema.
-- Implement Prisma transaction adapter.
-- Add lifecycle/manual-value protection checks.
-- Integration-test null behavior and partial processor writes.
-- Keep `persist_results=false` until all above pass.
+These markers must not be resolved from documentation assumptions. When canonical writes become necessary, audit the then-current backend schema/models first and map Intelligence Objects to existing canonical storage wherever possible.
 
-## P2 — required before production onboarding trigger
+`identity_test` live execution does not override this requirement.
 
-- existing verified-brand rejection
-- seven-day scan reuse
-- five-site / five-repeat abuse safeguard and pre-verification requirement
-- onboarding one-time review checkpoint
-- discard manual edits when domain verification fails
-- domain verification workflow
-- reuse of validated scan output without rerunning expensive AI
-- production authorization/rate limits
+## Production onboarding boundary
 
-These are application/onboarding controls and must wrap the Compiler; they do not belong inside Identity reasoning artifacts.
+A successful reference runtime test does not mean the production onboarding journey is complete. Production onboarding may still require application-layer controls such as:
 
-## First dry-run acceptance criteria
+- existing verified-brand handling;
+- eligible scan reuse;
+- abuse/rate safeguards;
+- provisional checkpoint edits;
+- domain verification and persist/resume behavior;
+- lifecycle/manual-value protection;
+- authorization and production rate limiting.
 
-A single known supported brand URL should demonstrate:
-1. Execution row/log starts with a real execution ID.
-2. Gatekeeper starts immediately using Gemini direct website access.
-3. Zyte/Cheerio evidence acquisition starts concurrently.
-4. Gatekeeper returns a structurally + taxonomically valid supported classification.
-5. Identity Core waits for normalized evidence, builds a traceable prompt and validates output.
-6. Industry Niche, Reporting Currency and Market Geography become runnable after dependencies and execute concurrently where possible.
-7. Every AI task records model/artifact/evidence/prompt metadata.
-8. Final result contains only validated outputs.
-9. `persistResults=false` results in zero BrandProfile mutation.
-10. Any deliberately malformed provider fixture fails validation and is not published as a canonical dependency.
+These controls wrap or dispatch Intelligence execution. They do not belong inside processor reasoning artifacts merely because they participate in the same user journey.
 
-## Recommended implementation order
+## Execution-profile directory distinction
 
-1. loaders + Model Registry resolver
-2. Prompt Builder + validator direct bindings
-3. telemetry adapter
-4. Gemini normalized-evidence adapter
-5. Gatekeeper website-direct adapter
-6. EvidenceRuntime Zyte/Cheerio binding
-7. dev-only execution endpoint/command
-8. run fixture tests
-9. run first live dry-run
-10. only then Prisma persistence + production onboarding wrapper
+There are intentionally two execution-profile-related locations:
 
-## Architecture verdict
+- `intelligence/execution_profiles/` — canonical journey-level Intelligence orchestration authority. These files describe how already-defined Intelligence processors participate in journeys such as Identity onboarding/test.
+- `intelligence/runtime/execution_profiles/` — runtime/application-facing execution profiles used by the executable runtime layer, including bounded operational profiles such as `gatekeeper_scan` and the runtime `identity_test` representation.
 
-No new Intelligence architecture layer is required for the first Identity execution. The remaining work is implementation plumbing and testing. If a new abstraction is proposed before the first dry-run, it should be justified by a concrete blocker in this checklist rather than documentation symmetry.
+The two locations should not be merged or restructured as hygiene work. Where both represent the same conceptual journey, future work should keep them aligned and make authority explicit rather than assuming filename equality means identical responsibility.
+
+## Current architectural verdict
+
+**PASS — reference runtime proven; no new Intelligence architecture layer is required.**
+
+The next Intelligence step is not runtime redesign. Await frozen Gatekeeper product decisions, then determine the minimum contract/processor/profile changes actually required.
