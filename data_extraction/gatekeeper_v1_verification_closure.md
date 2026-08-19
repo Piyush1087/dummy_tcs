@@ -11,7 +11,7 @@ Branch: `agent/gatekeeper-v1-data-extraction`
 Starting SHA: `86f25afcde1fb6471659c63fa1c250415b538346`  
 Verified ending SHA: `40a9cb0e707ff278d40798fe0ab2664c9b5a037f`
 
-At closure time, the ending SHA was reported as committed locally but not yet pushed to GitHub. Do not treat the remote branch as verified until that SHA is present remotely.
+Remote verification complete: GitHub resolves the verified ending SHA on the backend repository and the reported local/remote synchronization is accepted as the repository-level activation candidate state.
 
 ## Runtime verification
 
@@ -50,7 +50,7 @@ Covered behavior includes bounded retries, retryable/non-retryable errors, HTTP 
 
 ### `gatekeeper_primary_web_assessment`
 
-**Readiness:** PARTIAL — code verified; live provider verification pending.
+**Readiness:** PARTIAL — code and repository state verified; live provider verification pending.
 
 Verified in tests:
 
@@ -64,7 +64,7 @@ Live verification was not run because `GEMINI_API_KEY` was unavailable to the ve
 
 ### `company_public_web_research`
 
-**Readiness:** PARTIAL — code verified; live provider verification pending.
+**Readiness:** PARTIAL — code and repository state verified; live provider verification pending.
 
 Verified in tests:
 
@@ -106,11 +106,10 @@ The frozen Intelligence execution profile remains the only authority for escalat
 
 ## Remaining activation gates
 
-1. Push verified backend SHA `40a9cb0e707ff278d40798fe0ab2664c9b5a037f` to `origin/agent/gatekeeper-v1-data-extraction`.
-2. Run a credentialed Gemini smoke test and confirm both `OWNED_DOMAIN` and `PUBLIC_WEB_SEARCH` provenance.
-3. Run a credentialed Parallel smoke test and confirm traceable public-web Evidence/provenance.
-4. Verify OpenAI runtime secret presence; run a live call only after Intelligence/Product selects an approved model.
-5. Separately triage the reported npm audit findings (53 total, including 1 critical) before production activation if any finding affects the runtime/provider path.
+1. Run a credentialed Gemini smoke test and confirm both `OWNED_DOMAIN` and `PUBLIC_WEB_SEARCH` provenance.
+2. Run a credentialed Parallel smoke test and confirm traceable public-web Evidence/provenance.
+3. Verify OpenAI runtime secret presence; run a live call only after Intelligence/Product selects an approved model.
+4. Separately triage the reported npm audit findings (53 total, including 1 critical) before production activation if any finding affects the runtime/provider path.
 
 ## Integration lineage
 
