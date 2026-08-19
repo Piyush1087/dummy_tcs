@@ -1,78 +1,344 @@
 # Data Extraction Engine — AI Worker Charter
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Status:** PRINCIPAL CHARTER  
 **Purpose:** Define the permanent responsibilities, boundaries, operating principles and expected outputs of the AI worker responsible for Creator Shop's Data Extraction Engine.
 
 ## 1. Mission
 
-The Data Extraction Engine is the platform layer responsible for acquiring, maintaining and serving reliable raw and normalized evidence from external and internal data sources.
+The Data Extraction Engine is the platform layer responsible for acquiring, maintaining and serving reliable raw and normalized Evidence from external and internal data sources.
 
 Its mission is:
 
-> **Keep every required data connection available, secure, fresh, observable and usable by downstream Intelligence Engines without embedding business reasoning inside the acquisition layer.**
+> **Keep every required data connection available, secure, fresh, observable and usable by downstream Intelligence Engines without embedding business reasoning or Intelligence orchestration inside the acquisition layer.**
 
-The engine should progressively become the single governed access layer through which Creator Shop obtains external evidence.
+The engine should progressively become the single governed access layer through which Creator Shop obtains external Evidence.
 
-As Creator Shop adds new Intelligence capabilities, the Data Extraction Engine will continuously add or extend the required evidence streams without requiring each Intelligence Engine to build its own integrations.
+As Creator Shop adds Intelligence capabilities, the Data Extraction Engine should add or extend required evidence capabilities without requiring each Intelligence Engine or product module to rebuild provider integrations.
 
-## 2. Position in Creator Shop Architecture
+## 2. Architectural Position
 
 ```text
 External / Internal Data Sources
             │
             ▼
 Data Extraction Engine
-Acquire → Authenticate → Normalize → Store → Refresh → Monitor
+Acquire → Authenticate → Normalize → Validate → Cache/Store → Refresh → Monitor
             │
             ▼
 Evidence
             │
             ▼
 Intelligence Engine
-Reason → Classify → Infer → Generate Intelligence
+Select strategy → Request Evidence/Model capability → Reason → Validate → Generate Intelligence
             │
             ▼
 Product Capabilities
 Brand Centre / AI Match / Campaign Planner / Reporting / Assistants
 ```
 
-The Data Extraction Engine produces **Evidence**.
+The Data Extraction Engine produces **Evidence and provider/model execution capability**.
 
-The Intelligence Engine produces **Intelligence**.
+The Intelligence Engine produces **Intelligence and execution strategy**.
 
-Product capabilities consume Intelligence rather than recreating acquisition or reasoning themselves.
+The permanent boundary is:
+
+> **Intelligence controls WHY, WHAT and WHEN. Data Extraction controls HOW, CONNECTION and DELIVERY.**
+
+Or, more specifically:
+
+> **Intelligence controls the need; Data Extraction controls the acquisition.**
 
 ## 3. Core Responsibilities
 
-The Data Extraction Engine AI worker owns the following responsibilities.
+The Data Extraction Engine owns:
 
-### 3.1 Data Stream Integration
+- provider/source integration;
+- authentication and credentials;
+- provider/model connectivity;
+- connection health;
+- provider capability availability;
+- execution of requested provider/API/model calls;
+- bounded technical retries;
+- provider rate limits and quotas;
+- raw acquisition;
+- deterministic transformation/normalization;
+- Evidence schema validation;
+- Evidence completeness/quality state;
+- cache and refresh;
+- provenance and lineage;
+- acquisition telemetry;
+- alerts for degraded or disconnected integrations;
+- retention/deletion rules for Evidence;
+- environment isolation;
+- secure migration/reuse of existing backend integrations.
 
-Maintain every data pipeline required by Creator Shop.
+The Data Extraction Engine does **not** own:
 
-Each data stream must have a defined:
+- Industry classification policy;
+- Brand Identity reasoning;
+- Brand DNA reasoning;
+- audience inference;
+- competitor strategic interpretation;
+- product recommendations;
+- campaign recommendations;
+- creator matching;
+- Intelligence prompts;
+- processor reasoning;
+- model-selection policy for a business task;
+- cross-provider fallback order for an Intelligence task;
+- confidence thresholds that trigger a second model/source;
+- the business consequence of missing/stale Evidence.
 
-- provider/source;
-- authentication mechanism;
-- acquisition method;
-- supported capabilities;
-- raw response boundary;
-- normalized evidence contract;
-- refresh strategy;
-- connection-health mechanism;
-- error model;
-- rate-limit policy;
-- security classification;
-- downstream consumers.
+## 4. Orchestration Boundary — Frozen
 
-The worker should support both external provider streams and direct acquisition streams.
+This section is authoritative for provider/model fallback ownership.
 
-### 3.2 Connection Health
+### 4.1 Intelligence Engine owns strategy
 
-The engine is responsible for knowing whether every required data connection is operational.
+The Intelligence Engine or its Execution Profile decides:
 
-For each provider/connection it should maintain a state such as:
+- which capability is required;
+- which provider/model should be attempted first;
+- which provider/model is an approved fallback;
+- the order of fallbacks;
+- whether low confidence or validation failure should trigger fallback;
+- whether multiple sources/models must agree;
+- whether execution may continue with partial/stale Evidence;
+- whether a different evidence source should be requested after an LLM failure;
+- whether user review is required.
+
+Example:
+
+```text
+Gatekeeper policy
+1. Gemini 2.5 Flash direct website
+2. OpenAI fallback model
+3. External web/search evidence fallback
+```
+
+This policy belongs to the Gatekeeper Execution Profile / Intelligence Runtime.
+
+### 4.2 Data Extraction Engine owns execution mechanics
+
+When the Intelligence Runtime requests:
+
+```text
+provider = google_gemini
+model = gemini-2.5-flash
+capability = direct_website_context
+```
+
+the Data Extraction Engine owns:
+
+- secure credential retrieval;
+- provider SDK/client;
+- endpoint/request execution;
+- timeout;
+- technical retry;
+- rate-limit handling;
+- provider health checks;
+- raw response capture where permitted;
+- normalized response/Evidence;
+- error codes;
+- latency/usage metadata.
+
+The Data Extraction Engine must not silently substitute a different model or provider unless the Intelligence policy explicitly permits that substitution.
+
+### 4.3 Infrastructure fallback vs Intelligence fallback
+
+**Infrastructure fallback** may be owned by Data Extraction when it preserves the same requested capability/model.
+
+Examples:
+
+- retry Gemini after a transient HTTP 503;
+- refresh an OAuth token and repeat the same Meta request;
+- honor Retry-After after a temporary 429;
+- switch between equivalent infrastructure endpoints only when contractually identical and pre-approved.
+
+**Intelligence fallback** is owned by the Intelligence Engine because it changes reasoning or evidence strategy.
+
+Examples:
+
+- Gemini → OpenAI;
+- Gemini 2.5 Flash → Gemini 3.5 Flash;
+- LLM direct website → Google Search evidence;
+- low-confidence classification → second model;
+- Similarweb → another market-data source.
+
+The Data Extraction Engine may report available alternatives, but it does not choose them for the Intelligence task.
+
+## 5. Model and LLM Boundary
+
+LLMs are a special case because they can act as both reasoning engines and acquisition-capable providers.
+
+The engine must distinguish:
+
+- **Model Runtime:** secure connectivity to Gemini/OpenAI/etc.;
+- **Reasoning use:** owned by the Intelligence Runtime;
+- **Acquisition-capable model use:** direct website/search/browser grounding used deliberately as Evidence acquisition.
+
+The Data Extraction Engine may maintain:
+
+```text
+Google Gemini
+├── connection health
+├── credentials
+├── supported model availability
+├── direct website capability
+├── structured-output capability
+├── rate limits
+└── provider errors
+
+OpenAI
+├── connection health
+├── credentials
+├── supported model availability
+├── web/search capability
+├── structured-output capability
+└── provider errors
+```
+
+It may answer:
+
+```text
+gemini-2.5-flash = AVAILABLE
+gemini-3.5-flash = AVAILABLE
+openai-model-x = DEGRADED
+```
+
+It must not answer:
+
+```text
+Use Gemini 2.5 Flash for Gatekeeper.
+```
+
+That decision belongs to the Intelligence model registry / execution profile.
+
+## 6. Source, Connector and Transformer Classification
+
+Not everything in the acquisition layer is a data stream.
+
+Use the following classes:
+
+- **SOURCE** — website, Meta Graph API, Similarweb, Business Discovery API, etc.
+- **CONNECTOR / ADAPTER** — code that authenticates and calls a source/provider.
+- **TRANSFORMER / NORMALIZER** — Cheerio or deterministic transformation logic.
+- **MODEL_RUNTIME** — provider connectivity for model execution.
+- **ACQUISITION_CAPABILITY** — direct website/search/browser grounding capability supplied by a model/provider.
+
+Cheerio is therefore a transformer, not an Evidence source.
+
+Gemini/OpenAI are model providers; their direct retrieval capability may also be exposed as acquisition capabilities when deliberately used that way.
+
+## 7. Evidence Acquisition Contract
+
+Every provider integration should conceptually separate:
+
+```text
+Provider Response
+      ↓
+Raw Acquisition
+      ↓
+Normalization
+      ↓
+Quality / Schema Validation
+      ↓
+Evidence Object
+```
+
+Provider-specific response formats should not leak directly into Intelligence processors.
+
+Example:
+
+```text
+Zyte HTML
+     ↓
+Website acquisition
+     ↓
+Cheerio normalization
+     ↓
+Normalized Website Evidence
+     ↓
+Brand Intelligence
+```
+
+The Intelligence Engine should request Evidence capabilities rather than provider implementations.
+
+Example:
+
+```text
+website.identity_core
+```
+
+rather than:
+
+```text
+call Zyte endpoint X → parse field Y with Cheerio
+```
+
+## 8. Evidence Availability and Quality
+
+The Data Extraction Engine is responsible for Evidence quality, not Intelligence quality.
+
+Availability states should support at least:
+
+```text
+AVAILABLE
+PARTIALLY_AVAILABLE
+UNAVAILABLE
+```
+
+Quality/freshness states should support at least:
+
+```text
+VALID
+DEGRADED
+STALE
+INVALID
+```
+
+Examples of Extraction quality failures:
+
+- empty/unusable HTML;
+- malformed provider payload;
+- parser failure;
+- duplicate records;
+- truncated data;
+- broken asset URL;
+- stale cache;
+- missing required field;
+- unauthorized capability.
+
+Example:
+
+```text
+website.identity_core
+availability = PARTIALLY_AVAILABLE
+quality = DEGRADED
+reason = INSUFFICIENT_CONTENT
+```
+
+The Intelligence Engine decides whether this is sufficient for its processor.
+
+## 9. Error Contract
+
+Failures must be structured rather than represented as unexplained nulls.
+
+An error should expose where relevant:
+
+- source/provider;
+- capability;
+- machine-readable code;
+- human-readable reason;
+- retryable flag;
+- cached Evidence availability;
+- last successful sync;
+- provider status code;
+- environment;
+- correlation/acquisition run ID.
+
+Connection states should support at least:
 
 ```text
 CONNECTED
@@ -85,197 +351,101 @@ DISCONNECTED
 UNAVAILABLE
 ```
 
-The exact implementation may evolve, but the principle is permanent:
+Downstream systems should not have to discover connection health through unpredictable failures.
 
-> Downstream systems must not need to discover connection health by failing unpredictably.
+## 10. Raw vs Normalized Evidence
 
-Connection state should be observable before and during an Intelligence execution.
+### Raw Evidence
 
-### 3.3 Error Propagation
+Provider/native response retained only where useful and permitted for:
 
-When evidence cannot be acquired, the Data Extraction Engine must return a structured failure rather than a vague null.
+- debugging;
+- audit;
+- replay;
+- re-normalization;
+- provider troubleshooting.
 
-A failure should expose enough information for the Intelligence Runtime to understand:
+Raw Evidence must follow source-specific retention and access rules.
 
-- which source failed;
-- what capability was unavailable;
-- whether the error is temporary or persistent;
-- whether retry is appropriate;
-- whether cached evidence is available;
-- whether execution may continue with reduced evidence;
-- human-readable reason;
-- machine-readable error code.
+### Normalized Evidence
 
-Example conceptual response:
+Stable Creator Shop representation supplied to Intelligence Engines.
 
-```text
-source: META_GRAPH_API
-status: AUTH_EXPIRED
-error_code: META_TOKEN_EXPIRED
-retryable: false
-cached_evidence_available: true
-last_successful_sync: ...
-```
+Normalization should remove provider noise while preserving provenance and fields required for downstream reasoning.
 
-The Intelligence Engine decides what to do with missing evidence. The Data Extraction Engine reports the evidence state accurately.
+## 11. Provenance and Lineage
 
-## 4. Authentication and Secret Management
+Where practical, every Evidence object should identify:
 
-The Data Extraction Engine owns provider authentication infrastructure.
+- source/provider;
+- capability;
+- acquisition run;
+- source entity;
+- acquired_at;
+- normalization version;
+- raw Evidence reference;
+- freshness state;
+- provider/account reference;
+- quality flags;
+- parent/source Evidence references.
 
-This includes API keys, OAuth access tokens, refresh tokens, provider credentials, service-account credentials, webhook secrets, signing secrets and other sensitive integration configuration.
+This allows Intelligence outputs to trace conclusions back to supporting Evidence.
+
+## 12. Schema Versioning and Data Quality Gates
+
+Normalized Evidence contracts must be versioned.
+
+A provider response change must not silently alter downstream contracts.
+
+Before publishing normalized Evidence, apply source-appropriate validation for:
+
+- required fields;
+- schema validity;
+- malformed payloads;
+- duplicates;
+- empty responses;
+- impossible timestamps/IDs;
+- truncation;
+- parser failures;
+- known provider anomalies.
+
+Invalid Evidence should be rejected or quarantined with explicit reason.
+
+## 13. Authentication and Secret Management
+
+The Data Extraction Engine owns provider authentication infrastructure including:
+
+- API keys;
+- OAuth access/refresh tokens;
+- service credentials;
+- webhook secrets;
+- signing secrets;
+- other provider-sensitive configuration.
 
 Secrets must never be:
 
 - committed to Git;
-- placed inside prompts;
+- copied into prompts;
 - returned to frontend clients;
-- written into ordinary logs;
-- exposed through normal Evidence objects;
-- copied into Intelligence artifacts.
+- logged in ordinary telemetry;
+- embedded in Evidence;
+- embedded in Intelligence artifacts.
 
-The engine should expose **credential references or capabilities**, never raw credentials, outside the trusted provider-integration boundary.
+Repository/config metadata may contain references such as:
 
 ```text
 credential_ref: env.META_SYSTEM_TOKEN
 ```
 
-For production, secret values should be stored in a dedicated secrets-management system rather than ordinary application configuration wherever feasible.
+Production secrets should use a dedicated secret-management mechanism where feasible.
 
-## 5. Authorization
+Human retrieval of raw values should be exceptional, least-privilege and audited.
 
-Access to credentials and sensitive provider controls must follow least-privilege principles.
+## 14. Refresh, Cache and Reuse
 
-The engine should distinguish between runtime access, operational access and exceptional credential disclosure.
+The Data Extraction Engine owns Evidence freshness and provider refresh execution.
 
-Raw secret disclosure should **not** be a normal administrative feature. Workloads should consume credentials through controlled secret access. Human retrieval of raw secret values should be treated as an exceptional, audited break-glass operation where it is required at all.
-
-The AI worker must not design features that casually reveal secrets through application APIs, logs, debug screens or developer tools.
-
-## 6. Evidence Acquisition
-
-Every provider integration should conceptually separate:
-
-```text
-Provider Response
-      ↓
-Raw Acquisition
-      ↓
-Normalization
-      ↓
-Evidence Object
-```
-
-Provider-specific response formats should not leak directly into the Intelligence Engine.
-
-For example:
-
-```text
-Zyte HTML
-     ↓
-Website acquisition
-     ↓
-Cheerio / deterministic normalization
-     ↓
-Normalized Website Evidence
-     ↓
-Brand Intelligence
-```
-
-Likewise:
-
-```text
-Meta Graph API payload
-     ↓
-Meta acquisition adapter
-     ↓
-Normalized Instagram Evidence
-     ↓
-Instagram / Brand / Performance Intelligence
-```
-
-The Intelligence Engine should consume stable Evidence contracts rather than provider-specific JSON.
-
-## 7. Source, Connector and Transformer Classification
-
-Not everything involved in acquisition is itself a data stream. The engine should classify components so ownership stays clear.
-
-- **Evidence Source:** website, Meta Graph API, Business Discovery API, Similarweb, etc.
-- **Connector/Adapter:** the code that authenticates and acquires from a source.
-- **Transformer/Normalizer:** Cheerio or other deterministic parsing/normalization logic.
-- **Model Runtime:** Gemini/OpenAI provider connectivity when used for AI execution.
-- **Acquisition-capable Model Source:** an LLM's direct website/browser grounding capability only when it is deliberately being used to acquire evidence.
-
-LLM reasoning remains owned by the Intelligence Runtime. A model provider must not be treated as a generic Evidence source merely because the platform can call that model.
-
-## 8. Raw vs Normalized Evidence
-
-The Data Extraction Engine should distinguish between two layers.
-
-### Raw Evidence
-
-Provider/native response retained when useful for debugging, audit, replay, re-normalization and provider troubleshooting.
-
-Raw evidence should not normally be sent directly to LLM prompts.
-
-### Normalized Evidence
-
-Structured evidence converted into Creator Shop's internal representation. This is the normal contract supplied to Intelligence Engines.
-
-Normalization should remove unnecessary provider-specific noise while retaining traceability to the original evidence.
-
-## 9. Evidence Provenance and Lineage
-
-Every evidence object should be traceable.
-
-Where practical it should identify:
-
-- source/provider;
-- acquisition run;
-- source entity;
-- acquisition timestamp;
-- normalization version;
-- raw evidence reference;
-- refresh status;
-- provider/account used;
-- relevant confidence or extraction-quality flags;
-- parent/source evidence references when evidence was transformed from another Evidence object.
-
-This allows Intelligence outputs to later explain what evidence produced a conclusion without storing provider payloads inside Intelligence records.
-
-## 10. Data Quality Contract
-
-Acquisition success is not the same as usable Evidence.
-
-Before normalized Evidence is published, the engine should support source-appropriate checks for:
-
-- required fields;
-- schema validity;
-- malformed payloads;
-- duplicate entities;
-- empty/unusable responses;
-- impossible timestamps or identifiers;
-- truncation;
-- parsing failures;
-- known provider anomalies.
-
-Evidence that fails its publication contract should be rejected or quarantined with an explicit reason rather than silently passed downstream.
-
-## 11. Schema Versioning and Compatibility
-
-Normalized Evidence contracts must be versioned.
-
-A provider response change must not silently alter the contract consumed by Intelligence processors.
-
-When an Evidence schema changes, the engine should define whether the change is backward-compatible, requires consumer migration, or requires re-normalization/backfill of stored raw evidence.
-
-## 12. Refresh Management
-
-The Data Extraction Engine owns Evidence freshness.
-
-Each data stream may define its own refresh behaviour.
-
-Possible refresh modes include:
+Supported refresh modes may include:
 
 ```text
 ON_DEMAND
@@ -287,44 +457,57 @@ SESSION_SCOPED
 CACHE_REUSE
 ```
 
-Refresh policy should be data-source specific. The AI worker must avoid treating all sources as having the same refresh lifecycle.
+Each source defines its own policy.
 
-## 13. Cache and Reuse
+Cached Evidence should expose acquired_at, freshness/expiry, source and version.
 
-The engine should avoid unnecessary external calls.
+Downstream systems should be able to distinguish LIVE, RECENT_CACHE and STALE_CACHE when relevant.
 
-Where appropriate, it may reuse valid cached Evidence according to source-specific freshness rules.
+## 15. Trigger Ownership
 
-Every cached Evidence object should expose:
+There are two kinds of triggers.
+
+### Intelligence-request trigger
+
+An Intelligence Execution Profile decides that fresh Evidence is needed and requests a capability.
+
+Example:
 
 ```text
-acquired_at
-expires_at / freshness state
-source
-version
+Identity execution requests website.identity_core
 ```
 
-The Intelligence Engine should be able to know whether it is consuming LIVE, RECENT_CACHE or STALE_CACHE evidence when this distinction matters.
+The Data Extraction Engine executes the acquisition.
 
-## 14. Idempotency, Deduplication and Replay
+### Platform-owned refresh trigger
 
-Refresh and acquisition jobs should be safe to retry.
+The Data Extraction Engine may independently run refreshes required to keep previously configured Evidence streams healthy/fresh according to an approved refresh policy.
 
-The engine should define source-appropriate idempotency keys or deduplication rules so retries do not create duplicate Evidence or duplicate external side effects.
+Examples:
 
-Where raw evidence is retained, the engine should support controlled replay/re-normalization so parser or schema improvements can be tested without paying for the external acquisition again.
+- scheduled Instagram sync;
+- token refresh;
+- webhook-driven delta sync;
+- periodic Similarweb refresh;
+- provider health checks.
 
-## 15. Backfill
-
-When a new Evidence field, parser or normalization contract is introduced, the worker should explicitly determine whether historical Evidence needs to be backfilled.
-
-Backfill should be a controlled operation with bounded provider cost, progress observability and safe restart behaviour.
+The engine may refresh Evidence according to established policy, but it does not independently launch Intelligence reasoning merely because Evidence changed. Intelligence regeneration policy belongs to the Intelligence/platform orchestration layer.
 
 ## 16. Connection Monitoring and Alerts
 
-The Data Extraction Engine should progressively support proactive monitoring.
+Proactively monitor production-critical streams.
 
-Examples include Meta token nearing expiry, token refresh failure, API permission revoked, repeated authorization failures, Zyte account unavailable, Similarweb credential rejected, webhook delivery failures, provider rate-limit exhaustion and scheduled refresh repeatedly failing.
+Examples:
+
+- token nearing expiry;
+- refresh-token failure;
+- permission revoked;
+- repeated authorization failure;
+- Zyte unavailable;
+- Similarweb credential rejected;
+- webhook delivery failure;
+- rate-limit exhaustion;
+- repeated scheduled refresh failure.
 
 Alerts should identify:
 
@@ -337,417 +520,180 @@ last successful operation
 recommended action
 ```
 
-Connection monitoring belongs here rather than being independently recreated inside each product module.
+## 17. Retry, Resilience and Terminal Failure
 
-## 17. Reliability Objectives
+Provider calls should distinguish retryable from non-retryable errors.
 
-Each production-critical stream should eventually define measurable reliability objectives rather than only qualitative health states.
+Retries must be bounded and cost-aware.
 
-Where appropriate, track:
+Repeatedly failing work must have a terminal/quarantine state rather than retry indefinitely.
+
+Technical retry policy is owned here; cross-provider/model fallback strategy is not.
+
+## 18. Rate Limits, Cost and Usage Governance
+
+Where relevant track:
+
+- request counts;
+- quotas;
+- provider cost;
+- concurrency;
+- throttling;
+- retry-after;
+- account-level usage.
+
+The engine may optimize execution scheduling to stay within provider limits.
+
+Rate-limit failures must be surfaced explicitly.
+
+## 19. Reliability Objectives and Observability
+
+Production-critical streams should progressively expose:
 
 - acquisition success rate;
 - freshness lag;
 - p50/p95 latency;
-- failed refresh rate;
-- authentication failure rate;
+- refresh failure rate;
+- auth failure rate;
 - webhook lag;
-- stale-evidence percentage;
-- provider-specific availability.
+- stale-Evidence percentage;
+- provider availability;
+- cache hit/miss;
+- retry count;
+- normalized Evidence publication outcome.
 
-Not every MVP stream needs a formal SLA, but the architecture must allow SLOs and alerts to be added without redesign.
+Use correlation IDs so an Evidence request can be traced through connector → normalization → validation → publication.
 
-## 18. Retry and Resilience
+Do not log raw secrets, full sensitive payloads or unnecessary personal data.
 
-Provider calls should use source-appropriate retry policies.
+## 20. Idempotency, Deduplication, Replay and Backfill
 
-The engine should distinguish between retryable failures and non-retryable failures.
+Acquisition and refresh jobs should be safe to retry.
 
-Retry policy must be bounded. The engine must not create uncontrolled retry loops or multiply provider cost.
+Use source-appropriate idempotency/deduplication rules.
 
-Repeatedly failing messages/jobs should have a defined terminal/quarantine state rather than retry forever.
+Where raw Evidence is retained, support controlled replay/re-normalization without paying for external acquisition again.
 
-## 19. Rate Limits and Usage Governance
+When a parser/schema improves, explicitly decide whether historical Evidence requires backfill.
 
-The engine should understand provider limits and cost boundaries.
+Backfills should be restartable, observable and bounded for provider cost.
 
-Where relevant it should track request counts, remaining quotas, provider cost, throttling, concurrency, retry-after values and account-level quotas.
+## 21. Provider Capability Registry
 
-The engine may optimize acquisition scheduling to remain inside provider limits. It should report rate-limit failures explicitly rather than presenting them as missing Evidence.
+Maintain a concise capability-oriented registry.
 
-## 20. Provider Capability Registry
-
-The Data Extraction Engine should maintain a simple registry of available data capabilities.
+Conceptually:
 
 ```text
-Provider
-   ├── capability
-   ├── connection state
-   ├── acquisition method
-   ├── refresh policy
-   ├── evidence produced
-   └── consumers
+Provider / Component
+├── class
+├── capabilities
+├── connection state
+├── authentication
+├── acquisition method
+├── Evidence produced
+├── refresh/cache policy
+├── errors
+├── security/retention
+└── consumers
 ```
 
-This registry prevents future Intelligence developers from having to rediscover which integration supplies a capability.
+This registry is the place future Intelligence workers use to discover available acquisition capabilities.
 
-The registry should remain capability-oriented rather than becoming low-level API documentation.
+## 22. Initial Known Landscape
 
-## 21. Current Data Streams and Components
+### Direct Website
 
-The initial known landscape includes:
-
-### Website — Direct
-
-Purpose includes URL reachability, lightweight public-site acquisition and deterministic site qualification where appropriate.
+Public URL reachability and lightweight website acquisition/direct context.
 
 ### Zyte
 
-Controlled website acquisition and crawl/fetch of public pages.
+Controlled public website acquisition/crawl/fetch.
 
 ### Cheerio
 
-Deterministic HTML parsing and normalization. Cheerio is a transformer, not an Evidence source in itself.
+Deterministic HTML parsing and normalization. Classified as TRANSFORMER.
 
-### LLM Provider Connections
+### Gemini
 
-Known model/provider connections include Gemini and potentially OpenAI where explicitly selected.
+MODEL_RUNTIME plus selected ACQUISITION_CAPABILITIES such as direct website context where explicitly configured.
 
-The Data Extraction Engine may own secure provider connectivity and health metadata if this is established as a shared platform capability, but Prompt Framework business logic, processor reasoning and Intelligence generation remain owned by the Intelligence Runtime.
+### OpenAI / Other LLM Providers
 
-Where an LLM itself provides direct website retrieval/context as an acquisition capability, that acquisition capability must be distinguished from the model's reasoning role.
+MODEL_RUNTIME plus provider-specific acquisition/search capabilities where explicitly configured.
 
 ### Meta Graph API
 
-Authenticated brand Instagram evidence including profile, content, performance, audience and account metadata where permissions allow.
+Authenticated Instagram profile/content/performance/audience/account Evidence where permissions permit.
 
 ### Meta Business Discovery API
 
-Public professional-account evidence for third parties, including competitor and selected public creator evidence where available.
+Public professional-account Evidence for competitors and selected public creator use cases where available.
 
 ### Meta Creator Marketplace API
 
-Creator discovery and marketplace-specific evidence/capabilities. This remains distinct from ordinary Instagram Graph evidence.
+Creator discovery and marketplace-specific Evidence/capabilities. Keep separate from ordinary Graph Evidence.
 
 ### Similarweb
 
-Website traffic and geography evidence where available. Similarweb traffic geography is supporting Evidence and must not automatically be treated as markets served.
+Traffic/geography/market Evidence where licensed and available. Traffic geography is Evidence, not automatic proof of markets served.
 
-## 22. Separation from the Intelligence Engine
+### Future sources
 
-The Data Extraction Engine must not own Industry classification reasoning, Brand Identity inference, Brand DNA reasoning, audience persona generation, competitor strategic analysis, campaign recommendations, creator matching, market opportunity inference or business recommendations.
+New sources should be added only when an Intelligence or product Evidence requirement cannot be satisfied by an existing capability.
 
-Example:
+## 23. Provider Policy, Consent, Privacy and Retention
 
-```text
-Similarweb says:
-42% traffic India
-21% US
-```
+The engine must respect provider terms, API scopes, user authorization and platform privacy requirements.
 
-Data Extraction Engine responsibility:
+A technically accessible field is not automatically authorized Evidence.
 
-```text
-acquire
-normalize
-store
-timestamp
-serve
-```
+Authenticated/private Evidence should have stricter access controls than public Evidence.
 
-Intelligence Engine responsibility:
+Each source should define retention/deletion rules. Raw Evidence should not be retained indefinitely merely for convenience.
 
-```text
-What does this imply about markets served?
-```
+Return CAPABILITY_NOT_AUTHORIZED when permissions are missing rather than masking the issue as generic provider failure.
 
-This boundary must remain strict.
+## 24. Environment Isolation
 
-## 23. Separation from Product Modules
+Dev, test and production credentials, quotas, webhooks and provider accounts should be isolated where practical.
 
-Frontend/product modules must not integrate directly with external providers when the Data Extraction Engine supports that capability.
+Health/registry data must identify its environment.
+
+Do not assume a development credential is safe or permitted for production use.
+
+## 25. Separation from Product Modules
+
+Product/frontend modules should not call external providers directly when the capability exists in Data Extraction.
 
 ```text
 Brand Centre
     ✕ → Meta Graph API directly
 
 Brand Centre
-    ✓ → Intelligence Platform / Platform Service
+    ✓ → Intelligence / Platform Service
           ↓
       Data Extraction Engine
           ↓
       Meta Graph API
 ```
 
-This prevents provider-specific logic from spreading through the application.
+## 26. Migration and Reuse of Existing Backend Integrations
 
-## 24. Migration and Reuse of Existing Backend Integrations
-
-The AI worker must assume that Creator Shop already contains useful provider integrations.
-
-Before writing a new connector, it should:
+Before writing a connector from scratch:
 
 1. inspect the existing backend;
-2. identify existing acquisition code;
-3. identify credentials/configuration;
-4. identify existing normalized structures;
+2. locate current provider/acquisition code;
+3. locate credential/config references without exposing values;
+4. identify current normalized structures;
 5. identify current consumers;
-6. determine whether the implementation is reusable;
-7. audit security/error handling;
-8. clean the implementation if necessary;
-9. move or adapt it behind the Data Extraction Engine boundary.
-
-The objective is:
-
-> **Reuse reliable existing infrastructure rather than rewriting provider integrations for architectural symmetry.**
-
-Existing working implementations should only be replaced when there is a concrete reliability, security, maintainability or contract problem.
-
-## 25. Migration Safety
-
-Moving an integration into the Data Extraction Engine must not unexpectedly break existing application behaviour.
-
-Preferred migration pattern:
-
-```text
-Existing implementation
-        ↓
-wrap behind new extraction interface
-        ↓
-verify existing consumers
-        ↓
-migrate consumers gradually
-        ↓
-remove duplicate old access path
-```
-
-Avoid large simultaneous rewrites.
-
-## 26. Environment Isolation
-
-Development, test and production provider credentials, quotas and webhook destinations should be isolated wherever the provider supports it.
-
-The worker must not assume that a dev credential can safely be reused in production or that test calls should consume production quotas/data.
-
-Connection-health and registry records should identify the environment they describe.
-
-## 27. Data Retention, Deletion and Privacy
-
-Each Evidence source should define appropriate retention behaviour for raw and normalized Evidence.
-
-The worker must identify when provider terms, user deletion, account disconnection or platform privacy rules require Evidence to be deleted, anonymized or made inaccessible.
-
-Raw evidence should not be retained indefinitely merely because it may be useful for debugging.
-
-Authenticated/private Evidence should be classified separately from public Evidence and should follow stricter access controls where appropriate.
-
-## 28. Provider Policy and Consent
-
-The engine must respect provider terms, API permissions and user authorization boundaries.
-
-A technically accessible field is not automatically permitted Evidence.
-
-For authenticated sources, the worker should record enough connection metadata to know what scopes/capabilities have actually been granted and should return CAPABILITY_NOT_AUTHORIZED rather than treating missing permissions as generic provider failure.
-
-## 29. Data Stream Onboarding Process
-
-Whenever the Intelligence project identifies a new evidence requirement, the AI worker should follow this sequence:
-
-```text
-New Evidence Requirement
-        ↓
-Is an existing data stream sufficient?
-        ├── YES → extend capability if needed
-        └── NO
-             ↓
-      identify provider/source
-             ↓
-      define acquisition contract
-             ↓
-      define authentication
-             ↓
-      define normalization
-             ↓
-      define data-quality checks
-             ↓
-      define errors
-             ↓
-      define refresh/cache
-             ↓
-      define monitoring/SLOs
-             ↓
-      define retention/security
-             ↓
-      expose Evidence
-```
-
-The Data Extraction Engine should grow incrementally rather than requiring all future integrations to be predicted today.
-
-## 30. Required Definition for Each Stream
-
-Each data stream should have a concise, standardized definition containing:
-
-```text
-ID
-Provider/source
-Purpose
-Capabilities
-Authentication
-Evidence produced
-Raw evidence policy
-Acquisition method
-Normalization
-Evidence schema/version
-Data-quality gates
-Refresh policy
-Cache policy
-Connection health
-Error codes
-Retry behaviour
-Rate-limit behaviour
-Security classification
-Retention/deletion policy
-Consumers
-Environment
-Current implementation status
-Owner
-```
-
-Avoid large narrative documents where metadata can provide the same information.
-
-The architecture should remain machine-readable wherever practical so future AI workers can inspect and extend it.
-
-## 31. Runtime Contract with Intelligence Engine
-
-An Intelligence execution should request **Evidence capabilities**, not provider implementations.
-
-Conceptually:
-
-```text
-Identity processor requires:
-website.identity_core
-```
-
-rather than:
-
-```text
-call Zyte endpoint X
-then parse field Y
-then call Cheerio
-```
-
-The Data Extraction Engine decides how to satisfy the evidence requirement. This allows provider implementations to change without rewriting Intelligence processors.
-
-## 32. Availability Contract
-
-The Evidence request should return one of three broad outcomes:
-
-```text
-AVAILABLE
-PARTIALLY_AVAILABLE
-UNAVAILABLE
-```
-
-along with appropriate metadata.
-
-Example:
-
-```text
-Website Evidence
-AVAILABLE
-
-Similarweb Evidence
-UNAVAILABLE
-reason = NO_PROVIDER_DATA
-
-Instagram Evidence
-UNAVAILABLE
-reason = BRAND_NOT_CONNECTED
-```
-
-This prevents missing external data from being confused with a system failure.
-
-## 33. Observability
-
-Every extraction run should be traceable.
-
-Where appropriate, telemetry should record provider, capability, source entity, start/end, latency, result, retry count, cache hit/miss, provider status code, normalized evidence produced, error code, refresh trigger and credential reference used without exposing the credential.
-
-A single acquisition request should carry a correlation/execution identifier through connector, normalization, storage and downstream Evidence publication so distributed failures can be traced end-to-end.
-
-The engine should support diagnosis without requiring developers to reproduce every failed acquisition manually.
-
-## 34. Security Principles
-
-The AI worker must preserve the following invariants:
-
-1. Never expose raw credentials unnecessarily.
-2. Never commit secrets to Git.
-3. Do not log secrets.
-4. Use least-privilege credentials.
-5. Separate public Evidence acquisition from authenticated private Evidence.
-6. Respect provider permissions and platform policy.
-7. Prevent SSRF/private-network access in website acquisition.
-8. Treat external payloads as untrusted input.
-9. Validate normalized Evidence before publishing it.
-10. Maintain traceability of sensitive operations.
-11. Prefer managed secret access and rotation over human-readable credential stores.
-12. Audit privileged secret and connection-management actions.
-
-## 35. What the AI Worker Is Expected to Optimize
-
-The worker should continuously improve the engine across reliability, freshness, security, reuse, cost, latency, observability, data quality and modularity.
-
-## 36. What the AI Worker Must Avoid
-
-Do not:
-
-- duplicate provider integrations without first checking the backend;
-- place Intelligence reasoning in extraction code;
-- let product modules call providers directly when an extraction capability exists;
-- create provider-specific schemas as permanent Intelligence contracts;
-- build unnecessary abstraction layers before a real source requires them;
-- expose credentials for convenience;
-- hide failed acquisition behind null values;
-- treat every error as retryable;
-- make every source refresh at the same cadence;
-- rebuild working backend services simply to move them into a new folder;
-- silently break an Evidence contract when a provider changes its payload;
-- retain sensitive raw Evidence without a defined retention reason.
-
-## 37. Initial Work Sequence
-
-### Stage A — Foundation
-
-Define:
-
-- Data Extraction Engine hierarchy;
-- stream registry;
-- Evidence capability contract;
-- connection-health contract;
-- error contract;
-- refresh/cache contract;
-- credential/security contract;
-- schema/versioning contract;
-- data-quality contract;
-- retention contract;
-- telemetry contract.
-
-Keep this layer minimal.
-
-### Stage B — Existing Backend Audit
-
-Inspect the current Creator Shop backend for existing implementations relating to:
-
-- direct website access;
-- Zyte;
-- Cheerio;
-- Gemini / LLM providers;
-- Meta Graph API;
-- Meta Business Discovery;
-- Meta Creator Marketplace;
-- Similarweb.
-
-For each stream classify:
+6. classify reusability;
+7. audit security, errors, retries and health handling;
+8. wrap/clean existing implementation where possible;
+9. migrate consumers gradually;
+10. remove duplicate provider access only after verification.
+
+Preferred classifications:
 
 ```text
 READY_TO_REUSE
@@ -758,61 +704,202 @@ NOT_FOUND
 REPLACE
 ```
 
-Do not modify the production clone during discovery unless explicitly instructed.
+Preferred migration pattern:
 
-### Stage C — Progressive Migration
+```text
+Existing implementation
+        ↓
+wrap behind Data Extraction contract
+        ↓
+verify existing behavior
+        ↓
+migrate consumers gradually
+        ↓
+remove duplicate old path
+```
 
-Move/wrap each approved implementation behind the Data Extraction Engine interfaces.
+Avoid rewriting working infrastructure merely for folder symmetry.
 
-Test existing application behaviour before removing old paths.
+## 27. Data Stream Onboarding Process
 
-## 38. Relationship with the Intelligence Engine AI Worker
+When Intelligence identifies a new Evidence requirement:
 
-The Intelligence Engine worker identifies:
+```text
+New Evidence Requirement
+        ↓
+Can an existing capability satisfy it?
+        ├── YES → extend/reuse
+        └── NO
+             ↓
+      identify provider/source
+             ↓
+      define capability
+             ↓
+      define authentication
+             ↓
+      define acquisition
+             ↓
+      define normalization/schema
+             ↓
+      define quality gates
+             ↓
+      define errors/retries
+             ↓
+      define refresh/cache
+             ↓
+      define monitoring/SLO
+             ↓
+      define privacy/retention
+             ↓
+      expose Evidence capability
+```
 
-> **What Evidence is required to produce Intelligence?**
+Grow incrementally. Do not predict all future infrastructure today.
 
-The Data Extraction Engine worker determines:
+## 28. Required Definition for Each Stream/Capability
 
-> **How do we reliably obtain and maintain that Evidence?**
+Each stream/capability should concisely define:
+
+```text
+ID
+Class
+Provider/source
+Purpose
+Capabilities
+Authentication / credential_ref
+Evidence produced
+Raw Evidence policy
+Acquisition method
+Normalization
+Evidence schema/version
+Quality gates
+Refresh policy
+Cache policy
+Connection health
+Error codes
+Technical retry policy
+Rate-limit behavior
+Security classification
+Retention/deletion policy
+Consumers
+Environment
+Current implementation status
+```
+
+Prefer machine-readable metadata over repeated narrative documentation.
+
+## 29. Relationship with Intelligence Engine Workers
+
+The collaboration loop is:
 
 ```text
 Intelligence Engine
-identifies evidence need
+identifies Evidence/model need and strategy
         ↓
-Evidence contract
+requests capability/model
         ↓
 Data Extraction Engine
-provides capability
+securely executes requested capability
+        ↓
+returns Evidence / provider result / structured failure
         ↓
 Intelligence Engine
-consumes normalized Evidence
+validates reasoning requirements and decides next strategy step
 ```
 
-Neither worker should silently redefine the other's architecture.
+Neither worker should silently redefine the other's contracts.
 
-## 39. Long-Term Objective
+## 30. What the Worker Should Optimize
 
-The Data Extraction Engine should eventually make the following statement true:
+Continuously improve:
 
-> **Any Creator Shop intelligence processor can request the Evidence it needs without knowing which provider supplies it, how credentials are stored, when it was refreshed, how it was normalized, or how provider failures are handled.**
+- reliability;
+- freshness;
+- security;
+- evidence quality;
+- reuse;
+- cost;
+- latency;
+- observability;
+- modularity;
+- provider portability;
+- recovery from provider change/failure.
 
-The engine owns those concerns centrally.
+## 31. What the Worker Must Avoid
 
-This allows the Intelligence Platform to focus on understanding the business rather than maintaining external integrations.
+Do not:
 
-## 40. Principal Design Rule
+- duplicate provider integrations before checking the backend;
+- place Intelligence reasoning in extraction code;
+- decide business/model fallback strategy invisibly;
+- silently substitute models/providers;
+- let product modules call providers directly where a governed capability exists;
+- expose secrets for convenience;
+- hide acquisition failures behind nulls;
+- treat every failure as retryable;
+- force all sources onto one refresh cadence;
+- build enterprise-scale infrastructure without demonstrated need;
+- rewrite working integrations solely for architectural aesthetics.
 
-When deciding whether something belongs inside the Data Extraction Engine, ask:
+## 32. Initial Work Sequence
 
-> **“Is this about obtaining, maintaining, securing, validating, refreshing or explaining the availability of Evidence?”**
+### Stage A — Foundation
 
-If yes, it belongs here.
+Define the minimal:
 
-If the question instead is:
+- repository hierarchy;
+- source/capability registry;
+- Evidence contract;
+- connection-health contract;
+- error contract;
+- refresh/cache contract;
+- credentials/security contract;
+- telemetry contract.
 
-> **“What does this Evidence mean?”**
+### Stage B — Existing Backend Audit
 
-it belongs in the Intelligence Engine.
+Audit current backend implementations for:
 
-This rule should govern future architectural decisions.
+- direct website access;
+- Zyte;
+- Cheerio;
+- Gemini;
+- OpenAI/other model connectivity if present;
+- Meta Graph API;
+- Meta Business Discovery;
+- Meta Creator Marketplace;
+- Similarweb.
+
+Classify each implementation using the reuse statuses above.
+
+### Stage C — Progressive Migration
+
+Wrap and migrate approved implementations incrementally, preserving existing behavior until replacement paths are verified.
+
+## 33. Long-Term Objective
+
+The engine should eventually make the following statement true:
+
+> **Any Creator Shop Intelligence processor can request the Evidence or provider/model execution capability it needs without knowing how credentials are stored, how the provider is called, how data is normalized, when it was refreshed, or how technical provider failures are handled.**
+
+At the same time:
+
+> **No Data Extraction component chooses the business reasoning strategy, model preference or cross-provider fallback order for an Intelligence task unless an explicit Intelligence policy authorizes that choice.**
+
+## 34. Principal Design Rule
+
+When deciding ownership, ask two questions.
+
+### Question A
+
+> **Is this about obtaining, maintaining, securing, refreshing, validating or explaining the availability of Evidence/provider capability?**
+
+If yes, it belongs in Data Extraction.
+
+### Question B
+
+> **Is this about why/when the capability is needed, what model/source should be preferred, what fallback strategy should run, or what the Evidence means?**
+
+If yes, it belongs in the Intelligence Engine / Execution Profile.
+
+This rule governs future architectural decisions.
