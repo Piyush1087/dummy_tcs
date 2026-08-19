@@ -4,6 +4,23 @@ Execution Profiles define **how already-defined Intelligence processors are orch
 
 They define execution order, parallelism, gates/checkpoints, prerequisites, active processor scopes, partial execution behaviour and failure handling. They do **not** define processor reasoning, evidence semantics, model instructions, or the events/schedules that trigger execution.
 
+## Directory responsibility
+
+This directory, `intelligence/execution_profiles/`, is the **canonical journey-level Intelligence orchestration authority**.
+
+It answers questions such as:
+
+- which Intelligence processors participate in a journey;
+- what their dependency/checkpoint order is;
+- what semantic lifecycle or persistence policy the journey requires;
+- which processor scopes are active.
+
+The separate directory `intelligence/runtime/execution_profiles/` is runtime/application-facing. It contains executable operational profiles used by the runtime layer, including bounded profiles that may coordinate deterministic/application-policy stages alongside Intelligence processors.
+
+Do not merge these directories merely because both contain YAML named as execution profiles. Do not assume that a runtime profile creates a new Intelligence branch. In particular, `runtime/execution_profiles/gatekeeper_scan.yaml` is an Execution Profile and does not itself imply a Gatekeeper Intelligence branch.
+
+When both layers represent the same conceptual journey, keep them aligned while preserving their different authority: canonical Intelligence orchestration here; executable runtime/application coordination under `runtime/execution_profiles/`.
+
 ## Identity Onboarding — v1.0 FROZEN
 
 Machine-readable profile: `identity_onboarding.yaml`
