@@ -1,131 +1,296 @@
 id: gatekeeper_admission_contract
-version: 1.0-frozen
+version: 1.1-frozen
 status: FROZEN
 scope: pre_intelligence_onboarding_admission
+product_authority: intelligence/product_authority/gatekeeper_v1_product_execution_authority.md
 
-purpose: Define the production admission flow that occurs before Surface/Deep Brand Intelligence. Gatekeeper decides whether a submitted domain is eligible to enter the Intelligence journey; it is not part of the Identity branch.
+purpose: Define the canonical Gatekeeper v1 admission result and production admission boundary before Surface Intelligence. Gatekeeper is an admission/serviceability capability and does not create a dedicated Intelligence branch.
+
+architecture:
+  dedicated_intelligence_branch: false
+  admission_ai_processor: gatekeeper_site_assessment
+  reusable_intelligence_rule: Gatekeeper Industry remains provisional admission classification until the required confirmation boundary; only confirmed Industry becomes reusable Brand Intelligence.
+  provisional_sub_industry_rule: Gatekeeper sub-industry is an optional non-authoritative hint and is never controlled downstream Sub-industry authority.
 
 production_alignment:
   existing_backend_entrypoints:
     - POST /api/v1/discovery/resolve
     - POST /api/v1/discovery/validate
-  reuse_existing_services:
+  reuse_existing_services_where_compatible:
     - gateAndNormalizeBrandUrl
     - BrandScanGateService
     - DiscoveryReachabilityService
-    - existing Gemini Gatekeeper provider binding
   frontend_entry: landing URL capture / Analyze My Brand
   rule: Preserve existing frontend/backend admission contracts where possible and replace internal classification/orchestration behind them incrementally.
+
+submission_requirements:
+  required:
+    - raw_url
+    - brand_ownership_or_authorization_attestation
+    - terms_acceptance
+    - privacy_policy_acceptance
+  persistence_metadata_required:
+    - normalized_domain
+    - attestation_state
+    - terms_version
+    - privacy_policy_version
+    - acceptance_timestamp
+    - user_or_session_reference_when_available
+  ownership: APPLICATION_CONTROL
 
 flow:
   - id: normalize_and_static_gate
     type: DETERMINISTIC
     responsibilities:
-      - trim URL and strip query/hash tracking noise
-      - add protocol when absent
-      - normalize www and canonical apex URL
-      - reject invalid syntax/credentials/protocol
+      - normalize and validate submitted URL/domain
       - reject private/reserved/local targets
-      - reject blocked social hosts
-      - reject known marketplace host labels
-      - reject hard-blocked government/military/education suffixes
-      - reject configured suspicious TLDs
+      - reject prohibited social/marketplace URL cases
+      - enforce configured domain/TLD restrictions
     terminal_on_failure: true
 
   - id: application_scan_gate
     type: APPLICATION_POLICY
     responsibilities:
-      - detect claimed organization
       - detect existing verified brand
-      - enforce scan/domain/IP safeguards
-      - resume eligible recent unverified scans
-      - allow new submission
+      - detect claimed organization
+      - detect recent resumable scan
+      - enforce scan/rate safeguards
+      - enforce verification requirement
+      - apply approved domain-specific override when present
     terminal_or_resume_outcomes: true
 
   - id: reachability_and_content_gate
     type: DETERMINISTIC_HTTP
     responsibilities:
       - verify reachable public site
-      - detect infrastructure failure / redirect hijack
-      - detect parked domain
-      - detect unreadable content
-      - detect foreign-language-only storefront according to current product policy
-    note: Preserve production behavior initially; may later be optimized if direct-provider retrieval proves sufficient and security/reliability is not reduced.
+      - validate redirect integrity
+      - detect parked or unusable website conditions where deterministically resolvable
+    terminal_on_failure_or_unsupported: true
 
-  - id: ai_site_and_industry_classification
-    type: AI
-    access_mode: website_direct
-    model_profile: fast_classification
+  - id: gatekeeper_site_assessment
+    type: AI_REASONING
+    processor_contract: intelligence/runtime/admission/gatekeeper_site_assessment/processor.yaml
     responsibilities:
-      - classify site/business type sufficiently to reject unsupported website classes not caught by static blocklists
-      - classify IndustryVertical
-      - return provisional short sub-industry label
-      - return confidence
-    output_contract:
-      industry: IndustryVertical
-      sub_industry: provisional_free_text
-      confidence: integer_0_100
-      supported: derived_or_validated_against_industry_bucket
-      site_type: optional_initially_required_when_new_gatekeeper_prompt_is_upgraded
-    no_crawl: true
+      - produce provisional IndustryVertical classification
+      - produce provisional short sub-industry hint when useful
+      - assess minimal entity category required for admission
+      - assess sufficiency of English Evidence
+      - assess creator-marketing applicability
+      - recognize valid commercial destination modes including app-first journeys
+      - emit semantic assessment confidence
+    note: This processor produces admission assessment signals, not final admission outcomes.
 
   - id: admission_decision
     type: DETERMINISTIC
     responsibilities:
-      - supported IndustryVertical -> eligible_for_user_industry_confirmation
-      - unsupported IndustryVertical -> reject/waitlist according to current policy
-      - hard-blocked IndustryVertical -> hard block
-      - UNKNOWN -> do not enter Intelligence journey
-    rule: Controlled Sub-industry membership is never an admission criterion.
+      - combine validated deterministic state and validated assessment signals
+      - emit exactly one canonical Gatekeeper outcome
+      - emit compact reason_code and permitted recovery actions
+      - derive manual_review_eligible without auto-queuing review
+      - derive confirmation requirement and Surface eligibility
+
+canonical_result:
+  gatekeeper_result:
+    version:
+      type: literal
+      value: gatekeeper_v1
+      nullable: false
+      authority_category: ADMISSION_METADATA
+    submission:
+      normalized_url:
+        type: string
+        nullable: false_after_successful_normalization
+        authority_category: ADMISSION_METADATA
+        producer: normalize_and_static_gate
+        consumer: [application_admission, reuse, verification, surface_handoff]
+        persistence: required
+        passes_to_surface: true
+      normalized_domain:
+        type: string
+        nullable: false_after_successful_normalization
+        authority_category: ADMISSION_METADATA
+        producer: normalize_and_static_gate
+        consumer: [application_admission, reuse, verification, surface_handoff]
+        persistence: required
+        passes_to_surface: true
+    assessment:
+      provisional_industry:
+        type: IndustryVertical|null
+        nullable: true
+        authority_category: REUSABLE_INTELLIGENCE_CANDIDATE
+        authority_lifecycle: provisional_admission_classification_until_confirmation
+        producer: gatekeeper_site_assessment
+        consumer: [admission_decision, industry_confirmation]
+        persistence: versioned_gatekeeper_result_initially
+        passes_to_surface: false_until_confirmed
+      provisional_sub_industry:
+        type: string|null
+        nullable: true
+        authority_category: EVIDENCE_DERIVED_SIGNAL
+        producer: gatekeeper_site_assessment
+        consumer: [admission_explanation, optional_downstream_hint]
+        persistence: versioned_gatekeeper_result_initially
+        passes_to_surface: optional_non_authoritative_hint_only
+      entity_category:
+        type: enum
+        values: [BRAND, MARKETPLACE, CREATOR_MARKETING_PLATFORM, NON_COMMERCIAL_ENTITY, UNKNOWN]
+        nullable: false_after_successful_assessment
+        authority_category: EVIDENCE_DERIVED_SIGNAL
+        producer: gatekeeper_site_assessment
+        consumer: [admission_decision]
+        persistence: versioned_gatekeeper_result_initially
+        passes_to_surface: false
+      english_evidence_status:
+        type: enum
+        values: [SUFFICIENT, INSUFFICIENT, UNCERTAIN]
+        nullable: false_after_successful_assessment
+        authority_category: EVIDENCE_DERIVED_SIGNAL
+        producer: gatekeeper_site_assessment
+        consumer: [admission_decision]
+        persistence: versioned_gatekeeper_result_initially
+        passes_to_surface: false
+      creator_marketing_applicability:
+        type: enum
+        values: [APPLICABLE, NOT_APPLICABLE, UNCERTAIN]
+        nullable: false_after_successful_assessment
+        authority_category: EVIDENCE_DERIVED_SIGNAL
+        producer: gatekeeper_site_assessment
+        consumer: [admission_decision]
+        persistence: versioned_gatekeeper_result_initially
+        passes_to_surface: false
+      commercial_destination_types:
+        type: array
+        item_enum: [WEBSITE, APP_STORE, PLAY_STORE, DIRECT_APK, LEAD_GENERATION, BOOKING, OFFLINE_LOCATION, SALES_CONTACT, MULTI_DESTINATION]
+        nullable: false
+        empty_allowed_when_unresolved: true
+        authority_category: EVIDENCE_DERIVED_SIGNAL
+        producer: gatekeeper_site_assessment
+        consumer: [admission_decision]
+        persistence: versioned_gatekeeper_result_initially
+        passes_to_surface: false
+      assessment_confidence:
+        type: enum
+        values: [HIGH, MEDIUM, LOW]
+        nullable: false_after_successful_assessment
+        authority_category: ADMISSION_METADATA
+        producer: gatekeeper_site_assessment
+        consumer: [gatekeeper_scan, admission_decision]
+        persistence: versioned_gatekeeper_result_initially
+        passes_to_surface: false
+    decision:
+      outcome:
+        type: enum
+        values: [ADMITTED, RESUME_AVAILABLE, EXISTING_BRAND, ORG_CLAIMED, VERIFICATION_REQUIRED, UNSUPPORTED, UNSUPPORTED_LANGUAGE, CLASSIFICATION_UNCERTAIN, HARD_BLOCKED, DOMAIN_UNREACHABLE, DOMAIN_INVALID, TECHNICAL_FAILURE]
+        nullable: false
+        authority_category: ADMISSION_DECISION
+        producer: admission_decision_or_terminal_deterministic_gate
+        persistence: required
+        passes_to_surface: precondition_only
+      reason_code:
+        type: string|null
+        nullable: true
+        authority_category: ADMISSION_DECISION
+        producer: admission_decision_or_terminal_deterministic_gate
+        vocabulary: compact_extensible_v1_only
+        persistence: required
+        passes_to_surface: false
+      recovery_actions:
+        type: array
+        item_enum: [CONTINUE, RESUME, SIGN_IN, REQUEST_ORG_ACCESS, VERIFY_DOMAIN, JOIN_WAITLIST, REQUEST_CLASSIFICATION_REVIEW, RETRY, CONTACT_SUPPORT]
+        nullable: false
+        authority_category: ADMISSION_DECISION
+        producer: admission_decision_or_terminal_deterministic_gate
+        persistence: required
+        passes_to_surface: false
+      manual_review_eligible:
+        type: boolean
+        nullable: false
+        authority_category: ADMISSION_DECISION
+        producer: admission_decision
+        persistence: required
+        passes_to_surface: false
+        rule: true means review may be requested; it does not mean review is automatically queued or required.
+    handoff:
+      gatekeeper_completed:
+        type: boolean
+        nullable: false
+        authority_category: ADMISSION_METADATA
+        producer: gatekeeper_scan
+        persistence: required_or_derivable
+        passes_to_surface: true
+      confirmed_industry_required:
+        type: boolean
+        nullable: false
+        authority_category: ADMISSION_DECISION
+        producer: admission_decision
+        persistence: required_or_derivable
+        passes_to_surface: precondition_only
+
+reason_code_policy:
+  rule: Keep the vocabulary compact and limited to implemented/frozen v1 conditions. Add codes only when a distinct operational or recovery behavior requires them.
+  initial_codes:
+    - INVALID_URL
+    - PRIVATE_OR_LOCAL_HOST
+    - PROHIBITED_URL
+    - BLOCKED_DOMAIN_OR_TLD
+    - EXISTING_VERIFIED_BRAND
+    - ORGANIZATION_ALREADY_CLAIMED
+    - RECENT_RESUMABLE_SCAN
+    - DOMAIN_VERIFICATION_REQUIRED
+    - DNS_OR_TIMEOUT
+    - REDIRECT_INTEGRITY_FAILED
+    - PARKED_OR_UNUSABLE_WEBSITE
+    - INSUFFICIENT_ENGLISH_EVIDENCE
+    - UNSUPPORTED_INDUSTRY
+    - CREATOR_MARKETING_NOT_APPLICABLE
+    - HARD_BLOCKED_INDUSTRY
+    - UNKNOWN_CLASSIFICATION
+    - AMBIGUOUS_ENTITY
+    - CONFLICTING_EVIDENCE
+    - INSUFFICIENT_EVIDENCE
+    - PROVIDER_CHAIN_EXHAUSTED
+
+manual_review_policy:
+  eligible_outcomes: [CLASSIFICATION_UNCERTAIN, UNSUPPORTED]
+  required_recovery_action_when_eligible: REQUEST_CLASSIFICATION_REVIEW
+  hard_block_eligible: false
+  auto_queue_review: false
 
 user_confirmation_boundary:
-  required_before_surface_deep_execution: true
-  required_field: industry
-  source: gatekeeper provisional classification
-  on_user_confirm_supported_industry: allow Surface/Deep Intelligence execution
-  on_user_disagree: route to correction/appeal flow to be designed before production freeze
-  note: Do not let a user freely self-select a supported Industry solely to bypass rejection; manual-review/override mechanics will be defined separately.
+  required_before_surface_execution: true
+  required_field: confirmed_industry
+  source: provisional_industry
+  on_user_confirm_supported_industry: confirmed value becomes reusable Brand Intelligence and Surface execution may proceed
+  on_user_disagree: use approved classification-review path; user must not freely self-select a supported Industry to bypass Gatekeeper
 
-execution_boundary:
-  gatekeeper_profile: gatekeeper_scan
-  downstream_profile: surface_deep_intelligence
-  invariant: surface_deep_intelligence is invoked only after a supported IndustryVertical has passed admission and the required user-confirmation boundary.
-  downstream_input: confirmed IndustryVertical plus canonical domain/admission context
+surface_handoff:
+  required:
+    - normalized_url
+    - normalized_domain
+    - confirmed_industry
+    - gatekeeper_completed
+  optional:
+    - provisional_sub_industry
+  optional_rule: provisional_sub_industry may be passed only as a non-authoritative hint when the downstream processor needs it.
+  excluded:
+    - assessment_confidence
+    - entity_category
+    - english_evidence_status
+    - creator_marketing_applicability
+    - commercial_destination_types
+    - reason_code
+    - recovery_actions
+    - manual_review_eligible
+    - provider_or_model_metadata
+    - latency_or_token_usage
 
 persistence_alignment:
-  discovery_session_model: DiscoveryLead
-  relevant_existing_fields:
-    - rawUrl
-    - normalizedUrl
-    - status
-    - isSupported
-    - industry
-    - subIndustry
-    - securityScore
-    - temporaryPayload
-    - expiresAt
-    - classificationEvidence
-  rule: Reuse existing DiscoveryLead/session structures for Gatekeeper state unless a concrete missing field requires migration.
+  current_backend_candidate: DiscoveryLead/session structures
+  current_known_fields: [rawUrl, normalizedUrl, status, isSupported, industry, subIndustry, securityScore, temporaryPayload, expiresAt, classificationEvidence, userId]
+  gatekeeper_assessment_signals: persist_as_one_versioned_structured_result_initially
+  exact_field_or_model: OPEN_PENDING_BACKEND_RECONCILIATION
+  first_class_columns_for_each_signal: false
+  rule: Audit the current backend before selecting or migrating the exact persistence target. Do not create a parallel Intelligence value store.
 
-rejection_families:
-  blocked_url_or_security:
-    examples: [INVALID_URL, SOCIAL_OR_MARKETPLACE, PRIVATE_OR_LOCAL_HOST, BLOCKED_TLD]
-  existing_account_or_control:
-    examples: [ORG_CLAIMED, BRAND_ACTIVE, VERIFICATION_REQUIRED, RESUME]
-  infrastructure:
-    examples: [HTTP_STATUS, DNS_OR_TIMEOUT, REDIRECT_HIJACK]
-  content_waitlist:
-    examples: [PARKED_DOMAIN, CONTENT_UNREADABLE, FOREIGN_LANGUAGE]
-  business_admission:
-    examples: [UNSUPPORTED_INDUSTRY, BLOCKED_INDUSTRY, UNKNOWN_INDUSTRY]
-  note: Existing HTTP/UI response names should be preserved initially even if internal reason taxonomy becomes more structured.
-
-manual_override_extension_point:
-  status: RESERVED_FOR_NEXT_JOURNEY_DESIGN_PASS
-  intent: allow a rejected brand to raise an "industry mapped incorrectly" concern without enabling self-service bypass
-  expected_components:
-    - appeal submission
-    - manual review
-    - auditable domain-level override/whitelist
-    - invitation/retry mechanism
-  rule: override must be deterministic and domain-specific; it must not modify the global Industry classifier merely to admit one exception.
+telemetry_boundary:
+  rule: Provider/model/evidence-run/latency/token/fallback metadata belongs to shared execution telemetry/provenance, not the Gatekeeper reusable result or Surface handoff.

@@ -1,33 +1,21 @@
 id: admission_industry_taxonomy
-version: 1.0-frozen
+version: 1.1-frozen
 status: FROZEN
 scope: gatekeeper_and_onboarding_admission
+product_authority: intelligence/product_authority/gatekeeper_v1_product_execution_authority.md
 
-purpose: Align Creator Shop admission and Intelligence runtime with the production backend IndustryVertical enum. This contract does not introduce a third persisted Industry enum.
+purpose: Align Creator Shop admission and Intelligence runtime with the production backend IndustryVertical enum without introducing another persisted Industry enum or forcing downstream Sub-industry taxonomy into Gatekeeper.
 
 source_of_truth:
   backend_enum: IndustryVertical
-  production_repo: AatishBrianDSilva/creator-commerce-backend-v2-clone
+  production_repo_reference: creator-commerce-backend-v2-clone
   prisma_path: prisma/schema.prisma
   rule: Industry values used at application/admission boundaries must use IndustryVertical names exactly.
 
 industry_vertical_values:
-  supported:
-    - D2C
-    - SAAS_AI
-    - HEALTHCARE
-    - OFFLINE_SERVICES
-  unsupported_waitlist_or_regret:
-    - REAL_ESTATE
-    - B2B_AGENCY
-    - MEDIA
-    - EDUCATION
-    - ENTERTAINMENT
-    - UNKNOWN
-  hard_blocked:
-    - GAMBLING
-    - ADULT
-    - FRAUDULENT_HIGH_RISK
+  supported: [D2C, SAAS_AI, HEALTHCARE, OFFLINE_SERVICES]
+  unsupported_waitlist_or_regret: [REAL_ESTATE, B2B_AGENCY, MEDIA, EDUCATION, ENTERTAINMENT, UNKNOWN]
+  hard_blocked: [GAMBLING, ADULT, FRAUDULENT_HIGH_RISK]
 
 legacy_application_enums:
   BrandRoutingType:
@@ -48,18 +36,30 @@ alias_acceptance_at_ai_boundary:
   OFFLINE_EXPERIENCE: OFFLINE_SERVICES
   rule: Aliases may be accepted/normalized at provider boundaries, but canonical runtime/application output is always IndustryVertical.
 
+gatekeeper_industry:
+  field: provisional_industry
+  type: IndustryVertical|null
+  authority: PROVISIONAL_ADMISSION_CLASSIFICATION
+  rule: A Gatekeeper-produced Industry does not become reusable Brand Intelligence until the required confirmation boundary succeeds.
+
 gatekeeper_sub_industry:
+  field: provisional_sub_industry
   type: provisional_free_text
   admission_critical: false
-  max_role: explanatory_hint
-  rule: Gatekeeper may return a short free-form sub-industry label. Failure to fit a controlled sub-industry must never reject an otherwise supported Industry.
-  rationale: Production discovery currently stores subIndustry as String and the direct Gemini Gatekeeper returns a free-form short label.
+  max_role: explanatory_or_optional_downstream_hint
+  rule: Failure to fit a controlled Sub-industry must never reject an otherwise supported Industry.
+
+confirmed_industry:
+  type: IndustryVertical
+  applies_after: gatekeeper_admission_and_required_confirmation
+  authority: REUSABLE_BRAND_INTELLIGENCE
+  rule: Only a confirmed supported IndustryVertical passes into Surface as reusable Brand Intelligence.
 
 intelligence_sub_industry:
   type: controlled_supported_industry_taxonomy
-  applies_after: supported_industry_admission_and_user_confirmation
+  applies_after: supported_industry_admission_and_confirmation
   purpose: stable downstream filtering, editing, matching and reporting
-  fallback_rule: Use parent-specific OTHER when no defined sub-industry is a defensible fit.
+  fallback_rule: Use parent-specific OTHER when no defined Sub-industry is a defensible fit.
   expansion_rule: Expand taxonomy from observed OTHER/failure patterns without changing IndustryVertical.
 
 industry_niche:
@@ -69,12 +69,12 @@ industry_niche:
 
 validation:
   gatekeeper:
-    industry_must_normalize_to_industry_vertical: true
+    provisional_industry_must_normalize_to_industry_vertical_when_non_null: true
     supported_decision_derived_from_industry_vertical_bucket: true
-    sub_industry_taxonomy_membership_required: false
+    provisional_sub_industry_taxonomy_membership_required: false
   downstream_intelligence:
-    industry_must_be_supported_industry_vertical: true
-    controlled_sub_industry_must_belong_to_industry: true
+    confirmed_industry_must_be_supported_industry_vertical: true
+    controlled_sub_industry_must_belong_to_confirmed_industry: true
     industry_niche_may_be_null: true
 
 migration_from_identity_test_taxonomy:
@@ -82,4 +82,4 @@ migration_from_identity_test_taxonomy:
   OFFLINE_EXPERIENCES: OFFLINE_SERVICES
   D2C: D2C
   HEALTHCARE: HEALTHCARE
-  note: identity_test used temporary Intelligence naming. Production profiles must use IndustryVertical vocabulary; test artifacts/validators should be migrated before the next representative test.
+  note: identity_test used temporary Intelligence naming. Production Gatekeeper artifacts use IndustryVertical vocabulary; the legacy Identity Gatekeeper validator remains an implementation defect until reconciled.
