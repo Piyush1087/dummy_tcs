@@ -1,8 +1,9 @@
 id: gatekeeper_scan
-version: 1.1-frozen
+version: 1.2-frozen
 status: FROZEN
 scope: pre_intelligence_admission
 product_authority: intelligence/product_authority/gatekeeper_v1_product_execution_authority.md
+product_authority_amendment: intelligence/product_authority/gatekeeper_v1_industry_confirmation_amendment.md
 purpose: Qualify a submitted brand domain before Surface Intelligence is allowed to run, using fast deterministic resolution followed by progressive semantic escalation only when necessary.
 
 defaults:
@@ -25,8 +26,8 @@ stages:
     kind: APPLICATION_CONTROL
     required: true
     responsibilities:
-      - persist attestation state
-      - persist Terms/Privacy versions and acceptance timestamp
+      - persist ownership/authorization attestation state
+      - bind and persist server-owned Terms/Privacy versions and acceptance timestamp
       - persist user/session reference when available
 
   - id: normalize_and_static_gate
@@ -59,11 +60,19 @@ stages:
       provider: GEMINI
       model: gemini-2.5-flash
     requested_capability: gatekeeper_primary_web_assessment
+    capability_owner: DATA_EXTRACTION
     evidence_semantics:
       - OWNED_DOMAIN
       - PUBLIC_WEB_SEARCH
     combined_provider_capability_allowed: true
-    provenance_rule: Owned URL context and Google Search grounding may be satisfied through one combined Gemini provider capability, but evidence provenance must remain distinguishable.
+    provenance_rule: Owned URL context and Google Search grounding may be satisfied through one combined Gemini provider capability, but Evidence provenance must remain distinguishable.
+    prompt_binding:
+      builder: shared_intelligence_prompt_builder
+      processor: intelligence/runtime/admission/gatekeeper_site_assessment/processor.yaml
+      reasoning: intelligence/runtime/admission/gatekeeper_site_assessment/reasoning.yaml
+      rules: intelligence/runtime/admission/gatekeeper_site_assessment/rules.yaml
+      taxonomy: intelligence/runtime/admission/taxonomy_contract.yaml
+      output_contract: intelligence/runtime/admission/gatekeeper_site_assessment/output_contract.yaml
     validation:
       structural: gatekeeper_site_assessment/output_contract.yaml
       semantic: gatekeeper_site_assessment/rules.yaml
@@ -85,7 +94,8 @@ stages:
     run_when: primary_semantically_uncertain_on_admission_critical_dimension
     provider: PARALLEL_AI
     requested_capability: company_public_web_research
-    purpose: Deeper external public company/web research and reassessment of unresolved admission-critical questions.
+    capability_owner: DATA_EXTRACTION
+    purpose: Acquire deeper external public company/web Evidence for unresolved admission-critical questions; Intelligence then reassesses using the canonical Gatekeeper processor artifacts.
     validation:
       structural: gatekeeper_site_assessment/output_contract.yaml
       semantic: gatekeeper_site_assessment/rules.yaml
@@ -98,7 +108,10 @@ stages:
       - admission_critical_semantic_uncertainty_remains_after_parallel
     provider: OPENAI
     model: CONFIGURABLE_DEFERRED
-    requested_execution: structured_gatekeeper_assessment_over_approved_evidence_context
+    requested_capability: openai_structured_assessment
+    capability_owner: DATA_EXTRACTION
+    evidence_input: approved_evidence_context_only
+    rule: Intelligence selects the approved model later; Data Extraction must not select or substitute the model.
     validation:
       structural: gatekeeper_site_assessment/output_contract.yaml
       semantic: gatekeeper_site_assessment/rules.yaml
@@ -109,6 +122,20 @@ stages:
     dependencies: [evaluate_primary_assessment]
     may_consume_if_executed: [parallel_semantic_escalation, openai_semantic_or_technical_fallback]
     rules_contract: intelligence/runtime/admission/gatekeeper_site_assessment/rules.yaml
+    output_contract: intelligence/runtime/admission/gatekeeper_admission_contract.yaml
+
+  - id: industry_confirmation
+    kind: APPLICATION_AUTHORITY
+    required_when: admission_decision.outcome == ADMITTED
+    dependencies: [admission_decision]
+    input:
+      assessed_industry: gatekeeper_result.assessment.provisional_industry
+      user_selected_industry: explicit_user_confirmation
+    rules:
+      - Same supported Industry sets confirmation_source=AI_ASSESSED_ACCEPTED, industry_disagreement_flag=false, and permits Surface when remaining preconditions pass.
+      - Different supported Industry requires explicit frontend warning/confirmation, sets confirmation_source=USER_CONFIRMED_OVERRIDE and industry_disagreement_flag=true, preserves assessed Industry as provenance, and remains Surface eligible.
+      - Supported Industry disagreement is an operational marker only; it does not imply manual_review_eligible or REQUEST_CLASSIFICATION_REVIEW.
+      - Explicit unsupported/Coming Soon confirmation sets confirmation_source=USER_CONFIRMED_UNSUPPORTED, resolves authoritative backend/application outcome to UNSUPPORTED, and prohibits Surface execution.
     output_contract: intelligence/runtime/admission/gatekeeper_admission_contract.yaml
 
 fallback_policy:
@@ -137,6 +164,18 @@ confidence_policy:
   medium: selectively corroborate only when decision-sensitive uncertainty remains
   low: must not auto-admit; further Evidence/fallback is required
 
+review_concepts:
+  industry_disagreement_flag:
+    owner: APPLICATION_OPERATIONAL_REVIEW
+    blocks_surface: false
+    user_requested_review: false
+  manual_review_eligible:
+    owner: GATEKEEPER_ADMISSION_DECISION
+    auto_queue: false
+  REQUEST_CLASSIFICATION_REVIEW:
+    owner: USER_RECOVERY_ACTION
+    implied_by_industry_disagreement_flag: false
+
 manual_review_policy:
   top_level_outcome: none
   eligible_field: manual_review_eligible
@@ -146,12 +185,16 @@ manual_review_policy:
   hard_block_eligible: false
 
 persistence:
-  submission_control_metadata: required
+  submission_control_metadata: durable_application_legal_audit_required
+  policy_versions: server_owned_authoritative_values
   deterministic_admission_state: required_when_resumable_or_terminal
   gatekeeper_assessment_signals: one_versioned_structured_result_initially
-  exact_backend_field_or_model: OPEN_PENDING_BACKEND_RECONCILIATION
+  assessed_and_confirmed_industry: traceable
+  industry_disagreement_flag: persisted_operational_metadata
+  final_outcome_and_recovery_actions: persisted
+  exact_backend_field_or_model: RESOLVE_IN_RUNTIME_RECONCILIATION
   execution_telemetry: shared_intelligence_telemetry
-  rule: Do not create first-class columns per evolving Gatekeeper-only signal before backend reconciliation.
+  rule: Do not create first-class columns per evolving Gatekeeper-only signal or a parallel Intelligence value store.
 
 outputs:
   contract: intelligence/runtime/admission/gatekeeper_admission_contract.yaml
@@ -159,7 +202,12 @@ outputs:
 confirmation_boundary:
   provisional_industry_source: gatekeeper_result.assessment.provisional_industry
   confirmed_industry_required_before_surface: true
-  confirmed_industry_becomes_reusable_brand_intelligence: true
+  supported_mvp_industries: [D2C, SAAS_AI, HEALTHCARE, OFFLINE_SERVICES]
+  supported_confirmation_becomes_reusable_brand_intelligence: true
+  different_supported_confirmation_allowed: true
+  different_supported_sets_industry_disagreement_flag: true
+  unsupported_confirmation_resolves_to: UNSUPPORTED
+  unsupported_confirmation_surface_eligible: false
 
 handoff:
   downstream_profile: surface_deep_intelligence
@@ -168,6 +216,7 @@ handoff:
     - normalized_domain
     - confirmed_industry
     - gatekeeper_completed
+  eligibility_rule: confirmed_industry must be supported and confirmation.surface_eligible must be true.
   optional:
     - provisional_sub_industry
   optional_rule: Pass provisional_sub_industry only as a non-authoritative hint if the downstream processor needs it.
@@ -176,5 +225,6 @@ handoff:
 notes:
   - Gatekeeper is an admission capability and does not create a dedicated Intelligence branch.
   - gatekeeper_site_assessment is the frozen admission AI processor name.
-  - Existing /discovery/resolve and /discovery/validate contracts should remain frontend-facing admission APIs unless later product authority changes them.
-  - The legacy Identity gatekeeper validator that requires controlled Sub-industry membership is a known implementation defect and must be reconciled before this profile is implemented.
+  - Existing /discovery/resolve and /discovery/validate contracts remain frontend-facing admission APIs unless later product authority changes them.
+  - Provider connectivity, credentials and bounded technical retry remain Data Extraction responsibilities.
+  - The legacy Identity gatekeeper validator must not require controlled taxonomy membership for provisional Gatekeeper Sub-industry.
