@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gatekeeper - Pre-Scan Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;900&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#006c4b",
+                        "surface-page": "#F8F8F8",
+                        "primary-container": "#34d399",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#4f676b",
+                        "secondary-container": "#cbe4e9",
+                        "tertiary-container": "#ffa668",
+                        "inverse-on-surface": "#ebf3ec",
+                        "tertiary-fixed": "#ffdcc7",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#161d19",
+                        "background": "#f4fbf4",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "primary-fixed": "#68fcbf",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dde4dd",
+                        "secondary": "#4b6267",
+                        "surface-container": "#e8f0e9",
+                        "on-error-container": "#93000a",
+                        "outline": "#6c7a71",
+                        "primary-fixed-dim": "#45dfa4",
+                        "tertiary": "#F5926E",
+                        "on-primary": "#002114",
+                        "surface-bright": "#f4fbf4",
+                        "text-muted": "#6B7280",
+                        "disabled-bg": "#F3F4F6",
+                        "on-primary-container": "#00563b",
+                        "inverse-primary": "#45dfa4",
+                        "on-background": "#161d19",
+                        "on-primary-fixed": "#002114",
+                        "surface-workflow": "#F0FDF4",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "surface-container-highest": "#dde4dd",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#005137",
+                        "surface-container-low": "#eef6ee",
+                        "surface-dim": "#d4dcd5",
+                        "on-tertiary-fixed": "#311300",
+                        "surface-card": "#FFFFFF",
+                        "inverse-surface": "#2b322e",
+                        "on-tertiary-container": "#783901",
+                        "surface-container-high": "#e2eae3",
+                        "status-error": "#CA0F1C",
+                        "border-default": "#E5E7EB",
+                        "text-high": "#0E1214",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "warning-bg": "#FFF6F6",
+                        "on-secondary-fixed": "#061f23",
+                        "outline-variant": "#bbcac0",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "surface": "#f4fbf4",
+                        "primary": "#006c4b",
+                        "on-surface-variant": "#3c4a42",
+                        "secondary-fixed": "#cee7ec",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        unit: "8px",
+                        sm: "16px",
+                        xl: "48px",
+                        "header-mobile": "56px",
+                        "sidebar-expanded": "240px",
+                        "md": "24px",
+                        "sidebar-collapsed": "80px",
+                        "lg": "32px",
+                        "header-desktop": "72px",
+                        "xs": "8px"
+                    },
+                    fontFamily: {
+                        label: ["Plus Jakarta Sans"],
+                        body: ["Source Sans 3"],
+                        "body-bold": ["Plus Jakarta Sans"],
+                        eyebrow: ["Plus Jakarta Sans"],
+                        caption: ["Source Sans 3"],
+                        h1: ["Plus Jakarta Sans"],
+                        "h1-mobile": ["Plus Jakarta Sans"],
+                        h2: ["Plus Jakarta Sans"],
+                        "h2-mobile": ["Plus Jakarta Sans"],
+                        h3: ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        label: ["14px", { lineHeight: "1.2", letterSpacing: "0", fontWeight: "700" }],
+                        body: ["14px", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }],
+                        "body-bold": ["14px", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "700" }],
+                        eyebrow: ["12px", { lineHeight: "1.2", letterSpacing: "0.04em", fontWeight: "700" }],
+                        caption: ["12px", { lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "500" }],
+                        h1: ["32px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "h1-mobile": ["28px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        h2: ["24px", { lineHeight: "1.2", letterSpacing: "-0.005em", fontWeight: "700" }],
+                        "h2-mobile": ["20px", { lineHeight: "1.2", letterSpacing: "-0.005em", fontWeight: "700" }],
+                        h3: ["18px", { lineHeight: "1.3", letterSpacing: "0", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-surface-card/80 backdrop-blur-md border border-border-default shadow-[0_8px_32px_0_rgba(0,0,0,0.05)];
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface-page text-on-surface font-body min-h-screen relative overflow-hidden">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface-container-highest dark:bg-inverse-surface border-b border-outline-variant dark:border-on-surface-variant fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-[72px] px-8 w-full max-w-7xl mx-auto">
+<div class="font-h2 text-h2 font-black text-primary dark:text-primary-fixed-dim">
+                Gatekeeper
+            </div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label text-label" href="#">Dashboard</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label text-label" href="#">Scans</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label text-label" href="#">Inventory</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label text-label" href="#">Reports</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+<button class="font-label text-label text-primary dark:text-primary-fixed-dim active:scale-95 transition-transform ml-4">
+                    Sign In
+                </button>
+</div>
+</div>
+</nav>
+<!-- Background Content (Blurred out) -->
+<main class="pt-[72px] px-8 w-full max-w-7xl mx-auto min-h-screen filter blur-sm pointer-events-none opacity-50 transition-all duration-300">
+<div class="py-12">
+<h1 class="font-h1 text-h1 mb-6 text-on-surface">Recent Scans Overview</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-surface-card border border-border-default rounded-lg p-6">
+<div class="font-eyebrow text-eyebrow text-text-muted mb-2 uppercase">Total Scans</div>
+<div class="font-h1 text-h1 text-on-surface">1,248</div>
+</div>
+<div class="bg-surface-card border border-border-default rounded-lg p-6">
+<div class="font-eyebrow text-eyebrow text-text-muted mb-2 uppercase">Pending Review</div>
+<div class="font-h1 text-h1 text-warning-bg">34</div>
+</div>
+<div class="bg-surface-card border border-border-default rounded-lg p-6">
+<div class="font-eyebrow text-eyebrow text-text-muted mb-2 uppercase">Flagged</div>
+<div class="font-h1 text-h1 text-status-error">12</div>
+</div>
+</div>
+<div class="bg-surface-card border border-border-default rounded-lg overflow-hidden">
+<div class="px-6 py-4 border-b border-border-default flex justify-between items-center bg-surface-container-lowest">
+<h2 class="font-h3 text-h3 text-on-surface">Latest Submissions</h2>
+</div>
+<div class="p-6">
+<!-- Dummy list items -->
+<div class="flex items-center justify-between py-4 border-b border-border-default last:border-0">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">storefront</span>
+</div>
+<div>
+<div class="font-body-bold text-body-bold">example-brand.com</div>
+<div class="font-caption text-caption text-text-muted">Submitted 2 hours ago</div>
+</div>
+</div>
+<div class="px-3 py-1 bg-surface-workflow text-primary rounded-full font-caption text-caption border border-primary-container">Processed</div>
+</div>
+<div class="flex items-center justify-between py-4 border-b border-border-default last:border-0">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">shopping_bag</span>
+</div>
+<div>
+<div class="font-body-bold text-body-bold">shop-local.net</div>
+<div class="font-caption text-caption text-text-muted">Submitted 5 hours ago</div>
+</div>
+</div>
+<div class="px-3 py-1 bg-warning-bg text-on-surface rounded-full font-caption text-caption border border-tertiary-fixed">Pending</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Modal Overlay Backdrop -->
+<div class="fixed inset-0 bg-on-surface/50 backdrop-blur-[2px] z-[60] flex items-center justify-center p-4 sm:p-6" id="scanModalOverlay">
+<!-- Pre-Scan Confirmation Modal -->
+<div class="bg-surface-card w-full max-w-xl rounded-xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.15)] border border-border-default overflow-hidden flex flex-col transform transition-all scale-100 opacity-100" id="scanModal">
+<!-- Modal Header with Image -->
+<div class="h-[120px] bg-surface-variant relative flex flex-col justify-end p-6 border-b border-border-default overflow-hidden">
+<div class="absolute inset-0 bg-surface-tint/10 mix-blend-multiply z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card to-transparent z-20"></div>
+<img alt="Creator Shop Logo" class="absolute right-6 top-6 h-8 object-contain z-30 mix-blend-darken opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbHz_v0I5nyqnTcazfMEkb6luJGQpejybKMp02MwUatb_cPMZ0VXeQP9XkvMGkZ-RwwdmkBABGv49J_yeyiyUWGGx8pSSchszcoxa7PYbjpsZuaPgJFd57_25rQHBW66C4UuwIhuQvBkULjBOMKSv8CbAf5e4ft3GX0yjpL_wZ3N6qpcVcND1fv0IkOVd3jULmt9_tUT6_QsC-pD2Vvk5YJZ8C0euvaP7ckV00z3oWwxg0Ti8vDLh_flgiG8sg9P6_UpU"/>
+<div class="relative z-30">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-wider">Admission Successful</span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface leading-tight">Pre-Scan Confirmation</h2>
+</div>
+</div>
+<!-- Modal Body -->
+<div class="p-6 md:p-8 flex-1 overflow-y-auto">
+<!-- Entity Info Card -->
+<div class="bg-surface-workflow border border-primary-container/30 rounded-lg p-5 mb-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<div class="font-caption text-caption text-text-muted uppercase tracking-wider mb-1">Detected Target</div>
+<div class="font-h3 text-h3 text-on-surface flex items-center gap-2">
+                                thecreatorshop.in
+                                <span class="material-symbols-outlined text-text-muted text-[16px]">open_in_new</span>
+</div>
+</div>
+<a class="font-label text-label text-primary hover:underline flex items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-[16px] group-hover:-translate-y-[1px] transition-transform">edit</span>
+                            Change
+                        </a>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">psychology</span>
+</div>
+<div>
+<div class="font-caption text-caption text-text-muted">AI-Assessed Industry Category</div>
+<div class="font-body-bold text-body-bold text-on-surface flex items-center gap-2">
+                                Direct-to-Consumer (D2C)
+                                <div class="px-2 py-0.5 bg-primary-container/20 text-on-primary-container rounded text-[10px] font-bold uppercase tracking-wider border border-primary-container/30">High Confidence</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Next Steps Info -->
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 rounded-full bg-surface-container-low border border-border-default flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">manage_search</span>
+</div>
+<div>
+<h3 class="font-label text-label text-on-surface mb-2">Deep Brand Intelligence Scan</h3>
+<p class="font-body text-body text-text-muted leading-relaxed">
+                                Our engine will now perform a comprehensive analysis of public footprint, sentiment, and basic compliance metrics for this entity. This process typically takes <strong>approximately 2 minutes</strong> to complete.
+                            </p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 rounded-full bg-surface-container-low border border-border-default flex items-center justify-center text-on-surface-variant mt-1">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div>
+<h3 class="font-label text-label text-on-surface mb-2">Optional Social Integration</h3>
+<p class="font-body text-body text-text-muted leading-relaxed">
+                                You will have the option to connect Meta/Instagram accounts in the next phase for deeper insights. This is <em>not required</em> to start the initial scan.
+                            </p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 rounded-full bg-surface-container-low border border-border-default flex items-center justify-center text-on-surface-variant mt-1">
+<span class="material-symbols-outlined">fact_check</span>
+</div>
+<div>
+<h3 class="font-label text-label text-on-surface mb-2">Review Process</h3>
+<p class="font-body text-body text-text-muted leading-relaxed">
+                                Once the scan concludes, all compiled intelligence and risk vectors will be presented for your review before formal onboarding proceeds.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer (Actions) -->
+<div class="p-6 md:px-8 md:py-6 border-t border-border-default bg-surface-container-lowest flex flex-col sm:flex-row gap-4 justify-end items-center">
+<button class="w-full sm:w-auto px-6 py-3 rounded-lg font-label text-label text-on-surface border border-border-default hover:bg-surface-container-low transition-colors active:scale-95">
+                    Cancel Admission
+                </button>
+<button class="w-full sm:w-auto px-8 py-3 rounded-lg font-label text-label text-on-primary bg-primary hover:bg-on-primary-fixed-variant transition-colors shadow-sm flex items-center justify-center gap-2 group active:scale-95">
+                    Start Brand Intelligence Scan
+                    <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Script for subtle entrance animation -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('scanModal');
+            // Ensure starting state
+            modal.style.opacity = '0';
+            modal.style.transform = 'scale(0.95) translateY(10px)';
+            
+            // Trigger animation next frame
+            requestAnimationFrame(() => {
+                modal.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                modal.style.opacity = '1';
+                modal.style.transform = 'scale(1) translateY(0)';
+            });
+        });
+    </script>
+</body></html>

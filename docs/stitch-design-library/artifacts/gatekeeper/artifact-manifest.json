@@ -1,0 +1,98 @@
+{
+  "project": {
+    "title": "Gatekeeper scan codex",
+    "id": "18416895892928839841"
+  },
+  "classification": "accepted-reference-input",
+  "sourceExport": "C:\\Users\\piyus\\Desktop\\stitch_gatekeeper_scan_codex (5)",
+  "familyBReplacementExport": "C:\\Users\\piyus\\Desktop\\stitch\\_gatekeeper\\_scan\\_codex (5)",
+  "canonicalCount": 8,
+  "artifacts": [
+    {
+      "reference": "GK-ST-D01 — Gatekeeper URL Entry — Desktop",
+      "screenId": "96e47213de484eaa96d3d27fb26120c9",
+      "folder": "canonical/001-gk-st-d01-gatekeeper-url-entry-desktop",
+      "htmlSha256": "33C2D4A6FE2B6A9F17411A0E8CC0A45BAF16FE7805D5298C93B35F0468CF9574",
+      "pngSha256": "CB3587FC6523860FDA071C4A3AB5F03B0A964C201CFC9AC90F032FE8443CF49A",
+      "pngWidth": 1600,
+      "pngHeight": 1280,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "GK-ST-M01 — Gatekeeper URL Entry — Mobile",
+      "screenId": "0eafadf599b74930bf1c44e753da6ab8",
+      "folder": "canonical/002-gk-st-m01-gatekeeper-url-entry-mobile",
+      "htmlSha256": "FED055CA397984A8EE3AF65E79B0150D822D52AF04BC546324C2CE60B6F79D1F",
+      "pngSha256": "E8343F6054BAD6B5B4CA0ED132F8019C3E664E0C6191C69C5B5982AC372CB67E",
+      "pngWidth": 552,
+      "pngHeight": 1600,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "GK-ST-D02 — Gatekeeper Recovery — Desktop — Export Final",
+      "screenId": "17ee893f03e64a92aef0ab128482678a",
+      "folder": "canonical/003-gk-st-d02-gatekeeper-recovery-desktop-export-final",
+      "htmlSha256": "DE834D38C8F3735E7E3985F9E57E198079589CAC4B10483DC526206F76BE037C",
+      "pngSha256": "E6804E3DF5B28784E231EC87D51E870FAE5B52776A9950A41865178152689363",
+      "pngWidth": 512,
+      "pngHeight": 410,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "GK-ST-M02 — Gatekeeper Recovery — Mobile — Final",
+      "screenId": "f0663d2e37b14f0a9f227e142d5438ae",
+      "folder": "canonical/004-gk-st-m02-gatekeeper-recovery-mobile-final",
+      "htmlSha256": "52678C4DCD502E942C2735403DD31A96983747CAAFA3D7728CBB11F48D95A564",
+      "pngSha256": "B4A2EF082A3585672853FC85C799520AC9F89B1C3661ED80825E6594A43EB29C",
+      "pngWidth": 183,
+      "pngHeight": 512,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "GK-ST-D03 — Pre-Scan Confirmation — Desktop",
+      "screenId": "c517affc368942d6927d57cf3b044a10",
+      "folder": "canonical/005-gk-st-d03-pre-scan-confirmation-desktop",
+      "htmlSha256": "44681F4A7AFBA4F6662A00C6B178FB0D740B742BF8548532A937EA3AA77CDC0F",
+      "pngSha256": "4ACCF0CEAFCA7C4F2DF7F7F82E1B096F1B507F7D20F53E679972A01C747B4FB8",
+      "pngWidth": 1600,
+      "pngHeight": 1280,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "GK-ST-M03 — Pre-Scan Confirmation — Mobile",
+      "screenId": "414514c838fc435293ad07c47cd552c1",
+      "folder": "canonical/006-gk-st-m03-pre-scan-confirmation-mobile",
+      "htmlSha256": "05DD509B3E80CA494D5600B772E179E02B9A6A94AC3CA38C772AFF7F92E07EDB",
+      "pngSha256": "F7F823213C148F27F037229EA11710D03F44ACBF9B2E4C0B074C7D5919CB9945",
+      "pngWidth": 706,
+      "pngHeight": 1600,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "GK-ST-D04 — Industry Exception — Desktop",
+      "screenId": "85c209b22953497fb2ac7407df91d628",
+      "folder": "canonical/007-gk-st-d04-industry-exception-desktop",
+      "htmlSha256": "36D25D607D44DFBA8A299B6267E2E6ED829342B5B23DD633C31A8C07F6F40669",
+      "pngSha256": "E961B3160C724EEBD50E8AE7D32EA04406D6927B937D8EC6E6F0935D0F7507F0",
+      "pngWidth": 1600,
+      "pngHeight": 1280,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "GK-ST-M04 — Industry Exception — Mobile",
+      "screenId": "d5e6068448424d09bce2bc09185ecd0d",
+      "folder": "canonical/008-gk-st-m04-industry-exception-mobile",
+      "htmlSha256": "667A14071B9BF6E77B6DEC06EC350B29F2F019146E06E114BA07E26DC5C7732D",
+      "pngSha256": "F84C6681DB74637E420DA94EF5DBA187F28F9FDBE9BFADC1EBFFF827505CB461",
+      "pngWidth": 706,
+      "pngHeight": 1600,
+      "integrity": "PNG_HTML_CONSISTENT"
+    }
+  ],
+  "supersededRecoveryScreenIds": [
+    "6010b3c0f8ef4b74a51784daa6c0adc7",
+    "a0858e623d6c460da6f7e2ee68db2f48",
+    "208998dd019d4b62838b4ff19984cf5a",
+    "69291a9b36664a47978c32c64f242a41"
+  ]
+}

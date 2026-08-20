@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gatekeeper - Brand Analysis Recovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;900&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "warning-bg": "#FFF6F6",
+                      "text-muted": "#6B7280",
+                      "secondary-container": "#cbe4e9",
+                      "primary-fixed-dim": "#45dfa4",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ebf3ec",
+                      "disabled-bg": "#F3F4F6",
+                      "on-surface-variant": "#3c4a42",
+                      "secondary": "#4b6267",
+                      "text-high": "#0E1214",
+                      "on-tertiary-container": "#783901",
+                      "surface-variant": "#dde4dd",
+                      "on-primary": "#002114",
+                      "tertiary-container": "#ffa668",
+                      "primary": "#006c4b",
+                      "outline-variant": "#bbcac0",
+                      "surface-bright": "#f4fbf4",
+                      "tertiary": "#F5926E",
+                      "on-tertiary-fixed-variant": "#723600",
+                      "on-background": "#161d19",
+                      "surface-dim": "#d4dcd5",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "inverse-surface": "#2b322e",
+                      "on-surface": "#161d19",
+                      "on-error-container": "#93000a",
+                      "surface-card": "#FFFFFF",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#311300",
+                      "surface-container": "#e8f0e9",
+                      "inverse-primary": "#45dfa4",
+                      "surface-workflow": "#F0FDF4",
+                      "on-secondary-fixed": "#061f23",
+                      "error": "#ba1a1a",
+                      "background": "#f4fbf4",
+                      "primary-fixed": "#68fcbf",
+                      "surface": "#f4fbf4",
+                      "on-primary-fixed": "#002114",
+                      "on-secondary": "#ffffff",
+                      "status-error": "#CA0F1C",
+                      "surface-container-highest": "#dde4dd",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "tertiary-fixed": "#ffdcc7",
+                      "border-default": "#E5E7EB",
+                      "surface-container-high": "#e2eae3",
+                      "outline": "#6c7a71",
+                      "tertiary-fixed-dim": "#ffb787",
+                      "surface-container-low": "#eef6ee",
+                      "secondary-fixed": "#cee7ec",
+                      "on-primary-fixed-variant": "#005137",
+                      "surface-tint": "#006c4b",
+                      "surface-page": "#F8F8F8",
+                      "on-secondary-container": "#4f676b",
+                      "primary-container": "#34d399",
+                      "on-primary-container": "#00563b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "8px",
+                      "sm": "16px",
+                      "header-mobile": "56px",
+                      "unit": "8px",
+                      "sidebar-collapsed": "80px",
+                      "lg": "32px",
+                      "header-desktop": "72px",
+                      "xl": "48px",
+                      "sidebar-expanded": "240px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "h1-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "h1": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-bold": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "\"Source Sans 3\""
+                      ],
+                      "h3": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "eyebrow": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\""
+                      ],
+                      "h2-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "h2": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "h1-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h1": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h3": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "eyebrow": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "h2-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.005em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h2": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.005em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-page min-h-screen font-body text-body text-on-surface antialiased flex flex-col items-center">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface-container-highest dark:bg-inverse-surface border-b border-outline-variant dark:border-on-surface-variant fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-[72px] px-8 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-h2 text-h2 font-black text-primary dark:text-primary-fixed-dim">Gatekeeper</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<!-- Navigation is suppressed due to transactional nature of the page -->
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center h-8 w-8 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface-container-highest">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center h-8 w-8 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface-container-highest">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<button class="font-label text-label text-primary dark:text-primary-fixed-dim hover:text-on-primary-container transition-colors active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface-container-highest rounded px-3 py-2">
+                    Sign In
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="w-full max-w-xl mx-auto pt-header-desktop px-sm md:px-lg pb-xl flex-grow flex flex-col items-center justify-start mt-lg md:mt-xl">
+<!-- Hero Section -->
+<div class="w-full text-center mb-lg">
+<h1 class="font-h1-mobile md:font-h1 text-h1-mobile md:text-h1 text-text-high mb-xs">Analyze Your Brand</h1>
+<p class="font-body text-body text-text-muted">Enter your brand's primary URL to begin the classification process.</p>
+</div>
+<!-- Scanner Card -->
+<div class="w-full bg-surface-card border border-border-default rounded-xl p-md mb-md shadow-sm">
+<form class="flex flex-col gap-sm w-full">
+<div class="w-full">
+<label class="sr-only" for="url-input">Website URL</label>
+<div class="relative rounded-lg shadow-sm border border-border-default focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors h-xl overflow-hidden">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-muted" data-icon="language">language</span>
+</div>
+<input aria-invalid="true" class="focus:ring-0 focus:border-transparent block w-full pl-10 sm:text-sm border-none bg-transparent h-full text-text-high" id="url-input" name="url-input" placeholder="glowtheory.com" type="text" value="glowtheory.com"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-status-error" data-icon="error">error</span>
+</div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center bg-primary text-on-primary h-xl rounded-lg font-label text-label hover:bg-surface-tint hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-[0.98]" type="button">
+                    Analyze My Brand
+                </button>
+</form>
+<!-- Consent Group -->
+<div class="mt-sm flex flex-col gap-xs">
+<div class="relative flex items-start">
+<div class="flex items-center h-5">
+<input checked="" class="focus:ring-primary h-4 w-4 text-primary border-border-default rounded bg-surface-container-lowest" id="ownership" name="ownership" type="checkbox"/>
+</div>
+<div class="ml-2 text-sm">
+<label class="font-caption text-caption text-text-muted" for="ownership">I attest that I am an authorized representative of this brand.</label>
+</div>
+</div>
+<div class="relative flex items-start">
+<div class="flex items-center h-5">
+<input checked="" class="focus:ring-primary h-4 w-4 text-primary border-border-default rounded bg-surface-container-lowest" id="terms" name="terms" type="checkbox"/>
+</div>
+<div class="ml-2 text-sm">
+<label class="font-caption text-caption text-text-muted" for="terms">I agree to the <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a>.</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Recovery Panel -->
+<div class="w-full bg-surface-workflow border border-primary-container rounded-xl overflow-hidden shadow-sm flex flex-col relative">
+<!-- Decorative Accent Line -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-container to-tertiary-container"></div>
+<div class="p-md flex flex-col gap-sm">
+<div class="flex items-start gap-sm">
+<div class="flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="info" data-weight="fill" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div class="flex-1">
+<h3 class="font-h3 text-h3 text-text-high mb-1">We need a little more context</h3>
+<p class="font-body text-body text-on-surface-variant">Gatekeeper could not confidently classify Glow Theory based on the available public footprint.</p>
+</div>
+</div>
+<div class="flex flex-col gap-xs mt-xs">
+<button class="w-full flex items-center justify-center bg-primary text-on-primary h-xl rounded-lg font-label text-label hover:bg-surface-tint hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-[0.98]" type="button">
+                        Request Review
+                    </button>
+<button class="w-full flex items-center justify-center bg-surface-container-lowest text-on-surface border border-border-default h-xl rounded-lg font-label text-label hover:bg-surface-container-low transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-[0.98]" type="button">
+                        Try Again
+                    </button>
+</div>
+</div>
+<!-- Inline Review Expansion -->
+<div class="border-t border-primary-container bg-surface-container-lowest p-md flex flex-col gap-sm">
+<p class="font-body text-body text-on-surface-variant">Enter a contact email to include with this review request.</p>
+<div>
+<label class="sr-only" for="email-input">Contact Email</label>
+<div class="relative rounded-lg border border-border-default focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors h-xl overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-muted" data-icon="mail">mail</span>
+</div>
+<input class="focus:ring-0 focus:border-transparent block w-full pl-10 sm:text-sm border-none bg-transparent h-full text-text-high" id="email-input" name="email-input" placeholder="hello@glowtheory.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs mt-xs">
+<button class="w-full flex items-center justify-center bg-primary text-on-primary h-xl rounded-lg font-label text-label hover:bg-surface-tint hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-[0.98]" type="button">
+                        Submit Request
+                    </button>
+<button class="w-full flex items-center justify-center text-primary h-xl rounded-lg font-label text-label hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" type="button">
+                        Cancel
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

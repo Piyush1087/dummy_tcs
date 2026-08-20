@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industry Exception - Mobile</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;900&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d4dcd5",
+                        "inverse-primary": "#45dfa4",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f4fbf4",
+                        "inverse-surface": "#2b322e",
+                        "surface-tint": "#006c4b",
+                        "tertiary-container": "#ffa668",
+                        "warning-bg": "#FFF6F6",
+                        "surface-card": "#FFFFFF",
+                        "secondary-fixed": "#cee7ec",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#00563b",
+                        "primary-fixed-dim": "#45dfa4",
+                        "inverse-on-surface": "#ebf3ec",
+                        "primary": "#006c4b",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f4fbf4",
+                        "surface-container": "#e8f0e9",
+                        "primary-fixed": "#68fcbf",
+                        "surface-container-highest": "#dde4dd",
+                        "on-primary-fixed": "#002114",
+                        "disabled-bg": "#F3F4F6",
+                        "tertiary": "#F5926E",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#3c4a42",
+                        "text-high": "#0E1214",
+                        "text-muted": "#6B7280",
+                        "outline": "#6c7a71",
+                        "on-secondary-fixed": "#061f23",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#dde4dd",
+                        "surface-workflow": "#F0FDF4",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "surface": "#f4fbf4",
+                        "on-primary-fixed-variant": "#005137",
+                        "status-error": "#CA0F1C",
+                        "surface-page": "#F8F8F8",
+                        "outline-variant": "#bbcac0",
+                        "on-background": "#161d19",
+                        "surface-container-low": "#eef6ee",
+                        "tertiary-fixed": "#ffdcc7",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e2eae3",
+                        "on-tertiary-fixed": "#311300",
+                        "primary-container": "#34d399",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "secondary": "#4b6267",
+                        "secondary-container": "#cbe4e9",
+                        "border-default": "#E5E7EB",
+                        "on-tertiary-container": "#783901",
+                        "on-secondary-container": "#4f676b",
+                        "on-surface": "#161d19"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "32px",
+                        "header-desktop": "72px",
+                        "header-mobile": "56px",
+                        "sidebar-expanded": "240px",
+                        "unit": "8px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "xl": "48px",
+                        "sidebar-collapsed": "80px"
+                    },
+                    "fontFamily": {
+                        "body-bold": ["Plus Jakarta Sans"],
+                        "eyebrow": ["Plus Jakarta Sans"],
+                        "caption": ["\"Source Sans 3\""],
+                        "h3": ["Plus Jakarta Sans"],
+                        "h1-mobile": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"],
+                        "h2-mobile": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "body": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "body-bold": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "700" }],
+                        "eyebrow": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "h3": ["18px", { "lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "700" }],
+                        "h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label": ["14px", { "lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700" }],
+                        "h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.005em", "fontWeight": "700" }],
+                        "h2": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.005em", "fontWeight": "700" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .animate-slide-up {
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .mobile-container {
+            max-width: 430px; /* iPhone Max width approx */
+            margin: 0 auto;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #F8F8F8; /* surface-page */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<!-- Mobile Viewport Simulator -->
+<div class="mobile-container w-full border-x border-border-default flex flex-col">
+<!-- Dummy Background (Creator Shop Landing Page - Dimmed) -->
+<div class="flex-1 flex flex-col blur-[2px] opacity-60 scale-[0.98] transition-transform duration-300 pointer-events-none">
+<!-- Simulated TopNav -->
+<header class="h-header-mobile bg-surface-container-highest flex items-center justify-between px-sm border-b border-outline-variant">
+<span class="font-h2-mobile text-h2-mobile font-black text-primary">Gatekeeper</span>
+<span class="material-symbols-outlined text-on-surface-variant">menu</span>
+</header>
+<!-- Simulated Content -->
+<div class="p-sm flex flex-col gap-md pt-lg">
+<div class="w-2/3 h-8 bg-surface-container-high rounded animate-pulse"></div>
+<div class="w-full h-4 bg-surface-container-high rounded animate-pulse mt-unit"></div>
+<div class="w-4/5 h-4 bg-surface-container-high rounded animate-pulse"></div>
+<div class="mt-lg grid grid-cols-2 gap-sm">
+<div class="h-32 bg-surface-card border border-border-default rounded-lg"></div>
+<div class="h-32 bg-surface-card border border-border-default rounded-lg"></div>
+</div>
+</div>
+</div>
+<!-- Overlay Backdrop -->
+<div class="absolute inset-0 bg-inverse-surface/60 z-40 animate-fade-in backdrop-blur-sm"></div>
+<!-- Bottom Sheet Modal -->
+<div class="absolute bottom-0 left-0 w-full bg-surface-card rounded-t-xl z-50 animate-slide-up flex flex-col shadow-[0_-8px_30px_rgba(0,0,0,0.12)]">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center pt-unit pb-2">
+<div class="w-12 h-1.5 bg-border-default rounded-full"></div>
+</div>
+<div class="px-sm pb-lg flex flex-col gap-md">
+<!-- Header & Warning -->
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-warning-bg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex flex-col pt-1">
+<h2 class="font-h2-mobile text-h2-mobile text-text-high">Industry Mismatch</h2>
+<p class="font-body text-body text-text-muted mt-1 leading-snug">
+                            Your selected industry differs from our initial automated assessment.
+                        </p>
+</div>
+</div>
+<!-- Brand Context Card -->
+<div class="bg-surface-page border border-border-default rounded-lg p-3 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center flex-shrink-0 border border-border-default overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A minimalist and clean abstract logo for a modern beauty or tech brand, featuring soft geometric curves and a sophisticated monochromatic palette on a light background. Designed in a premium corporate style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5JWvw-sDxomfUCtf1B3EHus0l-Lv0Lv2-EeDWTr4VSoVRbTiQ9oj5ApvwuIrgsMcQs6y7IrQhSIkRgpCHgCOczniS16jXAvZCabi33E4NVqRSfc8EOSkNDc2H-sAm5MB2EDg5BwAeym5x62ARceEgBT6wx_b63PTx-NozNcN2-7ybJNNdDCnbz-PoiaRtAhalBGNn5j0iXfcZijyUReY5FfP36aHSmpZ9rEbpHsWZ2iV_zCvOIkZGuRLL1-uyCncstIlNHEPdQEed')"></div>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="font-body-bold text-body-bold text-text-high truncate">Glow Theory</span>
+<span class="font-caption text-caption text-text-muted truncate">glowtheory.com</span>
+</div>
+</div>
+<!-- Comparison -->
+<div class="grid grid-cols-2 gap-sm">
+<!-- Detected -->
+<div class="bg-surface-page border border-border-default rounded-lg p-3 flex flex-col gap-1">
+<span class="font-eyebrow text-eyebrow text-text-muted uppercase tracking-wider">Detected</span>
+<span class="font-body-bold text-body-bold text-text-high">D2C</span>
+</div>
+<!-- Selected (Warning Highlight) -->
+<div class="bg-warning-bg border border-tertiary-container rounded-lg p-3 flex flex-col gap-1 relative overflow-hidden">
+<!-- Subtle background accent for the selected mismatch -->
+<div class="absolute top-0 right-0 w-16 h-16 bg-tertiary/5 rounded-bl-full translate-x-4 -translate-y-4 pointer-events-none"></div>
+<span class="font-eyebrow text-eyebrow text-tertiary uppercase tracking-wider relative z-10">Selected</span>
+<span class="font-body-bold text-body-bold text-text-high relative z-10">AI / SaaS</span>
+</div>
+</div>
+<!-- Context Note -->
+<p class="font-caption text-caption text-text-muted text-center px-2 mt-unit">
+                    Confirmation is required before the scan begins. Results can still be reviewed later in your dashboard.
+                </p>
+<!-- Actions -->
+<div class="flex flex-col gap-3 mt-2">
+<button class="w-full h-xl bg-primary text-on-primary rounded-lg font-label text-label flex items-center justify-center transition-colors active:scale-[0.98] shadow-sm">
+                        Continue with AI / SaaS
+                    </button>
+<button class="w-full h-xl bg-surface-card text-text-high border border-border-default rounded-lg font-label text-label flex items-center justify-center transition-colors hover:bg-surface-page active:scale-[0.98]">
+                        Keep detected Industry
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

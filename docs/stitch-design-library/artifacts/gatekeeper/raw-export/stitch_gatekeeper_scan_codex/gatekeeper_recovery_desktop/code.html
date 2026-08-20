@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gatekeeper - Manual Review</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;900&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006c4b",
+                        "surface-page": "#F8F8F8",
+                        "primary-container": "#34d399",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#4f676b",
+                        "secondary-container": "#cbe4e9",
+                        "tertiary-container": "#ffa668",
+                        "inverse-on-surface": "#ebf3ec",
+                        "tertiary-fixed": "#ffdcc7",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#161d19",
+                        "background": "#f4fbf4",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "primary-fixed": "#68fcbf",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dde4dd",
+                        "secondary": "#4b6267",
+                        "surface-container": "#e8f0e9",
+                        "on-error-container": "#93000a",
+                        "outline": "#6c7a71",
+                        "primary-fixed-dim": "#45dfa4",
+                        "tertiary": "#F5926E",
+                        "on-primary": "#002114",
+                        "surface-bright": "#f4fbf4",
+                        "text-muted": "#6B7280",
+                        "disabled-bg": "#F3F4F6",
+                        "on-primary-container": "#00563b",
+                        "inverse-primary": "#45dfa4",
+                        "on-background": "#161d19",
+                        "on-primary-fixed": "#002114",
+                        "surface-workflow": "#F0FDF4",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "surface-container-highest": "#dde4dd",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#005137",
+                        "surface-container-low": "#eef6ee",
+                        "surface-dim": "#d4dcd5",
+                        "on-tertiary-fixed": "#311300",
+                        "surface-card": "#FFFFFF",
+                        "inverse-surface": "#2b322e",
+                        "on-tertiary-container": "#783901",
+                        "surface-container-high": "#e2eae3",
+                        "status-error": "#CA0F1C",
+                        "border-default": "#E5E7EB",
+                        "text-high": "#0E1214",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "warning-bg": "#FFF6F6",
+                        "on-secondary-fixed": "#061f23",
+                        "outline-variant": "#bbcac0",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "surface": "#f4fbf4",
+                        "primary": "#006c4b",
+                        "on-surface-variant": "#3c4a42",
+                        "secondary-fixed": "#cee7ec",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "sm": "16px",
+                        "xl": "48px",
+                        "header-mobile": "56px",
+                        "sidebar-expanded": "240px",
+                        "md": "24px",
+                        "sidebar-collapsed": "80px",
+                        "lg": "32px",
+                        "header-desktop": "72px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "label": ["Plus Jakarta Sans"],
+                        "body": ["\"Source Sans 3\""],
+                        "body-bold": ["Plus Jakarta Sans"],
+                        "eyebrow": ["Plus Jakarta Sans"],
+                        "caption": ["\"Source Sans 3\""],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h1-mobile": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "h2-mobile": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label": ["14px", { "lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700" }],
+                        "body": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-bold": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "700" }],
+                        "eyebrow": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "h1-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "h2": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.005em", "fontWeight": "700" }],
+                        "h2-mobile": ["20px", { "lineHeight": "1.2", "letterSpacing": "-0.005em", "fontWeight": "700" }],
+                        "h3": ["18px", { "lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-page min-h-screen flex flex-col items-center justify-center font-body text-on-surface">
+<!-- Header Section (Suppressed nav as this is a linear/transactional flow) -->
+<header class="w-full absolute top-0 left-0 p-lg flex justify-center lg:justify-start">
+<img alt="Gatekeeper Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyTHSdASlsfBFPplOmESK8WXDGdr91W2rLWePOLRUjj0MMJ7sNnxF6RsF1W4md0g3cXw0Sl3ZjGQaiia5GQFBWrGLfN-fSNGnT9o9ywyIyBL9tnAos7j_zm2fOs3dJb1qCRUtlNxSpe3eb8p1Boz1MecpmT8T6C7aoUQ4JSHwkCj2Glzxpo-aRKAXnaR8hhxEWVTiyJoLmbGLspvlR96PI9rhUz6doln6-0giqvd8e9qctd15k19NrhkVDJC31YEwls3M"/>
+</header>
+<!-- Main Content Container -->
+<main class="w-full max-w-[560px] mx-auto px-sm pt-header-desktop pb-xl flex flex-col gap-lg">
+<!-- Resolved URL Entry Area -->
+<section class="bg-surface-card border border-border-default rounded-xl p-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col">
+<span class="font-eyebrow text-eyebrow text-text-muted uppercase">Analyzed URL</span>
+<span class="font-body-bold text-body-bold text-on-surface">example-brand.com</span>
+</div>
+</div>
+<button class="text-text-muted hover:text-primary transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">edit</span>
+<span class="font-label text-label">Edit</span>
+</button>
+</section>
+<!-- Recovery State Card -->
+<section class="bg-surface-card border border-border-default rounded-xl overflow-hidden shadow-md">
+<!-- Header/Status Area -->
+<div class="bg-warning-bg border-b border-border-default p-md flex flex-col items-center text-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-[#FFF0F0] flex items-center justify-center mb-xs">
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<h1 class="font-h2 text-h2 text-on-surface">Manual Review Required</h1>
+<p class="font-body text-body text-text-muted max-w-sm">
+                    We couldn't automatically determine your brand's industry. You can request a manual review or join our waitlist.
+                </p>
+<div class="mt-xs inline-flex items-center gap-xs bg-surface-container py-1 px-3 rounded-full">
+<span class="font-caption text-caption text-text-muted uppercase">Outcome:</span>
+<span class="font-caption text-caption font-bold text-on-surface">CLASSIFICATION_UNCERTAIN</span>
+</div>
+</div>
+<!-- Actions Area -->
+<div class="p-lg flex flex-col gap-lg">
+<!-- Primary Action Container -->
+<div class="flex flex-col gap-md">
+<div class="flex items-start gap-md">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-1">
+<span class="font-body-bold text-body-bold text-primary">1</span>
+</div>
+<div class="flex flex-col gap-sm w-full">
+<div>
+<h3 class="font-body-bold text-body-bold text-on-surface">Request Manual Review</h3>
+<p class="font-body text-body text-text-muted mt-1">Our team will review your site and get back to you within 24 hours.</p>
+</div>
+<button class="w-full h-xl bg-primary text-on-primary-fixed rounded flex items-center justify-center font-label text-label gap-xs hover:bg-on-primary-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+<span class="material-symbols-outlined">rate_review</span>
+                                Request Review
+                            </button>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="flex items-center gap-sm">
+<div class="h-px bg-border-default flex-1"></div>
+<span class="font-caption text-caption text-text-muted">OR</span>
+<div class="h-px bg-border-default flex-1"></div>
+</div>
+<!-- Secondary Action Container -->
+<div class="flex flex-col gap-md">
+<div class="flex items-start gap-md">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-1">
+<span class="font-body-bold text-body-bold text-primary">2</span>
+</div>
+<div class="flex flex-col gap-sm w-full">
+<div>
+<h3 class="font-body-bold text-body-bold text-on-surface">Join the Waitlist</h3>
+<p class="font-body text-body text-text-muted mt-1">Not ready for a review? Leave your email and we'll notify you when self-serve classification improves.</p>
+</div>
+<!-- Inline Email Capture -->
+<form class="flex flex-col gap-xs mt-2" onsubmit="event.preventDefault();">
+<label class="font-eyebrow text-eyebrow text-on-surface" for="waitlist-email">Email Address</label>
+<div class="flex gap-xs w-full">
+<input class="flex-1 h-xl px-sm rounded border border-border-default font-body text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="waitlist-email" placeholder="hello@brand.com" type="email"/>
+<button class="h-xl px-md bg-surface-card border border-border-default text-on-surface rounded font-label text-label hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 whitespace-nowrap" type="submit">
+                                        Join Waitlist
+                                    </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

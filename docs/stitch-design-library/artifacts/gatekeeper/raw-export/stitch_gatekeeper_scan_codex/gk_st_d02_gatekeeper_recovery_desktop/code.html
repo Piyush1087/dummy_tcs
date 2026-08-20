@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GK-ST-D02 — Gatekeeper Recovery — Desktop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#005137",
+                        "on-error": "#ffffff",
+                        "secondary": "#4b6267",
+                        "background": "#f4fbf4",
+                        "status-error": "#CA0F1C",
+                        "secondary-fixed": "#cee7ec",
+                        "on-tertiary-fixed": "#311300",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#002114",
+                        "on-secondary-fixed": "#061f23",
+                        "warning-bg": "#FFF6F6",
+                        "tertiary": "#F5926E",
+                        "surface-variant": "#dde4dd",
+                        "surface-dim": "#d4dcd5",
+                        "surface-bright": "#f4fbf4",
+                        "on-error-container": "#93000a",
+                        "surface-card": "#FFFFFF",
+                        "disabled-bg": "#F3F4F6",
+                        "surface-container": "#e8f0e9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#eef6ee",
+                        "on-primary-fixed": "#002114",
+                        "on-surface-variant": "#3c4a42",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "outline": "#6c7a71",
+                        "inverse-primary": "#45dfa4",
+                        "inverse-on-surface": "#ebf3ec",
+                        "surface-page": "#F8F8F8",
+                        "tertiary-container": "#ffa668",
+                        "primary": "#006c4b",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "tertiary-fixed": "#ffdcc7",
+                        "surface-tint": "#006c4b",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "text-high": "#0E1214",
+                        "outline-variant": "#bbcac0",
+                        "on-surface": "#161d19",
+                        "on-tertiary-container": "#783901",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#dde4dd",
+                        "secondary-container": "#cbe4e9",
+                        "on-primary-container": "#00563b",
+                        "inverse-surface": "#2b322e",
+                        "surface-container-high": "#e2eae3",
+                        "primary-fixed": "#68fcbf",
+                        "border-default": "#E5E7EB",
+                        "on-background": "#161d19",
+                        "surface": "#f4fbf4",
+                        "text-muted": "#6B7280",
+                        "primary-fixed-dim": "#45dfa4",
+                        "surface-workflow": "#F0FDF4",
+                        "primary-container": "#34d399",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#4f676b",
+                        "on-secondary-fixed-variant": "#334a4f"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "md": "24px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "xl": "48px",
+                        "header-desktop": "72px",
+                        "lg": "32px",
+                        "unit": "8px",
+                        "sidebar-expanded": "240px",
+                        "sidebar-collapsed": "80px",
+                        "header-mobile": "56px"
+                    },
+                    fontFamily: {
+                        "h2-mobile": ["Plus Jakarta Sans"],
+                        "body": ["\"Source Sans 3\""],
+                        "body-bold": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "caption": ["\"Source Sans 3\""],
+                        "h1-mobile": ["Plus Jakarta Sans"],
+                        "eyebrow": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "h2-mobile": ["20px", { lineHeight: "1.2", letterSpacing: "-0.005em", fontWeight: "700" }],
+                        "body": ["14px", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }],
+                        "body-bold": ["14px", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "700" }],
+                        "label": ["14px", { lineHeight: "1.2", letterSpacing: "0", fontWeight: "700" }],
+                        "h1": ["32px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "caption": ["12px", { lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "500" }],
+                        "h1-mobile": ["28px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "eyebrow": ["12px", { lineHeight: "1.2", letterSpacing: "0.04em", fontWeight: "700" }],
+                        "h2": ["24px", { lineHeight: "1.2", letterSpacing: "-0.005em", fontWeight: "700" }],
+                        "h3": ["18px", { lineHeight: "1.3", letterSpacing: "0", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .aurora-bg {
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 108, 75, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(206, 231, 236, 0.4) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-surface-page font-body text-body text-on-surface min-h-screen flex flex-col antialiased">
+<header class="bg-surface-container-highest dark:bg-inverse-surface fixed top-0 w-full z-50 border-b border-outline-variant dark:border-on-surface-variant">
+<div class="flex justify-between items-center h-[72px] px-8 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-lg">
+<span class="font-h2 text-h2 font-black text-primary dark:text-primary-fixed-dim">Gatekeeper</span>
+<nav class="hidden md:flex items-center gap-md ml-lg">
+<a class="font-label text-label text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform" href="#">Dashboard</a>
+<a class="font-label text-label text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform" href="#">Scans</a>
+<a class="font-label text-label text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform" href="#">Inventory</a>
+<a class="font-label text-label text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-xs">
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<button class="font-label text-label text-primary dark:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform px-4 py-2 border border-outline-variant rounded-lg">Sign In</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center pt-header-desktop px-4 relative aurora-bg">
+<div class="w-full max-w-[700px] z-10 flex flex-col my-xl">
+<div class="bg-surface-card border border-border-default rounded-xl p-md shadow-sm relative z-20">
+<label class="block font-label text-label text-text-high mb-xs">Analyze My Brand</label>
+<div class="relative flex items-center">
+<div class="absolute left-4 flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<input aria-label="Brand URL" class="w-full h-xl pl-12 pr-4 bg-surface border border-border-default rounded-lg font-body text-body text-text-high focus:outline-none cursor-default opacity-80" readonly="" type="text" value="glowtheory.com"/>
+<div class="absolute right-4 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+<div class="mt-sm text-center">
+<p class="font-caption text-caption text-text-muted">By analyzing, you agree to Gatekeeper's Terms of Service and Data Processing Agreement.</p>
+</div>
+</div>
+<div class="bg-warning-bg border border-border-default border-t-0 rounded-b-xl px-lg pt-8 pb-lg mx-3 -mt-3 relative z-10 shadow-sm flex flex-col">
+<div class="flex items-start gap-sm">
+<div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]" data-icon="info" data-weight="fill" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div>
+<h2 class="font-h3 text-h3 text-text-high">We need a little more context</h2>
+<p class="font-body text-body text-text-muted mt-1">Gatekeeper could not confidently classify Glow Theory based on the available public footprint.</p>
+</div>
+</div>
+<div class="flex items-center gap-sm mt-md pl-12">
+<button class="h-xl px-6 bg-primary text-on-primary-fixed rounded-lg font-label text-label hover:bg-surface-tint hover:text-white transition-colors">Request Review</button>
+<button class="h-xl px-6 bg-transparent border border-border-default text-text-high rounded-lg font-label text-label hover:bg-surface transition-colors">Try Again</button>
+</div>
+<div class="mt-lg pt-md border-t border-border-default pl-12">
+<p class="font-body text-body text-text-muted mb-sm">Provide a contact email. Our specialized human review team will analyze the domain and notify you of the classification outcome.</p>
+<div class="flex items-center gap-sm">
+<div class="flex-grow relative">
+<div class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-[18px]" data-icon="mail">mail</span>
+</div>
+<input class="w-full h-10 pl-9 pr-3 bg-surface-card border border-border-default rounded-lg font-body text-body text-text-high focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" placeholder="hello@glowtheory.com" type="email"/>
+</div>
+<button class="h-10 px-4 bg-primary text-on-primary-fixed rounded-lg font-label text-label hover:bg-surface-tint hover:text-white transition-colors whitespace-nowrap">Submit</button>
+<button class="h-10 px-3 text-text-muted hover:text-text-high font-label text-label transition-colors">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-container-low dark:bg-on-surface w-full py-xl border-t border-border-default dark:border-outline mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-sm">
+<span class="font-h3 text-h3 text-on-surface dark:text-surface-bright opacity-80 hover:opacity-100">Gatekeeper</span>
+<div class="flex flex-wrap justify-center items-center gap-md">
+<a class="font-caption text-caption text-text-muted hover:text-on-surface hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-text-muted hover:text-on-surface hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-text-muted hover:text-on-surface hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Legal Attestation</a>
+<a class="font-caption text-caption text-text-muted hover:text-on-surface hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Contact Support</a>
+</div>
+<p class="font-caption text-caption text-primary dark:text-primary-fixed-dim">© 2024 Gatekeeper Creator Shop. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

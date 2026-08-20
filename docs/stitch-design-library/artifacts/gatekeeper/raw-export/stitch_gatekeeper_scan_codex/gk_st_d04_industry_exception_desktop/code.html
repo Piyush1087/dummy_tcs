@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GK-ST-D04 — Industry Exception — Desktop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-card": "#FFFFFF",
+                      "outline": "#6c7a71",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "on-primary-fixed": "#002114",
+                      "secondary": "#4b6267",
+                      "secondary-container": "#cbe4e9",
+                      "on-background": "#161d19",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "surface-container-high": "#e2eae3",
+                      "disabled-bg": "#F3F4F6",
+                      "on-primary": "#ffffff",
+                      "status-error": "#CA0F1C",
+                      "on-secondary-fixed": "#061f23",
+                      "on-error-container": "#93000a",
+                      "surface": "#f4fbf4",
+                      "primary-fixed-dim": "#45dfa4",
+                      "on-tertiary-container": "#783901",
+                      "surface-container-highest": "#dde4dd",
+                      "background": "#f4fbf4",
+                      "primary-container": "#34d399",
+                      "border-default": "#E5E7EB",
+                      "surface-tint": "#006c4b",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#723600",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "surface-page": "#F8F8F8",
+                      "tertiary-fixed": "#ffdcc7",
+                      "inverse-primary": "#45dfa4",
+                      "on-tertiary-fixed": "#311300",
+                      "on-surface-variant": "#3c4a42",
+                      "surface-container-low": "#eef6ee",
+                      "on-secondary-container": "#4f676b",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb787",
+                      "surface-variant": "#dde4dd",
+                      "tertiary-container": "#ffa668",
+                      "text-high": "#0E1214",
+                      "on-primary-container": "#00563b",
+                      "text-muted": "#6B7280",
+                      "on-primary-fixed-variant": "#005137",
+                      "secondary-fixed": "#cee7ec",
+                      "on-surface": "#161d19",
+                      "surface-dim": "#d4dcd5",
+                      "warning-bg": "#FFF6F6",
+                      "surface-container": "#e8f0e9",
+                      "surface-workflow": "#F0FDF4",
+                      "tertiary": "#F5926E",
+                      "inverse-on-surface": "#ebf3ec",
+                      "surface-bright": "#f4fbf4",
+                      "inverse-surface": "#2b322e",
+                      "on-secondary": "#ffffff",
+                      "primary": "#006c4b",
+                      "outline-variant": "#bbcac0",
+                      "primary-fixed": "#68fcbf"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "32px",
+                      "header-desktop": "72px",
+                      "header-mobile": "56px",
+                      "md": "24px",
+                      "sidebar-expanded": "240px",
+                      "xs": "8px",
+                      "sm": "16px",
+                      "xl": "48px",
+                      "sidebar-collapsed": "80px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "eyebrow": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "\"Source Sans 3\""
+                      ],
+                      "h2-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "h1": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "h1-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "h2": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\""
+                      ],
+                      "h3": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-bold": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "eyebrow": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h2-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.005em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h1": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h1-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h2": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.005em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "h3": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface-page min-h-screen text-text-high antialiased relative overflow-hidden">
+<!-- Background App (Dimmed) -->
+<div class="absolute inset-0 opacity-40 pointer-events-none filter blur-sm transition-all duration-500">
+<!-- Mock Nav -->
+<header class="bg-surface-container-highest flex justify-between items-center h-[72px] px-8 w-full z-50 border-b border-outline-variant">
+<div class="font-h2 text-h2 font-black text-primary">Gatekeeper</div>
+<nav class="hidden md:flex gap-6">
+<div class="text-primary border-b-2 border-primary pb-1 font-label text-label">Dashboard</div>
+<div class="text-on-surface-variant font-label text-label">Scans</div>
+<div class="text-on-surface-variant font-label text-label">Inventory</div>
+<div class="text-on-surface-variant font-label text-label">Reports</div>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">settings</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label text-label">Sign In</button>
+</div>
+</header>
+<!-- Mock Content Canvas -->
+<main class="max-w-7xl mx-auto px-8 py-lg">
+<div class="grid grid-cols-12 gap-md">
+<div class="col-span-8 space-y-md">
+<div class="bg-surface-card rounded-lg p-md border border-border-default h-64"></div>
+<div class="grid grid-cols-2 gap-md">
+<div class="bg-surface-card rounded-lg p-md border border-border-default h-48"></div>
+<div class="bg-surface-card rounded-lg p-md border border-border-default h-48"></div>
+</div>
+</div>
+<div class="col-span-4 space-y-md">
+<div class="bg-surface-card rounded-lg p-md border border-border-default h-96"></div>
+</div>
+</div>
+</main>
+<!-- Mock Footer -->
+<footer class="bg-surface-container-low w-full py-xl border-t border-border-default absolute bottom-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+<div class="font-h3 text-h3 text-on-surface">Gatekeeper</div>
+<div class="font-caption text-caption text-text-muted">© 2024 Gatekeeper Creator Shop. All rights reserved.</div>
+</div>
+</footer>
+</div>
+<!-- Modal Overlay Backdrop -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-opacity">
+<!-- Modal Container -->
+<div class="bg-surface-card w-full max-w-[560px] rounded-xl shadow-xl border border-border-default overflow-hidden flex flex-col transform transition-transform duration-300 scale-100">
+<!-- Modal Header -->
+<div class="px-md pt-md pb-sm flex justify-between items-start">
+<div>
+<h2 class="font-h2 text-h2 text-text-high mb-xs">Confirm your Industry choice</h2>
+<p class="font-body text-body text-text-muted">This choice is required before the Brand Intelligence scan begins. You will still be able to review the resulting Intelligence.</p>
+</div>
+<button class="text-text-muted hover:text-text-high transition-colors focus:outline-none p-1 rounded-full hover:bg-surface-container-highest">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">close</span>
+</button>
+</div>
+<!-- Modal Content -->
+<div class="px-md py-sm space-y-md">
+<!-- Context Card: Glow Theory -->
+<div class="bg-surface-workflow border border-primary-container/30 rounded-lg p-sm flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-surface-card border border-border-default flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A modern, high-contrast brand logo for a company called 'Glow Theory'. The logo uses a stark black and white palette with sharp geometric lines and a subtle premium glow effect, fitting a corporate operational dashboard context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLI8mHrXd4BBCtd4Yz3B9KmAnh56EguHx1_zu4sXlg7FFZFAJsEd80folkGU7UUPSfylIqsC1hO1NuzEXz1bSgqnbbClqQPkTVgQ28aUiBtjchXmXz6yTkrUzdStc0yXA10zIUYbcX3SlBkWxHTCBQFPSTDbAMQDGv3Z-v9qSpLwZfN2RAGT7cMcgONfPTnG64uRMqQeWapJJRusFZTRuI32S8xCa1js6EV4ZXX5WupxUwv_9YQzRgIDvplPp9KTnbieYOGZ5hyt0n"/>
+</div>
+<div class="flex-1">
+<h3 class="font-h3 text-h3 text-text-high leading-tight">Glow Theory</h3>
+<p class="font-body text-body text-text-muted">glowtheory.com</p>
+</div>
+</div>
+<!-- Disagreement Warning Section -->
+<div class="bg-[#FFF6F6] border border-[#F5926E]/30 rounded-lg p-sm relative overflow-hidden">
+<div class="flex items-start gap-sm relative z-10">
+<span class="material-symbols-outlined text-[#F5926E] mt-0.5" style="font-variation-settings: 'FILL' 1;">error</span>
+<div class="flex-1">
+<h4 class="font-label text-label text-text-high mb-1">Industry mismatch detected</h4>
+<p class="font-body text-body text-text-muted mb-sm">The Industry you selected differs from our initial assessment. Please confirm which Industry to use for your Brand Intelligence scan.</p>
+<!-- Comparison Display -->
+<div class="flex items-center gap-sm bg-surface-card rounded border border-border-default p-xs">
+<div class="flex-1 text-center">
+<div class="font-caption text-caption text-text-muted uppercase tracking-wider mb-0.5">Detected</div>
+<div class="font-body-bold text-body-bold text-text-high">D2C</div>
+</div>
+<div class="text-text-muted">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_right_alt</span>
+</div>
+<div class="flex-1 text-center">
+<div class="font-caption text-caption text-text-muted uppercase tracking-wider mb-0.5">Selected</div>
+<div class="font-body-bold text-body-bold text-primary">AI / SaaS</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer (Actions) -->
+<div class="px-md py-md border-t border-border-default bg-surface-page flex flex-col sm:flex-row justify-end gap-sm">
+<button class="h-xl px-6 rounded-lg font-label text-label bg-surface-card text-text-high border border-border-default hover:bg-surface-container-highest transition-colors flex items-center justify-center w-full sm:w-auto">
+                    Keep detected Industry
+                </button>
+<button class="h-xl px-6 rounded-lg font-label text-label bg-primary text-on-primary hover:bg-on-primary-container transition-colors shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto">
+                    Continue with AI / SaaS
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
