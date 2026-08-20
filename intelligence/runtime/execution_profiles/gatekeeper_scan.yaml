@@ -1,5 +1,5 @@
 id: gatekeeper_scan
-version: 1.1-frozen
+version: 1.2-frozen
 status: FROZEN
 scope: pre_intelligence_admission
 product_authority: intelligence/product_authority/gatekeeper_v1_product_execution_authority.md
@@ -57,7 +57,7 @@ stages:
     dependencies: [reachability_and_content_gate]
     model_profile:
       provider: GEMINI
-      model: gemini-2.5-flash
+      model: gemini-3.6-flash
     requested_capability: gatekeeper_primary_web_assessment
     evidence_semantics:
       - OWNED_DOMAIN
@@ -176,5 +176,6 @@ handoff:
 notes:
   - Gatekeeper is an admission capability and does not create a dedicated Intelligence branch.
   - gatekeeper_site_assessment is the frozen admission AI processor name.
+  - Gemini primary model authority was amended from gemini-2.5-flash to gemini-3.6-flash after live provider verification returned MODEL_NOT_AVAILABLE for gemini-2.5-flash on the active API project. Provider ordering, requested capability, evidence semantics and provenance requirements are unchanged.
   - Existing /discovery/resolve and /discovery/validate contracts should remain frontend-facing admission APIs unless later product authority changes them.
   - The legacy Identity gatekeeper validator that requires controlled Sub-industry membership is a known implementation defect and must be reconciled before this profile is implemented.
