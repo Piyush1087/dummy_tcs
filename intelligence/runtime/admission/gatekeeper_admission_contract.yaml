@@ -1,15 +1,16 @@
 id: gatekeeper_admission_contract
-version: 1.1-frozen
+version: 1.2-frozen
 status: FROZEN
 scope: pre_intelligence_onboarding_admission
 product_authority: intelligence/product_authority/gatekeeper_v1_product_execution_authority.md
+product_authority_amendment: intelligence/product_authority/gatekeeper_v1_industry_confirmation_amendment.md
 
 purpose: Define the canonical Gatekeeper v1 admission result and production admission boundary before Surface Intelligence. Gatekeeper is an admission/serviceability capability and does not create a dedicated Intelligence branch.
 
 architecture:
   dedicated_intelligence_branch: false
   admission_ai_processor: gatekeeper_site_assessment
-  reusable_intelligence_rule: Gatekeeper Industry remains provisional admission classification until the required confirmation boundary; only confirmed Industry becomes reusable Brand Intelligence.
+  reusable_intelligence_rule: Gatekeeper Industry remains provisional admission classification until the required confirmation boundary; the explicitly user-confirmed Industry becomes downstream authority, but only a confirmed supported MVP Industry may cross the Surface boundary.
   provisional_sub_industry_rule: Gatekeeper sub-industry is an optional non-authoritative hint and is never controlled downstream Sub-industry authority.
 
 production_alignment:
@@ -36,6 +37,7 @@ submission_requirements:
     - privacy_policy_version
     - acceptance_timestamp
     - user_or_session_reference_when_available
+  policy_version_authority: SERVER_OWNED
   ownership: APPLICATION_CONTROL
 
 flow:
@@ -87,7 +89,19 @@ flow:
       - emit exactly one canonical Gatekeeper outcome
       - emit compact reason_code and permitted recovery actions
       - derive manual_review_eligible without auto-queuing review
-      - derive confirmation requirement and Surface eligibility
+      - derive confirmation requirement
+
+  - id: industry_confirmation
+    type: APPLICATION_AUTHORITY
+    run_when: admission_decision.outcome == ADMITTED
+    responsibilities:
+      - persist assessed Industry as provenance
+      - persist explicit user-confirmed Industry
+      - distinguish accepted assessment from supported override and unsupported confirmation
+      - set industry_disagreement_flag only for a different confirmed supported Industry
+      - resolve unsupported confirmation to canonical UNSUPPORTED in backend/application authority
+      - derive final Surface eligibility
+    note: Supported Industry override is not an admission bypass and is independent from user-requested classification review.
 
 canonical_result:
   gatekeeper_result:
@@ -183,14 +197,14 @@ canonical_result:
         values: [ADMITTED, RESUME_AVAILABLE, EXISTING_BRAND, ORG_CLAIMED, VERIFICATION_REQUIRED, UNSUPPORTED, UNSUPPORTED_LANGUAGE, CLASSIFICATION_UNCERTAIN, HARD_BLOCKED, DOMAIN_UNREACHABLE, DOMAIN_INVALID, TECHNICAL_FAILURE]
         nullable: false
         authority_category: ADMISSION_DECISION
-        producer: admission_decision_or_terminal_deterministic_gate
+        producer: admission_decision_or_terminal_deterministic_gate_or_industry_confirmation
         persistence: required
         passes_to_surface: precondition_only
       reason_code:
         type: string|null
         nullable: true
         authority_category: ADMISSION_DECISION
-        producer: admission_decision_or_terminal_deterministic_gate
+        producer: admission_decision_or_terminal_deterministic_gate_or_industry_confirmation
         vocabulary: compact_extensible_v1_only
         persistence: required
         passes_to_surface: false
@@ -199,17 +213,54 @@ canonical_result:
         item_enum: [CONTINUE, RESUME, SIGN_IN, REQUEST_ORG_ACCESS, VERIFY_DOMAIN, JOIN_WAITLIST, REQUEST_CLASSIFICATION_REVIEW, RETRY, CONTACT_SUPPORT]
         nullable: false
         authority_category: ADMISSION_DECISION
-        producer: admission_decision_or_terminal_deterministic_gate
+        producer: admission_decision_or_terminal_deterministic_gate_or_industry_confirmation
         persistence: required
         passes_to_surface: false
       manual_review_eligible:
         type: boolean
         nullable: false
         authority_category: ADMISSION_DECISION
-        producer: admission_decision
+        producer: admission_decision_or_industry_confirmation
         persistence: required
         passes_to_surface: false
-        rule: true means review may be requested; it does not mean review is automatically queued or required.
+        rule: true means classification review may be requested for the current admission outcome; it does not mean review is automatically queued or required and is independent of industry_disagreement_flag.
+    confirmation:
+      assessed_industry:
+        type: IndustryVertical|null
+        nullable: true_until_assessment
+        authority_category: ADMISSION_PROVENANCE
+        producer: gatekeeper_site_assessment
+        persistence: required_after_confirmation_attempt
+        rule: Preserve the AI-assessed Industry even when the user confirms a different Industry.
+      confirmed_industry:
+        type: IndustryVertical|null
+        nullable: true_until_user_confirmation
+        authority_category: USER_CONFIRMED_AUTHORITY
+        producer: industry_confirmation
+        persistence: required_after_confirmation_attempt
+        rule: A confirmed supported MVP Industry becomes downstream Brand Intelligence authority. A confirmed unsupported Industry is persisted but cannot cross the Surface boundary.
+      confirmation_source:
+        type: enum|null
+        values: [AI_ASSESSED_ACCEPTED, USER_CONFIRMED_OVERRIDE, USER_CONFIRMED_UNSUPPORTED]
+        nullable: true_until_user_confirmation
+        authority_category: ADMISSION_PROVENANCE
+        producer: industry_confirmation
+        persistence: required_after_confirmation_attempt
+      industry_disagreement_flag:
+        type: boolean
+        nullable: false
+        default: false
+        authority_category: OPERATIONAL_REVIEW_METADATA
+        producer: industry_confirmation
+        persistence: required
+        rule: true only when the user explicitly confirms a different supported MVP Industry. It is not manual_review_eligible and does not imply REQUEST_CLASSIFICATION_REVIEW.
+      surface_eligible:
+        type: boolean
+        nullable: false
+        authority_category: ADMISSION_DECISION
+        producer: industry_confirmation
+        persistence: required_or_derivable
+        rule: true only after ADMITTED Gatekeeper assessment plus explicit confirmation of a supported MVP Industry and all remaining application preconditions.
     handoff:
       gatekeeper_completed:
         type: boolean
@@ -250,6 +301,18 @@ reason_code_policy:
     - INSUFFICIENT_EVIDENCE
     - PROVIDER_CHAIN_EXHAUSTED
 
+review_concept_separation:
+  industry_disagreement_flag:
+    meaning: Operational marker for assessed-vs-confirmed supported Industry disagreement.
+    blocks_surface: false
+    user_requested_review: false
+  manual_review_eligible:
+    meaning: Current Gatekeeper outcome permits the user to request classification review.
+    auto_queue: false
+  REQUEST_CLASSIFICATION_REVIEW:
+    meaning: Explicit user recovery action when permitted by canonical backend authority.
+    implied_by_industry_disagreement_flag: false
+
 manual_review_policy:
   eligible_outcomes: [CLASSIFICATION_UNCERTAIN, UNSUPPORTED]
   required_recovery_action_when_eligible: REQUEST_CLASSIFICATION_REVIEW
@@ -258,10 +321,33 @@ manual_review_policy:
 
 user_confirmation_boundary:
   required_before_surface_execution: true
-  required_field: confirmed_industry
-  source: provisional_industry
-  on_user_confirm_supported_industry: confirmed value becomes reusable Brand Intelligence and Surface execution may proceed
-  on_user_disagree: use approved classification-review path; user must not freely self-select a supported Industry to bypass Gatekeeper
+  assessed_field: provisional_industry
+  confirmed_field: confirmed_industry
+  supported_mvp_industries: [D2C, SAAS_AI, HEALTHCARE, OFFLINE_SERVICES]
+  same_supported_industry:
+    confirmation_source: AI_ASSESSED_ACCEPTED
+    industry_disagreement_flag: false
+    final_outcome: ADMITTED
+    surface_eligible: true
+  different_supported_industry:
+    frontend_warning_required: true
+    explicit_confirmation_required: true
+    confirmation_source: USER_CONFIRMED_OVERRIDE
+    industry_disagreement_flag: true
+    final_outcome: ADMITTED
+    confirmed_value_becomes_reusable_brand_intelligence: true
+    operational_review_may_follow: true
+    manual_review_eligible_implied: false
+    classification_review_action_implied: false
+    surface_eligible: true
+  unsupported_industry:
+    frontend_warning_required: true
+    explicit_confirmation_required: true
+    confirmation_source: USER_CONFIRMED_UNSUPPORTED
+    final_outcome: UNSUPPORTED
+    reason_code: UNSUPPORTED_INDUSTRY
+    surface_eligible: false
+    rule: Frontend must consume the backend/application result and must not manufacture UNSUPPORTED locally.
 
 surface_handoff:
   required:
@@ -269,6 +355,7 @@ surface_handoff:
     - normalized_domain
     - confirmed_industry
     - gatekeeper_completed
+  eligibility_rule: confirmed_industry must be one of [D2C, SAAS_AI, HEALTHCARE, OFFLINE_SERVICES] and confirmation.surface_eligible must be true.
   optional:
     - provisional_sub_industry
   optional_rule: provisional_sub_industry may be passed only as a non-authoritative hint when the downstream processor needs it.
@@ -281,6 +368,8 @@ surface_handoff:
     - reason_code
     - recovery_actions
     - manual_review_eligible
+    - industry_disagreement_flag
+    - confirmation_source
     - provider_or_model_metadata
     - latency_or_token_usage
 
@@ -288,9 +377,10 @@ persistence_alignment:
   current_backend_candidate: DiscoveryLead/session structures
   current_known_fields: [rawUrl, normalizedUrl, status, isSupported, industry, subIndustry, securityScore, temporaryPayload, expiresAt, classificationEvidence, userId]
   gatekeeper_assessment_signals: persist_as_one_versioned_structured_result_initially
-  exact_field_or_model: OPEN_PENDING_BACKEND_RECONCILIATION
+  exact_field_or_model: OPEN_PENDING_RUNTIME_RECONCILIATION
   first_class_columns_for_each_signal: false
-  rule: Audit the current backend before selecting or migrating the exact persistence target. Do not create a parallel Intelligence value store.
+  submission_control_rule: Ownership/Terms/Privacy acceptance requires durable application/legal auditability; server-owned policy versions are authoritative.
+  rule: Do not create a parallel Intelligence value store.
 
 telemetry_boundary:
   rule: Provider/model/evidence-run/latency/token/fallback metadata belongs to shared execution telemetry/provenance, not the Gatekeeper reusable result or Surface handoff.
