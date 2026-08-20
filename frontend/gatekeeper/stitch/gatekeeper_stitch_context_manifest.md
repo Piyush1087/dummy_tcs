@@ -1,73 +1,80 @@
 # Gatekeeper v1 — Stitch Context Manifest
 
-**Status:** READY FOR CODEX HANDOFF  
+**Status:** READY FOR MANUAL STITCH UPLOAD  
 **Stitch project:** `Gatekeeper scan codex`  
 **Parent screen:** none
 
-## Canonical context
+## 1. Files to upload manually into Stitch
 
-Give the fresh Codex runner:
+Upload these **before the first Codex → Stitch prompt**:
 
-1. `frontend/gatekeeper/gatekeeper_frontend_state_contract.yaml`
-2. `frontend/gatekeeper/gatekeeper_screen_interaction_contract.md`
-3. `frontend/gatekeeper/stitch/gatekeeper_stitch_worker.md`
-4. `frontend/gatekeeper/stitch/gatekeeper_stitch_codex_runbook.md`
-5. `docs/design-system/AURORA_DESIGN_SYSTEM.md`
-6. `intelligence/product_authority/gatekeeper_v1_industry_confirmation_amendment.md`
+### Required
 
-## Process-reference context
+1. `frontend/gatekeeper/gatekeeper_screen_interaction_contract.md`
+   - primary UX/screen interaction authority for Stitch;
+   - explains URL entry, recovery, confirmation, Industry change and Surface-start boundary.
 
-Use only to teach execution style:
+2. `frontend/gatekeeper/stitch/gatekeeper_stitch_screen_contracts.md`
+   - compact Stitch-facing visual brief;
+   - defines the four visual families and eight required references.
 
-- `frontend/campaign/stitch/platform_context.md`
-- `frontend/campaign/stitch/campaign_context.md`
-- `frontend/campaign/stitch/campaign_shell.md`
-- `frontend/campaign/stitch/references/phase-7/reference-registry.md`
-- prior Collaboration Stitch worker handoff/runbook and proven Gemini-generated Stitch prompts available in the active workspace/history.
+3. `intelligence/product_authority/gatekeeper_v1_industry_confirmation_amendment.md`
+   - precise authority for supported override, unsupported confirmation and disagreement semantics.
 
-## Production visual references
+### Recommended
 
-Inspect from `Piyush1087/creator-commerce-frontend-v2-clone` `development` as needed:
+4. `frontend/gatekeeper/gatekeeper_frontend_state_contract.yaml`
+   - useful as a state/reference map so Stitch understands the broader journey and recovery-state vocabulary;
+   - Stitch should not attempt to visualize every state separately.
 
-- `src/features/brand-onboarding/components/landing-page-view.tsx`
-- `src/features/brand-onboarding/components/landing-url-capture.tsx`
-- `src/features/brand-onboarding/brand-onboarding.css`
-- `src/layouts/brand-onboarding-shell/BrandOnboardingShell.tsx`
-- `src/layouts/brand-onboarding-shell/brand-onboarding-shell.css`
+## 2. Already present in Stitch project
 
-The current developer-only `Brand Intelligence · Identity dry-run` homepage block is not frozen design authority and may be omitted from new designs.
+The user has already uploaded:
 
-## Stitch project assumptions
+- Creator Shop design system;
+- logos/brand assets.
 
-The user has already uploaded the Creator Shop design system and logos into `Gatekeeper scan codex`.
+Do **not** upload Aurora again unless the project setup changes.
 
-Therefore the worker should not waste repeated prompt tokens asking Stitch to rediscover the design system. Prompt only bounded visual corrections if a generated screen visibly drifts.
+## 3. Do not upload to Stitch
 
-If additional Gatekeeper documents are uploaded directly into Stitch, treat them as context convenience only. The canonical repository contracts remain semantic authority.
+These are for Codex/worker execution only:
 
-## Generation plan
+- `gatekeeper_stitch_worker.md`;
+- `gatekeeper_stitch_codex_runbook.md`;
+- Frontend AI Worker charter;
+- Campaign Stitch process docs;
+- backend source/API implementation files;
+- production React source;
+- MCP setup documentation.
 
-Target 8 accepted references, completed family-by-family:
+Codex may read these locally but must not feed them into Stitch prompts.
+
+## 4. Production visual reference
+
+The current homepage/URL-entry implementation may be inspected by Codex and represented through a screenshot when useful.
+
+The developer-only `Brand Intelligence · Identity dry-run` block is test UI and not part of the frozen design authority.
+
+## 5. Generation plan
+
+Target eight accepted references, family-by-family:
 
 - Family A: D01 + M01
 - Family B: D02 + M02
 - Family C: D03 + M03
 - Family D: D04 + M04
 
-No separate Surface progress screens.
+## 6. Representative content
 
-## Representative content
-
-Use supplied realistic examples instead of asking Stitch to fabricate business records:
+Use supplied representative values where needed:
 
 - Brand: `Glow Theory`
 - Domain: `glowtheory.com`
 - AI-assessed Industry: `D2C`
-- Supported override example: `AI / SaaS`
-- Coming Soon visual example where needed: `Real Estate` (non-authoritative sample label)
+- Supported override: `AI / SaaS`
+- Coming Soon visual example: `Real Estate` (non-authoritative example)
 
-## Manual review rhythm
+## 7. Manual review rhythm
 
-Review at the end of each family after Codex has inspected and corrected bounded deviations.
-
-Do not wait until all eight screens exist to discover that the base URL-entry or modal composition is wrong.
+Review after each family, after Codex has already inspected and made bounded corrections.
