@@ -1,0 +1,257 @@
+id: gatekeeper_frontend_state_contract
+version: 1.0-frozen
+status: FROZEN
+scope: homepage_gatekeeper_to_surface_start
+
+purpose: >-
+  Define the canonical frontend state architecture for Gatekeeper v1 from homepage URL entry
+  through authoritative Industry confirmation and the transition that starts Surface Intelligence.
+  Detailed Surface progress UX and post-Surface review are explicitly out of scope.
+
+authority:
+  frontend_charter: docs/organization/charters/frontend_ai_worker_charter.md
+  product_authority:
+    - intelligence/product_authority/gatekeeper_v1_product_execution_authority.md
+    - intelligence/product_authority/gatekeeper_v1_industry_confirmation_amendment.md
+  admission_contract: intelligence/runtime/admission/gatekeeper_admission_contract.yaml
+  executable_backend_ie_reference:
+    repository: Piyush1087/creator-commerce-backend-v2-clone
+    commit: 70da46489beb3babf4109a82516b41c7dc2f2715
+    industry_confirmation_endpoint: POST /api/v1/discovery/:leadId/confirm-industry
+  design_system: docs/design-system/AURORA_DESIGN_SYSTEM.md
+
+principles:
+  - Frontend validates for immediate UX; backend remains authoritative for admission, security, business correctness and persistence.
+  - Frontend renders explicit backend/Intelligence outcomes and permitted actions; it must not infer business meaning from copy or CTA labels.
+  - Successful ADMITTED does not render a standalone success card; it opens the single pre-scan confirmation modal.
+  - Gatekeeper processing remains in the homepage URL-entry area.
+  - Static timer-driven processing claims must not substitute for real normalized runtime/admission activity when such activity is available.
+  - Surface progress detail is deferred; this contract ends after Surface execution is successfully triggered.
+
+submission_contract:
+  fields:
+    website_url:
+      required: true
+      frontend_validation: [EMPTY_URL, BASIC_MALFORMED_URL, OBVIOUS_SOCIAL_PROFILE_URL, OBVIOUS_MARKETPLACE_URL]
+    ownership_or_authorization_attestation:
+      required: true
+      meaning: user_attestation_not_domain_verification
+    terms_and_privacy_acceptance:
+      required: true
+      links_required: [TERMS, PRIVACY]
+  primary_action: ANALYZE_MY_BRAND
+
+validation_ownership:
+  frontend_ux:
+    - EMPTY_URL
+    - BASIC_MALFORMED_URL
+    - OBVIOUS_SOCIAL_PROFILE_URL
+    - OBVIOUS_MARKETPLACE_URL
+    - MISSING_OWNERSHIP_ATTESTATION
+    - MISSING_TERMS_PRIVACY_ACCEPTANCE
+  backend_authoritative:
+    - CANONICAL_URL_NORMALIZATION
+    - PRIVATE_OR_LOCAL_NETWORK_PROTECTION
+    - RESTRICTED_DOMAIN_OR_TLD_POLICY
+    - SOCIAL_OR_MARKETPLACE_AUTHORITY
+    - SECURITY_POLICY
+    - REACHABILITY
+    - REDIRECT_INTEGRITY
+    - PARKED_OR_UNUSABLE_SITE
+    - EXISTING_BRAND
+    - ORGANIZATION_STATE
+    - RESUME_ELIGIBILITY
+    - RATE_OR_ABUSE_RULES
+    - VERIFICATION_REQUIREMENT
+    - SERVICEABILITY
+    - LANGUAGE
+    - INDUSTRY
+    - HARD_BLOCKS
+
+journey_states:
+  - IDLE
+  - CLIENT_VALIDATION_ERROR
+  - SUBMITTING
+  - RESOLVING
+  - DOMAIN_INVALID
+  - DOMAIN_UNREACHABLE
+  - EXISTING_BRAND
+  - ORG_CLAIMED
+  - RESUME_AVAILABLE
+  - VERIFICATION_REQUIRED
+  - UNSUPPORTED_LANGUAGE
+  - UNSUPPORTED
+  - CLASSIFICATION_UNCERTAIN
+  - HARD_BLOCKED
+  - TECHNICAL_FAILURE
+  - ADMITTED
+  - PRE_SCAN_CONFIRMATION
+  - STARTING_SURFACE_SCAN
+
+modal_substates:
+  - DETECTED_INDUSTRY_READY
+  - SUPPORTED_INDUSTRY_OVERRIDE_WARNING
+  - UNSUPPORTED_INDUSTRY_WARNING
+
+state_transitions:
+  IDLE:
+    on_local_invalid: CLIENT_VALIDATION_ERROR
+    on_valid_submit: SUBMITTING
+  CLIENT_VALIDATION_ERROR:
+    on_correction: IDLE
+    on_valid_submit: SUBMITTING
+  SUBMITTING:
+    on_request_in_flight: RESOLVING
+    on_transport_failure: TECHNICAL_FAILURE
+  RESOLVING:
+    on_gatekeeper_result: MAP_FROM_OUTCOME
+  ADMITTED:
+    on_render: PRE_SCAN_CONFIRMATION
+  PRE_SCAN_CONFIRMATION:
+    on_same_supported_industry_confirmed: STARTING_SURFACE_SCAN
+    on_supported_override_confirmed: STARTING_SURFACE_SCAN
+    on_unsupported_industry_confirmed: UNSUPPORTED
+  STARTING_SURFACE_SCAN:
+    on_surface_start_accepted: OUT_OF_SCOPE_SURFACE_EXECUTION
+    on_surface_start_failure: TECHNICAL_FAILURE
+
+backend_outcome_mapping:
+  DOMAIN_INVALID: DOMAIN_INVALID
+  DOMAIN_UNREACHABLE: DOMAIN_UNREACHABLE
+  EXISTING_BRAND: EXISTING_BRAND
+  ORG_CLAIMED: ORG_CLAIMED
+  RESUME_AVAILABLE: RESUME_AVAILABLE
+  VERIFICATION_REQUIRED: VERIFICATION_REQUIRED
+  UNSUPPORTED_LANGUAGE: UNSUPPORTED_LANGUAGE
+  UNSUPPORTED: UNSUPPORTED
+  CLASSIFICATION_UNCERTAIN: CLASSIFICATION_UNCERTAIN
+  HARD_BLOCKED: HARD_BLOCKED
+  TECHNICAL_FAILURE: TECHNICAL_FAILURE
+  ADMITTED: ADMITTED
+
+recovery_action_contract:
+  source_of_truth: decision.recovery_actions
+  supported_actions:
+    CONTINUE: enter_backend_authorized_next_state
+    RESUME: invoke_canonical_resume_capability
+    SIGN_IN: enter_authentication_flow
+    REQUEST_ORG_ACCESS: invoke_canonical_org_access_request
+    VERIFY_DOMAIN: enter_domain_verification_flow
+    JOIN_WAITLIST: expand_or_open_waitlist_email_interaction
+    REQUEST_CLASSIFICATION_REVIEW: invoke_canonical_classification_review_request
+    RETRY: retry_failed_gatekeeper_operation
+    CONTACT_SUPPORT: open_canonical_support_destination
+  rules:
+    - Do not infer recovery actions from reason_code, message text, CTA labels or frontend-maintained Industry policy.
+    - JOIN_WAITLIST is rendered only when returned by canonical authority.
+    - REQUEST_CLASSIFICATION_REVIEW requires both manual_review_eligible=true and recovery_actions containing REQUEST_CLASSIFICATION_REVIEW.
+    - industry_disagreement_flag is distinct from manual_review_eligible and REQUEST_CLASSIFICATION_REVIEW.
+    - HARD_BLOCKED has no ordinary frontend bypass unless canonical authority explicitly returns an action.
+
+recovery_presentation:
+  placement: directly_below_homepage_url_entry
+  default_pattern: inline_or_expanded_recovery_region
+  preserve_submitted_domain_when_useful: true
+  separate_processing_page: false
+
+industry_confirmation:
+  endpoint: POST /api/v1/discovery/:leadId/confirm-industry
+  request_contract:
+    selectedIndustry: required
+    explicitConfirmation: true
+  supported_mvp_industries:
+    D2C: D2C
+    SAAS_AI: AI / SaaS
+    HEALTHCARE: Healthcare
+    OFFLINE_SERVICES: Offline Services
+  coming_soon_examples:
+    - REAL_ESTATE
+    - EDUCATION
+    - MEDIA_ENTERTAINMENT
+    - B2B_AGENCY
+  coming_soon_rule: >-
+    Coming Soon presentation metadata must not use broad labels that materially overlap supported MVP Industries.
+  editable_fields:
+    industry: true
+    sub_industry: false
+  cases:
+    same_supported_industry:
+      confirmation_source: AI_ASSESSED_ACCEPTED
+      industry_disagreement_flag: false
+      canonical_outcome: ADMITTED
+      surface_eligible: true
+      surface_handoff_required: true
+    different_supported_industry:
+      precondition: explicit_warning_and_confirmation
+      confirmation_source: USER_CONFIRMED_OVERRIDE
+      preserve_assessed_industry: true
+      industry_disagreement_flag: true
+      automatic_classification_review_action: false
+      canonical_outcome: ADMITTED
+      surface_eligible: true
+      confirmed_industry_becomes_downstream_authority: true
+    unsupported_industry:
+      precondition: explicit_unsupported_warning_and_confirmation
+      confirmation_source: USER_CONFIRMED_UNSUPPORTED
+      preserve_assessed_industry: true
+      canonical_outcome: UNSUPPORTED
+      reason_code: UNSUPPORTED_INDUSTRY
+      surface_eligible: false
+      surface_handoff: null
+      recovery_actions: backend_authoritative
+  frontend_rule: >-
+    The frontend must submit the explicit Industry confirmation and render the authoritative response.
+    It must not manufacture ADMITTED, UNSUPPORTED, Surface eligibility, waitlist eligibility or review eligibility locally.
+
+pre_scan_confirmation:
+  entry_condition: canonical outcome ADMITTED
+  visible_brand_context:
+    - detected_brand_or_domain
+    - assessed_top_level_industry
+  content_requirements:
+    - communicate readiness for deeper Brand Intelligence analysis
+    - briefly explain what the next scan will do
+    - show an approximate expected time using product-approved/runtime-defensible copy
+    - state that domain-linked work email and Meta access may be useful later
+    - state that those later inputs are not mandatory to start this scan
+    - state that the user will review resulting Intelligence
+  prohibited_content:
+    - sub_industry_editing
+    - claim_that_domain_or_identity_has_been_verified_when_it_has_not
+    - entire_creator_shop_campaign_lifecycle
+    - mandatory_Meta_or_work_email_requirement_at_this_boundary
+  primary_action: START_BRAND_INTELLIGENCE_SCAN
+
+surface_start_boundary:
+  requires:
+    - authoritative_industry_confirmation_response
+    - canonical_outcome_ADMITTED
+    - surface_eligible_true
+    - confirmed_supported_industry
+  action: trigger_surface_execution
+  frontend_state_while_starting: STARTING_SURFACE_SCAN
+  detailed_progress_experience: DEFERRED
+  next_frontend_contract: not_defined_here
+
+accessibility_and_responsive:
+  - Desktop and mobile share identical business-state semantics.
+  - Validation must be associated with the relevant control and not depend on color alone.
+  - Checkbox labels and legal links must be keyboard accessible.
+  - Recovery actions must expose clear accessible names and stable focus behavior.
+  - The confirmation modal must follow Aurora dialog semantics including focus entry, focus trap, Escape handling where allowed, and focus restoration.
+  - Mobile presentation may reflow or transform the modal/recovery composition but must not change permissions, action semantics or validation authority.
+
+implementation_boundary:
+  first:
+    - runtime Gatekeeper response schema
+    - canonical Gatekeeper frontend state type
+    - outcome-to-view-state mapper
+    - recovery-action dispatcher contract
+    - UX-only submission schema
+    - Industry-confirmation response adapter
+    - contract/state tests
+  excluded_until_later:
+    - production visual reconciliation
+    - Stitch execution
+    - detailed Surface progress UI
+    - post-Surface Intelligence review
