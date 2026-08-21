@@ -30,6 +30,43 @@ fields:
       paragraphs: 1
     grounding_required: true
 
+  internal_trace:
+    type: object
+    required: true
+    ui_exposed: false
+    additional_properties: false
+    fields:
+      brand_descriptor:
+        type: object|null
+        nullable: true
+        required: true
+        null_when: brand_descriptor == null
+        fields:
+          internal_grounding_refs:
+            type: array
+            required: true
+            min_items: 1
+            unique_items: true
+            item_type: string
+          internal_confidence:
+            type: enum
+            required: true
+            values: [HIGH, MEDIUM, LOW]
+      brand_understanding_narrative:
+        type: object
+        required: true
+        fields:
+          internal_grounding_refs:
+            type: array
+            required: true
+            min_items: 1
+            unique_items: true
+            item_type: string
+          internal_confidence:
+            type: enum
+            required: true
+            values: [HIGH, MEDIUM, LOW]
+
   audience_groups:
     type: array
     nullable: false
@@ -158,6 +195,8 @@ semantic_validation:
   duplicate_or_materially_overlapping_items_forbidden: true
   healthcare_treatment_or_outcome_promises_forbidden: true
   grounding_refs_must_resolve_to_runtime_evidence: true
+  descriptor_trace_required_when_descriptor_present: true
+  narrative_trace_required: true
 
 post_validation_projection:
   archetype_label:
