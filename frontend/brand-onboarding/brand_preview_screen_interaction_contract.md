@@ -1,7 +1,7 @@
 # Brand Preview Analysis + Preview — Screen & Interaction Contract
 
-**Version:** 1.0 — Proposed for Product Review  
-**Status:** PROPOSED — PRODUCT REVIEW REQUIRED  
+**Version:** 1.0 — Product Approved  
+**Status:** FROZEN — PRODUCT APPROVED  
 **Scope:** Confirmed supported Industry → Continuous Fast Brand Analysis → Brand Preview → start Brand verification  
 **Owner:** Frontend AI Worker
 
@@ -18,7 +18,7 @@ This contract consumes and does not replace:
 - `frontend/gatekeeper/gatekeeper_screen_interaction_contract.md`;
 - `frontend/brand-onboarding/brand_preview_frontend_state_contract.yaml`.
 
-Frozen customer-facing copy from the Brand Preview UX Copy Contract must be preserved verbatim. This contract defines presentation, state transitions, responsiveness and interaction behavior; it does not rewrite copy.
+Frozen customer-facing copy from the Brand Preview UX Copy Contract must be preserved verbatim. `Brand Preview` is the proper name of the Creator Shop experience and retains title capitalization; lowercase `brand` applies to ordinary references to the customer's brand. This contract defines presentation, state transitions, responsiveness and interaction behavior; it does not rewrite copy.
 
 ---
 
@@ -130,7 +130,7 @@ Render frozen copy from `brand_preview_ux_copy_contract.md` exactly.
 
 Normal analysis includes:
 
-- eyebrow: `Building your brand Preview`;
+- eyebrow: `Building your Brand Preview`;
 - headline: `We're getting to know your brand.`;
 - supporting copy: `We’re learning what your brand stands for, who it needs to influence, and where creators could make the biggest difference.`
 
@@ -252,7 +252,7 @@ Render only when authoritative readiness is `PREVIEW_READY`.
 
 Use exactly:
 
-- eyebrow: `Your brand Preview`;
+- eyebrow: `Your Brand Preview`;
 - headline: `Here’s what we see in your brand.`;
 - subheadline: `A first view of who you’re trying to reach, where creators could help, and the creator profiles we’d explore first.`
 
@@ -478,23 +478,22 @@ Do not add `How this Preview was formed`.
 
 The verification transition belongs after the five-section value story.
 
-A persistent/sticky CTA is **not required as canonical desktop behavior**. The user should have a clear primary CTA at the natural end of the Preview.
-
-A future Stitch proposal may explore persistent affordance only if it does not bypass or compete with Preview comprehension and does not introduce a second CTA meaning.
+A persistent/sticky CTA is **not canonical desktop behavior**. The user has one clear primary CTA at the natural end of the Preview.
 
 ## 11.3 Mobile CTA
 
-A bottom sticky CTA is **allowed but not required** for later visual exploration, because the Preview may be long on 390px.
+The canonical v1 mobile action is the same **in-flow verification transition after all five Preview sections**.
 
-If used:
+A bottom-sticky equivalent is not canonical. Stitch may explore one later, subject to explicit Product acceptance of the resulting design.
+
+If Stitch explores a sticky equivalent:
 
 - it must use the exact canonical CTA label;
-- it must not cover content;
+- it must be an accessible equivalent of the in-flow action, never a second action meaning;
+- it must not obscure Preview content;
 - safe-area padding is required;
-- the final in-flow transition/CTA remains the semantic endpoint or the sticky CTA must be an accessible equivalent of the same action, not a second action;
-- it appears only when Preview is ready.
-
-This choice may be finalized during Product review or Stitch acceptance without changing business semantics.
+- it appears only when Preview is ready;
+- the canonical in-flow verification transition remains part of the content flow unless Product explicitly accepts an equivalent composition that preserves the same semantic endpoint.
 
 ## 11.4 Starting verification
 
@@ -640,7 +639,7 @@ When implementation is authorized, tests should cover at minimum:
 - live-region announcements;
 - focus transition into Preview/recovery;
 - keyboard-operable CTA/retry;
-- mobile sticky CTA, if adopted, has one accessible action meaning.
+- any Product-accepted sticky mobile equivalent has one accessible action meaning and does not obscure content.
 
 ### Responsive
 
@@ -670,7 +669,7 @@ Do not add:
 - `Regenerate`;
 - `Looks good`;
 - Campaign creator selection;
-- Stitch artifacts before Product approval.
+- Stitch artifacts before Product authorization.
 
 Do not modify the production frontend clone under this assignment.
 
@@ -678,9 +677,9 @@ Do not modify the production frontend clone under this assignment.
 
 ## 17. Proposed Stitch families after Product approval
 
-Stitch is **not authorized yet**.
+Stitch is **not authorized yet** under this assignment.
 
-If Product approves these contracts, the minimum visual families should likely be:
+The minimum visual families should likely be:
 
 1. **Fast Brand Analysis** — desktop + mobile, using active state and showing how slow reassurance layers into the same composition.
 2. **Brand Preview — normal density** — desktop + mobile.
@@ -693,31 +692,35 @@ Do not generate separate Stitch screens for every collection count.
 
 ## 18. Product review register
 
-The contract proposes the following frontend decisions for approval:
+The following frontend decisions are Product approved and frozen:
 
 1. Seven canonical UI states are sufficient; count/optional-field variants are data-density attributes rather than separate states.
 2. Active and slow analysis share one continuous screen shell.
 3. Recoverable failure and insufficient-evidence states share one recovery visual family but remain semantically distinct.
 4. NORMAL and PARTIAL Preview use one page composition with fluid count handling and no empty placeholders.
-5. Desktop uses a natural end-of-Preview CTA; persistent desktop CTA is not canonical.
-6. A mobile bottom sticky CTA is permitted for later visual exploration but is not required; if used, it is the same canonical action and exact copy.
+5. Desktop uses the natural end-of-Preview in-flow CTA; persistent desktop CTA is not canonical.
+6. Mobile also uses the in-flow verification transition after all five Preview sections. A bottom-sticky equivalent may be explored by Stitch only as the same action, subject to Product acceptance, and must not obscure Preview content.
 7. Horizontal carousels are not the canonical mobile pattern for Preview content.
+8. `Brand Preview` retains title capitalization as the proper experience name; ordinary references to the customer's brand remain lowercase.
 
 ### Genuinely unresolved Product decisions
 
-Only one presentation-level decision remains potentially open:
+None.
 
-- **Mobile persistent CTA:** approve a bottom sticky `Verify & claim this brand` as a preferred mobile pattern, or leave CTA persistence to Stitch exploration/acceptance. This does not alter product semantics.
-
-No unresolved Product decision exists around Preview readiness, five-section structure, copy, editability, collection minimums, slow-analysis semantics, failure/non-ready distinction, or verification action meaning.
+No unresolved Product decision exists around Preview readiness, five-section structure, copy, editability, collection minimums, slow-analysis semantics, failure/non-ready distinction, verification action meaning, or canonical mobile CTA placement.
 
 ---
 
 ## 19. Stitch boundary
 
-Do not invoke Stitch until Product explicitly approves both:
+Do not invoke Stitch until Product explicitly authorizes the next Stitch phase.
+
+When authorized, Stitch must preserve:
 
 - `frontend/brand-onboarding/brand_preview_frontend_state_contract.yaml`;
-- `frontend/brand-onboarding/brand_preview_screen_interaction_contract.md`.
+- `frontend/brand-onboarding/brand_preview_screen_interaction_contract.md`;
+- frozen Brand Preview UX copy;
+- all state/action semantics;
+- canonical in-flow verification transition.
 
-After approval, Stitch must preserve frozen copy and these state/action semantics and focus only on visual composition, Aurora compliance and responsive transformation.
+Stitch may focus only on visual composition, Aurora compliance and responsive transformation, including optional exploration of a mobile sticky equivalent subject to Product acceptance.
