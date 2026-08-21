@@ -1,5 +1,5 @@
-version: "1.0-review"
-status: PROPOSED_FOR_PRODUCT_REVIEW
+version: "1.0-frozen"
+status: "FROZEN — PRODUCT APPROVED"
 contract: brand_preview_minimum_output
 scope: continuous_fast_brand_analysis_to_brand_preview
 owner: intelligence_engine
@@ -55,11 +55,11 @@ field_classification:
     classification: NOT_NEEDED
     reason: May enrich later Audience reasoning but is not a Preview-ready prerequisite.
   brand_descriptor:
-    classification: NEW_CANONICAL_OBJECT
-    proposed_owner: brand_intelligence.brand_strategy
+    classification: DERIVED_PRESENTATION_OUTPUT
     required_for_preview: false
-    lifecycle: early_hypothesis_refreshable
+    lifecycle: bounded_preview_synthesis
     definition: A concise evidence-grounded noun phrase describing what the brand fundamentally offers and, where useful, the customer/use context.
+    canonical_promotion_note: May be reconsidered for canonical promotion later if the same semantic becomes reusable across Brand Centre, Chat or Campaign Intelligence.
     type: string|null
     constraints:
       target_words: [5, 10]
@@ -93,10 +93,10 @@ field_classification:
       - invented_differentiation
     rule: Generate within the consumer limit. Frontend must not truncate or rewrite the narrative to make it fit.
   audience_groups:
-    classification: NEW_CANONICAL_OBJECT
-    proposed_owner: brand_intelligence.audience
+    classification: DERIVED_PRESENTATION_OUTPUT
     object_semantics: early_audience_hypothesis_set
     authority_lifecycle: intelligence_hypothesis_not_customer_confirmed_truth
+    maturation_rule: Mature Brand Audience Intelligence may later define canonical Audience Objects and reconcile or supersede these Preview outputs.
     type: array
     cardinality:
       minimum_when_preview_ready: 1
@@ -242,11 +242,11 @@ preview_payload:
     website_url: REUSE:website_url
     display_domain: DERIVED:website_url
     confirmed_industry: REUSE:industry
-    brand_descriptor: NEW_OPTIONAL:brand_descriptor
+    brand_descriptor: DERIVED_OPTIONAL:brand_descriptor
   understanding:
     narrative: DERIVED_REQUIRED:brand_understanding_narrative
   audiences:
-    groups: NEW_REQUIRED:audience_groups
+    groups: DERIVED_REQUIRED:audience_groups
   opportunities:
     items: DERIVED_REQUIRED:creator_marketing_opportunities
   creator_starting_point:
@@ -334,7 +334,7 @@ industry_variance:
   unsupported_specialization_rule: Do not add Industry-specific fields to Brand Preview merely because later domain Intelligence may need them.
 
 non_authority_rules:
-  audience_groups: Preview Audience groups are evidence-grounded hypotheses and do not become customer-confirmed audience truth merely because they were displayed.
+  audience_groups: Preview Audience groups are evidence-grounded hypotheses and do not become customer-confirmed audience truth merely because they were displayed; mature Brand Audience Intelligence may later define canonical Audience Objects and reconcile or supersede these Preview outputs.
   creator_marketing_opportunities: Preview opportunities are early strategic synthesis and are not final Campaign recommendations or campaign configuration.
   creator_archetypes: Preview archetype recommendations reference the canonical archetype taxonomy but do not become Campaign creator-strategy targeting authority merely because they were displayed.
   preview_lifecycle: Preview outputs may be superseded or enriched by later Brand, Product, Competitor, Instagram, Creator or Campaign Intelligence.
@@ -346,10 +346,10 @@ product_review_register:
     - Identity Object semantics
     - Gatekeeper confirmed supported Industry boundary
     - canonical creator archetype taxonomy
-  proposed_semantic_decisions_requiring_review:
-    - brand_descriptor becomes a small reusable Brand Strategy Object rather than Preview-only prose.
-    - early audience_groups become reusable Audience hypotheses while remaining explicitly non-authoritative customer truth.
-    - brand-understanding narrative, creator opportunities and initial archetype recommendations remain bounded derived Preview outputs rather than new persisted canonical Objects.
+  frozen_semantic_decisions:
+    - brand_descriptor remains a bounded optional derived Preview output; canonical promotion may be reconsidered later only if the same semantic proves reusable across Brand Centre, Chat or Campaign Intelligence.
+    - audience_groups remain bounded derived early hypotheses and non-authoritative customer truth; mature Brand Audience Intelligence may later define canonical Audience Objects and reconcile or supersede them.
+    - brand-understanding narrative, creator opportunities and initial archetype recommendations remain bounded derived Preview outputs rather than new canonical Objects.
     - PREVIEW_READY uses one credible item as the hard floor for each bounded collection; normal target density remains enrichment only.
   open_product_questions: []
 
