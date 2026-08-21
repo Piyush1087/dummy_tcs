@@ -1,7 +1,7 @@
 # Brand Preview UX Copy Contract
 
-**Version:** 1.0 — Proposed for Product Copy Review  
-**Status:** PROPOSED — NOT YET FROZEN  
+**Version:** 1.1 — Product Approved  
+**Status:** FROZEN — PRODUCT APPROVED  
 **Scope:** Continuous Fast Brand Analysis → Brand Preview → Brand verification/claim  
 **Owner:** Frontend AI Worker  
 **Product authority:** `intelligence/product_authority/brand_onboarding_v1_product_authority.md`
@@ -36,6 +36,10 @@ Brand Preview copy should be:
 - natural and human rather than technical;
 - specific to the Brand's Industry and business model;
 - bounded when evidence is partial.
+
+In customer-facing prose, use lowercase `brand` unless grammar requires capitalization.
+
+Uncertainty should be expressed only where materially required. When the underlying output is sufficiently grounded, write directly and confidently rather than hedging every dynamic block. Use bounded language to distinguish inference from fact, not as a repetitive stylistic habit.
 
 Avoid customer-facing terms such as:
 
@@ -72,15 +76,15 @@ Avoid:
 
 ## 3.1 Screen eyebrow
 
-**`Building your Brand Preview`**
+**`Building your brand Preview`**
 
 ## 3.2 Headline
 
-**`We're getting to know your Brand.`**
+**`We're getting to know your brand.`**
 
 ## 3.3 Supporting copy
 
-**`We're turning what we can learn from your website into a focused view of who you need to influence, where creators could help, and which creator profiles are worth exploring first.`**
+**`We’re learning what your brand stands for, who it needs to influence, and where creators could make the biggest difference.`**
 
 This copy deliberately describes customer value, not runtime mechanics.
 
@@ -88,22 +92,22 @@ This copy deliberately describes customer value, not runtime mechanics.
 
 Use these four labels in this order when the runtime can truthfully map work into these semantic phases:
 
-1. **`Understanding your Brand`**
+1. **`Understanding your brand`**
 2. **`Learning who you need to reach`**
 3. **`Finding where creators can help`**
-4. **`Preparing your Brand Preview`**
+4. **`Preparing your brand Preview`**
 
 Do not rotate these labels on a fictional timer. They should represent actual normalized progress where available.
 
 If runtime activity is too coarse to support phase-level progress, use only:
 
-**`Building your Brand Preview…`**
+**`Building your brand Preview…`**
 
 ## 3.5 Analysis helper copy
 
-**`You don't need to stay on this screen once your Preview is ready. Deeper analysis can continue in the background after you move on.`**
+Do not show background-analysis reassurance on the normal fast-analysis path.
 
-This helper is supporting copy and should not visually compete with the progress state.
+The reassurance is reserved for the slow-analysis state in Section 9.7, where it is useful to explain that deeper work can continue without making the default experience noisier.
 
 ---
 
@@ -111,17 +115,17 @@ This helper is supporting copy and should not visually compete with the progress
 
 ## 4.1 Page eyebrow
 
-**`Your Brand Preview`**
+**`Your brand Preview`**
 
 ## 4.2 Headline
 
-**`Here's how we see your Brand so far.`**
+**`Here’s what we see in your brand.`**
 
 ## 4.3 Subheadline
 
-**`A focused first view of your Brand, the people you need to influence, and where creators could make a meaningful difference.`**
+**`A first view of who you’re trying to reach, where creators could help, and the creator profiles we’d explore first.`**
 
-The phrase `so far` is intentional: it communicates useful confidence while leaving room for deeper post-onboarding understanding.
+The wording intentionally presents a useful first point of view without turning the Preview into a claim of complete understanding.
 
 ---
 
@@ -133,7 +137,7 @@ Brand Preview contains exactly five semantic sections.
 
 ### Section heading
 
-**`The Brand we found`**
+**`The brand we found`**
 
 ### Optional helper copy
 
@@ -141,7 +145,7 @@ Normally omit helper copy when Brand name, domain, Industry, logo and descriptor
 
 If a helper is needed because recognition evidence is partial:
 
-**`This is the Brand context we're using for your Preview.`**
+**`This is the brand context we're using for your Preview.`**
 
 ### Static field labels
 
@@ -156,7 +160,7 @@ Do not label the descriptor as `AI summary`, `Brand DNA`, `positioning`, or `con
 
 ### Section heading
 
-**`How we understand your Brand`**
+**`How we understand your brand`**
 
 ### Section helper copy
 
@@ -212,27 +216,21 @@ This explicitly prevents the Preview recommendations from being mistaken for lat
 
 ## 6.1 Transition message
 
-**`Ready to make this yours? Verify your work email to claim the Brand and create your Creator Shop workspace.`**
+**`Ready to continue? Verify your work email to confirm you represent this brand and open your Creator Shop workspace.`**
 
 ## 6.2 Primary CTA
 
-**`Verify & claim this Brand`**
+**`Verify & claim this brand`**
 
 ## 6.3 Secondary information
 
-No secondary CTA is recommended on the default Preview.
+No secondary CTA or explanatory provenance disclosure is part of Brand Preview v1.
 
-Do not add `Edit`, `Review details`, `See all data`, `Improve this Preview`, `Connect Instagram`, or `Set up Campaign` actions here.
-
-If Product later requires a lightweight explanatory disclosure, the preferred label is:
-
-**`How this Preview was formed`**
-
-This should only explain that the Preview is based on currently available Brand website information and may deepen later; it must not expose raw reasoning, provider details or confidence scores.
+Do not add `Edit`, `Review details`, `See all data`, `Improve this Preview`, `How this Preview was formed`, `Connect Instagram`, or `Set up Campaign` actions here.
 
 ## 6.4 Footer/transition note
 
-**`You'll be able to deepen and correct your Brand information after verification without reviewing every inferred detail now.`**
+**`You'll be able to deepen and correct your brand information after verification without reviewing every inferred detail now.`**
 
 This is optional supporting copy. Omit it if the transition card already feels self-explanatory.
 
@@ -283,9 +281,11 @@ Describe what the Brand fundamentally offers and, where useful, the customer or 
 
 If the Brand's exact proposition is unclear, use the narrowest grounded category:
 
-`Skincare and personal-care Brand`
+`Skincare and personal-care brand`
 
 rather than inventing a positioning claim.
+
+Do not add uncertainty language when the descriptor is already directly grounded by available evidence.
 
 ### Unavailable behavior
 
@@ -336,14 +336,14 @@ Include at least two of:
 
 ### Uncertainty language
 
-Prefer:
+Prefer, only when materially required:
 
-- `We see a Brand centred on…`
+- `We see a brand centred on…`
 - `Your website points to…`
 - `The clearest story we can see is…`
-- `From the information available, your Brand appears to…`
+- `From the information available, your brand appears to…`
 
-Do not repeat hedging in every sentence.
+Do not repeat hedging in every sentence or add hedging to sufficiently grounded statements solely for stylistic consistency.
 
 ### Truncation/responsive behavior
 
@@ -411,7 +411,7 @@ Connect a real Brand need to the group's decision context, concern or motivation
 
 ### Uncertainty language
 
-Use `likely`, `appears`, or `may` only when needed. Do not show numeric confidence.
+Use `likely`, `appears`, or `may` only when the distinction between inference and fact materially needs to be communicated. Do not hedge a sufficiently grounded explanation merely because other dynamic blocks use uncertainty language. Do not show numeric confidence.
 
 ### Unavailable behavior
 
@@ -476,7 +476,7 @@ Connect the creator role to an observed Brand/customer barrier such as explanati
 
 ### Uncertainty
 
-Use bounded phrases such as `appears to be`, `could help`, `is likely to matter` where the conclusion is inferential.
+Use bounded phrases such as `appears to be`, `could help`, or `is likely to matter` only where the conclusion is materially inferential. When the opportunity is directly grounded in the available brand context, state it clearly without unnecessary hedging.
 
 ### Unavailable behavior
 
@@ -552,16 +552,16 @@ These fixtures are fictional UI examples. They illustrate expected specificity a
 
 ## 8.1 D2C fixture — `Morrow Skin`
 
-### The Brand we found
+### The brand we found
 
 **Brand:** Morrow Skin  
 **Industry:** D2C  
 **Website:** morrowskin.example  
 **Descriptor:** `Barrier-friendly skincare for simple everyday routines`
 
-### How we understand your Brand
+### How we understand your brand
 
-`Morrow Skin appears to be built around making consistent skincare feel simpler rather than more complicated. The product story centres on approachable routines, ingredient clarity and everyday use, which makes creator-led demonstration especially valuable: people need to see how the products fit together and what a realistic routine looks like.`
+`Morrow Skin is built around making consistent skincare feel simpler rather than more complicated. The product story centres on approachable routines, ingredient clarity and everyday use, which makes creator-led demonstration especially valuable: people need to see how the products fit together and what a realistic routine looks like.`
 
 ### Who you need to influence
 
@@ -572,7 +572,7 @@ These fixtures are fictional UI examples. They illustrate expected specificity a
 `Buyers comparing alternatives who need enough clarity about formulation and use to feel comfortable changing what already sits on their shelf.`
 
 **Problem-led researchers**  
-`People arriving with a specific concern who are likely to value practical explanation before they feel ready to try a new Brand.`
+`People arriving with a specific concern who are likely to value practical explanation before they feel ready to try a new brand.`
 
 ### Where creators can make the difference
 
@@ -583,33 +583,33 @@ These fixtures are fictional UI examples. They illustrate expected specificity a
 `Ingredient-led education can help bridge the gap between formulation claims and the practical questions buyers ask: what it does, when to use it and where it fits.`
 
 **Build trust through realistic use**  
-`Credible creators can make the Brand feel less like another polished skincare promise by showing texture, application and routine choices in a grounded context.`
+`Credible creators can make the brand feel less like another polished skincare promise by showing texture, application and routine choices in a grounded context.`
 
 ### Creators we'd start with
 
 **Routine educators**  
-`Creators who teach simple skincare habits can make the Brand's low-friction routine proposition tangible without overcomplicating it.`
+`Creators who teach simple skincare habits can make the brand's low-friction routine proposition tangible without overcomplicating it.`
 
 **Ingredient explainers**  
 `Creators comfortable translating formulation language can help shoppers understand why a product belongs in their routine.`
 
 **Everyday beauty storytellers**  
-`Creators with believable daily-use content can place the Brand inside real habits rather than presenting it only as a product reveal.`
+`Creators with believable daily-use content can place the brand inside real habits rather than presenting it only as a product reveal.`
 
 ---
 
 ## 8.2 SaaS / AI fixture — `Relaydesk AI`
 
-### The Brand we found
+### The brand we found
 
 **Brand:** Relaydesk AI  
 **Industry:** AI / SaaS  
 **Website:** relaydesk.example  
 **Descriptor:** `AI-assisted support workflows for growing customer-service teams`
 
-### How we understand your Brand
+### How we understand your brand
 
-`Relaydesk AI appears to help customer-support teams handle repetitive work while keeping human operators in control of more complex conversations. The challenge is less about making the product look exciting and more about making its operational value believable—showing where it fits into an existing support workflow and what changes for the people doing the work.`
+`Relaydesk AI helps customer-support teams handle repetitive work while keeping human operators in control of more complex conversations. The challenge is less about making the product look exciting and more about making its operational value believable—showing where it fits into an existing support workflow and what changes for the people doing the work.`
 
 ### Who you need to influence
 
@@ -631,7 +631,7 @@ These fixtures are fictional UI examples. They illustrate expected specificity a
 `Trusted CX and support creators can evaluate the product through the questions buyers actually ask, making the conversation more credible than feature-only promotion.`
 
 **Teach the category before selling the tool**  
-`Educational content can help teams distinguish useful support automation from generic AI promises, giving the Brand a clearer role in an increasingly noisy category.`
+`Educational content can help teams distinguish useful support automation from generic AI promises, giving the brand a clearer role in an increasingly noisy category.`
 
 ### Creators we'd start with
 
@@ -648,16 +648,16 @@ These fixtures are fictional UI examples. They illustrate expected specificity a
 
 ## 8.3 Healthcare fixture — `Northstar Fertility Care`
 
-### The Brand we found
+### The brand we found
 
 **Brand:** Northstar Fertility Care  
 **Industry:** Healthcare  
 **Website:** northstarfertility.example  
 **Descriptor:** `Fertility care centred on guided, clinician-led treatment journeys`
 
-### How we understand your Brand
+### How we understand your brand
 
-`Northstar Fertility Care appears to position the treatment journey as something patients should be able to understand, not simply endure. The Brand combines clinical care with guidance around a process that can feel emotionally and medically complex. Creator marketing therefore needs to build informed confidence—not make outcome promises or reduce care decisions to promotional claims.`
+`Northstar Fertility Care positions the treatment journey as something patients should be able to understand, not simply endure. The brand combines clinical care with guidance around a process that can feel emotionally and medically complex. Creator marketing therefore needs to build informed confidence—not make outcome promises or reduce care decisions to promotional claims.`
 
 ### Who you need to influence
 
@@ -696,16 +696,16 @@ These fixtures are fictional UI examples. They illustrate expected specificity a
 
 ## 8.4 Offline Services fixture — `Foundry Strength Club`
 
-### The Brand we found
+### The brand we found
 
 **Brand:** Foundry Strength Club  
 **Industry:** Offline Services  
 **Website:** foundrystrength.example  
 **Descriptor:** `Coached small-group strength training for busy adults`
 
-### How we understand your Brand
+### How we understand your brand
 
-`Foundry Strength Club appears to sell more than gym access: the core value is coached structure for people who want to get stronger without having to design their own programme. Because the experience happens in person, creators can reduce the uncertainty around joining by showing what a session actually feels like, who belongs there and how coaching works.`
+`Foundry Strength Club sells more than gym access: the core value is coached structure for people who want to get stronger without having to design their own programme. Because the experience happens in person, creators can reduce the uncertainty around joining by showing what a session actually feels like, who belongs there and how coaching works.`
 
 ### Who you need to influence
 
@@ -735,7 +735,7 @@ These fixtures are fictional UI examples. They illustrate expected specificity a
 `Creators with genuine local reach can make the physical experience and community feel familiar before a prospective member visits.`
 
 **Beginner-friendly strength educators**  
-`Creators who teach strength without intimidation can reinforce the Brand's coached, accessible route into training.`
+`Creators who teach strength without intimidation can reinforce the brand's coached, accessible route into training.`
 
 **Busy-professional lifestyle creators**  
 `Creators who realistically show how training fits around work and family life can make consistency feel achievable rather than aspirational.`
@@ -802,7 +802,7 @@ Do not render empty cards.
 
 If one audience group is grounded, show one group and use:
 
-**`We can see one audience clearly enough to start with. We'll deepen this view as we learn more about your Brand.`**
+**`We can see one audience clearly enough to start with. We'll deepen this view as we learn more about your brand.`**
 
 If no useful audience group is grounded, do not generate generic personas. Use:
 
@@ -810,7 +810,7 @@ If no useful audience group is grounded, do not generate generic personas. Use:
 
 Supporting line:
 
-**`You can still continue. We'll keep building this understanding after you claim the Brand.`**
+**`You can still continue. We'll keep building this understanding after you claim the brand.`**
 
 ---
 
@@ -818,7 +818,7 @@ Supporting line:
 
 Use:
 
-**`We found the basics of what you offer, but not enough reliable context yet to give you a useful point of view on the Brand.`**
+**`We found the basics of what you offer, but not enough reliable context yet to give you a useful point of view on the brand.`**
 
 Supporting line:
 
@@ -832,7 +832,7 @@ If this narrative is so weak that the overall Preview is no longer credible, do 
 
 ### Headline
 
-**`We're still building your Brand Preview.`**
+**`We're still building your brand Preview.`**
 
 ### Body
 
@@ -843,6 +843,12 @@ If this narrative is so weak that the overall Preview is no longer credible, do 
 **`Still analysing…`**
 
 Do not show an invented minute estimate unless runtime/product authority later provides a defensible range.
+
+### Background-analysis reassurance
+
+**`You don't need to stay on this screen once your Preview is ready. Deeper analysis can continue in the background after you move on.`**
+
+This reassurance appears only on the slow-analysis path.
 
 Optional supporting line after a materially long wait:
 
@@ -856,7 +862,7 @@ Only show that sentence if restart is genuinely unnecessary.
 
 ### Headline
 
-**`We couldn't finish your Brand Preview.`**
+**`We couldn't finish your brand Preview.`**
 
 ### Body
 
@@ -868,7 +874,7 @@ Only show that sentence if restart is genuinely unnecessary.
 
 ### Secondary support copy
 
-**`If the problem continues, you can return to your Brand website check and try again later.`**
+**`If the problem continues, you can return to your brand website check and try again later.`**
 
 Do not promise that retry will succeed.
 
@@ -878,11 +884,11 @@ Do not promise that retry will succeed.
 
 ### Headline
 
-**`We need a little more to understand this Brand.`**
+**`We need a little more to understand this brand.`**
 
 ### Body
 
-**`The website doesn't currently give us enough grounded information to build a Brand Preview that would be genuinely useful.`**
+**`The website doesn't currently give us enough grounded information to build a brand Preview that would be genuinely useful.`**
 
 ### Primary CTA
 
@@ -890,7 +896,7 @@ Do not promise that retry will succeed.
 
 ### Supporting copy
 
-**`A richer or more accessible Brand website may give us enough context to continue.`**
+**`A richer or more accessible brand website may give us enough context to continue.`**
 
 This state should not invent a generic Preview.
 
@@ -902,11 +908,11 @@ After the user confirms a supported Industry at the Gatekeeper boundary, the tra
 
 Preferred transient status copy:
 
-**`Industry confirmed. Now we're building your Brand Preview.`**
+**`Industry confirmed. Now we're building your brand Preview.`**
 
 If the UI transitions immediately into the Fast Brand Analysis screen, this transient sentence may be omitted and the screen may begin directly with:
 
-**`We're getting to know your Brand.`**
+**`We're getting to know your brand.`**
 
 Do not expose `Gatekeeper complete`, `Surface started`, or similar internal terms.
 
@@ -921,7 +927,7 @@ Mobile must preserve the same semantic meaning as desktop. Do not create separat
 - page headline: target **≤ 42 characters**, maximum **2 lines** at 390 px;
 - section headings: target **≤ 38 characters**, maximum **2 lines**;
 - opportunity/archetype labels: maximum **2 lines**;
-- CTA: keep **`Verify & claim this Brand`** unchanged unless Product explicitly approves a shorter global label.
+- CTA: keep **`Verify & claim this brand`** unchanged.
 
 ## 10.2 Body-copy limits
 
@@ -959,10 +965,10 @@ This section defines content priority only. It is not a visual layout specificat
 The user should notice these first:
 
 1. Brand recognition: name + descriptor;
-2. page headline: `Here's how we see your Brand so far.`;
+2. page headline: `Here’s what we see in your brand.`;
 3. Brand-understanding narrative;
 4. opportunity titles;
-5. primary CTA: `Verify & claim this Brand`.
+5. primary CTA: `Verify & claim this brand`.
 
 These establish recognition, value and forward momentum.
 
@@ -990,11 +996,11 @@ Explanatory copy should not become permanent clutter in the full-ready state.
 
 ## 11.4 Optional / progressive-disclosure copy
 
-Potential progressive disclosure:
+Potential progressive disclosure is limited to:
 
-- `How this Preview was formed`;
-- longer explanation of partial evidence;
-- background-analysis continuation note.
+- longer explanation of partial evidence where needed.
+
+`How this Preview was formed` is omitted from v1. Background-analysis reassurance is not optional default-page copy; it is reserved for the slow-analysis path defined in Section 9.7.
 
 Do not make optional explanation a prerequisite for understanding the Preview.
 
@@ -1047,6 +1053,7 @@ Do not add:
 - `Set your budget`;
 - `Connect Instagram`;
 - `Create a Campaign`;
+- `How this Preview was formed`;
 - confidence percentages;
 - AI scores;
 - `Brand DNA` field labels;
@@ -1060,31 +1067,35 @@ The Preview is a recognition and value moment, not a checkpoint where the user i
 
 # 14. Recommended copy freeze set for Product approval
 
-Product approval should explicitly freeze the following static strings before Stitch:
+Product approval freezes the following static strings and writing rules before Stitch:
 
-- `Building your Brand Preview`
-- `We're getting to know your Brand.`
+- `Building your brand Preview`
+- `We're getting to know your brand.`
+- `We’re learning what your brand stands for, who it needs to influence, and where creators could make the biggest difference.`
 - the four progress phase labels;
-- `Your Brand Preview`
-- `Here's how we see your Brand so far.`
-- page subheadline;
+- `Your brand Preview`
+- `Here’s what we see in your brand.`
+- `A first view of who you’re trying to reach, where creators could help, and the creator profiles we’d explore first.`
 - all five section headings;
 - all five section helper lines where used;
-- `Ready to make this yours? Verify your work email to claim the Brand and create your Creator Shop workspace.`
-- `Verify & claim this Brand`
+- `Ready to continue? Verify your work email to confirm you represent this brand and open your Creator Shop workspace.`
+- `Verify & claim this brand`
 - all partial/slow/recovery state copy in Section 9;
-- the dynamic-copy constraints and maximums in Section 7.
+- the dynamic-copy constraints and maximums in Section 7;
+- the rule that uncertainty is expressed only when materially required;
+- omission of `How this Preview was formed` from v1;
+- slow-path-only background-analysis reassurance.
 
-After freeze, Stitch should be instructed to preserve these strings and focus on composition, hierarchy, responsive transformation and Aurora compliance.
+After freeze, Stitch must preserve these strings and focus on composition, hierarchy, responsive transformation and Aurora compliance.
 
 ---
 
-# 15. Genuinely unresolved copy decisions for Product review
+# 15. Product-approved copy decisions
 
-Only the following decisions remain genuinely open:
+The following decisions are frozen:
 
-1. **Verification CTA naming:** approve `Verify & claim this Brand` as the canonical CTA, or prefer the slightly more account-oriented `Verify & create my Brand workspace`. The first is recommended because it maps directly to the frozen verification/claim boundary and is shorter.
-2. **Optional explanatory disclosure:** decide whether `How this Preview was formed` should appear at all in v1. Recommendation: omit by default; add only if Product believes users need explicit reassurance about how the Preview was derived.
-3. **Background-analysis helper visibility:** decide whether the sentence `You don't need to stay on this screen once your Preview is ready. Deeper analysis can continue in the background after you move on.` should be visible during Fast Brand Analysis or reserved for unusually long analysis. Recommendation: show it only when analysis exceeds the normal fast path, so the default experience remains concise.
+1. **Canonical verification CTA:** `Verify & claim this brand`.
+2. **Preview provenance disclosure:** omit `How this Preview was formed` from v1.
+3. **Background-analysis reassurance:** show only on the slow-analysis path, not during the normal fast-analysis experience.
 
-No other copy decision in this contract requires new Product semantics.
+There are no unresolved Product copy decisions in this contract.
