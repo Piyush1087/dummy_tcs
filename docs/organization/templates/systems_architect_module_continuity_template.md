@@ -54,9 +54,33 @@ Branch / reference:
 
 - `<repo/service>` — `<purpose>`
 
-### Production ownership
+### Production ownership / STOP boundary
 
-State who owns actual production merge/deployment for this module.
+State explicitly:
+
+- where AI-worker implementation ends;
+- who owns actual production merge/reconciliation;
+- who owns production DB migration execution;
+- who owns environment/secrets/AWS configuration;
+- who owns deploy and production smoke test.
+
+Default Creator Shop policy unless explicitly changed:
+
+```text
+AI workers
+→ validated clone implementations
+→ runtime/visual acceptance
+→ final clone SHAs
+→ developer handoff
+→ STOP
+
+human developer
+→ actual production repo reconciliation/merge
+→ production migration
+→ AWS/runtime config + secrets
+→ deployment
+→ production smoke test
+```
 
 ---
 
@@ -73,14 +97,23 @@ Do not include obsolete drafts unless they are needed to understand migration hi
 
 ## 5. Relevant Worker Charters
 
-- `<worker charter path>`
-- `<worker charter path>`
+Include, where applicable:
 
-State any important permanent boundary, for example:
+- Systems Architect
+- UI/UX Design AI Worker
+- Intelligence Engine AI Worker
+- Data Extraction Engine AI Worker
+- Frontend AI Worker
+- backend/domain worker
+
+State important permanent boundaries, for example:
 
 ```text
 Intelligence controls WHY / WHAT / WHEN.
 Data Extraction controls HOW / CONNECTION / DELIVERY.
+
+UI/UX owns experience/visual direction and visual acceptance.
+Frontend owns UI state/interaction contracts, Stitch coordination and implementation reconciliation.
 ```
 
 ---
@@ -92,13 +125,13 @@ Only place decisions here that are genuinely accepted.
 1. `<decision>`
 2. `<decision>`
 
-For each important decision, reference the canonical artifact where possible.
+Reference canonical authority where possible.
 
 ---
 
 ## 7. APPROVED DIRECTION — DETAILS OPEN
 
-Use this for product direction that has been accepted in principle but still requires detailed contract decisions.
+Use this for accepted direction that still requires detailed contract decisions.
 
 1. `<direction>`
    - open detail: `<...>`
@@ -154,9 +187,32 @@ Distinguish optional, blocking and asynchronous steps.
 
 ---
 
-## 12. System Responsibility Map
+## 12. Product-to-Design-to-Implementation lifecycle
 
-Example:
+For material UI work, record which lifecycle stages are complete:
+
+```text
+Product Authority
+→ UI/UX Experience Direction
+→ content/copy envelope
+→ UX Copy
+→ semantic/backend/IE contracts
+→ FE state/screen/interaction contracts
+→ UI/UX Visual Direction Brief
+→ Stitch preparation
+→ Stitch execution
+→ dual acceptance
+→ backend/frontend implementation
+→ runtime + visual acceptance
+→ clone integration
+→ developer handoff
+```
+
+If UI/UX work was skipped intentionally, state why.
+
+---
+
+## 13. System Responsibility Map
 
 | Responsibility | Primary owner | Inputs | Output / consumer |
 |---|---|---|---|
@@ -166,9 +222,7 @@ Each semantic responsibility should have one primary owner.
 
 ---
 
-## 13. Existing Implementation Classification
-
-Classify important existing components:
+## 14. Existing Implementation Classification
 
 | Component / path | Classification | Notes |
 |---|---|---|
@@ -190,7 +244,43 @@ NOT_FOUND
 
 ---
 
-## 14. Worker Assignments — Completed
+## 15. UI/UX / Stitch Direction and Acceptance
+
+For material Stitch/design work capture:
+
+### Experience / Visual Direction authority
+
+- `<path>` — project/module Visual Direction Brief
+- `<path>` — family/screen visual brief if applicable
+
+### Stitch context / accepted design authority
+
+- project/branch/commit:
+- accepted screen IDs/names:
+- PNG/HTML/native caveats:
+
+### Dual acceptance status
+
+```text
+CONTRACT_FIDELITY: <PASS | FAIL | NOT_RUN>
+VISUAL_EXPERIENCE_QUALITY: <PASS | FAIL | DEFERRED_POLISH | NOT_RUN>
+```
+
+Visual outcomes may use:
+
+```text
+VISUAL_ACCEPT
+VISUAL_ACCEPT_WITH_IMPLEMENTATION_NOTES
+VISUAL_CORRECTION_REQUIRED
+VISUAL_RETHINK_REQUIRED
+DEFERRED_POLISH
+```
+
+State any design lessons that should become future process input.
+
+---
+
+## 16. Worker Assignments — Completed
 
 For each completed assignment capture:
 
@@ -207,7 +297,7 @@ For each completed assignment capture:
 
 ---
 
-## 15. Worker Assignments — Active / Next
+## 17. Worker Assignments — Active / Next
 
 ### `<worker>`
 
@@ -232,9 +322,7 @@ For each completed assignment capture:
 
 ---
 
-## 16. Current Repository / Runtime State
-
-Capture exact state only when relevant:
+## 18. Current Repository / Runtime State
 
 ### Backend
 
@@ -255,11 +343,28 @@ Capture exact state only when relevant:
 
 - relevant branch/SHA:
 
-Avoid writing "latest" without a concrete reference.
+Avoid writing `latest` without a concrete reference.
 
 ---
 
-## 17. Known Risks / Constraints
+## 19. Runtime / Visual Acceptance Gates Remaining
+
+State which gates still remain, for example:
+
+```text
+backend local validation
+frontend reconciliation
+end-to-end runtime acceptance
+visual/runtime acceptance
+clone integration
+final integrated-head regression
+```
+
+For each gate specify owner and pass condition.
+
+---
+
+## 20. Known Risks / Constraints
 
 Examples:
 
@@ -269,23 +374,26 @@ Examples:
 - incomplete external capability;
 - legacy compatibility constraint;
 - policy/compliance concern;
-- performance/cost concern.
+- performance/cost concern;
+- visual-quality debt / deferred polish;
+- Stitch artifact caveat;
+- production environment dependency.
 
 ---
 
-## 18. Immediate Next Action
+## 21. Immediate Next Action
 
 Write **one** exact next action.
 
 Example:
 
-> `Systems Architect + Product Owner: freeze the first-session Creator Instagram onboarding journey before assigning Creator Intelligence processor design.`
+> `Frontend AI Worker: resume the already-completed reconciliation audit against backend SHA X and return READY_FOR_FINAL_RUNTIME_ACCEPTANCE.`
 
 Then optionally list the next 2–3 actions after it.
 
 ---
 
-## 19. Explicit Do-Not-Do Constraints
+## 22. Explicit Do-Not-Do Constraints
 
 Examples:
 
@@ -293,12 +401,52 @@ Examples:
 - do not start implementation before `<decision>` is frozen;
 - do not let frontend infer `<backend authority>`;
 - do not call providers directly outside DE;
+- do not let Stitch invent Product meaning;
+- do not accept Stitch solely on contract fidelity;
+- do not spend unlimited design cycles on micro-polish;
 - do not merge AI-worker clone output into actual production;
+- do not execute production migration/deploy unless Product explicitly reassigns ownership;
 - do not replace working canonical infrastructure merely for folder consistency.
 
 ---
 
-## 20. Definition of This Phase's Completion
+## 23. Developer Handoff Checklist
+
+Before declaring the AI-worker phase complete, record:
+
+### Frontend
+
+- clone repository;
+- final accepted branch/SHA;
+- changed files / module scope;
+- tests/build results;
+- runtime/visual caveats;
+- accepted Stitch references if relevant.
+
+### Backend
+
+- clone repository;
+- final accepted branch/SHA;
+- migrations;
+- environment variables/provider credentials;
+- tests/build results;
+- deployment order/smoke requirements.
+
+### Architecture authority
+
+- Product Authority refs;
+- IE/DE/backend contracts;
+- FE state/interaction authority;
+- UI/UX visual briefs;
+- Stitch library/ref where relevant.
+
+### Explicit stop statement
+
+> `Developer now owns production reconciliation/merge, migration execution, AWS/runtime configuration, deployment and production smoke test.`
+
+---
+
+## 24. Definition of This Phase's Completion
 
 ```text
 <condition>
@@ -308,4 +456,23 @@ Examples:
 <condition>
 ```
 
-State the handoff boundary clearly so a new architect knows when to stop and which lifecycle phase follows.
+State the handoff boundary clearly.
+
+For modules ending at developer handoff, completion should normally include:
+
+```text
+accepted backend clone implementation
++
+accepted frontend clone implementation
++
+end-to-end runtime acceptance
++
+visual/runtime acceptance where applicable
++
+final clone SHAs
++
+complete developer handoff
+→ STOP
+```
+
+Production deployment itself is not part of AI-worker completion unless Product explicitly changes ownership.
