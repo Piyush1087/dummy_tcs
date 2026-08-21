@@ -81,10 +81,10 @@ stages:
     dependencies: [validate_and_prune_preview]
     authority: intelligence/engines/brand_intelligence/brand_preview_minimum_output_contract.yaml#readiness_contract
     outcomes:
-      - PREVIEW_READY_NORMAL
-      - PREVIEW_READY_PARTIAL
-      - PREVIEW_NOT_READY
-      - PREVIEW_FAILED_RECOVERABLE
+      - {state: PREVIEW_READY, completeness: NORMAL}
+      - {state: PREVIEW_READY, completeness: PARTIAL}
+      - {state: PREVIEW_NOT_READY, completeness: null}
+      - {state: PREVIEW_FAILED_RECOVERABLE, completeness: null}
 
   - id: request_bounded_public_web_enrichment
     kind: EVIDENCE_REQUEST
@@ -125,20 +125,20 @@ readiness_evaluator:
       required_internal_grounding_pass: true
   completeness:
     NORMAL:
-      output: [PREVIEW_READY, NORMAL]
+      output: {state: PREVIEW_READY, completeness: NORMAL}
       indicative:
         brand_descriptor_present: true
         audience_groups: [2, 3]
         creator_marketing_opportunities: [2, 3]
         creator_archetype_recommendations: [2, 4]
     PARTIAL:
-      output: [PREVIEW_READY, PARTIAL]
+      output: {state: PREVIEW_READY, completeness: PARTIAL}
       rule: All hard minimums pass but optional output or normal target density is missing.
   not_ready:
-    output: PREVIEW_NOT_READY
+    output: {state: PREVIEW_NOT_READY, completeness: null}
     use_for: semantic insufficiency or lost/non-satisfied mandatory Preview meaning when no eligible enrichment remains.
   failed_recoverable:
-    output: PREVIEW_FAILED_RECOVERABLE
+    output: {state: PREVIEW_FAILED_RECOVERABLE, completeness: null}
     use_for: exhausted recoverable technical/runtime failure while semantic eligibility remains otherwise valid.
 
 semantic_enrichment_policy:
