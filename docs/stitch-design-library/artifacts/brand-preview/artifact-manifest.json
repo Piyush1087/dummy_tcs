@@ -1,0 +1,86 @@
+{
+  "project": {
+    "title": "Onboarding journey codex",
+    "id": "2438340976544195006"
+  },
+  "classification": "accepted-reference-input",
+  "authorityBaseline": "801ac7c6680fb3ecbc05dc4db064e9406b73b128",
+  "visualBrief": {
+    "path": "frontend/brand-onboarding/design/brand_preview_stitch_family_visual_brief.md",
+    "commit": "7e0e84693b91ca7292fb9f284adb3fa6a46882f1"
+  },
+  "sourceExport": "C:\\Users\\piyus\\Desktop\\stitch_onboarding_journey_codex (3)",
+  "rawExportFileCount": 44,
+  "rawExportBytes": 3683005,
+  "canonicalCount": 6,
+  "artifacts": [
+    {
+      "reference": "BP-ST-D01 — Fast Brand Analysis — Desktop",
+      "screenId": "84ebbbb4b00b445cb809bfe2a6c8e1af",
+      "sourceFolder": "raw-export/stitch_onboarding_journey_codex/bp_st_d01_fast_brand_analysis_desktop_2",
+      "folder": "canonical/001-bp-st-d01-fast-brand-analysis-desktop",
+      "htmlSha256": "5B2ABB0F6AEC62B4A0F535A3BEC09EEFDA59BDF89E194C69E5717207DC797451",
+      "pngSha256": "7C36B88A7FF2EF3CB97A3A9B09E2C88CBDB953B304CADC4D90570881EBBBFA87",
+      "pngWidth": 1920,
+      "pngHeight": 1395,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "BP-ST-M01 — Fast Brand Analysis — Mobile (Refined)",
+      "screenId": "282e8f6479db47e5aa470a86d04c0560",
+      "sourceFolder": "raw-export/stitch_onboarding_journey_codex/bp_st_m01_fast_brand_analysis_mobile_refined",
+      "folder": "canonical/002-bp-st-m01-fast-brand-analysis-mobile-refined",
+      "htmlSha256": "2C8CB8D3BA7047CC4EF31436B6F5CBEC56BE7505EBCBCC8E2E91D398A25AE1D1",
+      "pngSha256": "51A9495ECCEAD75BB1B8058BDF8E8B910EDDCFD3557C9788B91DD9E726C4D8AE",
+      "pngWidth": 671,
+      "pngHeight": 1600,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "BP-ST-D02 — Analysis Recovery — Desktop",
+      "screenId": "4dc22ef43d444597bcc028b2efe31fde",
+      "sourceFolder": "raw-export/stitch_onboarding_journey_codex/bp_st_d02_analysis_recovery_desktop",
+      "folder": "canonical/003-bp-st-d02-analysis-recovery-desktop",
+      "htmlSha256": "3A8FB90B6DFC43A59AD19A307EE905AB324FC94A26EEA564729730267786070C",
+      "pngSha256": "0C053FDC31E6F4F1A07D3495EE91B5DF2CECEA21FCC96EBDC97FC458F1A37B7F",
+      "pngWidth": 1920,
+      "pngHeight": 1159,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "BP-ST-M02 — Analysis Recovery — Mobile",
+      "screenId": "64b9512885224728b0f5369c914ea1dd",
+      "sourceFolder": "raw-export/stitch_onboarding_journey_codex/bp_st_m02_analysis_recovery_mobile",
+      "folder": "canonical/004-bp-st-m02-analysis-recovery-mobile",
+      "htmlSha256": "3F8D22926E251D2116CC340F7DB04394FB16D46F68899C3CE400D8633AD4D1ED",
+      "pngSha256": "F4AFBF6B55289B4002755532C27E3C15AB08799B9B7945DAF234D6476C8A65CB",
+      "pngWidth": 585,
+      "pngHeight": 907,
+      "pngNote": "Exported viewport crop; full native render and exact native HTML verified",
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "BP-ST-D03 — Brand Preview — Layout Variant 1 (Side-by-Side Insight)",
+      "screenId": "b3f88fe29d754ff4a6ea67bad8c323a2",
+      "sourceFolder": "raw-export/stitch_onboarding_journey_codex/bp_st_d03_brand_preview_layout_variant_1_side_by_side_insight",
+      "folder": "canonical/005-bp-st-d03-brand-preview-side-by-side-insight",
+      "htmlSha256": "0B013771E095A2023DE34C7F58B2E083284334BDA1B31499A6CBC7706FBF14C2",
+      "pngSha256": "CCEAFC3E1C6D4BBB9D280925C17F801320C2DB4576350275E6A9D4DF32AC79AD",
+      "pngWidth": 786,
+      "pngHeight": 1600,
+      "integrity": "PNG_HTML_CONSISTENT"
+    },
+    {
+      "reference": "BP-ST-M03 — Brand Preview — Mobile (Restored)",
+      "screenId": "cc9d84750fdc4124a66cdab9f768c46c",
+      "sourceFolder": "raw-export/stitch_onboarding_journey_codex/bp_st_m03_brand_preview_mobile_restored",
+      "folder": "canonical/006-bp-st-m03-brand-preview-mobile-restored",
+      "htmlSha256": "20B1DDB1451DCDA064D8F07968CB1B75F1D23A5F12FB782CD1734565A21E4770",
+      "pngSha256": "C2C32C597C2796E76FF68C1E92380C8F39631076CB2BB10DD6012C2237FB497E",
+      "pngWidth": 251,
+      "pngHeight": 1600,
+      "integrity": "PNG_HTML_CONSISTENT"
+    }
+  ],
+  "canonicalDesktopD03ScreenId": "b3f88fe29d754ff4a6ea67bad8c323a2"
+}

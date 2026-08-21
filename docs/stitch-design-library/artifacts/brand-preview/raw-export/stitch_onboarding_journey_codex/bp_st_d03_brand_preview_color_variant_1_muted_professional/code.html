@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BP-ST-D03 — Brand Preview Variant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "border-default": "#E5E7EB",
+                      "surface-tint": "#006c4b",
+                      "secondary": "#4b6267",
+                      "surface-container-high": "#e2eae3",
+                      "error-container": "#ffdad6",
+                      "status-warning-bg": "#FFF6F6",
+                      "sidebar-hover": "#334A4F",
+                      "outline-variant": "#bbcac0",
+                      "surface-container": "#e8f0e9",
+                      "on-primary-fixed-variant": "#005137",
+                      "error": "#ba1a1a",
+                      "text-muted": "#6B7280",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "on-background": "#161d19",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#061f23",
+                      "surface-variant": "#dde4dd",
+                      "primary-fixed": "#68fcbf",
+                      "secondary-fixed": "#cee7ec",
+                      "surface-container-highest": "#dde4dd",
+                      "on-surface": "#161d19",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#f4fbf4",
+                      "surface": "#f4fbf4",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-card": "#FFFFFF",
+                      "surface-workflow": "#F0FDF4",
+                      "inverse-surface": "#2b322e",
+                      "secondary-container": "#cbe4e9",
+                      "surface-dim": "#d4dcd5",
+                      "background": "#f4fbf4",
+                      "primary-container": "#34d399",
+                      "status-error": "#CA0F1C",
+                      "text-high": "#0E1214",
+                      "surface-page": "#F8F8F8",
+                      "on-primary-fixed": "#002114",
+                      "forest-ink": "#005137",
+                      "on-secondary-container": "#4f676b",
+                      "on-surface-variant": "#3c4a42",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "tertiary-container": "#ffa483",
+                      "inverse-primary": "#45dfa4",
+                      "primary-fixed-dim": "#45dfa4",
+                      "on-primary-container": "#00563b",
+                      "on-error": "#ffffff",
+                      "tertiary": "#964729",
+                      "tertiary-fixed": "#ffdbcf",
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "surface-container-low": "#eef6ee",
+                      "on-tertiary-container": "#7d3418",
+                      "outline": "#6c7a71",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#783114",
+                      "on-tertiary-fixed": "#380d00",
+                      "primary": "#006c4b",
+                      "inverse-on-surface": "#ebf3ec"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "sm": "16px",
+                      "md": "24px",
+                      "xl": "48px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "lg": "32px",
+                      "margin-tablet": "24px",
+                      "xs": "8px"
+              },
+              "fontFamily": {
+                      "body-base": [
+                              "\"Source Sans 3\""
+                      ],
+                      "label-bold": [
+                              "Satoshi"
+                      ],
+                      "headline-md": [
+                              "Satoshi"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\""
+                      ],
+                      "tab-label": [
+                              "Satoshi"
+                      ],
+                      "headline-md-mobile": [
+                              "Satoshi"
+                      ],
+                      "headline-lg": [
+                              "Satoshi"
+                      ],
+                      "eyebrow": [
+                              "Satoshi"
+                      ],
+                      "headline-lg-mobile": [
+                              "Satoshi"
+                      ]
+              },
+              "fontSize": {
+                      "body-base": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "tab-label": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "eyebrow": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface-page text-on-surface font-body-base antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-[200] flex justify-between items-center px-margin-desktop py-4 bg-surface-container-lowest dark:bg-inverse-surface border-b border-border-default dark:border-outline-variant w-full shadow-sm">
+<div class="text-headline-md font-headline-md text-primary dark:text-inverse-primary font-black">Creator Shop</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-[1200px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-xl lg:py-[80px]">
+<!-- Page Header -->
+<header class="max-w-[800px] mb-xl lg:mb-[64px]">
+<p class="font-eyebrow text-eyebrow text-primary uppercase tracking-wider mb-sm">Your Brand Preview</p>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-high mb-md">Here’s what we see in your brand.</h1>
+<p class="font-body-base text-body-base md:text-[18px] text-on-surface-variant leading-relaxed">A first view of who you’re trying to reach, where creators could help, and the creator profiles we’d explore first.</p>
+</header>
+<!-- Identity & Insight Hero Region -->
+<section class="mb-xl lg:mb-[96px] grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
+<!-- Left Column: Identity -->
+<div class="flex flex-col gap-md">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-text-high pb-sm border-b border-border-default">The brand we found</h2>
+<div class="flex flex-col sm:flex-row gap-lg items-center sm:items-start bg-surface-container-lowest p-lg rounded-2xl border border-border-default shadow-sm">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-low border border-border-default flex items-center justify-center shrink-0 shadow-sm overflow-hidden text-[40px] font-headline-lg text-primary-container">
+            N
+            </div>
+<div class="flex flex-col gap-xs w-full text-center sm:text-left">
+<h3 class="font-headline-md text-headline-md text-on-surface">Northstar Fertility Care</h3>
+<div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-md gap-y-xs font-caption text-caption text-text-muted">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-container">domain</span> Healthcare</span>
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-container">language</span> northstarfertility.example</span>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant mt-sm">Fertility care centred on guided, clinician-led treatment journeys</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Insight -->
+<div class="flex flex-col gap-md">
+<div class="bg-surface-dim text-on-surface p-lg md:p-xl rounded-2xl shadow-md relative overflow-hidden h-full flex flex-col justify-center border border-border-default">
+<h2 class="font-headline-md text-headline-md-mobile md:text-[28px] font-bold mb-sm text-text-high">How we understand your brand</h2>
+<p class="font-caption text-caption text-text-muted mb-md max-w-[800px]">The clearest positioning and customer context we can see from your website.</p>
+<p class="font-body-base text-body-base md:text-[18px] leading-relaxed max-w-[900px] text-on-surface-variant">
+                Northstar Fertility Care positions the treatment journey as something patients should be able to understand, not simply endure. The brand combines clinical care with guidance around a process that can feel emotionally and medically complex. Creator marketing therefore needs to build informed confidence—not make outcome promises or reduce care decisions to promotional claims.
+            </p>
+</div>
+</div>
+</section>
+<!-- Section 3: Audience (Horizontal Row Layout) -->
+<section class="mb-xl lg:mb-[96px]">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-text-high mb-sm">Who you need to influence</h2>
+<p class="font-caption text-caption text-text-muted mb-lg max-w-[800px]">The audience groups that appear most relevant to earning attention, trust or action.</p>
+<div class="flex flex-col md:flex-row gap-lg md:gap-0 divide-y md:divide-y-0 md:divide-x divide-border-default border-y border-border-default py-lg">
+<div class="flex flex-col items-center text-center gap-md flex-1 px-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-primary-container shadow-sm border border-border-default">
+<span class="material-symbols-outlined">search</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-xs">Early-stage treatment researchers</h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-[300px] mx-auto">People trying to understand when to seek specialist care and what a first consultation may involve before they are ready to contact a clinic.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-md flex-1 px-md pt-lg md:pt-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-primary-container shadow-sm border border-border-default">
+<span class="material-symbols-outlined">compare_arrows</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-xs">Patients comparing care approaches</h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-[300px] mx-auto">People evaluating clinics who may care as much about clarity, continuity and communication as they do about the treatment options themselves.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-md flex-1 px-md pt-lg md:pt-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-primary-container shadow-sm border border-border-default">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-xs">Partners navigating the journey together</h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-[300px] mx-auto">Couples or partners looking for practical guidance that helps both people understand the steps, decisions and emotional realities involved.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Opportunities -->
+<section class="mb-xl lg:mb-[96px]">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-text-high mb-sm text-center md:text-left">Where creators can make the difference</h2>
+<p class="font-caption text-caption text-text-muted mb-lg max-w-[800px] text-center md:text-left mx-auto md:mx-0">The strongest creator-marketing opportunities we can see right now.</p>
+<div class="flex flex-wrap justify-center gap-lg">
+<div class="bg-surface-container-low border border-border-default p-md rounded-xl shadow-sm flex flex-col relative overflow-hidden group flex-grow md:max-w-[calc(33.333%-24px)] min-w-[300px]">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container group-hover:h-2 transition-all"></div>
+<div class="flex items-center gap-sm mb-md text-primary-container">
+<span class="material-symbols-outlined">psychology</span>
+<h3 class="font-label-bold text-label-bold text-on-surface">Make the first step less intimidating</h3>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant flex-grow">Credible educational voices can explain what typically happens before and during an initial consultation, reducing uncertainty without presenting medical advice as personal diagnosis.</p>
+</div>
+<div class="bg-surface-container-low border border-border-default p-md rounded-xl shadow-sm flex flex-col relative overflow-hidden group flex-grow md:max-w-[calc(33.333%-24px)] min-w-[300px]">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container group-hover:h-2 transition-all"></div>
+<div class="flex items-center gap-sm mb-md text-primary-container">
+<span class="material-symbols-outlined">school</span>
+<h3 class="font-label-bold text-label-bold text-on-surface">Build trust through clear education</h3>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant flex-grow">Clinician-led or medically responsible creators can help explain treatment concepts in accessible language while keeping decisions anchored to qualified care.</p>
+</div>
+<div class="bg-surface-container-low border border-border-default p-md rounded-xl shadow-sm flex flex-col relative overflow-hidden group flex-grow md:max-w-[calc(33.333%-24px)] min-w-[300px]">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container group-hover:h-2 transition-all"></div>
+<div class="flex items-center gap-sm mb-md text-primary-container">
+<span class="material-symbols-outlined">favorite</span>
+<h3 class="font-label-bold text-label-bold text-on-surface">Represent the journey with empathy</h3>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant flex-grow">Thoughtful patient-experience storytelling can acknowledge the emotional reality of fertility care without promising outcomes or turning vulnerable experiences into testimonials for efficacy.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: Archetypes -->
+<section class="mb-xl lg:mb-[96px]">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-text-high mb-sm text-center md:text-left">Creators we'd start with</h2>
+<p class="font-caption text-caption text-text-muted mb-lg max-w-[800px] text-center md:text-left mx-auto md:mx-0">A few creator profiles that fit the job—not a final Campaign shortlist.</p>
+<div class="flex flex-wrap justify-center gap-lg">
+<div class="flex flex-col h-full bg-surface-container-lowest border border-border-default p-md rounded-xl shadow-sm text-center items-center flex-grow md:max-w-[calc(33.333%-24px)] min-w-[300px]">
+<div class="w-16 h-16 rounded-full bg-surface-dim mb-md flex items-center justify-center border border-border-default">
+<span class="material-symbols-outlined text-[32px] text-primary-container">local_hospital</span>
+</div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-xs">Doctor-led explainers</h3>
+<p class="font-body-base text-body-base text-on-surface-variant flex-grow">Qualified clinicians who communicate clearly can make complex fertility concepts easier to understand without weakening medical boundaries.</p>
+</div>
+<div class="flex flex-col h-full bg-surface-container-lowest border border-border-default p-md rounded-xl shadow-sm text-center items-center flex-grow md:max-w-[calc(33.333%-24px)] min-w-[300px]">
+<div class="w-16 h-16 rounded-full bg-surface-dim mb-md flex items-center justify-center border border-border-default">
+<span class="material-symbols-outlined text-[32px] text-primary-container">record_voice_over</span>
+</div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-xs">Women's health educators</h3>
+<p class="font-body-base text-body-base text-on-surface-variant flex-grow">Evidence-minded health educators can help audiences recognise useful questions and prepare for informed conversations with care providers.</p>
+</div>
+<div class="flex flex-col h-full bg-surface-container-lowest border border-border-default p-md rounded-xl shadow-sm text-center items-center flex-grow md:max-w-[calc(33.333%-24px)] min-w-[300px]">
+<div class="w-16 h-16 rounded-full bg-surface-dim mb-md flex items-center justify-center border border-border-default">
+<span class="material-symbols-outlined text-[32px] text-primary-container">history_edu</span>
+</div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-xs">Patient-journey storytellers</h3>
+<p class="font-body-base text-body-base text-on-surface-variant flex-grow">Responsible creators sharing lived experience can make the emotional and practical journey feel more recognisable without making clinical claims.</p>
+</div>
+</div>
+</section>
+<!-- Verification Transition -->
+<section class="mt-xl lg:mt-[96px] py-xl border-t border-border-default flex flex-col items-center text-center max-w-[800px] mx-auto">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center mb-lg text-on-primary-fixed-variant shadow-sm">
+<span class="material-symbols-outlined text-[32px]">mark_email_read</span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-text-high mb-lg">Ready to continue? Verify your work email to confirm you represent this brand and open your Creator Shop workspace.</h2>
+<button class="bg-primary-container text-on-primary-fixed-variant font-label-bold text-label-bold px-xl py-sm rounded-lg hover:opacity-90 transition-opacity h-12 flex items-center shadow-sm">
+Verify &amp; claim this brand
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md bg-surface-dim mt-auto border-t border-border-default dark:border-outline-variant">
+<div class="font-headline-md text-headline-md text-on-surface">Creator Shop</div>
+<div class="flex flex-wrap justify-center gap-md font-body-base text-body-base">
+<a class="text-on-surface-variant dark:text-outline-variant hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:underline transition-all" href="#">Creator Guidelines</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:underline transition-all" href="#">Help Center</a>
+</div>
+<div class="font-caption text-caption text-on-surface-variant dark:text-outline-variant text-center md:text-right">
+            © 2024 Creator Shop Ecosystem. All rights reserved.
+        </div>
+</footer>
+</body></html>

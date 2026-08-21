@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Building your Brand Preview - Creator Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#f4fbf4",
+                      "surface-card": "#FFFFFF",
+                      "secondary-fixed-dim": "#b2cbd0",
+                      "surface": "#f4fbf4",
+                      "on-surface-variant": "#3c4a42",
+                      "primary-fixed": "#68fcbf",
+                      "on-secondary-container": "#4f676b",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#005137",
+                      "tertiary-container": "#ffa483",
+                      "surface-workflow": "#F0FDF4",
+                      "tertiary": "#964729",
+                      "secondary": "#4b6267",
+                      "on-error": "#ffffff",
+                      "forest-ink": "#005137",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#dde4dd",
+                      "sidebar-hover": "#334A4F",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#eef6ee",
+                      "status-warning-bg": "#FFF6F6",
+                      "surface-dim": "#d4dcd5",
+                      "tertiary-fixed": "#ffdbcf",
+                      "inverse-on-surface": "#ebf3ec",
+                      "surface-container": "#e8f0e9",
+                      "on-tertiary-container": "#7d3418",
+                      "on-secondary-fixed-variant": "#334a4f",
+                      "inverse-primary": "#45dfa4",
+                      "on-background": "#161d19",
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "surface-tint": "#006c4b",
+                      "primary-fixed-dim": "#45dfa4",
+                      "border-default": "#E5E7EB",
+                      "text-high": "#0E1214",
+                      "on-tertiary-fixed-variant": "#783114",
+                      "secondary-fixed": "#cee7ec",
+                      "primary": "#006c4b",
+                      "on-error-container": "#93000a",
+                      "outline": "#6c7a71",
+                      "on-secondary-fixed": "#061f23",
+                      "text-muted": "#6B7280",
+                      "secondary-container": "#cbe4e9",
+                      "surface-container-high": "#e2eae3",
+                      "on-tertiary-fixed": "#380d00",
+                      "inverse-surface": "#2b322e",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#002114",
+                      "primary-container": "#34d399",
+                      "on-primary-container": "#00563b",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#bbcac0",
+                      "error": "#ba1a1a",
+                      "status-error": "#CA0F1C",
+                      "on-surface": "#161d19",
+                      "surface-page": "#F8F8F8",
+                      "surface-bright": "#f4fbf4",
+                      "surface-variant": "#dde4dd"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-tablet": "24px",
+                      "xs": "8px",
+                      "margin-mobile": "16px",
+                      "lg": "32px",
+                      "xl": "48px",
+                      "md": "24px",
+                      "margin-desktop": "32px",
+                      "gutter": "24px",
+                      "sm": "16px"
+              },
+              "fontFamily": {
+                      "label-bold": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "body-base": [
+                              "\"Source Sans 3\"", "sans-serif"
+                      ],
+                      "headline-lg-mobile": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "caption": [
+                              "\"Source Sans 3\"", "sans-serif"
+                      ],
+                      "tab-label": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "headline-lg": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "headline-md-mobile": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "headline-md": [
+                              "Satoshi", "sans-serif"
+                      ],
+                      "eyebrow": [
+                              "Satoshi", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-base": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "tab-label": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "eyebrow": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        /* Custom Shimmer Animation for the active state */
+        @keyframes subtle-shimmer {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+        .animate-shimmer-border {
+            background: linear-gradient(90deg, transparent, rgba(0, 108, 75, 0.15), transparent);
+            background-size: 200% auto;
+            animation: subtle-shimmer 3s linear infinite;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+      </style>
+</head>
+<body class="bg-surface-page min-h-screen flex flex-col font-body-base text-body-base text-on-surface antialiased">
+<!-- TopNavBar Shell (Public Onboarding / No Nav Links since it's a linear flow) -->
+<header class="sticky top-0 z-[200] flex justify-between items-center px-margin-desktop py-4 bg-surface-container-lowest border-b border-border-default w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-headline-md text-headline-md text-primary font-black">Creator Shop</span>
+</div>
+<!-- Suppressed navigation links & trailing actions due to transactional/linear intent -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center p-margin-tablet lg:p-margin-desktop">
+<div class="max-w-4xl w-full flex flex-col items-center text-center">
+<!-- Contextual Anchor -->
+<div class="fade-in-up mb-12">
+<div class="inline-flex items-center px-3 py-1 bg-surface-container-highest rounded-full text-on-surface-variant font-caption text-caption border border-border-default gap-2">
+<span class="material-symbols-outlined text-[14px]" data-icon="language">language</span>
+                    northstarfertility.example
+                </div>
+</div>
+<!-- Core Messaging -->
+<div class="fade-in-up delay-100 max-w-2xl mb-20 flex flex-col items-center">
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest mb-4 block">Building your Brand Preview</span>
+<h1 class="font-headline-lg text-headline-lg text-text-high mb-4">We're getting to know your brand.</h1>
+<p class="font-body-base text-body-base text-text-muted leading-relaxed max-w-xl">
+                    We’re learning what your brand stands for, who it needs to influence, and where creators could make the biggest difference.
+                </p>
+</div>
+<!-- The "Understanding Thread" -->
+<div class="fade-in-up delay-200 w-full relative">
+<!-- Background ambient connection (soft gradient path) -->
+<div class="absolute top-1/2 left-0 right-0 h-[1px] bg-gradient-to-r from-surface-workflow via-primary-fixed-dim to-transparent -translate-y-1/2 opacity-20 pointer-events-none hidden md:block"></div>
+<div class="flex flex-col md:flex-row justify-center items-center gap-md lg:gap-xl w-full relative z-10">
+<!-- Phase 1: Completed -->
+<div class="flex flex-col items-center w-full md:w-1/4 group">
+<div class="w-16 h-16 rounded-xl bg-surface-workflow border border-primary flex items-center justify-center mb-4 transition-all duration-300 shadow-[0_0_15px_rgba(52,211,153,0.2)]">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-label-bold text-label-bold text-text-high text-center">Understanding your brand</span>
+</div>
+<!-- Phase 2: Completed -->
+<div class="flex flex-col items-center w-full md:w-1/4 group">
+<div class="w-16 h-16 rounded-xl bg-surface-workflow border border-primary flex items-center justify-center mb-4 transition-all duration-300 shadow-[0_0_15px_rgba(52,211,153,0.2)]">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-label-bold text-label-bold text-text-high text-center">Learning who you need to reach</span>
+</div>
+<!-- Phase 3: Active -->
+<div class="flex flex-col items-center w-full md:w-1/4 relative">
+<!-- Shimmering border effect container -->
+<div class="absolute inset-0 top-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-xl animate-shimmer-border -z-10"></div>
+<div class="w-16 h-16 rounded-xl bg-surface-card border border-primary flex items-center justify-center mb-4 relative z-10 shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl animate-pulse" data-icon="group_add">group_add</span>
+</div>
+<span class="font-label-bold text-label-bold text-text-high text-center">Finding where creators can help</span>
+</div>
+<!-- Phase 4: Quiet/Upcoming -->
+<div class="flex flex-col items-center w-full md:w-1/4 opacity-40">
+<div class="w-16 h-16 rounded-xl bg-surface-card border border-border-default flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-text-muted text-2xl" data-icon="assignment">assignment</span>
+</div>
+<span class="font-body-base text-body-base text-text-muted text-center">Preparing your Brand Preview</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

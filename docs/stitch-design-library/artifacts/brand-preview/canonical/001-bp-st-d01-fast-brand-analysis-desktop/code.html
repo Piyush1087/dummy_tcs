@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BP-ST-D01 — Fast Brand Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-card": "#FFFFFF",
+                        "on-secondary-fixed": "#061f23",
+                        "surface-dim": "#d4dcd5",
+                        "sidebar-hover": "#334A4F",
+                        "on-tertiary-fixed": "#380d00",
+                        "text-muted": "#6B7280",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "status-error": "#CA0F1C",
+                        "on-tertiary-container": "#7d3418",
+                        "text-high": "#0E1214",
+                        "surface-container-high": "#e2eae3",
+                        "on-tertiary-fixed-variant": "#783114",
+                        "surface-container-low": "#eef6ee",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#bbcac0",
+                        "on-surface-variant": "#3c4a42",
+                        "secondary-fixed": "#cee7ec",
+                        "primary-fixed": "#68fcbf",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#005137",
+                        "error": "#ba1a1a",
+                        "forest-ink": "#005137",
+                        "on-surface": "#161d19",
+                        "border-default": "#E5E7EB",
+                        "background": "#f4fbf4",
+                        "status-warning-bg": "#FFF6F6",
+                        "surface": "#f4fbf4",
+                        "primary": "#006c4b",
+                        "secondary-container": "#cbe4e9",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2b322e",
+                        "on-background": "#161d19",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#dde4dd",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#b2cbd0",
+                        "secondary": "#4b6267",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-primary-container": "#00563b",
+                        "surface-tint": "#006c4b",
+                        "surface-page": "#F8F8F8",
+                        "inverse-primary": "#45dfa4",
+                        "on-secondary-container": "#4f676b",
+                        "primary-container": "#34d399",
+                        "tertiary-container": "#ffa483",
+                        "on-secondary-fixed-variant": "#334a4f",
+                        "outline": "#6c7a71",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f4fbf4",
+                        "on-primary-fixed": "#002114",
+                        "tertiary": "#964729",
+                        "surface-workflow": "#F0FDF4",
+                        "primary-fixed-dim": "#45dfa4",
+                        "surface-container": "#e8f0e9",
+                        "surface-variant": "#dde4dd",
+                        "inverse-on-surface": "#ebf3ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "xl": "48px",
+                        "lg": "32px",
+                        "md": "24px",
+                        "margin-tablet": "24px",
+                        "margin-desktop": "32px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md-mobile": ["Satoshi"],
+                        "tab-label": ["Satoshi"],
+                        "label-bold": ["Satoshi"],
+                        "body-base": ["\"Source Sans 3\""],
+                        "headline-lg-mobile": ["Satoshi"],
+                        "eyebrow": ["Satoshi"],
+                        "headline-lg": ["Satoshi"],
+                        "headline-md": ["Satoshi"],
+                        "caption": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "headline-md-mobile": ["20px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "tab-label": ["16px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-base": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "eyebrow": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.5", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @keyframes subtleGlow {
+            0% { opacity: 0.8; filter: blur(4px); }
+            50% { opacity: 1; filter: blur(8px); }
+            100% { opacity: 0.8; filter: blur(4px); }
+        }
+        .animate-subtle-glow {
+            animation: subtleGlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes shimmerText {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .animate-shimmer-text {
+            background-size: 200% auto;
+            background-image: linear-gradient(to right, #005137 20%, #45dfa4 50%, #005137 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmerText 3s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface-page min-h-screen flex flex-col font-body-base text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header (Quiet Public Shell) -->
+<header class="w-full flex items-center px-margin-desktop py-4 bg-surface-page">
+<img alt="Creator Shop Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2eEuTrcOY5ZRrZ8SpAFxwIv9JMYG1zPULOC3PMSnYmSiSHk1LsiWc5Vmky53Tuf8S6OEKNbfjv7_ZxNolhjSkCHZQ3fIx0On46NzB7AurxVBmhhHj87GeeaXOlK0Ve-cqnEgc1t4Z-SsEMVGyRGrjJzzahJLLwungjGTSYE4WEx7dajru6cBgoMEyimUSG8WMNFVPAX9j9wUL0Z4DVEB0mGpSSqE8n1SPm05tJ7hZdYCZaainEQqct3OoWr5da3eCoMcFVsBLaEc"/>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center px-margin-desktop py-xl">
+<div class="max-w-3xl w-full flex flex-col items-center text-center space-y-md mb-xl">
+<!-- Domain Cue -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-surface-workflow border border-primary-container rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">link</span>
+<span class="font-label-bold text-label-bold text-forest-ink">northstarfertility.example</span>
+</div>
+<!-- Typography Header Zone -->
+<div class="space-y-sm">
+<p class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">Building your Brand Preview</p>
+<h1 class="font-headline-lg text-headline-lg text-forest-ink md:text-4xl">We're getting to know your brand.</h1>
+<p class="font-body-base text-body-base text-text-muted max-w-2xl mx-auto md:text-lg">
+                    We’re learning what your brand stands for, who it needs to influence, and where creators could make the biggest difference.
+                </p>
+</div>
+</div>
+<!-- The "Understanding Surface" (Visual Anchor) -->
+<div class="w-full max-w-4xl relative overflow-hidden rounded-[2rem] border border-border-default bg-surface-card p-xl md:p-[64px] shadow-sm flex flex-col items-center justify-center min-h-[400px]">
+<!-- Atmospheric Background Element -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-gradient-to-tr from-primary-container to-secondary-container blur-3xl animate-subtle-glow"></div>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 flex flex-col space-y-lg w-full max-w-lg">
+<!-- Resolved Phase 1 -->
+<div class="flex items-center gap-md opacity-60">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant">Understanding your brand</span>
+</div>
+<!-- Resolved Phase 2 -->
+<div class="flex items-center gap-md opacity-60 pl-8">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant">Learning who you need to reach</span>
+</div>
+<!-- Active Phase -->
+<div class="flex items-center gap-md pl-16 py-sm">
+<div class="relative flex items-center justify-center w-8 h-8">
+<div class="absolute inset-0 rounded-full bg-primary-container animate-ping opacity-75"></div>
+<div class="relative w-3 h-3 rounded-full bg-primary"></div>
+</div>
+<span class="font-headline-lg text-headline-lg md:text-[40px] animate-shimmer-text leading-tight">Finding where creators can help</span>
+</div>
+<!-- Upcoming Phase -->
+<div class="flex items-center gap-md opacity-30 pl-24">
+<span class="material-symbols-outlined text-outline text-2xl">pending</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant">Preparing your Brand Preview</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Public Footer -->
+<footer class="w-full py-md px-margin-desktop bg-surface-page flex justify-center items-center gap-md">
+<a class="font-caption text-caption text-text-muted hover:text-primary transition-colors" href="#">Privacy</a>
+<span class="text-border-default">•</span>
+<a class="font-caption text-caption text-text-muted hover:text-primary transition-colors" href="#">Terms</a>
+<span class="text-border-default">•</span>
+<a class="font-caption text-caption text-text-muted hover:text-primary transition-colors" href="#">Security</a>
+</footer>
+</body></html>
