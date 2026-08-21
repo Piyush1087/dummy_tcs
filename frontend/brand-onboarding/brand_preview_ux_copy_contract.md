@@ -1,6 +1,6 @@
 # Brand Preview UX Copy Contract
 
-**Version:** 1.1 — Product Approved  
+**Version:** 1.2 — Product Approved  
 **Status:** FROZEN — PRODUCT APPROVED  
 **Scope:** Continuous Fast Brand Analysis → Brand Preview → Brand verification/claim  
 **Owner:** Frontend AI Worker  
@@ -37,7 +37,7 @@ Brand Preview copy should be:
 - specific to the Brand's Industry and business model;
 - bounded when evidence is partial.
 
-In customer-facing prose, use lowercase `brand` unless grammar requires capitalization.
+In customer-facing prose, use lowercase `brand` unless grammar requires capitalization. `Brand Preview` is the proper name of the Creator Shop experience and retains title capitalization.
 
 Uncertainty should be expressed only where materially required. When the underlying output is sufficiently grounded, write directly and confidently rather than hedging every dynamic block. Use bounded language to distinguish inference from fact, not as a repetitive stylistic habit.
 
@@ -76,7 +76,7 @@ Avoid:
 
 ## 3.1 Screen eyebrow
 
-**`Building your brand Preview`**
+**`Building your Brand Preview`**
 
 ## 3.2 Headline
 
@@ -95,13 +95,13 @@ Use these four labels in this order when the runtime can truthfully map work int
 1. **`Understanding your brand`**
 2. **`Learning who you need to reach`**
 3. **`Finding where creators can help`**
-4. **`Preparing your brand Preview`**
+4. **`Preparing your Brand Preview`**
 
 Do not rotate these labels on a fictional timer. They should represent actual normalized progress where available.
 
 If runtime activity is too coarse to support phase-level progress, use only:
 
-**`Building your brand Preview…`**
+**`Building your Brand Preview…`**
 
 ## 3.5 Analysis helper copy
 
@@ -115,7 +115,7 @@ The reassurance is reserved for the slow-analysis state in Section 9.7, where it
 
 ## 4.1 Page eyebrow
 
-**`Your brand Preview`**
+**`Your Brand Preview`**
 
 ## 4.2 Headline
 
@@ -832,7 +832,7 @@ If this narrative is so weak that the overall Preview is no longer credible, do 
 
 ### Headline
 
-**`We're still building your brand Preview.`**
+**`We're still building your Brand Preview.`**
 
 ### Body
 
@@ -862,7 +862,7 @@ Only show that sentence if restart is genuinely unnecessary.
 
 ### Headline
 
-**`We couldn't finish your brand Preview.`**
+**`We couldn't finish your Brand Preview.`**
 
 ### Body
 
@@ -888,7 +888,7 @@ Do not promise that retry will succeed.
 
 ### Body
 
-**`The website doesn't currently give us enough grounded information to build a brand Preview that would be genuinely useful.`**
+**`The website doesn't currently give us enough grounded information to build a Brand Preview that would be genuinely useful.`**
 
 ### Primary CTA
 
@@ -908,7 +908,7 @@ After the user confirms a supported Industry at the Gatekeeper boundary, the tra
 
 Preferred transient status copy:
 
-**`Industry confirmed. Now we're building your brand Preview.`**
+**`Industry confirmed. Now we're building your Brand Preview.`**
 
 If the UI transitions immediately into the Fast Brand Analysis screen, this transient sentence may be omitted and the screen may begin directly with:
 
@@ -1069,11 +1069,11 @@ The Preview is a recognition and value moment, not a checkpoint where the user i
 
 Product approval freezes the following static strings and writing rules before Stitch:
 
-- `Building your brand Preview`
+- `Building your Brand Preview`
 - `We're getting to know your brand.`
 - `We’re learning what your brand stands for, who it needs to influence, and where creators could make the biggest difference.`
 - the four progress phase labels;
-- `Your brand Preview`
+- `Your Brand Preview`
 - `Here’s what we see in your brand.`
 - `A first view of who you’re trying to reach, where creators could help, and the creator profiles we’d explore first.`
 - all five section headings;
@@ -1097,5 +1097,6 @@ The following decisions are frozen:
 1. **Canonical verification CTA:** `Verify & claim this brand`.
 2. **Preview provenance disclosure:** omit `How this Preview was formed` from v1.
 3. **Background-analysis reassurance:** show only on the slow-analysis path, not during the normal fast-analysis experience.
+4. **Proper-name capitalization:** `Brand Preview` retains title capitalization; lowercase `brand` applies only to ordinary references to the customer's brand.
 
 There are no unresolved Product copy decisions in this contract.
