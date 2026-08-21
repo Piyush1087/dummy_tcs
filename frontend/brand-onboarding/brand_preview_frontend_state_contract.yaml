@@ -1,6 +1,6 @@
 id: brand_preview_frontend_state_contract
-version: "1.0-proposed"
-status: "PROPOSED — PRODUCT REVIEW REQUIRED"
+version: "1.0-frozen"
+status: "FROZEN — PRODUCT APPROVED"
 scope: gatekeeper_industry_confirmation_to_brand_preview_verification_start
 owner: frontend_ai_worker
 
@@ -26,6 +26,7 @@ governing_principles:
   - Missing optional logo or descriptor and reduced collection cardinality are payload-density attributes, not separate top-level UI states.
   - A smaller truthful Preview is valid and must not be padded with placeholders, empty cards, duplicated items, or generic filler.
   - Brand Preview is non-editable.
+  - Brand Preview is the proper name of the Creator Shop experience and retains title capitalization; lowercase brand applies to ordinary customer-brand references.
   - Frozen customer-facing copy must be rendered verbatim where the copy contract defines an exact string.
 
 canonical_ui_states:
@@ -271,6 +272,8 @@ responsive_invariants:
   - Dynamic content must never be truncated mid-sentence.
   - Generate/render within frozen copy limits rather than maintaining independent mobile summaries.
   - Reduced-density PREVIEW_READY must collapse naturally without empty visual placeholders.
+  - The canonical v1 verification action is the in-flow transition after all five Preview sections on desktop and mobile.
+  - A mobile bottom-sticky equivalent is not canonical; Stitch may explore it only as an accessible equivalent of the same action, subject to Product acceptance, without obscuring Preview content or introducing a second action meaning.
 
 explicit_exclusions:
   - edit_actions
@@ -293,4 +296,5 @@ product_review_register:
     - ANALYSIS_RECOVERABLE_FAILURE and PREVIEW_NOT_READY share one recovery shell but remain distinct semantic states because retry/exhaustion meaning differs.
     - PREVIEW_READY NORMAL and PARTIAL share one Preview screen composition with fluid item counts and no reserved empty slots.
     - Brand verification begins from the Preview CTA and is out of scope after transition acceptance.
+    - The canonical mobile verification endpoint is the in-flow CTA after the five sections; bottom-sticky treatment may only be explored later by Stitch as the same action and remains subject to Product acceptance.
   unresolved_product_questions: []
