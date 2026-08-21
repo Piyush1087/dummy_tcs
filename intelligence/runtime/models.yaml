@@ -1,4 +1,4 @@
-version: 0.2-working
+version: 0.3-working
 status: WORKING
 
 purpose: Central registry for AI model selection and runtime defaults used by the Intelligence Compiler. Processors reference stable model profiles; provider model IDs and tunable runtime settings are resolved here so model changes do not require rewriting processor definitions or reasoning artifacts.
@@ -17,6 +17,10 @@ providers:
     adapter: gemini
     credential_ref: env.GEMINI_API_KEY
     enabled_environments: [development, test, production]
+  openai:
+    adapter: openai
+    credential_ref: env.OPENAI_API_KEY
+    enabled_environments: [development, test, production]
 
 model_aliases:
   gemini_fast_current:
@@ -30,6 +34,12 @@ model_aliases:
     model_id: gemini-3.5-flash
     lifecycle: CURRENT
     intended_use: evidence-grounded tasks requiring comparison, conflict resolution, or multi-signal reasoning
+
+  brand_preview_openai_fast_fallback:
+    provider: openai
+    model_id: gpt-5.6-luna
+    lifecycle: APPROVED_TECHNICAL_FALLBACK
+    intended_use: Cross-provider structured-output fallback for bounded Brand Preview synthesis when the primary model path is technically exhausted.
 
 model_profiles:
   fast_classification:
@@ -50,6 +60,19 @@ model_profiles:
     runtime: {temperature: 0, structured_output: true, timeout_ms: 30000, max_attempts: 2}
     intended_processors: [market_geography]
 
+  brand_preview_fast_reasoning:
+    description: Low-latency evidence-grounded structured synthesis for bounded Brand Preview output.
+    model_alias: gemini_reasoning_current
+    runtime: {temperature: 0, structured_output: true, timeout_ms: 25000, max_attempts: 2}
+    intended_processors: [brand_preview_synthesis]
+
+  brand_preview_fast_reasoning_fallback:
+    description: Approved cross-provider technical fallback for Brand Preview synthesis after the primary profile is technically exhausted.
+    model_alias: brand_preview_openai_fast_fallback
+    runtime: {temperature: 0, structured_output: true, timeout_ms: 30000, max_attempts: 1}
+    intended_processors: [brand_preview_synthesis]
+    fallback_only: true
+
 processor_model_bindings:
   industry_classification:
     gatekeeper: {model_profile: fast_classification, access_mode: website_direct}
@@ -58,6 +81,11 @@ processor_model_bindings:
     default: {model_profile: grounded_extraction, access_mode: normalized_evidence}
   market_geography:
     default: {model_profile: grounded_geography, access_mode: normalized_evidence}
+  brand_preview_synthesis:
+    default:
+      model_profile: brand_preview_fast_reasoning
+      technical_fallback_profile: brand_preview_fast_reasoning_fallback
+      access_mode: normalized_evidence
 
 runtime_defaults:
   default_model_alias: gemini_reasoning_current
@@ -91,6 +119,7 @@ compiler_resolution_contract:
     - Resolve provider credential/configuration from environment secrets.
     - Merge permitted runtime defaults and authorized overrides.
     - Return an immutable resolved_model_runtime snapshot for the Processor Execution.
+  fallback_note: technical_fallback_profile is execution-profile policy metadata; runtime implementation must resolve it through the same registry and must not hardcode the fallback model in feature code.
 
 telemetry_requirements:
   record_per_processor_execution: [model_profile, model_alias, provider, model_id, runtime_settings_effective, attempt_count, input_tokens_when_available, output_tokens_when_available, provider_cost_when_available, provider_latency_when_available]
@@ -109,5 +138,14 @@ identity_test_readiness:
     - GEMINI_API_KEY is available in the execution environment
     - Gemini runtime adapter supports website_direct for the Gatekeeper path
     - Gemini runtime adapter supports structured normalized-evidence requests for other Identity processors
+
+brand_preview_runtime_authority:
+  primary_profile: brand_preview_fast_reasoning
+  primary_resolved_model_at_freeze: gemini-3.5-flash
+  approved_technical_fallback_profile: brand_preview_fast_reasoning_fallback
+  approved_technical_fallback_model_at_freeze: gpt-5.6-luna
+  fallback_trigger: technical_exhaustion_only
+  semantic_insufficiency_uses_model_fallback: false
+  semantic_insufficiency_policy_source: intelligence/execution_profiles/brand_preview_fast.yaml
 
 non_goals: [Prompt construction, Global or processor-specific reasoning instructions, Evidence acquisition or normalization, Processor output schemas, Intelligence persistence mapping, Trigger policy, Provider secret storage]
