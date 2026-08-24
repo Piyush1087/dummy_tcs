@@ -1,5 +1,5 @@
 version: "1.0"
-status: CANONICAL_CANDIDATE
+status: FROZEN
 contract: shared_intelligence_metadata
 scope: platform_wide_durable_intelligence_metadata
 owner: intelligence_engine
