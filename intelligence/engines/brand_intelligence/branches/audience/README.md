@@ -1,6 +1,6 @@
 # Brand Intelligence — Audience
 
-**Status:** PROPOSED FOR SYSTEMS ARCHITECT FREEZE  
+**Status:** FROZEN  
 **Object authority:** `objects.yaml`
 
 ## Purpose
