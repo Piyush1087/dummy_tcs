@@ -1,9 +1,9 @@
-# Brand Centre — Offerings V0 Provisional Product Authority
+# Brand Centre — Offerings Provisional Product Authority
 
-**Status:** PROVISIONAL — PRODUCT DIRECTION ACCEPTED FOR CONTINUED DESIGN  
+**Status:** PROVISIONALLY RECONCILED — READY TO INFORM BRAND WORKSPACE DESIGN  
 **Date:** 2026-08-24  
 **Scope:** Brand Centre Offerings workspace and Offering → Campaign Asset boundary  
-**Purpose:** Establish a stricter MVP operating model before Audience / Brand workspace design and before Product Intelligence contracts are frozen.
+**Purpose:** Freeze a strict, scalable MVP operating model before Brand / Market / Campaign Recommendation design and before Product Intelligence contracts are frozen.
 
 ---
 
@@ -11,7 +11,7 @@
 
 Creator Shop should optimize for **reliable delegation**, not maximum configurability.
 
-The platform is intended to replace a meaningful portion of the work normally performed by an influencer-marketing agency. The desired interaction model is therefore:
+The platform is intended to replace a meaningful portion of the work normally performed by an influencer-marketing agency. The desired interaction model is:
 
 ```text
 Creator Shop understands the Brand
@@ -25,9 +25,7 @@ Brand approves / corrects / overrides when required
 Creator Shop executes
 ```
 
-MVP should prefer strict, scalable rules over many use-case-specific exceptions.
-
-Where a fact or configuration is necessary for safe campaign execution, the system should use a clear **GO / NO-GO** rule rather than proliferating warning states and bespoke exception handling.
+MVP should prefer a small number of strict, scalable rules over many use-case-specific exceptions.
 
 ---
 
@@ -50,7 +48,7 @@ Examples:
 
 A **Campaign Asset** is the campaign-time representation of **what the creator is expected to talk about**.
 
-Campaign Asset terminology should not be used interchangeably with Offering inside Brand Centre.
+Campaign Asset terminology must not be used interchangeably with Offering inside Brand Centre.
 
 Canonical Campaign Asset kinds remain:
 
@@ -68,19 +66,18 @@ What a creator receives from the Brand is a separate concern and is **not** a Ca
 
 Examples:
 
-- physical product sample;
+- physical sample / review unit;
 - gift box;
-- review unit;
 - 100% checkout code;
 - trial account;
 - SaaS credits;
 - consultation / experience access.
 
-This may become a dedicated gifting/provisioning system in V2.
+Dedicated gifting / provisioning is deferred to V2.
 
 ---
 
-## 3. Brand Centre Offerings UX rule
+## 3. Brand Centre Offerings UX
 
 Brand Centre workspaces are primarily **browse / understand / navigate** surfaces.
 
@@ -96,9 +93,9 @@ Offerings workspace
 → edit / pause / remove actions live on detail
 ```
 
-This rule is especially important for mobile and should be applied consistently across future Brand Centre workspaces where practical.
+This rule is especially important for mobile and should be reused across Brand Centre where practical.
 
-V2 may explore `Regenerate`, `Share feedback`, or richer provenance/source controls.
+V2 may explore `Regenerate`, `Share feedback`, or richer provenance controls.
 
 ---
 
@@ -106,7 +103,7 @@ V2 may explore `Regenerate`, `Share feedback`, or richer provenance/source contr
 
 Do not require an Audience definition for every Offering.
 
-Audience remains primarily Brand / Audience Intelligence authority.
+Audience belongs to the broader **Brand** model and later Campaign targeting logic.
 
 Campaign targeting should later resolve from:
 
@@ -118,48 +115,46 @@ Brand Audience
 → Campaign target audience
 ```
 
-Offering-specific affinity/fit signals may exist internally, but they are not a mandatory Offering-detail surface or canonical user-edit requirement in MVP.
+Offering-specific fit signals may exist internally, but are not mandatory user-facing Offering fields in MVP.
 
 ---
 
-## 5. Offering content exists to support creator communication
+## 5. Offering detail exists to feed creator communication
 
 Offering detail should not become a generic ecommerce catalogue or Product Intelligence dump.
 
-The Offering must contain the grounded business truth necessary to become a high-quality Campaign Asset and to help build a creator Brief.
+Its purpose is to hold the grounded business truth that can later flow into a Campaign Asset and Brief.
 
-### Common Offering communication payload
+### Common Offering content
 
-At minimum, an active Offering should provide the applicable subset of:
+An Offering may contain the applicable subset of:
 
 ```text
 name
 kind / subtype
 description
 images / media where relevant
-commercial / service facts required for public communication
+price / commercial facts where relevant
 key factual features / attributes
-key differentiators that are grounded
-customer-facing destination(s)
+grounded differentiators
+customer-facing URL / destination
 location applicability where relevant
 status
 creator communication ingredients
 ```
 
+Not every field must be mandatory for every Offering type.
+
 ### Creator communication ingredients
 
-These are reusable, grounded inputs rather than a finished Campaign Brief.
-
-Examples:
+These are reusable grounded inputs, not a finished Brief:
 
 ```text
 key factual talking-point ingredients
-important product/service facts
+important product / service facts
 things a creator can credibly demonstrate / explain
 claim constraints / facts that must not be overstated
 ```
-
-Offering content should add value over basic catalogue data by making it usable for creator communication.
 
 The Campaign Brief remains responsible for campaign-specific:
 
@@ -176,22 +171,20 @@ Do / Don't guidance
 
 ---
 
-## 6. MVP source model: AI-discovered and manually added Offerings converge
+## 6. AI-discovered and manually added Offerings converge into one canonical object
 
-Creator Shop should support two creation paths:
+Creator Shop supports two creation paths:
 
 ```text
 AI-discovered Offering
 Manual Add Offering
 ```
 
-Both must converge into the **same canonical Offering field requirements and validation rules**.
+They must converge into the **same canonical Offering model**, but this does **not** mean every possible field is mandatory.
 
-Do not allow a low-quality manual Offering schema such as only `name + description` if an AI-discovered Offering requires materially richer fields.
+Validation should require only the minimum applicable truth necessary for that Offering type to be ACTIVE and usable in Campaign planning.
 
-### Source authority
-
-The important distinction is not "AI vs manual". It is **field authority / provenance**.
+The important distinction is **field authority / provenance**, not "AI vs manual".
 
 Conceptually:
 
@@ -203,32 +196,27 @@ CREATOR_SHOP_DERIVED
 
 Exact technical vocabulary may be refined later.
 
-Brand-confirmed values have higher overwrite protection than observed/derived values.
-
 ---
 
-## 7. Manual Add Offering is provisionally accepted
+## 7. Manual Add Offering is accepted for MVP
 
-Manual addition remains in MVP because non-D2C businesses may have legitimate Offerings that Creator Shop cannot infer exactly as the Brand intends.
+Manual addition remains in MVP because non-D2C businesses may have legitimate Offerings that Creator Shop cannot infer or structure exactly as the Brand intends.
 
 Examples include:
 
-- enterprise SaaS capabilities represented only loosely on public pages;
-- clinic/service structures that are not expressed as neat product pages;
-- offline packages / experiences;
-- Offerings described on a homepage rather than a dedicated URL.
-
-Manual addition is allowed only through the same canonical validation requirements as AI-discovered Offerings.
+- SaaS products / plans / capabilities represented only on broad pages or the homepage;
+- healthcare treatment structures that are not expressed as neat landing pages;
+- offline services or packages not represented as discrete product pages.
 
 **Pre-launch Offering support is deferred to V2.**
 
-MVP should not add exception workflows specifically for products/services that are not yet available to customers.
+MVP should not create exception workflows for products/services that are not yet available to customers.
 
 ---
 
-## 8. Offering type must be selected first for manual creation
+## 8. Manual Add starts with Offering type
 
-Manual Add Offering begins with an industry-aware Offering type.
+Manual Add Offering begins with an industry-aware type selection.
 
 ### D2C
 
@@ -247,7 +235,7 @@ Feature / Capability
 Offer
 ```
 
-`Offer` is separate from Product/Plan/Feature because it has independent validity, applicability and terms.
+`Offer` remains separate from Product / Plan / Feature because it has independent validity, applicability and terms.
 
 ### Healthcare
 
@@ -257,7 +245,7 @@ Package / Program
 Offer
 ```
 
-Locations are managed in the same Offerings workspace but are not themselves Offerings.
+Locations are managed alongside Offerings but remain separate business entities.
 
 ### Offline Services
 
@@ -272,15 +260,72 @@ Locations are managed alongside Offerings but remain separate business entities.
 
 ---
 
-## 9. Manual field requirements — strict MVP validation
+## 9. URL rule — mandatory customer-facing web presence in MVP
 
-Manual Add must satisfy the same minimum business-truth contract expected from AI-discovered Offerings before the Offering can become ACTIVE.
+Creator Shop Brand onboarding itself requires a valid Brand website. MVP therefore targets Brands with an established web presence.
 
-The exact field matrix will be frozen later, but the provisional minimums are:
+For an ACTIVE Offering, Creator Shop should require a valid customer-facing URL or resolvable Brand website destination.
 
-### D2C Product
+This is a strict MVP bet:
 
-Required:
+> If the Brand has no meaningful web presence for customers at all, it is outside the intended MVP target profile.
+
+However, a dedicated URL per Offering is **not** always required.
+
+### D2C
+
+For Product / Collection, a dedicated product or collection URL is normally required because the Offering is directly transactional and the page is a strong identity / truth source.
+
+### AI / SaaS / Healthcare / Offline Services
+
+The same homepage or broad service page may legitimately support multiple Offerings.
+
+Therefore:
+
+```text
+same URL
+≠ duplicate Offering
+```
+
+URL duplication is allowed across all non-D2C industries.
+
+For Healthcare / Offline multi-location businesses, location-specific URLs are **desirable, not mandatory**. When a location-specific destination is unavailable, fall back to the Brand homepage or best valid Brand-level customer destination.
+
+---
+
+## 10. Duplicate resolution
+
+Do not use URL equality as the universal identity key.
+
+### D2C
+
+A normalized dedicated PDP / collection URL is a strong deduplication signal.
+
+If a manually supplied D2C URL matches an existing AI-discovered Offering, direct the user to review/update the existing Offering rather than create a duplicate.
+
+### Non-D2C
+
+Duplicate resolution should use a combination of:
+
+```text
+Offering type
+name / identity
+website evidence
+canonical parent / child relationships
+URL only as supporting evidence
+```
+
+Do not block creation solely because another Offering uses the same URL.
+
+---
+
+## 11. Manual field requirements — applicable minimum, not universal completeness
+
+Manual and AI-created Offerings should share the same **canonical field structure**, but only the applicable minimum fields are mandatory.
+
+### D2C Product — MVP minimum
+
+Normally require:
 
 ```text
 name
@@ -290,25 +335,25 @@ price
 currency
 product/customer URL
 key factual features
-availability = active
+ACTIVE availability
 ```
 
-### D2C Collection
+### D2C Collection — MVP minimum
 
-Required:
+Normally require:
 
 ```text
 name
 description
 at least one image
 collection/customer URL
-included products or a valid collection relationship
-availability = active
+included product relationship or collection identity
+ACTIVE availability
 ```
 
-### D2C Offer / Discount
+### D2C Offer / Discount — MVP minimum
 
-Required:
+Normally require:
 
 ```text
 name
@@ -321,103 +366,30 @@ customer destination
 
 ### AI / SaaS
 
-Require the equivalent public/customer-operational truth for the selected type, including an appropriate customer information / signup / trial / demo destination where the business offers one.
-
-A SaaS homepage may legitimately serve as the destination for one or more Offerings. Dedicated per-Offering URLs are not mandatory when the homepage is genuinely the customer-facing source for those Offerings.
+Require enough information to identify and explain the Product / Plan / Feature / Offer plus a valid customer-facing Brand URL. A dedicated per-Offering URL is optional.
 
 ### Healthcare / Offline
 
-Require the Offering/service facts and at least one valid customer conversion/contact path through the relevant location or Brand-level destination.
+Require enough information to identify and explain the Treatment / Service / Experience / Package / Offer plus a valid customer-facing Brand URL. Location-specific pages are optional.
 
-Invalid/incomplete manual Offerings remain non-active and cannot be launched into a Campaign.
-
----
-
-## 10. URL handling and duplicate resolution
-
-Do not use URL equality as the universal identity key for Offerings.
-
-### D2C
-
-A dedicated PDP/collection URL is a strong identity/deduplication signal.
-
-If a manually supplied URL matches an existing AI-discovered Offering, direct the user to review/update the existing Offering instead of creating a duplicate.
-
-### AI / SaaS / Services
-
-The same homepage or broad service page may legitimately support several Offerings.
-
-Therefore duplicate resolution should use a combination of:
-
-```text
-normalized URL
-Offering type
-name / identity
-website evidence
-existing canonical relationships
-```
-
-Do not block creation solely because the URL already belongs to another Offering.
-
-The user should be prevented from creating a duplicate when Creator Shop can establish that the same Offering already exists.
+If the minimum required truth for the selected type cannot be established, the Offering remains non-active and cannot enter a new Campaign.
 
 ---
 
-## 11. Customer destinations are industry-adaptive
+## 12. Customer destinations and Locations
 
-Do not force all industries into one `product_url` mental model.
+The MVP should not create a complex destination-routing system.
 
-### D2C
-
-Primary customer action is generally purchase / product discovery.
-
-### AI / SaaS
-
-Possible destinations include:
+Use the simplest reliable rule:
 
 ```text
-information page
-signup
-trial
-book demo
-contact sales
+Offering-specific URL when available
+→ otherwise valid Brand / homepage URL
 ```
 
-### Healthcare
+For Healthcare / Offline, Location is a separate reusable entity.
 
-Possible destinations include:
-
-```text
-treatment information
-location-specific treatment page
-book consultation
-patient registration
-phone
-WhatsApp / approved contact path
-```
-
-### Offline Services
-
-Possible destinations include:
-
-```text
-service information
-booking
-reservation
-phone
-WhatsApp / contact
-location page
-```
-
-The future technical model may support multiple typed destinations, including location-specific destinations. MVP UX should remain simple and ask only for the relevant customer-facing paths.
-
----
-
-## 12. Healthcare / Offline Location model
-
-Location is a separate reusable entity, not a Campaign Asset and not necessarily an Offering.
-
-For Healthcare / Offline Services, capture at minimum:
+Capture at minimum where available / applicable:
 
 ```text
 location name
@@ -426,46 +398,25 @@ city
 state / region
 country
 contact phone
-primary location page if available
-appointment / registration / booking destination if applicable
-services / Offerings available at location
+location page URL (optional)
+appointment / registration / booking URL (optional)
+Offerings available at location
 active / inactive status
 ```
 
-Optional contact channels such as WhatsApp may be supported where relevant.
+Address should be captured because physical accessibility is often the actual customer conversion path.
 
-This supports both local brands and multi-location brands without creating a different Offering for every city.
+Phone / booking / registration details are valuable for Healthcare / Offline conversion and should be captured where available, but location-specific URLs are not required to make a Location valid.
 
-Example:
-
-```text
-Offering: IVF
-Locations: Kolkata, Delhi, Mumbai, ...
-```
-
-Campaign-time targeting can then combine:
-
-```text
-Campaign Asset = IVF
-Campaign geography = Kolkata
-Applicable location(s) = Kolkata clinics
-Customer destination = best valid Kolkata conversion path
-```
-
-For a Brand-level Campaign:
-
-```text
-Campaign Asset = BRAND
-Campaign geography = national / regional / city
-```
+Fallback customer URL remains the Brand homepage / best valid Brand destination.
 
 ---
 
 ## 13. Strict Offering lifecycle for MVP
 
-Avoid a large family of promotion-readiness states in MVP.
+Avoid a large family of promotion-readiness states.
 
-Provisional Offering lifecycle:
+Provisional lifecycle:
 
 ```text
 DRAFT / INCOMPLETE
@@ -473,121 +424,137 @@ ACTIVE
 PAUSED / INACTIVE
 ```
 
-### GO rule
+### GO
 
 Only `ACTIVE` Offerings may be selected for new Campaigns.
 
-### NO-GO rule
+### NO-GO
 
-An Offering missing required canonical business truth cannot become ACTIVE and therefore cannot be launched into a new Campaign.
+An Offering missing the minimum applicable business truth for its type cannot become ACTIVE and therefore cannot enter a new Campaign.
 
-AI-discovered Offerings should only become active when the required evidence/validation floor is satisfied.
-
-Manual Offerings must satisfy the same required floor before activation.
-
-No separate `Promotion Readiness` UI is required in MVP.
-
-Campaign-specific activation checks may still exist later, but they should be narrowly scoped and not turn Brand Centre into a warning dashboard.
+No separate `Promotion Readiness` score or warning framework is required in MVP.
 
 ---
 
 ## 14. Brand override protection — hard rule
 
-Brand-confirmed/overridden values must **never be silently overwritten by future AI/website refreshes**.
+Brand-confirmed/overridden values must **never be silently overwritten by future AI/website refreshes**, except for the explicit price-refresh rule below.
 
-Provisional field refresh rule:
+General field rule:
 
 ```text
 WEBSITE_OBSERVED
-→ refresh may update when stronger/current first-party evidence is found
+→ refresh may update
 
 CREATOR_SHOP_DERIVED
 → Intelligence refresh may update
 
 BRAND_CONFIRMED
-→ never auto-overwrite
+→ preserve until Brand changes it
 ```
 
-When current website evidence conflicts with a Brand-confirmed value, Creator Shop may surface the conflict for explicit Brand resolution, but must preserve the confirmed value until the Brand accepts the change.
+Brand-confirmed values should be persisted as field-level authority so refresh logic can distinguish observed from explicitly overridden truth.
 
-This rule should become reusable across Brand Centre, not Offering-specific.
+When current first-party evidence conflicts with a Brand-confirmed non-price field, preserve the Brand value unless the Brand explicitly changes it.
+
+This rule should become reusable across Brand Centre.
 
 ---
 
-## 15. Campaign Asset freshness — no stale snapshot assumption
+## 15. Price is a controlled exception
 
-A Campaign Asset must retain traceability to the source Offering, but an immutable snapshot alone is not sufficient because customer-facing facts may change while creator communication is still active.
+Price is time-sensitive consumer truth and should not remain stale merely because the Brand previously confirmed or overrode it.
 
-The MVP should use a stricter rule:
-
-> **Before Campaign launch / creator-facing activation, current Offering truth must be revalidated against the Campaign Asset's material communication facts.**
-
-Material facts include the applicable subset of:
+For Offerings where a public price exists:
 
 ```text
-price / commercial proposition
-offer validity
-availability
-customer destination
-location applicability
-key factual claims used in creator communication
+website / authoritative first-party price refresh
+→ may automatically update current Offering price
 ```
 
-If a material Offering fact changed after the Campaign Asset was prepared:
+If the Brand is manually editing an Offering, current price should remain editable and the Brand may explicitly change it.
 
-```text
-NO-GO for new creator-facing activation
-until Campaign Asset / Brief is reconciled
-```
+Price history / prior Brand confirmation may be retained internally, but current public price should track the latest reliable first-party value.
 
-Do not silently launch stale creator communication.
-
-After a Collaboration is already active, a material source change should not silently rewrite creator instructions. The affected Campaign/Collaboration must be flagged for explicit reconciliation before further publishing/activation where the stale fact could reach consumers.
-
-This keeps historical traceability while prioritizing current consumer truth.
-
-The exact runtime reconciliation workflow belongs to later Campaign/Collaboration contract design; MVP principle is the hard stale-fact NO-GO, not a large configurable exception system.
+Do not extend this automatic-refresh exception to arbitrary fields.
 
 ---
 
-## 16. Edit / Pause / Remove rules
+## 16. Campaign Asset freshness — strict but minimal MVP rule
+
+Campaign Asset should retain traceability to the source Offering, but MVP should avoid a complex synchronization/reconciliation engine.
+
+### Before creator work begins
+
+Campaign creation should use the current ACTIVE Offering truth.
+
+### Once creator Collaboration begins
+
+The Brand is responsible for maintaining URL sanctity and keeping the underlying Offering materially consistent with what creators have been instructed to communicate.
+
+Creator Shop should **not silently auto-rewrite most creator instructions** during an active Collaboration.
+
+### Price
+
+Price is the exception:
+
+- current public price may auto-refresh;
+- creator-facing campaign material that surfaces price should use the current price where technically possible;
+- if a Brand manually changes price, the updated price should become current campaign truth.
+
+### Other material changes
+
+Changes to product/service identity, core specification, offer terms, or customer destination after Collaboration has started should be discouraged.
+
+If the Brand changes or breaks the underlying Offering/URL such that creator instructions materially diverge from current reality, this can form a basis for creator dispute / operational review.
+
+The platform should not build a large family of special-case synchronization workflows for MVP.
+
+### Creator final check
+
+Before going live, the creator should perform a simple final verification that the Offering / destination has not materially changed from the approved Brief.
+
+If it has changed significantly, publishing should not proceed until resolved through the existing Campaign / Collaboration review path.
+
+This is the MVP control point for non-price Offering drift.
+
+---
+
+## 17. Edit / Pause / Remove rules
 
 ### Edit
 
 Brand may edit an Offering from Offering detail.
 
-If the Offering is unused by active Campaign/Collaboration work, the edit can apply normally.
+When an Offering is already used in a live Campaign / Collaboration:
 
-If a material field is already represented in an active Campaign Asset / Brief:
+- price may change under the price rule above;
+- other material edits should be discouraged;
+- save flow should warn that active creator work exists;
+- Brand remains responsible for ensuring the linked customer URL remains materially consistent;
+- significant mismatch discovered before creator publish must be resolved before go-live.
 
-```text
-Brand Centre truth may be updated
-+
-affected Campaign/Collaboration must be flagged
-+
-stale creator-facing execution must not proceed without reconciliation
-```
-
-Do not silently propagate the new value into creator instructions, and do not silently preserve stale creator instructions through future activation.
+Do not build per-field campaign synchronization choices in MVP.
 
 ### Pause / Inactivate
 
 Pausing an Offering:
 
-- removes it from new Campaign selection/recommendation;
-- does not erase historical Campaign records;
-- does not automatically terminate an existing Collaboration;
-- flags active usages for review if continued promotion would now be invalid.
+- removes it from new Campaign selection / recommendation;
+- preserves historical Campaign records;
+- does not automatically terminate an existing Collaboration.
+
+If the Offering is actively being promoted, the UI should clearly warn before allowing pause.
 
 ### Remove
 
-Hard delete is allowed only when there is no historical dependency that requires preservation.
+Hard delete is allowed only when there is no Campaign / Collaboration history that requires preservation.
 
-If the Offering has Campaign/Collaboration history, deactivate/archive instead of deleting its historical identity.
+If the Offering has history, deactivate/archive instead of deleting its identity.
 
 ---
 
-## 17. V2 deferrals
+## 18. V2 deferrals
 
 Explicitly defer:
 
@@ -599,55 +566,60 @@ creator self-order fulfilment
 inventory automation
 live Offering regeneration controls
 rich user feedback on AI extraction
-fine-grained promotion-readiness scoring
-complex exception matrices per industry/use case
+promotion-readiness scoring
+complex per-industry exception matrices
+fine-grained campaign synchronization choices for every Offering field
 ```
-
-These should not complicate MVP Offerings architecture.
 
 ---
 
-## 18. Consequences for future Product Intelligence
+## 19. Consequences for future Product / Offering Intelligence
 
-Product / Offering Intelligence should be designed to answer only questions needed by the product surfaces and campaign system, including:
+Product / Offering Intelligence should be designed to answer only questions needed by Brand Centre and Campaign planning:
 
 ```text
 What is the Offering?
 What customer-facing facts are trustworthy?
 What can be credibly communicated by creators?
 What claims require constraint?
+What current price / commercial fact applies?
 Where/how can a customer act on interest?
 Where is the Offering available?
 How does it relate to Product / Plan / Feature / Collection / Offer / Location structure?
 What changed since the last validated state?
 ```
 
-It should not be optimized merely to extract the largest possible product catalogue schema.
+It should not be optimized merely to extract the largest possible catalogue schema.
 
 ---
 
-## 19. Current provisional acceptance summary
+## 20. Reconciled MVP summary
 
-Accepted direction for continued Brand Centre design:
+Accepted provisional direction:
 
 ```text
 Brand Centre uses Offerings, not Campaign Assets
-Workspace lists remain clean; edit/manage lives on detail
+Workspace list is clean; manage on Offering detail
 No mandatory Audience per Offering
-AI + manual creation converge on same canonical validation
-Manual creation remains available
+AI + manual creation converge on one canonical model
+Not every canonical field is mandatory
+Manual Add remains available
 Pre-launch deferred to V2
-Offering type selected before manual form
-D2C manual Product requires product URL in MVP
-SaaS may reuse homepage across several Offerings
-Locations are separate reusable entities
-Healthcare/Offline capture address + conversion/contact paths
+Offering type selected first
+Brand website / customer-facing URL is mandatory at platform level
+D2C normally requires dedicated Product / Collection URL
+Non-D2C may reuse the same URL across multiple Offerings
+Healthcare / Offline location-specific URLs are optional
+Homepage / best Brand URL is fallback
+Locations are reusable entities with address/contact data
 No Promotion Readiness layer in MVP
 Only ACTIVE Offerings may enter new Campaigns
-Brand-confirmed fields are never auto-overwritten
-Campaign activation must revalidate material Offering facts
-Stale creator-facing facts create a hard reconciliation NO-GO
-Pause/deactivate preserves history and blocks new use
+Brand-confirmed non-price fields are not auto-overwritten
+Price may auto-refresh from reliable first-party truth
+Other active-Collaboration changes are discouraged, not auto-synchronized
+Creator performs final material Offering check before go-live
+Pause blocks new use but does not erase history
+Hard delete only when no historical dependency exists
 ```
 
-This document is provisional Product Authority for subsequent Brand Centre V0/V1 design. It should be revisited only when later Audience / Brand / Market / Campaign Recommendation design exposes a genuine conflict or missing requirement.
+This document is the reconciled provisional Product Authority for Offerings and should now be treated as the starting point for Brand workspace design. Revisit only if Brand / Market / Campaign Recommendation design exposes a genuine conflict or missing requirement.
