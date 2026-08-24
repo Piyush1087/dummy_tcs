@@ -1,6 +1,6 @@
 # Brand Intelligence — Visual Identity
 
-**Status:** PROPOSED FOR SYSTEMS ARCHITECT FREEZE  
+**Status:** FROZEN  
 **Object authority:** `objects.yaml`
 
 ## Purpose
