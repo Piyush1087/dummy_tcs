@@ -1,6 +1,6 @@
 # Brand Intelligence — Geography
 
-**Status:** PROPOSED FOR SYSTEMS ARCHITECT FREEZE  
+**Status:** FROZEN  
 **Object authority:** `objects.yaml`
 
 ## Purpose
