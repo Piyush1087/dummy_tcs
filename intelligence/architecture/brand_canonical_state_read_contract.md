@@ -1,7 +1,7 @@
 # M1 Core Canonical Brand-State Read Contract
 
 **Version:** 0.1  
-**Status:** PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE  
+**Status:** FROZEN  
 **Owner:** Backend / application-state boundary  
 **Canonical architecture repository:** `Piyush1087/dummy_tcs`  
 **Backend audit baseline:** `Piyush1087/creator-commerce-backend-v2-clone` `development@89d7dcc7e00c12b499850e2ff1c74364c4a83c19`
