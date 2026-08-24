@@ -1,6 +1,6 @@
 id: brand_communication_output_contract
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 processor: brand_communication
 object: communication_profile
 strict: true
