@@ -26,13 +26,10 @@ Creator Shop Intelligence Platform
 **Business question:** Who is this business?
 
 Branches:
-- Identity
-- Brand Strategy
+- Brand Expression
 - Audience
-- Communication
-- Trust & Authority
-- Market Position
-- Business Profile
+- Visual Identity
+- Serviceability
 
 ### 2. Product Intelligence
 **Business question:** What exactly does the business sell?
@@ -96,4 +93,4 @@ Refresh & Evolution
 
 ## Current implementation focus
 
-Brand Intelligence is the first engine being implemented end-to-end. Its `Identity` branch is the reference vertical slice used to validate the platform architecture before replicating the pattern elsewhere.
+Brand Intelligence is the first engine being implemented end-to-end. Its permanent foundational topology is Brand Expression, Audience, Visual Identity and Serviceability. The legacy Identity branch remains a frozen compatibility/reference layer until existing consumers are explicitly remapped.
