@@ -1,6 +1,6 @@
 id: serviceability_evidence
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 owner_engine: brand_intelligence
 owning_branch: serviceability
 processor: serviceability_synthesis
