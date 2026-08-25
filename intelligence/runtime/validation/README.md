@@ -25,6 +25,23 @@ post-response authoritative validation
 - `contract.yaml` — normative runtime validation architecture and failure behavior.
 - `identity_schemas.ts` — Zod schemas and Identity semantic validators.
 - `validator.ts` — processor/scope router returning structured validation results.
+- `gatekeeper_site_assessment_schemas.ts` — standalone Gatekeeper assessment shape.
+- `gatekeeper_site_assessment_validator.ts` — standalone contract-bound validator.
+- `validator_registry.ts` — server-owned processor/contract/version registration.
+- `validation_result.ts` — reusable validation envelope and issue mapping.
+
+## M2 standalone Gatekeeper boundary
+
+`gatekeeper_site_assessment` is registered independently from the legacy
+Identity Gatekeeper validator. Its nullable `provisional_sub_industry` is
+free-form and never checked against the controlled Identity Sub-industry
+taxonomy. Admission outcomes, reason codes, recovery actions and manual-review
+eligibility belong to deterministic admission decision, not the assessment
+processor, and strict validation rejects them as extra fields.
+
+The registry fails closed when processor, output-contract ID, or contract
+version is unknown. Registration is server-owned; runtime callers cannot supply
+a validator or repository path.
 
 ## Validation layers
 
