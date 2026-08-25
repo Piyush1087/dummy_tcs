@@ -4,7 +4,7 @@
 **Owner:** Data Extraction Engine  
 **Scope:** Durable normalized Evidence runtime/persistence architecture required to deliver frozen Wave 1 Evidence capabilities to Brand Intelligence.  
 **Architecture baseline:** `Piyush1087/dummy_tcs/main@017dbceac494f0861ec9a6bea7af3129b70fa5cb`  
-**Backend audited baseline:** `Piyush1087/creator-commerce-backend-v2-clone/development@385d60815c022bb06f1714c8951a653eab3bb3ff`  
+**Backend audited baseline:** `Piyush1087/creator-commerce-backend-v2-clone/development@24ae85190fe7133b9cf5c485878f6a773a612fb9`  
 **Implementation authorized by this contract:** no
 
 ## 1. Purpose
@@ -22,7 +22,7 @@ It covers:
 - conflict and negative-Evidence preservation;
 - bounded owned-website acquisition planning;
 - implementation architecture for the first five Wave 1 capabilities;
-- the stable `IntelligenceEvidenceReader` boundary consumed by Brand Intelligence; and
+- the Data Extraction runtime/query boundary that adapts into the accepted W1.0E `IntelligenceEvidenceReader`; and
 - additive backend schema/repository staging.
 
 It does **not** implement providers, modify Prisma, enable `brand_communication` or `brand_meaning`, choose provider/model policy, or move Evidence ownership into Intelligence.
@@ -58,7 +58,7 @@ Intelligence
 
 ## 3. Current backend audit
 
-Backend baseline: `development@385d60815c022bb06f1714c8951a653eab3bb3ff`.
+Backend baseline: `development@24ae85190fe7133b9cf5c485878f6a773a612fb9`.
 
 | Component | Classification | Runtime/persistence conclusion |
 |---|---|---|
@@ -75,6 +75,9 @@ Backend baseline: `development@385d60815c022bb06f1714c8951a653eab3bb3ff`.
 | `BrandIntelligenceScan.runtimeContext` / Stage 1B snapshots | `LEGACY_REFERENCE_ONLY` | Useful historical page context; feature-owned legacy scan state cannot become the durable Evidence store. |
 | W1.0 `IntelligenceEvidenceReference` | `REUSE_AS_CONSUMER_REFERENCE_ONLY` | Correctly stores references to Data Extraction Evidence but intentionally does not own Evidence payloads/resources/captures. |
 | W1.0 `ProcessorExecution.evidence_manifest` | `REUSE_AS_CONSUMER_MANIFEST` | Correct destination for deterministic Evidence manifests once DE can produce stable refs. It is not the Evidence store. |
+| W1.0E `IntelligenceEvidenceReader` | `ACCEPTED_CONSUMER_PORT` | Permanent Intelligence-side reader boundary. DE must adapt into it rather than redefine it. |
+| W1.0E `EvidenceManifestBuilder` | `ACCEPTED_CONSUMER_MANIFEST_BUILDER` | Intelligence owns the exact consumed-reference manifest/hash. DE capability manifests are upstream production lineage, not replacements. |
+| W1.0E `MissingDataExtractionEvidenceAdapter` | `REUSE_UNTIL_DE_PREREQUISITE_READY` | Correct fail-closed production placeholder returning `DE_EVIDENCE_STORE_PREREQUISITE_MISSING`. Replace only at DE-W1.0F after durable Evidence/query semantics exist. |
 | Durable DE resource table | `NOT_FOUND` | Missing. |
 | Durable DE capture table | `NOT_FOUND` | Missing. |
 | Durable normalized content artifact/reference | `NOT_FOUND` | Missing. |
@@ -89,6 +92,13 @@ DURABLE_NORMALIZED_EVIDENCE_STORE_NOT_FOUND
 ```
 
 The existing `IntelligenceEvidenceReference` is deliberately a **reference-only consumer record**. It contains `evidence_ref`, capability/capture identity, provider-neutral source class, capture time and Evidence freshness for Intelligence lineage, but it has no normalized page/content payload and is owned by Intelligence generation history.
+
+W1.0E correctly preserves this boundary with:
+
+```text
+MissingDataExtractionEvidenceAdapter
+→ DE_EVIDENCE_STORE_PREREQUISITE_MISSING
+```
 
 It therefore cannot substitute for:
 
@@ -657,7 +667,7 @@ Best for:
 
 ## 11. Capability execution model
 
-Input:
+Internal DE acquisition/refresh input:
 
 ```text
 brand_id
@@ -699,6 +709,8 @@ provenance summary
 ```
 
 Capability execution does not decide whether Brand Intelligence is semantically ready.
+
+Normal Intelligence reads do **not** invoke this acquisition/refresh command. Read and acquisition are separate runtime operations; Section 29 freezes the read-side adapter boundary.
 
 ## 12. Acquisition idempotency
 
@@ -1163,133 +1175,166 @@ Safeguards:
 - never summarize guaranteed-outcome language into a factual Brand claim;
 - never infer compliance rule from Industry/regulation without explicit source Evidence.
 
-## 29. `IntelligenceEvidenceReader` contract
+## 29. Evidence read ownership and adapter boundary
 
-Stable application port for W1.0E and later Intelligence execution:
+W1.0E has already frozen the permanent **Intelligence-side consumer port**. Data Extraction does not redefine it.
+
+Accepted Intelligence contract:
 
 ```ts
-interface IntelligenceEvidenceReaderV1 {
-  getCapabilityEvidence(
-    request: IntelligenceEvidenceRequestV1,
-  ): Promise<CapabilityEvidenceResultV1>;
+interface IntelligenceEvidenceReadRequest {
+  readonly brandId: string;
+  readonly processorId: string;
+  readonly processorVersion: string;
+  readonly capabilityIds: readonly NormalizedEvidenceCapabilityId[];
+}
+
+interface IntelligenceEvidenceReader {
+  read(
+    request: IntelligenceEvidenceReadRequest,
+  ): Promise<NormalizedEvidenceSet>;
 }
 ```
 
-### Input
+Production relationship:
+
+```text
+Intelligence
+ProcessorDependencyPreparationService
+        ↓
+IntelligenceEvidenceReader
+        ↓
+DataExtractionIntelligenceEvidenceAdapter
+        ↓
+DataExtractionEvidenceQueryPortV1 / durable DE read service
+        ↓
+DE Evidence persistence
+```
+
+### 29.1 DE-owned read/query interface
+
+DE owns an internal query/read contract, not a competing Intelligence reader:
 
 ```ts
-type IntelligenceEvidenceRequestV1 = {
+interface DataExtractionEvidenceQueryPortV1 {
+  readExisting(request: DataExtractionEvidenceQueryRequestV1):
+    Promise<DataExtractionEvidenceQueryResultV1>;
+}
+
+type DataExtractionEvidenceQueryRequestV1 = {
   brandId: string;
-  capabilityId:
-    | "owned_website.brand_messaging"
-    | "owned_website.brand_company_context"
-    | "owned_website.offering_context"
-    | "observed_brand_communication_language_signals"
-    | "derived_communication_constraint_evidence";
-  resourceScope?: {
-    resourceRefs?: string[];
-    pageRoles?: string[];
+  capabilityIds: readonly string[];
+  consumerContext?: {
+    processorId?: string;
+    processorVersion?: string;
   };
+  correlationRef?: string;
+};
+```
+
+The read service resolves the appropriate current/reusable persisted capability executions and Evidence according to DE-owned freshness/resource policies. A normal read does not receive or imply an acquisition command.
+
+`processorId` / `processorVersion`, when propagated as consumer context, support authorization, tracing and requested-capability validation only. They do not participate in:
+
+```text
+resource identity
+capture identity
+Evidence identity
+semantic-observation identity
+capability execution identity
+```
+
+The same normalized Evidence may therefore be reused by multiple authorized processors.
+
+### 29.2 Separate acquisition/refresh interface
+
+Acquisition is a different operation:
+
+```ts
+interface DataExtractionEvidenceAcquisitionPortV1 {
+  requestAcquisition(
+    request: DataExtractionEvidenceAcquisitionRequestV1,
+  ): Promise<DataExtractionCapabilityExecutionResultV1>;
+}
+
+type DataExtractionEvidenceAcquisitionRequestV1 = {
+  brandId: string;
+  capabilityId: string;
+  resourceScope: unknown;
   freshnessIntent: "REUSE_ALLOWED" | "REFRESH_IF_NOT_CURRENT" | "FORCE_RECAPTURE";
   correlationRef: string;
 };
 ```
 
-### Output
-
-```ts
-type CapabilityEvidenceResultV1 = {
-  contractVersion: "1.0";
-  capabilityExecutionRef: string;
-  brandId: string;
-  capabilityId: string;
-  status: "AVAILABLE" | "PARTIAL" | "DEGRADED" | "UNAVAILABLE" | "NOT_REQUESTED";
-  retryability: "RETRYABLE" | "NON_RETRYABLE" | "NOT_APPLICABLE";
-  reasonCodes: string[];
-  coverage:
-    | "SINGLE_RESOURCE"
-    | "MULTI_RESOURCE_PARTIAL"
-    | "MULTI_RESOURCE_BROAD"
-    | "SITE_WIDE_BOUNDED";
-  acquisitionQuality: "COMPLETE" | "PARTIAL" | "DEGRADED" | "UNAVAILABLE";
-  freshnessSummary: "CURRENT" | "POSSIBLY_STALE" | "UNKNOWN";
-  evidenceManifestRef: string;
-  evidenceManifestHash: string;
-  items: IntelligenceEvidenceItemV1[];
-};
-```
-
-```ts
-type IntelligenceEvidenceItemV1 = {
-  evidenceRef: string;
-  resourceRef: string;
-  captureRef: string;
-  sourceClass: string;
-  pageRole?: string;
-  capturedAt: string;
-  observedAt?: string;
-  freshness: "CURRENT" | "POSSIBLY_STALE" | "UNKNOWN";
-  representativeness:
-    | "PERSISTENT_BRAND_LEVEL"
-    | "REPEATED_REPRESENTATIVE"
-    | "CONTEXT_SPECIFIC"
-    | "OFFERING_SPECIFIC"
-    | "INCIDENTAL";
-  coverage: string;
-  acquisitionQuality: string;
-  normalizedPayload: Record<string, unknown>;
-  contentExcerpt?: string;
-  normalizedContentRef?: string;
-  provenanceSummary: {
-    acquisitionOrNormalizationRunRef: string;
-    normalizationContractVersion: string;
-    parentEvidenceRefs: string[];
-    providerExecutionRef?: string;
-  };
-};
-```
-
-### Reader invariants
-
-- Brand scope is mandatory and verified on every lookup.
-- Reader returns normalized Evidence only, never raw provider payload.
-- Reader does not expose provider/model as semantic fields.
-- `evidenceRef` lookup is stable after generation persistence.
-- `AVAILABLE + []` is valid.
-- Reader does not convert Evidence status into Intelligence readiness.
-
-## 30. Deterministic Evidence manifest
-
-W1.0 `ProcessorExecution` requires a deterministic Evidence manifest/hash.
-
-DE reader builds a canonical manifest containing references/snapshots only:
+This preserves the permanent distinction:
 
 ```text
-manifest_version
-brand_id
-capability executions:
-  capability_id
-  capability_execution_ref
-  status
-  coverage
-  acquisition_quality
-  evidence entries sorted by:
-    capability_id
-    resource_ref
-    capture_ref
-    evidence_ref
-  each entry:
-    evidence_ref
-    resource_ref
-    capture_ref
-    captured_at
-    freshness observed by reader
-    normalization contract version
+READ EXISTING NORMALIZED EVIDENCE
+!=
+REQUEST ACQUISITION / REFRESH
 ```
 
-No page body or provider payload enters the manifest.
+The accepted W1.0E `IntelligenceEvidenceReader` is a reader and must not accidentally trigger acquisition. An Intelligence execution profile may later invoke a separately authorized acquisition/refresh command, but that is not implicit in `read()`.
 
-Hash using canonical JSON + SHA-256, matching the deterministic hashing discipline already frozen for W1.0 runtime manifests.
+### 29.3 Adapter responsibilities
+
+`DataExtractionIntelligenceEvidenceAdapter` implements the accepted `IntelligenceEvidenceReader` and must:
+
+1. validate the processor's requested capability IDs against the accepted port vocabulary;
+2. pass Brand/capability/consumer context to the DE query port;
+3. read existing durable normalized Evidence only;
+4. map DE persistence/query records into W1.0E `NormalizedEvidenceSet` exactly;
+5. preserve same-Brand tenancy;
+6. expose bounded transient normalized payload only where the accepted port allows it;
+7. expose operational `providerExecutionRef` only through the accepted transient provenance field and never as semantic identity;
+8. return capability status including valid `AVAILABLE + 0 Evidence items`;
+9. never resolve Intelligence readiness/precedence; and
+10. never construct or overwrite `ProcessorExecution.evidence_manifest` directly.
+
+## 30. Capability execution reference and manifest ownership
+
+### 30.1 Capability execution reference decision
+
+A bounded W1.0E amendment is recommended:
+
+```text
+BOUNDED_W1_0E_PORT_AMENDMENT_RECOMMENDED
+```
+
+Add exactly:
+
+```ts
+interface NormalizedEvidenceCapabilityResult {
+  readonly capabilityExecutionRef: string;
+  // existing fields unchanged
+}
+```
+
+and include the same field in the capability node of the Intelligence `EvidenceDependencyManifest`.
+
+Reason: `AVAILABLE + 0 Evidence items` is valid. Without a capability execution reference, that result has no deterministic durable link to the DE execution that established availability/coverage/quality. Item-level Evidence/provenance cannot supply this lineage when there are zero items.
+
+No capability-level freshness-summary amendment is recommended. Item-level freshness is already explicit; duplicating a capability freshness value would introduce aggregation semantics not required by the accepted W1.0E reader. DE may keep an internal capability freshness projection for acquisition policy without promoting it into the Intelligence consumer port.
+
+### 30.2 DE capability manifest versus Intelligence manifest
+
+Two manifests have different authority:
+
+```text
+DE capability manifest
+→ authority for what one DE capability execution produced/acquired
+→ owned by Data Extraction
+
+Intelligence ProcessorExecution evidence_manifest
+→ authority for the exact Evidence references consumed by one logical processor execution
+→ owned by Intelligence
+```
+
+They may be linked by `capabilityExecutionRef`, but they are not the same artifact and neither owns the other's semantics.
+
+The accepted W1.0E `EvidenceManifestBuilder` remains the only authority that builds the Intelligence-side deterministic manifest/hash from the `NormalizedEvidenceSet`. DE does not supply or overwrite `ProcessorExecution.evidence_manifest`.
+
+Transient `boundedNormalizedPayload`, `freshness.evaluatedAt`, and `providerExecutionRef` remain intentionally excluded from the Intelligence manifest, matching W1.0E behavior.
 
 ## 31. Bounded inline + reference delivery
 
@@ -1423,16 +1468,17 @@ Legacy acquisition paths may continue while durable DE capture/normalization is 
 **Scope**
 
 - implement stable Evidence/resource/capture/capability types from frozen DE contracts;
-- define repository interfaces;
-- define `IntelligenceEvidenceReaderV1` interface;
-- define canonical manifest/hash utility;
+- define DE repository interfaces;
+- define `DataExtractionEvidenceQueryPortV1` and separate acquisition/refresh port;
+- define adapter mapping fixtures against the accepted W1.0E `IntelligenceEvidenceReader`;
+- define canonical DE capability-manifest/hash utility;
 - no provider changes.
 
 **Dependency:** Systems Architect freeze of this contract.
 
-**Tests:** contract loading, provider-neutral IDs, Brand guard types, canonical hashing, reader fixtures.
+**Tests:** contract loading, provider-neutral IDs, Brand guard types, canonical hashing, accepted-reader mapping fixtures.
 
-**Exit gate:** consumer and persistence code can compile against one stable DE interface.
+**Exit gate:** DE persistence/query code can compile against stable internal interfaces without redefining the Intelligence consumer port.
 
 **Rollback:** code-only removal; no schema/data.
 
@@ -1506,63 +1552,73 @@ Legacy acquisition paths may continue while durable DE capture/normalization is 
 
 **Rollback:** normalizer-version isolation; prior captures remain replayable.
 
-### DE-W1.0F — Intelligence reader and deterministic manifest production
+### DE-W1.0F — production read adapter
 
 **Scope**
 
-- production `IntelligenceEvidenceReaderV1` adapter;
+- production `DataExtractionEvidenceQueryPortV1` implementation over durable DE persistence;
+- `DataExtractionIntelligenceEvidenceAdapter` implementing the already accepted W1.0E `IntelligenceEvidenceReader`;
 - stable Evidence lookup;
 - bounded inline/reference hydration;
-- deterministic Evidence manifest/hash;
-- capability availability/quality/freshness projection.
+- capability availability/quality/freshness projection;
+- `capabilityExecutionRef` projection if the bounded W1.0E amendment is accepted;
+- no replacement of the Intelligence `EvidenceManifestBuilder`.
 
-**Dependency:** DE-W1.0E.
+**Dependency:** DE-W1.0E plus any accepted bounded W1.0E port amendment.
 
-**Tests:** stable ref lookup, same-Brand rejection, deterministic manifest order/hash, content-ref hydration bounds, W1.0 reference mapping.
+**Tests:** stable ref lookup, same-Brand rejection, exact `NormalizedEvidenceSet` mapping, `AVAILABLE + 0` traceability, content-ref hydration bounds, processor identity excluded from DE identities, accepted manifest-builder compatibility.
 
-**Exit gate:** W1.0E Brand Intelligence consumer can obtain production Evidence manifests without reading provider/Preview/Stage1B internals.
+**Exit gate:** the production adapter can replace `MissingDataExtractionEvidenceAdapter` without reading provider/Preview/Stage1B internals and without triggering acquisition from `read()`.
 
-**Rollback:** switch consumer back to non-production fixture/stub port; no Evidence data mutation required.
+**Rollback:** bind `INTELLIGENCE_EVIDENCE_READER` back to `MissingDataExtractionEvidenceAdapter`; no Evidence data mutation required.
 
-## 37. Exact W1.0E coordination statement
+The production backend may replace `MissingDataExtractionEvidenceAdapter` **only at DE-W1.0F**, when durable Evidence lookup and mapping semantics genuinely exist. Merely creating the adapter class earlier is not sufficient.
 
-### WHAT W1.0E CAN USE TODAY
+## 37. DE ↔ W1.0E compatibility reconciliation
 
-The concurrent Brand Intelligence W1.0E worker may safely depend **today** on:
+Accepted Intelligence-side structures are the W1.0E `IntelligenceEvidenceReadRequest`, `NormalizedEvidenceSet`, `NormalizedEvidenceCapabilityResult`, `NormalizedEvidenceReference`, `EvidenceProvenanceSummary`, `EvidenceDeduplication`, and `EvidenceManifestBuilder` at backend `24ae85190fe7133b9cf5c485878f6a773a612fb9`.
 
-1. the five frozen provider-neutral capability IDs and their frozen semantic contracts;
-2. the frozen `IntelligenceEvidenceReference` consumer record shape;
-3. W1.0 `ProcessorExecution.evidence_manifest` / `evidence_manifest_hash` as the durable Intelligence-side manifest destination;
-4. the rule that an Intelligence generation stores Evidence refs, never DE payload ownership;
-5. this proposed `IntelligenceEvidenceReaderV1` interface as the expected production port shape, subject to Systems Architect freeze;
-6. deterministic canonical Evidence manifest fixtures in tests; and
-7. synthetic/stub Evidence refs for non-production W1.0E contract/execution tests when clearly marked and not persisted as production Evidence.
+| DE concept | W1.0E field/surface | Classification | Reconciliation |
+|---|---|---|---|
+| Brand ID | `IntelligenceEvidenceReadRequest.brandId`, `NormalizedEvidenceSet.brandId`, item `brandId` | `EXACT_MATCH` | Same Brand-scoped identity. |
+| Processor ID | request `processorId` | `EXACT_MATCH` as consumer context | Passed for authorization/tracing only; excluded from DE identities. |
+| Processor version | request `processorVersion` | `EXACT_MATCH` as consumer context | Passed for authorization/tracing only; excluded from DE identities. |
+| Capability ID | request `capabilityIds`, result/item `capabilityId` | `EXACT_MATCH` | Frozen five-value provider-neutral vocabulary. |
+| Capability execution ref | none currently | `BOUNDED_W1_0E_AMENDMENT_RECOMMENDED` | Add `capabilityExecutionRef` to capability result and Intelligence manifest capability node. |
+| Resource ref | item `resourceRef` | `EXACT_MATCH` | Adapter projects durable DE `resource_ref`. |
+| Capture ref | item `captureRef` | `EXACT_MATCH` | Adapter projects durable DE `capture_ref`. |
+| Capture version | item `captureVersion` | `ADAPTER_MAPPING` | Adapter projects the DE immutable capture representation/version token; it is not provider request/version identity. |
+| Evidence ref | item `evidenceRef` | `EXACT_MATCH` | Durable DE `evidence_ref`. |
+| Source class | item `sourceClass` | `EXACT_MATCH` | Same frozen provider-neutral vocabulary. |
+| Captured at | item `capturedAt` | `EXACT_MATCH` | DE terminal capture timestamp. |
+| Freshness | item `freshness` | `EXACT_MATCH` | `CURRENT/POSSIBLY_STALE/UNKNOWN`; `evaluatedAt` stays transient and is intentionally omitted from Intelligence manifest. |
+| Representativeness | item `representativeness` | `EXACT_MATCH` | Same frozen vocabulary. |
+| Coverage | capability/item `coverage` | `EXACT_MATCH` | Capability coverage plus item snapshot. |
+| Acquisition quality | capability/item `acquisitionQuality` | `ADAPTER_MAPPING` | DE quality state/failure/detail projected into accepted object shape. |
+| Provenance | item `provenance` | `ADAPTER_MAPPING` | Field names map directly; providerExecutionRef remains transient and excluded from manifest. |
+| Parent Evidence refs | `provenance.parentEvidenceRefs` | `EXACT_MATCH` | Sorted by Intelligence manifest builder. |
+| Parent capture refs | `provenance.parentCaptureRefs` | `EXACT_MATCH` | Sorted by Intelligence manifest builder. |
+| Provider execution ref | `provenance.providerExecutionRef?` | `EXACT_MATCH` transient | Operational trace only; never semantic identity and never in Intelligence manifest. |
+| Dedupe fingerprint | `deduplication.itemFingerprint` | `EXACT_MATCH` | Same immutable item fingerprint semantics. |
+| Equivalent Evidence ref | `deduplication.equivalentPriorEvidenceRef?` | `EXACT_MATCH` | Historical equivalence, not identity collapse. |
+| Repetition count | `deduplication.repetitionCount` | `EXACT_MATCH` | Preserves useful repetition. |
+| Supporting resources | `deduplication.supportingResourceRefs` | `EXACT_MATCH` | Brand-scoped resource refs. |
+| Normalized content ref | `normalizedContentRef?` | `EXACT_MATCH` | Large normalized content remains referenced. |
+| Bounded normalized payload | `boundedNormalizedPayload?` | `EXACT_MATCH` transient | Allowed for processor input; manifest builder excludes raw/transient payload. |
+| Content hash | `contentHash` | `EXACT_MATCH` | Provider-neutral normalized/captured content lineage hash. |
+| Polarity | `polarity?` | `EXACT_MATCH` | Frozen `AFFIRMATIVE/EXPLICIT_NEGATIVE/RESTRICTION/NEUTRAL`. |
+| Conflict relation/group | `conflictGroupRef?` | `ADAPTER_MAPPING` | Adapter derives stable Brand-scoped conflict group/ref from DE observation relations; no winner semantics. |
+| Normalization contract version | capability `normalizationContractVersion`, provenance version | `EXACT_MATCH` | Same frozen/versioned normalizer contract. |
+| Capability availability | capability `status` | `EXACT_MATCH` | `AVAILABLE/PARTIAL/DEGRADED/UNAVAILABLE/NOT_REQUESTED`. |
+| Retryability | capability `retryability` | `EXACT_MATCH` | Same three-state contract. |
+| Reason codes | capability `reasonCodes` | `EXACT_MATCH` | Provider-neutral capability reason codes. |
+| Resource/page scope requested for acquisition | no reader field | `DE_INTERNAL_ONLY` | Belongs to separate DE acquisition/refresh command, not normal Intelligence read. |
+| Freshness intent for acquisition | no reader field | `DE_INTERNAL_ONLY` | Belongs to separate DE acquisition/refresh command. |
+| DE capability manifest ref/hash | no accepted reader field | `DE_INTERNAL_ONLY` | DE production lineage; related via capabilityExecutionRef, not a substitute for Intelligence manifest. |
+| `observedAt` when source exposes it | no current item field | `DE_INTERNAL_ONLY` | Retained in DE persistence; not required by current W1.0E consumer contract. |
+| Page role | no current item field | `DE_INTERNAL_ONLY` | Retained in DE Evidence payload/resource metadata; no bounded amendment required for Wave 1 consumer. |
 
-W1.0E must keep `brand_communication` and `brand_meaning` execution disabled until production Evidence delivery and later activation gates pass.
-
-### WHAT REQUIRES NEW DE IMPLEMENTATION
-
-W1.0E **cannot obtain in production today**:
-
-1. durable `resource_ref` lookup;
-2. durable `capture_ref` history;
-3. stable persisted normalized `evidence_ref` lookup;
-4. retained normalized content/content refs;
-5. capability execution availability/quality/coverage/freshness from a durable DE store;
-6. semantic-observation grouping/repetition/conflict lineage;
-7. the five frozen Wave normalizers writing durable Evidence;
-8. deterministic production manifests sourced from persisted Evidence; or
-9. a production `IntelligenceEvidenceReaderV1` adapter.
-
-W1.0E must **not** fill this gap by treating:
-
-- `owned:<url>` Preview refs;
-- Preview run IDs;
-- Stage 1B runtime context;
-- provider request IDs; or
-- `IntelligenceEvidenceReference`
-
-as the Data Extraction Evidence store.
+This table supersedes the earlier pre-W1.0E coordination statement. No second `IntelligenceEvidenceReaderV1` is frozen.
 
 ## 38. Processor activation boundary
 
@@ -1575,9 +1631,11 @@ brand_meaning       = EXECUTION_DISABLED
 
 Activation requires later DE implementation, production Evidence read integration, runtime validation and the applicable Intelligence activation gate.
 
+The existence of `DataExtractionIntelligenceEvidenceAdapter` alone is **not** an activation signal.
+
 ## 39. Validation
 
-This architecture preserves:
+This convergence correction preserves:
 
 ```text
 resource != capture != Evidence                         PASS
@@ -1592,6 +1650,10 @@ explicit negative Evidence != absence                    PASS
 provider/model identity remains operational               PASS
 durable normalized Evidence owned by Data Extraction      PASS
 Intelligence consumes refs/bounded context                PASS
+accepted W1.0E IntelligenceEvidenceReader preserved       PASS
+read existing Evidence != acquisition/refresh command     PASS
+processor identity not DE Evidence identity               PASS
+DE capability manifest != Intelligence consumed manifest  PASS
 same-Brand tenancy enforced                               PASS
 no provider/model selection                               PASS
 no provider implementation                               PASS
@@ -1607,4 +1669,4 @@ Recommended verdict:
 BRAND_INTELLIGENCE_WAVE1_EVIDENCE_RUNTIME_CONTRACT_READY_FOR_FREEZE
 ```
 
-This is a Data Extraction architecture proposal. It does not independently authorize provider changes, persistence migration, runtime writes, or processor activation.
+This is a bounded convergence correction to the Data Extraction architecture proposal. It does not independently authorize W1.0E port modification, provider changes, persistence migration, runtime writes, acquisition, or processor activation.
