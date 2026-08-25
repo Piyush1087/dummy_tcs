@@ -1,0 +1,92 @@
+id: observed_brand_communication_language_signals
+version: "1.0"
+status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+owner: data_extraction_engine
+shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
+intelligence_evidence_authority: intelligence/engines/brand_intelligence/branches/brand_expression/evidence/brand_communication_evidence.yaml
+
+purpose: >-
+  Normalize observed language signals from actual Brand communication surfaces without deciding communication_profile.primary_language and without using geography, country, currency or Industry as language Evidence.
+
+eligible_source_classes: [OWNED_WEBSITE, BRAND_USER_INPUT, INSTAGRAM_OWNED, MULTI_SOURCE]
+initial_gate_b_required_source: [OWNED_WEBSITE]
+forbidden_proxy_inputs: [country, geography, headquarters, currency, industry, audience_geography, market_served, domain_tld]
+
+item_semantic: communication_language_observation
+normalized_payload:
+  type: object
+  additional_properties: false
+  required: [signal_type, surface_importance, message_evidence_refs]
+  fields:
+    language_code: {type: [string, "null"], nullable: true, normalization_when_non_null: ISO_639_1_lowercase}
+    signal_type:
+      type: enum
+      values: [EXPLICIT_LANGUAGE_DECLARATION, PRINCIPAL_MESSAGING_LANGUAGE, TRANSLATION_LOCALIZATION_VARIANT, INCIDENTAL_FOREIGN_FRAGMENT, LEGAL_BOILERPLATE_LANGUAGE, LOCATION_OR_PROPER_NAME_LANGUAGE]
+    surface_importance: {type: enum, values: [PRINCIPAL, SUPPORTING, INCIDENTAL, BOILERPLATE]}
+    repetition_count: {type: integer, minimum: 1}
+    message_evidence_refs: {type: array, item_type: string, unique_items: true, min_items: 1}
+    explicit_declaration_text: {type: [string, "null"], nullable: true, rule: only_for_explicit_language_declaration}
+    localization_variant_ref: {type: [string, "null"], nullable: true, rule: reference_to_alternate_localized_resource_when_observed}
+
+detection_boundary:
+  allowed:
+    - deterministic_language_detection_over_observed_text
+    - html_lang_or_explicit_language_selector_as_supporting_or_explicit_signal
+    - localization_url_relationship_detection
+    - repetition_and_surface_importance_classification
+  forbidden:
+    - selecting_primary_language
+    - semantic_precedence_resolution_between_languages
+    - geography_based_language_default
+    - inventing_secondary_language_object
+
+representativeness_mapping:
+  PRINCIPAL: {default_shared_representativeness: PERSISTENT_BRAND_LEVEL, caveat: principal_surface_does_not_itself_resolve_primary_language}
+  SUPPORTING: {default_shared_representativeness: REPEATED_REPRESENTATIVE}
+  INCIDENTAL: {default_shared_representativeness: INCIDENTAL}
+  BOILERPLATE: {default_shared_representativeness: INCIDENTAL}
+
+coverage_rules:
+  SINGLE_RESOURCE: language_signal_observed_on_one_resource
+  MULTI_RESOURCE_PARTIAL: multiple_resources_observed_but_principal_messaging_coverage_incomplete
+  MULTI_RESOURCE_BROAD: principal_owned_messaging_surfaces_materially_observed
+  SITE_WIDE_BOUNDED: bounded_multilingual_surface_sample_explicitly_completed
+
+deduplication:
+  same_language_signal_same_message_evidence: {action: collapse_duplicate_item}
+  same_language_across_multiple_principal_resources: {action: one_semantic_observation_key_may_group_items_with_repetition_count_and_supporting_resource_refs}
+  localized_variants:
+    action: preserve_distinct_resource_and_capture_items
+    rule: translation_variant_not_duplicate_of_principal_resource
+
+conflict_behavior:
+  examples:
+    - english_principal_homepage_and_hindi_principal_localized_homepage
+    - explicit_language_setting_disagrees_with_observed_principal_copy
+  action: preserve_all_signals_with_provenance_and_surface_importance
+  primary_language_resolution: intelligence_owned
+
+negative_evidence:
+  explicit_statement_that_language_is_not_supported: {allowed: true, polarity: EXPLICIT_NEGATIVE}
+  no_text_observed_in_language: {negative_evidence: false}
+
+acquisition_quality_rules:
+  COMPLETE: requested_language_surface_scope_observed_with_traceable_message_refs
+  PARTIAL: usable_language_signals_observed_but_principal_surface_coverage_incomplete
+  DEGRADED: detection_or_text_extraction_quality_materially_uncertain
+  UNAVAILABLE: no_usable_communication_text_or_explicit_language_signal
+
+forbidden_derivations:
+  - communication_profile.primary_language
+  - country_to_language
+  - industry_to_language
+  - brand_confirmed_language
+  - language_precedence_resolution
+
+validation_invariants:
+  - language_signal_has_message_evidence_ref
+  - country_geography_currency_industry_never_language_evidence
+  - translation_variant_distinct_from_principal_signal
+  - incidental_fragment_cannot_be_promoted_by_data_extraction
+  - legal_boilerplate_distinguished
+  - conflicts_preserved
