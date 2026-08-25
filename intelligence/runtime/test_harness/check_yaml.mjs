@@ -38,4 +38,3 @@ if (failures.length > 0) {
 }
 
 console.log(`Parsed ${files.length} runtime/Identity YAML files.`);
-
