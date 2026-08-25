@@ -26,7 +26,7 @@ Runtime Wave 1 should be implemented behind a new Brand Intelligence application
 
 It must not write Wave 1 results directly into `BrandProfile.description`, `BrandProfile.visualIdentity`, `BrandProfile.strategicDna`, Brand Preview snapshots, or legacy `BrandIntelligenceScan` snapshots. Those fields are compatibility/dual-truth surfaces until separately migrated.
 
-The architecture is suitable for Systems Architect freeze. Implementation is not yet unblocked: the persistence decision and table contract, Data Extraction capability contracts, protected-state transaction contract, durable event/job ownership, executable validator pattern, and consumer projection contract must be frozen first.
+The architecture is suitable for Systems Architect freeze. Implementation readiness is stage-specific: W1.0 requires only Gate A in Section 26; processor execution, consumer migration, Brand-confirmed mutation surfaces, and optional Instagram enrichment have later gates, while Serviceability is a separate Wave 2 prerequisite track. Product consumer mapping, Instagram policy, and Serviceability authority do not block the W1.0 foundation.
 
 ## 2. Frozen semantic constraints
 
@@ -417,32 +417,44 @@ The permanent objects are net-new canonical Intelligence semantics in the accept
 
 Active consumers include `BrandCentreDnaService`, Brand Centre deep scan and aggregate/co-pilot paths, `BrandProfileService`, and `PublicBrandService`. They create dual-truth risk if Wave writes are aliased into existing fields. Freeze the Wave projection as canonical first, then migrate consumers field by field through an explicit semantic mapping/product decision. Until then, legacy fields remain compatibility data and Wave does not dual-write them.
 
-## 22. Serviceability prerequisite audit
+## 22. Serviceability Wave 2 prerequisite audit
 
-| Canonical prerequisite | Classification | Exact backend state | Gap before Runtime Wave 2 |
-|---|---:|---|---|
-| Primary Brand geography | `PARTIAL` | `BrandProfile.countryCode`; M1 canonical `country`; Stage 1A country wrapper | Nullable/legacy provenance and “primary service geography” authority are not explicitly modeled. |
-| Locations | `PARTIAL` | Prisma `Location`; reads in `src/features/brand-onboarding/brand-profile.service.ts`; created by surface-scan runners | No active/lifecycle or confirmation/authority state; scan-created records can be treated as current without serviceability-specific authority. |
-| Offering availability | `PARTIAL` | Prisma `Offering.isActive`; writes in `brand-offerings.service.ts` and `BrandCentreDnaService` | Active is not geographic/temporal availability and lacks availability authority/version semantics. |
-| Offering-to-Location | `AUTHORITY_UNCLEAR` | `Offering.locationIds String[]` | No relational FK/integrity, lifecycle, or authoritative mutation/read contract was found. |
+| Canonical prerequisite | Readiness | Wave classification | Exact backend state | Gap before Runtime Wave 2 |
+|---|---:|---:|---|---|
+| Primary Brand geography | `PARTIAL` | `SERVICEABILITY_WAVE2_PREREQUISITE` | `BrandProfile.countryCode`; M1 canonical `country`; Stage 1A country wrapper | Nullable/legacy provenance and “primary service geography” authority are not explicitly modeled. |
+| Locations | `PARTIAL` | `SERVICEABILITY_WAVE2_PREREQUISITE` | Prisma `Location`; reads in `src/features/brand-onboarding/brand-profile.service.ts`; created by surface-scan runners | No active/lifecycle or confirmation/authority state; scan-created records can be treated as current without serviceability-specific authority. |
+| Offering availability | `PARTIAL` | `SERVICEABILITY_WAVE2_PREREQUISITE` | Prisma `Offering.isActive`; writes in `brand-offerings.service.ts` and `BrandCentreDnaService` | Active is not geographic/temporal availability and lacks availability authority/version semantics. |
+| Offering-to-Location | `AUTHORITY_UNCLEAR` | `SERVICEABILITY_WAVE2_PREREQUISITE` | `Offering.locationIds String[]` | No relational FK/integrity, lifecycle, or authoritative mutation/read contract was found. |
 
-Serviceability is not ready to join Runtime Wave 2 until Product/Application authority for these states and the Offering-to-Location relationship is frozen. This proposal does not design its runtime.
+Serviceability is a separate Wave 2 prerequisite track and is not a Wave 1 or W1.0 implementation blocker. It is not ready to join Runtime Wave 2 until Product/Application authority for these states and the Offering-to-Location relationship is frozen. This proposal does not solve or design its runtime.
 
 ## 23. Bounded implementation stages
 
 These are future stages, not authorization to implement.
 
+| Stage or capability | Required gate before it begins/enables |
+|---|---|
+| W1.0 foundation | Gate A |
+| W1.1 `brand_communication` execution | Gate A plus the `brand_communication` portion of Gate B |
+| W1.2 `brand_meaning` execution | Gate A plus the `brand_meaning` portion of Gate B |
+| W1.3 consumer migration | Gate C |
+| Brand-confirmed mutation surfaces | Gate D; W1.0 may implement the generic protected transition structure before permissions are finalized |
+| Optional Instagram enrichment | Gate E |
+| Serviceability | Separate `SERVICEABILITY_WAVE2_PREREQUISITE` track |
+
 ### W1.0 — permanent runtime and persistence foundation
 
+- **Entry gate:** Gate A is frozen. No Product consumer mapping, Instagram policy, or Serviceability authority is required.
 - **Objective:** add contract-bundle loading, execution/processor attempt records, immutable object/component generations, protected current state, reference rows, leases/idempotency, and telemetry.
 - **Likely backend modules/files:** new `src/features/brand-intelligence/**`; Prisma schema plus reviewed migration; adapter additions under `src/intelligence/runtime/**`; Data Extraction port interfaces; application module wiring.
-- **Schema implications:** all new execution, generation, current-component, reference, action/audit, and outbox tables/indexes; no reuse of Preview/Stage 1B tables.
+- **Schema implications:** new execution, generation, current-component, reference, and action/audit tables/indexes; no reuse of Preview/Stage 1B tables. Outbox/invalidation records may be introduced with W1.4 and do not block W1.0.
 - **Tests:** migrations/constraints, CAS/protection concurrency, idempotency, lease reclaim, partial commit, bundle drift, reference integrity, no BrandProfile writes.
 - **Rollback boundary:** module/worker disabled; new tables additive and unread by existing consumers.
 - **Exit gate:** foundation contract frozen, migrations reviewed, two synthetic processors can independently persist/read protected current state.
 
 ### W1.1 — `brand_communication`
 
+- **Entry gate:** Gate A and the `brand_communication` capability contracts in Gate B are frozen. Optional Instagram Evidence is not required.
 - **Objective:** acquire normalized communication Evidence, execute/validate the frozen processor, and persist `communication_profile` components.
 - **Likely modules/files:** `src/features/brand-intelligence/processors/brand-communication/**`; Wave validators/registry; Data Extraction capability adapters; contract-bundle manifest registration.
 - **Schema implications:** none beyond W1.0 unless normalized Evidence capture ownership is frozen in a separate Data Extraction migration.
@@ -452,6 +464,7 @@ These are future stages, not authorization to implement.
 
 ### W1.2 — `brand_meaning`
 
+- **Entry gate:** Gate A and the `brand_meaning` capability contracts in Gate B are frozen. Brand confirmations may enrich/protect state but are not a universal prerequisite for initial derivation.
 - **Objective:** execute/validate three independent meaning outputs using normalized company/messaging/Offering Evidence.
 - **Likely modules/files:** `src/features/brand-intelligence/processors/brand-meaning/**`; meaning validators/registry; Offering-context Data Extraction adapter.
 - **Schema implications:** W1.0 generic tables only.
@@ -461,6 +474,7 @@ These are future stages, not authorization to implement.
 
 ### W1.3 — canonical current projection and bounded consumer adapters
 
+- **Entry gate:** Gate C is frozen. The basic internal current-state projection established by Gate A can exist before consumer mappings are approved.
 - **Objective:** expose object-oriented internal reads and a Brand Centre compatibility adapter without changing frontend semantics yet.
 - **Likely modules/files:** `src/features/brand-intelligence/queries/**`, DTOs/controllers if authorized, explicit adapter under Brand Centre/Public Brand owners.
 - **Schema implications:** optional read-model/index only; no canonical values copied into BrandProfile.
@@ -479,6 +493,7 @@ These are future stages, not authorization to implement.
 
 ### W1.5 — `primary_language` and legacy meaning consumer migration
 
+- **Entry gate:** Gate C mappings are frozen for affected consumers. `primary_language` fallback/backfill remains conditional on discovery of a real deployed legacy store or external consumer.
 - **Objective:** move discovered consumers to the canonical projection, add only evidence-backed legacy fallback/backfill, and measure retirement readiness.
 - **Likely modules/files:** compatibility query adapters and consumer services found in the implementation-stage usage/data audit; no Identity deletion.
 - **Schema implications:** normally none beyond migration action generations; a temporary mapping table requires separate approval if an external legacy store is discovered.
@@ -486,50 +501,98 @@ These are future stages, not authorization to implement.
 - **Rollback boundary:** compatibility adapter selects legacy reads; permanent generations remain intact.
 - **Exit gate:** agreed consumer cohort migrated, fallback metrics stable, dual-truth mappings explicitly accepted; Identity retirement remains a later assignment.
 
-## 24. Product blockers
+## 24. Product/Application stage gates
 
-Product/Application Authority must freeze before consumer migration:
+### Gate C — required before W1.3 consumer migration
 
-- which current consumers may display each permanent object and which metadata/candidate details each role may see;
-- semantic mappings, if any, from Wave `brand_description`, `positioning`, and `value_proposition` to existing Brand Centre/Public Brand fields;
-- who may confirm/edit each object component/item and which roles may accept/reject candidates;
-- manual-refresh eligibility/rate/UX semantics;
-- whether Instagram Evidence is opt-in, which Brand integration scopes authorize it, and its representativeness/retention policy; and
-- Serviceability authority for primary geography, Location lifecycle, geographic Offering availability, and Offering-to-Location mapping.
+Product/Application Authority must freeze only the consumer-facing contract needed by migrating consumers:
 
-These do not change frozen processor semantics.
+- which existing consumers may read each permanent Object/component;
+- which legacy Brand Centre/Public Brand fields map, if any, to `brand_description`, `positioning`, `value_proposition`, and `communication_profile`;
+- candidate/discrepancy visibility; and
+- role-based metadata access and redaction.
 
-## 25. Data Extraction blockers
+Gate C does not block W1.0 persistence/runtime foundation or W1.1/W1.2 initial processor execution.
 
-Data Extraction must freeze capability contracts for:
+### Gate D — required before Brand-confirmed editing
 
-- normalized owned-site messaging, company-context, and Offering-context captures;
-- observed communication-language signals;
-- derived communication-constraint Evidence;
-- referenceable Brand confirmation/action Evidence;
-- optional representative brand Instagram Evidence;
-- Evidence identity, capture time, source class/resource ref, freshness, coverage, representativeness, provenance, quality, retention, and deduplication;
-- capability error/availability semantics and acquisition idempotency; and
-- ownership/location of durable normalized Evidence captures versus Wave generation references.
+Product/Application Authority must define:
 
-Current provider adapters are sufficient foundations but do not satisfy these semantic contracts by themselves.
+- which roles may confirm/edit each Object component/item;
+- which roles may accept/reject AI candidates; and
+- which components are editable versus derived-only.
 
-## 26. Backend blockers and implementation gate
+Gate A may establish generic `BRAND_CONFIRMED` transitions, protection, candidate, and discrepancy structure before Gate D is resolved. Gate D controls exposure of authorized mutation surfaces; this artifact does not invent the Product policy.
 
-Before code begins, Systems Architecture/Backend must freeze:
+### Gate E — required only before optional Instagram enrichment
 
-1. Option A and the exact execution/generation/current-component/reference/outbox schema, indexes, retention, and migration plan;
-2. component semantic-path rules for scalar, subfield, and list-item authority;
-3. protected-state transition/CAS/discrepancy transaction rules;
-4. contract-bundle packaging, release ownership, checksum manifest, and CI drift gates;
-5. structural-plus-semantic validator interfaces and registration keys;
-6. canonical Brand-state application port and removal of permanent discovery-lead coupling;
-7. Data Extraction capability ports and normalized Evidence record ownership;
-8. durable event/outbox, worker lease, retry, idempotency, and error-state ownership;
-9. canonical current projection/API contract and authorization/redaction; and
-10. compatibility policy that forbids silent Wave dual-writes to legacy BrandProfile/Preview/Identity stores.
+Before enabling `instagram.owned_brand_context` or related Evidence, Product/Data owners must freeze:
 
-No provider/model choice is required for this architecture freeze. No Wave 1 implementation should start while these structural contracts remain proposed rather than frozen.
+- connection and consent scope;
+- retention;
+- representativeness; and
+- refresh behavior.
+
+Instagram remains optional. Gate E does not block website-based W1.1/W1.2 initial execution or W1.0.
+
+## 25. Gate B — Data Extraction prerequisites for processor execution
+
+Gate B is processor-scoped. Current provider adapters are sufficient foundations, but they do not satisfy the normalized semantic capability contracts by themselves.
+
+### `brand_communication` Gate B
+
+Before W1.1 executes, Data Extraction must freeze normalized contracts for:
+
+- `owned_website.brand_messaging`;
+- `owned_website.brand_company_context`;
+- `observed_brand_communication_language_signals`; and
+- `derived communication_constraint_evidence`.
+
+Brand user confirmations must have a referenceable application/action representation when they are used. Optional Instagram Evidence is not part of this initial-execution gate.
+
+### `brand_meaning` Gate B
+
+Before W1.2 executes, Data Extraction must freeze normalized contracts for:
+
+- `owned_website.brand_company_context`;
+- `owned_website.brand_messaging`; and
+- `owned_website.offering_context`.
+
+Brand user confirmations may enrich or protect current state but are not a universal prerequisite for initial `brand_meaning` derivation.
+
+Each normalized capability contract must define the relevant Evidence identity, source/resource reference, capture time, freshness, coverage/representativeness, provenance, quality, deduplication, availability/error semantics, acquisition idempotency, and durable capture ownership.
+
+## 26. Backend implementation gates
+
+### Gate A — required before W1.0 foundation implementation
+
+Systems Architecture/Backend must freeze:
+
+1. the generic persistence table/model contract;
+2. component semantic-path rules;
+3. the immutable generation/current-state model;
+4. protected transition/CAS/discrepancy rules;
+5. execution and processor-execution identity;
+6. lease/retry/idempotency ownership;
+7. contract-bundle packaging/version/hash rules;
+8. validator registration/interface;
+9. the canonical Brand-state application port;
+10. the basic canonical current-state internal projection; and
+11. the compatibility rule forbidding silent dual-write to BrandProfile, Preview, or Identity stores.
+
+Once Gate A is frozen, W1.0 may begin. Gate A does not require Product consumer mappings, Instagram policy, Serviceability authority, or processor-specific normalized Evidence contracts.
+
+### Sequenced implementation gate
+
+- W1.0 requires Gate A.
+- W1.1 requires Gate A plus its `brand_communication` Gate B contracts.
+- W1.2 requires Gate A plus its `brand_meaning` Gate B contracts.
+- W1.3 consumer migration requires Gate C.
+- Brand-confirmed mutation surfaces require Gate D.
+- Optional Instagram enrichment requires Gate E.
+- Serviceability remains a separate `SERVICEABILITY_WAVE2_PREREQUISITE` track.
+
+No provider/model choice is required for this architecture freeze. A later gate does not block an earlier stage unless the dependency is stated above.
 
 ## 27. Final recommendation
 
@@ -537,4 +600,4 @@ Freeze this reconciliation with Option A, per-component protected state, indepen
 
 **Verdict:** `BRAND_INTELLIGENCE_WAVE1_BACKEND_ARCHITECTURE_READY_FOR_FREEZE`
 
-This verdict means the reconciliation artifact is ready for Systems Architect review/freeze. It does **not** mean backend implementation is ready or authorized; Sections 24–26 are mandatory pre-code gates.
+This verdict means the reconciliation artifact is ready for Systems Architect freeze. It does **not** authorize Wave 1 implementation: each stage may begin only after its applicable Gate A–E prerequisites in Sections 23–26 are frozen.
