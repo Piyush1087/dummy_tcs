@@ -1,6 +1,6 @@
 id: brand_meaning_reasoning
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 processor: brand_meaning
 owner_engine: brand_intelligence
 owning_branch: brand_expression

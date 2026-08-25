@@ -1,6 +1,6 @@
 id: brand_character_output_contract
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 processor: brand_character
 objects: [brand_values, brand_personality]
 strict: true

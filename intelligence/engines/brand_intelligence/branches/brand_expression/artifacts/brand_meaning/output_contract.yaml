@@ -1,6 +1,6 @@
 id: brand_meaning_output_contract
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 processor: brand_meaning
 objects: [brand_description, positioning, value_proposition]
 strict: true
