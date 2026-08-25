@@ -1,0 +1,27 @@
+{
+  "name": "creator-shop-reference-runtime",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.17.0",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "scripts": {
+    "test:runtime": "vitest run --config vitest.runtime.config.ts",
+    "test:runtime:watch": "vitest --config vitest.runtime.config.ts",
+    "typecheck:runtime": "tsc -p tsconfig.runtime.json --noEmit",
+    "check:runtime-yaml": "node intelligence/runtime/test_harness/check_yaml.mjs",
+    "validate:runtime": "npm run typecheck:runtime && npm run test:runtime && npm run check:runtime-yaml"
+  },
+  "dependencies": {
+    "yaml": "2.9.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  }
+}
+

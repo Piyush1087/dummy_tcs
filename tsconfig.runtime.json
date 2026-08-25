@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022"],
+    "types": ["node", "vitest/globals"],
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "intelligence/runtime/**/*.ts",
+    "vitest.runtime.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "intelligence/runtime/test_entry/example_next_route.ts"
+  ]
+}
+
