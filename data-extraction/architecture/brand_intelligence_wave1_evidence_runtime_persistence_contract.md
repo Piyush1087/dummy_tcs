@@ -1,6 +1,6 @@
 # Brand Intelligence Wave 1 — Durable Normalized Evidence Runtime & Persistence Contract
 
-**Status:** `PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE`  
+**Status:** `FROZEN`  
 **Owner:** Data Extraction Engine  
 **Scope:** Durable normalized Evidence runtime/persistence architecture required to deliver frozen Wave 1 Evidence capabilities to Brand Intelligence.  
 **Architecture baseline:** `Piyush1087/dummy_tcs/main@017dbceac494f0861ec9a6bea7af3129b70fa5cb`  
