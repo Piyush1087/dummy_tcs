@@ -1,6 +1,6 @@
 # Brand Intelligence Runtime Wave 1 — Backend Reconciliation
 
-**Status:** `PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE`
+**Status:** `FROZEN`
 
 **Scope:** audit and architecture only; no runtime, schema, migration, validator, provider, model, frontend, Product Authority, M2.5, or Identity-retirement implementation
 
