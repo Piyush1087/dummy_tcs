@@ -1,6 +1,6 @@
 id: normalized_evidence_envelope
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 owner: data_extraction_engine
 scope: provider_neutral_normalized_evidence
 shared_intelligence_metadata_authority: intelligence/architecture/shared_intelligence_metadata_contract.yaml
