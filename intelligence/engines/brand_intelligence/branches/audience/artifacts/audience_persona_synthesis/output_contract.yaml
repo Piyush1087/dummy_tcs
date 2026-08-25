@@ -1,6 +1,6 @@
 id: audience_persona_synthesis_output_contract
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 processor: audience_persona_synthesis
 object: audience_personas
 strict: true
