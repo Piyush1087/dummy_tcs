@@ -1,6 +1,6 @@
 id: derived_communication_constraint_evidence
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 owner: data_extraction_engine
 source_class_default: SYSTEM_DERIVATION_INPUT
 shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
