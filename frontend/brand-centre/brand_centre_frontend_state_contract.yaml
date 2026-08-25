@@ -1,0 +1,248 @@
+version: "0.1"
+status: PROPOSED_FOR_SYSTEMS_ARCHITECT_REVIEW
+contract: brand_centre_frontend_state_contract
+owner: frontend_ai_worker
+authority_baseline: "Piyush1087/dummy_tcs@017dbceac494f0861ec9a6bea7af3129b70fa5cb"
+frontend_reference_baseline: "Piyush1087/creator-commerce-frontend-v2-clone@cbef201c571c6493c0a83ca4a6be12963faa959d"
+
+purpose: >-
+  Define the smallest frontend semantic state vocabulary needed to consume current Brand Centre
+  Intelligence and canonical business state without exposing persistence/runtime internals or collapsing
+  null, readiness, freshness, authority, candidate, and request state into one generic loading/error model.
+
+governing_rules:
+  - frontend_does_not_invent_intelligence_meaning
+  - workspace_state_is_not_processor_state
+  - network_loading_is_not_intelligence_not_ready
+  - result_readiness_is_not_consumer_readiness
+  - readiness_is_not_freshness
+  - source_is_not_authority
+  - stale_current_data_remains_renderable
+  - protected_current_values_are_not_replaced_by_candidates
+  - mixed_generation_is_valid
+  - stable_semantic_ids_are_react_identity
+  - desktop_and_mobile_share_the_same_semantic_state_contract
+  - no_global_page_blocking_when_useful_sections_are_available
+
+request_state:
+  values:
+    IDLE: Request has not been initiated for this consumer surface.
+    LOADING: Initial request is in flight and no consumer projection is available yet.
+    READY: A validated consumer projection is available.
+    ERROR: Transport/API/authorization failure prevented this request from completing.
+  previous_data_allowed_during:
+    - LOADING
+    - ERROR
+  rule: Background refresh should retain previous data when available rather than replacing the workspace with a loading screen.
+
+consumer_readiness:
+  values: [NOT_READY, PARTIAL, READY]
+  primary_render_gate: true
+  rules:
+    - READY means sufficient for the declared Brand Centre consumer, not globally complete Intelligence.
+    - PARTIAL is usable bounded degradation and must never be padded with filler.
+    - NOT_READY is an Intelligence state, not a transport error.
+    - A workspace may be READY while one or more sections are PARTIAL or NOT_READY.
+
+result_readiness:
+  values: [READY, PARTIAL, NOT_READY, FAILED]
+  frontend_use:
+    - preserve when useful for explaining section density or temporary unavailability
+    - do not use as the sole workspace render gate
+  persistence_note: W1.0 current persisted values use READY/PARTIAL/NOT_READY; FAILED remains an execution/result outcome rather than a failed current generation.
+
+freshness:
+  values: [CURRENT, STALE, UNKNOWN, REFRESHING]
+  behavior:
+    CURRENT: Render normally.
+    STALE: Retain current value and expose a restrained stale/update indicator where useful.
+    UNKNOWN: Render current value without treating unknown freshness as an error.
+    REFRESHING: Retain current value while showing non-blocking refresh activity where useful.
+  rules:
+    - STALE does not mean absent.
+    - BRAND_CONFIRMED may be STALE and still authoritative.
+    - REFRESHING is a presentation/runtime transient and must not imply new data will replace protected current state.
+
+current_value_state:
+  values:
+    VALUE:
+      data_present: true
+      meaning: A current semantic value exists.
+    EXPLICIT_NULL:
+      data_present: false
+      meaning: The component was evaluated and no defensible value is asserted.
+    INTENTIONALLY_ABSENT:
+      data_present: false
+      meaning: The optional component/item was deliberately omitted or removed under contract-valid semantics.
+    NO_CURRENT:
+      data_present: false
+      meaning: No current component/object projection exists yet.
+    NOT_EVALUATED:
+      data_present: false
+      meaning: The semantic has not yet been evaluated for the current Brand/context.
+    NOT_OWNED:
+      data_present: false
+      meaning: The semantic is owned by canonical application/business state rather than this Intelligence projection.
+  invariants:
+    - missing_property_must_not_be_interpreted_as_EXPLICIT_NULL
+    - empty_collection_is_a_VALUE_and_is_not_NO_CURRENT
+    - processor_failure_is_not_EXPLICIT_NULL
+    - NOT_OWNED_requires_consumption_from_the_owning_business_state_projection_when_needed
+
+empty_collection:
+  semantic: evaluated_current_empty_set
+  ui_rule: >-
+    Render a meaningful empty state only when the collection itself is a valid user-facing concept;
+    otherwise omit the optional subsection. Never substitute loading or filler items.
+
+authority:
+  backend_values:
+    - OBSERVED
+    - CREATOR_SHOP_DERIVED
+    - BRAND_CONFIRMED
+    - SUPPORT_CONTROLLED
+    - SYSTEM_DERIVED
+  presentation_values:
+    OBSERVED: observed
+    CREATOR_SHOP_DERIVED: creator_shop
+    BRAND_CONFIRMED: confirmed
+    SUPPORT_CONTROLLED: protected
+    SYSTEM_DERIVED: system_managed
+  aggregate_only_value:
+    MIXED: mixed
+  rules:
+    - MIXED is a frontend aggregate presentation state only and is never written back as semantic authority.
+    - Authority badges are contextual; ordinary values need not display a badge merely because metadata exists.
+    - SUPPORT_CONTROLLED should normally display as ordinary current truth with a contextual support-change path rather than lock clutter.
+
+editability:
+  values:
+    EDITABLE: Product authority permits Brand self-service editing at the relevant detail granularity.
+    SUPPORT_CONTROLLED: Change requires a support/exception path.
+    READ_ONLY: No Brand mutation path is currently authorized.
+    POLICY_PENDING: Read architecture supports future mutation, but Product/Gate policy is not yet frozen.
+  rule: Editability is derived from Product/application policy, never inferred solely from Intelligence authority.
+
+runtime_activity_hint:
+  values: [NONE, LEARNING, REFRESHING, TEMPORARILY_UNAVAILABLE]
+  optional: true
+  source_requirement: backend_or_runtime_projection_only
+  forbidden_inputs:
+    - processor_id
+    - worker_id
+    - job_id
+    - provider_name
+    - model_name
+    - retry_attempt
+  rules:
+    - LEARNING may explain NO_CURRENT/NOT_EVALUATED when authoritative runtime activity exists.
+    - REFRESHING must retain usable current data.
+    - TEMPORARILY_UNAVAILABLE must not erase stale/current data that remains consumer-usable.
+    - Frontend timers must not manufacture these states.
+
+candidate_notice:
+  values: [NONE, AVAILABLE, CONFLICT]
+  fields:
+    status: required
+    count: non_negative_integer
+    current_preserved: boolean
+    summary_available: boolean
+    raw_candidate_visible: boolean
+  defaults:
+    raw_candidate_visible: false
+  rules:
+    - Current protected value remains the displayed current value while candidate status is pending.
+    - Candidate content visibility and accept/reject permissions remain pending later Product/Gate authority.
+    - Do not infer candidate state from changed wording or freshness.
+
+safe_error_category:
+  values:
+    TRANSPORT: Network or API transport failure.
+    AUTHORIZATION: User is not permitted to access the requested Brand Centre resource.
+    MALFORMED_RESPONSE: Consumer contract validation failed.
+    TEMPORARILY_UNAVAILABLE: Runtime reports consumer-safe temporary unavailability with no usable current value.
+  forbidden_user_exposure:
+    - processor_names
+    - provider_names
+    - model_names
+    - internal_error_codes
+    - stack_traces
+    - execution_ids
+
+section_envelope:
+  conceptual_typescript: |
+    type BrandCentreSectionState<T> = {
+      current: BrandCentreCurrentValue<T>;
+      consumerReadiness: "NOT_READY" | "PARTIAL" | "READY";
+      resultReadiness: "READY" | "PARTIAL" | "NOT_READY" | "FAILED";
+      freshness: "CURRENT" | "STALE" | "UNKNOWN" | "REFRESHING";
+      authorityPresentation: "observed" | "creator_shop" | "confirmed" | "protected" | "system_managed" | "mixed";
+      editability: "EDITABLE" | "SUPPORT_CONTROLLED" | "READ_ONLY" | "POLICY_PENDING";
+      runtimeActivity?: "LEARNING" | "REFRESHING" | "TEMPORARILY_UNAVAILABLE";
+      staleReason?: BrandCentreSafeStaleReason;
+      candidate?: BrandCentreCandidateNotice;
+      mixedGeneration?: boolean;
+      componentMeta?: Record<string, BrandCentreComponentMeta>;
+    };
+  component_meta_rule: >-
+    Include component metadata only at meaningful independent authority/edit/conflict granularity.
+    Do not push the complete W1.0 component-generation envelope into presentational components.
+
+mixed_generation:
+  valid: true
+  user_visible_generation_mechanics: false
+  rules:
+    - Never assume one generated_at, source, authority, or freshness for an entire Object.
+    - Preserve component-level metadata for independently protected/editable/discrepant items.
+    - Do not expose generation IDs or processor lineage in ordinary Brand Centre UI.
+
+stable_identity:
+  react_keys:
+    required_for:
+      - audience_personas
+      - brand_values
+      - brand_personality
+      - differentiation_records
+      - proof_points
+      - communication_tone_traits
+      - communication_constraints
+      - visual_style_traits
+      - visual_constraints
+      - serviceable_markets
+      - serviceability_basis
+      - offerings
+      - locations
+      - observations
+      - recommendations
+    forbidden_key: array_index_when_semantic_id_exists
+
+workspace_state:
+  values: [READY, PARTIAL, EMPTY, ERROR]
+  derivation_rule: frontend_selector_only
+  rules:
+    - READY may contain PARTIAL sections.
+    - PARTIAL means meaningful workspace content exists but important consumer sections remain immature.
+    - EMPTY is valid only when the owning Product semantic supports a legitimate empty result.
+    - ERROR is request/access failure, not Intelligence NOT_READY.
+
+mutation_readiness:
+  no_mutation_api_defined: true
+  conceptual_metadata:
+    semantic_object_id: string
+    component_path: string
+    expected_revision: string_or_integer
+    candidate_id: optional_string
+  rules:
+    - mutation metadata is never visual content
+    - expected_revision is required for future authority-safe writes
+    - read architecture must not change when edit/candidate mutations are later added
+
+validation_invariants:
+  - NO_CURRENT, NOT_EVALUATED, NOT_OWNED, EXPLICIT_NULL, INTENTIONALLY_ABSENT and empty collection remain distinguishable.
+  - Transport errors, Intelligence NOT_READY, partial Intelligence, stale Intelligence and runtime unavailability remain distinguishable.
+  - Consumer readiness is the normal UI render gate; execution readiness is not.
+  - Current stale data remains visible when still consumer-usable.
+  - Candidate/discrepancy state never silently replaces protected current state.
+  - Mixed-generation Objects do not receive fabricated aggregate source/authority/timestamp semantics.
+  - Component metadata is retained only where meaningful to frontend authority/edit/conflict behavior.
+  - Responsive presentation never changes semantic state meaning.
