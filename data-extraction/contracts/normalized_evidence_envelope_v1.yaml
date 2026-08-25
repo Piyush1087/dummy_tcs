@@ -1,0 +1,207 @@
+id: normalized_evidence_envelope
+version: "1.0"
+status: FROZEN
+owner: data_extraction_engine
+scope: provider_neutral_normalized_evidence
+shared_intelligence_metadata_authority: intelligence/architecture/shared_intelligence_metadata_contract.yaml
+
+purpose: >-
+  Define one provider-neutral normalized Evidence envelope for durable traceability,
+  capability delivery, deduplication, freshness, quality, provenance and reuse across
+  Brand Intelligence Wave 1 without assigning semantic Brand authority.
+
+principles:
+  - source_is_not_authority
+  - coverage_is_not_representativeness
+  - freshness_is_not_acquisition_quality
+  - provider_execution_is_not_evidence_identity
+  - capture_history_is_preserved
+  - explicit_negative_statement_is_evidence_but_absence_is_not_negative_evidence
+  - conflicts_are_preserved_not_resolved
+  - normalized_content_may_be_referenced_instead_of_duplicated
+  - no_brand_confirmed_authority_emitted
+
+shared_vocabulary:
+  source_class:
+    allowed:
+      - OWNED_WEBSITE
+      - BRAND_USER_INPUT
+      - INSTAGRAM_OWNED
+      - CANONICAL_BUSINESS_STATE
+      - MULTI_SOURCE
+      - SYSTEM_DERIVATION_INPUT
+    provider_names_forbidden: true
+  representativeness:
+    allowed: [PERSISTENT_BRAND_LEVEL, REPEATED_REPRESENTATIVE, CONTEXT_SPECIFIC, OFFERING_SPECIFIC, INCIDENTAL]
+    meaning: semantic_representativeness_of_observation_not_surface_coverage
+  coverage:
+    allowed: [SINGLE_RESOURCE, MULTI_RESOURCE_PARTIAL, MULTI_RESOURCE_BROAD, SITE_WIDE_BOUNDED]
+    meaning: how_much_of_relevant_source_surface_was_observed
+  freshness:
+    allowed: [CURRENT, POSSIBLY_STALE, UNKNOWN]
+    no_universal_ttl: true
+    required_basis_fields: [evaluated_at, basis]
+    optional_basis: [SAME_ACTIVE_RUN, CONTENT_HASH_UNCHANGED, RESOURCE_CHANGED, EXPLICIT_INVALIDATION, SOURCE_REVISION_CHANGED, CAPTURE_AGE_UNEVALUATED]
+  acquisition_quality:
+    allowed: [COMPLETE, PARTIAL, DEGRADED, UNAVAILABLE]
+    failure_categories: [RESOURCE_UNAVAILABLE, ACCESS_BLOCKED, CONTENT_EXTRACTION_DEGRADED, INSUFFICIENT_RELEVANT_CONTENT, PROVIDER_TECHNICAL_FAILURE, NORMALIZATION_FAILURE, SECURITY_REJECTED, POLICY_NOT_AUTHORIZED]
+    rule: acquisition_quality_does_not_map_directly_to_intelligence_readiness
+  observation_polarity:
+    allowed: [AFFIRMATIVE, EXPLICIT_NEGATIVE, RESTRICTION, NEUTRAL]
+    rule: ABSENCE_OF_STATEMENT_is_not_a_polarity_and_must_not_emit_negative_evidence
+
+identity_model:
+  resource_identity:
+    field: resource_ref
+    meaning: Stable provider-neutral identity of the source resource being observed.
+    examples: [canonicalized_owned_url, canonical_user_action_ref, canonical_normalized_source_record_ref]
+    must_not_use: [provider_request_id, transient_http_request_id]
+  capture_identity:
+    field: capture_ref
+    meaning: Immutable identity of one acquisition event for a resource.
+    rule: A new acquisition event creates a new capture_ref even when content is unchanged.
+  evidence_item_identity:
+    field: evidence_ref
+    meaning: Immutable normalized Evidence item identity inside one capture/capability.
+    construction_rule: >-
+      Deterministically derive from capture_ref + capability_id + normalized item fingerprint where practical;
+      duplicate extraction of the same item from the same capture collapses to one evidence_ref.
+    permanent_brand_object_id: false
+  semantic_observation_identity:
+    field: semantic_observation_key
+    required: false
+    meaning: >-
+      Provider-neutral normalized key for the same observed meaning across Evidence items, captures or resources.
+      It supports grouping/repetition without collapsing historical Evidence.
+    rule: Multiple evidence_refs may support one semantic_observation_key.
+
+recapture_behavior:
+  same_page_recaptured_unchanged:
+    resource_ref: same
+    capture_ref: new
+    content_hash: same
+    evidence_ref: new_capture_scoped_item
+    deduplication: link_to_prior_equivalent_evidence
+  same_page_changed:
+    resource_ref: same
+    capture_ref: new
+    content_hash: changed
+    evidence_ref: new
+    relationship: superseding_capture_candidate_not_semantic_truth_resolution
+  same_excerpt_extracted_twice_same_capture:
+    result: deduplicate_to_single_evidence_item
+  same_semantic_signal_multiple_pages:
+    result: preserve_separate_evidence_items_and_group_by_semantic_observation_key
+    repetition_count: preserve
+    supporting_resource_refs: preserve
+
+evidence_item:
+  type: object
+  additional_properties: false
+  required: [evidence_ref, capability_id, brand_id, source_class, resource_ref, resource_type, capture_ref, captured_at, content_hash, representativeness, coverage, freshness, provenance, acquisition_quality, deduplication, normalized_payload]
+  fields:
+    evidence_ref: {type: string}
+    capability_id: {type: string, provider_neutral: true}
+    brand_id: {type: string}
+    source_class: {type: enum, values_from: shared_vocabulary.source_class.allowed}
+    resource_ref: {type: string}
+    resource_type:
+      type: enum
+      values: [OWNED_WEB_PAGE, OWNED_WEB_FRAGMENT, USER_ACTION, AUTHENTICATED_PRIVATE_RESOURCE, CONNECTED_SOCIAL_RESOURCE, NORMALIZED_SOURCE_RECORD]
+    canonical_url: {type: [string, "null"], nullable: true}
+    page_role: {type: [string, "null"], nullable: true, rule: capability_contract_defines_allowed_page_roles}
+    capture_ref: {type: string}
+    captured_at: {type: timestamp}
+    observed_at: {type: [timestamp, "null"], nullable: true}
+    content_excerpt: {type: [string, "null"], nullable: true, rule: bounded_human_or_processor_safe_excerpt_not_full_content_by_default}
+    normalized_content_ref: {type: [string, "null"], nullable: true, meaning: stable_reference_to_normalized_content_when_payload_is_too_large_to_inline}
+    content_hash: {type: string, meaning: hash_of_normalized_resource_or_fragment_content_used_for_change_and_deduplication}
+    semantic_observation_key: {type: [string, "null"], nullable: true}
+    observation_polarity: {type: [enum, "null"], nullable: true, values_from: shared_vocabulary.observation_polarity.allowed}
+    representativeness: {type: enum, values_from: shared_vocabulary.representativeness.allowed}
+    representativeness_detail: {type: [object, "null"], nullable: true, additional_properties: true, rule: capability_specific_detail_only}
+    coverage: {type: enum, values_from: shared_vocabulary.coverage.allowed}
+    coverage_detail: {type: [object, "null"], nullable: true, additional_properties: true}
+    freshness:
+      type: object
+      required: [state, evaluated_at, basis]
+      fields:
+        state: {type: enum, values_from: shared_vocabulary.freshness.allowed}
+        evaluated_at: {type: timestamp}
+        basis: {type: string}
+        prior_capture_ref: {type: [string, "null"], nullable: true}
+        source_revision_ref: {type: [string, "null"], nullable: true}
+    provenance:
+      type: object
+      required: [acquisition_or_normalization_run_ref, capture_method_class, normalization_contract_version]
+      fields:
+        acquisition_or_normalization_run_ref: {type: string}
+        capture_method_class: {type: enum, values: [DIRECT_FETCH, RENDERED_FETCH, PROVIDER_MEDIATED_FETCH, CONNECTED_API, USER_ACTION_CAPTURE, DETERMINISTIC_DERIVATION]}
+        normalization_contract_version: {type: string}
+        parent_evidence_refs: {type: array, item_type: string, unique_items: true}
+        parent_capture_refs: {type: array, item_type: string, unique_items: true}
+        provider_execution_ref: {type: [string, "null"], nullable: true, meaning: operational_execution_reference_only}
+        durable_provider_fields_forbidden: [provider_name, endpoint, model_id, provider_request_id, raw_headers, credentials]
+    acquisition_quality:
+      type: object
+      required: [state]
+      fields:
+        state: {type: enum, values_from: shared_vocabulary.acquisition_quality.allowed}
+        failure_categories: {type: array, item_values_from: shared_vocabulary.acquisition_quality.failure_categories, unique_items: true}
+        detail_codes: {type: array, item_type: string, unique_items: true}
+    deduplication:
+      type: object
+      required: [item_fingerprint]
+      fields:
+        item_fingerprint: {type: string}
+        equivalent_prior_evidence_ref: {type: [string, "null"], nullable: true}
+        repetition_count: {type: integer, minimum: 1}
+        supporting_resource_refs: {type: array, item_type: string, unique_items: true}
+    normalized_payload: {type: object, additional_properties: true, rule: shape_is_defined_by_capability_contract}
+
+delivery_to_intelligence:
+  default_mode: INLINE_PLUS_REF
+  rule: >-
+    Small normalized structured payloads and bounded excerpts may be delivered inline with evidence_ref.
+    Large normalized text remains referenced through normalized_content_ref; Intelligence generation stores Evidence refs
+    and may snapshot bounded inline context for execution reproducibility.
+  full_raw_provider_payload_inline: forbidden
+
+capability_result:
+  type: object
+  required: [capability_id, status, retryability, coverage, acquisition_quality, evidence_refs]
+  status: {allowed: [AVAILABLE, PARTIAL, DEGRADED, UNAVAILABLE, NOT_REQUESTED]}
+  retryability: {allowed: [RETRYABLE, NON_RETRYABLE, NOT_APPLICABLE]}
+  reason_codes: {type: array, item_type: string}
+  coverage: {values_from: shared_vocabulary.coverage.allowed}
+  acquisition_quality: {values_from: shared_vocabulary.acquisition_quality.allowed}
+  evidence_refs: {type: array, item_type: string, unique_items: true}
+  zero_items_can_be_valid: true
+  zero_item_rule: >-
+    A successfully inspected capability may return zero evidence items without implying negative Evidence.
+    Example: no explicit communication constraint observed.
+
+acquisition_request_idempotency:
+  identity_inputs: [brand_id, capability_id, normalized_resource_scope, requested_freshness_intent, source_revision_ref_when_known, normalization_contract_version]
+  provider_request_id_is_authority: false
+  legitimate_new_acquisition_when: [explicit_refresh_requested, source_or_resource_revision_changed, material_invalidation_received, requested_scope_expanded, existing_capture_quality_unacceptable, no_reusable_capture_exists]
+  renormalization_without_reacquisition_allowed: true
+  condition: retained_capture_content_is_permitted_and_compatible
+
+privacy_and_retention_classes:
+  PUBLIC_OWNED_SITE: {access: ordinary_internal_evidence_access, raw_retention: bounded_by_source_policy}
+  BRAND_AUTHENTICATED_PRIVATE: {access: restricted, raw_retention: source_specific}
+  USER_ACTION_CONFIRMATION: {access: restricted_audit, raw_retention: durable_action_lineage_as_required}
+  INSTAGRAM_CONNECTED: {access: restricted_provider_scope, raw_retention: provider_and_privacy_policy_governed}
+  gate_b_initial_dependency: PUBLIC_OWNED_SITE
+
+validation_invariants:
+  - provider_names_not_semantic_capability_ids
+  - provider_request_id_not_evidence_identity
+  - coverage_distinct_from_representativeness
+  - freshness_distinct_from_acquisition_quality
+  - source_class_distinct_from_authority
+  - no_brand_confirmed_authority_emitted
+  - conflicts_not_resolved_in_data_extraction
+  - explicit_negative_statement_distinct_from_absence
+  - evidence_history_not_collapsed_across_captures

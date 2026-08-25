@@ -1,0 +1,87 @@
+id: owned_website.offering_context
+version: "1.0"
+status: FROZEN
+owner: data_extraction_engine
+source_class: OWNED_WEBSITE
+shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
+intelligence_evidence_authority: intelligence/engines/brand_intelligence/branches/brand_expression/evidence/brand_meaning_evidence.yaml
+
+purpose: >-
+  Capture observed Offering and portfolio context from owned website resources for Brand-level reasoning. Extracted Offering context is Evidence only and never becomes canonical Offering state.
+
+authority_boundary:
+  extracted_offering_context_is_canonical_offering_state: false
+  canonical_offering_identity_and_availability_owner: application_backend
+  data_extraction_may_reference_existing_canonical_offering_ref_when_supplied: true
+  data_extraction_may_create_canonical_offering: false
+
+resource_eligibility:
+  primary_roles: [OFFERING_OVERVIEW, PRODUCT_CATEGORY, SERVICE_CATEGORY, SOLUTIONS_OVERVIEW, PRICING_OR_PLANS, PORTFOLIO_OVERVIEW]
+  contextual_roles: [SINGLE_PRODUCT_PAGE, SINGLE_SERVICE_PAGE, SINGLE_PLAN_PAGE, HOMEPAGE]
+  excluded_as_primary: [CART_OR_CHECKOUT, LEGAL_PAGE, CUSTOMER_REVIEW, TESTIMONIAL, CAMPAIGN_ONLY_LANDING_PAGE_WITHOUT_DURABLE_OFFERING_CONTEXT]
+
+item_semantic: offering_context_observation
+normalized_payload:
+  type: object
+  additional_properties: false
+  required: [generalization_scope, observed_context]
+  fields:
+    generalization_scope: {type: enum, values: [SINGLE_OFFERING, MULTIPLE_OFFERINGS, BRAND_LEVEL_PORTFOLIO]}
+    observed_context: {type: string, min_length: 1, rule: bounded_observed_context_without_brand_meaning_synthesis}
+    observed_offering_title: {type: [string, "null"], nullable: true, rule: observed_label_only_not_canonical_identity}
+    observed_category: {type: [string, "null"], nullable: true}
+    observed_description: {type: [string, "null"], nullable: true}
+    feature_or_value_language: {type: array, item_type: string, unique_items: false, rule: preserve_observed_language_without_brand_level_generalization}
+    portfolio_breadth_observation: {type: [string, "null"], nullable: true, rule: descriptive_observation_only}
+    repeated_offering_themes: {type: array, item_type: string, unique_items: true, rule: observed_repetition_only_not_brand_meaning}
+    canonical_offering_ref: {type: [string, "null"], nullable: true, rule: may_only_be_supplied_by_existing_application_reconciliation_not_created_here}
+
+representativeness_rules:
+  OFFERING_SPECIFIC: {default_for: SINGLE_OFFERING}
+  REPEATED_REPRESENTATIVE: {requires: same_theme_or_context_supported_across_multiple_distinct_offerings}
+  PERSISTENT_BRAND_LEVEL:
+    allowed_when: [explicit_brand_level_portfolio_statement, portfolio_overview_is_materially_representative]
+    rule: must_not_be_inferred_from_one_offering
+  CONTEXT_SPECIFIC: {examples: [temporary_bundle, seasonal_offer, campaign_variant]}
+  INCIDENTAL: {examples: [isolated_cross_sell_label, footer_product_link]}
+
+coverage_rules:
+  SINGLE_RESOURCE: one_offering_resource
+  MULTI_RESOURCE_PARTIAL: multiple_offering_resources_without_broad_portfolio_coverage
+  MULTI_RESOURCE_BROAD: representative_portfolio_or_category_surface_materially_observed
+  SITE_WIDE_BOUNDED: bounded_portfolio_surface_explicitly_requested_and_completed
+
+deduplication:
+  duplicate_offering_card_or_navigation_copy: {action: collapse_duplicate_items}
+  repeated_theme_across_distinct_offerings: {action: preserve_supporting_resource_refs_and_repetition_count}
+  same_offering_recaptured: {action: preserve_new_capture_history_and_link_equivalent_or_changed_content}
+
+conflict_behavior:
+  rule: preserve_conflicting_offering_observations
+  examples:
+    - one_page_states_free_plan_and_another_states_paid_only
+    - one_page_describes_service_as_online_only_and_another_offers_in_person
+  canonical_truth_resolution: forbidden
+
+negative_evidence:
+  explicit_not_available_or_excluded_statement: {allowed: true, polarity: [EXPLICIT_NEGATIVE, RESTRICTION]}
+  not_seen_in_sampled_portfolio: {negative_evidence: false}
+
+healthcare_claim_handling:
+  preserve_distinctions: [BRAND_AUTHORED_CLAIM, CLINICAL_CREDENTIAL, REGULATORY_STATEMENT, TESTIMONIAL, GUARANTEED_OUTCOME_LANGUAGE]
+  canonical_medical_truth_validation: forbidden
+
+forbidden_derivations:
+  - canonical_offering_state
+  - canonical_catalogue_completeness
+  - brand_positioning
+  - value_proposition
+  - serviceability_truth
+  - BRAND_CONFIRMED
+
+validation_invariants:
+  - single_offering_not_universal_brand_truth
+  - canonical_offering_ref_never_created_by_extraction
+  - portfolio_repetition_preserved_without_brand_generalization
+  - conflicts_preserved
+  - explicit_negative_distinct_from_absence

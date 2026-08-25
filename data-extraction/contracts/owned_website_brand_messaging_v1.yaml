@@ -1,0 +1,93 @@
+id: owned_website.brand_messaging
+version: "1.0"
+status: FROZEN
+owner: data_extraction_engine
+source_class: OWNED_WEBSITE
+shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
+intelligence_evidence_authority: intelligence/engines/brand_intelligence/branches/brand_expression/evidence/brand_communication_evidence.yaml
+
+purpose: >-
+  Capture representative Brand-authored communication from owned website surfaces without converting messaging observations into permanent Brand meaning, positioning, language authority, or hard communication rules.
+
+resource_eligibility:
+  primary_roles: [HOMEPAGE, ABOUT_COMPANY, BRAND_STORY, NAVIGATION_OVERVIEW, PORTFOLIO_CATEGORY, SERVICE_CATEGORY]
+  contextual_only_unless_intelligence_contract_explicitly_requests: [CAMPAIGN_LANDING_PAGE, SINGLE_OFFERING_PAGE, SUPPORT_ARTICLE, FAQ_HELP]
+  excluded_from_establishing_representative_brand_messaging: [LEGAL_BOILERPLATE, TESTIMONIAL, USER_GENERATED_TEXT, CUSTOMER_REVIEW, ISOLATED_SALE_BANNER, PURE_NAVIGATION_LABEL, MACHINE_ONLY_SEO_METADATA]
+
+resource_selection_rules:
+  - Prefer visible Brand-authored content from principal owned surfaces.
+  - Preserve page_role and canonical_url on every item.
+  - One campaign or Offering headline may be captured as contextual Evidence but cannot be labelled PERSISTENT_BRAND_LEVEL without broader support.
+  - Metadata may corroborate visible messaging but cannot establish representative messaging alone.
+
+item_semantic: brand_messaging_observation
+normalized_payload:
+  type: object
+  additional_properties: false
+  required: [text_or_normalized_message, message_role, authorship_class, visibility_class]
+  fields:
+    text_or_normalized_message: {type: string, min_length: 1, rule: preserve_semantic_wording_without_marketing_rewrite}
+    verbatim_excerpt: {type: [string, "null"], nullable: true, rule: bounded_excerpt_when_needed_for_claim_or_constraint_traceability}
+    message_role:
+      type: enum
+      values: [BRAND_PROPOSITION, BRAND_STORY_OR_MISSION, BRAND_POSITIONING, CUSTOMER_GUIDANCE, HELP_OR_FAQ, EXPLICIT_COMMUNICATION_RULE, OTHER_REPRESENTATIVE_BRAND_MESSAGE]
+    authorship_class: {type: enum, values: [BRAND_AUTHORED, BRAND_CONTROLLED_SURFACE_UNKNOWN_AUTHOR, THIRD_PARTY_EMBEDDED]}
+    visibility_class: {type: enum, values: [VISIBLE_PRIMARY_COPY, VISIBLE_SUPPORTING_COPY, NON_VISIBLE_METADATA]}
+    surface_section: {type: [string, "null"], nullable: true}
+    repetition_count: {type: integer, minimum: 1}
+    supporting_evidence_refs: {type: array, item_type: string, unique_items: true}
+
+representativeness_rules:
+  PERSISTENT_BRAND_LEVEL:
+    requires_one_of: [explicit_persistent_brand_level_surface, materially_same_message_across_multiple_principal_surfaces]
+  REPEATED_REPRESENTATIVE:
+    requires: same_semantic_observation_supported_by_multiple_representative_fragments_or_resources
+  CONTEXT_SPECIFIC: {examples: [campaign_copy, temporary_promotion, one_contextual_FAQ_answer]}
+  OFFERING_SPECIFIC: {examples: [single_product_headline, single_service_claim]}
+  INCIDENTAL: {examples: [isolated_fragment, footer_copy, low_salience_support_text]}
+
+coverage_rules:
+  SINGLE_RESOURCE: one_owned_resource_observed
+  MULTI_RESOURCE_PARTIAL: multiple_relevant_resources_observed_but_principal_surface_set_incomplete
+  MULTI_RESOURCE_BROAD: principal_brand_messaging_surfaces_materially_observed
+  SITE_WIDE_BOUNDED: bounded_site_sample_explicitly_requested_and_completed
+
+deduplication:
+  identical_site_chrome_or_navigation: {action: collapse_duplicate_items}
+  identical_message_repeated_on_distinct_representative_surfaces:
+    action: preserve_one_semantic_observation_with_repetition_count_and_supporting_resource_refs
+    evidence_history: retain_each_capture_item_reference
+  wording_variants_same_meaning:
+    action: may_share_semantic_observation_key_but_evidence_items_remain_distinct
+
+conflict_behavior:
+  rule: preserve_conflicting_messages_as_separate_evidence_items
+  data_extraction_precedence_resolution: forbidden
+
+negative_evidence:
+  explicit_prohibition_or_restriction: {allowed: true, polarity: [EXPLICIT_NEGATIVE, RESTRICTION]}
+  absence_of_message: {evidence_item_created: false}
+
+acquisition_quality_rules:
+  COMPLETE: requested_representative_surface_scope_acquired_and_normalized
+  PARTIAL: usable_representative_items_exist_but_requested_surface_scope_incomplete
+  DEGRADED: extraction_quality_or_authorship_visibility_classification_materially_uncertain
+  UNAVAILABLE: no_usable_owned_messaging_observation
+
+forbidden_derivations:
+  - brand_positioning_authority
+  - value_proposition_authority
+  - primary_language_authority
+  - hard_communication_rule_from_repetition
+  - BRAND_CONFIRMED
+  - tone_trait_intelligence
+  - permanent_brand_meaning
+
+validation_invariants:
+  - source_class_is_owned_website
+  - provider_name_not_in_capability_id
+  - representative_messaging_not_established_by_legal_boilerplate_alone
+  - testimonial_or_user_generated_text_not_brand_authored
+  - offering_specific_copy_not_silently_generalized
+  - repeated_pattern_not_hard_rule
+  - conflicts_preserved

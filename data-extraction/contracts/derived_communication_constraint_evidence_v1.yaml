@@ -1,0 +1,119 @@
+id: derived_communication_constraint_evidence
+version: "1.0"
+status: FROZEN
+owner: data_extraction_engine
+source_class_default: SYSTEM_DERIVATION_INPUT
+shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
+intelligence_evidence_authority: intelligence/engines/brand_intelligence/branches/brand_expression/evidence/brand_communication_evidence.yaml
+
+purpose: >-
+  Normalize explicit communication-rule statements and repeated communication-pattern observations into traceable Evidence below permanent Brand Intelligence. "Derived" means deterministic Evidence classification/grouping only; it does not authorize Data Extraction to create communication_profile constraints.
+
+derivation_inputs:
+  allowed_capabilities: [owned_website.brand_messaging, owned_website.brand_company_context, brand_user_input_and_confirmations]
+  required_parent_evidence_refs: true
+
+allowed_derivations:
+  - detect_explicit_prohibition_statement
+  - detect_explicit_required_terminology_statement
+  - detect_explicit_claim_or_disclaimer_instruction
+  - detect_persistent_owned_source_instruction
+  - group_materially_repeated_communication_pattern
+  - count_repetition_and_supporting_resources
+  - classify_statement_polarity
+  - preserve_verbatim_source_excerpt
+
+forbidden_derivations:
+  - decide_hard_brand_rule
+  - decide_brand_voice_policy
+  - promote_repeated_pattern_to_mandatory_constraint
+  - infer_constraint_from_absence
+  - infer_constraint_from_industry_or_regulation_without_explicit_source_evidence
+  - emit_BRAND_CONFIRMED
+  - overwrite_protected_current_communication_state
+
+item_semantic: communication_constraint_observation
+normalized_payload:
+  type: object
+  additional_properties: false
+  required: [constraint_signal_type, normalized_constraint_text, explicitness, supporting_evidence_refs]
+  fields:
+    constraint_signal_type:
+      type: enum
+      values: [EXPLICIT_BRAND_AUTHORED_PROHIBITION, EXPLICIT_REQUIRED_TERMINOLOGY, EXPLICIT_CLAIM_OR_DISCLAIMER_RULE, PERSISTENT_OWNED_SOURCE_INSTRUCTION, REPEATED_COMMUNICATION_PATTERN]
+    normalized_constraint_text: {type: string, min_length: 1, rule: normalize_for_deduplication_without_rewriting_semantic_force}
+    verbatim_excerpt: {type: [string, "null"], nullable: true, rule: required_in_practice_for_explicit_claim_sensitive_or_prohibition_items}
+    explicitness: {type: enum, values: [EXPLICIT_SOURCE_STATEMENT, REPEATED_PATTERN_OBSERVATION]}
+    supporting_evidence_refs: {type: array, item_type: string, unique_items: true, min_items: 1}
+    supporting_resource_refs: {type: array, item_type: string, unique_items: true}
+    repetition_count: {type: integer, minimum: 1}
+    source_instruction_scope: {type: enum, values: [BRAND_LEVEL, CONTEXT_SPECIFIC, OFFERING_SPECIFIC, UNKNOWN]}
+
+signal_boundaries:
+  EXPLICIT_BRAND_AUTHORED_PROHIBITION:
+    requires: explicit_brand_authored_or_brand_controlled_prohibitive_statement
+    default_polarity: RESTRICTION
+  EXPLICIT_REQUIRED_TERMINOLOGY:
+    requires: explicit_instruction_to_use_required_term_or_phrase
+    default_polarity: AFFIRMATIVE
+  EXPLICIT_CLAIM_OR_DISCLAIMER_RULE:
+    requires: explicit_claim_disclaimer_or_compliance_instruction_on_owned_source
+    default_polarity: RESTRICTION
+  PERSISTENT_OWNED_SOURCE_INSTRUCTION:
+    requires: explicit_instruction_present_on_persistent_owned_source
+  REPEATED_COMMUNICATION_PATTERN:
+    requires: [materially_same_pattern_observed_multiple_times, parent_evidence_refs_preserved]
+    semantic_status: DESCRIPTIVE_ONLY
+    may_become_hard_rule_here: false
+
+representativeness_rules:
+  explicit_brand_level_instruction: {shared_class: PERSISTENT_BRAND_LEVEL}
+  repeated_pattern_multiple_principal_surfaces: {shared_class: REPEATED_REPRESENTATIVE}
+  campaign_or_context_only_instruction: {shared_class: CONTEXT_SPECIFIC}
+  offering_specific_instruction: {shared_class: OFFERING_SPECIFIC}
+  isolated_or_low_salience_pattern: {shared_class: INCIDENTAL}
+
+coverage_rules:
+  SINGLE_RESOURCE: one_source_resource_supports_observation
+  MULTI_RESOURCE_PARTIAL: multiple_resources_support_pattern_or_rule_but_principal_scope_incomplete
+  MULTI_RESOURCE_BROAD: broad_representative_owned_messaging_support
+  SITE_WIDE_BOUNDED: bounded_site_rule_pattern_scan_explicitly_completed
+
+deduplication:
+  same_explicit_rule_repeated_verbatim: {action: group_by_semantic_observation_key_and_preserve_supporting_refs_and_repetition_count}
+  materially_same_rule_worded_differently: {action: may_group_only_when_deterministic_normalization_preserves_same_semantic_force}
+  repeated_pattern:
+    action: preserve_repetition_count
+    prohibition: do_not_collapse_repetition_signal_to_one_unweighted_item
+
+conflict_behavior:
+  examples:
+    - one_page_says_never_make_medical_claims_and_another_owned_campaign_page_makes_one
+    - one_page_requires_term_A_and_another_requires_term_B
+  action: preserve_conflicting_observations_as_separate_items_or_explicit_conflict_group
+  precedence_resolution: intelligence_owned
+  compliance_judgment: forbidden
+
+negative_evidence:
+  explicit_prohibition: {allowed: true}
+  absence_of_prohibition_or_required_term: {negative_evidence: false}
+
+healthcare_claim_sensitive_preservation:
+  distinguish: [explicit_claim_instruction, regulatory_statement, clinical_credential, testimonial, guaranteed_outcome_language]
+  rule: preserve_source_type_and_verbatim_excerpt_without_truth_upgrade
+
+acquisition_quality_rules:
+  COMPLETE: requested_parent_evidence_scope_classified_successfully
+  PARTIAL: some_parent_evidence_unclassified_or_scope_incomplete_but_usable_items_exist
+  DEGRADED: normalization_or_explicitness_classification_uncertain
+  UNAVAILABLE: derivation_could_not_run_or_no_usable_parent_evidence
+  zero_items_after_successful_classification: valid_and_not_negative_evidence
+
+validation_invariants:
+  - every_item_has_parent_evidence_refs
+  - repeated_pattern_never_emitted_as_hard_brand_rule
+  - explicitness_preserved
+  - conflicts_preserved
+  - absence_not_negative_evidence
+  - no_brand_confirmed_authority
+  - no_regulation_inferred_without_explicit_source
