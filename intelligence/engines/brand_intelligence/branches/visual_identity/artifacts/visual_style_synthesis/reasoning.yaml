@@ -26,14 +26,23 @@ inputs:
       - approved_typography_ref
       - approved_reference_image_refs
       - explicit_Brand_visual_guidance_ref
-  evidence_capabilities:
-    required:
+  evidence_sufficiency:
+    minimum_rule: >-
+      Execute when available visual Evidence is sufficiently representative to support at least one defensible
+      visual_style_profile component. No visual Evidence subtype is universally required.
+    supporting_capabilities:
       - owned_website.visual_evidence
       - owned_website.imagery_evidence
       - owned_website.graphic_treatment_evidence
       - brand_user_input_and_confirmations
     optional:
       - instagram.owned_brand_visual_context
+  non_blocking_absence:
+    - imagery Evidence when graphic or general visual Evidence is sufficient
+    - graphic-treatment Evidence when imagery or general visual Evidence is sufficient
+    - Brand user input
+    - canonical approved assets for descriptive partial synthesis
+    - Instagram context
 
 protected_current_state:
   supported:
@@ -61,13 +70,16 @@ semantic_layers:
     processor_can_generate_new_constraint: false
 
 reasoning_sequence:
-  - load canonical visual-state references without copying asset payloads into Intelligence
+  - load available canonical visual-state references without requiring full canonical visual completeness
   - load current protected visual_style_profile components and constraints
-  - classify visual Evidence by representativeness and source surface
+  - classify available visual Evidence by representativeness and source surface
+  - determine which profile components have sufficient Evidence to execute truthfully
+  - if no component has sufficient representative Evidence and no requested operation has applicable canonical context, return WAITING_FOR_EVIDENCE
+  - if a specifically requested operation requires missing canonical state, return WAITING_FOR_CANONICAL_INPUT for that operation only
   - separate observed single-instance visual facts from repeated representative patterns
   - derive summary and style_traits only from defensible Brand-level visual patterns
-  - derive imagery_style from representative photographic, subject, mood, and treatment patterns
-  - derive graphic_treatment from repeated graphic composition or treatment patterns
+  - derive imagery_style when representative imagery Evidence is sufficient even if graphic-treatment Evidence is absent
+  - derive graphic_treatment when representative graphic-treatment Evidence is sufficient even if imagery Evidence is absent
   - compare derived patterns to canonical approved visual state without treating observation frequency as approval
   - preserve protected visual_constraints exactly; do not create new hard constraints from patterns
   - omit weak page-specific, campaign-specific, or incidental interpretations
@@ -84,6 +96,20 @@ representativeness:
     reusable_weight: contextual_only
   INCIDENTAL:
     reusable_weight: insufficient_alone
+
+component_sufficiency:
+  summary_and_style_traits:
+    may_run_from: representative overall visual Evidence
+  imagery_style:
+    may_run_from: representative imagery Evidence
+    requires_graphic_treatment_evidence: false
+  graphic_treatment:
+    may_run_from: representative graphic treatment Evidence
+    requires_imagery_evidence: false
+  brand_user_input:
+    required_for_derived_components: false
+  canonical_visual_state:
+    universally_required_for_descriptive_components: false
 
 style_semantics:
   summary:
@@ -116,6 +142,7 @@ canonical_asset_boundary:
     - observed_logo_does_not_define_canonical_logo
     - canonical asset refs may support interpretation but exact asset values remain outside Intelligence
     - reference images are referenced by stable business-state IDs when available
+    - missing canonical approved assets do not block descriptive partial synthesis when representative Evidence exists
 
 preview_logo_reconciliation:
   role:
@@ -124,6 +151,10 @@ preview_logo_reconciliation:
   direct_canonical_promotion: forbidden
   direct_visual_style_profile_promotion: forbidden
   rule: Preview logo may be reconciled by application visual-state flows; this processor consumes only accepted canonical refs or normalized Evidence.
+
+brand_user_input:
+  required_for_execution: false
+  role_when_present: authoritative_or_protective_context_subject_to_existing_authority_rules
 
 instagram_enrichment:
   required: false
@@ -147,6 +178,7 @@ partial_output:
     - mixed_partial_profile
   filler: forbidden
   missing_visual_constraints_invalidates_profile: false
+  component_level_sufficiency_permits_execution: true
 
 authority_rules:
   processor_may_emit:
