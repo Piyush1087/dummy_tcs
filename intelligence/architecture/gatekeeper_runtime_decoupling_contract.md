@@ -2,7 +2,7 @@
 
 **Version:** 0.1-proposed
 
-**Status:** PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+**Status:** FROZEN
 
 **Scope:** M2 Intelligence reference-runtime reconciliation
 
