@@ -23,8 +23,11 @@ inputs:
     - brand_name
     - confirmed_industry
     - authoritative_sub_industry_or_category_when_available
-  evidence_capabilities:
-    required:
+  evidence_sufficiency:
+    minimum_rule: >-
+      Execute when sufficient representative grounded Audience Evidence exists to form or reconcile at least one
+      defensible bounded Persona hypothesis. No single Evidence capability is universally mandatory.
+    supporting_capabilities:
       - owned_website.brand_messaging
       - owned_website.brand_company_context
       - owned_website.offering_context
@@ -34,6 +37,11 @@ inputs:
       - instagram.owned_brand_context
   optional_intelligence_context:
     - Brand Expression Intelligence
+  non_blocking_absence:
+    - no Preview seed when direct Audience Evidence is sufficient
+    - no Brand user input when direct Audience Evidence is sufficient
+    - incomplete Offering context when other representative Audience Evidence is sufficient
+    - no Instagram context
 
 protected_current_state:
   granularity:
@@ -51,9 +59,12 @@ protected_current_state:
     - require later authorized resolution for destructive protected-state changes
 
 reasoning_sequence:
+  - verify canonical Brand anchors required by the processor are available
+  - assess whether available Audience Evidence is sufficiently representative to support at least one bounded Persona hypothesis
+  - if insufficient overall, return WAITING_FOR_EVIDENCE rather than requiring any specific absent optional source
   - load current durable ACTIVE, INACTIVE, and relevant SUPERSEDED Persona lineage
   - load protected field/item authority and current unprotected semantics
-  - normalize new Audience Evidence and Preview candidate seeds without treating them as durable truth
+  - normalize available Audience Evidence and Preview candidate seeds without treating them as durable truth
   - form bounded Persona hypotheses around materially distinct audience meaning
   - compare every hypothesis to durable Persona identity using semantic continuity rather than wording similarity
   - classify relationship as SAME_PERSONA, POSSIBLE_MATCH, NEW_PERSONA, or MATERIAL_CONFLICT
@@ -138,9 +149,11 @@ preview_seed_reconciliation:
   input_role:
     - CANDIDATE_SEED
     - RECONCILIATION_CONTEXT
+  execution_prerequisite: false
   direct_promotion: forbidden
   direct_semantic_id_reuse: forbidden
   rules:
+    - absence of Preview seed does not block execution when direct Audience Evidence is sufficient
     - preserve origin_preview_group_ref where useful for lineage
     - require original supporting Evidence/provenance when available
     - evaluate against the durable Persona semantic core
@@ -175,6 +188,14 @@ field_semantics:
       - return null or omit when policy or grounding is insufficient
       - sensitive inference from statistical likelihood or stereotype is forbidden
 
+brand_user_input:
+  required_for_execution: false
+  role_when_present: authoritative_or_corrective_context_subject_to_existing_authority_rules
+
+offering_context:
+  universally_required_for_execution: false
+  rule: Offering-specific Audience clues may enrich or ground a Persona but incomplete Offering context does not block execution when other representative Audience Evidence is sufficient.
+
 instagram_enrichment:
   required: false
   may_inform:
@@ -194,6 +215,7 @@ partial_output:
     - multiple Personas
     - partial Persona with required semantic core only
   rules:
+    - sufficient Evidence for one or partial Persona permits execution
     - optional fields may remain null
     - missing Evidence does not force synthetic motivations, barriers, demographics, geography, or implications
     - active-set target never authorizes filler

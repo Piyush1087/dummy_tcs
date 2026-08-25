@@ -20,6 +20,26 @@ boundary:
   preview_seed_is_durable_evidence_truth: false
   canonical_state_is_observed_evidence: false
 
+evidence_sufficiency:
+  minimum:
+    rule: >-
+      The processor may execute when available Evidence, considered in combination, is sufficiently representative
+      and grounded to form or reconcile at least one defensible bounded Persona hypothesis. No listed capability is
+      individually mandatory for every execution.
+  supporting_capabilities:
+    - owned_website.brand_messaging
+    - owned_website.brand_company_context
+    - owned_website.offering_context
+    - brand_user_input_and_confirmations
+    - brand_preview.audience_candidate_seeds
+  optional_enrichment:
+    - instagram.owned_brand_context
+  explicit_non_requirements:
+    preview_seed_required: false
+    brand_user_input_required: false
+    offering_context_required: false
+    instagram_required: false
+
 shared_evidence_item:
   required_fields:
     - evidence_ref
@@ -67,7 +87,8 @@ audience_signal_taxonomy:
 
 capabilities:
   owned_website.brand_messaging:
-    required_for_processor: true
+    required_for_processor: false
+    sufficiency_role: SUPPORTING_CAPABILITY
     source_class: OWNED_WEBSITE
     signals:
       - EXPLICIT_TARGET_AUDIENCE_STATEMENT
@@ -77,14 +98,16 @@ capabilities:
       - REPEATED_BARRIER_OR_TRUST_CONTEXT
       - GENERIC_MARKETING_LANGUAGE
   owned_website.brand_company_context:
-    required_for_processor: true
+    required_for_processor: false
+    sufficiency_role: SUPPORTING_CAPABILITY
     source_class: OWNED_WEBSITE
     signals:
       - EXPLICIT_TARGET_AUDIENCE_STATEMENT
       - REPEATED_CUSTOMER_USE_CONTEXT
       - REPEATED_PROBLEM_OR_NEED_CONTEXT
   owned_website.offering_context:
-    required_for_processor: true
+    required_for_processor: false
+    sufficiency_role: SUPPORTING_CAPABILITY
     source_class: OWNED_WEBSITE
     signals:
       - OFFERING_SPECIFIC_AUDIENCE_CLUE
@@ -93,8 +116,10 @@ capabilities:
     rules:
       - Offering-specific clue does not automatically become Brand-level Persona truth
       - repeated cross-Offering or explicit Brand-level support is needed for durable generalization
+      - absence does not block execution when other representative Audience Evidence is sufficient
   brand_user_input_and_confirmations:
-    required_for_processor: true
+    required_for_processor: false
+    sufficiency_role: SUPPORTING_OR_AUTHORITATIVE_CONTEXT_WHEN_PRESENT
     source_class: BRAND_USER_INPUT
     item_semantics:
       - USER_AUTHORED_PERSONA_CONTEXT
@@ -104,8 +129,10 @@ capabilities:
     rules:
       - unconfirmed user input is Evidence/context
       - protected BRAND_CONFIRMED Persona state is supplied separately as authority context
+      - absence does not block initial derived Audience synthesis
   brand_preview.audience_candidate_seeds:
-    required_for_processor: true
+    required_for_processor: false
+    sufficiency_role: RECONCILIATION_CONTEXT_ONLY
     source_class: SYSTEM_DERIVATION_INPUT
     evidence_role:
       - CANDIDATE_SEED
@@ -120,6 +147,7 @@ capabilities:
       - seed wording and position have no durable identity authority
       - seed must be re-evaluated under durable Persona rules
       - original Evidence lineage should be retained when available
+      - absence does not block execution when direct Audience Evidence is sufficient
 
 optional_enrichment:
   instagram.owned_brand_context:
@@ -170,6 +198,11 @@ protected_current_authority_context:
 
 missing_evidence:
   processor_failure_required: false
+  readiness_rules:
+    - insufficient representative Audience Evidence overall implies WAITING_FOR_EVIDENCE
+    - missing Preview seed alone does not imply WAITING_FOR_EVIDENCE
+    - missing Brand user input alone does not imply WAITING_FOR_EVIDENCE
+    - missing Offering context alone does not imply WAITING_FOR_EVIDENCE
   rules:
     - zero durable Personas is valid
     - one strong Persona is valid
@@ -178,7 +211,10 @@ missing_evidence:
 
 validation_invariants:
   - provider_neutral_evidence_ids
-  - Preview seed is reconciliation-only
+  - Preview seed is reconciliation-only and not an execution prerequisite
+  - Brand user input is not an execution prerequisite
+  - Offering context is supporting rather than universally required
+  - sufficient direct Audience Evidence can enable execution
   - Brand-level and Offering-specific Audience signals remain distinct
   - Campaign-only context does not automatically become durable Audience
   - generic messaging alone cannot establish durable Persona

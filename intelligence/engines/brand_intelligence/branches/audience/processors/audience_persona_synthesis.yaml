@@ -15,16 +15,27 @@ canonical_inputs:
   - brand_name
   - confirmed_industry
   - authoritative_sub_industry_or_category_when_available
-evidence_requirements:
-  - owned_website.brand_messaging
-  - owned_website.brand_company_context
-  - owned_website.offering_context
-  - brand_user_input_and_confirmations
-  - brand_preview.audience_candidate_seeds
-optional_enrichment:
-  - instagram.owned_brand_context
-  - Brand Expression Intelligence
-  - Campaign and Performance learning when later accepted
+evidence_sufficiency:
+  minimum:
+    rule: >-
+      Canonical Brand anchors must be available plus sufficient representative grounded Audience Evidence to form
+      or reconcile at least one defensible bounded Persona hypothesis. No individual supporting Evidence capability
+      below is a universal execution prerequisite.
+  supporting_capabilities:
+    - owned_website.brand_messaging
+    - owned_website.brand_company_context
+    - owned_website.offering_context
+    - brand_user_input_and_confirmations
+    - brand_preview.audience_candidate_seeds
+  optional_enrichment:
+    - instagram.owned_brand_context
+    - Brand Expression Intelligence
+    - Campaign and Performance learning when later accepted
+  non_blocking_absence:
+    - brand_preview.audience_candidate_seeds
+    - brand_user_input_and_confirmations
+    - owned_website.offering_context
+    - instagram.owned_brand_context
 shared_authority_rules:
   processor_may_emit:
     - OBSERVED
@@ -93,6 +104,12 @@ partial_output_behavior:
   filler: forbidden
 readiness:
   consumer_scoped: true
+  execution_rules:
+    - direct sufficient representative Audience Evidence may enable READY_TO_RUN without a Preview seed
+    - missing Brand user input does not imply WAITING_FOR_EVIDENCE
+    - incomplete Offering context does not automatically block Audience execution
+    - insufficient representative Audience Evidence overall implies WAITING_FOR_EVIDENCE
+    - sufficient Evidence for one or partial Persona permits execution and partial output
   no_brand_preview_gate: true
   no_verification_gate: true
   no_home_gate: true

@@ -17,13 +17,24 @@ canonical_inputs:
   - approved typography reference when available
   - approved reference image references when available
   - explicit Brand visual guidance when available
-evidence_requirements:
-  - owned_website.visual_evidence
-  - owned_website.imagery_evidence
-  - owned_website.graphic_treatment_evidence
-  - brand_user_input_and_confirmations
-optional_enrichment:
-  - instagram.owned_brand_visual_context
+evidence_sufficiency:
+  minimum:
+    rule: >-
+      Execute when sufficient representative visual Evidence exists for at least one defensible visual_style_profile
+      component. No individual visual Evidence subtype or Brand user input is universally required for every execution.
+  supporting_capabilities:
+    - owned_website.visual_evidence
+    - owned_website.imagery_evidence
+    - owned_website.graphic_treatment_evidence
+    - brand_user_input_and_confirmations
+  optional_enrichment:
+    - instagram.owned_brand_visual_context
+  non_blocking_absence:
+    - owned_website.imagery_evidence when other component Evidence is sufficient
+    - owned_website.graphic_treatment_evidence when other component Evidence is sufficient
+    - brand_user_input_and_confirmations
+    - canonical approved visual assets when descriptive Evidence is sufficient
+    - instagram.owned_brand_visual_context
 hybrid_responsibility:
   AI_REASONING:
     - summary
@@ -63,6 +74,14 @@ partial_output_behavior:
   filler: forbidden
 readiness:
   consumer_scoped: true
+  execution_rules:
+    - representative imagery Evidence alone may enable imagery_style synthesis
+    - representative graphic-treatment Evidence alone may enable graphic_treatment synthesis
+    - representative overall visual Evidence may enable summary or style_traits synthesis
+    - missing Brand user input does not block derived Visual Identity
+    - missing canonical approved assets does not block descriptive partial synthesis when Evidence is sufficient
+    - insufficient representative Evidence overall implies WAITING_FOR_EVIDENCE
+    - a requested operation that specifically requires unavailable canonical state implies WAITING_FOR_CANONICAL_INPUT
   no_brand_preview_gate: true
   no_verification_gate: true
   no_home_gate: true
