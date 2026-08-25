@@ -1,0 +1,415 @@
+version: "0.1"
+status: PROPOSED_FOR_SYSTEMS_ARCHITECT_REVIEW
+owner: ui_ux_design_ai_worker
+authority_baseline: "Piyush1087/dummy_tcs@017dbceac494f0861ec9a6bea7af3129b70fa5cb"
+accepted_frontend_authority: "agent/brand-centre-frontend-state-architecture@62f88e3722226b23b20f017a9b69a63d2ca6db99"
+
+principles:
+  - one_screen_family_may_cover_multiple_semantic_states
+  - progressive_intelligence_is_normal_not_error
+  - ready_workspace_may_contain_partial_or_not_ready_sections
+  - current_values_survive_stale_refresh_and_failed_refresh_when_usable
+  - result_readiness_is_exactly_READY_PARTIAL_NOT_READY
+  - execution_failure_is_runtime_or_error_metadata_not_result_readiness
+  - candidate_never_replaces_protected_current_value
+  - mobile_and_desktop_share_semantic_state
+  - no_filler_for_expected_density
+  - no_raw_processor_or_generation_language
+
+shared_ui_states:
+  CONTENT_READY:
+    fe:
+      current: VALUE
+      consumer_readiness: READY
+    presentation: normal_content
+  CONTENT_PARTIAL:
+    fe:
+      consumer_readiness: PARTIAL
+    presentation: grounded_content_plus_restrained_partial_context
+  LEARNING:
+    fe:
+      current: [NO_CURRENT, NOT_EVALUATED]
+      consumer_readiness: [NOT_READY, PARTIAL]
+      runtime_activity: LEARNING_optional_backend_supplied
+    presentation: quiet_local_learning
+  STALE:
+    fe:
+      current: VALUE
+      freshness: STALE
+    presentation: retain_current_plus_consequence_scaled_stale_treatment
+  REFRESHING:
+    fe:
+      current: VALUE_preferred_when_available
+      freshness_or_activity: REFRESHING
+    presentation: retain_current_plus_non_blocking_updating_treatment
+  TEMPORARILY_UNAVAILABLE_WITH_CURRENT:
+    fe:
+      current: VALUE
+      runtime_or_error: TEMPORARILY_UNAVAILABLE
+    presentation: retain_current_plus_bounded_update_issue
+  TEMPORARILY_UNAVAILABLE_EMPTY:
+    fe:
+      current: [NO_CURRENT, NOT_EVALUATED]
+      consumer_readiness: NOT_READY_possible
+      runtime_activity: TEMPORARILY_UNAVAILABLE
+    presentation: local_temporary_unavailable_state
+  CANDIDATE_AVAILABLE:
+    fe:
+      candidate_status: AVAILABLE
+      current_preserved: true
+    presentation: quiet_review_affordance
+  CONFLICT:
+    fe:
+      candidate_status: CONFLICT
+      current_preserved: true
+    presentation: material_local_callout_without_candidate_replacement
+  EMPTY_COLLECTION:
+    fe:
+      current: VALUE
+      value: []
+    presentation: intentional_empty_or_optional_section_omission
+  EXPLICIT_NULL:
+    fe:
+      current: EXPLICIT_NULL
+    presentation: omit_optional_or_bounded_not_enough_grounded_information
+  INTENTIONALLY_ABSENT:
+    fe:
+      current: INTENTIONALLY_ABSENT
+    presentation: omit_without_placeholder
+  PROTECTED_CURRENT:
+    fe:
+      authority: [BRAND_CONFIRMED, SUPPORT_CONTROLLED]
+    presentation: ordinary_current_truth_with_contextual_confirmation_or_support_path
+
+screen_families:
+  - id: BC_OVERVIEW_D01
+    family: overview_useful_mixed_maturity
+    workspace: Overview
+    form_factor: desktop
+    canonical: true
+    purpose: Show what materially matters now when useful Brand Centre understanding already exists but not every source/section is equally mature.
+    required_regions:
+      - creator_shop_perspective
+      - recommendations_requiring_attention
+      - material_observations
+      - selected_operating_context
+    supported_states:
+      - CONTENT_READY
+      - CONTENT_PARTIAL
+      - STALE
+      - REFRESHING
+      - CANDIDATE_AVAILABLE
+    avoids:
+      - equal_weight_dashboard_grid
+      - raw_readiness_dashboard
+      - duplicated_full_brand_profile
+
+  - id: BC_OVERVIEW_M01
+    family: overview_useful_mixed_maturity
+    workspace: Overview
+    form_factor: mobile_390
+    derives_from: BC_OVERVIEW_D01
+    transformation:
+      - single_dominant_perspective_first
+      - recommendations_stack
+      - observations_stack_or_compact_list
+      - secondary_context_progressive_disclosure
+
+  - id: BC_OVERVIEW_D02
+    family: overview_early_partial
+    workspace: Overview
+    form_factor: desktop
+    canonical: true
+    purpose: Keep Overview useful while only part of Brand Centre is mature.
+    required_regions:
+      - strongest_available_brand_context
+      - local_learning_or_partial_regions
+      - recommendations_if_available
+    supported_states:
+      - CONTENT_PARTIAL
+      - LEARNING
+      - TEMPORARILY_UNAVAILABLE_EMPTY
+      - EMPTY_COLLECTION
+    rule: Do not create a page-wide scan/progress experience.
+
+  - id: BC_OVERVIEW_M02
+    family: overview_early_partial
+    workspace: Overview
+    form_factor: mobile_390
+    derives_from: BC_OVERVIEW_D02
+    transformation:
+      - useful_content_before_learning_context
+      - one_local_learning_region_at_a_time_when_possible
+
+  - id: BC_BRAND_D01
+    family: brand_mature_mixed_authority
+    workspace: Brand
+    form_factor: desktop
+    canonical: true
+    purpose: Present a coherent living Brand profile with stable business identity, mature Brand understanding, Audience, Visual Identity and Serviceability.
+    required_regions:
+      - identity_header
+      - brand_story_and_strategy
+      - communication
+      - audience_personas
+      - visual_identity
+    conditional_regions:
+      - locations
+      - serviceability
+    supported_states:
+      - CONTENT_READY
+      - CONTENT_PARTIAL
+      - STALE
+      - REFRESHING
+      - PROTECTED_CURRENT
+      - CANDIDATE_AVAILABLE
+    density_cases:
+      audience_personas: [0, 1, 2, 3]
+      missing_optional_brand_fields: supported
+      mixed_authority: supported
+
+  - id: BC_BRAND_M01
+    family: brand_mature_mixed_authority
+    workspace: Brand
+    form_factor: mobile_390
+    derives_from: BC_BRAND_D01
+    transformation:
+      - identity_header_compacts
+      - sections_single_column
+      - personas_stack
+      - visual_approved_and_interpreted_groups_stack
+      - detail_actions_move_to_section_detail_not_inline
+
+  - id: BC_BRAND_D02
+    family: brand_early_partial
+    workspace: Brand
+    form_factor: desktop
+    canonical: true
+    purpose: Show first credible Brand understanding without empty-slot pressure.
+    required_regions:
+      - identity_header
+      - available_brand_understanding
+      - local_learning_states
+    supported_states:
+      - CONTENT_PARTIAL
+      - LEARNING
+      - EXPLICIT_NULL
+      - EMPTY_COLLECTION
+      - TEMPORARILY_UNAVAILABLE_EMPTY
+    rule: Canonical business identity stays visible even when derived Intelligence is immature.
+
+  - id: BC_BRAND_M02
+    family: brand_early_partial
+    workspace: Brand
+    form_factor: mobile_390
+    derives_from: BC_BRAND_D02
+    transformation:
+      - available_content_first
+      - learning_blocks_compact
+      - no_empty_cards_for_missing_personas_or_visual_traits
+
+  - id: BC_BRAND_D03
+    family: brand_detail_edit_manage
+    workspace: Brand
+    form_factor: desktop
+    canonical: proposed_pattern
+    permission_status: PRODUCT_PERMISSION_PENDING
+    purpose: Focused detail container for future edit/manage/confirm interactions without converting the workspace into a CMS.
+    supported_actions:
+      - EDIT
+      - MANAGE
+      - CONFIRM
+      - REQUEST_SUPPORT_CHANGE
+    action_status: UX_PATTERN_READY_PERMISSION_PENDING
+
+  - id: BC_BRAND_M03
+    family: brand_detail_edit_manage
+    workspace: Brand
+    form_factor: mobile_390
+    derives_from: BC_BRAND_D03
+    transformation:
+      - focused_detail_page_preferred
+      - bottom_sheet_only_for_short_bounded_actions
+      - no_dense_inline_form_inside_workspace
+
+  - id: BC_BRAND_D04
+    family: brand_suggestion_conflict
+    workspace: Brand
+    form_factor: desktop
+    canonical: true
+    purpose: Demonstrate quiet candidate and material conflict treatment while preserving current protected value.
+    supported_states:
+      - CANDIDATE_AVAILABLE
+      - CONFLICT
+      - PROTECTED_CURRENT
+    raw_candidate_default_visible: false
+
+  - id: BC_BRAND_M04
+    family: brand_suggestion_conflict
+    workspace: Brand
+    form_factor: mobile_390
+    derives_from: BC_BRAND_D04
+    transformation:
+      - inline_status_near_current_value
+      - conflict_detail_as_separate_focusable_disclosure
+      - no_full_screen_alert_unless_later_product_marks_high_consequence
+
+  - id: BC_OFFERINGS_D01
+    family: offerings_portfolio
+    workspace: Offerings
+    form_factor: desktop
+    canonical: true
+    purpose: Scannable canonical Offering portfolio with enrichment secondary to business truth.
+    required_regions:
+      - portfolio_context
+      - offering_groups_or_list
+    item_content:
+      - name
+      - kind
+      - image_optional
+      - description_optional
+      - lifecycle
+      - price_or_destination_optional
+      - bounded_learning_or_freshness_context_if_material
+    supported_states:
+      - CONTENT_READY
+      - CONTENT_PARTIAL
+      - STALE
+      - REFRESHING
+
+  - id: BC_OFFERINGS_M01
+    family: offerings_portfolio
+    workspace: Offerings
+    form_factor: mobile_390
+    derives_from: BC_OFFERINGS_D01
+    transformation:
+      - full_width_rows_or_cards
+      - one_clear_detail_affordance
+      - management_actions_not_repeated_on_every_item
+
+  - id: BC_OFFERINGS_D02
+    family: offerings_empty_learning
+    workspace: Offerings
+    form_factor: desktop
+    canonical: true
+    purpose: Truthful canonical empty state or partial enrichment without fabricated Offerings.
+    supported_states:
+      - EMPTY_COLLECTION
+      - CONTENT_PARTIAL
+      - LEARNING
+    add_action_permission: PRODUCT_PERMISSION_PENDING
+
+  - id: BC_OFFERINGS_M02
+    family: offerings_empty_learning
+    workspace: Offerings
+    form_factor: mobile_390
+    derives_from: BC_OFFERINGS_D02
+
+  - id: BC_OFFERING_DETAIL_D01
+    family: offering_detail
+    workspace: Offerings
+    form_factor: desktop
+    canonical: proposed_pattern
+    purpose: Read-first Offering truth with detail/manage actions kept here rather than on portfolio rows.
+    mutation_permissions: PRODUCT_PERMISSION_PENDING
+
+  - id: BC_OFFERING_DETAIL_M01
+    family: offering_detail
+    workspace: Offerings
+    form_factor: mobile_390
+    derives_from: BC_OFFERING_DETAIL_D01
+
+  - id: BC_MARKET_D01
+    family: market_available_shell
+    workspace: Market
+    form_factor: desktop
+    canonical: envelope_only
+    purpose: Present only contract-supported owned Brand/Instagram/Performance/competitor/Observation context.
+    unsupported_detail_policy: PRODUCT_OR_INTELLIGENCE_DECISION_REQUIRED
+    forbidden_placeholder_content:
+      - fabricated_share_of_voice
+      - fabricated_competitor_score
+      - invented_market_metrics
+
+  - id: BC_MARKET_M01
+    family: market_available_shell
+    workspace: Market
+    form_factor: mobile_390
+    derives_from: BC_MARKET_D01
+    transformation:
+      - analytical_regions_stack
+      - charts_if_later_authorized_must_fit_without_horizontal_overflow
+
+  - id: BC_MARKET_D02
+    family: market_not_yet_established
+    workspace: Market
+    form_factor: desktop
+    canonical: true
+    purpose: Bounded explanatory state when Market semantics/data are not sufficiently established.
+    supported_states:
+      - LEARNING
+      - CONTENT_PARTIAL
+      - TEMPORARILY_UNAVAILABLE_EMPTY
+
+  - id: BC_MARKET_M02
+    family: market_not_yet_established
+    workspace: Market
+    form_factor: mobile_390
+    derives_from: BC_MARKET_D02
+
+  - id: BC_RECOMMENDATIONS_D01
+    family: recommendations_useful
+    workspace: Recommendations
+    form_factor: desktop
+    canonical: true
+    purpose: Show 1-3 consequential strategic Recommendations with explanation and bounded decisions.
+    required_card_regions:
+      - recommendation_headline
+      - why_now
+      - key_context_if_supported
+      - supporting_observation_summary_if_supported
+      - decision_action
+    supported_states:
+      - CONTENT_READY
+      - CONTENT_PARTIAL
+      - STALE
+      - REFRESHING
+    actions:
+      - Accept
+      - Adjust
+      - Not_now
+      - Not_for_us
+      - Refresh_recommendations
+    action_contract_note: Accept leads to Campaign Draft, never direct publication.
+
+  - id: BC_RECOMMENDATIONS_M01
+    family: recommendations_useful
+    workspace: Recommendations
+    form_factor: mobile_390
+    derives_from: BC_RECOMMENDATIONS_D01
+    transformation:
+      - recommendations_stack
+      - primary_decision_kept_visible_in_card_flow
+      - secondary_actions_progressively_disclosed_if_needed
+
+  - id: BC_RECOMMENDATIONS_D02
+    family: recommendations_no_new_campaign
+    workspace: Recommendations
+    form_factor: desktop
+    canonical: true
+    purpose: Present NO NEW CAMPAIGN as a considered strategic conclusion rather than empty/error.
+    supported_states:
+      - EMPTY_COLLECTION
+      - CONTENT_READY
+      - REFRESHING
+
+  - id: BC_RECOMMENDATIONS_M02
+    family: recommendations_no_new_campaign
+    workspace: Recommendations
+    form_factor: mobile_390
+    derives_from: BC_RECOMMENDATIONS_D02
+
+stitch_boundary:
+  prompts_created: false
+  screens_created: false
+  next_step_requires_systems_architect_convergence_review: true
