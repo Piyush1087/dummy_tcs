@@ -1,0 +1,86 @@
+id: owned_website.brand_company_context
+version: "1.0"
+status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+owner: data_extraction_engine
+source_class: OWNED_WEBSITE
+shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
+intelligence_evidence_authorities:
+  - intelligence/engines/brand_intelligence/branches/brand_expression/evidence/brand_communication_evidence.yaml
+  - intelligence/engines/brand_intelligence/branches/brand_expression/evidence/brand_meaning_evidence.yaml
+
+purpose: >-
+  Capture factual and Brand-authored company context from owned website resources while preserving the distinction between direct company facts, Brand principles and marketing assertions. This capability does not create Brand Intelligence.
+
+resource_eligibility:
+  primary_roles: [ABOUT_COMPANY, BRAND_STORY, COMPANY_OVERVIEW, MISSION_VALUES, HOMEPAGE]
+  supporting_roles: [CORPORATE_INFO, TEAM_OR_FOUNDER_STORY, PRESS_OR_MEDIA_ABOUT_BRAND_AUTHORED, PORTFOLIO_OVERVIEW]
+  excluded_as_primary: [LEGAL_BOILERPLATE, THIRD_PARTY_TESTIMONIAL, USER_GENERATED_TEXT, ISOLATED_CAMPAIGN_LANDING_PAGE, GENERIC_SEO_METADATA]
+
+item_semantic: brand_company_context_observation
+normalized_payload:
+  type: object
+  additional_properties: false
+  required: [statement_text, statement_class, authorship_class]
+  fields:
+    statement_text: {type: string, min_length: 1, rule: preserve_source_meaning_without_intelligence_summary}
+    verbatim_excerpt: {type: [string, "null"], nullable: true, rule: preserve_when_claim_sensitive_or_factual_distinction_requires_exact_wording}
+    statement_class:
+      type: enum
+      values: [COMPANY_DESCRIPTION, HISTORY_OR_FOUNDING, MISSION_OR_PURPOSE, OPERATING_MODEL, BRAND_OR_COMPANY_STORY, CATEGORY_OR_BUSINESS_CONTEXT, STATED_PRINCIPLE, CAPABILITY_OR_SCOPE_STATEMENT, MARKETING_ASSERTION]
+    assertion_nature:
+      type: enum
+      values: [DIRECT_FIRST_PARTY_FACTUAL_STATEMENT, BRAND_AUTHORED_PRINCIPLE_OR_VALUE, BRAND_AUTHORED_MARKETING_ASSERTION, CLAIM_REQUIRING_EXTERNAL_VERIFICATION]
+    authorship_class: {type: enum, values: [BRAND_AUTHORED, BRAND_CONTROLLED_SURFACE_UNKNOWN_AUTHOR, THIRD_PARTY_EMBEDDED]}
+    subject_scope: {type: enum, values: [BRAND_LEVEL, COMPANY_LEVEL, OFFERING_RELATED_CONTEXT, LOCATION_OR_MARKET_CONTEXT, OTHER_CONTEXT]}
+
+representativeness_rules:
+  PERSISTENT_BRAND_LEVEL: {examples: [principal_about_company_description, persistent_mission_or_brand_story, explicit_company_operating_model]}
+  REPEATED_REPRESENTATIVE: {requires: materially_same_company_context_across_multiple_owned_resources}
+  CONTEXT_SPECIFIC: {examples: [one_campaign_context, one_location_context]}
+  OFFERING_SPECIFIC: {examples: [single_offering_company_claim]}
+  INCIDENTAL: {examples: [footer_fact, isolated_press_fragment]}
+
+coverage_rules:
+  SINGLE_RESOURCE: one_company_context_resource
+  MULTI_RESOURCE_PARTIAL: multiple_company_context_resources_without_broad_principal_coverage
+  MULTI_RESOURCE_BROAD: principal_homepage_about_story_or_mission_surfaces_materially_observed
+  SITE_WIDE_BOUNDED: bounded_site_context_sample_explicitly_completed
+
+claim_sensitive_preservation:
+  healthcare_and_other_sensitive_claims:
+    preserve_distinctions: [BRAND_AUTHORED_CLAIM, CLINICAL_CREDENTIAL, REGULATORY_STATEMENT, TESTIMONIAL, GUARANTEED_OUTCOME_LANGUAGE]
+    rule: classification_describes_source_statement_type_not_truth_or_proof
+  external_truth_verification_by_data_extraction: forbidden
+
+deduplication:
+  identical_company_statement_same_capture: {action: single_evidence_item}
+  repeated_same_statement_multiple_resources: {action: group_semantically_and_preserve_supporting_resource_refs_and_repetition_count}
+  materially_different_statements: {action: separate_evidence_items}
+
+conflict_behavior:
+  rule: preserve_conflicting_company_context_as_separate_items
+  examples:
+    - one_owned_page_states_global_operations_and_another_states_region_limited_operations
+    - old_story_page_and_current_homepage_materially_disagree
+  precedence_resolution: intelligence_owned
+
+negative_evidence:
+  explicit_negative_or_restriction_statement: {allowed: true}
+  missing_company_statement: {evidence_item_created: false}
+
+forbidden_derivations:
+  - brand_description
+  - positioning
+  - value_proposition
+  - brand_values
+  - communication_rule
+  - canonical_company_fact_authority
+  - BRAND_CONFIRMED
+
+validation_invariants:
+  - factual_statement_distinct_from_marketing_assertion
+  - testimonial_distinct_from_brand_authored_statement
+  - offering_specific_context_not_silently_generalized
+  - claim_sensitive_source_type_preserved
+  - conflicts_preserved
+  - provider_details_not_semantic_identity
