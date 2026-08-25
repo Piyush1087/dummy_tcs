@@ -1,6 +1,6 @@
 id: owned_website.brand_company_context
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 owner: data_extraction_engine
 source_class: OWNED_WEBSITE
 shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
