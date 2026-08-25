@@ -1,6 +1,6 @@
 # Brand Intelligence Wave 1 — Data Extraction Evidence Capability Contract
 
-**Status:** `PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE`  
+**Status:** `FROZEN`  
 **Owner:** Data Extraction Engine  
 **Scope:** Gate B contracts required before `brand_communication` and `brand_meaning` execute.  
 **Starting architecture baseline:** `Piyush1087/dummy_tcs/main@c4f5cb8713f75c118efa038d2cc39e987db5321a`  
