@@ -1,6 +1,6 @@
 id: visual_style_synthesis_output_contract
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 processor: visual_style_synthesis
 object: visual_style_profile
 strict: true

@@ -1,6 +1,6 @@
 id: visual_style_synthesis_reasoning
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 processor: visual_style_synthesis
 owner_engine: brand_intelligence
 owning_branch: visual_identity
