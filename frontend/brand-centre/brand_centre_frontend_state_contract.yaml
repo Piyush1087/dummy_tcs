@@ -18,6 +18,7 @@ governing_rules:
   - readiness_is_not_freshness
   - source_is_not_authority
   - stale_current_data_remains_renderable
+  - failed_execution_does_not_replace_current_result_readiness
   - protected_current_values_are_not_replaced_by_candidates
   - mixed_generation_is_valid
   - stable_semantic_ids_are_react_identity
@@ -41,15 +42,18 @@ consumer_readiness:
   rules:
     - READY means sufficient for the declared Brand Centre consumer, not globally complete Intelligence.
     - PARTIAL is usable bounded degradation and must never be padded with filler.
-    - NOT_READY is an Intelligence state, not a transport error.
+    - NOT_READY is an Intelligence state, not a transport error or failed execution outcome.
     - A workspace may be READY while one or more sections are PARTIAL or NOT_READY.
 
 result_readiness:
-  values: [READY, PARTIAL, NOT_READY, FAILED]
+  values: [READY, PARTIAL, NOT_READY]
   frontend_use:
-    - preserve when useful for explaining section density or temporary unavailability
+    - preserve when useful for explaining section density or current semantic maturity
     - do not use as the sole workspace render gate
-  persistence_note: W1.0 current persisted values use READY/PARTIAL/NOT_READY; FAILED remains an execution/result outcome rather than a failed current generation.
+  execution_failure_boundary: >-
+    FAILED is not a persisted/current result-readiness value. A failed execution or refresh is represented
+    through request/runtime activity or safe error metadata while preserving any usable current value,
+    its previous READY/PARTIAL/NOT_READY readiness, and its CURRENT/STALE/UNKNOWN freshness.
 
 freshness:
   values: [CURRENT, STALE, UNKNOWN, REFRESHING]
@@ -87,6 +91,7 @@ current_value_state:
     - missing_property_must_not_be_interpreted_as_EXPLICIT_NULL
     - empty_collection_is_a_VALUE_and_is_not_NO_CURRENT
     - processor_failure_is_not_EXPLICIT_NULL
+    - processor_failure_is_not_NOT_READY
     - NOT_OWNED_requires_consumption_from_the_owning_business_state_projection_when_needed
 
 empty_collection:
@@ -140,6 +145,23 @@ runtime_activity_hint:
     - TEMPORARILY_UNAVAILABLE must not erase stale/current data that remains consumer-usable.
     - Frontend timers must not manufacture these states.
 
+failure_preservation_examples:
+  ready_current_refresh_fails:
+    input: current VALUE + consumer READY + result READY + freshness CURRENT
+    execution_event: refresh execution fails
+    output: retain current VALUE + consumer READY + result READY + freshness CURRENT
+    runtime_or_error_hint: TEMPORARILY_UNAVAILABLE or safe request error may be supplied when useful
+  no_current_execution_unavailable:
+    input: NO_CURRENT or NOT_EVALUATED
+    execution_event: execution unavailable
+    output: consumer NOT_READY; result readiness remains NOT_READY when supplied for current semantic state
+    runtime_or_error_hint: TEMPORARILY_UNAVAILABLE when supplied by backend/runtime
+  stale_current_refresh_fails:
+    input: current VALUE + result READY or PARTIAL + freshness STALE
+    execution_event: refresh execution fails
+    output: retain current VALUE + prior result readiness + freshness STALE
+    runtime_or_error_hint: TEMPORARILY_UNAVAILABLE or safe request error may be supplied when useful
+
 candidate_notice:
   values: [NONE, AVAILABLE, CONFLICT]
   fields:
@@ -160,7 +182,7 @@ safe_error_category:
     TRANSPORT: Network or API transport failure.
     AUTHORIZATION: User is not permitted to access the requested Brand Centre resource.
     MALFORMED_RESPONSE: Consumer contract validation failed.
-    TEMPORARILY_UNAVAILABLE: Runtime reports consumer-safe temporary unavailability with no usable current value.
+    TEMPORARILY_UNAVAILABLE: Runtime reports consumer-safe temporary unavailability; usable current data must be retained when present.
   forbidden_user_exposure:
     - processor_names
     - provider_names
@@ -174,7 +196,7 @@ section_envelope:
     type BrandCentreSectionState<T> = {
       current: BrandCentreCurrentValue<T>;
       consumerReadiness: "NOT_READY" | "PARTIAL" | "READY";
-      resultReadiness: "READY" | "PARTIAL" | "NOT_READY" | "FAILED";
+      resultReadiness: "READY" | "PARTIAL" | "NOT_READY";
       freshness: "CURRENT" | "STALE" | "UNKNOWN" | "REFRESHING";
       authorityPresentation: "observed" | "creator_shop" | "confirmed" | "protected" | "system_managed" | "mixed";
       editability: "EDITABLE" | "SUPPORT_CONTROLLED" | "READ_ONLY" | "POLICY_PENDING";
@@ -238,10 +260,13 @@ mutation_readiness:
     - read architecture must not change when edit/candidate mutations are later added
 
 validation_invariants:
+  - Result readiness contains only READY, PARTIAL and NOT_READY; execution failure is represented separately.
   - NO_CURRENT, NOT_EVALUATED, NOT_OWNED, EXPLICIT_NULL, INTENTIONALLY_ABSENT and empty collection remain distinguishable.
+  - Failure remains distinct from EXPLICIT_NULL and NOT_READY.
   - Transport errors, Intelligence NOT_READY, partial Intelligence, stale Intelligence and runtime unavailability remain distinguishable.
   - Consumer readiness is the normal UI render gate; execution readiness is not.
-  - Current stale data remains visible when still consumer-usable.
+  - Current READY/PARTIAL data survives failed refresh when still consumer-usable.
+  - Current stale data remains visible when still consumer-usable, including after failed refresh.
   - Candidate/discrepancy state never silently replaces protected current state.
   - Mixed-generation Objects do not receive fabricated aggregate source/authority/timestamp semantics.
   - Component metadata is retained only where meaningful to frontend authority/edit/conflict behavior.

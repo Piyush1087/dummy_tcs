@@ -84,7 +84,7 @@ type BrandCentreCurrentValue<T> =
   | { kind: "NOT_OWNED" };
 
 type ConsumerReadiness = "NOT_READY" | "PARTIAL" | "READY";
-type ResultReadiness = "READY" | "PARTIAL" | "NOT_READY" | "FAILED";
+type ResultReadiness = "READY" | "PARTIAL" | "NOT_READY";
 type FrontendFreshness = "CURRENT" | "STALE" | "UNKNOWN" | "REFRESHING";
 
 type AuthorityPresentation =
@@ -120,6 +120,8 @@ type BrandCentreField<T> = {
   };
 };
 ```
+
+`ResultReadiness` represents only permanent/current generated-result readiness. `FAILED` is an execution outcome and must remain outside this type. A failed refresh may coexist with a retained current field whose `resultReadiness` remains `READY`, `PARTIAL` or `NOT_READY` as appropriate.
 
 `mutationRef` is internal adapter metadata for a future write architecture; it is not visible UI content and does not authorize an edit control now.
 
@@ -471,7 +473,7 @@ Recommended behavior:
 
 Do not couple cache invalidation across all Brand Centre workspaces merely because one underlying Object changes.
 
-## 13. Error categories
+## 13. Error and failed-execution boundary
 
 Frontend-safe categories:
 
@@ -480,7 +482,26 @@ Frontend-safe categories:
 - `MALFORMED_RESPONSE`
 - `TEMPORARILY_UNAVAILABLE`
 
-Intelligence `NOT_READY`, `PARTIAL` and `STALE` are not API errors.
+Intelligence `NOT_READY`, `PARTIAL` and `STALE` are not API errors. `FAILED` is not a current result-readiness value; a failed execution/refresh is represented as runtime/activity or safe error metadata.
+
+Required preservation examples:
+
+```text
+current value READY + refresh execution fails
+→ retain READY current value
+→ runtime/error hint may appear
+→ resultReadiness remains READY
+
+no current value + execution unavailable
+→ consumer may be NOT_READY
+→ runtimeActivity = TEMPORARILY_UNAVAILABLE when backend supplies it
+→ failure is not EXPLICIT_NULL and does not create resultReadiness=FAILED
+
+stale current value + refresh fails
+→ stale current value remains visible
+→ prior READY/PARTIAL/NOT_READY result readiness is preserved
+→ failed refresh does not erase current state
+```
 
 Processor/provider names, internal execution codes and raw backend failures must not reach presentation components.
 
@@ -489,7 +510,7 @@ Processor/provider names, internal execution codes and raw backend failures must
 A later backend implementation should expose enough information for the frontend adapter to preserve:
 
 - workspace and section consumer readiness;
-- result readiness where useful;
+- current result readiness (`READY | PARTIAL | NOT_READY`) where useful;
 - current value state;
 - freshness and safe stale reason;
 - authority at meaningful component/item granularity;
@@ -498,7 +519,8 @@ A later backend implementation should expose enough information for the frontend
 - candidate/discrepancy summary;
 - mixed-generation indication;
 - expected revision/component path only for future mutation-ready detail reads;
-- neutral runtime activity hint when Product wants learning/refreshing/unavailable presentation.
+- neutral runtime activity hint when Product wants learning/refreshing/unavailable presentation;
+- consumer-safe execution failure/unavailability metadata separately from current result readiness when needed.
 
 It should not require normal frontend consumers to understand processor executions, attempts, leases, Evidence payloads, model/provider identities or database records.
 

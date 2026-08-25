@@ -94,7 +94,7 @@ Examples:
 - Locations are canonical business entities, not `serviceability_profile`;
 - Offering lifecycle/availability is canonical business state, not Product Intelligence current-generation ownership.
 
-## 4. Readiness mapping
+## 4. Readiness and execution-failure mapping
 
 ### Consumer `READY`
 
@@ -122,9 +122,37 @@ Examples:
 - if neutral runtime activity = `LEARNING`, presentation may communicate that Creator Shop is still learning;
 - otherwise show a bounded unavailable/not-yet-understood state as UX later defines.
 
-### Result `FAILED`
+### Result readiness
 
-`FAILED` does not become a fake current value. If usable previous current data exists, retain it and let freshness/activity express the state. Only when no usable current consumer projection exists should the user see temporary unavailability.
+Current/persisted result readiness is exactly:
+
+```text
+READY
+PARTIAL
+NOT_READY
+```
+
+`FAILED` is an execution outcome, not a current generated-result readiness value. Never map a failed refresh into `resultReadiness = FAILED`.
+
+Required cases:
+
+```text
+current value READY + refresh execution fails
+→ retain the current value
+→ retain resultReadiness = READY
+→ retain CURRENT/STALE/UNKNOWN freshness as supplied for the current value
+→ runtime/error hint may appear
+
+no current value + execution unavailable
+→ consumer may be NOT_READY
+→ runtimeActivity = TEMPORARILY_UNAVAILABLE when backend supplies it
+→ failure is not EXPLICIT_NULL and is not itself NOT_READY
+
+stale current value + refresh fails
+→ stale current value remains visible
+→ prior READY/PARTIAL/NOT_READY result readiness remains unchanged
+→ failed refresh does not erase current state
+```
 
 ## 5. Freshness mapping
 
@@ -354,6 +382,8 @@ Recommendations may validly be:
 
 During refresh, retain existing recommendation state with `REFRESHING` unless backend authority says it is no longer current/safe.
 
+If that refresh execution fails, retain the prior recommendation projection and its result readiness/freshness; expose only consumer-safe runtime/error metadata where useful.
+
 ## 15. Responsive independence
 
 The semantic state mappings above are identical on desktop and 390px mobile.
@@ -383,10 +413,10 @@ When multiple conditions exist, components should reason in this order:
 1. authorization/request availability
 2. validated current value presence
 3. consumer readiness
-4. freshness/runtime refresh
+4. freshness/runtime refresh or unavailability
 5. authority/editability
 6. candidate/discrepancy
 7. optional presentation metadata
 ```
 
-This prevents a stale badge, candidate notice or background refresh from incorrectly replacing usable current content.
+This prevents a stale badge, candidate notice, background refresh or failed refresh from incorrectly replacing usable current content.
