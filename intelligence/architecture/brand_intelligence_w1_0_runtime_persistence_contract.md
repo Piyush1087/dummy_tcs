@@ -1,6 +1,6 @@
 # Brand Intelligence W1.0 Runtime and Persistence Contract
 
-**Status:** `PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE`
+**Status:** `FROZEN`
 
 **Scope:** Gate A implementation contract for the permanent Brand Intelligence runtime and persistence foundation
 
