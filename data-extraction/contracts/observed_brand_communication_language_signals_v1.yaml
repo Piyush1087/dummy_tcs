@@ -1,6 +1,6 @@
 id: observed_brand_communication_language_signals
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 owner: data_extraction_engine
 shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
 intelligence_evidence_authority: intelligence/engines/brand_intelligence/branches/brand_expression/evidence/brand_communication_evidence.yaml
