@@ -74,12 +74,14 @@ failure_contract:
 
 identity_semantic_validators:
   industry_classification.gatekeeper:
-    - RESOLVED + SUPPORTED => industry and sub_industry non-null; detected_business_type null.
-    - RESOLVED + UNSUPPORTED => industry/sub_industry null; detected_business_type non-null.
-    - UNRESOLVED => eligibility UNKNOWN; industry/sub_industry/detected_business_type null.
-    - SUPPORTED industry must match canonical Industry taxonomy.
-    - SUPPORTED sub_industry must belong to selected Industry.
-    - Legacy Industry enum values are invalid.
+    m2_registration: EXPLICIT_IDENTITY_TEST_COMPATIBILITY_ONLY
+    rules:
+      - RESOLVED + SUPPORTED => industry and sub_industry non-null; detected_business_type null.
+      - RESOLVED + UNSUPPORTED => industry/sub_industry null; detected_business_type non-null.
+      - UNRESOLVED => eligibility UNKNOWN; industry/sub_industry/detected_business_type null.
+      - SUPPORTED industry must match canonical Industry taxonomy.
+      - SUPPORTED sub_industry must belong to selected Industry.
+      - Legacy Industry enum values are invalid.
   industry_classification.industry_niche:
     - null is valid.
     - non-null niche must not contradict canonical Industry/Sub-industry; evidence compatibility remains processor semantic validation.
@@ -109,6 +111,12 @@ standalone_gatekeeper_validator:
     authority: PROVISIONAL_CONTEXT_ONLY
   decision_boundary:
     rule: Admission outcome, reason_code, recovery actions and manual-review eligibility are not fields of the assessment processor and must be rejected as extra fields.
+
+default_validator_routing:
+  gatekeeper_site_assessment: standalone_gatekeeper_validator
+  industry_classification.gatekeeper: NOT_REGISTERED
+  legacy_compatibility_adapter: IdentityCompatibilityValidatorAdapter
+  rule: The hardcoded Identity taxonomy path may exist only inside the explicitly selected legacy compatibility validator.
 
 provider_schema_policy:
   - Provider schema may be less expressive than runtime validation.

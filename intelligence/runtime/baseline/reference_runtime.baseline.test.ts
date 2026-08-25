@@ -6,14 +6,11 @@ import {
   SafeYamlLoader,
 } from "../loaders/yaml_loader";
 import { ModelRegistryResolver } from "../models/resolver";
+import { LegacyIdentityGatekeeperCompatibilityValidator } from "../validation/legacy_identity_gatekeeper_compatibility_validator";
 import { validateProcessorOutput } from "../validation/validator";
 
 const yaml = new SafeYamlLoader(process.cwd());
 const identity = new IdentityRepositoryLoader(yaml);
-
-const identityTaxonomy = {
-  D2C: ["BEAUTY_PERSONAL_CARE", "OTHER_D2C"],
-};
 
 const supportedLegacyGatekeeperOutput = {
   status: "RESOLVED",
@@ -34,34 +31,41 @@ describe("M2.0 reference runtime baseline", () => {
     expect(result).toMatchObject({ ok: true });
   });
 
-  it("validates the legacy Gatekeeper compatibility output", () => {
-    const result = validateProcessorOutput({
-      processor_id: "industry_classification",
-      processor_scope: "gatekeeper",
-      active_outputs: ["industry", "sub_industry"],
-      raw_output: supportedLegacyGatekeeperOutput,
-      taxonomy: identityTaxonomy,
-    });
+  it("validates the legacy Gatekeeper through explicit compatibility", async () => {
+    const result = await new LegacyIdentityGatekeeperCompatibilityValidator(
+      yaml,
+    ).validate(supportedLegacyGatekeeperOutput);
 
     expect(result).toMatchObject({ ok: true });
   });
 
-  it("captures the known legacy defect requiring controlled Sub-industry membership", () => {
-    const result = validateProcessorOutput({
-      processor_id: "industry_classification",
-      processor_scope: "gatekeeper",
-      active_outputs: ["industry", "sub_industry"],
-      raw_output: {
-        ...supportedLegacyGatekeeperOutput,
-        sub_industry: "Grounded free-form specialty",
-      },
-      taxonomy: identityTaxonomy,
+  it("captures the known legacy defect in explicit compatibility only", async () => {
+    const result = await new LegacyIdentityGatekeeperCompatibilityValidator(
+      yaml,
+    ).validate({
+      ...supportedLegacyGatekeeperOutput,
+      sub_industry: "Grounded free-form specialty",
     });
 
     expect(result).toMatchObject({
       ok: false,
       validation_stage: "SEMANTIC",
       issues: [{ code: "TAXONOMY_MISMATCH" }],
+    });
+  });
+
+  it("rejects legacy Gatekeeper from default validation routing", () => {
+    const result = validateProcessorOutput({
+      processor_id: "industry_classification",
+      processor_scope: "gatekeeper",
+      active_outputs: ["industry", "sub_industry"],
+      raw_output: supportedLegacyGatekeeperOutput,
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      validation_stage: "CONFIGURATION",
+      issues: [{ code: "VALIDATOR_NOT_CONFIGURED" }],
     });
   });
 

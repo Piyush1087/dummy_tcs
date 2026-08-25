@@ -60,7 +60,8 @@ The integration layer intentionally defines ports rather than guessing the exist
 - `ModelRuntimeResolver` → `runtime/models.yaml` resolver.
 - `PromptBuilderPort` → `prompt_builder.ts`.
 - `AiProviderPort` → Gemini adapter/SDK.
-- `OutputValidatorPort` → `validation/validator.ts`.
+- Default `OutputValidatorPort` → `DefaultValidatorAdapter`; it cannot dispatch the legacy Identity Gatekeeper.
+- Explicit `identity_test` compatibility → `IdentityCompatibilityValidatorAdapter`.
 - `PersistencePort` → Prisma adapter using `identity_mapping.yaml`.
 - `TelemetryPort` → execution/processor-execution persistence/logging.
 

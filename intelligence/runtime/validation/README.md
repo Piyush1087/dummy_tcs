@@ -29,6 +29,8 @@ post-response authoritative validation
 - `gatekeeper_site_assessment_validator.ts` — standalone contract-bound validator.
 - `validator_registry.ts` — server-owned processor/contract/version registration.
 - `validation_result.ts` — reusable validation envelope and issue mapping.
+- `gatekeeper_admission_decision_validator.ts` — validates the frozen deterministic decision vocabulary and manual-review invariants without deriving outcomes.
+- `legacy_identity_gatekeeper_compatibility_validator.ts` — explicit test-only legacy schema and controlled-taxonomy behavior.
 
 ## M2 standalone Gatekeeper boundary
 
@@ -42,6 +44,11 @@ processor, and strict validation rejects them as extra fields.
 The registry fails closed when processor, output-contract ID, or contract
 version is unknown. Registration is server-owned; runtime callers cannot supply
 a validator or repository path.
+
+Default/shared validation does not register
+`industry_classification.gatekeeper`. The legacy schema and controlled Identity
+taxonomy path exist only in `LegacyIdentityGatekeeperCompatibilityValidator`,
+which is selected by the explicitly named Identity compatibility adapter.
 
 ## Validation layers
 

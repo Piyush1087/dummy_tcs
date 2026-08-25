@@ -54,38 +54,6 @@ export function buildIdentityCoreSchema(activeOutputs: IdentityCoreOutputId[]) {
   return z.object(shape).strict();
 }
 
-export const GatekeeperSchema = z
-  .object({
-    status: z.enum(["RESOLVED", "UNRESOLVED"]),
-    eligibility: z.enum(["SUPPORTED", "UNSUPPORTED", "UNKNOWN"]),
-    industry: z.string().nullable(),
-    sub_industry: z.string().nullable(),
-    detected_business_type: z.string().nullable(),
-  })
-  .strict()
-  .superRefine((value, ctx) => {
-    if (value.status === "RESOLVED" && value.eligibility === "SUPPORTED") {
-      if (!value.industry) ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["industry"], message: "SUPPORTED requires industry" });
-      if (!value.sub_industry) ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["sub_industry"], message: "SUPPORTED requires sub_industry" });
-      if (value.detected_business_type !== null) ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["detected_business_type"], message: "SUPPORTED requires detected_business_type=null" });
-      return;
-    }
-    if (value.status === "RESOLVED" && value.eligibility === "UNSUPPORTED") {
-      if (value.industry !== null) ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["industry"], message: "UNSUPPORTED requires industry=null" });
-      if (value.sub_industry !== null) ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["sub_industry"], message: "UNSUPPORTED requires sub_industry=null" });
-      if (!value.detected_business_type) ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["detected_business_type"], message: "UNSUPPORTED requires detected_business_type" });
-      return;
-    }
-    if (value.status === "UNRESOLVED") {
-      if (value.eligibility !== "UNKNOWN") ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["eligibility"], message: "UNRESOLVED requires eligibility=UNKNOWN" });
-      for (const key of ["industry", "sub_industry", "detected_business_type"] as const) {
-        if (value[key] !== null) ctx.addIssue({ code: z.ZodIssueCode.custom, path: [key], message: `UNRESOLVED requires ${key}=null` });
-      }
-      return;
-    }
-    ctx.addIssue({ code: z.ZodIssueCode.custom, message: "Invalid status/eligibility combination" });
-  });
-
 export const IndustryNicheSchema = z.object({ industry_niche: z.string().nullable() }).strict();
 
 export const MarketSchema = z
@@ -125,20 +93,3 @@ export const MarketGeographySchema = z
       ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["markets_served"], message: "At least one market must be primary" });
     }
   });
-
-export type CanonicalIndustryTaxonomy = Record<string, readonly string[]>;
-
-export function validateGatekeeperTaxonomy(
-  output: z.infer<typeof GatekeeperSchema>,
-  taxonomy: CanonicalIndustryTaxonomy,
-  legacyIndustryValues: readonly string[] = []
-): string[] {
-  const issues: string[] = [];
-  if (output.eligibility !== "SUPPORTED") return issues;
-  if (!output.industry || !output.sub_industry) return issues;
-  if (legacyIndustryValues.includes(output.industry)) issues.push("Legacy Industry enum value is invalid");
-  const children = taxonomy[output.industry];
-  if (!children) issues.push("Industry is not in canonical taxonomy");
-  else if (!children.includes(output.sub_industry)) issues.push("Sub-industry does not belong to selected Industry");
-  return issues;
-}
