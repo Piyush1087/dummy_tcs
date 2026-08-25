@@ -36,6 +36,7 @@ Execution result + telemetry
 - `types.ts` — ports/interfaces for application adapters.
 - `identity_runtime.ts` — binds Compiler AI/deterministic task execution into one Identity runtime.
 - `service.ts` — application-facing execution service; future API/button handlers call this rather than processors directly.
+- `gatekeeper_validation_adapter.ts` — bounded standalone definition loading and assessment validation; it does not orchestrate or redefine the complete admission lifecycle.
 
 ## Evidence concurrency
 

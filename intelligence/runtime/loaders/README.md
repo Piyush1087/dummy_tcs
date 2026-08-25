@@ -17,8 +17,14 @@ The Intelligence runtime can now resolve repository-owned configuration without 
 ## Files
 
 - `yaml_loader.ts` — safe server-side YAML loader constrained to repository root.
-- `identity_repository_loader.ts` — Identity allow-listed definition/artifact/profile loader.
+- `allowlisted_definition_loader.ts` — reusable semantic-ID allow-list with ID/version checks.
+- `gatekeeper_repository_loader.ts` — standalone Gatekeeper profile/processor/artifact loader.
+- `identity_repository_loader.ts` — retained Identity compatibility wrapper.
 - `../models/resolver.ts` — Model Registry resolver.
+
+Runtime callers select only semantic IDs. Repository paths and expected
+contract metadata are owned by server-side catalogs. Unknown IDs, unsafe paths,
+and ID/version drift fail closed.
 
 ## Security/reliability boundary
 

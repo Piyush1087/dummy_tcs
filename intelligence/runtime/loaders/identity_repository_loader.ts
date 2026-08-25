@@ -1,4 +1,5 @@
 import { SafeYamlLoader, RuntimeConfigError } from "./yaml_loader";
+import { AllowlistedDefinitionLoader } from "./allowlisted_definition_loader";
 
 const ROOT = "intelligence/engines/brand_intelligence/branches/identity";
 const PROCESSORS: Record<string,string> = {
@@ -11,14 +12,42 @@ const ARTIFACT_DIR: Record<string,string> = {
   identity_core: `${ROOT}/artifacts/identity_core`,
   market_geography: `${ROOT}/artifacts/market_geography`,
 };
+const PROFILES = Object.freeze({
+  identity_test: {
+    path: "intelligence/runtime/execution_profiles/identity_test.yaml",
+    expectedId: "identity_test",
+    expectedVersion: "0.1-working",
+  },
+});
+const PROCESSOR_DEFINITIONS = Object.freeze(
+  Object.fromEntries(
+    Object.entries(PROCESSORS).map(([id, file]) => [
+      id,
+      { path: file, expectedId: id, expectedVersion: "1.1-frozen" },
+    ]),
+  ),
+);
 function versioned(id:string, raw:any){ return { id, version: raw?.version ?? "frozen", content: raw }; }
 
 export class IdentityRepositoryLoader {
-  constructor(private readonly yaml: SafeYamlLoader) {}
+  private readonly profiles: AllowlistedDefinitionLoader;
+  private readonly processors: AllowlistedDefinitionLoader;
+
+  constructor(private readonly yaml: SafeYamlLoader) {
+    this.profiles = new AllowlistedDefinitionLoader(
+      yaml,
+      PROFILES,
+      "PROFILE_NOT_ALLOWED",
+    );
+    this.processors = new AllowlistedDefinitionLoader(
+      yaml,
+      PROCESSOR_DEFINITIONS,
+      "PROCESSOR_NOT_CONFIGURED",
+    );
+  }
 
   async loadExecutionProfile(profileId: string) {
-    if (profileId !== "identity_test") throw new RuntimeConfigError("PROFILE_NOT_ALLOWED", `Unknown Identity profile '${profileId}'`);
-    const raw:any = await this.yaml.load(`intelligence/runtime/execution_profiles/${profileId}.yaml`);
+    const raw:any = await this.profiles.load(profileId);
     return {
       id: raw.id,
       persistResultsDefault: raw.defaults?.persist_results ?? false,
@@ -27,9 +56,7 @@ export class IdentityRepositoryLoader {
   }
 
   async loadProcessor(processorId: string, scope?: string) {
-    const file = PROCESSORS[processorId];
-    if (!file) throw new RuntimeConfigError("PROCESSOR_NOT_CONFIGURED", `Unknown processor '${processorId}'`);
-    const definition:any = await this.yaml.load(file);
+    const definition:any = await this.processors.load(processorId);
     return { ...definition, processor_id: definition.id, processor_scope: scope, purpose: definition.purpose, input_contract: definition.inputs, output_ownership: definition.outputs };
   }
 
@@ -45,7 +72,7 @@ export class IdentityRepositoryLoader {
   }
 
   async loadGlobalArtifacts() {
-    const base = "intelligence/runtime/artifacts";
+    const base = "intelligence/runtime/artifacts/global";
     const runtime_context:any = await this.yaml.load(`${base}/runtime_context.yaml`);
     const evidence_grounding:any = await this.yaml.load(`${base}/evidence_grounding.yaml`);
     const output_discipline:any = await this.yaml.load(`${base}/output_discipline.yaml`);
@@ -60,7 +87,7 @@ export class IdentityRepositoryLoader {
     const dir = ARTIFACT_DIR[processorId];
     if (!dir) throw new RuntimeConfigError("ARTIFACT_PROCESSOR_NOT_CONFIGURED", `No artifact directory for '${processorId}'`);
     const prefix = scope ? `${scope}_` : "";
-    const reasoningCandidates = scope ? [`${dir}/${scope}/reasoning.yaml`, `${dir}/${prefix}reasoning.yaml`] : [`${dir}/reasoning.yaml`];
+    const reasoningCandidates = scope ? [`${dir}/${scope}/reasoning.yaml`, `${dir}/${prefix}reasoning.yaml`, `${dir}/reasoning.yaml`] : [`${dir}/reasoning.yaml`];
     let reasoning:any; let lastError:unknown;
     for (const candidate of reasoningCandidates) { try { reasoning = await this.yaml.load(candidate); break; } catch (e) { lastError=e; } }
     if (!reasoning) throw lastError ?? new RuntimeConfigError("ARTIFACT_MISSING", `Reasoning artifact missing for ${processorId}`);
