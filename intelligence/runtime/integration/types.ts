@@ -1,4 +1,8 @@
 import type { ExecutionProfile, CompilerRequest, TaskResult, ExecutionTask } from "../compiler/compiler";
+import type {
+  ModelOverride,
+  ModelResolutionContext,
+} from "../models/resolver";
 
 export interface ExecutionProfileLoader { load(profileId: string): Promise<ExecutionProfile>; }
 export interface DefinitionLoader {
@@ -11,7 +15,14 @@ export interface EvidenceRuntime {
   prepareIdentityEvidence(args: { websiteUrl: string; entityId: string }): Promise<void>;
   getEvidence(args: { task: ExecutionTask; websiteUrl: string; entityId: string }): Promise<{ refs?: string[]; content: unknown }>;
 }
-export interface ModelRuntimeResolver { resolve(processorId: string, scope?: string): Promise<any>; }
+export interface ModelRuntimeResolver {
+  resolve(
+    processorId: string,
+    scope?: string,
+    override?: ModelOverride,
+    context?: ModelResolutionContext,
+  ): Promise<any>;
+}
 export interface PromptBuilderPort { build(input: any): Promise<any> | any; }
 export interface AiProviderPort { execute(args: { promptPackage: any; resolvedModelRuntime: any; websiteUrl: string }): Promise<{ output: unknown; metadata?: Record<string, unknown> }>; }
 export type RuntimeValidationError = { code: string; message: string; validation_stage?: "STRUCTURAL"|"SEMANTIC"|"CONFIGURATION"; issues?: Array<{ path:Array<string|number>; code:string; message:string }> };

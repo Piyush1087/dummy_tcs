@@ -9,10 +9,24 @@ export type ExecuteIntelligenceRequest = {
   persistResults?: boolean;
 };
 
-export function createIntelligenceService(deps: IdentityRuntimeDependencies) {
+export type IntelligenceServiceOptions = {
+  environment: "development" | "test" | "production";
+  enableIdentityTestCompatibility: boolean;
+};
+
+export function createIntelligenceService(
+  deps: IdentityRuntimeDependencies,
+  options: IntelligenceServiceOptions,
+) {
   const identity = createIdentityRuntime(deps);
   return {
     async execute(request: ExecuteIntelligenceRequest) {
+      if (
+        options.environment === "production" ||
+        options.enableIdentityTestCompatibility !== true
+      ) {
+        throw new Error("IDENTITY_TEST_COMPATIBILITY_NOT_AVAILABLE");
+      }
       if (request.executionProfileId !== "identity_test") throw new Error(`Unsupported execution profile: ${request.executionProfileId}`);
       if (!request.entityId) throw new Error("entityId is required");
       let websiteUrl: string;

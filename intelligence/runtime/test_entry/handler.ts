@@ -6,7 +6,8 @@ export type DevAuthContext = { isAuthenticated:boolean; isDeveloper:boolean; use
 
 /** Framework-neutral handler. Mount only behind a development/test authenticated route. */
 export function createIdentityTestHandler(deps:IdentityRuntimeDependencies) {
-  const service=createIntelligenceService(deps);
+  const environment=process.env.NODE_ENV==="production"?"production":process.env.NODE_ENV==="test"?"test":"development";
+  const service=createIntelligenceService(deps,{environment,enableIdentityTestCompatibility:true});
   return async function identityTest(body:IdentityTestRequest,auth:DevAuthContext) {
     if(process.env.NODE_ENV==="production") return {status:404,body:{error:"NOT_FOUND"}};
     if(!auth.isAuthenticated||!auth.isDeveloper) return {status:403,body:{error:"FORBIDDEN"}};

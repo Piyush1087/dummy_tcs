@@ -4,6 +4,10 @@ P0 #7 status: CLOSED at Intelligence runtime level.
 
 This is a framework-neutral, development-only entry point for invoking `identity_test`. The developer mounts it inside the application's existing authenticated backend/API framework.
 
+M2 classifies this entry as `TEST_ONLY + COMPATIBILITY_ONLY`. It is not current
+Gatekeeper product authority and is rejected by the service in production even
+if a caller attempts to enable it.
+
 ## Safety properties
 
 - returns 404 when `NODE_ENV=production`

@@ -2,15 +2,48 @@ import { SafeYamlLoader, RuntimeConfigError } from "../loaders/yaml_loader";
 
 type Environment = "development"|"test"|"production";
 export type ModelOverride = { model_profile?: string; timeout_ms?: number };
+export type ModelResolutionContext = {
+  compatibility_mode?: boolean;
+  execution_profile_id?: string;
+};
 
 export class ModelRegistryResolver {
   constructor(private readonly yaml: SafeYamlLoader, private readonly environment: Environment) {}
 
-  async resolve(processorId: string, scope?: string, override?: ModelOverride) {
+  async resolve(
+    processorId: string,
+    scope?: string,
+    override?: ModelOverride,
+    context?: ModelResolutionContext,
+  ) {
     const registry:any = await this.yaml.load("intelligence/runtime/models.yaml");
     const bindings = registry.processor_model_bindings?.[processorId];
     const binding = scope ? bindings?.[scope] : bindings?.default;
     if (!binding && !override?.model_profile) throw new RuntimeConfigError("MODEL_PROFILE_NOT_CONFIGURED", `No model binding for ${processorId}${scope ? `.${scope}` : ""}`);
+
+    if (binding?.compatibility_only) {
+      if (this.environment === "production") {
+        throw new RuntimeConfigError(
+          "COMPATIBILITY_MODEL_BINDING_FORBIDDEN",
+          `${processorId}${scope ? `.${scope}` : ""} is unavailable in production`,
+        );
+      }
+      if (
+        context?.compatibility_mode !== true ||
+        context.execution_profile_id !== binding.compatibility_profile
+      ) {
+        throw new RuntimeConfigError(
+          "COMPATIBILITY_MODEL_BINDING_REQUIRES_EXPLICIT_CONTEXT",
+          `${processorId}${scope ? `.${scope}` : ""} requires explicit ${binding.compatibility_profile} compatibility context`,
+        );
+      }
+      if (!(binding.allowed_environments ?? []).includes(this.environment)) {
+        throw new RuntimeConfigError(
+          "COMPATIBILITY_MODEL_BINDING_ENVIRONMENT_DISABLED",
+          `${processorId}${scope ? `.${scope}` : ""} is disabled in ${this.environment}`,
+        );
+      }
+    }
 
     if (override && this.environment === "production") throw new RuntimeConfigError("MODEL_OVERRIDE_FORBIDDEN", "Runtime model overrides are disabled in production");
     const profileId = override?.model_profile ?? binding.model_profile;
@@ -24,7 +57,9 @@ export class ModelRegistryResolver {
     if (!provider) throw new RuntimeConfigError("MODEL_PROVIDER_NOT_CONFIGURED", `Unknown provider '${alias.provider}'`);
     if (!(provider.enabled_environments ?? []).includes(this.environment)) throw new RuntimeConfigError("MODEL_PROVIDER_ENVIRONMENT_DISABLED", `Provider '${alias.provider}' disabled in ${this.environment}`);
 
-    const effectiveRuntime = { ...registry.runtime_defaults, ...profile.runtime };
+    const effectiveRuntime = profile.inherit_runtime_defaults === false
+      ? { ...(profile.runtime ?? {}) }
+      : { ...registry.runtime_defaults, ...profile.runtime };
     if (override?.timeout_ms !== undefined) effectiveRuntime.timeout_ms = override.timeout_ms;
     return Object.freeze({
       model_profile: profileId,

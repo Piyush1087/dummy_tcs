@@ -2,6 +2,12 @@ id: identity_test
 version: 0.1-working
 status: WORKING
 
+m2_authority:
+  classification: TEST_ONLY_COMPATIBILITY_ONLY
+  production_default_route: false
+  legacy_gatekeeper_scope: EXPLICIT_COMPATIBILITY_ONLY
+  current_product_authority: false
+
 purpose: Execute the frozen Brand Intelligence > Identity branch end-to-end in development/testing without onboarding-specific checkpoints, domain verification, scan-admission safeguards, 7-day reuse, or onboarding locks. This profile is the first executable reference profile for validating the Intelligence Compiler, model/runtime configuration, Prompt Builder, Evidence Acquisition, output validation, persistence mapping, parallel execution, and runtime telemetry.
 
 profile_type: TEST

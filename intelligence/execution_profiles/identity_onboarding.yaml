@@ -2,6 +2,13 @@ id: identity_onboarding
 version: 1.0-frozen
 status: FROZEN
 
+m2_authority:
+  classification: STALE_FOR_PRODUCTION
+  role: COMPATIBILITY_REFERENCE
+  production_default_route: false
+  mandatory_identity_checkpoint_current_authority: false
+  retirement_gate: M2.5_SYSTEMS_ARCHITECT_APPROVAL_REQUIRED
+
 purpose: Execute Brand Intelligence > Identity for onboarding after the application/scan-admission layer permits a fresh scan, including fast eligibility classification, parallel website evidence acquisition, core Identity extraction, early Identity checkpoint, provisional user edits, domain verification, canonical commit, and dependent Identity intelligence.
 
 architecture_boundary:

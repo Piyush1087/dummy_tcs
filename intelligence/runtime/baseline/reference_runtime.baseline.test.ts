@@ -124,7 +124,10 @@ describe("M2.0 reference runtime baseline", () => {
     const resolver = new ModelRegistryResolver(yaml, "test");
 
     await expect(
-      resolver.resolve("industry_classification", "gatekeeper"),
+      resolver.resolve("industry_classification", "gatekeeper", undefined, {
+        compatibility_mode: true,
+        execution_profile_id: "identity_test",
+      }),
     ).resolves.toMatchObject({
       model_profile: "fast_classification",
       access_mode: "website_direct",

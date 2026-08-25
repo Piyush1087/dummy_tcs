@@ -5,6 +5,12 @@ engine: brand_intelligence
 branch: identity
 purpose: Exercise the complete Identity runtime in dry-run mode before connecting it to the production onboarding trigger.
 
+m2_authority:
+  classification: TEST_ONLY_COMPATIBILITY_ONLY
+  production_default_route: false
+  legacy_gatekeeper_scope: EXPLICIT_COMPATIBILITY_ONLY
+  current_product_authority: false
+
 defaults:
   persist_results: false
   allow_parallelism: true
@@ -59,7 +65,7 @@ tasks:
     evidence_requirement: market_geography_website_plus_optional_similarweb_instagram
 
 execution_notes:
-  - Gatekeeper remains Gemini direct website access for MVP.
+  - The legacy test Gatekeeper remains Gemini direct website access only for explicit Identity compatibility execution.
   - Website evidence acquisition for downstream processors may begin concurrently while Gatekeeper is running; processor execution waits for required dependencies/evidence.
   - After Gatekeeper succeeds, identity_core executes.
   - After identity_core succeeds, industry_niche, reporting_currency and market_geography can execute concurrently because their dependencies are satisfied.

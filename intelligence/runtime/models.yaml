@@ -23,6 +23,13 @@ providers:
     enabled_environments: [development, test, production]
 
 model_aliases:
+  gemini_gatekeeper_v1:
+    provider: google_gemini
+    model_id: gemini-2.5-flash
+    lifecycle: FROZEN_GATEKEEPER_V1_PROJECTION
+    authority_source: intelligence/runtime/execution_profiles/gatekeeper_scan.yaml
+    intended_use: Projection of the frozen Gatekeeper primary site-assessment model.
+
   gemini_fast_current:
     provider: google_gemini
     model_id: gemini-3.5-flash
@@ -42,6 +49,15 @@ model_aliases:
     intended_use: Cross-provider structured-output fallback for bounded Brand Preview synthesis when the primary model path is technically exhausted.
 
 model_profiles:
+  gatekeeper_v1_primary:
+    description: Checked runtime projection of the frozen gatekeeper_scan primary assessment stage.
+    model_alias: gemini_gatekeeper_v1
+    inherit_runtime_defaults: false
+    intended_processors: [gatekeeper_site_assessment]
+    authority_source: intelligence/runtime/execution_profiles/gatekeeper_scan.yaml
+    authority_stage: primary_site_assessment
+    requested_capability: gatekeeper_primary_web_assessment
+
   fast_classification:
     description: Low-latency constrained classification against controlled taxonomies.
     model_alias: gemini_fast_current
@@ -74,8 +90,18 @@ model_profiles:
     fallback_only: true
 
 processor_model_bindings:
+  gatekeeper_site_assessment:
+    default:
+      model_profile: gatekeeper_v1_primary
+      access_mode: gatekeeper_profile_authority
+      authority_source: intelligence/runtime/execution_profiles/gatekeeper_scan.yaml
   industry_classification:
-    gatekeeper: {model_profile: fast_classification, access_mode: website_direct}
+    gatekeeper:
+      model_profile: fast_classification
+      access_mode: website_direct
+      compatibility_only: true
+      compatibility_profile: identity_test
+      allowed_environments: [development, test]
     industry_niche: {model_profile: grounded_extraction, access_mode: normalized_evidence}
   identity_core:
     default: {model_profile: grounded_extraction, access_mode: normalized_evidence}
@@ -134,6 +160,8 @@ failure_policy:
 
 identity_test_readiness:
   default_model_decision: Gemini 3.5 Flash for all Identity AI processor profiles for MVP; optimize/split later based on observed latency, quality and cost.
+  m2_authority: TEST_ONLY_COMPATIBILITY_ONLY
+  gatekeeper_note: The legacy Identity Gatekeeper binding is not standalone Gatekeeper authority and requires explicit non-production identity_test context.
   blocked_until:
     - GEMINI_API_KEY is available in the execution environment
     - Gemini runtime adapter supports website_direct for the Gatekeeper path
