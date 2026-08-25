@@ -1,5 +1,5 @@
 version: "1.0"
-status: PROPOSED_FOR_SYSTEMS_ARCHITECT_FREEZE
+status: FROZEN
 owner_engine: brand_intelligence
 id: audience_persona_synthesis
 owning_branch: audience
