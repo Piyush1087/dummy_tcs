@@ -51,10 +51,12 @@ capabilities:
       - one_playful_headline_insufficient_for_playful_personality
       - repeated_representative_patterns_may_support_derived_personality
   brand_user_input_and_confirmations:
-    required_for_processor: true
+    required_for_processor: false
+    optional_for_mvp: true
     source_class: BRAND_USER_INPUT
     item_semantics: [USER_AUTHORED_BRAND_VALUE, USER_AUTHORED_BRAND_PERSONALITY, USER_SUPPLIED_CHARACTER_CONTEXT]
     rules:
+      - absence_does_not_block_processor_execution
       - unconfirmed_input_is_evidence
       - protected_brand_confirmed_items_supplied_separately
 
@@ -100,5 +102,6 @@ validation_invariants:
   - one_off_positive_wording_cannot_establish_durable_character
   - visual_style_does_not_establish_personality
   - instagram_optional_not_required
+  - optional_user_input_absence_does_not_block_mvp_execution
   - protected_brand_confirmed_items_separate_authority_context
   - every_item_has_evidence_ref
