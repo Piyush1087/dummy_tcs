@@ -61,7 +61,7 @@ Reconnect uses the same Creator Shop callback / redirect URI contract as Connect
 |---|---|---|---|
 | SC-IG-001 | Wrong account on first connect | `MVP_RESOLVED` | Do not activate or overwrite Brand identity. Clear staged candidate credentials, return to unconnected state, show expected vs authenticated handle, offer reconnect. |
 | SC-IG-002 | Wrong account during reconnect with valid existing connection | `MVP_RESOLVED` | Reject candidate and preserve existing valid connection unchanged. |
-| SC-IG-003 | Username changes on same Instagram account | `MVP_RESOLVED` | Bind verified connection to provider stable account ID. Same ID + new username updates canonical/display handle and records identity change. |
+| SC-IG-003 | Username changes on same Instagram account | `MVP_RESOLVED` | Bind verified connection to provider-product-specific stable account ID. Same ID + new username updates canonical/display handle and records identity change. Username is mutable presentation identity, not the provider identity key. |
 | SC-IG-004 | Brand intentionally changes its Instagram account after Brand Preview | `MVP_RESOLVED` | Allow only through a controlled **Settings-only, Brand-Owner initiated `Change Instagram account` flow**. It is not a free-text field. New account must complete OAuth/provider verification before canonical replacement. Same-account username rename remains SC-IG-003. |
 | SC-IG-005 | Basic Profile granted, Insights withheld | `MVP_RESOLVED` | `PARTIALLY_CONNECTED`; show `Permission missing / Needs revalidation`; Basic usable, Insights unavailable; CTA becomes `Reconnect`. |
 | SC-IG-006 | Permission evidence absent/ambiguous | `MVP_RESOLVED` + `MVP_IMPLEMENTATION_GAP` | Never assume full access. Mark capability `UNKNOWN / NEEDS_REVALIDATION`; require positive evidence. |
@@ -88,8 +88,14 @@ Reconnect uses the same Creator Shop callback / redirect URI contract as Connect
 | SC-IG-027 | Reporting after provider-data deletion | `MVP_RESOLVED` | Do not render deleted raw facts from stale caches; distinguish retained Creator Shop analysis from current provider reporting. |
 | SC-IG-028 | Platform-wide `Delete my data/account` | `DEFERRED_V2` | Separate privacy/data-lifecycle program. See `docs/product/future/v2/privacy/platform_data_deletion_v2_requirements.md`. |
 | SC-IG-029 | Facebook Login future expansion | `DEFERRED_V2` + `PROVIDER_RESEARCH_PENDING` | Separate product card, token model, permission/capability state; shared lifecycle primitives only where genuinely common. MVP frontend shows Instagram Login only. |
-| SC-IG-030 | Creator Marketplace API assumption | `PROVIDER_RESEARCH_PENDING` | Do not promise/show API capability until official Meta availability and Creator Shop approval are verified. |
+| SC-IG-030 | Instagram Creator Marketplace API | `API_EXISTENCE_VERIFIED` + `DEFERRED_V2` | Public Meta material indicates an Instagram Creator Marketplace API exists. Creator Shop is not configured/approved for it and must not expose or promise the capability in MVP. Exact scopes, eligibility, App Review/Advanced Access and implementation contract must be revalidated against official Meta documentation immediately before implementation. |
 | SC-IG-031 | TikTok/YouTube/Shopify/GA4/Gmail future connections | `DEFERRED_V2` | Connection Centre expands by domain; do not force all providers into identical permissions/data-retention semantics. |
+| SC-IG-032 | Long-lived token nearing expiry | `MVP_RESOLVED` + `MVP_IMPLEMENTATION_GAP` | Proactively refresh before expiry where the official Instagram Login contract supports it. Persist obtained/expiry timestamps. A successful refresh updates the encrypted token/expiry without changing Brand identity. Do not wait for predictable expiry before attempting maintenance. |
+| SC-IG-033 | Token refresh succeeds but capability/permission is reduced | `MVP_RESOLVED` | Revalidate capability after refresh. If Insights is no longer positively granted, downgrade from full connection to `PARTIALLY_CONNECTED / NEEDS_REVALIDATION`; never preserve stale `CONNECTED_FULL` solely because token refresh succeeded. |
+| SC-IG-034 | OAuth/token succeeds but initial profile/insights sync fails | `MVP_RESOLVED` | Separate authorization health from data-sync readiness. Valid identity + transient provider/data error becomes `CONNECTED_SYNC_DEGRADED`; confirmed missing permission becomes partial/revalidation state. Do not mark the provider disconnected solely because initial ingestion failed. |
+| SC-IG-035 | Deauthorization/deletion callback references an already-removed or unknown connection | `MVP_RESOLVED` | Process safely and idempotently. Never use a missing mapping to guess another workspace/user. Record diagnostic/audit context and return the provider-appropriate acknowledgement without recreating data. |
+| SC-IG-036 | User clicks Disconnect repeatedly / duplicate disconnect events arrive | `MVP_RESOLVED` | Disconnect is idempotent. Once credentials are removed and connection is inactive, repeated valid disconnect/revocation operations are safe no-ops plus audit/diagnostic events. |
+| SC-IG-037 | Provider/app-level rate limiting | `MVP_RESOLVED` | Treat rate limiting as sync degradation, not identity revocation. Retry/back off according to provider guidance; preserve `CONNECTED` authorization state and last-success timestamp. App-level exhaustion should be observable to Creator Shop support/operations rather than blamed on the Brand user. |
 
 ---
 
@@ -107,6 +113,25 @@ known_data_gap / unrecoverable_window
 ```
 
 Campaign, Collaboration, Brand Intelligence and reporting must never present stale, disconnected or deleted provider data as current truth.
+
+## Connection lifecycle audit invariant
+
+Sensitive connection activity should produce reusable platform audit events rather than requiring a Social-Connect-only permanent audit system. Relevant events include:
+
+```text
+CONNECT_STARTED
+CONNECTED
+PERMISSION_MISSING
+TOKEN_REFRESHED
+TOKEN_REFRESH_FAILED
+USERNAME_CHANGED
+PROVIDER_REVOKED
+MANUAL_DISCONNECT
+DATA_DELETION_REQUESTED
+DATA_DELETION_COMPLETED
+```
+
+The eventual global audit/change-log architecture owns durable cross-product audit history; Social Connect supplies the event facts and actor/system context.
 
 ## Connection Centre extension pattern
 
@@ -128,16 +153,26 @@ Productivity & Communication
 - additional workspace providers
 ```
 
+## Research interpretation rule
+
+Public GitHub/Copilot research is pattern evidence only. It must not override Product Authority or current official provider documentation. In particular:
+
+- do not copy guessed exact callback deadlines/retention periods into Product contracts without official verification;
+- do not assume every provider token is non-expiring;
+- do not retain all future Facebook Page tokens by default; use least privilege and explicit selected Brand/Page relationships;
+- do not assume derived analytics survive a provider deletion merely because they are labelled analytical; apply the frozen data-lineage policy;
+- exact Instagram refresh/scope-validation endpoints must be checked against current official Meta documentation at implementation time.
+
 ## Future research package
 
-Separate Meta/Postman/public-GitHub research should validate:
+Separate Meta/Postman/public-GitHub research should continue to validate:
 
 - Instagram Login deauthorization callbacks;
 - Facebook Login for Business lifecycle;
 - App Review / Advanced Access;
 - signed deletion-request handling and provider receipt requirements;
 - current Business Discovery capabilities;
-- whether a generally available Creator Marketplace API exists;
+- Creator Marketplace eligibility/scopes for Creator Shop;
 - token refresh/revalidation behavior.
 
 Research may refine implementation details but must not merge Instagram Login and Facebook Login into one Product connection.
