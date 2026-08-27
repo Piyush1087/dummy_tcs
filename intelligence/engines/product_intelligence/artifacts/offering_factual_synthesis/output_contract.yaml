@@ -126,4 +126,3 @@ scope_validation:
 readiness:
   bounded_partial_output_supported: true
   invalid_or_failed_output_replaces_current: false
-

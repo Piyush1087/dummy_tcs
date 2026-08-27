@@ -98,4 +98,3 @@ readiness:
   bounded_partial_output_supported: true
   final_campaign_copy_generated: false
   invalid_or_failed_output_replaces_current: false
-

@@ -1,7 +1,7 @@
 # Product Intelligence V1
 
-**Status:** FROZEN SEMANTIC CONTRACT  
-**Scope:** P0 semantic contract materialization only  
+**Status:** FROZEN SEMANTIC CONTRACT
+**Scope:** P0 semantic contract materialization only
 **Product authority:** `intelligence/product_authority/product_intelligence_product_authority_register_v1.md`
 
 ## Purpose
@@ -62,4 +62,3 @@ Canonical price and currency are one commercial tuple and remain application-own
 - final Campaign Brief copy
 - Product change-history processor or Object
 - SKU, variant, inventory, nested Bundle, or provisioning semantics
-

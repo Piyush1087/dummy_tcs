@@ -112,4 +112,3 @@ validation_invariants:
   - Every claim-sensitive item has sufficient same-Offering support.
   - Brand confirmation is not external verification.
   - Mutates no canonical application state.
-
