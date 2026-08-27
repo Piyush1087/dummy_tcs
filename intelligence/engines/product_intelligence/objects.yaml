@@ -1,5 +1,5 @@
 version: "1.0"
-status: FROZEN
+status: REVIEW_PENDING
 engine: product_intelligence
 contract: objects
 scope: ONE_EXACT_CANONICAL_OFFERING_WITHIN_ONE_BRAND
@@ -41,10 +41,15 @@ shared_object_rules:
     processor_must_not_emit: [BRAND_CONFIRMED, SUPPORT_CONTROLLED]
     brand_confirmation_transition_owner: authorized_application_or_business_state_action
   readiness:
-    states: [READY, PARTIAL, NOT_READY, FAILED]
+    states: [READY, PARTIAL, NOT_READY]
     consumer_scoped: true
     partial_must_be_usable_bounded_degradation: true
     filler: forbidden
+    processor_execution_failure:
+      object_readiness_state_created: false
+      failed_refresh_replaces_prior_current: false
+      readiness_when_no_current_result: NOT_READY
+      failure_exposed_by_runtime_independently: true
   freshness:
     states: [CURRENT, STALE, UNKNOWN]
     no_universal_ttl: true
@@ -104,7 +109,7 @@ objects:
       READY: all emitted semantics are grounded and sufficient for the declared consumer
       PARTIAL: a useful grounded subset exists while unsupported families remain null or absent
       NOT_READY: no safe useful factual understanding can be produced for the declared consumer
-      FAILED: execution failed and must not replace current output
+      processor_execution_failure: does not create Object readiness; prior current remains, or readiness is NOT_READY when no current result exists
     freshness_semantics:
       policy: canonical Offering or materially supporting same-Offering Evidence change may stale only affected paths
       proof_points_refresh_independently: true
@@ -160,7 +165,7 @@ objects:
       READY: emitted ingredients are grounded and safe for the declared reusable consumer
       PARTIAL: a safe useful subset exists and unsupported claims/constraints are absent
       NOT_READY: no safely reusable creator communication ingredient is defensible
-      FAILED: execution failed and must not replace current output
+      processor_execution_failure: does not create Object readiness; prior current remains, or readiness is NOT_READY when no current result exists
     freshness_semantics:
       policy: factual-profile, protected Offering guidance, Brand constraint, or proof change stales affected items only
     canonical_application_state_inputs:
@@ -212,7 +217,7 @@ objects:
       READY: actionable interpretation is grounded in current canonical inputs and sufficient Evidence for the declared consumer
       PARTIAL: a bounded action or commercial interpretation is safe while other context is unresolved
       NOT_READY: no safe customer action or commercial interpretation can be asserted
-      FAILED: execution failed and must not replace current output
+      processor_execution_failure: does not create Object readiness; prior current remains, or readiness is NOT_READY when no current result exists
     freshness_semantics:
       policy: lifecycle, destination, commercial tuple, Offer ref, Location relation, or supporting same-Offering Evidence change stales affected paths
       commercial_context_high_refresh_sensitivity: true

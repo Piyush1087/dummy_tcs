@@ -1,6 +1,6 @@
 processor_id: offering_factual_synthesis
 version: "1.0"
-status: FROZEN
+status: REVIEW_PENDING
 engine: product_intelligence
 processor_type: AI_REASONING
 owned_object: offering_factual_profile
@@ -51,6 +51,11 @@ readiness_and_admission_rules:
   active_lifecycle_required_for_new_campaign_use: true
   conflicts_with_protected_state: compare_only_not_replacement
   no_filler_to_force_ready: true
+  processor_execution_failure:
+    object_readiness_state_created: false
+    failed_refresh_replaces_prior_current: false
+    readiness_when_no_current_result: NOT_READY
+    failure_exposed_by_runtime_independently: true
 
 partial_output_behavior:
   supported: true

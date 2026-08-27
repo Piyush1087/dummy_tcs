@@ -1,6 +1,6 @@
 id: offering_actionability_synthesis_output_contract
 version: "1.0"
-status: FROZEN
+status: REVIEW_PENDING
 processor: offering_actionability_synthesis
 object: offering_actionability_profile
 strict: true

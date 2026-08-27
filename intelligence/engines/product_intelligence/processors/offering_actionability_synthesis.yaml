@@ -1,6 +1,6 @@
 processor_id: offering_actionability_synthesis
 version: "1.0"
-status: FROZEN
+status: REVIEW_PENDING
 engine: product_intelligence
 processor_type: HYBRID
 owned_object: offering_actionability_profile
@@ -63,6 +63,11 @@ readiness_and_admission_rules:
   active_lifecycle_required_for_new_campaign_use: true
   inactive_offering_may_retain_historical_intelligence: true
   no_filler_to_force_ready: true
+  processor_execution_failure:
+    object_readiness_state_created: false
+    failed_refresh_replaces_prior_current: false
+    readiness_when_no_current_result: NOT_READY
+    failure_exposed_by_runtime_independently: true
 
 partial_output_behavior:
   supported: true

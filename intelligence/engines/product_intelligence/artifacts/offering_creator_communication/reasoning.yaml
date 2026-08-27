@@ -1,6 +1,6 @@
 id: offering_creator_communication_reasoning
 version: "1.0"
-status: FROZEN
+status: REVIEW_PENDING
 processor: offering_creator_communication
 engine: product_intelligence
 processor_definition: intelligence/engines/product_intelligence/processors/offering_creator_communication.yaml

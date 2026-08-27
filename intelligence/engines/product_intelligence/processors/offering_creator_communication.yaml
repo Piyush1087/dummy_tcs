@@ -1,6 +1,6 @@
 processor_id: offering_creator_communication
 version: "1.0"
-status: FROZEN
+status: REVIEW_PENDING
 engine: product_intelligence
 processor_type: AI_REASONING
 owned_object: offering_creator_communication_profile
@@ -48,6 +48,11 @@ readiness_and_admission_rules:
   protected_guidance_is_comparison_or_constraint_context_not_replacement_target: true
   active_lifecycle_required_for_new_campaign_use: true
   no_filler_to_force_ready: true
+  processor_execution_failure:
+    object_readiness_state_created: false
+    failed_refresh_replaces_prior_current: false
+    readiness_when_no_current_result: NOT_READY
+    failure_exposed_by_runtime_independently: true
 
 partial_output_behavior:
   supported: true

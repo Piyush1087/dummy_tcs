@@ -1,6 +1,6 @@
 # Product Intelligence V1
 
-**Status:** FROZEN SEMANTIC CONTRACT
+**Status:** REVIEW_PENDING
 **Scope:** P0 semantic contract materialization only
 **Product authority:** `intelligence/product_authority/product_intelligence_product_authority_register_v1.md`
 
@@ -37,7 +37,7 @@ Evidence-to-Offering reconciliation is deterministic application/Data Extraction
 
 ## Progressive maturity
 
-Profiles may be `READY`, `PARTIAL`, `NOT_READY`, or `FAILED` under shared readiness vocabulary, independently of `CURRENT`, `STALE`, or `UNKNOWN` freshness. Contract-valid partial results and explicit nulls are preferred to filler. Consumer readiness is evaluated per consumer.
+Profiles use exactly `READY`, `PARTIAL`, or `NOT_READY` under shared readiness vocabulary, independently of `CURRENT`, `STALE`, or `UNKNOWN` freshness. Processor execution failure is reported by the runtime and does not create an Object readiness state: a failed refresh does not replace prior current output, and without a current result Object readiness remains `NOT_READY`. Contract-valid partial results and explicit nulls are preferred to filler. Consumer readiness is evaluated per consumer.
 
 Only an `ACTIVE` canonical Offering may be selected for a new Campaign. Product Intelligence readiness never changes canonical lifecycle and does not itself authorize Campaign use.
 

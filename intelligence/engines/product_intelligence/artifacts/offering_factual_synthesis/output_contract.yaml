@@ -1,6 +1,6 @@
 id: offering_factual_synthesis_output_contract
 version: "1.0"
-status: FROZEN
+status: REVIEW_PENDING
 processor: offering_factual_synthesis
 object: offering_factual_profile
 strict: true
