@@ -1,6 +1,6 @@
 processor_id: offering_creator_communication
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 engine: product_intelligence
 processor_type: AI_REASONING
 owned_object: offering_creator_communication_profile

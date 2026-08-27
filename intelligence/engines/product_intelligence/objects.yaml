@@ -1,5 +1,5 @@
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 engine: product_intelligence
 contract: objects
 scope: ONE_EXACT_CANONICAL_OFFERING_WITHIN_ONE_BRAND

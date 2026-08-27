@@ -1,6 +1,6 @@
 id: product_intelligence_evidence_requirements
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 engine: product_intelligence
 scope: ONE_EXACT_CANONICAL_OFFERING_WITHIN_ONE_BRAND
 shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml

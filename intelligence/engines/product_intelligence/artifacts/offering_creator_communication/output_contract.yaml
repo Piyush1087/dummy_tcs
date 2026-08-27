@@ -1,6 +1,6 @@
 id: offering_creator_communication_output_contract
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 processor: offering_creator_communication
 object: offering_creator_communication_profile
 strict: true

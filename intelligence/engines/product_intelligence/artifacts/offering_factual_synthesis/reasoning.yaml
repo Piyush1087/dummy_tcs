@@ -1,6 +1,6 @@
 id: offering_factual_synthesis_reasoning
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 processor: offering_factual_synthesis
 engine: product_intelligence
 processor_definition: intelligence/engines/product_intelligence/processors/offering_factual_synthesis.yaml

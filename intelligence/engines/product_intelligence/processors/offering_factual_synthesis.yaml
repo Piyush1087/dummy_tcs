@@ -1,6 +1,6 @@
 processor_id: offering_factual_synthesis
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 engine: product_intelligence
 processor_type: AI_REASONING
 owned_object: offering_factual_profile

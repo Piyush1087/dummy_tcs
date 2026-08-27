@@ -1,6 +1,6 @@
 # Product Intelligence V1
 
-**Status:** REVIEW_PENDING
+**Status:** FROZEN
 **Scope:** P0 semantic contract materialization only
 **Product authority:** `intelligence/product_authority/product_intelligence_product_authority_register_v1.md`
 

@@ -1,6 +1,6 @@
 processor_id: offering_actionability_synthesis
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 engine: product_intelligence
 processor_type: HYBRID
 owned_object: offering_actionability_profile
