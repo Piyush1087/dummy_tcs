@@ -1,6 +1,6 @@
 # Canonical Offering Price Refresh V1
 
-**Status:** REVIEW_PENDING
+**Status:** FROZEN
 **Version:** 1.0
 **Date:** 2026-08-28
 **Owner:** Application backend / canonical Offering state
