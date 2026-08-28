@@ -1,0 +1,176 @@
+id: owned_website.offering_commercial_evidence
+version: "1.0"
+status: REVIEW_PENDING
+owner: data_extraction_engine
+source_class: OWNED_WEBSITE
+shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
+
+purpose: >-
+  Observe durable first-party exact-Offering commercial Evidence that may support
+  later deterministic canonical Offering price reconciliation. This capability
+  preserves Evidence only and never owns or mutates canonical Offering price state.
+
+authority_boundary:
+  observed_commercial_evidence_owner: data_extraction_engine
+  canonical_offering_identity_owner: application_backend
+  canonical_offering_price_owner: application_backend
+  canonical_price_reconciliation_owner: application_backend
+  canonical_truth_selection_owner: application_backend
+  data_extraction_may_carry_existing_application_supplied_exact_canonical_offering_ref: true
+  data_extraction_may_create_or_merge_offerings: false
+  data_extraction_may_resolve_or_fuzzy_match_offering_identity: false
+  data_extraction_may_mutate_offering_price_state: false
+  data_extraction_may_advance_offering_price_revision: false
+  data_extraction_may_choose_winning_conflicting_price: false
+  data_extraction_may_perform_fx_conversion: false
+  data_extraction_may_invent_discounts: false
+  data_extraction_may_infer_catalogue_completeness: false
+  data_extraction_may_mix_sibling_offering_prices: false
+
+exact_offering_scope:
+  required:
+    - same_brand
+    - existing_brand_owned_canonical_offering
+    - explicit_application_reconciliation
+    - exact_reconciled_resource_and_capture
+    - offering_detail_page_role
+    - offering_specific_single_offering_semantics
+  page_role: OFFERING_DETAIL
+  subject_scope: OFFERING_SPECIFIC
+  canonical_offering_ref_source: existing_application_reconciliation_only
+  url_equality_is_canonical_identity: false
+  broad_category_or_multi_offering_may_inherit_one_offering_ref: false
+  sibling_resource_or_capture_may_inherit_one_offering_ref: false
+
+item_semantic: exact_offering_commercial_observation
+normalized_payload:
+  type: object
+  additional_properties: false
+  required:
+    - source_url
+    - source_locator
+    - page_role
+    - subject_scope
+    - authorship
+    - evidence_semantic
+    - canonical_offering_ref
+    - observed_price_mode
+    - current_min_amount
+    - current_max_amount
+    - regular_reference_min_amount
+    - regular_reference_max_amount
+    - currency
+    - sale_or_reference_relationship
+    - explicit_not_publicly_listed
+    - observed_at
+    - commercial_context
+    - observation_source
+  fields:
+    source_url: {type: string, format: uri}
+    source_locator: {type: string, min_length: 1, max_length: 160}
+    page_role: {type: enum, values: [OFFERING_DETAIL]}
+    subject_scope: {type: enum, values: [OFFERING_SPECIFIC]}
+    authorship: {type: enum, values: [BRAND_AUTHORED]}
+    evidence_semantic: {type: enum, values: [exact_offering_commercial_observation]}
+    canonical_offering_ref: {type: string, min_length: 1, rule: existing_application_supplied_exact_ref_only}
+    observed_price_mode: {type: enum, values: [EXACT, STARTING_AT, RANGE, NOT_PUBLICLY_LISTED]}
+    current_min_amount: {type: [number, "null"], nullable: true, minimum: 0}
+    current_max_amount: {type: [number, "null"], nullable: true, minimum: 0}
+    regular_reference_min_amount: {type: [number, "null"], nullable: true, minimum: 0}
+    regular_reference_max_amount: {type: [number, "null"], nullable: true, minimum: 0}
+    currency: {type: [string, "null"], nullable: true, pattern: "^[A-Z]{3}$", rule: defensible_iso_4217_style_value_only}
+    sale_or_reference_relationship: {type: enum, values: [CURRENT_ONLY, CURRENT_IS_SALE_WITH_REGULAR_REFERENCE, NOT_APPLICABLE]}
+    explicit_not_publicly_listed: {type: boolean}
+    observed_at: {type: timestamp, format: date-time, rule: inherited_capture_timestamp}
+    commercial_context: {type: string, min_length: 1, max_length: 600}
+    observation_source: {type: enum, values: [HTML, JSON_LD]}
+
+price_mode_rules:
+  EXACT:
+    meaning: one_explicit_current_same_offering_amount
+    current_min_amount: required
+    current_max_amount: must_equal_current_min_amount
+    explicit_not_publicly_listed: false
+  STARTING_AT:
+    meaning: explicit_first_party_from_or_starting_at_minimum
+    current_min_amount: required
+    current_max_amount: null
+    explicit_not_publicly_listed: false
+  RANGE:
+    meaning: explicit_same_offering_same_commercial_unit_ascending_minimum_and_maximum
+    current_min_amount: required
+    current_max_amount: required_and_greater_than_current_min_amount
+    explicit_not_publicly_listed: false
+  NOT_PUBLICLY_LISTED:
+    meaning: explicit_first_party_non_public_or_contact_for_pricing_statement
+    current_min_amount: null
+    current_max_amount: null
+    regular_reference_min_amount: null
+    regular_reference_max_amount: null
+    sale_or_reference_relationship: NOT_APPLICABLE
+    explicit_not_publicly_listed: true
+  missing_price_is_not_not_publicly_listed: true
+  regular_reference_plus_current_is_not_range: true
+  multiple_sibling_prices_are_not_range: true
+
+reference_amount_rules:
+  CURRENT_IS_SALE_WITH_REGULAR_REFERENCE:
+    regular_reference_min_amount: required
+    regular_reference_max_amount: required
+  CURRENT_ONLY:
+    regular_reference_min_amount: null
+    regular_reference_max_amount: null
+
+currency_rules:
+  allowed_when: source_or_application_context_defensibly_supports_iso_4217_style_three_letter_value
+  ambiguous_currency: null
+  ambiguous_symbol_alone_is_sufficient: false
+  fx_conversion: forbidden
+  currency_remains_part_of_observed_commercial_tuple: true
+
+conflict_behavior:
+  html_and_json_ld_agreement: supporting_observations_may_share_semantic_support
+  html_and_json_ld_disagreement: preserve_conflicting_observations
+  data_extraction_selects_canonical_winner: false
+  canonical_conflict_resolution_owner: application_backend
+
+execution_behavior:
+  zero_evidence_items_can_be_valid: true
+  absence_of_price_emits_negative_evidence: false
+  no_explicit_exact_offering_commercial_observation_reason: NO_EXPLICIT_EXACT_OFFERING_COMMERCIAL_OBSERVATION
+
+freshness_and_lineage:
+  freshness_values: [CURRENT, POSSIBLY_STALE, UNKNOWN]
+  product_specific_freshness_vocabulary: forbidden
+  preserve:
+    - resource
+    - capture
+    - content_artifact_where_applicable
+    - capability_execution
+    - evidence
+    - semantic_observation_support_and_conflict
+    - source_locator
+    - provider_lineage
+    - observed_timestamp
+
+acquisition:
+  allowed_current_mechanisms:
+    - direct_owned_site_fetch
+    - existing_zyte_fallback
+    - bounded_cheerio_static_parsing
+  new_provider: forbidden
+  meta_required: false
+  similarweb_required: false
+  competitor_source_required: false
+
+validation_invariants:
+  - normalized_payload_matches_strict_backend_contract
+  - observation_source_is_html_or_json_ld
+  - exact_offering_scope_fails_closed
+  - canonical_offering_ref_never_created_by_extraction
+  - canonical_price_state_never_mutated_by_extraction
+  - conflicts_preserved_without_truth_selection
+  - explicit_not_publicly_listed_distinct_from_missing_price
+  - currency_nullable_when_ambiguous
+  - no_fx_conversion
+  - valid_execution_may_emit_zero_evidence_items
