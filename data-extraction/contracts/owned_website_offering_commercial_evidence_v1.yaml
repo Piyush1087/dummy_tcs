@@ -1,6 +1,6 @@
 id: owned_website.offering_commercial_evidence
 version: "1.0"
-status: REVIEW_PENDING
+status: FROZEN
 owner: data_extraction_engine
 source_class: OWNED_WEBSITE
 shared_envelope: data-extraction/contracts/normalized_evidence_envelope_v1.yaml
