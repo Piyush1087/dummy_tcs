@@ -2,7 +2,7 @@
 
 **Artifact:** `C03_FINITE_EXECUTION_PLAN_V1`
 **Module:** C-03 — Creator Campaign Participation / Apply
-**Status:** READY FOR PARENT ACCEPTANCE
+**Status:** ACCEPTED
 **Execution authorization:** NOT YET GRANTED
 
 ## 1. Objective and terminal condition
@@ -149,7 +149,7 @@ Allowed scope: C-03 Opportunity module, C-01 continuation extension, C-05 policy
 Deliver:
 
 - one `CampaignOpportunityPolicyService` and discriminated redaction DTO;
-- Owner/Manager/Assistant VIEW + APPLY over Owner subject;
+- Owner/Manager/Assistant VIEW + APPLY over Owner subject, with `APPLY` limited to explicit submission;
 - provider-neutral Instagram evaluator/fixtures;
 - PUBLIC/ELIGIBLE/INVITE policy with canonical invitation bind/expiry/revoke;
 - typed C-01 Campaign continuation and safe ingress attribution;
@@ -166,7 +166,7 @@ Deliver:
 
 - Submit transaction, immutable snapshot, scoped idempotency, same-opportunity policy, both quotas, and attribution conversion;
 - My Applications/detail with historical access independent of Instagram;
-- serialized Withdraw/Approve/Reject/Expire;
+- serialized Withdraw/Approve/Reject/Expire, with WITHDRAW_PENDING limited to current Owner/Manager actors and denied to Assistant;
 - independent siblings and stable reason codes;
 - legacy Creator Apply retirement and read-only compatibility boundary.
 
@@ -247,6 +247,7 @@ Run against the accepted P1 integration SHA on Node 20 and isolated real Postgre
 - double Submit same key/same input and same key/different input;
 - different keys for same opportunity;
 - Owner + Assistant concurrent Submit;
+- Owner/Manager Withdraw authorization and Assistant Withdraw denial, including stale-role revalidation under lock;
 - concurrent third Campaign Application;
 - concurrent sixth Brand Application across Campaigns;
 - membership removal, Instagram revoke, Campaign/Asset/Brief pause, and invitation revoke/bind versus Submit;
@@ -267,7 +268,7 @@ Deliver:
 - gated and authorized full Opportunity dossier;
 - Asset/Brief explorer and read-only SideDrawers;
 - optimized selection/review/explicit Submit;
-- independent post-submit Application cards, Withdraw, history, and Collaboration link;
+- independent post-submit Application cards, backend-projected Withdraw action for current Owner/Manager only, Assistant-without-Withdraw state, history, and Collaboration link;
 - no-image state and correct Brand identity media;
 - backend-code-driven error/recovery behavior;
 - subject-aware caches and session-switch clearing;
@@ -313,11 +314,11 @@ viewer/account class
 × direct/share/invitation/opportunities origin
 ```
 
-The oracle asserts disclosure shape, `canApply`, stable reason, required recovery, and history access independently. This guards every interaction cell without requiring a browser case for every permutation.
+The oracle asserts disclosure shape, `canApply`, `canWithdrawPending`, stable reason, required recovery, and history access independently. It proves that Assistant submission remains allowed while Assistant withdrawal is denied. This guards every interaction cell without requiring a browser case for every permutation.
 
 ### Runtime risk matrix
 
-Real PostgreSQL/API/browser scenarios cover at minimum all Product-register edge cases: guest continuation, disconnected Instagram, eligible/ineligible, valid/wrong/expired/revoked invite, Brand user, Assistant actor, mid-flow membership/provider/lifecycle changes, invalid Asset/Brief, optimized one-pair flow, Brand-only Asset, replay/concurrency/limits, terminal races, reapply, multiplicity/multiple Collaborations, FIXED/NEGOTIABLE, missing versus zero commercial/support values, attribution survival, notifications, and historical Brief Pack access.
+Real PostgreSQL/API/browser scenarios cover at minimum all Product-register edge cases: guest continuation, disconnected Instagram, eligible/ineligible, valid/wrong/expired/revoked invite, Brand user, Assistant VIEW/APPLY success and WITHDRAW_PENDING denial, Owner/Manager pending withdrawal, mid-flow membership/role/provider/lifecycle changes, invalid Asset/Brief, optimized one-pair flow, Brand-only Asset, replay/concurrency/limits, terminal races, reapply, multiplicity/multiple Collaborations, FIXED/NEGOTIABLE, missing versus zero commercial/support values, attribution survival, notifications, and historical Brief Pack access.
 
 ### Full gates
 
@@ -392,7 +393,7 @@ Stop and return to Parent only if:
 - canonical remote drift changes the audited base materially;
 - a security/privacy discovery changes Product architecture;
 - a core runner/PostgreSQL/browser/checkpoint capability becomes unavailable;
-- the bounded Stitch executor/export path cannot be activated before P2;
+- the accepted bounded Stitch executor becomes unavailable before P2;
 - live Meta/provider credentials or unauthorized identity are required;
 - scope must expand into C-04 workflow, Marketplace, payouts/KYC, Creator Centre, AWS, or unrelated Brand modules.
 
@@ -401,7 +402,7 @@ Ordinary implementation defects, tests, lint, browser layout issues, and bounded
 ## 18. Finite-plan gate
 
 ```text
-C03_FINITE_EXECUTION_PLAN = READY_FOR_PARENT_ACCEPTANCE
+C03_FINITE_EXECUTION_PLAN = ACCEPTED
 C03_EXECUTION_PACKAGES = P0 + P1.1 + P1.2 + P1.3 + P1.4 + P2 + P3 + P4 + P5 + P6 + P7
 C03_HYBRID_AUTONOMOUS_EXECUTION = NOT_YET_AUTHORIZED
 ```

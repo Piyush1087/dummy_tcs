@@ -2,7 +2,7 @@
 
 **Artifact:** `C03_PRODUCT_CONTRACT_REVALIDATION_V1`
 **Module:** C-03 — Creator Campaign Participation / Apply
-**Status:** READY FOR PARENT ACCEPTANCE
+**Status:** ACCEPTED
 **Product authority:** `docs/organization/product_decisions/c03_creator_campaign_participation_product_decision_register_v1.md`
 **Authority repository/base:** `Piyush1087/dummy_tcs@81947647e550e5bbb93664bd9684e883d4e1472c`
 
@@ -65,7 +65,7 @@ The newer feature line is the most recent materially complete legacy Creator Cam
 | Same opportunity | Reapply blocked after PENDING/APPROVED/REJECTED/SUPERSEDED; a new row may be allowed after WITHDRAWN/EXPIRED. |
 | Collaboration cardinality | Each approved Application creates at most one Collaboration. Distinct approved Applications may create distinct Collaborations. |
 | Siblings | Approval does not automatically supersede unrelated sibling Applications. |
-| Team permissions | OWNER, MANAGER, and ASSISTANT each receive VIEW + APPLY on the canonical Owner Creator subject. |
+| Team permissions | OWNER and MANAGER receive VIEW + APPLY + WITHDRAW_PENDING. ASSISTANT receives VIEW + APPLY but not WITHDRAW_PENDING. `APPLY` means explicit Application submission only. Withdrawal additionally requires a current OWNER or MANAGER actor and a PENDING Application. |
 | Actor audit | Record `actorUserId`, `actorMembershipId`, `actorRole`, and `subjectCreatorProfileId` separately. |
 | Submission | Backend-authoritative, idempotent/replay-safe, and revalidated at the command boundary. |
 | After submit | Stay on the Opportunity Page and show each Application independently with contextual actions. |
@@ -81,7 +81,7 @@ The newer feature line is the most recent materially complete legacy Creator Cam
 ## 4. Parent corrections incorporated
 
 1. Canonical implementation base and primary legacy reference are separate concepts.
-2. Owner, Manager, and Assistant share C-03 VIEW + APPLY capability over the canonical Owner subject.
+2. Owner, Manager, and Assistant share C-03 VIEW + APPLY capability over the canonical Owner subject. WITHDRAW_PENDING is separate: Owner and Manager receive it; Assistant does not. `APPLY` means Application submission, not withdrawal.
 3. Stitch is not needed to freeze architecture, but a bounded UI/UX + Stitch checkpoint is expected before frontend reconciliation for materially new C-03 screen families.
 4. Execution readiness is a hybrid topology property; it does not require the persistent ChatGPT Work environment itself to host PostgreSQL, Docker, or Playwright.
 

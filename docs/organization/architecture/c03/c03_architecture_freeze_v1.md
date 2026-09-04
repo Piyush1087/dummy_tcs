@@ -2,7 +2,7 @@
 
 **Artifact:** `C03_ARCHITECTURE_FREEZE_V1`
 **Module:** C-03 — Creator Campaign Participation / Apply
-**Status:** READY FOR PARENT ACCEPTANCE
+**Status:** ACCEPTED
 **Canonical backend base:** `development@4c5f42858b950b7cd342f8972f99f548f3daa942`
 **Canonical frontend base:** `development@323658d4b147b95b5629ff8d91fa90b8fe9077e4`
 
@@ -12,7 +12,7 @@
 PRODUCT_QUESTIONS = NONE
 ARCHITECTURE_QUESTIONS = NONE
 UNRESOLVED_CROSS_CONTRACT_CONFLICTS = NONE
-C03_ARCHITECTURE = READY_FOR_PARENT_ACCEPTANCE
+C03_ARCHITECTURE = ACCEPTED
 ```
 
 This architecture consumes the frozen C-03 Product register and accepted C-01/C-05 authority. It does not authorize implementation, production migration, AWS work, live Meta state, or C-04 workflow implementation.
@@ -131,9 +131,9 @@ Permissions are frozen:
 |---|---:|---:|---:|---:|
 | OWNER | yes | yes | yes | yes |
 | MANAGER | yes | yes | yes | yes |
-| ASSISTANT | yes | yes | yes | yes |
+| ASSISTANT | yes | yes | yes | no |
 
-For this module, `APPLY` capability covers explicit Submit and withdrawal of the same subject's still-PENDING Application; the Application state policy remains the final Withdraw gate. Every protected read resolves current active membership. Every mutation re-resolves after taking the workspace lock. An open page, stale JWT claim, old membership row, email match, or cached frontend role never authorizes a command. Applications persist actor and subject separately. Actor email and mutable handle are audit display inputs at most, never identity keys.
+For this module, `APPLY` means explicit Application submission only; it does not confer withdrawal authority. Withdrawal requires both `Application.status = PENDING` and a current OWNER or MANAGER actor. ASSISTANT may view and submit for the Owner subject but may not withdraw. Every protected read resolves current active membership. Every mutation re-resolves after taking the workspace lock. An open page, stale JWT claim, old membership row, email match, or cached frontend role never authorizes a command. Applications persist actor and subject separately. Actor email and mutable handle are audit display inputs at most, never identity keys.
 
 ## 6. Provider-neutral Instagram capability
 
@@ -379,7 +379,7 @@ PENDING → APPROVED | REJECTED | WITHDRAWN | EXPIRED
 
 C-03 does not automatically produce `SUPERSEDED`; the enum remains for legitimate history or separately authorized future behavior. Terminal-to-terminal transitions, return to PENDING, identity/selection mutation, timestamp inconsistency, and physical deletion are database-rejected.
 
-Withdraw and Brand Approve/Reject lock workspace, Campaign, and Application in the common order and perform a conditional PENDING transition. Expiry identifies candidates without claiming state, then uses the same locked transition. Exactly one concurrent terminal command wins; losers receive persisted current state/`APPLICATION_TRANSITION_CONFLICT`. History and siblings remain untouched.
+Withdraw and Brand Approve/Reject lock workspace, Campaign, and Application in the common order and perform a conditional PENDING transition. Before a Withdraw transition, the command re-resolves current membership and requires OWNER or MANAGER; ASSISTANT receives a stable authorization failure without state change. Expiry identifies candidates without claiming state, then uses the same locked transition. Exactly one concurrent authorized terminal command wins; losers receive persisted current state/`APPLICATION_TRANSITION_CONFLICT`. History and siblings remain untouched.
 
 Brand decision authority comes from the existing Campaign/Applicants Brand policy. It consumes the immutable Application; it does not rerun the Creator's current Instagram, invitation, eligibility, public inventory, or pre-application Asset/Brief gate.
 
@@ -473,7 +473,7 @@ POST /api/v1/brand-uce/campaigns/:campaignId/applications/:applicationId/reject
 
 The Opportunities collection is not PUBLIC Campaign enumeration. Candidates come only from valid invitations, authoritative eligible-target results, or a qualified direct/share Campaign ingress already bound to the subject. A PUBLIC detail link remains directly accessible even if absent from the collection.
 
-My Applications groups by Campaign in presentation while preserving independent Application IDs, statuses, selections, timestamps, actions, and Collaboration links. Cursor pagination and stable server sort are required for both collections.
+My Applications groups by Campaign in presentation while preserving independent Application IDs, statuses, selections, timestamps, actions, and Collaboration links. Each Application projection includes backend-authored action capability; `canWithdrawPending` is true only for a current OWNER or MANAGER viewing a PENDING Application. ASSISTANT retains history visibility but receives no Withdraw control, and the mutation independently re-authorizes any stale client attempt. Cursor pagination and stable server sort are required for both collections.
 
 Stable reason codes include authentication/context, Instagram recovery, eligibility unavailable/ineligible, invitation required/expired/revoked/mismatch, Campaign/Asset/Brief unavailable or mismatched, duplicate/reapply, both quota limits, transition conflict, idempotency conflict, legacy reconciliation, and Brief Pack unavailable. Frontend copy maps codes; it never derives policy from status text.
 
@@ -572,6 +572,7 @@ Implementation acceptance requires fresh 0→latest replay and legacy-shaped upg
 - same-opportunity partial uniqueness;
 - two-per-Campaign and five-per-Brand boundaries;
 - Owner + Assistant concurrent Submit;
+- Owner/Manager withdrawal of PENDING and Assistant withdrawal denial;
 - same and different idempotency keys/fingerprints;
 - Team removal, Instagram revoke, Campaign/Asset/Brief pause, and invitation bind/revoke versus Submit;
 - Withdraw versus Approve/Reject/Expire and Approve versus Reject;
@@ -589,7 +590,7 @@ Unit mocks are insufficient for these gates.
 | Previously open architecture area | Frozen answer |
 |---|---|
 | Entitlement/redaction | One backend Opportunity policy and discriminated absent-before-gate DTO. |
-| Actor/subject | C-05 resolver; all three roles VIEW + APPLY; four actor/subject audit fields persisted. |
+| Actor/subject | C-05 resolver; all three roles VIEW + APPLY; only Owner/Manager WITHDRAW_PENDING; four actor/subject audit fields persisted. |
 | Instagram/visibility | Shared pure capability plus backend eligibility/invitation authority; rechecked at Submit. |
 | Historical access | Team/subject gate only; no current Instagram/visibility dependency. |
 | Invitation | Digest-only, Campaign-bound, intended-subject evidence, monotonic binding, expiry/revocation. |
@@ -611,6 +612,6 @@ Unit mocks are insufficient for these gates.
 ```text
 C03_PRODUCT_LOGIC = FROZEN
 C03_SYSTEMS_AUDIT = ACCEPTED
-C03_ARCHITECTURE = READY_FOR_PARENT_ACCEPTANCE
+C03_ARCHITECTURE = ACCEPTED
 C03_HYBRID_AUTONOMOUS_EXECUTION = NOT_YET_AUTHORIZED
 ```

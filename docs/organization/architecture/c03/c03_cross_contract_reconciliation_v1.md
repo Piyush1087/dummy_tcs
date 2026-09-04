@@ -2,7 +2,7 @@
 
 **Artifact:** `C03_CROSS_CONTRACT_RECONCILIATION_V1`
 **Module:** C-03 — Creator Campaign Participation / Apply
-**Status:** READY FOR PARENT ACCEPTANCE
+**Status:** ACCEPTED
 **Companion authority:** `c03_product_contract_revalidation_v1.md`
 
 ## 1. Effective authority order
@@ -29,7 +29,7 @@ No legacy code or working-schema comment may override a later frozen Product dec
 | CCR-06 | Add Brief authority defines DRAFT/PUBLISHED/PAUSED, rich Deliverables and usage rights; production `CanonicalCampaignBrief` uses minimal fields and `isActive`. | C-03 can apply only to a PUBLISHED canonical Brief under the selected ACTIVE Asset. | Converge Brief persistence/projection before accepting C-03 writes. | RESOLVED_FOR_C03 |
 | CCR-07 | C-01 continuation is campaign-bound and secure, but current issuance resolves through a public Marketplace path only. | Preserve the C-01 digest/cookie/binding lifecycle while extending its typed context for public, eligible, and invitation ingress. | Add safe invitation reference, optional preselection, and allowlisted attribution; never add arbitrary return URLs or auto-submit. | RESOLVED_FOR_C03 |
 | CCR-08 | C-01/C-05 platform access correctly gates new Creator operations; C-03 keeps historical Application snapshots accessible after Instagram recovery. | Opportunity commercials/Apply require current Instagram usability. Historical Application/Brief Pack reads require current subject/team authorization but not Instagram usability. | Split route/policy gates; do not wrap My Applications in the pre-application platform guard. | RESOLVED_FOR_C03 |
-| CCR-09 | C-05 owns Settings role capabilities but not Campaign actions. C-03 explicitly names Assistant and Parent freezes all three roles. | OWNER, MANAGER, ASSISTANT each receive C-03 VIEW + APPLY over the Owner subject; actor remains separate. | Add C-03 actions to the shared capability projection or a C-03 policy layered over canonical actor context. | RESOLVED_FOR_C03 |
+| CCR-09 | C-05 owns Settings role capabilities but not Campaign actions. C-03 explicitly authorizes Assistant VIEW + APPLY without granting full Campaign operational authority. | OWNER, MANAGER, ASSISTANT each receive C-03 VIEW + APPLY over the Owner subject. WITHDRAW_PENDING is a separate capability granted only to OWNER and MANAGER, and only while the Application is PENDING. Actor remains separate from subject. | Add distinct C-03 VIEW, APPLY, and WITHDRAW_PENDING actions to the shared capability projection or a C-03 policy layered over canonical actor context. Never infer withdrawal from APPLY. | RESOLVED_FOR_C03 |
 | CCR-10 | Current eligibility service uses partial cached metrics and QA email bypass; Product requires backend-confirmed eligibility. | A provider-neutral backend policy evaluates canonical Campaign targeting against canonical Creator facts. Intelligence/selection scores are never authorization. | Build an explicit eligibility port/result and remove production bypass behavior. | RESOLVED_FOR_C03 |
 | CCR-11 | Legacy invitation is plaintext and handle-bound inside `UceCampaignCollaboration`; Product requires non-transferable invitation authority. | Invitation is a pre-Application security aggregate with digest, Campaign binding, intended-subject evidence, expiry, revocation, and claim/audit state. | Introduce canonical invitation persistence; quarantine legacy tokens. | RESOLVED_FOR_C03 |
 | CCR-12 | Existing Creator Apply creates a legacy Collaboration and may delete/reuse rejected applicant state. | Submit creates a new canonical Application plus immutable snapshot and domain event only. | Retire legacy mutation endpoints at cutover; never reactivate/delete historical Applications. | RESOLVED_FOR_C03 |
@@ -96,5 +96,5 @@ The primary legacy reference may inform information density, responsive transfor
 ```text
 UNRESOLVED_PRODUCT_CONFLICTS = 0
 UNRESOLVED_CROSS_CONTRACT_BLOCKERS = 0
-C03_CROSS_CONTRACT_RECONCILIATION = READY_FOR_PARENT_ACCEPTANCE
+C03_CROSS_CONTRACT_RECONCILIATION = ACCEPTED
 ```

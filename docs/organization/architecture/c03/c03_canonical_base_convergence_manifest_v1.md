@@ -2,7 +2,7 @@
 
 **Artifact:** `C03_CANONICAL_BASE_CONVERGENCE_MANIFEST_V1`
 **Module:** C-03 — Creator Campaign Participation / Apply
-**Status:** READY FOR PARENT ACCEPTANCE
+**Status:** ACCEPTED
 
 ## 1. Immutable implementation bases
 
@@ -81,7 +81,7 @@ The convergence method is additive-first and semantic:
 | Current canonical area | Treatment | C-03 destination |
 |---|---|---|
 | `src/features/creator-entry` | ADAPT | Extend the accepted digest-only continuation with typed Campaign ingress, invitation reference, subject/workspace binding, and safe attribution. |
-| `src/features/creator-settings/team` | REUSE + EXTEND | Reuse `CreatorWorkspaceActorService`; add C-03 VIEW/APPLY capabilities while retaining separate actor and Owner subject. |
+| `src/features/creator-settings/team` | REUSE + EXTEND | Reuse `CreatorWorkspaceActorService`; add distinct C-03 VIEW, APPLY, and WITHDRAW_PENDING capabilities while retaining separate actor and Owner subject. OWNER/MANAGER receive all three; ASSISTANT receives VIEW/APPLY only. |
 | `CreatorSocialIntegration` and current access predicates | CONSOLIDATE | One provider-neutral Opportunity capability evaluator consumed by C-01, C-05, and C-03. |
 | `UceCampaign`, `UceCampaignAsset`, `CanonicalCampaignBrief`, legacy Campaign tables | ADAPT + MIGRATE | Produce one canonical Campaign/Asset/Brief adapter; converge rich Brief/Deliverable/rights persistence before new canonical Applications. |
 | `UceApplication` / `UceApplicationSnapshot` | EXTEND IN PLACE | Remain the only Application aggregate/table family; add canonical subject, actor, Asset/Brief, snapshot-version, transition, event, and idempotency authority. |
@@ -182,14 +182,15 @@ The proof branch changes one workflow, two existing PostgreSQL tests, and two mo
 | Bounded runner round trip | `READY` | Branch write → remote run → job/log inspection → bounded correction → green rerun completed. |
 | Brand Home resource isolation | `READY` | C-03 branches, concurrency groups, runner VMs, databases, ports, and artifact names are independent; no Brand Home ref/file was mutated. |
 | Provider-neutral Instagram fixtures | `READY` | Pure persisted-state/actor fixtures passed; no live identity or provider call. |
-| Stitch/UI-generation path | `ENVIRONMENT_BLOCKED` | Durable prior success exists on `docs/stitch-design-library@355667b808457495c444d08b1d179d4f8a87d35b`, but the current tool inventory exposes no Stitch-capable executor. A bounded read-only browser session connected to Chrome/CDP, yet opening Stitch returned no page state before timeout. Prior artifacts do not prove current callable/authenticated access. Attach or restore an authenticated Stitch-capable tool/session, then list projects or read metadata for one known project; no screen generation is needed to clear this gate. |
+| Stitch/UI-generation path | `READY` | `C03_STITCH_EXECUTOR_ACCESS_PROOF_V1` passed through the bounded Codex execution environment: authenticated access, 62 projects listed (51 owned/11 shared), and read-only metadata confirmation for `Apply to Campaign` (`16487764615396952333`, role OWNER, visibility PRIVATE, device MOBILE). Parent designates this environment as the bounded Stitch execution lane. No generation, modification, rename, delete, or export occurred during the proof. |
 | PostgreSQL/Docker/Playwright inside persistent Work | `NOT_REQUIRED_FOR_C03` | The proven hybrid runner topology owns those runtimes. |
 | Live Instagram test identity | `NOT_REQUIRED_FOR_C03` | Persisted provider-neutral fixtures are the accepted gate. |
 | AWS/runtime object storage | `NOT_REQUIRED_FOR_C03` | C-03 Brief Pack is snapshot projection + client renderer; proof made no AWS request. |
 
 ```text
-ENVIRONMENT_BLOCKED_CAPABILITIES = 1
-C03_EXECUTION_BASE = ENVIRONMENT_BLOCKED — CURRENT_STITCH_EXECUTOR_ACCESS_UNPROVEN
+ENVIRONMENT_BLOCKED_CAPABILITIES = 0
+CURRENT_STITCH_EXECUTOR_ACCESS = READY
+C03_EXECUTION_BASE = READY
 C03_HYBRID_AUTONOMOUS_EXECUTION = NOT_YET_AUTHORIZED
 ```
 
@@ -213,6 +214,7 @@ If any answer is no or unknown, the commit is not admitted to the C-03 integrati
 CANONICAL_BASE = FROZEN
 PRIMARY_LEGACY_REFERENCE = CLASSIFIED_SEPARATELY
 WHOLESALE_FEATURE_BRANCH_MERGE = FORBIDDEN
-CONVERGENCE_PATH = READY_FOR_PARENT_ACCEPTANCE
-C03_EXECUTION_BASE = ENVIRONMENT_BLOCKED — CURRENT_STITCH_EXECUTOR_ACCESS_UNPROVEN
+CONVERGENCE_PATH = ACCEPTED
+CURRENT_STITCH_EXECUTOR_ACCESS = READY
+C03_EXECUTION_BASE = READY
 ```
