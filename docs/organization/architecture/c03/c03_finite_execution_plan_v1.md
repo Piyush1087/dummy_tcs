@@ -68,7 +68,7 @@ Every assignment must state:
 - commit/push rule and return schema;
 - no Product or architecture inference authority.
 
-Routine compile, lint, test, fixture, migration, responsive, and contract defects receive bounded correction prompts without Parent interruption. A checkpoint allows the initial pass and two correction passes. The SA may split/reassign a still-bounded implementation after that; Parent escalation occurs only for a defined circuit breaker, not an ordinary defect. Stitch has its separate one-structural-correction limit.
+Routine compile, lint, test, fixture, migration, responsive, and contract defects receive bounded correction prompts without Parent interruption. A checkpoint allows the initial pass and two correction passes. The SA may split/reassign a still-bounded implementation after that; Parent escalation occurs only for a defined circuit breaker, not an ordinary defect. If the Frontend Decision Ladder later justifies Stitch for a specific gap, its bounded assignment defines a finite correction limit.
 
 ## 5. Planned migrations
 
@@ -86,7 +86,7 @@ The first owns additive Campaign/Brief convergence, invitation/ingress/idempoten
 ```text
 P0 execution lock
 → P1 canonical backend
-→ P2 state contract + UI/UX/Stitch
+→ P2 frontend state-family register + decision-ladder preflight
 → P3 backend runtime acceptance
 → P4 frontend reconciliation
 → P5 Creator Brief Pack
@@ -190,40 +190,43 @@ Gate: two independent approvals produce two Collaborations; approval replay prod
 
 SA reviews each package diff and its migration/test evidence, integrates in order, then freezes `C03_BACKEND_API_STATE_CONTRACT_V1` and an immutable P1 SHA. No frontend is allowed to compensate for a backend gap.
 
-## 9. P2 — frontend state contract and bounded UI/UX + Stitch
+## 9. P2 — frontend state-family register and decision-ladder preflight
 
 ### Entry
 
 - accepted P1 Opportunity/Application DTOs and reason codes;
 - realistic typed fixtures covering all visibility/access/commercial/Application families;
-- accepted C-05 shell and Aurora references;
-- explicit primary-legacy useful/rejected-semantics manifest.
-- current bounded Stitch executor, isolated C-03 project, and export/registry path pass an access-only check; any non-`READY` Stage B classification is cleared before the first generation prompt.
+- exact current canonical production frontend, accepted C-05 shell, Aurora, and existing Creator Shop application patterns;
+- all relevant accepted historical visual references/artifacts plus an explicit primary-legacy useful/rejected-semantics manifest;
+- `STITCH_EXECUTOR_ACCESS = READY` recorded as optional capability availability only, not a decision to invoke it.
 
 ### Work
 
-1. UI/UX freezes an Experience Direction Brief: trustworthy Opportunity dossier, not Marketplace.
-2. Frontend freezes route, query, state-to-screen, interaction, responsive, accessibility, and error-code contracts.
-3. Stitch generates exactly seven desktop/mobile pairs:
-   - `C03-ST-A01-D/M` Opportunities;
-   - `C03-ST-A02-D/M` My Applications/multiplicity;
-   - `C03-ST-B01-D/M` authorized Opportunity;
-   - `C03-ST-B02-D/M` guest/access-gated Opportunity;
-   - `C03-ST-B03-D/M` multiple Applications;
-   - `C03-ST-C01-D/M` Asset/Brief selection;
-   - `C03-ST-C02-D/M` Review/Submit.
-4. UI/UX and frontend independently accept each family.
-5. Record why drawers, withdrawal, Brief Pack actions, and utilities need no new reference unless a concrete structural gap is found.
+1. Frontend freezes `C03_FRONTEND_STATE_FAMILY_REGISTER`, then freezes route, query, state-to-screen, interaction, responsive, accessibility, and error-code contracts.
+2. Inspect the current canonical production frontend and record reusable components/patterns, reconciliation needs, and genuinely missing structures.
+3. Inspect every relevant accepted historical visual reference/artifact and record reusable visual grammar without importing stale Product semantics.
+4. Inspect Aurora and existing Creator Shop application patterns and assess whether FE/Codex can construct each unresolved material state confidently.
+5. For every material state/family, record one current/final disposition and supporting evidence:
+   - `RECONCILE_DIRECTLY`;
+   - `REUSE_ACCEPTED_REFERENCE`;
+   - `CONSTRUCT_FROM_AURORA_EXISTING_PATTERNS`;
+   - `DESIGN_GAP_REQUIRES_UIUX`;
+   - `STITCH_REQUIRED`.
+6. Invoke UI/UX only for a specific genuine design gap. Reassess its bounded direction through the same ladder; do not make UI/UX a general P2 prerequisite.
+7. Record `C03_STITCH_DECISION = NOT_REQUIRED` when all families are otherwise resolved, or `C03_STITCH_DECISION = REQUIRED_FOR_BOUNDED_GAP` only when earlier paths remain insufficient. Project that result into `P2_STITCH_DECISION`; for the bounded-gap outcome, the Systems Architect then returns the exact Codex/Stitch assignment for that gap. No artifact count is pre-authorized.
+8. Assemble and accept `P2_REQUIRED_VISUAL_AUTHORITY` from the applicable production patterns, accepted references, Aurora construction decisions, and only those bounded UI/UX/Stitch artifacts genuinely required.
 
-Desktop is generated first; mobile derives from the accepted desktop parent. At most one structural correction per family. Any reference that invents Marketplace, payout ranking, stock, fee proposal, legal checkbox, a single `already_applied` state, or leaked commercials fails the frontend semantic gate even if visually polished.
+Any reused, constructed, UI/UX-directed, or Stitch-generated visual authority that invents Marketplace, payout ranking, stock, fee proposal, legal checkbox, a single `already_applied` state, or leaked commercials fails the frontend semantic gate even if visually polished.
 
 ### Exit gate
 
 ```text
-P2_EXPERIENCE_DIRECTION = ACCEPTED
-P2_FRONTEND_STATE_CONTRACT = ACCEPTED
-P2_STITCH_14_REFERENCES = ACCEPTED
-P2_UIUX_VISUAL_GATE = PASS
+P2_FRONTEND_STATE_FAMILY_REGISTER = ACCEPTED
+P2_CURRENT_FRONTEND_REUSE_AUDIT = PASS
+P2_ACCEPTED_REFERENCE_REUSE_AUDIT = PASS
+P2_AURORA_CONSTRUCTION_ASSESSMENT = PASS
+P2_STITCH_DECISION = NOT_REQUIRED | REQUIRED_FOR_BOUNDED_GAP
+P2_REQUIRED_VISUAL_AUTHORITY = ACCEPTED
 P2_FRONTEND_SEMANTIC_ACCESSIBILITY_GATE = PASS
 ```
 
@@ -365,8 +368,8 @@ Terminal Parent return is allowed only when every required gate is PASS.
 | Migration and concurrency | backend/data specialist | Systems Architect/security reviewer |
 | Opportunity redaction/invitation | security/backend specialist | Systems Architect/frontend runtime |
 | C-01/C-05 integration | integration specialist | Systems Architect |
-| UI/UX/Stitch | UI/UX specialist | frontend specialist |
-| Frontend semantics/accessibility | frontend specialist | UI/UX + Systems Architect |
+| Conditional UI/UX/Stitch gap, only if invoked | UI/UX specialist for visual direction; bounded Stitch executor for an accepted exact assignment | frontend specialist + Systems Architect |
+| Frontend semantics/accessibility | frontend specialist | Systems Architect; UI/UX only when assigned |
 | Collaboration handoff | backend/C-04 specialist | Systems Architect |
 | Joint runtime | bounded execution runner | Systems Architect |
 | Final closeout | Systems Architect | Parent acceptance |
@@ -393,7 +396,7 @@ Stop and return to Parent only if:
 - canonical remote drift changes the audited base materially;
 - a security/privacy discovery changes Product architecture;
 - a core runner/PostgreSQL/browser/checkpoint capability becomes unavailable;
-- the accepted bounded Stitch executor becomes unavailable before P2;
+- P2 establishes a bounded gap that requires Stitch and the accepted executor is unavailable;
 - live Meta/provider credentials or unauthorized identity are required;
 - scope must expand into C-04 workflow, Marketplace, payouts/KYC, Creator Centre, AWS, or unrelated Brand modules.
 
@@ -403,6 +406,7 @@ Ordinary implementation defects, tests, lint, browser layout issues, and bounded
 
 ```text
 C03_FINITE_EXECUTION_PLAN = ACCEPTED
+C03_FRONTEND_DECISION_LADDER = CHARTER_CONFORMANT
 C03_EXECUTION_PACKAGES = P0 + P1.1 + P1.2 + P1.3 + P1.4 + P2 + P3 + P4 + P5 + P6 + P7
 C03_HYBRID_AUTONOMOUS_EXECUTION = NOT_YET_AUTHORIZED
 ```

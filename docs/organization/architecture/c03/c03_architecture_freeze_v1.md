@@ -491,7 +491,7 @@ Canonical routes:
 
 The accepted C-05 shell owns authenticated navigation. `Campaigns` has `Opportunities` and `My Applications`; the historical routes sit outside the route-wide Instagram guard. Query keys include the authenticated subject/workspace and are cleared on account/workspace transition.
 
-Required screen families are Opportunities, My Applications, gated Opportunity, authorized Opportunity, Apply selection, review/submit, post-submission/multiple Applications, Asset/Brief drawers, withdrawal feedback, Brief Pack action, and utility states. Apply optimization is frozen:
+The P2 Frontend State Family Register must account for Opportunities, My Applications, gated Opportunity, authorized Opportunity, Apply selection, review/submit, post-submission/multiple Applications, Asset/Brief drawers, withdrawal feedback, Brief Pack action, and utility states. These are semantic state requirements, not a mandate for one screen or one visual artifact per item. Apply optimization is frozen:
 
 - one Asset/one Brief → Review;
 - one Asset/many Briefs → Brief selection;
@@ -502,26 +502,41 @@ Submit remains explicit. Stale selections are invalidated by server response and
 
 Commercial/detailed Brief data is absent from DOM, query cache, serialized route state, logs, and analytics until authorized. Tabs/radios/drawers/dialogs have native semantics, keyboard behavior, focus trap/restore, live announcements, and 44px touch targets. Mobile sheets never stack, never overlap the accepted bottom navigation/safe area, and have no document-level horizontal scroll at 375, 390, or 767px.
 
-## 19. UI/UX and Stitch checkpoint
+## 19. Permanent Frontend Decision Ladder
 
 ```text
 STITCH_FOR_ARCHITECTURE_FREEZE = NOT_REQUIRED
-STITCH_FOR_FRONTEND_RECONCILIATION = EXPECTED
+STITCH_EXECUTOR_ACCESS = READY
+C03_STITCH_DECISION = DETERMINED_IN_P2
 ```
 
-After API/state contracts and realistic typed fixtures are frozen, generate seven paired desktop/mobile families, fourteen references total:
+The ready bounded Codex Stitch executor proves optional capability availability only. It does not pre-authorize UI/UX work, Stitch generation, or any number of visual artifacts.
+
+After API/state contracts and realistic typed fixtures are frozen, P2 first freezes `C03_FRONTEND_STATE_FAMILY_REGISTER`, then applies this order to every material family:
 
 ```text
-C03-ST-A01-D/M  Opportunities
-C03-ST-A02-D/M  My Applications with multiplicity
-C03-ST-B01-D/M  authorized Opportunity
-C03-ST-B02-D/M  guest/access-gated Opportunity
-C03-ST-B03-D/M  multiple existing Applications
-C03-ST-C01-D/M  Asset/Brief selection
-C03-ST-C02-D/M  review and explicit Submit
+Frozen Product Authority
+→ Frontend State Family Register
+→ inspect current canonical production frontend
+→ reuse/reconcile an existing component or pattern when sufficient
+→ inspect and reuse/adapt accepted historical visual references when sufficient
+→ construct from Aurora + existing Creator Shop application patterns when confident
+→ only then invoke UI/UX and/or Stitch for a specific unresolved design gap
 ```
 
-Asset/Brief drawers, withdrawal feedback, Brief Pack actions, and utilities reuse accepted Aurora patterns unless a specialist records a concrete structural gap. Desktop precedes its mobile derivative. One structural correction cycle per family is allowed; unresolved structure triggers `VISUAL_RETHINK_REQUIRED`. UI/UX visual acceptance and frontend semantic/accessibility acceptance are independent required gates.
+Each material family records one current/final disposition with evidence:
+
+```text
+RECONCILE_DIRECTLY
+REUSE_ACCEPTED_REFERENCE
+CONSTRUCT_FROM_AURORA_EXISTING_PATTERNS
+DESIGN_GAP_REQUIRES_UIUX
+STITCH_REQUIRED
+```
+
+`DESIGN_GAP_REQUIRES_UIUX` is valid only for a genuine experience or visual-design problem that the earlier paths cannot resolve. UI/UX direction is then reassessed through the same ladder. `STITCH_REQUIRED` is valid only when the earlier paths, including bounded UI/UX direction where needed, remain insufficient for confident construction.
+
+If every family is resolved without Stitch, record `C03_STITCH_DECISION = NOT_REQUIRED` and reconcile directly. If a genuine gap remains, record `C03_STITCH_DECISION = REQUIRED_FOR_BOUNDED_GAP`; the Systems Architect returns an exact gap-specific Codex/Stitch assignment at that point. Artifact count, responsive variants, source references, and correction limit derive from that bounded gap and are not pre-authorized here. Any invoked visual work receives the applicable UI/UX visual gate plus the independent frontend semantic/accessibility gate. Without new design work, accepted references + Aurora + canonical production patterns satisfy the required visual-authority gate.
 
 ## 20. Legacy retirement and migration sequence
 
@@ -604,7 +619,7 @@ Unit mocks are insufficient for these gates.
 | NEGOTIABLE | No C-03 proposal; C-04 begins awaiting Creator proposal. |
 | Events/notifications | Transactional append-only event/outbox; Brand submitted and Creator approved/rejected outputs. |
 | Brief Pack | Snapshot-only projection, client PDF renderer, historical team access, no AWS. |
-| Frontend | Opportunities + My Applications, backend reason codes, multiplicity, bounded Stitch checkpoint. |
+| Frontend | Opportunities + My Applications, backend reason codes, multiplicity, mandatory State Family Register, and the charter Frontend Decision Ladder; UI/UX/Stitch only for a specific unresolved gap. |
 | Legacy | Additive compatibility, exact-only promotion, mutation retirement, no destructive drop. |
 
 ## 24. Final architecture gate
@@ -613,5 +628,6 @@ Unit mocks are insufficient for these gates.
 C03_PRODUCT_LOGIC = FROZEN
 C03_SYSTEMS_AUDIT = ACCEPTED
 C03_ARCHITECTURE = ACCEPTED
+C03_FRONTEND_DECISION_LADDER = CHARTER_CONFORMANT
 C03_HYBRID_AUTONOMOUS_EXECUTION = NOT_YET_AUTHORIZED
 ```

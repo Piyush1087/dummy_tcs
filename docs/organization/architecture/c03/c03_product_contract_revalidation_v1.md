@@ -82,7 +82,7 @@ The newer feature line is the most recent materially complete legacy Creator Cam
 
 1. Canonical implementation base and primary legacy reference are separate concepts.
 2. Owner, Manager, and Assistant share C-03 VIEW + APPLY capability over the canonical Owner subject. WITHDRAW_PENDING is separate: Owner and Manager receive it; Assistant does not. `APPLY` means Application submission, not withdrawal.
-3. Stitch is not needed to freeze architecture, but a bounded UI/UX + Stitch checkpoint is expected before frontend reconciliation for materially new C-03 screen families.
+3. Frontend reconciliation follows the permanent Frontend Decision Ladder. UI/UX and Stitch are invoked only for a specific unresolved design gap after production-frontend reuse, accepted-reference reuse, and Aurora/existing-pattern construction have been exhausted. Stitch executor readiness proves availability, not required use.
 4. Execution readiness is a hybrid topology property; it does not require the persistent ChatGPT Work environment itself to host PostgreSQL, Docker, or Playwright.
 
 ## 5. Product questions
