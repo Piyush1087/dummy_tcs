@@ -35,8 +35,8 @@ No lane shares a branch, worktree, database, port, workflow concurrency group, o
 
 | Phase | State | Branch/checkpoint | Files/migrations | Validation | Corrections | Last failure | Next |
 |---|---|---|---|---|---:|---|---|
-| P0 execution lock | IN PROGRESS | backend/frontend integration branches created from exact frozen bases | Non-feature baseline harness and isolated CI gates under review; no migration | Remote heads PASS; clean isolated worktrees PASS; external Node 20/PostgreSQL/browser rerun pending | 0 | none | Publish bounded P0 checkpoints and review runner evidence |
-| P1.1 persistence + Campaign/Brief | NOT STARTED | — | — | — | 0 | none | P0 PASS |
+| P0 execution lock | PASS | backend `6a2bd2e4b815462abc702dea34f7c368c24a0664`; frontend `66d6a9bc992afcdfb900d7837defd867670bf640` | Non-feature CI/runtime harness, four accepted baseline repairs, disposable legacy fixture; no migration | Exact live bases/ancestry, Node 20 locks, fresh 74 replay, real PostgreSQL, full suites/builds/startup, Chromium, artifacts and final clean trees PASS | 2 | Run 1 exposed job-env test pollution and inherited lint debt; review then required live-base/final-clean assertions and seeded legacy data | P1.1 persistence implementation |
+| P1.1 persistence + Campaign/Brief | IN PROGRESS | `c03/p1-1-persistence` from backend P0 checkpoint | Planned foundation migration, schema/adapters/preflight/tests only | Specialist package prepared; implementation pending | 0 | none | Implement and independently review P1.1 |
 | P1.2 Opportunity entitlement/read | NOT STARTED | — | — | — | 0 | none | P1.1 accepted |
 | P1.3 Application commands/history | NOT STARTED | — | — | — | 0 | none | P1.2 accepted |
 | P1.4 Collaboration/Notifications | NOT STARTED | — | — | — | 0 | none | P1.3 accepted |
@@ -65,7 +65,23 @@ Node 20 / npm lockfile install / Prisma 6.19.3 generated client / PostgreSQL 16 
 
 The P0 baseline checkpoint may carry only the previously evidenced test-fixture/startup-cycle repairs and C-03-isolated CI configuration. It adds no C-03 Product endpoint, schema field, migration, screen, or behavior.
 
-## 5. Circuit-breaker state
+## 5. P0 acceptance evidence
+
+| Evidence | Result |
+|---|---|
+| Backend remote checkpoint | `6a2bd2e4b815462abc702dea34f7c368c24a0664` |
+| Backend runner | GitHub Actions run `33845011768`, job `100934880092`, conclusion `success` |
+| Backend database/runtime | PostgreSQL 16; 74 migrations deployed; C-01/C-05 real-PostgreSQL tests 26/26; provider-neutral tests 13/13; full suite 184 files / 1,229 tests passed; build/startup/clean-tree PASS |
+| Legacy reconnaissance | Seeded disposable `c03_p0_legacy`; legacy Campaign/Application/snapshot/Collaboration present; canonical Assets/Briefs absent; handle identity, independent Product/Brief, zero stock, ambiguous legacy negotiable zeros, 30% advance, multi-visibility, and plaintext invitation assertions PASS |
+| Frontend remote checkpoint | `66d6a9bc992afcdfb900d7837defd867670bf640` |
+| Frontend runner | GitHub Actions run `33845013621`, job `100934885287`, conclusion `success` |
+| Frontend runtime | 112 files / 853 tests passed; typecheck/build/preview/Chromium/final clean-tree PASS |
+| Browser artifact | `c03-p0-frontend-browser`, artifact `9926229600`, digest `sha256:4e09cb34fc15347e7cf03fbd4969dfdcc584c2f8a39f75af07cd318bfffad476` |
+| Inherited lint inventory | Existing full-repository lint debt recorded non-gating at P0; P4/P6 retain hard changed-file/scope lint gates |
+
+The remote checkpoint trees exactly equal their reviewed local checkpoint trees. Both accepted remote checkpoints descend from the frozen canonical implementation bases; neither canonical `development` branch was changed.
+
+## 6. Circuit-breaker state
 
 ```text
 STOP_REASON = NONE
@@ -75,10 +91,10 @@ CANONICAL_BASE_DIVERGENCE = NO
 CORE_EXECUTION_ENVIRONMENT_UNAVAILABLE = NO
 ```
 
-## 6. Current continuation
+## 7. Current continuation
 
 ```text
-CURRENT_PHASE = P0
-NEXT_REQUIRED_GATE = P0_BASELINE_BUILD_TEST_STARTUP_AND_RUNTIME_PROOF
-LAST_UPDATED = 2026-09-04T06:10:45Z
+CURRENT_PHASE = P1.1
+NEXT_REQUIRED_GATE = P1_1_PERSISTENCE_AND_CAMPAIGN_BRIEF_CONVERGENCE
+LAST_UPDATED = 2026-09-04T06:46:49Z
 ```
