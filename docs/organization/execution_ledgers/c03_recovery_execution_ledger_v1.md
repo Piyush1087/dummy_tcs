@@ -28,7 +28,7 @@ line is admitted here.
 | P1.1B canonical Application + snapshot | PASS | `43940337184ef63338766044827234d69236aa63` | 76 | P1.1C |
 | P1.1C invitation / ingress / idempotency / events | PASS | `ebad770291b411026542a7d53a7e6a30162bff2e` | 77 | P1.1D |
 | P1.1D guards / locking / adapters / compatibility | PASS | `ab8d1c022ae165846a40a8737f163bdb5ba7d65c` | 78 | P1.1E |
-| P1.1E PostgreSQL acceptance | NOT STARTED | — | — | P1.1D PASS |
+| P1.1E PostgreSQL acceptance | PASS | `fa4c7f7b767a71c3d21a0e3835a2bbfc36bcd642` | 78 | P1.2 |
 | P1.2 Opportunity entitlement/read APIs | NOT STARTED | — | — | P1.1 PASS |
 | P1.3 Application commands/history | NOT STARTED | — | — | P1.2 PASS |
 | P1.4 Collaboration/Notifications handoff | NOT STARTED | — | — | P1.3 PASS |
@@ -275,10 +275,63 @@ P1_1D = PASS
 NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1E
 ```
 
-## 7. Current continuation
+## 7. P1.1E immutable entry
+
+| Field | Evidence |
+|---|---|
+| Checkpoint | `P1.1E` |
+| Prior accepted SHA/tree | `ab8d1c022ae165846a40a8737f163bdb5ba7d65c` / `58aaec4187ff030016f6f7cae49a32c5bd87c080` |
+| Candidate backend SHA/tree | `fa4c7f7b767a71c3d21a0e3835a2bbfc36bcd642` / `76597080c6089225936e94a301ea0dc78474eb62` |
+| Candidate chain/scope | Direct child of accepted P1.1D; evidence-only workflow, deterministic fixture allowlists, and PostgreSQL acceptance test; no Prisma schema, migration SQL, runtime service, controller, or DTO change |
+| Migration | 78 total; no P1.1E migration; all four accepted P1.1 migration checksums verified byte-exact |
+| Durable interval | candidate server timestamp `2026-09-04T21:07:25Z`; accepted workflow interval `2026-09-04T21:07:28Z`–`2026-09-04T21:11:24Z` |
+| Preflight | `C03_P1_1_MIGRATION_PREFLIGHT_V1`; server timestamp `2026-09-04 21:08:26.36959+00`; `result=PASS`; exact P0 74-migration state with representative minimal Brief, six legacy Applications/snapshots, and continuation inventoried before upgrade |
+| Fresh/negative artifact | ID `9954510992`; 7,784 bytes; digest `sha256:4d324ba65404ec324d253a18ce5a06f9d78647fe392ae138c8ef7a0063935869`; retained through `2026-10-04T21:08:30Z` |
+| Legacy-upgrade artifact | ID `9954510586`; 6,245 bytes; digest `sha256:f5cb2cc3361398ddbcac969e971774d29bf20c83d4c95b87f2b9b66243784dac`; retained through `2026-10-04T21:08:29Z` |
+| Runtime artifact | ID `9954593995`; 15,278 bytes; digest `sha256:d270a1b35f110dc1d1bf9415a76c0c6108671b7e771c48078c10b37632dbe738`; retained through `2026-10-04T21:11:17Z` |
+| Accepted workflow | run `33919602630`; fresh/negative job `101174638045`, legacy-upgrade job `101174637754`, runtime job `101174915949`; all `success` |
+| Fetch-back | Candidate SHA/tree fetched before CI; branch equals `origin/c03/recovery-campaign-participation-v1`; all three jobs independently proved empty porcelain and no schema/migration drift from P1.1D |
+| Unresolved ambiguity | None. No skipped acceptance case, failed/unfinished migration, unvalidated constraint, temporary write-closed trigger, synthesized canonical row, timeout, or unexplained write remains. |
+| Verdict | `PASS`; aggregate `P1.1 = PASS` |
+| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+
+### 7.1 Independent PostgreSQL lanes and finite evidence
+
+| Lane/command family | Outer timeout | Result/evidence |
+|---|---:|---|
+| Fresh PostgreSQL 16 0→78 deploy/status | 20m each | PASS; 78 finished, zero failed/rolled-back rows; all constraints validated; permanent catalog present; temporary write closure absent |
+| Full manifest negative matrix | 20m per file | PASS; 21/21 final-schema manifest tests (1.12s), 5/5 Brief/Deliverable tests (559ms), and 6/6 deferred-evidence/lock tests (966ms); matrix maps all required cases 1–24; zero skipped |
+| Exact P0 PostgreSQL 16 74→78 | 20m per deploy/status | PASS; exact 74 base, read-only preflight, then 78 finished migrations |
+| Seeded legacy invariants | 10m preflight; bounded SQL assertions | PASS; six legacy statuses including `SUPERSEDED`; Application IDs/selections/timestamps and five snapshot JSON partitions byte-semantics preserved; minimal Brief and continuation bytes preserved; all legacy rows remain discriminator/version 0; zero invitation/ingress/event/receipt synthesis |
+| Prisma 6.19.3 generate / format / validate | 10m / 5m / 5m | PASS; retained logs |
+| Architecture/adapter/legacy suite | 30m | 10 files / 52 tests PASS; 2.12s Vitest duration |
+| Full test suite | 45m | 187 files and 1,243 tests PASS; 49 files / 653 environment-gated tests skipped outside the explicit P1.1E database run; 72.11s Vitest duration |
+| Production build / startup smoke | 20m / 3m | PASS; `nest build`, prompt-asset copy, bounded backend bootstrap and HTTP root probe |
+| Final repository integrity | 2m | PASS in all three jobs; no schema/migration delta from accepted P1.1D and empty porcelain |
+
+### 7.2 Independent acceptance review
+
+P1.1E is internally consistent and complete. The fresh lane proves the final
+78-migration catalog and every required negative PostgreSQL case. The seeded
+lane proves exact P0 upgrade without heuristic promotion, destructive rewrite,
+or synthesized canonical history. The dependent runtime lane proves existing
+C-01/C-05, Brand compatibility, canonical adapter, full-suite, build, and
+startup behavior. No Product or architecture question arose.
 
 ```text
-LAST_ACCEPTED_CHECKPOINT = P1.1D
-CURRENT_CHECKPOINT = P1.1E
+P1_1A = PASS
+P1_1B = PASS
+P1_1C = PASS
+P1_1D = PASS
+P1_1E = PASS
+P1_1 = PASS
+NEXT_AUTHORIZED_PHASE = P1.2
+```
+
+## 8. Current continuation
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P1.1
+CURRENT_CHECKPOINT = P1.2
 P2_EXECUTION = NOT_AUTHORIZED
 ```
