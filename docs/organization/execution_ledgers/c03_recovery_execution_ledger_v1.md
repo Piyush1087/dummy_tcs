@@ -27,7 +27,7 @@ line is admitted here.
 | P1.1A Campaign / Asset / Brief convergence | PASS | `7da499a0c0a9c12c8c4247dd4567726990ae8120` | 75 | P1.1B |
 | P1.1B canonical Application + snapshot | PASS | `43940337184ef63338766044827234d69236aa63` | 76 | P1.1C |
 | P1.1C invitation / ingress / idempotency / events | PASS | `ebad770291b411026542a7d53a7e6a30162bff2e` | 77 | P1.1D |
-| P1.1D guards / locking / adapters / compatibility | NOT STARTED | — | — | P1.1C PASS |
+| P1.1D guards / locking / adapters / compatibility | PASS | `ab8d1c022ae165846a40a8737f163bdb5ba7d65c` | 78 | P1.1E |
 | P1.1E PostgreSQL acceptance | NOT STARTED | — | — | P1.1D PASS |
 | P1.2 Opportunity entitlement/read APIs | NOT STARTED | — | — | P1.1 PASS |
 | P1.3 Application commands/history | NOT STARTED | — | — | P1.2 PASS |
@@ -204,10 +204,81 @@ P1_1C = PASS
 NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1D
 ```
 
-## 6. Current continuation
+## 6. P1.1D immutable entry
+
+| Field | Evidence |
+|---|---|
+| Checkpoint | `P1.1D` |
+| Prior accepted SHA/tree | `ebad770291b411026542a7d53a7e6a30162bff2e` / `47c2921ca970e7093ed3fff1faae05941f435fbd` |
+| Candidate backend SHA/tree | `ab8d1c022ae165846a40a8737f163bdb5ba7d65c` / `58aaec4187ff030016f6f7cae49a32c5bd87c080` |
+| Candidate chain | `b7614e9698351f51181fad4b6be66daeca542853` → `9752975bab19db6c28c4e98d10eff43ad35936ba` → `ab8d1c022ae165846a40a8737f163bdb5ba7d65c`; linear from accepted P1.1C, no merge; every remote commit was fetched back before the next pass |
+| Migration | 78 total; `20260910121500_c03_integrity_guards_and_legacy_compatibility`; SQL SHA-256 `fa2265935e0878ac45e533cb6ac87079ad12b665fafcc53c250a63a513fb83b5` |
+| Schema writer | C-03 Recovery Systems Architect; no concurrent schema/migration writer |
+| Durable interval | first candidate server timestamp `2026-09-04T20:37:26Z`; accepted-run final-integrity timestamp `2026-09-04T20:48:20.8834592Z` |
+| Preflight | `C03_P1_1_MIGRATION_PREFLIGHT_V1`; server timestamp `2026-09-04 20:46:46.218894+00`; `result=PASS`; exact 74 P0 names/checksums and representative legacy Application/continuation state inventoried before DDL |
+| Evidence artifact | ID `9953899108`; `c03-p11d-evidence-ab8d1c022ae165846a40a8737f163bdb5ba7d65c`; 3,560 bytes; digest `sha256:4080bfde75257aae474ba2da4f14b656ef4083d299275548aada9608cda36b70`; retained through `2026-10-04T20:48:20Z` |
+| Disposable databases | PostgreSQL 16 `c03_p11d_fresh` (0→78), `c03_p11d_upgrade74` (exact P0 74→78), `c03_p11d_upgrade77` (accepted P1.1C 77→78), `c01_i1_p11d`, `c01_i5_p11d`, and `c05_p11d` |
+| Accepted workflow | run `33917838865`; job `101169028287`; conclusion `success`; run interval `2026-09-04T20:45:50Z`–`2026-09-04T20:48:24Z` |
+| Fetch-back | Remote SHA/tree/parent chain fetched; local branch equals `origin/c03/recovery-campaign-participation-v1`; clean tree; PASS |
+| Diff review | P1.1C→candidate complete name/status review; exact tree comparison; `git diff --check`; linear ancestry; 78-directory inventory; migration checksum; permanent-guard-before-write-open ordering; adapter/legacy/service/lock/prohibition review; PASS |
+| Unresolved ambiguity | None. The canonical write-closed trigger is removed only after all permanent guards exist; no public canonical route, command, Collaboration, or Notification behavior is present. |
+| Verdict | `PASS` |
+| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+
+### 6.1 Finite command evidence
+
+| Command family | Outer timeout | Exit/result | Observed duration/evidence |
+|---|---:|---|---|
+| Prisma 6.19.3 generate / format / validate | 10m / 5m / 5m | 0 / 0 / 0 | local and Actions PASS |
+| changed-file Prettier/ESLint and `git diff --check` | 2m | 0 | PASS |
+| fresh migration deploy/status | 20m each | 0 / 0 | PostgreSQL 16, 78 migrations, up to date |
+| exact-P0 seed/preflight/candidate deploy/status | 5m / 10m / 20m / 20m | all 0 | 74→78 PASS; six-status legacy Application/snapshot and direct continuation evidence preserved |
+| accepted-P1.1C seed/candidate deploy/status | 5m / 20m / 20m | all 0 | 77→78 PASS; snapshot and continuation before/after invariants preserved |
+| P1.1D PostgreSQL guards/lock suite | 20m | 0 | 1 file / 6 tests; 802ms Vitest duration; both deferred insertion orders, incomplete commits, actor/identity/version/delete/terminal guards, lock serialization, and catalog assertions PASS |
+| C-01 persistence PostgreSQL regression | 30m | 0 | 1 file / 22 tests; 798ms Vitest duration |
+| C-01 continuation PostgreSQL regression | 30m | 0 | 1 file / 21 tests; 1.79s Vitest duration |
+| C-05 PostgreSQL regression | 30m | 0 | 1 file / 5 tests; 990ms Vitest duration |
+| architecture/adapter/legacy regression | 30m | 0 | 10 files / 52 tests; 1.53s Vitest duration |
+| full test suite | 45m | 0 | 187 files and 1,243 tests PASS; 48 files / 632 environment-gated tests skipped; 49.87s Vitest duration |
+| production build and startup smoke | 20m / 5m | 0 / 0 | `nest build`, prompt assets, and bounded backend bootstrap PASS |
+| final repository integrity | 2m | 0 | `git diff --exit-code` and empty porcelain PASS |
+
+### 6.2 Bounded corrections
+
+The initial remote run `33917165547` proved all three migration lanes but
+correctly stopped before the negative suite because its wrong-role actor
+fixture violated the pre-existing C-01 requirement for an active Brand User
+to belong to a Brand Organization. Commit
+`9752975bab19db6c28c4e98d10eff43ad35936ba` corrected only that prerequisite.
+Run `33917528409` then exposed reuse of one active opportunity across
+independent deferred-evidence fixtures; the accepted partial unique index
+correctly rejected the collision. Commit
+`ab8d1c022ae165846a40a8737f163bdb5ba7d65c` isolated every case onto its own
+Campaign→Asset→Brief opportunity and bound the terminal event to the matching
+ancestry. These were the two permitted bounded correction passes. The final
+run reran the complete gate; no failure was waived.
+
+### 6.3 Independent acceptance review
+
+P1.1D is internally consistent and safe to stop. Permanent canonical
+Application/snapshot/event/delete and terminal-transition guards replace the
+temporary write closure atomically; actor/Owner-subject evidence is checked;
+Campaign lifecycle writes use the shared row-lock seam; canonical reads use
+one adapter; and legacy Brand Application behavior rejects canonical rows.
+The accepted A–C PostgreSQL evidence plus the final-schema D guard/catalog
+suite covers the checkpoint implementation delta. P1.1E now performs the
+required consolidated final-schema rerun of every manifest negative case and
+both fresh/legacy acceptance lanes; no skipped P1.1E case may be waived.
 
 ```text
-LAST_ACCEPTED_CHECKPOINT = P1.1C
-CURRENT_CHECKPOINT = P1.1D
+P1_1D = PASS
+NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1E
+```
+
+## 7. Current continuation
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P1.1D
+CURRENT_CHECKPOINT = P1.1E
 P2_EXECUTION = NOT_AUTHORIZED
 ```
