@@ -1,9 +1,9 @@
 schema_version: "1.0"
-run_id: "brand-payouts-v1-unassigned"
-status: "PREPARED_NOT_AUTHORIZED"
+run_id: "brand-payouts-v1"
+status: "EXECUTION_BLOCK_1_IN_PROGRESS"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
-architecture_sha: "TO_BE_PINNED_AFTER_PARENT_ACCEPTS_PHASE_C_HEAD"
+architecture_sha: "3fb6b4246aa5f2ecb71c3bbfe99c56e395f30a92"
 architecture_parent_sha: "7aeb0512cb8270a6bae1169570e82b080f01807e"
 backend_base_sha: "4c5f42858b950b7cd342f8972f99f548f3daa942"
 frontend_base_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
@@ -12,6 +12,7 @@ c04_backend_handoff_sha: null
 c04_frontend_handoff_sha: null
 c03_recovery_authority_sha: "dc81b54b87bf6fdf90583c7d0e76f176d883ce32"
 c03_current_accepted_backend_sha: "ebad770291b411026542a7d53a7e6a30162bff2e"
+c03_observed_unaccepted_candidate_sha: "b7614e9698351f51181fad4b6be66daeca542853"
 c03_required_post_p1_4_sha: null
 c03_current_accepted_frontend_sha: "66d6a9bc992afcdfb900d7837defd867670bf640"
 c03_required_frontend_integration_sha: null
@@ -22,17 +23,21 @@ c05_frontend_dependency_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
 execution_mode:
   recommendation: "HYBRID_RUN"
   authority: "PRODUCT"
-  authorized: false
+  authorized: true
 
-phase: "PHASE_C_PREPARED"
-branch: "brand-payouts/stage-b-architecture-plan-v1"
+authorization_artifact: "BRAND_PAYOUTS_STAGE_B_ACCEPTANCE_AND_EXECUTION_BLOCK_1_V1"
+authorized_segment: "P0_TO_P2"
+next_parent_gate: "BP-P2-FIRST-VERTICAL-SLICE"
+
+phase: "P0_ACCEPTED"
+branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: null
-checkpoint_name: null
-next_phase: "P0_CANONICAL_BASE_AND_CONTRACT_CONVERGENCE"
+checkpoint_name: "BP-P0-CONTRACT-BASE"
+next_phase: "P1_BACKEND_AUTHORIZATION_AND_READ_MODEL"
 
 dependency_gates:
   product_authority: "SATISFIED"
-  architecture_parent_acceptance: "OPEN_HUMAN_GATE"
+  architecture_parent_acceptance: "SATISFIED"
   c04_architecture: "READY_WITH_RECONCILIATION"
   c04_backend_settlement_handoff: "OPEN_BLOCKING"
   c04_backend_convergence_tree: "OPEN_BLOCKING"
@@ -40,7 +45,7 @@ dependency_gates:
   c04_frontend: "OPEN_NON_SERIALIZING"
   c05_readiness: "READY_WITH_RECONCILIATION"
   campaign_exact_net_terms: "OPEN_BLOCKING"
-  campaign_manager_entity_scope: "OPEN_BLOCKING"
+  campaign_manager_entity_scope: "RESOLVED_FAIL_CLOSED_ZERO_ROWS"
   payment_support_security_policy: "OPEN_BLOCKING"
   complete_v1_source_coresidence: "OPEN_BLOCKING"
   first_vertical_slice: "OPEN_HUMAN_GATE"
@@ -84,11 +89,15 @@ migrations:
 
 tests:
   phase_c_document_validation: "PASS"
-  contract_unit: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
-  service_integration: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
-  postgres_security: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
-  frontend: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
-  production_shaped: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
+  p0_contract_unit: "PASS_14_OF_14"
+  p0_changed_file_lint: "PASS"
+  p0_backend_build: "PASS"
+  p0_diff_check: "PASS"
+  p0_schema_migration_diff: "NONE"
+  p1_service_integration: "PENDING"
+  p1_postgres_security: "PENDING"
+  p2_frontend: "PENDING"
+  p2_production_shaped: "PENDING"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -101,16 +110,22 @@ razorpay_gates:
   rz_g4: "OPEN_HUMAN_GATE"
 
 corrections:
-  current_phase_count: 0
-  total_p0_p5_count: 0
+  current_phase_count: 1
+  total_p0_p5_count: 1
   max_per_phase: 2
   max_total_p0_p5: 4
   repeated_failure_limit: 1
 
+correction_history:
+  - phase: "P0"
+    signature: "TYPESCRIPT_READONLY_ACCEPT_HEADER_NARROWING"
+    result: "CORRECTED_AND_GATE_RERUN_PASS"
+    scope: "TWO_IMPLICIT_ANY_DIAGNOSTICS_IN_MEDIA_NEGOTIATION_HELPER"
+
 last_failure: null
 breaker: null
-stop_reason: "AWAITING_PARENT_PHASE_C_ACCEPTANCE"
-environment: "CHATGPT_WORK_CLOUD_DOCUMENTATION_ONLY"
+stop_reason: null
+environment: "CHATGPT_WORK_CLOUD_EXECUTION_BLOCK_1"
 
 checkpoint_policy:
   max_phases_per_authorized_segment: 3
@@ -133,7 +148,15 @@ resume_requirements:
   mismatch_breaker: "RESUME_STATE_INVALID"
 
 phase_checkpoints:
-  p0: null
+  p0:
+    status: "ACCEPTED"
+    checkpoint_name: "BP-P0-CONTRACT-BASE"
+    authority_sha: null
+    backend_sha: "b19752e476f85509ac2a895ffde6f17180dec7ee"
+    frontend_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
+    campaign_manager_scope: "OPTION_B_FAIL_CLOSED_ZERO_ROWS"
+    migrations_created_or_applied: false
+    provider_actions: []
   p1_backend_read: null
   p2_first_vertical_slice: null
   p3a_operations_cutover: null
@@ -153,9 +176,21 @@ phase_checkpoints:
   p7_production_shaped_acceptance: null
 
 files_changed:
-  authority: []
-  backend: []
+  authority:
+    - "docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml"
+    - "docs/organization/architecture/brand-payouts/brand_payouts_p0_executable_contract_register_v1.md"
+    - "docs/organization/handoffs/brand-payouts/brand_payouts_to_c04_settlement_dependency_handoff_v1.md"
+    - "docs/organization/handoffs/brand-payouts/brand_payouts_to_campaign_net_terms_correction_handoff_v1.md"
+  backend:
+    - "src/features/brand-payouts/brand-payouts-p0.architecture.test.ts"
+    - "src/features/brand-payouts/contracts/brand-payouts-authorization.contract.ts"
+    - "src/features/brand-payouts/contracts/brand-payouts-v2.contract.test.ts"
+    - "src/features/brand-payouts/contracts/brand-payouts-v2.contract.ts"
+    - "src/features/brand-payouts/ports/brand-payouts-read.port.ts"
+    - "src/features/brand-payouts/ports/collaboration-payout-instruction.port.ts"
+    - "src/features/brand-payouts/ports/creator-payout-provider.port.ts"
+    - "src/features/brand-payouts/ports/creator-payout-readiness.port.ts"
   frontend: []
   provider_evidence: []
 
-last_updated: "2026-09-04T20:12:23Z"
+last_updated: "2026-09-04T21:01:24Z"
