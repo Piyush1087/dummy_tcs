@@ -168,7 +168,7 @@ NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1C
 | Diff review | P1.1B→candidate complete name/status review; exact tree comparison; `git diff --check`; linear ancestry; 77-directory inventory; migration checksum; digest-only/catalog, no-route, write-closed, and checkpoint-prohibition review; PASS |
 | Unresolved ambiguity | None. No invitation, ingress, event, receipt, or canonical Application was synthesized during upgrade. Existing continuation credentials, Campaign binding, timestamps, and consumption state were preserved. |
 | Verdict | `PASS` |
-| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+| Systems Architect acceptance SHA | `2fec05bf2ebec33aad8b66f929b60760116df927` (the immutable documentation commit that first published this PASS entry) |
 
 ### 5.1 Finite command evidence
 
