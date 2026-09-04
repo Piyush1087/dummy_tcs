@@ -293,7 +293,7 @@ NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1E
 | Fetch-back | Candidate SHA/tree fetched before CI; branch equals `origin/c03/recovery-campaign-participation-v1`; all three jobs independently proved empty porcelain and no schema/migration drift from P1.1D |
 | Unresolved ambiguity | None. No skipped acceptance case, failed/unfinished migration, unvalidated constraint, temporary write-closed trigger, synthesized canonical row, timeout, or unexplained write remains. |
 | Verdict | `PASS`; aggregate `P1.1 = PASS` |
-| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+| Systems Architect acceptance SHA | `4e97062df1b5050251efb63e71c8817a7f0a77a9` (the immutable documentation commit that first published this PASS entry) |
 
 ### 7.1 Independent PostgreSQL lanes and finite evidence
 
