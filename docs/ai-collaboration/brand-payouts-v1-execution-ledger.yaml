@@ -1,0 +1,161 @@
+schema_version: "1.0"
+run_id: "brand-payouts-v1-unassigned"
+status: "PREPARED_NOT_AUTHORIZED"
+
+authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
+architecture_sha: "TO_BE_PINNED_AFTER_PARENT_ACCEPTS_PHASE_C_HEAD"
+architecture_parent_sha: "7aeb0512cb8270a6bae1169570e82b080f01807e"
+backend_base_sha: "4c5f42858b950b7cd342f8972f99f548f3daa942"
+frontend_base_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
+c04_architecture_sha: "de28784662bb92dac6cb927e348f3fc69564af7c"
+c04_backend_handoff_sha: null
+c04_frontend_handoff_sha: null
+c03_recovery_authority_sha: "dc81b54b87bf6fdf90583c7d0e76f176d883ce32"
+c03_current_accepted_backend_sha: "ebad770291b411026542a7d53a7e6a30162bff2e"
+c03_required_post_p1_4_sha: null
+c03_current_accepted_frontend_sha: "66d6a9bc992afcdfb900d7837defd867670bf640"
+c03_required_frontend_integration_sha: null
+p4_canonical_backend_convergence_sha: null
+c05_dependency_sha: "156d5834266077be7e2b6a2d459bae5489edbbd6"
+c05_frontend_dependency_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
+
+execution_mode:
+  recommendation: "HYBRID_RUN"
+  authority: "PRODUCT"
+  authorized: false
+
+phase: "PHASE_C_PREPARED"
+branch: "brand-payouts/stage-b-architecture-plan-v1"
+checkpoint_sha: null
+checkpoint_name: null
+next_phase: "P0_CANONICAL_BASE_AND_CONTRACT_CONVERGENCE"
+
+dependency_gates:
+  product_authority: "SATISFIED"
+  architecture_parent_acceptance: "OPEN_HUMAN_GATE"
+  c04_architecture: "READY_WITH_RECONCILIATION"
+  c04_backend_settlement_handoff: "OPEN_BLOCKING"
+  c04_backend_convergence_tree: "OPEN_BLOCKING"
+  c04_financial_recovery_instruction: "OPEN_BLOCKING"
+  c04_frontend: "OPEN_NON_SERIALIZING"
+  c05_readiness: "READY_WITH_RECONCILIATION"
+  campaign_exact_net_terms: "OPEN_BLOCKING"
+  campaign_manager_entity_scope: "OPEN_BLOCKING"
+  payment_support_security_policy: "OPEN_BLOCKING"
+  complete_v1_source_coresidence: "OPEN_BLOCKING"
+  first_vertical_slice: "OPEN_HUMAN_GATE"
+  first_financial_reserve_path: "OPEN_HUMAN_GATE"
+  india_withholding_if_applicable: "OPEN_HUMAN_GATE"
+
+gate_qualifiers:
+  c04_architecture: "RECONCILE_RESERVE_APPROVAL_TERM_ELIGIBILITY_RECOVERY_CONFIRMATION"
+  c04_backend_settlement_handoff: "BLOCKS_P4_AND_P5_NOT_P0_TO_P3"
+  c04_frontend: "BLOCKS_ONLY_C04_SPECIFIC_FRONTEND_AND_FINAL_JOINT_ACCEPTANCE"
+  c05_readiness: "EXACT_CURRENT_DESTINATION_VERSION_FENCE_REQUIRED_BEFORE_P5"
+  campaign_exact_net_terms: "BLOCKS_CANONICAL_DUE_AND_AUTOMATIC_EXECUTION"
+  campaign_manager_entity_scope: "NO_BRAND_WIDE_FALLBACK_RETURN_ZERO_ROWS_UNTIL_PROVEN"
+  payment_support_security_policy: "BLOCKS_ONLY_M2_AND_P3S_SUPPORT"
+  complete_v1_source_coresidence: "BLOCKS_ONLY_COMPLETE_V1_P7"
+  india_withholding_if_applicable: "PRODUCTION_LAUNCH_ONLY"
+
+migrations:
+  expected_new_payouts_migrations: 2
+  max_new_financial_migrations_without_human_review: 0
+  m1_financial_contract:
+    status: "PROPOSAL_NOT_AUTHORIZED"
+    applied: false
+    sha: null
+  m2_payment_support_case:
+    status: "PROPOSAL_NOT_AUTHORIZED"
+    applied: false
+    sha: null
+  campaign_net_term_migration:
+    owner: "CAMPAIGN"
+    counted_in_payouts_total: false
+    status: "OPEN"
+    applied: false
+    sha: null
+  c04_convergence_migrations:
+    owner: "C04"
+    counted_in_payouts_total: false
+    status: "OPEN_PENDING_CANONICAL_BASE"
+    applied: false
+    sha: null
+
+tests:
+  phase_c_document_validation: "PASS"
+  contract_unit: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
+  service_integration: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
+  postgres_security: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
+  frontend: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
+  production_shaped: "NOT_RUN_IMPLEMENTATION_NOT_AUTHORIZED"
+
+provider_mode: "DISABLED_FAIL_CLOSED"
+provider_actions: []
+razorpay_gates:
+  rz_g0: "READY_WITH_RECONCILIATION"
+  rz_g1: "OPEN_NON_SERIALIZING"
+  rz_g2a: "OPEN_BLOCKING"
+  rz_g2w: "OPEN_BLOCKING"
+  rz_g3: "NOT_AUTHORIZED"
+  rz_g4: "OPEN_HUMAN_GATE"
+
+corrections:
+  current_phase_count: 0
+  total_p0_p5_count: 0
+  max_per_phase: 2
+  max_total_p0_p5: 4
+  repeated_failure_limit: 1
+
+last_failure: null
+breaker: null
+stop_reason: "AWAITING_PARENT_PHASE_C_ACCEPTANCE"
+environment: "CHATGPT_WORK_CLOUD_DOCUMENTATION_ONLY"
+
+checkpoint_policy:
+  max_phases_per_authorized_segment: 3
+  max_wall_clock_minutes_when_metered: 120
+  max_model_tokens_when_metered: 200000
+  max_uncheckpointed_minutes: 60
+  max_uncheckpointed_changed_files: 20
+  max_uncommitted_phases_per_repository: 1
+
+resume_requirements:
+  checks:
+    - "VERIFY_AUTHORITY_SHA"
+    - "VERIFY_ACCEPTED_ARCHITECTURE_SHA"
+    - "VERIFY_CHECKPOINT_SHA"
+    - "VERIFY_BRANCH_AND_REMOTE_DIVERGENCE"
+    - "VERIFY_CLEAN_WORKTREES"
+    - "VERIFY_DEPENDENCY_GATES"
+    - "VERIFY_AUTHORIZED_MIGRATION_STATE"
+    - "VERIFY_PRIOR_PHASE_SMOKE_GATE"
+  mismatch_breaker: "RESUME_STATE_INVALID"
+
+phase_checkpoints:
+  p0: null
+  p1_backend_read: null
+  p2_first_vertical_slice: null
+  p3a_operations_cutover: null
+  p3s_support: null
+  p4_base_convergence: null
+  p4a_first_reserve: null
+  p4b_instruction_intake: null
+  p4r_recovery_intake: null
+  p5a_provider_neutral_normal: null
+  p5r_recovery: null
+  p6a_rz_g1_evidence: null
+  p6b_rz_g2a_adapter: null
+  p6b_rz_g2w_webhook_map: null
+  p6c_rz_g3_controlled_test: null
+  p7_normal_path_acceptance: null
+  p7_complete_v1_coresidence: null
+  p7_production_shaped_acceptance: null
+
+files_changed:
+  authority: []
+  backend: []
+  frontend: []
+  provider_evidence: []
+
+last_updated: "2026-09-04T20:12:23Z"
