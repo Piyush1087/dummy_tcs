@@ -223,7 +223,7 @@ NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1D
 | Diff review | P1.1C→candidate complete name/status review; exact tree comparison; `git diff --check`; linear ancestry; 78-directory inventory; migration checksum; permanent-guard-before-write-open ordering; adapter/legacy/service/lock/prohibition review; PASS |
 | Unresolved ambiguity | None. The canonical write-closed trigger is removed only after all permanent guards exist; no public canonical route, command, Collaboration, or Notification behavior is present. |
 | Verdict | `PASS` |
-| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+| Systems Architect acceptance SHA | `90850151341a709901ee187b15f59112ecc9ded2` (the immutable documentation commit that first published this PASS entry) |
 
 ### 6.1 Finite command evidence
 
