@@ -114,7 +114,7 @@ NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1B
 | Diff review | P1.1A→candidate complete name/status review; exact tree comparison before publication; `git diff --check`; linear ancestry; 76-directory inventory; migration checksum; scope/prohibition review; PASS |
 | Unresolved ambiguity | None. All historical rows remain `LEGACY_COMPATIBILITY` at `statusVersion=0`; no row was promoted or synthesized. |
 | Verdict | `PASS` |
-| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+| Systems Architect acceptance SHA | `1f754be161fec1e3b8f5d89b98c712fdebf0bea7` (the immutable documentation commit that first published this PASS entry) |
 
 ### 4.1 Finite command evidence
 
