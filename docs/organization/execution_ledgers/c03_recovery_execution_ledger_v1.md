@@ -26,7 +26,7 @@ line is admitted here.
 |---|---|---|---:|---|
 | P1.1A Campaign / Asset / Brief convergence | PASS | `7da499a0c0a9c12c8c4247dd4567726990ae8120` | 75 | P1.1B |
 | P1.1B canonical Application + snapshot | PASS | `43940337184ef63338766044827234d69236aa63` | 76 | P1.1C |
-| P1.1C invitation / ingress / idempotency / events | NOT STARTED | — | — | P1.1B PASS |
+| P1.1C invitation / ingress / idempotency / events | PASS | `ebad770291b411026542a7d53a7e6a30162bff2e` | 77 | P1.1D |
 | P1.1D guards / locking / adapters / compatibility | NOT STARTED | — | — | P1.1C PASS |
 | P1.1E PostgreSQL acceptance | NOT STARTED | — | — | P1.1D PASS |
 | P1.2 Opportunity entitlement/read APIs | NOT STARTED | — | — | P1.1 PASS |
@@ -149,10 +149,65 @@ P1_1B = PASS
 NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1C
 ```
 
-## 5. Current continuation
+## 5. P1.1C immutable entry
+
+| Field | Evidence |
+|---|---|
+| Checkpoint | `P1.1C` |
+| Prior accepted SHA/tree | `43940337184ef63338766044827234d69236aa63` / `fc4beee002921bcf252edf9def60960f4ccb64dd` |
+| Candidate backend SHA/tree | `ebad770291b411026542a7d53a7e6a30162bff2e` / `47c2921ca970e7093ed3fff1faae05941f435fbd` |
+| Candidate chain | Direct child of accepted P1.1B; linear, no merge; exact local tree was reproduced through GitHub Git objects and fetched back. |
+| Migration | 77 total; `20260910121000_c03_invitation_ingress_idempotency_events`; SQL SHA-256 `728ddc96ebd81284efabacafc3ff0f0bfc3260bb2c1f8ad47abb7fa30bd2cbf2` |
+| Schema writer | C-03 Recovery Systems Architect; no concurrent schema/migration writer |
+| Durable interval | checkpoint start `2026-09-04T19:41:53Z`; accepted-run final-integrity timestamp `2026-09-04T20:03:41.1213581Z` |
+| Preflight | `C03_P1_1_MIGRATION_PREFLIGHT_V1`; server timestamp `2026-09-04 20:01:42.086839+00`; `result=PASS`; exact 74 P0 names/checksums; six Application statuses and seeded continuation inventoried before DDL |
+| Evidence artifact | ID `9952544639`; `c03-p11c-upgrade-ebad770291b411026542a7d53a7e6a30162bff2e`; 2,953 bytes; digest `sha256:7bc6deb5210709525a25575367da620ded7b4b58a3d6dc9fb3d793a0c88524f8` |
+| Disposable databases | PostgreSQL 16 `c03_p11c_fresh` (0→77), `c03_p11c_upgrade74` (exact P0 74→77), `c03_p11c_upgrade76` (accepted P1.1B 76→77), `c01_i1_p11c`, and `c01_i5_p11c` |
+| Accepted workflow | run `33914067966`; job `101157041963`; conclusion `success`; run interval `2026-09-04T20:00:44Z`–`2026-09-04T20:03:43Z` |
+| Fetch-back | Remote SHA/tree/parent fetched; local branch equals `origin/c03/recovery-campaign-participation-v1`; clean tree; PASS |
+| Diff review | P1.1B→candidate complete name/status review; exact tree comparison; `git diff --check`; linear ancestry; 77-directory inventory; migration checksum; digest-only/catalog, no-route, write-closed, and checkpoint-prohibition review; PASS |
+| Unresolved ambiguity | None. No invitation, ingress, event, receipt, or canonical Application was synthesized during upgrade. Existing continuation credentials, Campaign binding, timestamps, and consumption state were preserved. |
+| Verdict | `PASS` |
+| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+
+### 5.1 Finite command evidence
+
+| Command family | Outer timeout | Exit/result | Observed duration/evidence |
+|---|---:|---|---|
+| Prisma 6.19.3 generate / format / validate | 10m / 5m / 5m | 0 / 0 / 0 | local and Actions PASS |
+| changed-file Prettier/ESLint and `git diff --check` | 2m | 0 | PASS |
+| fresh migration deploy/status | 20m each | 0 / 0 | PostgreSQL 16, 77 migrations, up to date |
+| exact-P0 seed/preflight/candidate deploy/status | 5m / 10m / 20m / 20m | all 0 | 74→77 PASS; six legacy Applications/snapshots and direct continuation byte-semantics preserved; typed continuation defaults proved; zero synthesized C-03 rows |
+| accepted-P1.1B seed/candidate deploy/status | 5m / 20m / 20m | all 0 | 76→77 PASS; six legacy Applications/snapshots and direct continuation preserved |
+| P1.1C PostgreSQL negatives | 20m | 0 | 1 file / 6 tests; 646ms Vitest duration; invitation, ingress, continuation, receipt, event, Application-reference, digest-only, catalog, and write-closure assertions PASS |
+| C-01 persistence PostgreSQL regression | 30m | 0 | 1 file / 22 tests; 1.01s Vitest duration |
+| C-01 continuation PostgreSQL regression | 30m | 0 | 1 file / 21 tests; 2.06s Vitest duration |
+| architecture/transport/cookie/legacy focused suite | 30m | 0 | 7 files / 35 tests; 1.43s Vitest duration |
+| full test suite | 45m | 0 | 186 files and 1,237 tests PASS; 47 files / 626 environment-gated tests skipped; 67.71s Vitest duration |
+| production build | 20m | 0 | `nest build` plus prompt-asset copy PASS |
+| final repository integrity | 2m | 0 | `git diff --exit-code` and empty porcelain PASS |
+
+### 5.2 Independent acceptance review
+
+P1.1C is internally consistent and safe to stop. Invitation and ingress
+credentials are digest/HMAC-only, Campaign ancestry is physical, subject
+binding and revocation are monotonic, continuation transport behavior remains
+the accepted C-01 direct default, and receipt/event rows are scoped and
+append-only. Application attribution references are composite Campaign-bound.
+Canonical Application writes remain database-closed pending the complete
+P1.1D guard family. No invitation/ingress route, policy decision, Application
+command, event producer, Collaboration, Notification, frontend, provider,
+AWS, or production behavior was introduced.
 
 ```text
-LAST_ACCEPTED_CHECKPOINT = P1.1B
-CURRENT_CHECKPOINT = P1.1C
+P1_1C = PASS
+NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1D
+```
+
+## 6. Current continuation
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P1.1C
+CURRENT_CHECKPOINT = P1.1D
 P2_EXECUTION = NOT_AUTHORIZED
 ```
