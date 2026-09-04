@@ -31,7 +31,7 @@ next_parent_gate: "BP-P2-FIRST-VERTICAL-SLICE"
 
 phase: "P0_ACCEPTED"
 branch: "brand-payouts/v1-execution-ledger"
-checkpoint_sha: null
+checkpoint_sha: "23189603fff46af26c8280147311263a9f93601a"
 checkpoint_name: "BP-P0-CONTRACT-BASE"
 next_phase: "P1_BACKEND_AUTHORIZATION_AND_READ_MODEL"
 
@@ -151,7 +151,7 @@ phase_checkpoints:
   p0:
     status: "ACCEPTED"
     checkpoint_name: "BP-P0-CONTRACT-BASE"
-    authority_sha: null
+    authority_sha: "23189603fff46af26c8280147311263a9f93601a"
     backend_sha: "b19752e476f85509ac2a895ffde6f17180dec7ee"
     frontend_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
     campaign_manager_scope: "OPTION_B_FAIL_CLOSED_ZERO_ROWS"
