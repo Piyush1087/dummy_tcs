@@ -52,7 +52,7 @@ line is admitted here.
 | Diff review | P0→candidate complete name/status review; `git diff --check`; linear P0 ancestry; 75-directory inventory; migration checksum; scope/prohibition review; PASS |
 | Unresolved ambiguity | None. Minimal legacy Brief remains compatibility-only and not C03-submit-ready, as required. |
 | Verdict | `PASS` |
-| Systems Architect acceptance binding | The immutable documentation commit that first publishes this PASS entry; its exact SHA is recorded in the next authority commit without changing this evidence or verdict. |
+| Systems Architect acceptance SHA | `883cbbbd4eb95e9a313af79b82180224c6f890a5` (the immutable documentation commit that first published this PASS entry) |
 
 ### 3.1 Finite command evidence
 
