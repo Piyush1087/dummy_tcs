@@ -25,7 +25,7 @@ line is admitted here.
 | Checkpoint | State | Accepted backend SHA | Migration count | Next |
 |---|---|---|---:|---|
 | P1.1A Campaign / Asset / Brief convergence | PASS | `7da499a0c0a9c12c8c4247dd4567726990ae8120` | 75 | P1.1B |
-| P1.1B canonical Application + snapshot | NOT STARTED | — | — | P1.1A PASS |
+| P1.1B canonical Application + snapshot | PASS | `43940337184ef63338766044827234d69236aa63` | 76 | P1.1C |
 | P1.1C invitation / ingress / idempotency / events | NOT STARTED | — | — | P1.1B PASS |
 | P1.1D guards / locking / adapters / compatibility | NOT STARTED | — | — | P1.1C PASS |
 | P1.1E PostgreSQL acceptance | NOT STARTED | — | — | P1.1D PASS |
@@ -95,10 +95,64 @@ P1_1A = PASS
 NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1B
 ```
 
-## 4. Current continuation
+## 4. P1.1B immutable entry
+
+| Field | Evidence |
+|---|---|
+| Checkpoint | `P1.1B` |
+| Prior accepted SHA/tree | `7da499a0c0a9c12c8c4247dd4567726990ae8120` / `9077573ff87a6caec8c5bde10eacfb11dfdf5832` |
+| Candidate backend SHA/tree | `43940337184ef63338766044827234d69236aa63` / `fc4beee002921bcf252edf9def60960f4ccb64dd` |
+| Candidate chain | Direct child of accepted P1.1A; linear, no merge. The local construction commit was not treated as authority; the GitHub-created commit above was fetched back and is the checkpoint identity. |
+| Migration | 76 total; `20260910120500_c03_application_snapshot_foundation`; SQL SHA-256 `2bdba21e6c625aff5c2c8dccca2b23bcf9f4df5adb21a9a23525024123aafdf2` |
+| Schema writer | C-03 Recovery Systems Architect; no concurrent schema/migration writer |
+| Durable interval | local checkpoint start `2026-09-04T19:14:02Z`; accepted-run final-integrity timestamp `2026-09-04T19:38:28.1724884Z` |
+| Preflight | `C03_P1_1_MIGRATION_PREFLIGHT_V1`; scope `P1.1A_B_CAMPAIGN_APPLICATION_SNAPSHOT`; server timestamp `2026-09-04 19:36:44.719291+00`; `result=PASS`; exact 74 P0 names/checksums; six legacy statuses; no structural contradiction |
+| Evidence artifact | ID `9951772279`; `c03-p11b-upgrade-43940337184ef63338766044827234d69236aa63`; 2,474 bytes; digest `sha256:cb5b8528fcc692ba9030e505b4f98e2d5589824e21b65a5991284ff2eb4f3021` |
+| Disposable databases | PostgreSQL 16 `c03_p11b_fresh` (0→76), `c03_p11b_upgrade74` (exact P0 74→76), and `c03_p11b_upgrade75` (accepted P1.1A 75→76) |
+| Accepted workflow | run `33911969790`; job `101150222887`; conclusion `success`; run interval `2026-09-04T19:35:48Z`–`2026-09-04T19:38:30Z` |
+| Fetch-back | Remote SHA/tree/parent fetched; local branch equals `origin/c03/recovery-campaign-participation-v1`; clean tree; PASS |
+| Diff review | P1.1A→candidate complete name/status review; exact tree comparison before publication; `git diff --check`; linear ancestry; 76-directory inventory; migration checksum; scope/prohibition review; PASS |
+| Unresolved ambiguity | None. All historical rows remain `LEGACY_COMPATIBILITY` at `statusVersion=0`; no row was promoted or synthesized. |
+| Verdict | `PASS` |
+| Systems Architect acceptance SHA | `PENDING_BINDING_COMMIT` |
+
+### 4.1 Finite command evidence
+
+| Command family | Outer timeout | Exit/result | Observed duration/evidence |
+|---|---:|---|---|
+| Prisma 6.19.3 generate | 10m | 0 | local and Actions PASS |
+| Prisma format check / validate | 5m each | 0 / 0 | local and Actions PASS |
+| changed-file Prettier/ESLint and `git diff --check` | 2m | 0 | PASS |
+| fresh migration deploy/status | 20m each | 0 / 0 | PostgreSQL 16, 76 migrations, up to date |
+| exact-P0 deploy, six-status seed, read-only preflight, candidate deploy/status | 20m / 5m / 10m / 20m / 20m | all 0 | 74→76 PASS; all six statuses and JSON snapshot partitions preserved without rewrite |
+| P1.1A deploy, seed, candidate deploy/status | 20m / 5m / 20m / 20m | all 0 | 75→76 PASS; Application/snapshot invariants preserved |
+| P1.1B PostgreSQL negatives | 20m | 0 | 1 file / 5 tests; 612ms Vitest duration; authority shapes, composite ancestry/actor FKs, partial uniqueness, write closure, and snapshot FK/catalog assertions PASS |
+| legacy Brand compatibility tests | 30m | 0 | 2 files / 9 tests; 748ms Vitest duration |
+| full test suite | 45m | 0 | 185 files and 1,233 tests PASS; 46 files / 620 environment-gated tests skipped; 64.65s Vitest duration |
+| production build | 20m | 0 | `nest build` plus prompt-asset copy PASS |
+| final repository integrity | 2m | 0 | `git diff --exit-code` and empty porcelain PASS |
+
+### 4.2 Independent acceptance review
+
+P1.1B is internally consistent and safe to stop. The one existing Application/
+snapshot family now carries an explicit legacy-versus-canonical discriminator,
+canonical Campaign→Asset→Brief and actor/Owner-subject identities, active
+same-opportunity uniqueness, versioned snapshot fields, and restrictive core
+FKs. Existing rows remain byte-semantics-preserved legacy compatibility rows.
+The temporary database guard keeps canonical writes closed until P1.1D installs
+the complete transactional guard family. No invitation, ingress, receipt,
+event, Application command, Collaboration, Notification, frontend, provider,
+AWS, or production behavior was introduced.
 
 ```text
-LAST_ACCEPTED_CHECKPOINT = P1.1A
-CURRENT_CHECKPOINT = P1.1B
+P1_1B = PASS
+NEXT_AUTHORIZED_INTERNAL_CHECKPOINT = P1.1C
+```
+
+## 5. Current continuation
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P1.1B
+CURRENT_CHECKPOINT = P1.1C
 P2_EXECUTION = NOT_AUTHORIZED
 ```
