@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "EXECUTION_BLOCK_1_IN_PROGRESS"
+status: "EXECUTION_BLOCK_1_STOPPED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 architecture_sha: "3fb6b4246aa5f2ecb71c3bbfe99c56e395f30a92"
@@ -29,11 +29,11 @@ authorization_artifact: "BRAND_PAYOUTS_STAGE_B_ACCEPTANCE_AND_EXECUTION_BLOCK_1_
 authorized_segment: "P0_TO_P2"
 next_parent_gate: "BP-P2-FIRST-VERTICAL-SLICE"
 
-phase: "P0_ACCEPTED"
+phase: "P1_STOPPED_UNACCEPTED"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "23189603fff46af26c8280147311263a9f93601a"
 checkpoint_name: "BP-P0-CONTRACT-BASE"
-next_phase: "P1_BACKEND_AUTHORIZATION_AND_READ_MODEL"
+next_phase: "PARENT_REVIEW_REQUIRED_BEFORE_RESUME"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -94,8 +94,8 @@ tests:
   p0_backend_build: "PASS"
   p0_diff_check: "PASS"
   p0_schema_migration_diff: "NONE"
-  p1_service_integration: "PENDING"
-  p1_postgres_security: "PENDING"
+  p1_service_integration: "FOCUSED_35_OF_35_PASS_FINAL_SECURITY_REJECT"
+  p1_postgres_security: "BLOCKED_WORK_ENVIRONMENT_OFFLINE"
   p2_frontend: "PENDING"
   p2_production_shaped: "PENDING"
 
@@ -110,8 +110,8 @@ razorpay_gates:
   rz_g4: "OPEN_HUMAN_GATE"
 
 corrections:
-  current_phase_count: 1
-  total_p0_p5_count: 1
+  current_phase_count: 2
+  total_p0_p5_count: 3
   max_per_phase: 2
   max_total_p0_p5: 4
   repeated_failure_limit: 1
@@ -121,10 +121,23 @@ correction_history:
     signature: "TYPESCRIPT_READONLY_ACCEPT_HEADER_NARROWING"
     result: "CORRECTED_AND_GATE_RERUN_PASS"
     scope: "TWO_IMPLICIT_ANY_DIAGNOSTICS_IN_MEDIA_NEGOTIATION_HELPER"
+  - phase: "P1"
+    signature: "READ_PROJECTION_LINEAGE_SNAPSHOT_HARDENING"
+    result: "BOUNDED_CORRECTION_APPLIED_FOCUSED_GATE_PASS"
+    scope: "OWNERSHIP_LINEAGE_CURSOR_SNAPSHOT_AND_LEGACY_FAIL_CLOSED_HARDENING"
+  - phase: "P1"
+    signature: "LEDGER_REFERENCE_AND_REVERSAL_CHRONOLOGY"
+    result: "NOT_APPLIED_WORK_ENVIRONMENT_OFFLINE"
+    scope: "OMIT_UNPROVEN_COLLABORATION_REFERENCE_AND_REQUIRE_COHERENT_REVERSAL_TIMESTAMPS"
 
-last_failure: null
-breaker: null
-stop_reason: null
+last_failure:
+  signature: "P1_FINAL_SECURITY_LEDGER_REFERENCE_AND_REVERSAL_CHRONOLOGY"
+  status: "CORRECTION_NOT_APPLIED_ENVIRONMENT_OFFLINE"
+  findings:
+    - "UNPROVEN_LEDGER_COLLABORATION_REFERENCE"
+    - "REVERSAL_NORMALIZATION_WITHOUT_COHERENT_TERMINAL_TIMESTAMPS"
+breaker: "MAX_UNCHECKPOINTED_MINUTES_EXCEEDED"
+stop_reason: "Work filesystem returned persistent 409 environment_offline; P1 could not safely apply the final bounded Security correction, run its database-backed runtime gate, or checkpoint within 60 minutes."
 environment: "CHATGPT_WORK_CLOUD_EXECUTION_BLOCK_1"
 
 checkpoint_policy:
@@ -193,4 +206,42 @@ files_changed:
   frontend: []
   provider_evidence: []
 
-last_updated: "2026-09-04T21:01:24Z"
+uncheckpointed_work:
+  phase: "P1"
+  accepted: false
+  backend_branch: "brand-payouts/v1-backend"
+  backend_parent_sha: "b19752e476f85509ac2a895ffde6f17180dec7ee"
+  last_verified_dirty_file_count: 16
+  frontend_started: false
+  authority_worktree_last_known_clean: true
+  frontend_worktree_last_known_clean: true
+  backend_files:
+    - "src/features/brand-centre/brand-centre-auth.service.ts"
+    - "src/features/brand-centre/brand-workspace-authorization.service.ts"
+    - "src/features/brand-payouts/brand-payouts-p0.architecture.test.ts"
+    - "src/features/brand-payouts/brand-payouts-p1.security.test.ts"
+    - "src/features/brand-payouts/brand-payouts.controller.test.ts"
+    - "src/features/brand-payouts/brand-payouts.controller.ts"
+    - "src/features/brand-payouts/brand-payouts.module.ts"
+    - "src/features/brand-payouts/contracts/brand-payouts-v2.contract.ts"
+    - "src/features/brand-payouts/dto/brand-payouts-query.dto.ts"
+    - "src/features/brand-payouts/services/brand-payouts-authorization.service.ts"
+    - "src/features/brand-payouts/services/brand-payouts-query.service.ts"
+    - "src/features/brand-payouts/services/brand-payouts-read-environment.service.ts"
+    - "src/features/brand-payouts/services/financial-activity-projection.service.ts"
+    - "src/features/brand-payouts/services/payout-obligation-projection.service.ts"
+    - "src/features/brand-payouts/utils/brand-payouts-cursor.ts"
+    - "src/features/brand-payouts/utils/brand-payouts-projection.ts"
+  schema_or_migration_changes: false
+  provider_actions: []
+  tests_before_final_security_gate:
+    focused_brand_payouts: "PASS_35_OF_35"
+    targeted_lint: "PASS"
+    backend_build: "PASS"
+    diff_check: "PASS"
+  final_security_gate: "REJECT"
+  runtime_acceptance: "NOT_RUN_ENVIRONMENT_OFFLINE"
+  full_backend_test: "NOT_RUN_ENVIRONMENT_OFFLINE"
+  p2_started: false
+
+last_updated: "2026-09-04T22:23:00Z"
