@@ -1,0 +1,29 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "acceptanceRule": "Only unprefixed final browser matrices count. Superseded captures remain additive for audit and carry no gate credit.",
+  "attempts": [
+    {
+      "prefix": "environment-attempt-",
+      "issue": "Parallel browser scripts on the 8GB Windows host exhausted resources; one Creator login hit the existing 5000ms Prisma transaction deadline at 5101ms.",
+      "resolution": "Closed attempted browsers and reran actor lane serially. All 72 actor/probe rows completed; no 500 or page exception in accepted lanes.",
+      "classification": "RECOVERED_LOCAL_RESOURCE_CONTENTION"
+    },
+    {
+      "prefix": "transport-attempt-",
+      "issue": "Playwright JSON fulfillment replaced exact V2 Content-Type with application/json. App correctly rejected unsupported representation.",
+      "resolution": "Temporary harness now preserves response headers and exact V2 media type, serializes only contract-valid labelled projection. Fresh 76-state sweep passed.",
+      "classification": "RECOVERED_HARNESS_TRANSPORT_ERROR"
+    },
+    {
+      "prefix": "fixture-attempt-",
+      "issue": "Human-readable fixture Brand and vault IDs fail the existing Settings UUID schema. Vault GET was 200; parser issues were only vault_id and brand_id invalid UUID.",
+      "resolution": "Separate deterministic UUID Brand/Owner/vault seeded; no original fixture/source changed. Fresh real Settings route renders both existing controls at all widths.",
+      "classification": "RECOVERED_FIXTURE_INCOMPATIBILITY"
+    }
+  ],
+  "sourceChanges": "NONE",
+  "originalCompleteNetworkTail": "browser-network-console-complete.json retains a failed Settings metadata attempt after the successful 72 actor rows. Settings acceptance uses browser-network-console-settings.json only."
+}

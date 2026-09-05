@@ -1,0 +1,3901 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "events": [
+    {
+      "actor": "owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(2, 2, 2) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 390,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "fixture-attempt-390-owner-settings-destination.png",
+      "addFundsCount": 0,
+      "brandReturnCount": 0,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 390,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2610
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2610
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3208
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3208
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3806
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3806
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4404
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4404
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5002
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5002
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5600
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5600
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6198
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6198
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6796
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6796
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7394
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7394
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7992
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7992
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 8590
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 8590
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9188
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9188
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 9721
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2610
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2610
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3208
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3208
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3806
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3806
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4404
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4404
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5002
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5002
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5600
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5600
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6198
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6198
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6796
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6796
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7394
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7394
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7992
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7992
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 8590
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 8590
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9188
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9188
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 9721
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2610
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2610
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3208
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3208
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3806
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3806
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4404
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4404
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5002
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5002
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5600
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5600
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6198
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6198
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6796
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6796
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7394
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7394
+        }
+      ],
+      "uniqueTargets": 36
+    },
+    {
+      "actor": "owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7992
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7992
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 8590
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 8590
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9188
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9188
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 9721
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 390,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 767,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "fixture-attempt-767-owner-settings-destination.png",
+      "addFundsCount": 0,
+      "brandReturnCount": 0,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 767,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1242
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1242
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 7299
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1242
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1242
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1242
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1242
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1865
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2588
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3311
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4034
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 4757
+        }
+      ],
+      "uniqueTargets": 37
+    },
+    {
+      "actor": "owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 5480
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6203
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 6926
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7299
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 7299
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 767,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(97, 97, 97, 0.816) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(217, 217, 217, 0.64) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(217, 217, 217, 0.64) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(217, 217, 217, 0.64) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(9, 9, 9) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 768,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "fixture-attempt-768-owner-settings-destination.png",
+      "addFundsCount": 0,
+      "brandReturnCount": 0,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 768,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1855
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2450
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1293
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1829
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1855
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2424
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2450
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3019
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 3146
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "uniqueTargets": 42
+    },
+    {
+      "actor": "owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 768,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 1440,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "fixture-attempt-1440-owner-settings-destination.png",
+      "addFundsCount": 0,
+      "brandReturnCount": 0,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 1440,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(217, 217, 217, 0.64) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1119
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1714
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=obligation%3Abp-p2-obligation-a%3Acreated",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-053%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-052%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-051%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-050%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 557
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-049%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-048%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-047%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-046%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-045%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-044%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1093
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-043%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1119
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-042%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-041%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-040%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-039%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-038%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-037%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1688
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-036%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1714
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-035%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-034%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-033%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-032%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+          "href": "/brand/payouts?activity=ledger%3Abp-p2-ledger-a-031%3Arecorded",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Load more activity",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2283
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2410
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "uniqueTargets": 42
+    },
+    {
+      "actor": "owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 1440,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    }
+  ],
+  "evidenceClassification": "SUPERSEDED_NON_UUID_SETTINGS_FIXTURE"
+}

@@ -1,0 +1,1652 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "network": [
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "messages": [
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "interceptions": [
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-browser-back",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-disclosure-assessment",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    }
+  ]
+}

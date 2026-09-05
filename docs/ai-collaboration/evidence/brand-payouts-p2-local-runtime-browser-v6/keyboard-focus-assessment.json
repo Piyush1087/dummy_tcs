@@ -1,0 +1,19 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "sources": [
+    "keyboard-focus-integration.json",
+    "keyboard-focus-restoration.json",
+    "keyboard-focus-settings.json",
+    "keyboard-focus-complete.json"
+  ],
+  "detailEntry": "Actual active element recorded, commonly BODY after full-page detail navigation. No modal/dialog is rendered; focus containment is neither implemented nor appropriate for these route pages.",
+  "returnAssessment": "No automatic restoration to the invoking row is claimed. Browser/in-app return preserves all list data. Tab/Enter reaches visible named controls, including Back to Payouts; Space activates native summary and buttons. BODY focus after route replacement is a non-blocking navigation observation under this runner, not a modal focus violation or keyboard trap. It remains an explicit improvement opportunity for SA review.",
+  "visibleFocus": "Keyboard traces record :focus-visible and computed outlines at interactive targets. Route BODY focus has no claimed visible indicator.",
+  "escape": "Native details disclosure is not dismissible/modal; Escape leaves it open. Space/Enter toggles it. Detail is a page with Back control, not a sheet; no Escape-close promise applies.",
+  "noTrap": "100 consecutive Tab traversals recorded at each width in the Settings fixture Payouts overview, plus long expanded-list Tab traversals and successful Back activation. Users can reach shell navigation and return controls.",
+  "refresh": "Identifier integration records same activity detail identity after hard refresh; full list preservation is asserted only for Back without hard reload.",
+  "sourceChanges": "NONE"
+}

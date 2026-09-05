@@ -1,0 +1,5414 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "network": [
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts/obligations/payout-obligation%3Abp-p2-obligation-a",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts/obligations/payout-obligation%3Abp-p2-obligation-a",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts/obligations/payout-obligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/api/v1/creator/workspace/actor-context",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/api/v1/creator-entry/state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/api/v1/creator-entry/campaign-apply/continuation/status",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "path": "/api/v1/creator-entry/state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/creator-entry/state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/creator/workspace/actor-context",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/creator-entry/campaign-apply/continuation/status",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/creator-entry/state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/creator-entry/state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/creator-entry/campaign-apply/continuation/status",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/creator/workspace/actor-context",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/creator-entry/state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/assets/index-BgT0-09n.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "messages": [
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "interceptions": [
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "inactive",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "no-membership",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "unrelated",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "creator",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-obligation-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "admin",
+      "state": "direct-activity-scope-probe",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    },
+    {
+      "actor": "owner",
+      "state": "settings-link-applicability",
+      "kind": "NON_AUTHORITATIVE_SETTINGS_APPLICABILITY_METADATA",
+      "path": "/api/v1/brand/payouts",
+      "onlyChange": {
+        "field": "sections[0].coverage",
+        "from": "PARTIAL",
+        "to": "COMPLETE"
+      },
+      "schemaValid": true
+    }
+  ]
+}

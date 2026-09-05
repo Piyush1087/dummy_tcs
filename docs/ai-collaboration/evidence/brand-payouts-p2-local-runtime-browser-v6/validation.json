@@ -1,0 +1,132 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "checks": [
+    {
+      "name": "178 fresh HTTP assertions pass",
+      "pass": true
+    },
+    {
+      "name": "64 fresh HTTP GETs",
+      "pass": true
+    },
+    {
+      "name": "31 final frontend schema validations",
+      "pass": true
+    },
+    {
+      "name": "74 committed migration checksums",
+      "pass": true
+    },
+    {
+      "name": "All 20 financial models pure in three lanes",
+      "pass": true
+    },
+    {
+      "name": "All 16 restored with no initial page refetch",
+      "pass": true
+    },
+    {
+      "name": "16 successful differing-identifier integrations",
+      "pass": true
+    },
+    {
+      "name": "256 fresh scans zero serious critical",
+      "pass": true
+    },
+    {
+      "name": "Every other finding recorded moderate",
+      "pass": true
+    },
+    {
+      "name": "Zero overflow",
+      "pass": true
+    },
+    {
+      "name": "Both eight final-row and document-end clearance sets pass",
+      "pass": true
+    },
+    {
+      "name": "Exact breakpoint",
+      "pass": true
+    },
+    {
+      "name": "No Payouts or financial mutations",
+      "pass": true
+    },
+    {
+      "name": "No unexpected Payouts errors or exceptions",
+      "pass": true
+    },
+    {
+      "name": "No public-reference detail request",
+      "pass": true
+    },
+    {
+      "name": "DOM names and financial truth checks",
+      "pass": true
+    },
+    {
+      "name": "Direct detail background remains nonrendered",
+      "pass": true
+    },
+    {
+      "name": "Unauthenticated form guards financial content",
+      "pass": true
+    },
+    {
+      "name": "Existing Settings controls present all widths",
+      "pass": true
+    },
+    {
+      "name": "No provider attempt",
+      "pass": true
+    },
+    {
+      "name": "Owned runtime cleaned",
+      "pass": true
+    },
+    {
+      "name": "V5 all 197 hashes intact",
+      "pass": true
+    },
+    {
+      "name": "Source clean at pins",
+      "pass": true
+    },
+    {
+      "name": "No prior tracked evidence changes",
+      "pass": true
+    },
+    {
+      "name": "Only allowed correction files",
+      "pass": true
+    },
+    {
+      "name": "No Prisma diff",
+      "pass": true
+    },
+    {
+      "name": "All nested screenshot references resolve",
+      "pass": true
+    }
+  ],
+  "unresolvedReferences": [],
+  "remoteHeadsRecheckedBeforeCommit": {
+    "backend": "119397ff6836ad12846c1e948409d8d49185c408",
+    "frontend": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+    "authority": "f9c25cf563c3caa8e358ce509cc70554d761cfea"
+  },
+  "credentialScan": {
+    "jsonLeafValuesInspected": 199312,
+    "sensitivePatternMatches": 0,
+    "ephemeralPasswordExactMatchesBeforeDeletion": 0
+  },
+  "markdownAndIndexValidation": "All links, JSON, and supporting artifact hashes validated by package validator; staged blob hashes verified before commit.",
+  "sourceChanges": "NONE",
+  "migrationsCreated": "NONE",
+  "providerActions": "NONE",
+  "p2Acceptance": "NOT_SET"
+}

@@ -1,0 +1,27 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "matrixRows": {
+    "browser-matrix.json": 76,
+    "browser-matrix-integration.json": 56,
+    "browser-matrix-restoration.json": 32,
+    "browser-matrix-complete.json": 72,
+    "browser-matrix-settings.json": 12,
+    "browser-matrix-clearance.json": 8
+  },
+  "acceptedFreshAxeScans": 256,
+  "seriousCritical": 0,
+  "restorationPasses": 16,
+  "identifierChecks": 16,
+  "actorMatrixComplete": true,
+  "settingsComplete": true,
+  "clearanceComplete": true,
+  "priorModerateLandmarksRetained": true,
+  "httpEvidence": "RERUN",
+  "sourceChanges": "NONE",
+  "migrationsCreated": "NONE",
+  "providerActions": "NONE",
+  "p2Acceptance": "NOT_SET"
+}

@@ -1,0 +1,9 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "events": [],
+  "evidenceClassification": "SUPERSEDED_HARNESS_ATTEMPT",
+  "reason": "Playwright json fulfillment changed the V2 media type, and short waits could capture loading. Corrected harness explicitly preserves V2 headers and awaits settled states. No application source changes."
+}

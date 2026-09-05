@@ -1,0 +1,585 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "rows": [
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "owner",
+      "kind": "activity",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 18934,
+        "documentHeight": 19934,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 791.296875,
+          "bottom": 805.296875,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 371.296875,
+          "bottom": 646.296875,
+          "height": 275
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "paddingBottom": "96px"
+      },
+      "globalMeasure": {
+        "scrollY": 18934,
+        "documentHeight": 19934,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 791.296875,
+          "bottom": 805.296875,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 371.296875,
+          "bottom": 646.296875,
+          "height": 275
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "paddingBottom": "96px"
+      },
+      "listScreenshot": "390-owner-list-end-clearance.png",
+      "globalScreenshot": "390-owner-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-owner",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "390-owner-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "owner",
+      "kind": "activity",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 14722,
+        "documentHeight": 15722,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 791.28125,
+          "bottom": 805.28125,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 465.28125,
+          "bottom": 690.28125,
+          "height": 225
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "paddingBottom": "96px"
+      },
+      "globalMeasure": {
+        "scrollY": 14722,
+        "documentHeight": 15722,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 791.28125,
+          "bottom": 805.28125,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 465.28125,
+          "bottom": 690.28125,
+          "height": 225
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "paddingBottom": "96px"
+      },
+      "listScreenshot": "767-owner-list-end-clearance.png",
+      "globalScreenshot": "767-owner-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-owner",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "767-owner-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "owner",
+      "kind": "activity",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 5733,
+        "documentHeight": 6733,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 919.421875,
+          "bottom": 933.421875,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 732.921875,
+          "bottom": 817.921875,
+          "height": 85
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "paddingBottom": "32px"
+      },
+      "globalMeasure": {
+        "scrollY": 5733,
+        "documentHeight": 6733,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 919.421875,
+          "bottom": 933.421875,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 732.921875,
+          "bottom": 817.921875,
+          "height": 85
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "paddingBottom": "32px"
+      },
+      "listScreenshot": "768-owner-list-end-clearance.png",
+      "globalScreenshot": "768-owner-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-owner",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "768-owner-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "owner",
+      "kind": "activity",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 4997,
+        "documentHeight": 5997,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 918.609375,
+          "bottom": 932.609375,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 732.109375,
+          "bottom": 817.109375,
+          "height": 85
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "paddingBottom": "32px"
+      },
+      "globalMeasure": {
+        "scrollY": 4997,
+        "documentHeight": 5997,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 918.609375,
+          "bottom": 932.609375,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 732.109375,
+          "bottom": 817.109375,
+          "height": 85
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "paddingBottom": "32px"
+      },
+      "listScreenshot": "1440-owner-list-end-clearance.png",
+      "globalScreenshot": "1440-owner-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-owner",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "1440-owner-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "unrelated",
+      "kind": "obligation",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 12966,
+        "documentHeight": 24537,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 492.921875,
+          "bottom": 506.921875,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 1.921875,
+          "bottom": 347.921875,
+          "height": 346
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "paddingBottom": "96px"
+      },
+      "globalMeasure": {
+        "scrollY": 23537,
+        "documentHeight": 24537,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 791.296875,
+          "bottom": 805.296875,
+          "height": 14
+        },
+        "lastRow": {
+          "top": -10569.078125,
+          "bottom": -10223.078125,
+          "height": 346
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "paddingBottom": "96px"
+      },
+      "listScreenshot": "390-unrelated-list-end-clearance.png",
+      "globalScreenshot": "390-unrelated-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-unrelated",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "390-unrelated-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "unrelated",
+      "kind": "obligation",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 8472,
+        "documentHeight": 16927,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 492.59375,
+          "bottom": 506.59375,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 166.59375,
+          "bottom": 391.59375,
+          "height": 225
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "paddingBottom": "96px"
+      },
+      "globalMeasure": {
+        "scrollY": 15927,
+        "documentHeight": 16927,
+        "viewportHeight": 1000,
+        "boundary": 936,
+        "lastControl": {
+          "top": 791.28125,
+          "bottom": 805.28125,
+          "height": 14
+        },
+        "lastRow": {
+          "top": -7288.40625,
+          "bottom": -7063.40625,
+          "height": 225
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "paddingBottom": "96px"
+      },
+      "listScreenshot": "767-unrelated-list-end-clearance.png",
+      "globalScreenshot": "767-unrelated-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-unrelated",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "767-unrelated-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "unrelated",
+      "kind": "obligation",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 4819,
+        "documentHeight": 9172,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 493.25,
+          "bottom": 507.25,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 264.75,
+          "bottom": 391.75,
+          "height": 127
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "paddingBottom": "32px"
+      },
+      "globalMeasure": {
+        "scrollY": 8172,
+        "documentHeight": 9172,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 919.421875,
+          "bottom": 933.421875,
+          "height": 14
+        },
+        "lastRow": {
+          "top": -3088.25,
+          "bottom": -2961.25,
+          "height": 127
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "paddingBottom": "32px"
+      },
+      "listScreenshot": "768-unrelated-list-end-clearance.png",
+      "globalScreenshot": "768-unrelated-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-unrelated",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "768-unrelated-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "unrelated",
+      "kind": "obligation",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "listMeasure": {
+        "scrollY": 4148,
+        "documentHeight": 5148,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 918.609375,
+          "bottom": 932.609375,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 690.109375,
+          "bottom": 817.109375,
+          "height": 127
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "paddingBottom": "32px"
+      },
+      "globalMeasure": {
+        "scrollY": 4148,
+        "documentHeight": 5148,
+        "viewportHeight": 1000,
+        "boundary": 1000,
+        "lastControl": {
+          "top": 396.609375,
+          "bottom": 410.609375,
+          "height": 14
+        },
+        "lastRow": {
+          "top": 690.109375,
+          "bottom": 817.109375,
+          "height": 127
+        },
+        "controlUnobscured": true,
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "paddingBottom": "32px"
+      },
+      "listScreenshot": "1440-unrelated-list-end-clearance.png",
+      "globalScreenshot": "1440-unrelated-document-bottom-clearance.png",
+      "fixture": "bp-p2-user-unrelated",
+      "state": "exhausted-list-end-and-document-bottom",
+      "screenshot": "1440-unrelated-list-end-clearance.png",
+      "networkReference": "browser-network-console-clearance.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": "See matching fully-exhausted-clearance row in browser-matrix-clearance.json"
+    }
+  ],
+  "method": "Measure each list end in view, then separately measure the final document control at the actual document bottom. A preceding stacked list above the viewport is not classified as obscured by navigation."
+}

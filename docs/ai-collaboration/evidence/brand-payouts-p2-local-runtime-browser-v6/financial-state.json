@@ -1,0 +1,73 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "models": [
+    "brandEscrowVault",
+    "escrowTransactionLedger",
+    "creatorPayoutObligation",
+    "routeTransferAttempt",
+    "routeTransferReversal",
+    "brandReturnRequest",
+    "creatorPayoutProfile",
+    "escrowFundingLoad",
+    "escrowFundingLot",
+    "collaborationFundingLotAllocation",
+    "collaborationEscrowLock",
+    "collaborationRefundInstruction",
+    "creatorSettlementProfile",
+    "creatorPayoutFundingAllocation",
+    "brandReturnAllocation",
+    "brandReturnWebhookReceipt",
+    "creatorPayoutDestination",
+    "creatorPayoutDestinationProviderMapping",
+    "collaborationCommercial",
+    "collaboration"
+  ],
+  "normalization": "Prisma JSON serialization; fixed model order; rows sorted by ID; raw records not committed",
+  "lanes": [
+    {
+      "name": "Full HTTP/RBAC",
+      "before": "34907ca9576f973e9deabb2d7d2aef620a21903d5a762e2b0f6e96d96e0509bf",
+      "after": "34907ca9576f973e9deabb2d7d2aef620a21903d5a762e2b0f6e96d96e0509bf",
+      "equal": true
+    },
+    {
+      "name": "All original-fixture browser lanes including invalidated attempts, serial retries, restoration, identifier, and clearance",
+      "before": "78ed1a09f0f69b473f711984aaf11b5e6a926c5537202b8ed5267b7fd82024fe",
+      "after": "78ed1a09f0f69b473f711984aaf11b5e6a926c5537202b8ed5267b7fd82024fe",
+      "equal": true
+    },
+    {
+      "name": "UUID Settings fixture, Settings navigation and keyboard assessment",
+      "before": "41905383701a1f91863da887dc72708259929be116740c5a76b4d440a9c823b5",
+      "after": "41905383701a1f91863da887dc72708259929be116740c5a76b4d440a9c823b5",
+      "equal": true
+    }
+  ],
+  "fixtureBoundary": "30 obligations inserted between first and second read lanes; one UUID Settings vault inserted between second and third. No cross-boundary equality claim.",
+  "initialRowCounts": {
+    "brandEscrowVault": 2,
+    "escrowTransactionLedger": 56,
+    "creatorPayoutObligation": 2,
+    "routeTransferAttempt": 0,
+    "routeTransferReversal": 0,
+    "brandReturnRequest": 0,
+    "creatorPayoutProfile": 1,
+    "escrowFundingLoad": 0,
+    "escrowFundingLot": 0,
+    "collaborationFundingLotAllocation": 0,
+    "collaborationEscrowLock": 0,
+    "collaborationRefundInstruction": 0,
+    "creatorSettlementProfile": 0,
+    "creatorPayoutFundingAllocation": 0,
+    "brandReturnAllocation": 0,
+    "brandReturnWebhookReceipt": 0,
+    "creatorPayoutDestination": 0,
+    "creatorPayoutDestinationProviderMapping": 0,
+    "collaborationCommercial": 0,
+    "collaboration": 2
+  },
+  "rawRowsRetained": false
+}

@@ -1,0 +1,623 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "events": [
+    {
+      "actor": "inactive",
+      "event": "direct-detail-background-reads",
+      "kind": "obligation",
+      "network": [
+        {
+          "actor": "inactive",
+          "state": "direct-obligation-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts/obligations",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts/obligations/payout-obligation%3Abp-p2-obligation-a",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "inactive",
+      "event": "direct-detail-background-reads",
+      "kind": "activity",
+      "network": [
+        {
+          "actor": "inactive",
+          "state": "direct-activity-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "inactive",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "no-membership",
+      "event": "direct-detail-background-reads",
+      "kind": "obligation",
+      "network": [
+        {
+          "actor": "no-membership",
+          "state": "direct-obligation-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts/obligations/payout-obligation%3Abp-p2-obligation-a",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "no-membership",
+      "event": "direct-detail-background-reads",
+      "kind": "activity",
+      "network": [
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts/activity",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "no-membership",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "unrelated",
+      "event": "direct-detail-background-reads",
+      "kind": "obligation",
+      "network": [
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts/obligations/payout-obligation%3Abp-p2-obligation-a",
+          "status": 404,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts/activity",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/brand/payouts/obligations",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "unrelated",
+      "event": "direct-detail-background-reads",
+      "kind": "activity",
+      "network": [
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+          "status": 404,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts/activity",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "unrelated",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/brand/payouts/obligations",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "creator",
+      "event": "direct-detail-background-reads",
+      "kind": "obligation",
+      "network": [
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/creator-entry/state",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/creator/workspace/actor-context",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/creator-entry/campaign-apply/continuation/status",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/creator-entry/state",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/creator/onboarding"
+    },
+    {
+      "actor": "creator",
+      "event": "direct-detail-background-reads",
+      "kind": "activity",
+      "network": [
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/creator-entry/state",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/creator-entry/campaign-apply/continuation/status",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/creator/workspace/actor-context",
+          "status": 403,
+          "method": "GET"
+        },
+        {
+          "actor": "creator",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/creator-entry/state",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/creator/onboarding"
+    },
+    {
+      "actor": "admin",
+      "event": "direct-detail-background-reads",
+      "kind": "obligation",
+      "network": [
+        {
+          "actor": "admin",
+          "state": "direct-obligation-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-obligation-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-obligation-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "admin",
+      "event": "direct-detail-background-reads",
+      "kind": "activity",
+      "network": [
+        {
+          "actor": "admin",
+          "state": "direct-activity-scope-probe",
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-3846YT-9.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-activity-scope-probe",
+          "path": "/assets/index-BgT0-09n.js",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/refresh",
+          "status": 200,
+          "method": "POST"
+        },
+        {
+          "actor": "admin",
+          "state": "direct-activity-scope-probe",
+          "path": "/api/v1/auth/me",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "visibleFinancialRows": 0,
+      "route": "/brand/payouts"
+    }
+  ]
+}

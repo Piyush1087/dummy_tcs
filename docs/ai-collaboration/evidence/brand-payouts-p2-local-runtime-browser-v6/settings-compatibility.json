@@ -1,0 +1,221 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "rows": [
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "width": 390,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "390-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      },
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "state": "real-settings-destination",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 0
+        },
+        "scope": "Keyboard link and Payouts Back scans in browser-matrix-settings.json; destination is route/control evidence"
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "width": 767,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "767-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      },
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "state": "real-settings-destination",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 0
+        },
+        "scope": "Keyboard link and Payouts Back scans in browser-matrix-settings.json; destination is route/control evidence"
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "width": 768,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "768-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      },
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "state": "real-settings-destination",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 0
+        },
+        "scope": "Keyboard link and Payouts Back scans in browser-matrix-settings.json; destination is route/control evidence"
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "width": 1440,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "1440-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      },
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "state": "real-settings-destination",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 0
+        },
+        "scope": "Keyboard link and Payouts Back scans in browser-matrix-settings.json; destination is route/control evidence"
+      }
+    }
+  ],
+  "metadataChange": "Only overview sections[0].coverage changed from PARTIAL to COMPLETE, preserving exact V2 media type and validating final frontend schema. This projection is non-authoritative and only makes the existing Settings link applicable.",
+  "actualDestination": "/brand/settings/escrow",
+  "controlsPresentAtEveryWidth": true,
+  "returnControl": "Present but disabled because no proven source lots exist. No eligibility or provider state fabricated.",
+  "financialMutationsInvoked": false
+}

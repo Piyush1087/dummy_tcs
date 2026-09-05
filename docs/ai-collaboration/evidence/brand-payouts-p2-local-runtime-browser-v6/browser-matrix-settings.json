@@ -1,0 +1,3611 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "browser": "140.0.7339.16",
+  "rows": [
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-link-applicability",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "390-settings-owner-settings-link-applicability.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 266.5625,
+              "width": 390,
+              "height": 32,
+              "bottom": 298.5625
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 446.5625,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 462.5625
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1898.859375,
+              "width": 308,
+              "height": 14,
+              "bottom": 1912.859375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 2376.921875,
+              "width": 308,
+              "height": 14,
+              "bottom": 2390.921875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 2833.296875,
+              "width": 308,
+              "height": 14,
+              "bottom": 2847.296875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 116,
+              "width": 390,
+              "height": 14,
+              "bottom": 130
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 266.5625,
+              "width": 390,
+              "height": 32,
+              "bottom": 298.5625
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 446.5625,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 462.5625
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "96px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": [
+          {
+            "label": "Primary",
+            "rect": {
+              "x": 0,
+              "y": 936,
+              "width": 390,
+              "height": 64,
+              "bottom": 1000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-browser-back",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "390-settings-owner-settings-browser-back.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 266.5625,
+              "width": 390,
+              "height": 32,
+              "bottom": 298.5625
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 446.5625,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 462.5625
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1898.859375,
+              "width": 308,
+              "height": 14,
+              "bottom": 1912.859375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 2376.921875,
+              "width": 308,
+              "height": 14,
+              "bottom": 2390.921875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 2833.296875,
+              "width": 308,
+              "height": 14,
+              "bottom": 2847.296875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 116,
+              "width": 390,
+              "height": 14,
+              "bottom": 130
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 266.5625,
+              "width": 390,
+              "height": 32,
+              "bottom": 298.5625
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 446.5625,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 462.5625
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "96px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": [
+          {
+            "label": "Primary",
+            "rect": {
+              "x": 0,
+              "y": 936,
+              "width": 390,
+              "height": 64,
+              "bottom": 1000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "keyboard-disclosure-assessment",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "390-settings-owner-keyboard-disclosure-assessment.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "list",
+            "listitem",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nVault: Available\nFunding: Unavailable — Pending funding cannot yet be reported from an authoritative snapshot.\nFinancial Ledger: Available\nPayout Obligations: Partial — Canonical Collaboration instruction history is not yet available.\nBrand Returns: Available\nCollaboration Reserve Requests: Unavailable — Canonical reserve-request state is not yet available.\nPayout Obligations history: Scheduled and processing totals cannot be canonicalized before the accepted C-04 provenance contract.\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 266.5625,
+              "width": 390,
+              "height": 32,
+              "bottom": 298.5625
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1866.859375,
+              "width": 308,
+              "height": 14,
+              "bottom": 1880.859375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 2556.921875,
+              "width": 308,
+              "height": 14,
+              "bottom": 2570.921875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 3013.296875,
+              "width": 308,
+              "height": 14,
+              "bottom": 3027.296875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 116,
+              "width": 390,
+              "height": 14,
+              "bottom": 130
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 266.5625,
+              "width": 390,
+              "height": 32,
+              "bottom": 298.5625
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "96px",
+        "active": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        },
+        "fixedBottom": [
+          {
+            "label": "Primary",
+            "rect": {
+              "x": 0,
+              "y": 936,
+              "width": 390,
+              "height": 64,
+              "bottom": 1000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-link-applicability",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "767-settings-owner-settings-link-applicability.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 244.875,
+              "width": 767,
+              "height": 32,
+              "bottom": 276.875
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 403.875,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 419.875
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1221.21875,
+              "width": 685,
+              "height": 14,
+              "bottom": 1235.21875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1634.59375,
+              "width": 685,
+              "height": 14,
+              "bottom": 1648.59375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 2026.28125,
+              "width": 685,
+              "height": 14,
+              "bottom": 2040.28125
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 116,
+              "width": 767,
+              "height": 14,
+              "bottom": 130
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 244.875,
+              "width": 767,
+              "height": 32,
+              "bottom": 276.875
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 403.875,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 419.875
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "96px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": [
+          {
+            "label": "Primary",
+            "rect": {
+              "x": 0,
+              "y": 936,
+              "width": 767,
+              "height": 64,
+              "bottom": 1000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-browser-back",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "767-settings-owner-settings-browser-back.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 244.875,
+              "width": 767,
+              "height": 32,
+              "bottom": 276.875
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 403.875,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 419.875
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1221.21875,
+              "width": 685,
+              "height": 14,
+              "bottom": 1235.21875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1634.59375,
+              "width": 685,
+              "height": 14,
+              "bottom": 1648.59375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 2026.28125,
+              "width": 685,
+              "height": 14,
+              "bottom": 2040.28125
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 116,
+              "width": 767,
+              "height": 14,
+              "bottom": 130
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 244.875,
+              "width": 767,
+              "height": 32,
+              "bottom": 276.875
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 25,
+              "y": 403.875,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 419.875
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "96px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": [
+          {
+            "label": "Primary",
+            "rect": {
+              "x": 0,
+              "y": 936,
+              "width": 767,
+              "height": 64,
+              "bottom": 1000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "keyboard-disclosure-assessment",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "767-settings-owner-keyboard-disclosure-assessment.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "list",
+            "listitem",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial Ledger: Available\nPayout Obligations: Partial — This value is withheld until its authoritative source can be verified.\nBrand Returns: Available\nCollaboration Reserve Requests: Unavailable — Canonical reserve-request state is not yet available.\nFinancial Ledger history: Funding-load rows are omitted because mutable status does not preserve an immutable transition timestamp.\nPayout Obligations history: Legacy payout rows expose only bounded durable evidence and current state.",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 244.875,
+              "width": 767,
+              "height": 32,
+              "bottom": 276.875
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1189.21875,
+              "width": 685,
+              "height": 14,
+              "bottom": 1203.21875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1602.59375,
+              "width": 685,
+              "height": 14,
+              "bottom": 1616.59375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 41,
+              "y": 1994.28125,
+              "width": 685,
+              "height": 14,
+              "bottom": 2008.28125
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 116,
+              "width": 767,
+              "height": 14,
+              "bottom": 130
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 0,
+              "y": 244.875,
+              "width": 767,
+              "height": 32,
+              "bottom": 276.875
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "96px",
+        "active": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        },
+        "fixedBottom": [
+          {
+            "label": "Primary",
+            "rect": {
+              "x": 0,
+              "y": 936,
+              "width": 767,
+              "height": 64,
+              "bottom": 1000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-link-applicability",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "768-settings-owner-settings-link-applicability.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 665.3125,
+              "y": 108,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 140
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 612.015625,
+              "y": 226.765625,
+              "width": 130.984375,
+              "height": 32,
+              "bottom": 258.765625
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1011.078125,
+              "width": 606,
+              "height": 14,
+              "bottom": 1025.078125
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1429.25,
+              "width": 606,
+              "height": 14,
+              "bottom": 1443.25
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1847.421875,
+              "width": 606,
+              "height": 14,
+              "bottom": 1861.421875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 80,
+              "y": 72,
+              "width": 485.59375,
+              "height": 14,
+              "bottom": 86
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 665.3125,
+              "y": 108,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 140
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 612.015625,
+              "y": 226.765625,
+              "width": 130.984375,
+              "height": 32,
+              "bottom": 258.765625
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "32px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": []
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-browser-back",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "768-settings-owner-settings-browser-back.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 665.3125,
+              "y": 108,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 140
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 612.015625,
+              "y": 226.765625,
+              "width": 130.984375,
+              "height": 32,
+              "bottom": 258.765625
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1011.078125,
+              "width": 606,
+              "height": 14,
+              "bottom": 1025.078125
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1429.25,
+              "width": 606,
+              "height": 14,
+              "bottom": 1443.25
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1847.421875,
+              "width": 606,
+              "height": 14,
+              "bottom": 1861.421875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 80,
+              "y": 72,
+              "width": 485.59375,
+              "height": 14,
+              "bottom": 86
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 665.3125,
+              "y": 108,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 140
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 612.015625,
+              "y": 226.765625,
+              "width": 130.984375,
+              "height": 32,
+              "bottom": 258.765625
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "32px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": []
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "keyboard-disclosure-assessment",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "768-settings-owner-keyboard-disclosure-assessment.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "list",
+            "listitem",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nVault: Available\nFunding: Unavailable — Pending funding cannot yet be reported from an authoritative snapshot.\nFinancial Ledger: Available\nPayout Obligations: Partial — Canonical Collaboration instruction history is not yet available.\nBrand Returns: Available\nCollaboration Reserve Requests: Unavailable — Canonical reserve-request state is not yet available.\nPayout Obligations history: Scheduled and processing totals cannot be canonicalized before the accepted C-04 provenance contract.\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 665.3125,
+              "y": 108,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 140
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1011.078125,
+              "width": 606,
+              "height": 14,
+              "bottom": 1025.078125
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1585.25,
+              "width": 606,
+              "height": 14,
+              "bottom": 1599.25
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 2003.421875,
+              "width": 606,
+              "height": 14,
+              "bottom": 2017.421875
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 80,
+              "y": 72,
+              "width": 485.59375,
+              "height": 14,
+              "bottom": 86
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 665.3125,
+              "y": 108,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 140
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "32px",
+        "active": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        },
+        "fixedBottom": []
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-link-applicability",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "1440-settings-owner-settings-link-applicability.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1337.3125,
+              "y": 72,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 104
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1217.375,
+              "y": 205.078125,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 221.078125
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 765.4375,
+              "width": 1278,
+              "height": 14,
+              "bottom": 779.4375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1183.609375,
+              "width": 586,
+              "height": 14,
+              "bottom": 1197.609375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 813,
+              "y": 1183.609375,
+              "width": 586,
+              "height": 14,
+              "bottom": 1197.609375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 80,
+              "y": 72,
+              "width": 536.734375,
+              "height": 14,
+              "bottom": 86
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1337.3125,
+              "y": 72,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 104
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1217.375,
+              "y": 205.078125,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 221.078125
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "32px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": []
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "settings-browser-back",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "INTERCEPTED_settings-metadata",
+      "screenshot": "1440-settings-owner-settings-browser-back.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nOpen Secure escrow Settings\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nComplete coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1337.3125,
+              "y": 72,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 104
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1217.375,
+              "y": 205.078125,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 221.078125
+            },
+            "name": "Open Secure escrow Settings",
+            "href": "/brand/settings/escrow"
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 765.4375,
+              "width": 1278,
+              "height": 14,
+              "bottom": 779.4375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1183.609375,
+              "width": 586,
+              "height": 14,
+              "bottom": 1197.609375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 813,
+              "y": 1183.609375,
+              "width": 586,
+              "height": 14,
+              "bottom": 1197.609375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 80,
+              "y": 72,
+              "width": 536.734375,
+              "height": 14,
+              "bottom": 86
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1337.3125,
+              "y": 72,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 104
+            }
+          },
+          {
+            "text": "Open Secure escrow Settings",
+            "tag": "A",
+            "className": "bp-detail-link",
+            "color": "rgb(0, 108, 75)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(240, 253, 244)",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1217.375,
+              "y": 205.078125,
+              "width": 197.625,
+              "height": 16,
+              "bottom": 221.078125
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "32px",
+        "active": {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsS"
+        },
+        "fixedBottom": []
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "actor": "settings-owner",
+      "fixture": "UUID_SETTINGS_OWNER",
+      "state": "keyboard-disclosure-assessment",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "1440-settings-owner-keyboard-disclosure-assessment.png",
+      "networkReference": "browser-network-console-settings.json",
+      "consoleResult": "No page exception. Expected anonymous-auth 401, explicit denial 403/404, and intentionally aborted dependency/font requests classified in dom-network-product-truth.json.",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "list",
+            "listitem",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ]
+        },
+        "focus": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "text": "BRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹100.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹0.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹0.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹0.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed 6 Sept 2026, 1:30 am\nData coverage and limitations\nVault: Available\nFunding: Unavailable — Pending funding cannot yet be reported from an authoritative snapshot.\nFinancial Ledger: Available\nPayout Obligations: Partial — Canonical Collaboration instruction history is not yet available.\nBrand Returns: Available\nCollaboration Reserve Requests: Unavailable — Canonical reserve-request state is not yet available.\nPayout Obligations history: Scheduled and processing totals cannot be canonicalized before the accepted C-04 provenance contract.\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nNo visible payout obligations\n\nNo obligations are available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nNo visible financial activity\n\nNo activity is available for this server-authorized scope and snapshot.\n\nPartial coverage\nCurrent source\nAs of 6 Sept 2026, 1:30 am\nSource observed Not recorded\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations",
+        "controls": [
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1337.3125,
+              "y": 72,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 104
+            },
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 765.4375,
+              "width": 1278,
+              "height": 14,
+              "bottom": 779.4375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 121,
+              "y": 1325.609375,
+              "width": 586,
+              "height": 14,
+              "bottom": 1339.609375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "text": "Data coverage and limitations",
+            "tag": "SUMMARY",
+            "className": "",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(249, 250, 251)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 813,
+              "y": 1325.609375,
+              "width": 586,
+              "height": 14,
+              "bottom": 1339.609375
+            },
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ],
+        "colors": [
+          {
+            "text": "Brand financial operations",
+            "tag": "P",
+            "className": "bp-workspace__eyebrow",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "disabled": false,
+            "rect": {
+              "x": 80,
+              "y": 72,
+              "width": 536.734375,
+              "height": 14,
+              "bottom": 86
+            }
+          },
+          {
+            "text": "Refresh",
+            "tag": "BUTTON",
+            "className": "aurora-button aurora-button--outline aurora-button--sm",
+            "color": "rgb(14, 18, 20)",
+            "background": "rgba(0, 0, 0, 0)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "disabled": false,
+            "rect": {
+              "x": 1337.3125,
+              "y": 72,
+              "width": 102.6875,
+              "height": 32,
+              "bottom": 104
+            }
+          }
+        ],
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "rootPaddingBottom": "32px",
+        "active": {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations"
+        },
+        "fixedBottom": []
+      }
+    }
+  ]
+}

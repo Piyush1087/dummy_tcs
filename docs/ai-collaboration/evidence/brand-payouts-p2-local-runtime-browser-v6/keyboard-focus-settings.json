@@ -1,0 +1,3964 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "events": [
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 390,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "390-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 390,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(2, 2, 2) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(9, 9, 9) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(3, 3, 3) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 2010
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "uniqueTargets": 9
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 390,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 767,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "767-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 767,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(2, 2, 2) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "A",
+          "name": "Chat",
+          "href": "/brand/collaborations",
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "focusVisible": true,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 1203
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 696
+        }
+      ],
+      "uniqueTargets": 10
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1203
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 767,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 768,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "768-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 768,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(217, 217, 217, 0.64) auto 1px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(217, 217, 217, 0.64) auto 1px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        }
+      ],
+      "uniqueTargets": 15
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 928
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 518
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 768,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    },
+    {
+      "actor": "settings-owner",
+      "state": "settings-link-keyboard-navigation",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Open Secure escrow Settings",
+          "href": "/brand/settings/escrow",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 1440,
+      "event": "settings-destination",
+      "source": "REAL_LOCAL_SETTINGS_ROUTE_FROM_NON_AUTHORITATIVE_LINK_METADATA",
+      "route": "/brand/settings/escrow",
+      "screenshot": "1440-settings-owner-settings-destination.png",
+      "addFundsCount": 1,
+      "brandReturnCount": 1,
+      "financialMutationsInvoked": false,
+      "overflow": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutTSetting",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "width": 1440,
+      "event": "overview-tab-order-and-no-trap",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(217, 217, 217, 0.64) auto 1px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BODY",
+          "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+          "href": null,
+          "outline": "rgb(14, 18, 20) none 0px",
+          "focusVisible": false,
+          "scrollY": 265
+        }
+      ],
+      "uniqueTargets": 15
+    },
+    {
+      "actor": "settings-owner",
+      "state": "keyboard-overview-assessment",
+      "event": "keyboard-control",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Home",
+          "href": "/brand/dashboard",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand Centre",
+          "href": "/brand-centre",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Campaigns",
+          "href": "/brand/uce/campaigns",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Brand page",
+          "href": "/brand/collaboration-page",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Collaborations",
+          "href": "/brand/collaborations",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Payouts",
+          "href": "/brand/payouts",
+          "outline": "rgb(52, 211, 153) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Settings",
+          "href": "/brand/settings",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "A",
+          "name": "Support",
+          "href": "/help",
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Logout",
+          "href": null,
+          "outline": "rgba(255, 255, 255, 0.6) auto 0px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade Plan",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 265
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Upgrade",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 1440,
+      "event": "escape-native-disclosure",
+      "openBefore": 1,
+      "openAfter": 1,
+      "assessment": "Native details disclosure is not a modal; Escape has no dismissal promise. Space/Enter toggle remains keyboard-operable."
+    }
+  ]
+}

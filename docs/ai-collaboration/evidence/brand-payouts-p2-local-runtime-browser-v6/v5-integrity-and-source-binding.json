@@ -1,0 +1,1218 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+  "frontendTree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+  "authoritySha": "f9c25cf563c3caa8e358ce509cc70554d761cfea",
+  "authorityTree": "69238d69969a3ebd9c211cf1b44e0cdc5e0b6b38",
+  "classification": "RERUN",
+  "v5EvidenceCommit": "bac276a92141474d191c3f9c1cf4e2a0c58543ac",
+  "v5EvidenceTree": "918d692347ce79359f60932eb14c5c8f082cb864",
+  "indexedArtifactCount": 197,
+  "v5Artifacts": [
+    {
+      "file": "1440-anonymous-route-entry.png",
+      "expected": "7776291491aa0036dc277d2343503cf73b203baee1976784c37571506a9badd9",
+      "actual": "7776291491aa0036dc277d2343503cf73b203baee1976784c37571506a9badd9",
+      "matches": true
+    },
+    {
+      "file": "1440-empty-empty-brand.png",
+      "expected": "d2604b43b5086a330541d6a41342362db11aee20b0d2e5a6ed86946b6f790843",
+      "actual": "d2604b43b5086a330541d6a41342362db11aee20b0d2e5a6ed86946b6f790843",
+      "matches": true
+    },
+    {
+      "file": "1440-inactive-activity-access-denied.png",
+      "expected": "0e1096533990d0037b80379ceb18efd89731463b208d1c05bd06e1715b07533a",
+      "actual": "0e1096533990d0037b80379ceb18efd89731463b208d1c05bd06e1715b07533a",
+      "matches": true
+    },
+    {
+      "file": "1440-inactive-obligation-access-denied.png",
+      "expected": "0e1096533990d0037b80379ceb18efd89731463b208d1c05bd06e1715b07533a",
+      "actual": "0e1096533990d0037b80379ceb18efd89731463b208d1c05bd06e1715b07533a",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-after-browser-back.png",
+      "expected": "70d986720239dbcc3fe20b42b0ad4f794cb0fd6940a43d50542857ff98f5d1b7",
+      "actual": "70d986720239dbcc3fe20b42b0ad4f794cb0fd6940a43d50542857ff98f5d1b7",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-exhausted-back-button.png",
+      "expected": "c8090cd61038402a5d48936292480554e59866534ae616765e5b8a3e781a166c",
+      "actual": "c8090cd61038402a5d48936292480554e59866534ae616765e5b8a3e781a166c",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-exhausted-before-detail.png",
+      "expected": "381204b4ca297e620c4e55ab85b98fbe2b9603552710354fb9dc6ad18e9b610b",
+      "actual": "381204b4ca297e620c4e55ab85b98fbe2b9603552710354fb9dc6ad18e9b610b",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-exhausted-browser-back.png",
+      "expected": "381204b4ca297e620c4e55ab85b98fbe2b9603552710354fb9dc6ad18e9b610b",
+      "actual": "381204b4ca297e620c4e55ab85b98fbe2b9603552710354fb9dc6ad18e9b610b",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-loading.png",
+      "expected": "9a5a1c4a7e66428db9ed589c335fb94fe3c242f5d7f84e69e03cf8171db64953",
+      "actual": "9a5a1c4a7e66428db9ed589c335fb94fe3c242f5d7f84e69e03cf8171db64953",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-ready.png",
+      "expected": "6f8d4002bfe500a6ef9df1f2a8081a9580e95f6d25c64bd83e3e705f25263aec",
+      "actual": "6f8d4002bfe500a6ef9df1f2a8081a9580e95f6d25c64bd83e3e705f25263aec",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-settled-after-back-button.png",
+      "expected": "70d986720239dbcc3fe20b42b0ad4f794cb0fd6940a43d50542857ff98f5d1b7",
+      "actual": "70d986720239dbcc3fe20b42b0ad4f794cb0fd6940a43d50542857ff98f5d1b7",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-settled-after-browser-back.png",
+      "expected": "70d986720239dbcc3fe20b42b0ad4f794cb0fd6940a43d50542857ff98f5d1b7",
+      "actual": "70d986720239dbcc3fe20b42b0ad4f794cb0fd6940a43d50542857ff98f5d1b7",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-source-unavailable.png",
+      "expected": "9085ffdac123ae1c707908ac68b5f0c4b245173a8c933ac7a91975c076f9cfad",
+      "actual": "9085ffdac123ae1c707908ac68b5f0c4b245173a8c933ac7a91975c076f9cfad",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-activity-unavailable.png",
+      "expected": "a357f5e57610c060bdf2340e9c219f1747d28fef00a609abb65a26e9fe88f3a1",
+      "actual": "a357f5e57610c060bdf2340e9c219f1747d28fef00a609abb65a26e9fe88f3a1",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-back-lifecycle-keyboard.png",
+      "expected": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "actual": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-back-lifecycle-pointer.png",
+      "expected": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "actual": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-back-money-movement-keyboard.png",
+      "expected": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "actual": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-back-money-movement-pointer.png",
+      "expected": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "actual": "7463495098c870380733aa6c66e5cb0343ec62bc9719689a6ff4f5c5c4e9a9d1",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-ready-lifecycle-keyboard.png",
+      "expected": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "actual": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-ready-lifecycle-pointer.png",
+      "expected": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "actual": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-ready-money-movement-keyboard.png",
+      "expected": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "actual": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-ready-money-movement-pointer.png",
+      "expected": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "actual": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-refresh-lifecycle-keyboard.png",
+      "expected": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "actual": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-refresh-lifecycle-pointer.png",
+      "expected": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "actual": "232f3b173c30050b90ef2c2db73bffb56dfa8c21462e0704b7a7b7e1ee077609",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-refresh-money-movement-keyboard.png",
+      "expected": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "actual": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-identifier-refresh-money-movement-pointer.png",
+      "expected": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "actual": "8698a5f91c99c29778bad0720e279de1629a460d476d2963d68712b02b25753d",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-independent-activity-loading.png",
+      "expected": "45e5ad8cfca0c261f962b3fdf5200b2ba0087b83c89e22bd638d3d71c741662e",
+      "actual": "45e5ad8cfca0c261f962b3fdf5200b2ba0087b83c89e22bd638d3d71c741662e",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-initial-loading.png",
+      "expected": "1f5f04e491f6e263265e589f1404996ed9a4c27f2b46d9a85f94344ea64afba5",
+      "actual": "1f5f04e491f6e263265e589f1404996ed9a4c27f2b46d9a85f94344ea64afba5",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-invalid-detail.png",
+      "expected": "580bc24e9170a5adeae771f7143896d27b6f76e1c4dd579003d8799e2bc5803c",
+      "actual": "580bc24e9170a5adeae771f7143896d27b6f76e1c4dd579003d8799e2bc5803c",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-obligation-loading.png",
+      "expected": "93c48d3413d0c77ab4e1a81e23decff193a74070a9169f97d784d9d93da7b1ef",
+      "actual": "93c48d3413d0c77ab4e1a81e23decff193a74070a9169f97d784d9d93da7b1ef",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-obligation-ready.png",
+      "expected": "d68aa85643b8bcbd996a90b7aa871706b1755d34b170386088da7aaeef56ac0e",
+      "actual": "d68aa85643b8bcbd996a90b7aa871706b1755d34b170386088da7aaeef56ac0e",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-obligation-source-unavailable.png",
+      "expected": "9085ffdac123ae1c707908ac68b5f0c4b245173a8c933ac7a91975c076f9cfad",
+      "actual": "9085ffdac123ae1c707908ac68b5f0c4b245173a8c933ac7a91975c076f9cfad",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-obligation-unavailable.png",
+      "expected": "a357f5e57610c060bdf2340e9c219f1747d28fef00a609abb65a26e9fe88f3a1",
+      "actual": "a357f5e57610c060bdf2340e9c219f1747d28fef00a609abb65a26e9fe88f3a1",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-overview-unavailable-retry.png",
+      "expected": "842ff664e33bcb1e5d592ffff5d4b7103d8e0896e361194dda4f6b1be1a3d2e7",
+      "actual": "842ff664e33bcb1e5d592ffff5d4b7103d8e0896e361194dda4f6b1be1a3d2e7",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-ready-partial.png",
+      "expected": "be3ffa134a4cc3f082555171ed5b99fe0c53654935230fc9cc677158c129ac6c",
+      "actual": "be3ffa134a4cc3f082555171ed5b99fe0c53654935230fc9cc677158c129ac6c",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-refreshing.png",
+      "expected": "11308dd85a2fb2bb733e2e5b5d2d3982db61c9b3f829ca4f0ee16613eea15473",
+      "actual": "11308dd85a2fb2bb733e2e5b5d2d3982db61c9b3f829ca4f0ee16613eea15473",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-section-source-unavailable.png",
+      "expected": "37bd3e16742067c94643fb018cb44194e298c19d3ae39ed667f64501a21e84e6",
+      "actual": "37bd3e16742067c94643fb018cb44194e298c19d3ae39ed667f64501a21e84e6",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-stale-last-known.png",
+      "expected": "2cd2aa8bcf78a8dd723579fcaec63df798352d99f2abb0576f825c7b75f15e38",
+      "actual": "2cd2aa8bcf78a8dd723579fcaec63df798352d99f2abb0576f825c7b75f15e38",
+      "matches": true
+    },
+    {
+      "file": "1440-unrelated-obligation-exhausted-back-button.png",
+      "expected": "676537b5fcbd3b155f1524fec002f3abd5c711877636e07122a6667d589cee75",
+      "actual": "676537b5fcbd3b155f1524fec002f3abd5c711877636e07122a6667d589cee75",
+      "matches": true
+    },
+    {
+      "file": "1440-unrelated-obligation-exhausted-browser-back.png",
+      "expected": "aff7ba107cc27e9b332ae3438a8ed401bace6cfdc6f382166078b42379870546",
+      "actual": "aff7ba107cc27e9b332ae3438a8ed401bace6cfdc6f382166078b42379870546",
+      "matches": true
+    },
+    {
+      "file": "1440-unrelated-obligation-settled-after-back-button.png",
+      "expected": "4f71d4f5679dccff035da77571d743c7ba83bd8df51a3b7baf95694614620f2c",
+      "actual": "4f71d4f5679dccff035da77571d743c7ba83bd8df51a3b7baf95694614620f2c",
+      "matches": true
+    },
+    {
+      "file": "1440-unrelated-obligation-settled-after-browser-back.png",
+      "expected": "4f71d4f5679dccff035da77571d743c7ba83bd8df51a3b7baf95694614620f2c",
+      "actual": "4f71d4f5679dccff035da77571d743c7ba83bd8df51a3b7baf95694614620f2c",
+      "matches": true
+    },
+    {
+      "file": "390-anonymous-route-entry.png",
+      "expected": "9542a4bde532d335ef5b1522166ad0a4bd3fac041a9799117c54712cdf3ad7b1",
+      "actual": "9542a4bde532d335ef5b1522166ad0a4bd3fac041a9799117c54712cdf3ad7b1",
+      "matches": true
+    },
+    {
+      "file": "390-empty-empty-brand.png",
+      "expected": "458bd5f2a61090fd04a436f4786cbce6d5c6570c5d5cfcbcfd3ea2144bdbd562",
+      "actual": "458bd5f2a61090fd04a436f4786cbce6d5c6570c5d5cfcbcfd3ea2144bdbd562",
+      "matches": true
+    },
+    {
+      "file": "390-inactive-activity-access-denied.png",
+      "expected": "20f76d9646b1a3c1c9f86dbd97511a3fb8df8d1007a0506a72c80a806a65a597",
+      "actual": "20f76d9646b1a3c1c9f86dbd97511a3fb8df8d1007a0506a72c80a806a65a597",
+      "matches": true
+    },
+    {
+      "file": "390-inactive-obligation-access-denied.png",
+      "expected": "20f76d9646b1a3c1c9f86dbd97511a3fb8df8d1007a0506a72c80a806a65a597",
+      "actual": "20f76d9646b1a3c1c9f86dbd97511a3fb8df8d1007a0506a72c80a806a65a597",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-after-browser-back.png",
+      "expected": "1fdab51050c612c46956184962d7c1486789ca9a490ed1abbfccfd987270d273",
+      "actual": "1fdab51050c612c46956184962d7c1486789ca9a490ed1abbfccfd987270d273",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-exhausted-back-button.png",
+      "expected": "33db792cb49eaa85c2f2959dc148d638d75ab0132dc956a805da6671be93f955",
+      "actual": "33db792cb49eaa85c2f2959dc148d638d75ab0132dc956a805da6671be93f955",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-exhausted-before-detail.png",
+      "expected": "367b6651c04fe3dcf68fd94ed5a8e6cca275309ade9700b51361e0864e7e6f6b",
+      "actual": "367b6651c04fe3dcf68fd94ed5a8e6cca275309ade9700b51361e0864e7e6f6b",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-exhausted-browser-back.png",
+      "expected": "39eed37e1fc8b5b79806b3487046bb60152a1d531f6674873630903c8174c9a0",
+      "actual": "39eed37e1fc8b5b79806b3487046bb60152a1d531f6674873630903c8174c9a0",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-loading.png",
+      "expected": "f54208a435f927abd205e6e3a6243e929af5294a5b00c48a3be6da6615852138",
+      "actual": "f54208a435f927abd205e6e3a6243e929af5294a5b00c48a3be6da6615852138",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-ready.png",
+      "expected": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "actual": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-settled-after-back-button.png",
+      "expected": "cf32daad81f0e2b95de07cd828c43f5caa2c1ad4b2f747b020587a65ed9603bc",
+      "actual": "cf32daad81f0e2b95de07cd828c43f5caa2c1ad4b2f747b020587a65ed9603bc",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-settled-after-browser-back.png",
+      "expected": "e3f715868e40f2954cd8b8699c7810436311dd55d0ba19931c955b2d0d0cf88b",
+      "actual": "e3f715868e40f2954cd8b8699c7810436311dd55d0ba19931c955b2d0d0cf88b",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-source-unavailable.png",
+      "expected": "a27ac32aee9a4fbb859a4f468ba6cee002ed469306d5fb9069d738f2f2fcf9a8",
+      "actual": "a27ac32aee9a4fbb859a4f468ba6cee002ed469306d5fb9069d738f2f2fcf9a8",
+      "matches": true
+    },
+    {
+      "file": "390-owner-activity-unavailable.png",
+      "expected": "ba3fd03745121cfa749f981ee3bf4dc76d1a0d5c7e81e0355f9d2b58e380b464",
+      "actual": "ba3fd03745121cfa749f981ee3bf4dc76d1a0d5c7e81e0355f9d2b58e380b464",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-back-lifecycle-keyboard.png",
+      "expected": "2c07daa75e786a20d697cc6f6de805b7094c2479d3869c82d36e572130a74b00",
+      "actual": "2c07daa75e786a20d697cc6f6de805b7094c2479d3869c82d36e572130a74b00",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-back-lifecycle-pointer.png",
+      "expected": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "actual": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-back-money-movement-keyboard.png",
+      "expected": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "actual": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-back-money-movement-pointer.png",
+      "expected": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "actual": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-ready-lifecycle-keyboard.png",
+      "expected": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "actual": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-ready-lifecycle-pointer.png",
+      "expected": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "actual": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-ready-money-movement-keyboard.png",
+      "expected": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "actual": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-ready-money-movement-pointer.png",
+      "expected": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "actual": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-refresh-lifecycle-keyboard.png",
+      "expected": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "actual": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-refresh-lifecycle-pointer.png",
+      "expected": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "actual": "ba359b239d5a452bc00501f35ee4abfac3de7182f4b723b9929a053a706a36c8",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-refresh-money-movement-keyboard.png",
+      "expected": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "actual": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "matches": true
+    },
+    {
+      "file": "390-owner-identifier-refresh-money-movement-pointer.png",
+      "expected": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "actual": "d057c379cb2eca9ca5dcb3be31d3851bf8b352e355c10e69ba14724aa1027aba",
+      "matches": true
+    },
+    {
+      "file": "390-owner-independent-activity-loading.png",
+      "expected": "656963028eb29e238a3fb6bcac46316067431d548831f2df911ead762b1406ee",
+      "actual": "656963028eb29e238a3fb6bcac46316067431d548831f2df911ead762b1406ee",
+      "matches": true
+    },
+    {
+      "file": "390-owner-initial-loading.png",
+      "expected": "d6eebc80abef637edf3edf45e79aea541dc82a17ecb5160d1a9789e9b228849c",
+      "actual": "d6eebc80abef637edf3edf45e79aea541dc82a17ecb5160d1a9789e9b228849c",
+      "matches": true
+    },
+    {
+      "file": "390-owner-invalid-detail.png",
+      "expected": "2e305a3b19b33063430f7f528db0bce4ce709f8ca53980c85470caf936219dec",
+      "actual": "2e305a3b19b33063430f7f528db0bce4ce709f8ca53980c85470caf936219dec",
+      "matches": true
+    },
+    {
+      "file": "390-owner-obligation-loading.png",
+      "expected": "7d80c80546b4f073ca09f31286ee68ad041181437a35ce1d3125afb7a2449abd",
+      "actual": "7d80c80546b4f073ca09f31286ee68ad041181437a35ce1d3125afb7a2449abd",
+      "matches": true
+    },
+    {
+      "file": "390-owner-obligation-ready.png",
+      "expected": "b08e7598fa13e82511ef9b2ded0e8f7b106539916ba2fa435bd78abbcb19b625",
+      "actual": "b08e7598fa13e82511ef9b2ded0e8f7b106539916ba2fa435bd78abbcb19b625",
+      "matches": true
+    },
+    {
+      "file": "390-owner-obligation-source-unavailable.png",
+      "expected": "9def8fb404231b05f22c82a1085205b1a331d8ac8cdfda8f886cfb2a54b83d8c",
+      "actual": "9def8fb404231b05f22c82a1085205b1a331d8ac8cdfda8f886cfb2a54b83d8c",
+      "matches": true
+    },
+    {
+      "file": "390-owner-obligation-unavailable.png",
+      "expected": "ba3fd03745121cfa749f981ee3bf4dc76d1a0d5c7e81e0355f9d2b58e380b464",
+      "actual": "ba3fd03745121cfa749f981ee3bf4dc76d1a0d5c7e81e0355f9d2b58e380b464",
+      "matches": true
+    },
+    {
+      "file": "390-owner-overview-unavailable-retry.png",
+      "expected": "79f950851fc0f651110d86ccb0e3e8d8cb5497a5587296d5579908c726e1798d",
+      "actual": "79f950851fc0f651110d86ccb0e3e8d8cb5497a5587296d5579908c726e1798d",
+      "matches": true
+    },
+    {
+      "file": "390-owner-ready-partial.png",
+      "expected": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "actual": "401ec070fb0f7ed680499aba6e5e5b319b66b7fa5b1c2dcefd119f7084654834",
+      "matches": true
+    },
+    {
+      "file": "390-owner-refreshing.png",
+      "expected": "83154891538910e988aecb93c6ba6140cc938496f0c07a54c4ba0bc3e2dce84a",
+      "actual": "83154891538910e988aecb93c6ba6140cc938496f0c07a54c4ba0bc3e2dce84a",
+      "matches": true
+    },
+    {
+      "file": "390-owner-section-source-unavailable.png",
+      "expected": "0e66cf6365b0444107b57bc7e77b6f0644252d216d52269300834fd00f63015a",
+      "actual": "0e66cf6365b0444107b57bc7e77b6f0644252d216d52269300834fd00f63015a",
+      "matches": true
+    },
+    {
+      "file": "390-owner-stale-last-known.png",
+      "expected": "c45479b4d9323819d9b98a51e7c6a391f291d5f74dbd18c9d25adb65d9898bf3",
+      "actual": "c45479b4d9323819d9b98a51e7c6a391f291d5f74dbd18c9d25adb65d9898bf3",
+      "matches": true
+    },
+    {
+      "file": "390-unrelated-obligation-exhausted-back-button.png",
+      "expected": "2ec3aef9f9f88a1154fb25cd5ce95a337f1aaf8a56fdfbc9b77f46ea84093e72",
+      "actual": "2ec3aef9f9f88a1154fb25cd5ce95a337f1aaf8a56fdfbc9b77f46ea84093e72",
+      "matches": true
+    },
+    {
+      "file": "390-unrelated-obligation-exhausted-browser-back.png",
+      "expected": "62ff404a527348ba176fcb00743b673db21a908495f18630ff3731d58581fa8c",
+      "actual": "62ff404a527348ba176fcb00743b673db21a908495f18630ff3731d58581fa8c",
+      "matches": true
+    },
+    {
+      "file": "390-unrelated-obligation-settled-after-back-button.png",
+      "expected": "b9c83f825dc7e04353e21fbfb4a1027c8eecac73ee2938ce1ce6e6a38f788573",
+      "actual": "b9c83f825dc7e04353e21fbfb4a1027c8eecac73ee2938ce1ce6e6a38f788573",
+      "matches": true
+    },
+    {
+      "file": "390-unrelated-obligation-settled-after-browser-back.png",
+      "expected": "b9c83f825dc7e04353e21fbfb4a1027c8eecac73ee2938ce1ce6e6a38f788573",
+      "actual": "b9c83f825dc7e04353e21fbfb4a1027c8eecac73ee2938ce1ce6e6a38f788573",
+      "matches": true
+    },
+    {
+      "file": "767-anonymous-route-entry.png",
+      "expected": "d41be06b42a65354b92b409e825ef573b4c01cb59b996fe70ecf3db4a643c814",
+      "actual": "d41be06b42a65354b92b409e825ef573b4c01cb59b996fe70ecf3db4a643c814",
+      "matches": true
+    },
+    {
+      "file": "767-empty-empty-brand.png",
+      "expected": "04036b4e37ffd7cd27e9934d0b75ca4c1ce74ad3414a9309f1ad69a0cbbec85a",
+      "actual": "04036b4e37ffd7cd27e9934d0b75ca4c1ce74ad3414a9309f1ad69a0cbbec85a",
+      "matches": true
+    },
+    {
+      "file": "767-inactive-activity-access-denied.png",
+      "expected": "83c83978c77626f6f80243c7d6d16f6de96e7ad3a7d2bd147f039f063b2a4de0",
+      "actual": "83c83978c77626f6f80243c7d6d16f6de96e7ad3a7d2bd147f039f063b2a4de0",
+      "matches": true
+    },
+    {
+      "file": "767-inactive-obligation-access-denied.png",
+      "expected": "83c83978c77626f6f80243c7d6d16f6de96e7ad3a7d2bd147f039f063b2a4de0",
+      "actual": "83c83978c77626f6f80243c7d6d16f6de96e7ad3a7d2bd147f039f063b2a4de0",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-after-browser-back.png",
+      "expected": "87d923b3bcb925cc638d4788da7c4ecde9e9a14aac676f253d6fb54c5571ecb2",
+      "actual": "87d923b3bcb925cc638d4788da7c4ecde9e9a14aac676f253d6fb54c5571ecb2",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-exhausted-back-button.png",
+      "expected": "006a0bb2d3c16d009e69639db1d08f4c59eb17441de6fa41cb2666078c2e941f",
+      "actual": "006a0bb2d3c16d009e69639db1d08f4c59eb17441de6fa41cb2666078c2e941f",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-exhausted-before-detail.png",
+      "expected": "e43de32ab91966b8ee9009387192770b1f6fb60ae1f339b771083aa465ff2228",
+      "actual": "e43de32ab91966b8ee9009387192770b1f6fb60ae1f339b771083aa465ff2228",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-exhausted-browser-back.png",
+      "expected": "482368a2b1ea4d3039c56b5b6a50ab173492dbdb24c65eac4934244c103e327a",
+      "actual": "482368a2b1ea4d3039c56b5b6a50ab173492dbdb24c65eac4934244c103e327a",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-loading.png",
+      "expected": "6f760ec5676930a1ef056bc7f812802cbe8abfd6585d5e1980e075f5f3198fe1",
+      "actual": "6f760ec5676930a1ef056bc7f812802cbe8abfd6585d5e1980e075f5f3198fe1",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-ready.png",
+      "expected": "0df1aea4d90caf935fe213011f571a22f53f1f53ecd568bc51f9448252b81a69",
+      "actual": "0df1aea4d90caf935fe213011f571a22f53f1f53ecd568bc51f9448252b81a69",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-settled-after-back-button.png",
+      "expected": "0c8a3b74a6ca897e772ab37285d9b7d67c4b56caea6d542aafe85f8ee609a78f",
+      "actual": "0c8a3b74a6ca897e772ab37285d9b7d67c4b56caea6d542aafe85f8ee609a78f",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-settled-after-browser-back.png",
+      "expected": "0c8a3b74a6ca897e772ab37285d9b7d67c4b56caea6d542aafe85f8ee609a78f",
+      "actual": "0c8a3b74a6ca897e772ab37285d9b7d67c4b56caea6d542aafe85f8ee609a78f",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-source-unavailable.png",
+      "expected": "af4e57b7c049b5bd7058d2654c4096ad36ae16b58e1dd9584599490d56be794f",
+      "actual": "af4e57b7c049b5bd7058d2654c4096ad36ae16b58e1dd9584599490d56be794f",
+      "matches": true
+    },
+    {
+      "file": "767-owner-activity-unavailable.png",
+      "expected": "72212313502a1549923b3ada5f2688b14024c7f6061104ad2e0363a303810287",
+      "actual": "72212313502a1549923b3ada5f2688b14024c7f6061104ad2e0363a303810287",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-back-lifecycle-keyboard.png",
+      "expected": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "actual": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-back-lifecycle-pointer.png",
+      "expected": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "actual": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-back-money-movement-keyboard.png",
+      "expected": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "actual": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-back-money-movement-pointer.png",
+      "expected": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "actual": "080c9854db70a0164454ddb1ae478602f8a750805991e4c81fb28fe8f5f55943",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-ready-lifecycle-keyboard.png",
+      "expected": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "actual": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-ready-lifecycle-pointer.png",
+      "expected": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "actual": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-ready-money-movement-keyboard.png",
+      "expected": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "actual": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-ready-money-movement-pointer.png",
+      "expected": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "actual": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-refresh-lifecycle-keyboard.png",
+      "expected": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "actual": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-refresh-lifecycle-pointer.png",
+      "expected": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "actual": "dc1a035b223255f770512c7b37443d92ea0f3725adacdf3390eec2d2b654f894",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-refresh-money-movement-keyboard.png",
+      "expected": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "actual": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "matches": true
+    },
+    {
+      "file": "767-owner-identifier-refresh-money-movement-pointer.png",
+      "expected": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "actual": "cb110f3f1ccd81339816cdfe7304e2dc060acd26bf941da8e3a92860e335b9f3",
+      "matches": true
+    },
+    {
+      "file": "767-owner-independent-activity-loading.png",
+      "expected": "e7e1d4b0c54dafdd3ba6ea3e147c355e7af7eb51cf989a1311ebfb45f86b7b1e",
+      "actual": "e7e1d4b0c54dafdd3ba6ea3e147c355e7af7eb51cf989a1311ebfb45f86b7b1e",
+      "matches": true
+    },
+    {
+      "file": "767-owner-initial-loading.png",
+      "expected": "7947dbb039b5a227df65255f81b5a5f9753372f5e1c91c8314f7fd700f81ba20",
+      "actual": "7947dbb039b5a227df65255f81b5a5f9753372f5e1c91c8314f7fd700f81ba20",
+      "matches": true
+    },
+    {
+      "file": "767-owner-invalid-detail.png",
+      "expected": "6a773a19eff03943b99249bebfa140019267bad2730213abde7dd0c749e5d4d3",
+      "actual": "6a773a19eff03943b99249bebfa140019267bad2730213abde7dd0c749e5d4d3",
+      "matches": true
+    },
+    {
+      "file": "767-owner-obligation-loading.png",
+      "expected": "71ebdbc8905055ed265df775facf526a4dacbaaa1435ea282b03000aea368e2b",
+      "actual": "71ebdbc8905055ed265df775facf526a4dacbaaa1435ea282b03000aea368e2b",
+      "matches": true
+    },
+    {
+      "file": "767-owner-obligation-ready.png",
+      "expected": "b9487c4d1b27d9b528a4e366fa2eb4a1b62c1dc8740a0f21868af3d9f039377b",
+      "actual": "b9487c4d1b27d9b528a4e366fa2eb4a1b62c1dc8740a0f21868af3d9f039377b",
+      "matches": true
+    },
+    {
+      "file": "767-owner-obligation-source-unavailable.png",
+      "expected": "af4e57b7c049b5bd7058d2654c4096ad36ae16b58e1dd9584599490d56be794f",
+      "actual": "af4e57b7c049b5bd7058d2654c4096ad36ae16b58e1dd9584599490d56be794f",
+      "matches": true
+    },
+    {
+      "file": "767-owner-obligation-unavailable.png",
+      "expected": "72212313502a1549923b3ada5f2688b14024c7f6061104ad2e0363a303810287",
+      "actual": "72212313502a1549923b3ada5f2688b14024c7f6061104ad2e0363a303810287",
+      "matches": true
+    },
+    {
+      "file": "767-owner-overview-unavailable-retry.png",
+      "expected": "f74f1711ca3b3e454125b67df828931e654b107ddb0d4247efefe32742633d9a",
+      "actual": "f74f1711ca3b3e454125b67df828931e654b107ddb0d4247efefe32742633d9a",
+      "matches": true
+    },
+    {
+      "file": "767-owner-ready-partial.png",
+      "expected": "9dc40d09a92b006b67ccc3cfe66dd4b403c12fc5519f738533fcb2e3854f962f",
+      "actual": "9dc40d09a92b006b67ccc3cfe66dd4b403c12fc5519f738533fcb2e3854f962f",
+      "matches": true
+    },
+    {
+      "file": "767-owner-refreshing.png",
+      "expected": "d0de7620049d67e81bb0a16af3437985d77454a86fa788073e9b3a1ed0e4f535",
+      "actual": "d0de7620049d67e81bb0a16af3437985d77454a86fa788073e9b3a1ed0e4f535",
+      "matches": true
+    },
+    {
+      "file": "767-owner-section-source-unavailable.png",
+      "expected": "b527bc02af714d0ca6952739ad0a890663d9052f27897d819155b52b1af7045b",
+      "actual": "b527bc02af714d0ca6952739ad0a890663d9052f27897d819155b52b1af7045b",
+      "matches": true
+    },
+    {
+      "file": "767-owner-stale-last-known.png",
+      "expected": "f2cd28beddd29fa7b466a8111e8ca7827be05e498261a8fbaed79d5bee7b2949",
+      "actual": "f2cd28beddd29fa7b466a8111e8ca7827be05e498261a8fbaed79d5bee7b2949",
+      "matches": true
+    },
+    {
+      "file": "767-unrelated-obligation-exhausted-back-button.png",
+      "expected": "1a3a3a07c50732cfb7ad3c4ac700030cf5d7c2eef47dd792c8236edd0b3fbd55",
+      "actual": "1a3a3a07c50732cfb7ad3c4ac700030cf5d7c2eef47dd792c8236edd0b3fbd55",
+      "matches": true
+    },
+    {
+      "file": "767-unrelated-obligation-exhausted-browser-back.png",
+      "expected": "d0972e4cb531a50672deb5d06b71874ac829fcdd220363d2dacf755229405678",
+      "actual": "d0972e4cb531a50672deb5d06b71874ac829fcdd220363d2dacf755229405678",
+      "matches": true
+    },
+    {
+      "file": "767-unrelated-obligation-settled-after-back-button.png",
+      "expected": "e30e7814311f7b4d4c64f7cc284b9632156cbed0e75b365b767228234a48fc1c",
+      "actual": "e30e7814311f7b4d4c64f7cc284b9632156cbed0e75b365b767228234a48fc1c",
+      "matches": true
+    },
+    {
+      "file": "767-unrelated-obligation-settled-after-browser-back.png",
+      "expected": "e30e7814311f7b4d4c64f7cc284b9632156cbed0e75b365b767228234a48fc1c",
+      "actual": "e30e7814311f7b4d4c64f7cc284b9632156cbed0e75b365b767228234a48fc1c",
+      "matches": true
+    },
+    {
+      "file": "768-anonymous-route-entry.png",
+      "expected": "18b5b882ec8827822e0efd185fa783338d451170db4f04eade6e9f338337a324",
+      "actual": "18b5b882ec8827822e0efd185fa783338d451170db4f04eade6e9f338337a324",
+      "matches": true
+    },
+    {
+      "file": "768-empty-empty-brand.png",
+      "expected": "ec9bfc82dc872d444d2c019fb33d6e53883db42207243387701637541d419429",
+      "actual": "ec9bfc82dc872d444d2c019fb33d6e53883db42207243387701637541d419429",
+      "matches": true
+    },
+    {
+      "file": "768-inactive-activity-access-denied.png",
+      "expected": "04ace54b349c78bb8c7cc6a24ea5359cf7a73f2ce21e9e8cf470cb0f8115b94d",
+      "actual": "04ace54b349c78bb8c7cc6a24ea5359cf7a73f2ce21e9e8cf470cb0f8115b94d",
+      "matches": true
+    },
+    {
+      "file": "768-inactive-obligation-access-denied.png",
+      "expected": "9ff396e73f8717f4772a5439155686a77096765c5781e340faa852d679a783b3",
+      "actual": "9ff396e73f8717f4772a5439155686a77096765c5781e340faa852d679a783b3",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-after-browser-back.png",
+      "expected": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "actual": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-exhausted-back-button.png",
+      "expected": "2526422aac0b39fc091cfd8cfeccdee5269c4387719326a823259787cf06f0d6",
+      "actual": "2526422aac0b39fc091cfd8cfeccdee5269c4387719326a823259787cf06f0d6",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-exhausted-before-detail.png",
+      "expected": "2526422aac0b39fc091cfd8cfeccdee5269c4387719326a823259787cf06f0d6",
+      "actual": "2526422aac0b39fc091cfd8cfeccdee5269c4387719326a823259787cf06f0d6",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-exhausted-browser-back.png",
+      "expected": "2526422aac0b39fc091cfd8cfeccdee5269c4387719326a823259787cf06f0d6",
+      "actual": "2526422aac0b39fc091cfd8cfeccdee5269c4387719326a823259787cf06f0d6",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-loading.png",
+      "expected": "4653a2161e76809563c045497c7f85d90823fd51f1971d2a6dc6d1f255388d19",
+      "actual": "4653a2161e76809563c045497c7f85d90823fd51f1971d2a6dc6d1f255388d19",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-ready.png",
+      "expected": "84e532d90d956b3a6f9ccf82b8ecd10375bf0bf1fee780493a69a9378e70ddbf",
+      "actual": "84e532d90d956b3a6f9ccf82b8ecd10375bf0bf1fee780493a69a9378e70ddbf",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-settled-after-back-button.png",
+      "expected": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "actual": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-settled-after-browser-back.png",
+      "expected": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "actual": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-source-unavailable.png",
+      "expected": "c6121b5909ad02ebc81e7b0fdab573b77f7f8d5fb50476100c7daba703ddb797",
+      "actual": "c6121b5909ad02ebc81e7b0fdab573b77f7f8d5fb50476100c7daba703ddb797",
+      "matches": true
+    },
+    {
+      "file": "768-owner-activity-unavailable.png",
+      "expected": "993e969db165c0d701a0f71b1c0eddce7405cf481aa1c9b16ef65c8b1f6193eb",
+      "actual": "993e969db165c0d701a0f71b1c0eddce7405cf481aa1c9b16ef65c8b1f6193eb",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-back-lifecycle-keyboard.png",
+      "expected": "b71d20b5a5d377ff0a2c7031d830a9c255e468cf8ea2d703d71701a7f79ad609",
+      "actual": "b71d20b5a5d377ff0a2c7031d830a9c255e468cf8ea2d703d71701a7f79ad609",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-back-lifecycle-pointer.png",
+      "expected": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "actual": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-back-money-movement-keyboard.png",
+      "expected": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "actual": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-back-money-movement-pointer.png",
+      "expected": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "actual": "ff47a7bf4202ba74eec1ac24f38b727796eac7be82f945d53010df342cbcc871",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-ready-lifecycle-keyboard.png",
+      "expected": "4a5a031713c23e71b6d2d1db9ef9b65be3ea386ebc9c0392816ccaf98e3d4521",
+      "actual": "4a5a031713c23e71b6d2d1db9ef9b65be3ea386ebc9c0392816ccaf98e3d4521",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-ready-lifecycle-pointer.png",
+      "expected": "4a5a031713c23e71b6d2d1db9ef9b65be3ea386ebc9c0392816ccaf98e3d4521",
+      "actual": "4a5a031713c23e71b6d2d1db9ef9b65be3ea386ebc9c0392816ccaf98e3d4521",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-ready-money-movement-keyboard.png",
+      "expected": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "actual": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-ready-money-movement-pointer.png",
+      "expected": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "actual": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-refresh-lifecycle-keyboard.png",
+      "expected": "4a5a031713c23e71b6d2d1db9ef9b65be3ea386ebc9c0392816ccaf98e3d4521",
+      "actual": "4a5a031713c23e71b6d2d1db9ef9b65be3ea386ebc9c0392816ccaf98e3d4521",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-refresh-lifecycle-pointer.png",
+      "expected": "77aadfaedfc31e95f46c5ed1abb77e6cdb0db27bb6b77126a7010808a5b607c0",
+      "actual": "77aadfaedfc31e95f46c5ed1abb77e6cdb0db27bb6b77126a7010808a5b607c0",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-refresh-money-movement-keyboard.png",
+      "expected": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "actual": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "matches": true
+    },
+    {
+      "file": "768-owner-identifier-refresh-money-movement-pointer.png",
+      "expected": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "actual": "b465d6ef6c84682005d711c229d0a6fa4f42b5a96f97a96a15eff160ac698e77",
+      "matches": true
+    },
+    {
+      "file": "768-owner-independent-activity-loading.png",
+      "expected": "2f66f7d358002dd782fc036a6fc6764942b6e52c45b82685601c1dbb8cfa0e2d",
+      "actual": "2f66f7d358002dd782fc036a6fc6764942b6e52c45b82685601c1dbb8cfa0e2d",
+      "matches": true
+    },
+    {
+      "file": "768-owner-initial-loading.png",
+      "expected": "71f380242638e897bb013db9315cad5e0d90dd8e1e32c1563c58b4a0a1501878",
+      "actual": "71f380242638e897bb013db9315cad5e0d90dd8e1e32c1563c58b4a0a1501878",
+      "matches": true
+    },
+    {
+      "file": "768-owner-invalid-detail.png",
+      "expected": "aa8549f5e39f57b0661b5d16bd8fd03db9a8a832443c303a3f271be3ea7337b9",
+      "actual": "aa8549f5e39f57b0661b5d16bd8fd03db9a8a832443c303a3f271be3ea7337b9",
+      "matches": true
+    },
+    {
+      "file": "768-owner-obligation-loading.png",
+      "expected": "dcc0d7fe39650b52a708ddab709691f2e6ca857c1e7bf2a285b95afb682e233c",
+      "actual": "dcc0d7fe39650b52a708ddab709691f2e6ca857c1e7bf2a285b95afb682e233c",
+      "matches": true
+    },
+    {
+      "file": "768-owner-obligation-ready.png",
+      "expected": "ad2f63e6315d4d6bb261a99333284260a41008517b935a9899acf8c68c19d9d0",
+      "actual": "ad2f63e6315d4d6bb261a99333284260a41008517b935a9899acf8c68c19d9d0",
+      "matches": true
+    },
+    {
+      "file": "768-owner-obligation-source-unavailable.png",
+      "expected": "8e10517fcf24a0954039c99e6948b1315644e874e956834d3a5dd08879555dc1",
+      "actual": "8e10517fcf24a0954039c99e6948b1315644e874e956834d3a5dd08879555dc1",
+      "matches": true
+    },
+    {
+      "file": "768-owner-obligation-unavailable.png",
+      "expected": "ec9b7f6edefd0ee5b30dffeead57af02cf9aa593eb6c1c06efb0e4d9fc15bbaf",
+      "actual": "ec9b7f6edefd0ee5b30dffeead57af02cf9aa593eb6c1c06efb0e4d9fc15bbaf",
+      "matches": true
+    },
+    {
+      "file": "768-owner-overview-unavailable-retry.png",
+      "expected": "a4f47d49553404c4ef580bcd6c854dd6787505c1846e892fdca170f2dc47eaa2",
+      "actual": "a4f47d49553404c4ef580bcd6c854dd6787505c1846e892fdca170f2dc47eaa2",
+      "matches": true
+    },
+    {
+      "file": "768-owner-ready-partial.png",
+      "expected": "64d130011e9a85411daf9580cfd3b4bd0386329035af00e4e7c6bbe40987edce",
+      "actual": "64d130011e9a85411daf9580cfd3b4bd0386329035af00e4e7c6bbe40987edce",
+      "matches": true
+    },
+    {
+      "file": "768-owner-refreshing.png",
+      "expected": "4d9654679f0d13d7f5ca4c661d9ce32bfe28d9de5a84e0c1a102cfcac04c270c",
+      "actual": "4d9654679f0d13d7f5ca4c661d9ce32bfe28d9de5a84e0c1a102cfcac04c270c",
+      "matches": true
+    },
+    {
+      "file": "768-owner-section-source-unavailable.png",
+      "expected": "6ec8af4a9c406cf9381b5495793a58ce4d8066a296ef97aba9d7a37550e85ff7",
+      "actual": "6ec8af4a9c406cf9381b5495793a58ce4d8066a296ef97aba9d7a37550e85ff7",
+      "matches": true
+    },
+    {
+      "file": "768-owner-stale-last-known.png",
+      "expected": "293f2c1c4dea3fbb88ee063db3e17ffc8d7b1a7ac03a181fcfd6eb8f206d8d65",
+      "actual": "293f2c1c4dea3fbb88ee063db3e17ffc8d7b1a7ac03a181fcfd6eb8f206d8d65",
+      "matches": true
+    },
+    {
+      "file": "768-unrelated-obligation-exhausted-back-button.png",
+      "expected": "23f0eb0758005d89586ea88ce2cf6efb6d7f7b34d9653be03537436174659513",
+      "actual": "23f0eb0758005d89586ea88ce2cf6efb6d7f7b34d9653be03537436174659513",
+      "matches": true
+    },
+    {
+      "file": "768-unrelated-obligation-exhausted-browser-back.png",
+      "expected": "23f0eb0758005d89586ea88ce2cf6efb6d7f7b34d9653be03537436174659513",
+      "actual": "23f0eb0758005d89586ea88ce2cf6efb6d7f7b34d9653be03537436174659513",
+      "matches": true
+    },
+    {
+      "file": "768-unrelated-obligation-settled-after-back-button.png",
+      "expected": "456446e56610c6c7e3ad16257e3fa3330b097a9a000ca813287e9c2ac9afda75",
+      "actual": "456446e56610c6c7e3ad16257e3fa3330b097a9a000ca813287e9c2ac9afda75",
+      "matches": true
+    },
+    {
+      "file": "768-unrelated-obligation-settled-after-browser-back.png",
+      "expected": "456446e56610c6c7e3ad16257e3fa3330b097a9a000ca813287e9c2ac9afda75",
+      "actual": "456446e56610c6c7e3ad16257e3fa3330b097a9a000ca813287e9c2ac9afda75",
+      "matches": true
+    },
+    {
+      "file": "accessibility-summary.json",
+      "expected": "fb34b1917422b6b352430aa3ae783600e51794c4d254227efecf619153323444",
+      "actual": "fb34b1917422b6b352430aa3ae783600e51794c4d254227efecf619153323444",
+      "matches": true
+    },
+    {
+      "file": "authentication-entry.json",
+      "expected": "7c6f1b4b72b9a27e8a5694eccb9e0a04bb709466953dd6da5b72752567d48566",
+      "actual": "7c6f1b4b72b9a27e8a5694eccb9e0a04bb709466953dd6da5b72752567d48566",
+      "matches": true
+    },
+    {
+      "file": "browser-matrix-integration.json",
+      "expected": "2977ec13d0ac718cc43e98467f3a2b1147383266a6faa82bebe0796c8246defe",
+      "actual": "2977ec13d0ac718cc43e98467f3a2b1147383266a6faa82bebe0796c8246defe",
+      "matches": true
+    },
+    {
+      "file": "browser-matrix-restoration.json",
+      "expected": "ebe917bc1cb552c3e731d946fe293db4e0c4a2f083b8301fb38cc03deb980d95",
+      "actual": "ebe917bc1cb552c3e731d946fe293db4e0c4a2f083b8301fb38cc03deb980d95",
+      "matches": true
+    },
+    {
+      "file": "browser-matrix.json",
+      "expected": "1fbf55cc8853f4d942c94eb84f9088c1dd3b7264cfe5a45de8bbc92a3c6a7592",
+      "actual": "1fbf55cc8853f4d942c94eb84f9088c1dd3b7264cfe5a45de8bbc92a3c6a7592",
+      "matches": true
+    },
+    {
+      "file": "browser-network-console-integration.json",
+      "expected": "2eca1867d149634cbf3fb97e7e19be5214aad430092fe70284e1e6ea140bac05",
+      "actual": "2eca1867d149634cbf3fb97e7e19be5214aad430092fe70284e1e6ea140bac05",
+      "matches": true
+    },
+    {
+      "file": "browser-network-console-restoration.json",
+      "expected": "c23cd97d4dde1e35e347a8da8785235f7c5c592d1df2a01def08ed8884c0e700",
+      "actual": "c23cd97d4dde1e35e347a8da8785235f7c5c592d1df2a01def08ed8884c0e700",
+      "matches": true
+    },
+    {
+      "file": "browser-network-console.json",
+      "expected": "859841a52690a68a28720fadc3b11369d7fdf4e84379b0c42d7caf9726299413",
+      "actual": "859841a52690a68a28720fadc3b11369d7fdf4e84379b0c42d7caf9726299413",
+      "matches": true
+    },
+    {
+      "file": "circuit-breaker.json",
+      "expected": "18adc3bdbc861791cfb9f66cc4b69cd09c2f422e0c03b6349f9c56611c6f8c25",
+      "actual": "18adc3bdbc861791cfb9f66cc4b69cd09c2f422e0c03b6349f9c56611c6f8c25",
+      "matches": true
+    },
+    {
+      "file": "contrast-regression.json",
+      "expected": "e1410f593d62ccf5ebd58a0c9d60ee931bfb4ff0b5cbe858569d98c6c5bb9a90",
+      "actual": "e1410f593d62ccf5ebd58a0c9d60ee931bfb4ff0b5cbe858569d98c6c5bb9a90",
+      "matches": true
+    },
+    {
+      "file": "database-lifecycle.json",
+      "expected": "64a47b17d9aab1c7888e212604deb8c546cb850e95bc6d92d2c3ac23f082f821",
+      "actual": "64a47b17d9aab1c7888e212604deb8c546cb850e95bc6d92d2c3ac23f082f821",
+      "matches": true
+    },
+    {
+      "file": "dom-network-product-truth.json",
+      "expected": "fcb5e3f65d8a585a6d237a6760d09aa25019663a8ada35ac013f8507acef6d56",
+      "actual": "fcb5e3f65d8a585a6d237a6760d09aa25019663a8ada35ac013f8507acef6d56",
+      "matches": true
+    },
+    {
+      "file": "environment.json",
+      "expected": "f2a6d222634eb86797bbbe76490c810e05df276257c25ffe59ad3c831ba7750c",
+      "actual": "f2a6d222634eb86797bbbe76490c810e05df276257c25ffe59ad3c831ba7750c",
+      "matches": true
+    },
+    {
+      "file": "financial-state.json",
+      "expected": "0928c44f016d96550c5a919e2f7686d33c64240b1ff75bac5dd7b06e99a15d52",
+      "actual": "0928c44f016d96550c5a919e2f7686d33c64240b1ff75bac5dd7b06e99a15d52",
+      "matches": true
+    },
+    {
+      "file": "http-rbac.json",
+      "expected": "66d7ad332f873e807488674df1a51ad35e940623c921e7d24dc991e59427a9e3",
+      "actual": "66d7ad332f873e807488674df1a51ad35e940623c921e7d24dc991e59427a9e3",
+      "matches": true
+    },
+    {
+      "file": "identifier-integration.json",
+      "expected": "ffcad5468a5f32b3dc04d68b2d04ef0db91e1cff33a2babbeee45541124b2fc5",
+      "actual": "ffcad5468a5f32b3dc04d68b2d04ef0db91e1cff33a2babbeee45541124b2fc5",
+      "matches": true
+    },
+    {
+      "file": "keyboard-focus-integration.json",
+      "expected": "48d2af6950c54d3e7fbad939537b422e297dcc304faf8912c7b2a3aa2c7343ea",
+      "actual": "48d2af6950c54d3e7fbad939537b422e297dcc304faf8912c7b2a3aa2c7343ea",
+      "matches": true
+    },
+    {
+      "file": "keyboard-focus-restoration.json",
+      "expected": "d3447c0b16c11f088fd8122012c56823ed31d55312a863f7d989b83f3d6c1904",
+      "actual": "d3447c0b16c11f088fd8122012c56823ed31d55312a863f7d989b83f3d6c1904",
+      "matches": true
+    },
+    {
+      "file": "keyboard-focus.json",
+      "expected": "d3447c0b16c11f088fd8122012c56823ed31d55312a863f7d989b83f3d6c1904",
+      "actual": "d3447c0b16c11f088fd8122012c56823ed31d55312a863f7d989b83f3d6c1904",
+      "matches": true
+    },
+    {
+      "file": "pagination-back-restoration.json",
+      "expected": "b148c9e40cb959de4215a64c451447296361ea47e8c48ba322ee3d0649769c2d",
+      "actual": "b148c9e40cb959de4215a64c451447296361ea47e8c48ba322ee3d0649769c2d",
+      "matches": true
+    },
+    {
+      "file": "preflight-summary.json",
+      "expected": "7492427900696256709795e21bb06aff56aff450e0875057cf5184603717d60a",
+      "actual": "7492427900696256709795e21bb06aff56aff450e0875057cf5184603717d60a",
+      "matches": true
+    },
+    {
+      "file": "response-schema-validation.json",
+      "expected": "9d8232b35b80821664e4cd898dd6b0dd9794cb6fa5ebe8c1e8d5cb343f969f12",
+      "actual": "9d8232b35b80821664e4cd898dd6b0dd9794cb6fa5ebe8c1e8d5cb343f969f12",
+      "matches": true
+    },
+    {
+      "file": "runtime.json",
+      "expected": "8a43100a79ec098520975183b8a36123f9e7ed29494a935d3f75499cbae0c643",
+      "actual": "8a43100a79ec098520975183b8a36123f9e7ed29494a935d3f75499cbae0c643",
+      "matches": true
+    },
+    {
+      "file": "settled-pagination-restoration.json",
+      "expected": "2dfe869553babe8536efce3c752ec0981fd34229341bb190ec3b535c710a2ce7",
+      "actual": "2dfe869553babe8536efce3c752ec0981fd34229341bb190ec3b535c710a2ce7",
+      "matches": true
+    },
+    {
+      "file": "shutdown.json",
+      "expected": "250142e46232415ad0e78ddf49f08827dab1bda7b01350e5b86c50f77cbf87b5",
+      "actual": "250142e46232415ad0e78ddf49f08827dab1bda7b01350e5b86c50f77cbf87b5",
+      "matches": true
+    },
+    {
+      "file": "source-diagnosis.json",
+      "expected": "9ef1b017368a3d2f22ce5db7eec26a78207750079c7f1cb15cd1f5ea87039fea",
+      "actual": "9ef1b017368a3d2f22ce5db7eec26a78207750079c7f1cb15cd1f5ea87039fea",
+      "matches": true
+    },
+    {
+      "file": "v4-integrity-and-source-binding.json",
+      "expected": "ac9f15f0dc2443624ffbbbe2207fd5dff381d89afb245ccaad0618430c02fd2e",
+      "actual": "ac9f15f0dc2443624ffbbbe2207fd5dff381d89afb245ccaad0618430c02fd2e",
+      "matches": true
+    },
+    {
+      "file": "viewport-safe-area.json",
+      "expected": "5fbd2c6c075d95fe9ab88d68edde1e4209995f3b4c794568722bcebebcafcd5f",
+      "actual": "5fbd2c6c075d95fe9ab88d68edde1e4209995f3b4c794568722bcebebcafcd5f",
+      "matches": true
+    },
+    {
+      "file": "../../brand-payouts-v1-p2-local-runtime-browser-evidence-v5.md",
+      "expected": "0ddd84e5f3d3d3442ae25ad5f56967887596b90b9fe3afdc35b26728d86ca05c",
+      "actual": "0ddd84e5f3d3d3442ae25ad5f56967887596b90b9fe3afdc35b26728d86ca05c",
+      "matches": true
+    }
+  ],
+  "frontendChangedFiles": [
+    "src/features/brand-payouts/brand-payouts-p2.test.ts",
+    "src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx"
+  ],
+  "completeCorrectionDiff": "diff --git a/src/features/brand-payouts/brand-payouts-p2.test.ts b/src/features/brand-payouts/brand-payouts-p2.test.ts\nindex 246c8bc..68292a9 100644\n--- a/src/features/brand-payouts/brand-payouts-p2.test.ts\n+++ b/src/features/brand-payouts/brand-payouts-p2.test.ts\n@@ -11,7 +11,7 @@ import { readFileSync } from \"node:fs\";\n import { resolve } from \"node:path\";\n import { afterEach, describe, expect, it, vi } from \"vitest\";\n import { createElement } from \"react\";\n-import { MemoryRouter, Route, Routes } from \"react-router-dom\";\n+import { MemoryRouter, Route, Routes, useNavigate } from \"react-router-dom\";\n \n const mocks = vi.hoisted(() => ({ authenticatedFetch: vi.fn() }));\n \n@@ -32,6 +32,7 @@ import {\n   BRAND_PAYOUTS_V2_MEDIA_TYPE,\n   brandPayoutsActivityDetailResponseSchema,\n   brandPayoutsActivityResponseSchema,\n+  brandPayoutsObligationDetailResponseSchema,\n   brandPayoutsObligationsResponseSchema,\n   brandPayoutsOverviewResponseSchema,\n   type BrandPayoutsActivityResponse,\n@@ -288,7 +289,7 @@ function makeActivity(\n   });\n }\n \n-function makeActivityDetail() {\n+function makeActivityDetail(id = \"ledger:one:recorded\") {\n   return brandPayoutsActivityDetailResponseSchema.parse({\n     schema_version: \"brand-payouts.v2\",\n     as_of: NOW,\n@@ -297,7 +298,23 @@ function makeActivityDetail() {\n       {\n         section_id: \"ACTIVITY\",\n         ...sectionMetadata,\n-        payload: activityItem(),\n+        payload: activityItem(id),\n+      },\n+    ],\n+  });\n+}\n+\n+function makeObligationDetail(id = \"obligation-one\") {\n+  return brandPayoutsObligationDetailResponseSchema.parse({\n+    schema_version: \"brand-payouts.v2\",\n+    as_of: NOW,\n+    viewer: { role: \"BRAND_OWNER\", projection_scope: \"FULL_FINANCIAL\" },\n+    sections: [\n+      {\n+        section_id: \"OBLIGATIONS\",\n+        ...sectionMetadata,\n+        coverage: \"PARTIAL\",\n+        payload: obligationItem(id),\n       },\n     ],\n   });\n@@ -375,6 +392,15 @@ function deferred<T>() {\n   return { promise, resolve: resolvePromise, reject: rejectPromise };\n }\n \n+function BrowserBackControl() {\n+  const navigate = useNavigate();\n+  return createElement(\n+    \"button\",\n+    { onClick: () => navigate(-1) },\n+    \"Simulate browser Back\",\n+  );\n+}\n+\n afterEach(() => {\n   cleanup();\n   mocks.authenticatedFetch.mockReset();\n@@ -813,6 +839,116 @@ describe(\"truthful first-slice rendering\", () => {\n });\n \n describe(\"stable financial detail navigation\", () => {\n+  it(\"preserves expanded activity and obligation pages across both detail return paths\", async () => {\n+    const firstActivityId = \"ledger:first:recorded\";\n+    const secondActivityId = \"ledger:second:recorded\";\n+    const firstObligationId = \"obligation-first\";\n+    const secondObligationId = \"obligation-second\";\n+    let initialActivityRequests = 0;\n+    let initialObligationRequests = 0;\n+\n+    mocks.authenticatedFetch.mockImplementation((input: string) => {\n+      if (input.includes(`/activity/${encodeURIComponent(secondActivityId)}`)) {\n+        return Promise.resolve(\n+          jsonResponse(makeActivityDetail(secondActivityId)),\n+        );\n+      }\n+      if (\n+        input.includes(\n+          `/obligations/${encodeURIComponent(`payout-obligation:${secondObligationId}`)}`,\n+        )\n+      ) {\n+        return Promise.resolve(\n+          jsonResponse(makeObligationDetail(secondObligationId)),\n+        );\n+      }\n+      if (input.includes(\"/activity?\")) {\n+        if (input.includes(\"cursor=activity-next\")) {\n+          return Promise.resolve(jsonResponse(makeActivity(secondActivityId)));\n+        }\n+        initialActivityRequests += 1;\n+        return Promise.resolve(\n+          jsonResponse(makeActivity(firstActivityId, \"activity-next\")),\n+        );\n+      }\n+      if (input.includes(\"/obligations?\")) {\n+        if (input.includes(\"cursor=obligations-next\")) {\n+          return Promise.resolve(\n+            jsonResponse(makeObligations(secondObligationId)),\n+          );\n+        }\n+        initialObligationRequests += 1;\n+        return Promise.resolve(\n+          jsonResponse(makeObligations(firstObligationId, \"obligations-next\")),\n+        );\n+      }\n+      if (input.endsWith(\"/api/v1/brand/payouts\")) {\n+        return Promise.resolve(jsonResponse(makeOverview()));\n+      }\n+      return Promise.reject(new Error(`Unexpected Payouts request: ${input}`));\n+    });\n+\n+    render(\n+      createElement(\n+        MemoryRouter,\n+        { initialEntries: [\"/brand/payouts\"] },\n+        createElement(\n+          \"div\",\n+          null,\n+          createElement(BrandPayoutsWorkspace),\n+          createElement(BrowserBackControl),\n+        ),\n+      ),\n+    );\n+\n+    fireEvent.click(\n+      await screen.findByRole(\"button\", { name: \"Load more activity\" }),\n+    );\n+    fireEvent.click(\n+      await screen.findByRole(\"button\", { name: \"Load more obligations\" }),\n+    );\n+    const activityLinks = await screen.findAllByRole(\"link\", {\n+      name: `View activity ${secondActivityId}`,\n+    });\n+    const obligationLinks = await screen.findAllByRole(\"link\", {\n+      name: `View payout obligation payout-obligation:${secondObligationId}`,\n+    });\n+    expect(activityLinks).toHaveLength(2);\n+    expect(obligationLinks).toHaveLength(2);\n+    expect(\n+      screen.queryByRole(\"button\", { name: \"Load more activity\" }),\n+    ).toBeNull();\n+    expect(\n+      screen.queryByRole(\"button\", { name: \"Load more obligations\" }),\n+    ).toBeNull();\n+\n+    fireEvent.click(activityLinks[0]);\n+    await screen.findByText(\"Financial activity\", { selector: \"p\" });\n+    fireEvent.click(screen.getByRole(\"button\", { name: \"Back to Payouts\" }));\n+    expect(\n+      await screen.findAllByRole(\"link\", {\n+        name: `View activity ${secondActivityId}`,\n+      }),\n+    ).toHaveLength(2);\n+\n+    fireEvent.click(\n+      screen.getAllByRole(\"link\", {\n+        name: `View payout obligation payout-obligation:${secondObligationId}`,\n+      })[0],\n+    );\n+    await screen.findByText(\"Creator payout obligation\", { selector: \"p\" });\n+    fireEvent.click(\n+      screen.getByRole(\"button\", { name: \"Simulate browser Back\" }),\n+    );\n+    expect(\n+      await screen.findAllByRole(\"link\", {\n+        name: `View payout obligation payout-obligation:${secondObligationId}`,\n+      }),\n+    ).toHaveLength(2);\n+    expect(initialActivityRequests).toBe(1);\n+    expect(initialObligationRequests).toBe(1);\n+  });\n+\n   it(\"routes desktop and mobile activity links by activity ID while preserving the public reference\", async () => {\n     const activityId = \"ledger:canonical-row:recorded\";\n     const publicReference = \"activity-public-ref\";\ndiff --git a/src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx b/src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx\nindex 844bd30..7f5a448 100644\n--- a/src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx\n+++ b/src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx\n@@ -15,6 +15,7 @@ import \"../brand-payouts.css\";\n \n export function BrandPayoutsWorkspace() {\n   const location = useLocation();\n+  const workspace = useBrandPayoutsWorkspace();\n   const target = resolvePayoutsDetailTarget(location.search);\n   if (target && target !== \"INVALID\") {\n     return <PayoutsDetail target={target} />;\n@@ -31,11 +32,14 @@ export function BrandPayoutsWorkspace() {\n       </div>\n     );\n   }\n-  return <PayoutsWorkspaceOverview />;\n+  return <PayoutsWorkspaceOverview workspace={workspace} />;\n }\n \n-function PayoutsWorkspaceOverview() {\n-  const workspace = useBrandPayoutsWorkspace();\n+function PayoutsWorkspaceOverview({\n+  workspace,\n+}: {\n+  readonly workspace: ReturnType<typeof useBrandPayoutsWorkspace>;\n+}) {\n   const viewers = [\n     workspace.overview.data?.viewer,\n     workspace.activity.data?.viewer,",
+  "apiSchemasAuthorizationCursorFormattingAndCssUnchanged": true,
+  "sourceCheckouts": {
+    "backend": {
+      "head": "119397ff6836ad12846c1e948409d8d49185c408",
+      "tree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "clean": true
+    },
+    "frontend": {
+      "head": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+      "tree": "61c9103a32c7aca494f2ef13b384e843f460e84f",
+      "clean": true
+    }
+  },
+  "requiredAncestorsVerified": true,
+  "noPrismaDiff": true,
+  "initialRemoteHeadsVerified": true,
+  "ledgerAndPriorTrackedEvidenceUnchanged": true
+}
