@@ -420,3 +420,8 @@ PRODUCT_QUESTIONS = NONE
 ARCHITECTURE_CONFLICTS = NONE
 NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 ```
+
+Systems Architect acceptance SHA =
+`71b449546a7f5d3ef627576e82013fb0ff887d25`
+
+This immutable acceptance record binds P1.4 and the P1 aggregate freeze.

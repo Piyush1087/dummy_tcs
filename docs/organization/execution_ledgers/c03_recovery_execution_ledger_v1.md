@@ -884,3 +884,8 @@ Creator Brief Pack remains P5 responsibility, not an accepted P1 endpoint.
 Frontend implementation and post-acceptance C04 workflow commands are outside
 this freeze. AWS, production and live provider operations are outside P1
 acceptance. Publication stops at SA review; P2 does not begin here.
+
+Systems Architect acceptance SHA =
+`71b449546a7f5d3ef627576e82013fb0ff887d25`
+
+This immutable acceptance record binds P1.4 and the P1 aggregate freeze.
