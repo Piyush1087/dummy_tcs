@@ -515,6 +515,7 @@ production, or provider operation. No test/build rerun is claimed here.
 | Migration changes | NONE |
 | Backend publication | One coherent P1.3 commit, non-force push, exact SHA/tree fetch-back and clean worktree; PASS |
 | Verdict | `PASS`; supplied Systems Architect acceptance |
+| Systems Architect acceptance SHA | `05e26f6d220a490d107556a3ecb72dfe358ea13a` (the immutable documentation commit that first published this P1.3 PASS entry) |
 
 ### 9.1 Full correction history
 
