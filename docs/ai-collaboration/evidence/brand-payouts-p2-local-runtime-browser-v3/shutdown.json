@@ -1,0 +1,21 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+  "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+  "backendStopped": true,
+  "previewStopped": true,
+  "ownedRuntimeProcessesStopped": 4,
+  "browserContextsClosed": true,
+  "postgresContainer": "bp-p2-relay-pg",
+  "postgresContainerRemoved": true,
+  "disposableVolumeRemoved": true,
+  "remainingListenersOn3107_4177_55439": 0,
+  "privateSessionFileDeleted": true,
+  "remainingDisposableResources": [],
+  "controlledTermination": "Windows Stop-Process only on owned backend/preview trees; Docker stop and remove with volume removal",
+  "gracefulNestHooksClaimed": false,
+  "sourceWorktreesClean": true,
+  "schemaMigrationDiff": "NONE",
+  "providerActions": 0
+}

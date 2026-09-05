@@ -1,0 +1,11 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+  "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+  "route": "/login",
+  "rootChildren": 2,
+  "emailVisible": true,
+  "exceptionRepeated": false,
+  "screenshot": "1440-unauthenticated-login.png"
+}

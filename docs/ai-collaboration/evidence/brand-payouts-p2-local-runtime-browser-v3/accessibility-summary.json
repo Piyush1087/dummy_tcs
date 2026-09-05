@@ -1,0 +1,271 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+  "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+  "scanner": "Axe 4.10.3",
+  "rows": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "390-owner-loaded-partial-v2-regression.png",
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+            }
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  Document has more than one main landmark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "767-owner-loaded-partial-v2-regression.png",
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+            }
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  Document has more than one main landmark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "768-owner-loaded-partial-v2-regression.png",
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+            }
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  Document has more than one main landmark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "1440-owner-loaded-partial-v2-regression.png",
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+            }
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "severity": "moderate",
+          "nodes": [
+            {
+              "selector": [
+                ".bp-workspace"
+              ],
+              "html": "<main class=\"bp-workspace\">",
+              "summary": "Fix any of the following:\n  Document has more than one main landmark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "1440-owner-obligation-detail.png",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "severity": "serious",
+          "nodes": [
+            {
+              "selector": [
+                ".aurora-button--ghost"
+              ],
+              "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "390-owner-obligation-detail.png",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "severity": "serious",
+          "nodes": [
+            {
+              "selector": [
+                ".aurora-button--ghost"
+              ],
+              "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "767-owner-obligation-detail.png",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "severity": "serious",
+          "nodes": [
+            {
+              "selector": [
+                ".aurora-button--ghost"
+              ],
+              "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "768-owner-obligation-detail.png",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "severity": "serious",
+          "nodes": [
+            {
+              "selector": [
+                ".aurora-button--ghost"
+              ],
+              "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "moderateLandmarks": {
+    "reproduced": true,
+    "overviewOwnership": [
+      "src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx:102",
+      "src/layouts/app-shell/AppShell.tsx:57"
+    ],
+    "impact": "Nested and duplicated main landmarks can make landmark navigation ambiguous.",
+    "gateDisposition": "Recorded moderate best-practice findings; alone do not trigger the explicit serious/critical scanner threshold. Overall gate fails on serious detail contrast.",
+    "detailOwnership": "PayoutsDetail uses div rather than main; no nested/duplicate-main violation in captured detail states."
+  }
+}

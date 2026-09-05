@@ -1,0 +1,70 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+  "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+  "before": "0421a7865830b1c23f572fa6150aba62714132b1410ecf5bfe159d46ce5b2d33",
+  "after": "0421a7865830b1c23f572fa6150aba62714132b1410ecf5bfe159d46ce5b2d33",
+  "httpBefore": "0421a7865830b1c23f572fa6150aba62714132b1410ecf5bfe159d46ce5b2d33",
+  "equal": true,
+  "models": [
+    "brandEscrowVault",
+    "escrowTransactionLedger",
+    "creatorPayoutObligation",
+    "routeTransferAttempt",
+    "routeTransferReversal",
+    "brandReturnRequest",
+    "creatorPayoutProfile",
+    "escrowFundingLoad",
+    "escrowFundingLot",
+    "collaborationFundingLotAllocation",
+    "collaborationEscrowLock",
+    "collaborationRefundInstruction",
+    "creatorSettlementProfile",
+    "creatorPayoutFundingAllocation",
+    "brandReturnAllocation",
+    "brandReturnWebhookReceipt",
+    "creatorPayoutDestination",
+    "creatorPayoutDestinationProviderMapping",
+    "collaborationCommercial",
+    "collaboration"
+  ],
+  "rowCounts": {
+    "brandEscrowVault": 2,
+    "escrowTransactionLedger": 56,
+    "creatorPayoutObligation": 2,
+    "routeTransferAttempt": 0,
+    "routeTransferReversal": 0,
+    "brandReturnRequest": 0,
+    "creatorPayoutProfile": 1,
+    "escrowFundingLoad": 0,
+    "escrowFundingLot": 0,
+    "collaborationFundingLotAllocation": 0,
+    "collaborationEscrowLock": 0,
+    "collaborationRefundInstruction": 0,
+    "creatorSettlementProfile": 0,
+    "creatorPayoutFundingAllocation": 0,
+    "brandReturnAllocation": 0,
+    "brandReturnWebhookReceipt": 0,
+    "creatorPayoutDestination": 0,
+    "creatorPayoutDestinationProviderMapping": 0,
+    "collaborationCommercial": 0,
+    "collaboration": 2
+  },
+  "normalization": "Prisma JSON serialization; fixed model order; rows sorted by ID; raw records not committed",
+  "scope": "Baseline captured before successful browser login/GETs and HTTP matrix; final after browser evidence collection.",
+  "lanes": [
+    {
+      "lane": "FULL_APP_HTTP_RBAC",
+      "before": "0421a7865830b1c23f572fa6150aba62714132b1410ecf5bfe159d46ce5b2d33",
+      "after": "0421a7865830b1c23f572fa6150aba62714132b1410ecf5bfe159d46ce5b2d33",
+      "equal": true
+    },
+    {
+      "lane": "REAL_BROWSER_OWNER_OVERVIEW_AND_OBLIGATION_DETAIL",
+      "before": "0421a7865830b1c23f572fa6150aba62714132b1410ecf5bfe159d46ce5b2d33",
+      "after": "0421a7865830b1c23f572fa6150aba62714132b1410ecf5bfe159d46ce5b2d33",
+      "equal": true
+    }
+  ]
+}

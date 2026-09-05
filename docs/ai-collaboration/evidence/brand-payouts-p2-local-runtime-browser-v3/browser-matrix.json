@@ -1,0 +1,1983 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+  "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+  "browser": "140.0.7339.16",
+  "automation": "1.61.1",
+  "rows": [
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "390-owner-loaded-partial-v2-regression.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": null
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 2,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 390,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 266.5625,
+            "width": 390,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 25,
+            "y": 10335.296875,
+            "width": 340,
+            "height": 32
+          }
+        },
+        "back": null,
+        "bodyText": "T\nP\nPayouts\nBilling, Escrow & Compliance Hub\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nbp-p2-creator\n\npayout-obligation:bp…\n\nLegacy Unreconciled\nEntitlement\nAmount unavailable\nDue\nDue date unavailable\nCurrent gate\nDependency Unavailable\nHistory\nLegacy / limited\nView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBusiness Obligation\n\nLifecycle only\n\nObligation Recorded\nAmount\n₹80.0000\nRecorded\n5 Sept 2026, 11:03 pm\nReference\nfinancial-activity:o…\nHistory\nLegacy / limited\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nHome\nCampaigns\nBrand Centre\nChat",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?activity=financial-activity%3Aobligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-054"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-053"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-052"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-051"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-050"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-049"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-048"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-047"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-046"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-045"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-044"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-043"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-042"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-041"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-040"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-039"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-038"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-037"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-036"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-035"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-034"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-033"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-032"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-031"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Load more activity",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "767-owner-loaded-partial-v2-regression.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": null
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 2,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 767,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 244.875,
+            "width": 767,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 25,
+            "y": 7957.28125,
+            "width": 717,
+            "height": 32
+          }
+        },
+        "back": null,
+        "bodyText": "T\nUpgrade\nP\nPayouts\nBilling, Escrow & Compliance Hub\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nbp-p2-creator\n\npayout-obligation:bp…\n\nLegacy Unreconciled\nEntitlement\nAmount unavailable\nDue\nDue date unavailable\nCurrent gate\nDependency Unavailable\nHistory\nLegacy / limited\nView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBusiness Obligation\n\nLifecycle only\n\nObligation Recorded\nAmount\n₹80.0000\nRecorded\n5 Sept 2026, 11:03 pm\nReference\nfinancial-activity:o…\nHistory\nLegacy / limited\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nHome\nCampaigns\nBrand Centre\nChat",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?activity=financial-activity%3Aobligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-054"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-053"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-052"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-051"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-050"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-049"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-048"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-047"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-046"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-045"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-044"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-043"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-042"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-041"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-040"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-039"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-038"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-037"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-036"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-035"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-034"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-033"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-032"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-031"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Load more activity",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "768-owner-loaded-partial-v2-regression.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "empty-table-header",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "scope-attr-valid",
+            "summary-name",
+            "table-duplicate-name",
+            "td-headers-attr",
+            "th-has-data-cells"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": null
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "visibleTables": 2,
+        "visibleMobileLists": 0,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 485.59375,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 665.3125,
+            "y": 108,
+            "width": 102.6875,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 105,
+            "y": 3932.421875,
+            "width": 638,
+            "height": 32
+          }
+        },
+        "back": null,
+        "bodyText": "T\nTheCreatorShop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nUpgrade Plan\nPayouts\nBilling, Escrow & Compliance Hub\nUpgrade\nP\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nCreator payout obligations\nCreator\tEntitlement\tDue date\tState\tCurrent gate\t\nDetails\n\nbp-p2-creator\npayout-obligation:bp…\n\tAmount unavailable\tDue date unavailable\tLegacy UnreconciledLegacy / limited\tDependency Unavailable\tView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBrand financial activity\nActivity\tMeaning\tAmount\tStatus\tRecorded\t\nDetails\n\nBusiness Obligation\nfinancial-activity:o…\n\tLifecycle only\t₹80.0000\tObligation RecordedLegacy / limited\t5 Sept 2026, 11:03 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?activity=financial-activity%3Aobligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-054"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-053"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-052"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-051"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-050"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-049"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-048"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-047"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-046"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-045"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-044"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-043"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-042"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-041"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-040"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-039"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-038"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-037"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-036"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-035"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-034"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-033"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-032"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-031"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Load more activity",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "loaded-partial-v2-regression",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "1440-owner-loaded-partial-v2-regression.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "empty-table-header",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "scope-attr-valid",
+            "summary-name",
+            "table-duplicate-name",
+            "td-headers-attr",
+            "th-has-data-cells"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": null
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "visibleTables": 2,
+        "visibleMobileLists": 0,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 536.734375,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 1337.3125,
+            "y": 72,
+            "width": 102.6875,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 797,
+            "y": 3195.609375,
+            "width": 618,
+            "height": 32
+          }
+        },
+        "back": null,
+        "bodyText": "T\nTheCreatorShop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nUpgrade Plan\nPayouts\nBilling, Escrow & Compliance Hub\nUpgrade\nP\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nCreator payout obligations\nCreator\tEntitlement\tDue date\tState\tCurrent gate\t\nDetails\n\nbp-p2-creator\npayout-obligation:bp…\n\tAmount unavailable\tDue date unavailable\tLegacy UnreconciledLegacy / limited\tDependency Unavailable\tView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBrand financial activity\nActivity\tMeaning\tAmount\tStatus\tRecorded\t\nDetails\n\nBusiness Obligation\nfinancial-activity:o…\n\tLifecycle only\t₹80.0000\tObligation RecordedLegacy / limited\t5 Sept 2026, 11:03 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Refresh",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?activity=financial-activity%3Aobligation%3Abp-p2-obligation-a"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-054",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-054"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-053",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-053"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-052",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-052"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-051",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-051"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-050",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-050"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-049",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-049"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-048",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-048"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-047",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-047"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-046",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-046"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-045",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-045"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-044",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-044"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-043",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-043"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-042",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-042"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-041",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-041"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-040",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-040"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-039",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-039"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-038",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-038"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-037",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-037"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-036",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-036"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-035",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-035"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-034",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-034"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-033",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-033"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-032",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-032"
+          },
+          {
+            "tag": "A",
+            "name": "View activity financial-activity:ledger:bp-p2-ledger-a-031",
+            "href": "/brand/payouts?activity=financial-activity%3Aledger%3Abp-p2-ledger-a-031"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Load more activity",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "1440-owner-obligation-detail.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+                  "target": [
+                    ".aurora-button--ghost"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-hidden-focus",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-no-duplicate-banner",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": {
+          "invoking": {
+            "tag": "A",
+            "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+            "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+            "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+            "outlineOffset": "3px",
+            "focusVisible": true
+          },
+          "entryFocus": {
+            "tag": "BODY",
+            "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+            "href": null,
+            "outline": "rgb(14, 18, 20) none 0px",
+            "outlineOffset": "0px",
+            "focusVisible": false
+          }
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "eyebrow": null,
+        "refresh": null,
+        "loadMore": null,
+        "back": {
+          "tag": "BUTTON",
+          "text": "Back to Payouts",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 135.375,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nTheCreatorShop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nUpgrade Plan\nPayouts\nBilling, Escrow & Compliance Hub\nUpgrade\nP\nBack to Payouts\n\nCREATOR PAYOUT OBLIGATION\n\npayout-obligation:bp…\nLegacy Unreconciled\nDependency Unavailable\nLegacy / limited\n!\n\nPayment is currently blocked\n\nThis value is withheld until its authoritative source can be verified.\n\nAgreed gross entitlement\nAmount unavailable\nSettled\nAmount unavailable\nReversed\nAmount unavailable\nOutstanding\nAmount unavailable\nDue date\nDue date unavailable\nLast observed\n5 Sept 2026, 11:03 pm\nCampaign\nbp-p2-campaign-a\nCollaboration\nbp-p2-collab-a\nCreator\nbp-p2-creator\n\nViewer: Brand Owner. The obligation, execution, and settlement states remain distinct.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Back to Payouts",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "390-owner-obligation-detail.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+                  "target": [
+                    ".aurora-button--ghost"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-hidden-focus",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-no-duplicate-banner",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": {
+          "entryFocus": {
+            "tag": "BODY",
+            "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+            "href": null,
+            "outline": "rgb(14, 18, 20) none 0px",
+            "outlineOffset": "0px",
+            "focusVisible": false
+          },
+          "scope": "Same failure confirmation; no additional workflow"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "eyebrow": null,
+        "refresh": null,
+        "loadMore": null,
+        "back": {
+          "tag": "BUTTON",
+          "text": "Back to Payouts",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 135.375,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nP\nPayouts\nBilling, Escrow & Compliance Hub\nBack to Payouts\n\nCREATOR PAYOUT OBLIGATION\n\npayout-obligation:bp…\nLegacy Unreconciled\nDependency Unavailable\nLegacy / limited\n!\n\nPayment is currently blocked\n\nThis value is withheld until its authoritative source can be verified.\n\nAgreed gross entitlement\nAmount unavailable\nSettled\nAmount unavailable\nReversed\nAmount unavailable\nOutstanding\nAmount unavailable\nDue date\nDue date unavailable\nLast observed\n5 Sept 2026, 11:03 pm\nCampaign\nbp-p2-campaign-a\nCollaboration\nbp-p2-collab-a\nCreator\nbp-p2-creator\n\nViewer: Brand Owner. The obligation, execution, and settlement states remain distinct.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nHome\nCampaigns\nBrand Centre\nChat",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Back to Payouts",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "767-owner-obligation-detail.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+                  "target": [
+                    ".aurora-button--ghost"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-hidden-focus",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-no-duplicate-banner",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": {
+          "entryFocus": {
+            "tag": "BODY",
+            "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+            "href": null,
+            "outline": "rgb(14, 18, 20) none 0px",
+            "outlineOffset": "0px",
+            "focusVisible": false
+          },
+          "scope": "Same failure confirmation; no additional workflow"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "eyebrow": null,
+        "refresh": null,
+        "loadMore": null,
+        "back": {
+          "tag": "BUTTON",
+          "text": "Back to Payouts",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 135.375,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nUpgrade\nP\nPayouts\nBilling, Escrow & Compliance Hub\nBack to Payouts\n\nCREATOR PAYOUT OBLIGATION\n\npayout-obligation:bp…\nLegacy Unreconciled\nDependency Unavailable\nLegacy / limited\n!\n\nPayment is currently blocked\n\nThis value is withheld until its authoritative source can be verified.\n\nAgreed gross entitlement\nAmount unavailable\nSettled\nAmount unavailable\nReversed\nAmount unavailable\nOutstanding\nAmount unavailable\nDue date\nDue date unavailable\nLast observed\n5 Sept 2026, 11:03 pm\nCampaign\nbp-p2-campaign-a\nCollaboration\nbp-p2-collab-a\nCreator\nbp-p2-creator\n\nViewer: Brand Owner. The obligation, execution, and settlement states remain distinct.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nHome\nCampaigns\nBrand Centre\nChat",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Back to Payouts",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+      "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "obligation-detail",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "768-owner-obligation-detail.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See network/console record",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--ghost aurora-button--sm bp-back\">",
+                  "target": [
+                    ".aurora-button--ghost"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-hidden-focus",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-no-duplicate-banner",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": {
+          "entryFocus": {
+            "tag": "BODY",
+            "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+            "href": null,
+            "outline": "rgb(14, 18, 20) none 0px",
+            "outlineOffset": "0px",
+            "focusVisible": false
+          },
+          "scope": "Same failure confirmation; no additional workflow"
+        }
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 0,
+        "eyebrow": null,
+        "refresh": null,
+        "loadMore": null,
+        "back": {
+          "tag": "BUTTON",
+          "text": "Back to Payouts",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 135.375,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nTheCreatorShop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nUpgrade Plan\nPayouts\nBilling, Escrow & Compliance Hub\nUpgrade\nP\nBack to Payouts\n\nCREATOR PAYOUT OBLIGATION\n\npayout-obligation:bp…\nLegacy Unreconciled\nDependency Unavailable\nLegacy / limited\n!\n\nPayment is currently blocked\n\nThis value is withheld until its authoritative source can be verified.\n\nAgreed gross entitlement\nAmount unavailable\nSettled\nAmount unavailable\nReversed\nAmount unavailable\nOutstanding\nAmount unavailable\nDue date\nDue date unavailable\nLast observed\n5 Sept 2026, 11:03 pm\nCampaign\nbp-p2-campaign-a\nCollaboration\nbp-p2-collab-a\nCreator\nbp-p2-creator\n\nViewer: Brand Owner. The obligation, execution, and settlement states remain distinct.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 11:04 pm\nSource observed 5 Sept 2026, 11:03 pm\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "interactive": [
+          {
+            "tag": "BUTTON",
+            "name": "Back to Payouts",
+            "href": null
+          },
+          {
+            "tag": "SUMMARY",
+            "name": "Data coverage and limitations",
+            "href": null
+          }
+        ]
+      }
+    }
+  ]
+}

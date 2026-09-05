@@ -1,0 +1,139 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+  "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+  "rows": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "screenshot": "390-owner-loaded-partial-v2-regression.png",
+      "overflow": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "visibleTables": 0,
+      "visibleMobileLists": 2
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "screenshot": "767-owner-loaded-partial-v2-regression.png",
+      "overflow": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "visibleTables": 0,
+      "visibleMobileLists": 2
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "screenshot": "768-owner-loaded-partial-v2-regression.png",
+      "overflow": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "visibleTables": 2,
+      "visibleMobileLists": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "loaded-partial-v2-regression",
+      "screenshot": "1440-owner-loaded-partial-v2-regression.png",
+      "overflow": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "visibleTables": 2,
+      "visibleMobileLists": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "screenshot": "1440-owner-obligation-detail.png",
+      "overflow": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "visibleTables": 0,
+      "visibleMobileLists": 0
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "screenshot": "390-owner-obligation-detail.png",
+      "overflow": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "visibleTables": 0,
+      "visibleMobileLists": 0
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "screenshot": "767-owner-obligation-detail.png",
+      "overflow": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "visibleTables": 0,
+      "visibleMobileLists": 0
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "state": "obligation-detail",
+      "screenshot": "768-owner-obligation-detail.png",
+      "overflow": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "visibleTables": 0,
+      "visibleMobileLists": 0
+    }
+  ],
+  "boundary": "Overview uses 2 mobile lists and no visible tables at 390/767; 2 tables and no mobile lists at 768/1440.",
+  "safeAreaStatus": "NOT_COMPLETED_CIRCUIT_BREAKER",
+  "remainingResponsiveStates": "NOT_COMPLETED_CIRCUIT_BREAKER"
+}

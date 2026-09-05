@@ -1,0 +1,232 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "008a7f0c1778d0d805a0d0d5a9dd86540c0ff4b2",
+  "frontendTree": "e00fae87d99de52fd831ccd92e8e04052c74e70d",
+  "method": "Recorded computed foreground colors, inherited page/card surfaces from committed CSS; standard sRGB relative-luminance ratio. No injected CSS.",
+  "pageRatio": 17.72956184057247,
+  "cardRatio": 18.829077225214565,
+  "rows": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "390-owner-loaded-partial-v2-regression.png",
+      "elements": {
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 390,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 266.5625,
+            "width": 390,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 25,
+            "y": 10335.296875,
+            "width": 340,
+            "height": 32
+          }
+        }
+      },
+      "seriousCriticalCount": 0,
+      "priorThreeFailuresResolved": true
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "767-owner-loaded-partial-v2-regression.png",
+      "elements": {
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 767,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 244.875,
+            "width": 767,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 25,
+            "y": 7957.28125,
+            "width": 717,
+            "height": 32
+          }
+        }
+      },
+      "seriousCriticalCount": 0,
+      "priorThreeFailuresResolved": true
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "768-owner-loaded-partial-v2-regression.png",
+      "elements": {
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 485.59375,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 665.3125,
+            "y": 108,
+            "width": 102.6875,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 105,
+            "y": 3932.421875,
+            "width": 638,
+            "height": 32
+          }
+        }
+      },
+      "seriousCriticalCount": 0,
+      "priorThreeFailuresResolved": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND_NO_RESPONSE_INTERCEPTION",
+      "screenshot": "1440-owner-loaded-partial-v2-regression.png",
+      "elements": {
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 536.734375,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 1337.3125,
+            "y": 72,
+            "width": 102.6875,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(14, 18, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 797,
+            "y": 3195.609375,
+            "width": 618,
+            "height": 32
+          }
+        }
+      },
+      "seriousCriticalCount": 0,
+      "priorThreeFailuresResolved": true
+    }
+  ],
+  "newFailure": "See obligation-detail rows in browser-matrix.json; Back to Payouts remains #34d399 on #f8f8f8, Axe ratio 1.81:1."
+}
