@@ -31,7 +31,9 @@ line is admitted here.
 | P1.1E PostgreSQL acceptance | PASS | `fa4c7f7b767a71c3d21a0e3835a2bbfc36bcd642` | 78 | P1.2 |
 | P1.2 Opportunity entitlement/read APIs | PASS | `c2f5f1461b847f811edbf1f54e4b427366664989` | 78 | P1.3 |
 | P1.3 Application commands/history | PASS | `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` | 78 | P1.4 |
-| P1.4 Collaboration/Notifications handoff | NOT STARTED | — | — | P1.3 PASS |
+| P1.4 Collaboration/Notifications handoff | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` | 79 | P2 |
+| P1 aggregate backend | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` | 79 | P2 |
+| P2 | NOT STARTED | — | — | Separate authorization required |
 
 ## 3. P1.1A immutable entry
 
@@ -690,14 +692,195 @@ P2_EXECUTION = NOT STARTED
 NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 ```
 
-## 10. Current continuation
+## 10. P1.4 immutable acceptance entry
+
+Systems Architect final technical verdict supplied through
+`C03_P1_4_DURABLE_ACCEPTANCE_AND_P1_BACKEND_CONTRACT_FREEZE_V1` accepts P1.4
+and declares P1 backend implementation complete. This docs-only binding
+records the accepted execution evidence; it does not rerun tests/builds or
+modify any runtime, frontend, schema, migration, Product or architecture.
+Historical entries above retain their checkpoint-time exclusions and verdicts.
+
+| Field | Evidence |
+|---|---|
+| Checkpoint | P1.4 — Collaboration / Notifications handoff |
+| Prior accepted backend SHA | `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` |
+| Prior accepted tree | `fdb482942380dbc1cbf086de5907fac798b3e004` |
+| Accepted backend SHA | `4b51d52de6d9206545b0a38497c7436bc9d3e095` |
+| Accepted backend tree | `0df8adf9a4a45089918dc0f5d3cccd9f4317fede` |
+| Chain | `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` → `4b51d52de6d9206545b0a38497c7436bc9d3e095` |
+| Linear | YES; one direct child |
+| Merge/rebase/cherry-pick | NONE |
+| Migration | `20260910122000_c03_application_handoff_notifications` |
+| Migration count | 78 → 79 |
+| Committed migration SQL SHA-256 | `55d8dd3cc66264a45a6ad9e8838894d446915d9e55a5e4e128980367d4f7c96b` |
+| Migration checksum method | SHA-256 of exact SQL bytes extracted by `git archive` from accepted backend commit; checkout EOL conversion is not migration identity |
+| Backend publication | Non-force push, exact fetch-back SHA/tree, clean worktree; PASS |
+| Verdict | PASS; supplied Systems Architect acceptance |
+
+### 10.1 Actual bounded correction history
+
+1. **Initial implementation:** five focused failures: three prohibited
+   provisional fixture transitions, one finite test timeout, and one obsolete
+   P1.3 notification-ban assertion. Initial lint/build reached finite timeout
+   before completion; neither was represented as passing.
+2. **Correction 1:** replaced prohibited fixture state with legal DISABLED
+   state, updated the assertion to now-authorized transactional notification
+   behavior, and corrected finite PostgreSQL test bounds. Duplicate Creator
+   membership fixtures then exposed the existing C05 uniqueness constraint.
+3. **Correction 2:** asserted existing C05 duplicate-membership rejection,
+   retained one recipient per active User, preserved legacy Collaboration
+   response metadata, and added explicit worker/replay/race proof.
+4. **Final:** all mandatory gates PASS; no third correction.
 
 ```text
-LAST_ACCEPTED_CHECKPOINT = P1.3
-CURRENT_CHECKPOINT = P1.4
-P1_3 = PASS
-P1_4_EXECUTION = NOT STARTED AT TIME OF P1.3 ACCEPTANCE BINDING
+P1_4_CORRECTION_COUNT = 2
+P1_4_CORRECTION_BUDGET_REMAINING = 0
+```
+
+### 10.2 Accepted persistence and commercial handoff
+
+`Collaboration.sourceApplicationId` is unique immutable canonical Application
+lineage: exactly one Collaboration per approved Application at commit.
+Global Campaign × Creator uniqueness is removed for canonical source rows;
+legacy Campaign × Creator uniqueness remains for `sourceApplicationId IS NULL`.
+Different approved sibling Applications may create independent Collaborations
+for the same Creator × Campaign.
+
+`Collaboration.handoffCommercialState` uses `FIXED_AGREED` or
+`AWAITING_CREATOR_PROPOSAL`; legacy rows remain null. FIXED final commercial
+basis is the immutable Application snapshot fixed offer, with Creator proposal
+null, Brand counter null and `negotiationRound = 0`. NEGOTIABLE begins
+`AWAITING_CREATOR_PROPOSAL`, with Creator proposal, Brand counter and
+agreed/final amount all null and `negotiationRound = 0`.
+
+```text
+canonical brief synthesis = NONE
+canonical product synthesis = NONE
+legacy pipeline Collaboration synthesis = NONE
+canonical provisional User creation = NONE
+canonical inventory mutation = NONE
+canonical sibling supersession = NONE
+canonical 30/70 initialization = NONE
+```
+
+### 10.3 Atomic approval invariant
+
+```text
+PENDING Application
+→ APPROVED
+→ Application-sourced Collaboration
+→ application.approved event
+→ Creator notification job + recipient snapshot
+→ command receipt
+→ COMMIT
+```
+
+All steps share one transaction. Approved Application without Collaboration
+is INVALID. Approved event without matching Collaboration is DATABASE REJECTED.
+`ApplicationDomainEvent.approvedCollaborationId` binds the approved transition
+to its matching Collaboration. One Application has at most one Collaboration;
+different sibling Applications for the same Creator × Campaign may have
+independent Collaborations. Replay does not duplicate handoff or output.
+
+### 10.4 Notification dual scope and delivery
+
+Notification and NotificationJob require exactly one scope: Brand workspace
+OR Creator workspace, never both/neither. Brand compatibility `workspaceId`
+references `BrandProfile`; `creatorWorkspaceId` references `CreatorWorkspace`.
+Semantic uniqueness is independent for Brand and Creator scopes.
+
+| Durable Application event | Accepted output |
+|---|---|
+| `application.submitted` | Brand `campaigns.application_received` |
+| `application.approved` | Creator `campaigns.application_approved` |
+| `application.rejected` | Creator `campaigns.application_rejected` |
+| `application.withdrawn` | Durable event only |
+| `application.expired` | Durable event only |
+
+Creator recipients are active OWNER, MANAGER and ASSISTANT memberships with
+an active bound User, deduplicated by User ID. Associated email, Instagram
+handle and historic actor are not recipient authority. Payloads contain only
+accepted safe IDs. Creator in-app is REQUIRED; email registry policy is
+OPTIONAL. Without canonical Creator opt-in authority, accepted current P1
+behavior is NOT_REQUIRED email recipient status. This is not a future Product
+decision and does not waive the required in-app obligation.
+
+```text
+GET  /api/v1/creator/notifications
+GET  /api/v1/creator/notifications/unread-count
+PATCH /api/v1/creator/notifications/:notificationId/read
+POST /api/v1/creator/notifications/mark-all-read
+```
+
+These routes require current active C05 Creator Team membership, current
+canonical Creator workspace and current User recipient. Current Instagram
+usability is NOT REQUIRED. Brand/cross-workspace/cross-recipient access remains
+excluded, with non-enumerating read-mark 404s and private/no-store responses.
+
+### 10.5 Accepted evidence
+
+| Gate | Accepted result |
+|---|---|
+| Fresh 0→79 migration replay | PASS |
+| 78→79 upgrade | PASS; captured original fields/rows and first 78 migration checksums preserved |
+| Legacy Collaboration preservation | PASS |
+| Legacy Notification preservation | PASS |
+| P1.4 PostgreSQL approval/notification | 30/30 PASS; one combined suite, not two separate counts |
+| Focused PostgreSQL total | 100/100 PASS, including the 30 P1.4 cases |
+| Existing Brand Notification PostgreSQL | 14/14 PASS |
+| P1.3 regression | PASS; 57 PostgreSQL command/history/contention cases within focused total |
+| P1.2 regression | PASS; 9 PostgreSQL cases within focused total |
+| C01 regression | PASS; 75 tests including 21 continuation PostgreSQL; 77 unrelated guarded skips |
+| C05 regression | PASS; 123 tests including 5 Team PostgreSQL |
+| Collaboration regression | PASS; 4 legacy PostgreSQL cases within focused total |
+| Notification regression | PASS; 31 engine/policy/worker tests plus 2 separately enabled operational PostgreSQL tests |
+| Focused complete gate | 5041 PASS; zero failures/skips/timeouts |
+| Full ordinary backend suite | 6187 PASS, 0 FAIL, 753 guarded skips; 194 files passed, 54 skipped; normal completion |
+| Format / lint | PASS / PASS |
+| Production build / startup smoke | PASS / PASS |
+| Security review | PASS |
+| AWS / production / live provider | NONE / NONE / NONE |
+
+Previously produced runner artifacts are
+`C03_P1_4_CODEX_CHECKPOINT_REPORT_V1` and `C03_P1_4_EVIDENCE_BUNDLE.zip`.
+This entry records their accepted evidence rather than claiming a docs-only
+runtime rerun. The required PostgreSQL families executed separately from the
+ordinary suite total 140 cases (100 focused + 14 Brand notifications +
+21 C01 + 5 C05); these overlap the listed regression totals and are not additive to
+all test counts above.
+
+## 11. P1 aggregate freeze and current continuation
+
+The derived frozen interface/state contract is
+[`C03_BACKEND_API_STATE_CONTRACT_V1`](../architecture/c03/c03_backend_api_state_contract_v1.md).
+It extracts accepted routes, projection fields, states, role capabilities,
+idempotency/reapply/quota rules, initial Collaboration handoff, notification
+scope/delivery and exact implemented reason codes from accepted backend P1
+and frozen Stage B authority. It adds no architecture or Product decision.
+
+```text
+P1.1 = PASS
+P1.2 = PASS
+P1.3 = PASS
+P1.4 = PASS
+P1 = PASS
+P1_BACKEND_IMPLEMENTATION = COMPLETE
+C03_BACKEND_API_STATE_CONTRACT_V1 = FROZEN
+P1_BACKEND_ACCEPTED_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+P1_BACKEND_ACCEPTED_TREE = 0df8adf9a4a45089918dc0f5d3cccd9f4317fede
+LAST_ACCEPTED_CHECKPOINT = P1.4
+CURRENT_CHECKPOINT = P2
+NEXT_INTERNAL_CHECKPOINT = P2
 P2_STATE = NOT STARTED
-P2_EXECUTION = NOT_AUTHORIZED
+P2_EXECUTION = NOT STARTED AT TIME OF P1 FREEZE
+P2_AUTHORIZATION = NOT AUTHORIZED BY THIS ASSIGNMENT
+PRODUCT_QUESTIONS = NONE
+ARCHITECTURE_CONFLICTS = NONE
 NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 ```
+
+Creator Brief Pack remains P5 responsibility, not an accepted P1 endpoint.
+Frontend implementation and post-acceptance C04 workflow commands are outside
+this freeze. AWS, production and live provider operations are outside P1
+acceptance. Publication stops at SA review; P2 does not begin here.

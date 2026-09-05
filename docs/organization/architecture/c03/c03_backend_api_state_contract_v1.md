@@ -1,0 +1,422 @@
+# C-03 Backend API State Contract V1
+
+**Artifact:** `C03_BACKEND_API_STATE_CONTRACT_V1`
+
+**Module:** C-03 — Creator Campaign Participation / Apply
+
+**Status:** `FROZEN_AFTER_ACCEPTED_P1`
+
+**Backend authority SHA:** `4b51d52de6d9206545b0a38497c7436bc9d3e095`
+
+**Backend authority tree:** `0df8adf9a4a45089918dc0f5d3cccd9f4317fede`
+
+**Migration count:** 79
+
+## 1. Authority and scope
+
+This is a derived frozen interface/state contract, not a new architecture
+decision. It records the accepted backend at the SHA above and frozen Stage B
+authority in `Piyush1087/dummy_tcs@458875b939b738b8032409b6de72b6de70f53ed1`,
+particularly `docs/organization/architecture/c03/c03_architecture_freeze_v1.md`.
+The supplied Systems Architect verdict is
+`C03_P1_4_DURABLE_ACCEPTANCE_AND_P1_BACKEND_CONTRACT_FREEZE_V1`.
+Historical checkpoint exclusions in the execution ledger remain historical;
+this document describes the aggregate accepted P1 surface.
+
+All implementation paths below are relative to
+`Piyush1087/creator-commerce-backend-v2-clone` at the backend authority SHA.
+They identify the executable source of each contract, including existing
+shared authority consumed by C-03. No frontend behavior is implemented or
+newly prescribed by this freeze.
+
+## 2. Opportunity routes and projections
+
+| Method | Route | Input / result |
+|---|---|---|
+| GET | `/api/v1/campaign-opportunities/:campaignId` | UUID Campaign ID; optional authentication; discriminated Opportunity projection |
+| POST | `/api/v1/campaign-opportunities/:campaignId/apply-continuation` | Optional authentication; supported inputs `invitationCredential`, `shareToken`, `entrySurface`, `attribution`; returns `intent`, `expiresAt`, `continuationPresent: true`; opaque credential is set through the existing C-01 cookie |
+| GET | `/api/v1/creator/campaigns/opportunities` | Authenticated Creator; optional `cursor`; `{ items, nextCursor }`, up to 20 authorized projections |
+
+`CampaignOpportunityPolicyService` owns entitlement and Apply capability.
+All three projections carry `schemaVersion: 1`:
+
+| State | Structural response |
+|---|---|
+| `TEASER` | `reason`, `recoveryAction: SIGN_IN_OR_CREATE_CREATOR`, and safe PUBLIC `campaign: { id, name, platforms }` |
+| `LOCKED` | `reason`, `recoveryAction`; no Campaign, Asset, Brief or commercial payload |
+| `AUTHORIZED` | `applicationsOpen`, `canApply`, `applyBlockedReason`, `applicationDeadline`, `campaign`, `assets` |
+
+Commercials and detailed Briefs are structurally absent before authorization.
+An Application-level block does not remove commercial access from an otherwise
+entitled Creator. The backend authors all four capability/deadline fields;
+absence of an Application deadline is `null`, never a publishing-date fallback.
+`applicationsOpen` requires Campaign status `PUBLISHED` or `LIVE` and either
+no deadline or a deadline strictly later than server time. Apply additionally
+requires APPLY authority, selectable Brief, available commercials, duplicate
+and quota checks.
+
+The authorized Campaign contains `id`, `name`, `platforms`, `brand`,
+`objective`, `publishingStart`, `publishingEnd`, and `commercial`.
+Available `commercial` contains `compensationModel` (`FIXED` / `NEGOTIABLE`),
+decimal-string `offer`, `currency`, `receivesBrandSupport`, `brandSupportType`,
+and nullable decimal-string `brandSupportEstimatedValue`; unavailable
+commercials return `{ state: "UNAVAILABLE" }`.
+
+Each Asset contains `id`, `campaignId`, `kind`, `status`, `offering`, `offer`,
+and `briefs`. Briefs contain `id`, `campaignAssetId`, `status`, `creationSource`,
+`applicationSelection`, and `definition`. Selection is `AVAILABLE` or
+`UNAVAILABLE` with a reason. Definition contains `briefName`, `creativeIntent`,
+`creatorBrief`, `briefType`, `platform`, `briefLevelGuidance`, `referenceContent`,
+`usageRights`, `creatorRequirements`, and ordered `deliverables`. Deliverables
+contain `id`, `format`, `displayOrder`, `configuration`, `creativeGuidance`,
+and `amplifyTargetDeliverableId`. Draft Briefs are filtered from the authorized
+Opportunity projection. An active Asset and a complete published Brief with
+a valid deliverable graph are required for selection.
+
+| Product visibility | Persisted policy value | Entitlement after current Creator context and usable Instagram |
+|---|---|---|
+| `PUBLIC` | `EVERYONE` | Entitled |
+| `ELIGIBLE_CREATORS_ONLY` | `ELIGIBLE_ONLY` | Backend `ELIGIBLE` or valid invitation |
+| `INVITE_ONLY` | `INVITED_ONLY` | Valid matching invitation |
+
+Missing/conflicting visibility fails closed. Eligibility is exactly
+`ELIGIBLE`, `INELIGIBLE`, or `UNAVAILABLE`; unsupported/missing canonical
+facts are unavailable, never an inferred positive. Invitation validity uses
+Campaign binding, expiry, revocation, intended Owner-subject evidence and
+monotonic Creator profile/workspace binding. Team email, mutable handle and
+client-supplied internal invitation ID are not authority. Raw invitation
+credentials are exchanged through POST, not returned in JSON or persisted.
+
+The collection is not PUBLIC Campaign enumeration. Its candidates come from
+valid bound invitations, eligible-only Campaigns, or direct/share ingress bound
+to the current subject; only `AUTHORIZED` items are returned, sorted by ID.
+Unknown/non-disclosable detail IDs return generic `LOCKED` with
+`OPPORTUNITY_NOT_AVAILABLE`. Continuation and Submit use a non-enumerating
+404 for the corresponding unavailable cases.
+
+Sources: `src/features/campaign-opportunities/campaign-opportunity.controller.ts`,
+`campaign-opportunity.service.ts`, `campaign-opportunity-policy.service.ts`,
+`campaign-opportunity-eligibility.ts`, `campaign-invitation.service.ts`, and
+`src/features/brand-uce/services/canonical-campaign-application-read.service.ts`.
+
+## 3. Instagram and current Team authority
+
+The pure provider-neutral Opportunity evaluator consumes persisted state:
+
+| Lifecycle state | Usable for Opportunity | Recovery action |
+|---|---|---|
+| `NOT_CONNECTED` | false | `CONNECT_INSTAGRAM` |
+| `CONNECTED_HEALTHY` | true | null |
+| `REVALIDATION_REQUIRED` | false | `REVALIDATE_INSTAGRAM` |
+| `RECONNECT_REQUIRED` | false | `RECONNECT_INSTAGRAM` |
+| `PROVIDER_BLOCKED_RECOVERABLE` | false | `REVALIDATE_INSTAGRAM` |
+| `DISCONNECTED_IDENTITY_RETAINED` | false | `RECONNECT_INSTAGRAM` |
+
+Healthy requires a stable native identity, ACTIVE token, no known expired
+token, no disconnect, USABLE authorization and AVAILABLE basic authorization.
+Insights and mutable handle are not gates. No live provider call occurs.
+This Opportunity evaluator does not replace the separately accepted C-01
+platform-entry semantics.
+
+| Current C05 role | VIEW / own-subject history | APPLY | WITHDRAW_PENDING |
+|---|---|---|---|
+| `OWNER` | yes | yes | yes |
+| `MANAGER` | yes | yes | yes |
+| `ASSISTANT` | yes | yes | no |
+
+The actor User/membership/role is distinct from the workspace Owner Creator
+subject. Protected reads resolve current active C05 membership and canonical
+workspace; mutations re-resolve under the workspace lock. Historical
+Application reads and Creator notification reads require current Team
+authority, not current Instagram usability, invitation validity or Opportunity
+entitlement. No email/handle matching substitutes for identity.
+
+Sources: `src/shared/creator/instagram-opportunity-capability.ts`,
+`src/features/creator-settings/team/creator-workspace-actor.service.ts`,
+`creator-team.policy.ts`, and `src/shared/creator/creator-workspace-actor.contract.ts`.
+
+## 4. Application command and history surface
+
+| Method | Route | Accepted canonical behavior |
+|---|---|---|
+| POST | `/api/v1/creator/campaigns/:campaignId/applications` | Submit strict `{ campaignAssetId, briefId }` UUID selection; HTTP 200 |
+| GET | `/api/v1/creator/applications` | Current subject history; optional opaque `cursor`; `{ items, nextCursor }` |
+| GET | `/api/v1/creator/applications/:applicationId` | Current subject detail with immutable snapshot projection |
+| POST | `/api/v1/creator/applications/:applicationId/withdraw` | Owner/Manager pending withdrawal; HTTP 200 |
+| GET | `/api/v1/brand-uce/campaigns/:campaignId/applications` | Current Brand Campaign ownership; canonical and labeled legacy Applicants adapter |
+| POST | `/api/v1/brand-uce/campaigns/:campaignId/applications/:applicationId/approve` | Canonical approval plus atomic handoff; HTTP 200 |
+| POST | `/api/v1/brand-uce/campaigns/:campaignId/applications/:applicationId/reject` | Canonical rejection; HTTP 200 |
+| POST | `/api/v1/creator-uce/campaigns/:campaignId/apply` | HTTP 410, `LEGACY_APPLICATION_ENDPOINT_RETIRED` |
+
+Canonical Submit/Withdraw/Approve/Reject require `Idempotency-Key` and return
+`applicationId`, `transitionId`, `status`, `statusVersion`, `occurredAt`.
+The Brand Reject controller accepts optional `reason` for legacy compatibility;
+canonical decision dispatch uses Campaign ID and Application ID, not that text.
+There is no public Expire route; bounded internal expiry transitions pending
+Applications without deriving an Application deadline from publishing dates.
+
+The schema supports `PENDING`, `APPROVED`, `REJECTED`, `WITHDRAWN`, `EXPIRED`,
+`SUPERSEDED`. Accepted canonical writes are `INSERT → PENDING`, then
+`PENDING → APPROVED | REJECTED | WITHDRAWN | EXPIRED`. No automatic
+`SUPERSEDED` producer is implemented. Terminal-to-terminal changes, return to
+PENDING, identity/selection mutation and deletion are database rejected.
+Siblings are independent; approval/rejection never automatically supersedes
+another Application.
+
+Historical projection fields are `schemaVersion: 1`, `applicationId`,
+`referenceAuthority: C03_CANONICAL`, `campaignId`, `canonicalCampaignAssetId`,
+`canonicalBriefId`, `status`, `statusVersion`, `appliedAt`, `terminalAt`,
+`campaign`, `asset`, `brief`, `creator`, `commercial`, `canWithdrawPending`,
+and nullable `collaborationId`. Campaign/Asset/Brief/Creator/commercial content
+comes from the immutable `C03_APPLICATION_SNAPSHOT_V1`, not rebuilt live data.
+List Brief content is `id`, `campaignAssetId`, `briefName`; detail adds the
+accepted rich Brief definition. Creator display is limited to `displayName`
+and `avatarUrl`. History orders by `appliedAt DESC, id DESC`, takes 20, and
+uses a base64url cursor containing timestamp and UUID.
+
+The Brand adapter adds `name`, `applicationStatus`, `source`, `campaignAssetId`,
+`briefId`, `canApprove`, `canApprovePending`, `canReject`; the three decision
+flags are true for PENDING canonical rows. It returns `state: READY | EMPTY`,
+`reason: null`, `canonicalApplicationCount`, `applicants`, with up to 50 rows
+per canonical/legacy arm. Legacy authority stays explicitly labeled.
+
+Sources: `src/features/campaign-applications/` command, submit, context,
+terminal, history and evidence services/controllers; `src/features/brand-uce/brand-uce.controller.ts`,
+`services/campaign-application.service.ts`; `src/features/creator-uce/creator-uce.controller.ts`;
+`prisma/schema.prisma` and accepted Application guard migrations.
+
+## 5. Idempotency, selection, quota and reapply
+
+Canonical header: `Idempotency-Key`; accepted key grammar is
+`^[A-Za-z0-9_-]{22,128}$`. Raw keys are not persisted, logged or echoed.
+Only SHA-256 digest and canonical request fingerprint are persisted.
+Receipt uniqueness is `(commandType, actorUserId, authoritySubjectId,
+idempotencyKeyDigest)`. Creator command subject is the Owner Creator profile;
+Brand decision subject is the Brand profile. Same key/same fingerprint gives
+stable replay after current authorization. Same key/changed fingerprint gives
+`APPLICATION_IDEMPOTENCY_KEY_REUSED`. Failed transactions leave no receipt.
+`x-idempotency-key` is CORS compatibility only, not canonical command authority.
+
+Same opportunity is `subjectCreatorProfileId + campaignId +
+canonicalCampaignAssetId + canonicalBriefId`. The selected Asset must belong
+to the Campaign and Brief to that Asset; stale/mismatched selection is rejected.
+
+- `PENDING / APPROVED / REJECTED / SUPERSEDED`: same opportunity blocked.
+- `WITHDRAWN / EXPIRED`: a fresh Application may be created, subject to quotas.
+- Reapply always creates a new row.
+- Subject × Campaign <= 2 non-WITHDRAWN Applications.
+- Subject × Brand <= 5 non-WITHDRAWN Applications.
+- EXPIRED therefore permits same-opportunity reapply but still counts toward
+  both quotas. WITHDRAWN releases quota.
+
+Submit revalidates current entitlement, availability, selection and limits
+under locks. Immutable snapshot, submitted event, Brand notification job and
+recipient snapshot, and receipt commit with the Application. Different keys
+cannot bypass semantic uniqueness. Sources: `application-command.ts`,
+`application-submit.service.ts`, `application-submit-context.service.ts`,
+`application-evidence.ts`, and `src/main.ts` (CORS).
+
+## 6. Collaboration persistence and atomic approval
+
+`Collaboration.sourceApplicationId` is unique, immutable canonical lineage.
+One approved Application has exactly one source Collaboration on commit;
+at most one can exist for that Application. Different approved sibling
+Applications for the same Creator × Campaign may have independent Collaborations.
+Global Campaign × Creator uniqueness is removed for canonical source rows;
+the partial legacy unique constraint remains for `sourceApplicationId IS NULL`.
+`ApplicationDomainEvent.approvedCollaborationId` binds the approved event to
+the matching Collaboration; missing or mismatching links are database rejected.
+
+```text
+PENDING Application
+→ APPROVED
+→ Application-sourced Collaboration
+→ application.approved event
+→ Creator notification job + recipient snapshot
+→ command receipt
+→ COMMIT
+```
+
+Every step uses the same transaction. An approved Application without its
+Collaboration is invalid. Replay returns the same transition identity and
+cannot duplicate Collaboration or notification intent. Brand decisions use
+current Brand authority and immutable Application evidence; approval requires
+the canonical active Owner User identity, with no provisional User creation.
+
+| Initial commercial field | FIXED | NEGOTIABLE |
+|---|---|---|
+| `handoffCommercialState` | `FIXED_AGREED` | `AWAITING_CREATOR_PROPOSAL` |
+| `commercials.initialQuote` (Creator proposal) | null | null |
+| `commercials.brandCounterOffer` | null | null |
+| `commercials.finalQuote` | Immutable snapshot fixed offer | null |
+| `negotiationRound` | 0 | 0 |
+| `advance30Amount` / `balance70Amount` | 0 / 0, no split initialization | 0 / 0, no split initialization |
+
+Canonical brief synthesis, product synthesis, legacy pipeline Collaboration
+synthesis, provisional User creation, inventory mutation, sibling supersession
+and 30/70 initialization are all NONE. The source Collaboration's legacy
+`briefId`, `productId`, `ucePipelineCollaborationId` are null. Legacy rows keep
+their existing compatibility contract; legacy handoff state remains null.
+This contract stops at initial handoff and defines no later C-04 commands.
+
+Sources: `src/features/collaboration/services/approved-application-collaboration.service.ts`,
+`src/features/campaign-applications/application-terminal.service.ts`,
+`application-evidence.ts`, `prisma/schema.prisma`, and migration
+`20260910122000_c03_application_handoff_notifications`.
+Committed migration SQL SHA-256:
+`55d8dd3cc66264a45a6ad9e8838894d446915d9e55a5e4e128980367d4f7c96b`.
+
+## 7. Notification scope, outputs and reads
+
+Notification and NotificationJob have exactly one scope: Brand `workspaceId`
+referencing `BrandProfile`, OR `creatorWorkspaceId` referencing
+`CreatorWorkspace`. Neither both nor neither is legal. Semantic uniqueness
+is independent in each scope on workspace, event type and semantic key;
+Brand compatibility and Creator identities cannot collapse into each other.
+
+| Durable event | Accepted output | Safe payload keys |
+|---|---|---|
+| `application.submitted` | Brand `campaigns.application_received` | `application_id`, `campaign_id` |
+| `application.approved` | Creator `campaigns.application_approved` | `application_id`, `campaign_id`, `collaboration_id` |
+| `application.rejected` | Creator `campaigns.application_rejected` | `application_id`, `campaign_id` |
+| `application.withdrawn` | Durable event only | No notification |
+| `application.expired` | Durable event only | No notification |
+
+These semantic event names correspond to persisted Application event enum
+values `SUBMITTED`, `APPROVED`, `REJECTED`, `WITHDRAWN`, `EXPIRED`.
+Notification payloads contain safe internal IDs only; no Brief body, commercial
+value, invitation credential, email, provider data or historical actor identity.
+
+Creator recipient policy `CREATOR_WORKSPACE_ACTIVE_TEAM` selects active OWNER,
+MANAGER and ASSISTANT memberships with an active bound Creator User, deduplicated
+by User ID. Associated email, Instagram handle and historic actor are not
+recipient authority. Creator in-app is REQUIRED; email registry policy is
+OPTIONAL. Current accepted behavior without canonical Creator opt-in authority
+is `NOT_REQUIRED` email recipient status, retaining required in-app delivery.
+This is accepted current backend behavior, not an open Product decision.
+The worker carries the selected scope through materialization; realtime
+delivery occurs after materialization commits.
+
+| Method | Route | Result |
+|---|---|---|
+| GET | `/api/v1/creator/notifications` | `{ notifications }`; `unread_only=true` filters unread; `limit` integer 1–100, default 50 |
+| GET | `/api/v1/creator/notifications/unread-count` | `{ unread_count }` |
+| PATCH | `/api/v1/creator/notifications/:notificationId/read` | `{ notification_id, is_read, read_at }` |
+| POST | `/api/v1/creator/notifications/mark-all-read` | `{ updated_count }`; HTTP 200 |
+
+List rows expose `id`, `event_type`, `category`, `urgency_level`, `actionable`,
+safe `payload`, `created_at`, `is_read`, `is_emailed`, `read_at`. Reads use
+current active C05 Team authority, current canonical Creator workspace and
+current User recipient, with Brand scope null. Current Instagram usability is
+not required. Other users/workspaces/Brand notifications are not exposed;
+unowned read-mark targets return non-enumerating 404. JWT and throttling apply.
+Creator notification responses use `Cache-Control: private, no-store` and
+`Vary: Authorization, Cookie`, including authentication errors. Application
+responses likewise retain private/no-store behavior.
+
+Sources: `src/features/notifications/creator-notifications.controller.ts`,
+`notifications.module.ts`, `config/notification-event-registry.ts`,
+`services/creator-notification-query.service.ts`, `notification-dispatch.service.ts`,
+`notification-recipient-policy.service.ts`, `notification-worker.service.ts`,
+`notification-processor.service.ts`, and migration 79.
+
+## 8. Exact implemented reason/error inventory
+
+This inventory is P2 error-copy authority for accepted C-03 outputs. A reason
+on a successful discriminated projection is not necessarily an HTTP error.
+The table lists exact implemented strings; it does not promise every code
+on every route. The policy controls precedence, including non-enumeration.
+
+| Area | Exact codes / reasons | Emission and meaning |
+|---|---|---|
+| Entitlement | `OPPORTUNITY_NOT_AVAILABLE` | Generic LOCKED for missing/DRAFT/ARCHIVED or non-disclosable Campaign; non-enumerating 404 on unavailable continuation/Submit |
+| Authentication | `AUTHENTICATION_REQUIRED`, `CREATOR_ACCOUNT_REQUIRED` | PUBLIC TEASER reasons; `SIGN_IN_OR_CREATE_CREATOR` recovery |
+| Context | `CREATOR_CONTEXT_REQUIRED` | Policy LOCKED; `RESOLVE_CREATOR_CONTEXT` recovery |
+| Instagram | `NOT_CONNECTED`, `REVALIDATION_REQUIRED`, `RECONNECT_REQUIRED`, `PROVIDER_BLOCKED_RECOVERABLE`, `DISCONNECTED_IDENTITY_RETAINED` | LOCKED lifecycle reasons; Submit propagates policy reason as conflict; recovery mapping in section 3; `CONNECTED_HEALTHY` is the success state, not an error |
+| Eligibility | `ELIGIBILITY_INELIGIBLE`, `ELIGIBILITY_UNAVAILABLE` | Restricted eligibility failure; unavailable uses `RETRY_LATER` in policy |
+| Invitation | `INVITATION_REQUIRED`, `INVITATION_EXPIRED`, `INVITATION_REVOKED`, `INVITATION_SUBJECT_MISMATCH` | INVITED_ONLY policy reasons; mismatch recovery `USE_INVITED_ACCOUNT`; validation paths also emit the corresponding dynamic result code |
+| Invitation lookup during proven-context validation | `INVITATION_ABSENT` | `INVITATION_${result}` when validation returns ABSENT; distinct from policy's ABSENT→REQUIRED mapping; initial unproven/invalid exchange uses generic 404 instead |
+| Invitation configuration | `INVITATION_IDENTITY_CONFIGURATION_UNAVAILABLE` | HTTP 503 from dedicated identity-HMAC configuration resolver; `RETRY_LATER` |
+| Continuation binding | `CREATOR_ENTRY_CONTINUATION_IDENTITY_CONFLICT` | C-03 typed context cannot bind to a different subject/workspace |
+| Campaign visibility | `CAMPAIGN_VISIBILITY_CONFIGURATION_INVALID` | Missing/conflicting visibility; LOCKED |
+| Campaign availability | `CAMPAIGN_APPLICATIONS_CLOSED` | Authorized Apply block; Submit conflict |
+| Campaign commercials | `CAMPAIGN_COMMERCIAL_CONFIGURATION_INVALID` | Authorized Apply block; Submit conflict |
+| Brief availability | `CAMPAIGN_BRIEF_UNAVAILABLE` | No selectable Brief on Campaign |
+| Selected Asset / Brief | `CAMPAIGN_ASSET_NOT_ACTIVE`, `BRIEF_NOT_PUBLISHED`, `BRIEF_DEFINITION_INCOMPLETE`, `BRIEF_DELIVERABLE_GRAPH_INVALID` | Canonical `applicationSelection.reason`; selected unavailable pair propagates on Submit when reached |
+| Selection mismatch | `APPLICATION_SELECTION_INVALID` | HTTP 400 malformed strict selection, or 409 missing/mismatched canonical Campaign/Asset/Brief |
+| Idempotency | `APPLICATION_IDEMPOTENCY_KEY_REQUIRED`, `APPLICATION_IDEMPOTENCY_KEY_REUSED` | HTTP 400 missing/invalid canonical key; HTTP 409 changed fingerprint in same receipt scope |
+| Same opportunity / reapply | `APPLICATION_OPPORTUNITY_ALREADY_USED` | Existing blocking status for same selection; Apply block or Submit conflict |
+| Campaign quota | `APPLICATION_CAMPAIGN_LIMIT_REACHED` | Two non-WITHDRAWN subject/Campaign rows reached |
+| Brand quota | `APPLICATION_BRAND_LIMIT_REACHED` | Five non-WITHDRAWN subject/Brand rows reached |
+| Role capability | `APPLICATION_ROLE_DENIED` | Policy Apply block or HTTP 403 command capability denial, including Assistant Withdraw |
+| Current C05 workspace | `CREATOR_WORKSPACE_SELECTION_REQUIRED`, `CREATOR_OWNER_MEMBERSHIP_INCONSISTENT`, `CREATOR_CANONICAL_CONTEXT_INCONSISTENT`, `CREATOR_ONE_OWNER_INVARIANT_VIOLATED`, `CREATOR_OWNER_IDENTITY_RECONCILIATION_REQUIRED` | HTTP 409 shared actor resolver errors; consumed by Opportunity, Application and Creator notification access |
+| Application lookup | `APPLICATION_NOT_FOUND` | Non-enumerating HTTP 404 for missing/out-of-authority canonical Application |
+| Terminal conflict | `APPLICATION_TRANSITION_CONFLICT` | HTTP 409 when no longer PENDING / conditional transition loses |
+| Legacy reconciliation | `LEGACY_APPLICATION_RECONCILIATION_REQUIRED` | Legacy ambiguity blocks canonical Submit/Apply capability |
+| Legacy retirement | `LEGACY_APPLICATION_ENDPOINT_RETIRED` | HTTP 410 retired Creator Apply route |
+| Handoff evidence | `C03_APPLICATION_HANDOFF_EVIDENCE_INVALID`, `C03_APPLICATION_CREATOR_IDENTITY_CONFLICT` | HTTP 409 invalid snapshot lineage or unavailable/inconsistent canonical Owner identity; transaction rolls back |
+| Cursor input | `OPPORTUNITY_CURSOR_INVALID`, `APPLICATION_CURSOR_INVALID` | HTTP 400 invalid collection cursor |
+
+Sources for rows above: policy/evaluator, invitation/continuation context and
+identity resolver, canonical Campaign read adapter, Application command/context/
+submit/history/terminal services, canonical Collaboration provision service,
+Creator workspace actor service and retired Creator controller cited above.
+
+### Existing errors without a dedicated C-03 code
+
+Do not invent notification-specific or role-specific code names for these
+implemented Nest exceptions:
+
+| Surface | HTTP status | Exact message |
+|---|---|---|
+| C05 actor role | 403 | `Creator access required` |
+| C05 active User | 403 | `An active Creator account is required` |
+| C05 membership | 403 | `No active Creator workspace membership` |
+| Creator notification read mark, missing or cross-scope | 404 | `Notification not found` |
+| Creator notification limit | 400 | `Notification limit must be between 1 and 100` |
+| Brand active User | 403 | `Brand Centre is available to active brand users only` |
+| Brand membership | 403 | `Active Brand team membership required` |
+| Brand Campaign ownership | 404 | `Campaign not found` |
+| Brand profile lookup | 404 | `Brand profile not found` |
+
+Creator notification access inherits the C05 codes/messages above; there is
+no custom `NOTIFICATION_NOT_FOUND` code. Standard authentication, UUID-pipe
+and throttling failures remain framework/shared-auth responses, not additional
+C-03 domain vocabulary. Sources: Creator actor service, Creator notification
+controller/query service, `src/features/brand-centre/brand-centre-auth.service.ts`,
+and `src/features/brand-uce/services/brand-uce-access.service.ts`.
+
+The retained adapter contains defensive
+`C03_CANONICAL_APPLICATION_HANDOFF_NOT_AVAILABLE` only if its optional canonical
+terminal dependency is absent; the accepted module supplies that dependency,
+so it is not the normal P1.4 approval result. Legacy malformed-shape handling
+uses HTTP 409 message `C03_LEGACY_APPLICATION_SHAPE_INVALID` (not an object
+`code` field). `APPLICATION_EXPIRY_BATCH_TOO_LARGE` is internal-only, not a
+public frontend route code. Internal thrown invariant strings and raw database
+errors are not promoted into this frontend-copy inventory.
+
+## 9. Explicit non-contract and aggregate verdict
+
+Creator Brief Pack endpoint is NOT YET PART OF ACCEPTED P1; it is P5
+responsibility. Its proposed Stage B route/error is not added to the accepted
+route/code inventory. Frontend implementation is NOT PART OF P1.
+Post-acceptance C04 workflow commands are NOT PART OF C03 P1 beyond the initial
+handoff above. AWS / production / live provider operations are NOT PART OF P1
+ACCEPTANCE. No frontend may compensate for missing backend behavior outside
+this frozen contract.
+
+```text
+P1.1 = PASS
+P1.2 = PASS
+P1.3 = PASS
+P1.4 = PASS
+P1 = PASS
+C03_BACKEND_API_STATE_CONTRACT_V1 = FROZEN
+P1_BACKEND_ACCEPTED_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+P1_BACKEND_ACCEPTED_TREE = 0df8adf9a4a45089918dc0f5d3cccd9f4317fede
+NEXT_INTERNAL_CHECKPOINT = P2
+P2_EXECUTION = NOT STARTED AT TIME OF P1 FREEZE
+PRODUCT_QUESTIONS = NONE
+ARCHITECTURE_CONFLICTS = NONE
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
