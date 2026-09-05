@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P2_GATE_RECOVERY_BROWSER_RELAY_REQUIRED"
+status: "P2_GATE_RECOVERY_BROWSER_RERUN_REQUIRED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -30,11 +30,11 @@ authorization_artifact: "BRAND_PAYOUTS_P2_RECOVERY_AND_AUTONOMOUS_SA_CHECKPOINT_
 authorized_segment: "P2_RECOVERY_AND_AUTONOMOUS_PROVIDER_NEUTRAL_CONTINUATION"
 next_parent_gate: "NONE_TECHNICAL_CHECKPOINTS_DELEGATED_TO_SYSTEMS_ARCHITECT"
 
-phase: "P2_GATE_RECOVERY_BROWSER_RELAY_REQUIRED"
+phase: "P2_GATE_RECOVERY_BROWSER_RERUN_REQUIRED"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "3dc8cef560cbe011fa39bfe33c3766786c0eddb7"
 checkpoint_name: "BP-P1-BACKEND-READ"
-next_phase: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_ACCEPTANCE"
+next_phase: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_RERUN"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -49,7 +49,7 @@ dependency_gates:
   campaign_manager_entity_scope: "RESOLVED_FAIL_CLOSED_ZERO_ROWS"
   payment_support_security_policy: "OPEN_BLOCKING"
   complete_v1_source_coresidence: "OPEN_BLOCKING"
-  first_vertical_slice: "BACKEND_RUNTIME_RECOVERY_PASS_BROWSER_EVIDENCE_OPEN"
+  first_vertical_slice: "BACKEND_RUNTIME_AND_FRONTEND_SOURCE_RECOVERY_PASS_BROWSER_EVIDENCE_OPEN"
   first_financial_reserve_path: "OPEN_HUMAN_GATE"
   india_withholding_if_applicable: "OPEN_HUMAN_GATE"
 
@@ -108,6 +108,15 @@ tests:
   p2_frontend_changed_file_lint: "PASS"
   p2_frontend_changed_file_format: "PASS"
   p2_frontend_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
+  p2_browser_evidence_v1: "SOURCE_DEFECT_CONFIRMED_AT_259E35BC1163BFBE4402D63D363F09F1284044B6"
+  p2_frontend_runtime_recovery_focused: "PASS_27_OF_27"
+  p2_frontend_runtime_recovery_full: "PASS_877_OF_877"
+  p2_frontend_runtime_recovery_changed_file_lint: "PASS"
+  p2_frontend_runtime_recovery_changed_file_format: "PASS"
+  p2_frontend_runtime_recovery_repository_lint: "BASELINE_FAIL_26_ERRORS_13_WARNINGS_ALL_OUTSIDE_RECOVERY_SCOPE"
+  p2_frontend_runtime_recovery_typecheck: "PASS"
+  p2_frontend_runtime_recovery_build: "PASS_EXPLICIT_LOCAL_PREVIEW_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
+  p2_frontend_runtime_recovery_diff_check: "PASS"
   p2_postgres_http_rbac: "PASS_15_CHECKS_23_REQUESTS_BOUNDED_REAL_P1_STACK"
   p2_boot_module_composition: "PASS_1_OF_1"
   p2_p0_p1_focused: "PASS_33_OF_33_5_OPT_IN_SKIPPED"
@@ -121,8 +130,8 @@ tests:
   p2_full_app_startup: "PASS_ROOT_LIVE_DATABASE_HEALTH_PAYOUTS_ROUTE_401_AND_CONTROLLED_SHUTDOWN"
   p2_diff_check: "PASS"
   p2_schema_migration_diff: "NONE"
-  p2_browser_responsive: "LOCAL_DESKTOP_RELAY_REQUIRED"
-  p2_production_shaped: "BACKEND_PASS_BROWSER_EVIDENCE_OPEN"
+  p2_browser_responsive: "V1_SOURCE_DEFECT_PRESERVED_V2_LOCAL_DESKTOP_RERUN_REQUIRED"
+  p2_production_shaped: "BACKEND_AND_FRONTEND_SOURCE_RECOVERY_PASS_BROWSER_EVIDENCE_OPEN"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -140,6 +149,9 @@ corrections:
   max_per_phase: 2
   max_total_p0_p5: 4
   repeated_failure_limit: 1
+  p2_source_defect_recovery_loops_used: 1
+  p2_source_defect_recovery_loops_max: 1
+  p2_source_defect_recovery_loops_remaining: 0
 
 correction_history:
   - phase: "P0"
@@ -163,10 +175,15 @@ correction_history:
     result: "CORRECTED_AND_BACKEND_GATE_RERUN_PASS"
     scope: "DEFER_EXACT_NOTIFICATIONS_AND_BRAND_SETTINGS_IMPORT_EDGES_TO_CLOSE_EXISTING_NEST_MODULE_CYCLES"
     correction_budget: "SEPARATELY_AUTHORIZED_RECOVERY_EXCEPTION"
+  - phase: "P2_GATE_RECOVERY"
+    signature: "EXPLICIT_LOCAL_BUILT_PREVIEW_RUNTIME_MODE"
+    result: "CORRECTED_AND_FRONTEND_GATE_RERUN_PASS_BROWSER_EVIDENCE_RERUN_REQUIRED"
+    scope: "HONOR_EXACT_EXPLICIT_LOCAL_STAGE_FOR_BUILT_PREVIEW_WHILE_RETAINING_NON_LOCAL_LOOPBACK_REJECTION"
+    correction_budget: "SEPARATELY_AUTHORIZED_SINGLE_P2_SOURCE_DEFECT_EXCEPTION"
 
-last_failure: null
+last_failure: "P2_V1_BROWSER_BOOTSTRAP_REJECTED_EXPLICIT_LOCAL_LOOPBACK"
 breaker: null
-stop_reason: "UNAVOIDABLE_LOCAL_DESKTOP_RUNTIME_BROWSER_EVIDENCE_RELAY"
+stop_reason: "UNAVOIDABLE_LOCAL_DESKTOP_RUNTIME_BROWSER_EVIDENCE_RERUN"
 environment: "CHATGPT_WORK_CLOUD_PLUS_AUTHORIZED_LOCAL_DESKTOP_RELAY"
 
 checkpoint_policy:
@@ -222,9 +239,11 @@ phase_checkpoints:
     backend_sha: "119397ff6836ad12846c1e948409d8d49185c408"
     backend_tree_sha: "73521762dfeaf703b301e7a61c17cbda97d797a9"
     frontend_parent_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
-    frontend_sha: "b69c37bc9c1b1aec0976ab503acbb7274153480d"
-    frontend_tree_sha: "0eea09c409f84b463ff087aa01a3c85b784f53fc"
-    frontend_local_mirror_sha: "bbab564d3a6d2faa2dbaf21e55045b428898936e"
+    frontend_pre_recovery_sha: "b69c37bc9c1b1aec0976ab503acbb7274153480d"
+    frontend_pre_recovery_tree_sha: "0eea09c409f84b463ff087aa01a3c85b784f53fc"
+    frontend_sha: "5df18df718e8a69dd22d7c31fab804716d87329a"
+    frontend_tree_sha: "db18346e8471c44b256e96ab39ef55b59ae1380c"
+    frontend_local_mirror_sha: "5df18df718e8a69dd22d7c31fab804716d87329a"
     changed_file_count: 20
     postgres_http_rbac_result: "PASS_15_CHECKS_23_REQUESTS"
     provider_mode: "DISABLED_NOT_INVOKED"
@@ -248,8 +267,35 @@ phase_checkpoints:
       schema_change: false
       migrations_created_or_applied: false
       provider_actions: []
+    browser_evidence_v1:
+      commit: "259e35bc1163bfbe4402d63d363f09f1284044b6"
+      tree: "7c8bed177210808bb393b82beba187aca79e5a58"
+      report: "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v1.md"
+      result: "P2_RUNTIME_BROWSER_SOURCE_DEFECT"
+      affected_frontend_sha: "b69c37bc9c1b1aec0976ab503acbb7274153480d"
+      source_changes: false
+      migrations_created_or_applied: false
+      provider_actions: []
+    frontend_runtime_source_recovery:
+      classification: "SINGLE_AUTHORIZED_P2_SOURCE_DEFECT_RECOVERY"
+      parent_sha: "b69c37bc9c1b1aec0976ab503acbb7274153480d"
+      sha: "5df18df718e8a69dd22d7c31fab804716d87329a"
+      tree_sha: "db18346e8471c44b256e96ab39ef55b59ae1380c"
+      root_cause: "BUILT_PREVIEW_SET_DEV_FALSE_AND_RESOLVER_IGNORED_EXPLICIT_LOCAL_STAGE"
+      production_file_count: 1
+      test_file_count: 1
+      production_files:
+        - "src/shared/config/resolve-env.ts"
+      regression_test: "src/shared/config/resolve-env.test.ts"
+      preserved_security_boundary: "MISSING_OR_NON_LOCAL_STAGE_REJECTS_LOOPBACK_API_ORIGIN"
+      schema_change: false
+      migrations_created_or_applied: false
+      provider_actions: []
+    browser_evidence_v2:
+      status: "LOCAL_DESKTOP_RERUN_REQUIRED"
+      expected_report: "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v2.md"
     blockers:
-      - "LIVE_BROWSER_390_767_768_DESKTOP_SCREENSHOT_DOM_ACCESSIBILITY_EVIDENCE_UNAVAILABLE"
+      - "LIVE_BROWSER_V2_390_767_768_1440_SCREENSHOT_DOM_ACCESSIBILITY_EVIDENCE_REQUIRED"
   p3a_operations_cutover: null
   p3s_support: null
   p4_base_convergence: null
@@ -270,6 +316,8 @@ files_changed:
   authority:
     - "docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-runner-v1.md"
+    - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v1.md"
+    - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-rerun-runner-v1.md"
     - "docs/organization/architecture/brand-payouts/brand_payouts_p0_executable_contract_register_v1.md"
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_c04_settlement_dependency_handoff_v1.md"
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_campaign_net_terms_correction_handoff_v1.md"
@@ -320,8 +368,10 @@ files_changed:
     - "src/features/brand-payouts/utils/map-hub-ledger.ts"
     - "src/features/brand-payouts/utils/payout-document-exports.ts"
     - "src/routes/app-routes.tsx"
+    - "src/shared/config/resolve-env.ts"
+    - "src/shared/config/resolve-env.test.ts"
   provider_evidence: []
 
-uncheckpointed_work: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_ACCEPTANCE"
+uncheckpointed_work: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_RERUN"
 
-last_updated: "2026-09-05T10:46:00Z"
+last_updated: "2026-09-05T11:23:15Z"
