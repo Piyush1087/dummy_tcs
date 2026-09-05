@@ -33,7 +33,7 @@ line is admitted here.
 | P1.3 Application commands/history | PASS | `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` | 78 | P1.4 |
 | P1.4 Collaboration/Notifications handoff | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` | 79 | P2 |
 | P1 aggregate backend | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` | 79 | P2 |
-| P2 | NOT STARTED | — | — | Separate authorization required |
+| P2 frontend contract | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` (unchanged P1) | 79 (unchanged) | P3 — NOT STARTED |
 
 ## 3. P1.1A immutable entry
 
@@ -889,3 +889,77 @@ Systems Architect acceptance SHA =
 `71b449546a7f5d3ef627576e82013fb0ff887d25`
 
 This immutable acceptance record binds P1.4 and the P1 aggregate freeze.
+
+## 12. P2 immutable frontend acceptance and current continuation
+
+The Systems Architect substantive P2 review passed under `C03_P2_ENTRY_PROOF_AND_DURABLE_FRONTEND_CONTRACT_FREEZE_V1`; final acceptance was conditional only on the two entry proofs below and this durable binding. Both proofs pass. Earlier P1 checkpoint statements remain historical; this entry is the current continuation authority.
+
+Starting recovery authority: `706a1654bdca8a6fe10bc50bd3ea7f89e32da2cb`. The completed audit is reused without repeating its 135 states or 447 occurrences: 135 states, 9 proposed surfaces, 11 current route entries, 71 reuse entries, 15 reference entries, 62 reason/status/message mappings, 447 occurrences across 71 files.
+
+```text
+P1 = PASS
+P2 = PASS
+P2_FRONTEND_STATE_FAMILY_REGISTER = ACCEPTED
+P2_CURRENT_FRONTEND_REUSE_AUDIT = PASS
+P2_ACCEPTED_REFERENCE_REUSE_AUDIT = PASS
+P2_AURORA_CONSTRUCTION_ASSESSMENT = PASS
+P2_STITCH_DECISION = NOT_REQUIRED
+P2_REQUIRED_VISUAL_AUTHORITY = ACCEPTED
+P2_FRONTEND_SEMANTIC_ACCESSIBILITY_GATE = PASS
+STITCH_EXECUTOR_ACCESS = READY
+P2_TYPED_FIXTURE_ENTRY_COVERAGE = PASS
+FRONTEND_AUTHORITY_SHA = 323658d4b147b95b5629ff8d91fa90b8fe9077e4
+P1_BACKEND_AUTHORITY_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+LAST_ACCEPTED_CHECKPOINT = P2
+CURRENT_CHECKPOINT = P3
+P3_STATE = NOT STARTED
+P4_STATE = NOT STARTED
+P5_STATE = NOT STARTED
+PRODUCT_QUESTIONS = NONE
+BACKEND_CONTRACT_GAPS = NONE
+DESIGN_GAPS = NONE
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+## Entry proofs
+
+STITCH_EXECUTOR_ACCESS = READY
+
+Tool registry exposed `mcp__stitch_gv__list_projects`. Calling it with `{}` succeeded (isError=false), returning 51 accessible projects. Example resource: `projects/14541378723209492964`. Recorded UTC: `2026-09-05T17:46:45.939Z`. This was one non-mutating metadata/list call. No project/screen creation, generation, modification, deletion, configuration change or generation quota request occurred. Access proof does not promote any returned project content to design authority.
+
+P2_TYPED_FIXTURE_ENTRY_COVERAGE = PASS
+
+All sources below are in `Piyush1087/creator-commerce-backend-v2-clone@4b51d52de6d9206545b0a38497c7436bc9d3e095`, tree `0df8adf9a4a45089918dc0f5d3cccd9f4317fede`. Coverage is inspection of accepted typed tests/fixtures and production types, not a fresh runtime test run or new frontend fixture implementation. The finite policy fixture provides the access matrix; Prisma-backed fixtures provide realistic UUID ancestry, canonical commercials, rich Briefs/Deliverables, actors and immutable Applications. No material requested family lacks accepted typed authority.
+
+| Family | Representative coverage | Exact accepted source | Typed evidence | Verdict |
+|---|---|---|---|---|
+| Opportunity projections | TEASER; LOCKED; AUTHORIZED | `src/features/campaign-opportunities/opportunity-policy.test.ts:187` (blob `46333864c93caf80c4150d46d92998c58a774100`) | Typed OpportunityPolicyInput/CampaignRead finite matrix asserts all three projection branches and structural redaction; OpportunityAccess discriminated union in src/features/campaign-opportunities/campaign-opportunity-policy.service.ts. | PASS |
+| Visibility | PUBLIC / EVERYONE; ELIGIBLE_ONLY; INVITE_ONLY / INVITED_ONLY | `src/features/campaign-opportunities/opportunity-policy.test.ts:115` (blob `46333864c93caf80c4150d46d92998c58a774100`) | Typed literal visibility dimension exercises all three accepted persisted values; frozen contract owns public names. | PASS |
+| Instagram | NOT_CONNECTED; CONNECTED_HEALTHY; REVALIDATION_REQUIRED; RECONNECT_REQUIRED; PROVIDER_BLOCKED_RECOVERABLE; DISCONNECTED_IDENTITY_RETAINED | `src/features/campaign-opportunities/opportunity-policy.test.ts:21` (blob `46333864c93caf80c4150d46d92998c58a774100`) | Persisted-state objects evaluated by evaluateInstagramOpportunity; six expected lifecycle outputs and exact recovery actions asserted. | PASS |
+| Eligibility | ELIGIBLE; INELIGIBLE; UNAVAILABLE | `src/features/campaign-opportunities/opportunity-policy.test.ts:121` (blob `46333864c93caf80c4150d46d92998c58a774100`) | Typed eligibility dimension and actual policy result; no Boolean-only fixture authority. | PASS |
+| Invitation | VALID; required/ABSENT; EXPIRED; REVOKED; SUBJECT_MISMATCH | `src/features/campaign-opportunities/opportunity-policy.test.ts:126` (blob `46333864c93caf80c4150d46d92998c58a774100`) | InvitationResult typed finite dimension. Generic non-enumerating suppression remains policy-owned; not every matrix cell discloses an invitation reason. | PASS |
+| Invitation required reason | INVITATION_REQUIRED from ABSENT in proven context | `src/features/campaign-opportunities/campaign-opportunity-policy.service.ts:146` (blob `5d93e75ebc8a0edcfe37f1c36450b89b4e658b71`) | Accepted typed policy explicitly maps ABSENT to REQUIRED when this branch is reached; initial unproven absence remains generic. Other typed authority allowed by entry-proof instruction. | PASS |
+| Commercial model and intentional zero | FIXED; NEGOTIABLE; explicit offer 0 | `src/features/campaign-applications/applications.postgres.test.ts:705` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Prisma-backed parameterized test uses FIXED_FEE/NEGOTIABLE; snapshot asserts decimal-string zero and projected model; no Creator proposal. | PASS |
+| Brand support present | receivesBrandSupport=true; PRODUCT; explicit estimated value0 | `src/features/campaign-applications/applications.postgres.test.ts:713` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Accepted Prisma update in zero-offer test; canonical snapshot preserves support estimate. | PASS |
+| Brand support absent | receivesBrandSupport=false | `test/fixtures/c03-application-fixtures.ts:213` (blob `74b454ef71a8edaa80e8cf53418adcf360b05418`) | Typed Prisma campaignFixture persists canonical version1 commercial offer/currency with support absent; reused in successful command/history suites. | PASS |
+| Commercial unavailable | UNAVAILABLE; legacy/missing authored evidence rejected | `src/features/brand-uce/services/canonical-campaign-application-read.service.test.ts:106` (blob `ed827ae1c6ef0913ec394fa4d3443d95e8598886`) | Accepted adapter fixture and actual typed projection assertion reject missing canonical commercial provenance; production ReturnType is CampaignRead. | PASS |
+| Single valid pair | One selectable canonical Asset/Brief pair | `src/features/campaign-applications/applications.postgres.test.ts:579` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Real Prisma campaignFixture called with briefCount1; typed selection returns paired UUIDs, command outcome checked. | PASS |
+| Multiple pairs | Three Brief pairs beneath one Brand Asset | `test/fixtures/c03-application-fixtures.ts:179` (blob `74b454ef71a8edaa80e8cf53418adcf360b05418`) | Typed Prisma fixture creates published Briefs and ordered Deliverables; selection(i) returns exact associated pair. Used by sibling tests. | PASS |
+| Brand-only Asset | BRAND Asset; no product/stock prerequisite | `test/fixtures/c03-application-fixtures.ts:218` (blob `74b454ef71a8edaa80e8cf53418adcf360b05418`) | Real canonical Asset persisted with kind BRAND, active status and published associated Briefs. | PASS |
+| Unavailable Asset and Brief | Paused Asset; Draft Brief; mismatched pair | `src/features/campaign-applications/applications.postgres.test.ts:155` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Prisma state mutations exercise asset/brief/mismatch rejection; typed command authority and no Application/receipt assertions. | PASS |
+| Pending Application | PENDING | `src/features/campaign-applications/applications.postgres.test.ts:317` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Accepted real submit creates Pending row and blocking duplicate case. | PASS |
+| Terminal Application states | WITHDRAWN; EXPIRED; REJECTED | `src/features/campaign-applications/applications.postgres.test.ts:316` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Real withdraw/expire/reject transitions establish accepted typed terminal states and reapply/quota behavior. | PASS |
+| Approved Application and link | APPROVED; collaborationId | `src/features/campaign-applications/application-handoff.postgres.test.ts:99` (blob `ad2126e29690c583c7abb1a1d5c872241a0a95c6`) | Real approval asserts APPROVED/statusVersion2, one linked Collaboration/event/job/receipt and history.detail collaborationId. | PASS |
+| Sibling Applications | Independent sibling rows; two approved Collaborations | `src/features/campaign-applications/application-handoff.postgres.test.ts:153` (blob `ad2126e29690c583c7abb1a1d5c872241a0a95c6`) | Real selected Brief0/Brief1 commands and concurrent approval outcomes preserve distinct Application-sourced Collaborations. | PASS |
+| Actor role | OWNER; MANAGER; ASSISTANT | `src/features/campaign-applications/applications.postgres.test.ts:54` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Prisma-backed role matrix uses creatorFixture/teamFixture, separates actor from Owner business subject and snapshots current role. | PASS |
+| Historical access without usable Instagram | Disconnected Instagram; history collection/detail readable for all three roles | `src/features/campaign-applications/applications.postgres.test.ts:352` (blob `b22deae0fee96e511ebea1d17e6dac61e38b80e5`) | Test disconnects provider and archives/mutates current Campaign/Brief, then verifies immutable history and role-specific canWithdrawPending. | PASS |
+
+### Durable artifacts and frozen scope
+
+- [Complete accepted state register](../architecture/c03/c03_frontend_state_family_register_v1.md)
+- [Frozen frontend execution contract](../architecture/c03/c03_frontend_execution_contract_v1.md)
+- [Preserved full P2 runner report](../../ai-collaboration/c03-p2-frontend-state-and-reuse-preflight-report-v1.md), SHA-256 `27f6d6f5915b7a6da77e0b4e8c481ae8f08088153f639c2f7500866b055d86ef`
+
+P2 freezes the canonical Campaigns routes, current C05 auth/guard decomposition, bounded notification presentation, rejected legacy semantics, current/reference/Aurora visual authority, responsive/accessibility requirements, and mandatory P4 actor-action compatibility correction. NEW_UIUX_DESIGN_REQUIRED = NO; STITCH_REQUIRED = NO. No frontend/backend source, Product, architecture, P3/P4/P5 execution, provider configuration, or generation is changed.
+
+Only the four authorized documentation files are changed. No runtime tests are required or rerun; accepted backend fixture/test source is inspected as coverage authority. Commit A records acceptance; the following binding commit will cite Commit A in this entry and the execution contract, with no self-referential SHA. Publication stops at SA review.
