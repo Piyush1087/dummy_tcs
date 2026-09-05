@@ -1,0 +1,1234 @@
+{
+  "browser": "140.0.7339.16",
+  "automation": "1.61.1",
+  "mount": {
+    "route": "/login",
+    "rootChildren": 2,
+    "emailFieldVisible": true,
+    "v1ExceptionRepeated": false
+  },
+  "rows": [
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "5df18df718e8a69dd22d7c31fab804716d87329a",
+      "frontendTree": "db18346e8471c44b256e96ab39ef55b59ae1380c",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "LOADED_REAL_BACKEND_PARTIAL_COVERAGE",
+      "screenshot": "390-owner-loaded-partial-contrast-failure.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See browser-network-console.json; V1 exception absent",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "bold",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<p class=\"bp-workspace__eyebrow\">Brand financial operations</p>",
+                  "target": [
+                    ".bp-workspace__eyebrow"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+                  "target": [
+                    ".bp-workspace__header-actions > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#ffffff",
+                        "contrastRatio": 1.92,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<section class=\"aurora-card bp-section-card\">",
+                          "target": [
+                            "section:nth-child(2)"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">Load more activity</button>",
+                  "target": [
+                    "section:nth-child(2) > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            },
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": "NOT_COMPLETED_CIRCUIT_BREAKER"
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 2,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 390,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 266.5625,
+            "width": 390,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 25,
+            "y": 10335.296875,
+            "width": 340,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nP\nPayouts\nBilling, Escrow & Compliance Hub\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nbp-p2-creator\n\npayout-obligation:bp…\n\nLegacy Unreconciled\nEntitlement\nAmount unavailable\nDue\nDue date unavailable\nCurrent gate\nDependency Unavailable\nHistory\nLegacy / limited\nView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBusiness Obligation\n\nLifecycle only\n\nObligation Recorded\nAmount\n₹80.0000\nRecorded\n5 Sept 2026, 6:12 pm\nReference\nfinancial-activity:o…\nHistory\nLegacy / limited\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nHome\nCampaigns\nBrand Centre\nChat"
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "5df18df718e8a69dd22d7c31fab804716d87329a",
+      "frontendTree": "db18346e8471c44b256e96ab39ef55b59ae1380c",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "LOADED_REAL_BACKEND_PARTIAL_COVERAGE",
+      "screenshot": "767-owner-loaded-partial-contrast-failure.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See browser-network-console.json; V1 exception absent",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "bold",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<p class=\"bp-workspace__eyebrow\">Brand financial operations</p>",
+                  "target": [
+                    ".bp-workspace__eyebrow"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+                  "target": [
+                    ".bp-workspace__header-actions > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#ffffff",
+                        "contrastRatio": 1.92,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<section class=\"aurora-card bp-section-card\">",
+                          "target": [
+                            "section:nth-child(2)"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">Load more activity</button>",
+                  "target": [
+                    "section:nth-child(2) > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            },
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "empty-heading",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "summary-name"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": "NOT_COMPLETED_CIRCUIT_BREAKER"
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "visibleTables": 0,
+        "visibleMobileLists": 2,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 0,
+            "y": 116,
+            "width": 767,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 0,
+            "y": 244.875,
+            "width": 767,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 25,
+            "y": 7957.28125,
+            "width": 717,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nUpgrade\nP\nPayouts\nBilling, Escrow & Compliance Hub\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nbp-p2-creator\n\npayout-obligation:bp…\n\nLegacy Unreconciled\nEntitlement\nAmount unavailable\nDue\nDue date unavailable\nCurrent gate\nDependency Unavailable\nHistory\nLegacy / limited\nView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBusiness Obligation\n\nLifecycle only\n\nObligation Recorded\nAmount\n₹80.0000\nRecorded\n5 Sept 2026, 6:12 pm\nReference\nfinancial-activity:o…\nHistory\nLegacy / limited\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nMoney Movement\n\nMoney movement\n\nSettled\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nProtected Allocation\n\nLifecycle only\n\nProtected Allocation Recorded\nAmount\n₹10.0000\nRecorded\n4 Sept 2026, 4:30 pm\nReference\nfinancial-activity:l…\nView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nHome\nCampaigns\nBrand Centre\nChat"
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "5df18df718e8a69dd22d7c31fab804716d87329a",
+      "frontendTree": "db18346e8471c44b256e96ab39ef55b59ae1380c",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "LOADED_REAL_BACKEND_PARTIAL_COVERAGE",
+      "screenshot": "768-owner-loaded-partial-contrast-failure.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See browser-network-console.json; V1 exception absent",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "bold",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<p class=\"bp-workspace__eyebrow\">Brand financial operations</p>",
+                  "target": [
+                    ".bp-workspace__eyebrow"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+                  "target": [
+                    ".bp-workspace__header-actions > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#ffffff",
+                        "contrastRatio": 1.92,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<section class=\"aurora-card bp-section-card\">",
+                          "target": [
+                            "section:nth-child(2)"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">Load more activity</button>",
+                  "target": [
+                    "section:nth-child(2) > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            },
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "empty-table-header",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "scope-attr-valid",
+            "summary-name",
+            "table-duplicate-name",
+            "td-headers-attr",
+            "th-has-data-cells"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": "NOT_COMPLETED_CIRCUIT_BREAKER"
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "visibleTables": 2,
+        "visibleMobileLists": 0,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 485.59375,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 665.3125,
+            "y": 108,
+            "width": 102.6875,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 105,
+            "y": 3932.421875,
+            "width": 638,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nTheCreatorShop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nUpgrade Plan\nPayouts\nBilling, Escrow & Compliance Hub\nUpgrade\nP\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nCreator payout obligations\nCreator\tEntitlement\tDue date\tState\tCurrent gate\t\nDetails\n\nbp-p2-creator\npayout-obligation:bp…\n\tAmount unavailable\tDue date unavailable\tLegacy UnreconciledLegacy / limited\tDependency Unavailable\tView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBrand financial activity\nActivity\tMeaning\tAmount\tStatus\tRecorded\t\nDetails\n\nBusiness Obligation\nfinancial-activity:o…\n\tLifecycle only\t₹80.0000\tObligation RecordedLegacy / limited\t5 Sept 2026, 6:12 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout"
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "5df18df718e8a69dd22d7c31fab804716d87329a",
+      "frontendTree": "db18346e8471c44b256e96ab39ef55b59ae1380c",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "Brand Owner",
+      "fixture": "bp-p2-user-owner",
+      "state": "LOADED_REAL_BACKEND_PARTIAL_COVERAGE",
+      "screenshot": "1440-owner-loaded-partial-contrast-failure.png",
+      "networkReference": "browser-network-console.json",
+      "consoleResult": "See browser-network-console.json; V1 exception absent",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "bold",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<p class=\"bp-workspace__eyebrow\">Brand financial operations</p>",
+                  "target": [
+                    ".bp-workspace__eyebrow"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#f8f8f8",
+                        "contrastRatio": 1.81,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<div class=\"aurora-shell\">",
+                          "target": [
+                            ".aurora-shell"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+                  "target": [
+                    ".bp-workspace__header-actions > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "fgColor": "#34d399",
+                        "bgColor": "#ffffff",
+                        "contrastRatio": 1.92,
+                        "fontSize": "9.0pt (12px)",
+                        "fontWeight": "normal",
+                        "messageKey": null,
+                        "expectedContrastRatio": "4.5:1"
+                      },
+                      "relatedNodes": [
+                        {
+                          "html": "<section class=\"aurora-card bp-section-card\">",
+                          "target": [
+                            "section:nth-child(2)"
+                          ]
+                        }
+                      ],
+                      "impact": "serious",
+                      "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">Load more activity</button>",
+                  "target": [
+                    "section:nth-child(2) > .aurora-button--outline.aurora-button--sm.aurora-button"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            },
+            {
+              "id": "landmark-main-is-top-level",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the main landmark is at top level",
+              "help": "Main landmark should not be contained in another landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "landmark-is-top-level",
+                      "data": {
+                        "role": "main"
+                      },
+                      "relatedNodes": [],
+                      "impact": "moderate",
+                      "message": "The main landmark is contained in another landmark."
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+                }
+              ]
+            },
+            {
+              "id": "landmark-no-duplicate-main",
+              "impact": "moderate",
+              "tags": [
+                "cat.semantics",
+                "best-practice"
+              ],
+              "description": "Ensure the document has at most one main landmark",
+              "help": "Document should not have more than one main landmark",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "page-no-duplicate-main",
+                      "data": null,
+                      "relatedNodes": [
+                        {
+                          "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                          "target": [
+                            ".aurora-shell__main"
+                          ]
+                        }
+                      ],
+                      "impact": "moderate",
+                      "message": "Document has more than one main landmark"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "moderate",
+                  "html": "<main class=\"bp-workspace\">",
+                  "target": [
+                    ".bp-workspace"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+                }
+              ]
+            }
+          ],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-conditional-attr",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "color-contrast",
+            "empty-heading",
+            "empty-table-header",
+            "heading-order",
+            "landmark-complementary-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-unique",
+            "link-name",
+            "nested-interactive",
+            "scope-attr-valid",
+            "summary-name",
+            "table-duplicate-name",
+            "td-headers-attr",
+            "th-has-data-cells"
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious"
+            }
+          ],
+          "testEngine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          }
+        },
+        "focus": "NOT_COMPLETED_CIRCUIT_BREAKER"
+      },
+      "dom": {
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "visibleTables": 2,
+        "visibleMobileLists": 0,
+        "eyebrow": {
+          "tag": "P",
+          "text": "Brand financial operations",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "rect": {
+            "x": 80,
+            "y": 72,
+            "width": 536.734375,
+            "height": 14
+          }
+        },
+        "refresh": {
+          "tag": "BUTTON",
+          "text": "Refresh",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 1337.3125,
+            "y": 72,
+            "width": 102.6875,
+            "height": 32
+          }
+        },
+        "loadMore": {
+          "tag": "BUTTON",
+          "text": "Load more activity",
+          "color": "rgb(52, 211, 153)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "rect": {
+            "x": 797,
+            "y": 3195.609375,
+            "width": 618,
+            "height": 32
+          }
+        },
+        "bodyText": "T\nTheCreatorShop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout\nUpgrade Plan\nPayouts\nBilling, Escrow & Compliance Hub\nUpgrade\nP\n\nBRAND FINANCIAL OPERATIONS\n\nPayouts\n\nA read-only operational view of pooled funds, Creator obligations, and financial activity.\n\nBrand Owner\nRefresh\nRead-only phase\n\nAdd funds and Brand Return remain in Secure escrow Settings until the separately accepted command-surface cutover.\n\nFinancial overview\n\nAvailable funds\n\nAuthoritative\n\n₹700.0000\n\nUnused funds currently available\n\nPending funding\n\nUnavailable\n\nUnavailable\n\nPending funding cannot yet be reported from an authoritative snapshot.\n\nCommitted / protected\n\nAuthoritative\n\n₹200.0000\n\nFunds allocated to protected obligations\n\nActive Brand Return\n\nAuthoritative\n\n₹100.0000\n\nAvailable funds currently being returned\n\nScheduled obligations\n\nUnavailable\n\nUnavailable\n\nCanonical Collaboration instruction history is not yet available.\n\nProcessing obligations\n\nUnavailable\n\nUnavailable\n\nImmutable transfer milestones are not complete enough to report this total.\n\nSettled activity\n\nAuthoritative\n\n₹280.0000\n\nLifetime evidence\n\nAction required\n\nUnavailable\n\nUnavailable\n\nCanonical reserve-request state is not yet available.\n\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nData coverage and limitations\nCreator payout obligations\n\nAn obligation records Creator Shop business entitlement. Provider processing and settlement remain separate states.\n\nCreator payout obligations\nCreator\tEntitlement\tDue date\tState\tCurrent gate\t\nDetails\n\nbp-p2-creator\npayout-obligation:bp…\n\tAmount unavailable\tDue date unavailable\tLegacy UnreconciledLegacy / limited\tDependency Unavailable\tView details\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nPage set complete\nAuthoritative source coverage incomplete\nData coverage and limitations\nFinancial activity\n\nMoney movements and lifecycle events are classified separately. A lifecycle event is not proof of settlement.\n\nBrand financial activity\nActivity\tMeaning\tAmount\tStatus\tRecorded\t\nDetails\n\nBusiness Obligation\nfinancial-activity:o…\n\tLifecycle only\t₹80.0000\tObligation RecordedLegacy / limited\t5 Sept 2026, 6:12 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\n\nMoney Movement\nfinancial-activity:l…\n\tMoney movement\t₹10.0000\tSettled\t4 Sept 2026, 4:30 pm\tView details\n\nProtected Allocation\nfinancial-activity:l…\n\tLifecycle only\t₹10.0000\tProtected Allocation Recorded\t4 Sept 2026, 4:30 pm\tView details\nLoad more activity\nPartial coverage\nCurrent source\nAs of 5 Sept 2026, 6:14 pm\nSource observed 5 Sept 2026, 6:12 pm\nMore rows available\nAuthoritative source coverage incomplete\nData coverage and limitations\nThe Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout"
+      }
+    }
+  ]
+}

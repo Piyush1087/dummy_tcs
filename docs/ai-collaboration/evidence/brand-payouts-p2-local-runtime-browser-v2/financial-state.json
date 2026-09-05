@@ -1,0 +1,30 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "5df18df718e8a69dd22d7c31fab804716d87329a",
+  "frontendTree": "db18346e8471c44b256e96ab39ef55b59ae1380c",
+  "before": "7c6dcb1a5065a089b0df9acfb2add94bedbe310b3c609bea9896392d83e3bb5a",
+  "after": "7c6dcb1a5065a089b0df9acfb2add94bedbe310b3c609bea9896392d83e3bb5a",
+  "httpBefore": "7c6dcb1a5065a089b0df9acfb2add94bedbe310b3c609bea9896392d83e3bb5a",
+  "equal": true,
+  "models": [
+    "brandEscrowVault",
+    "escrowTransactionLedger",
+    "creatorPayoutObligation",
+    "routeTransferAttempt",
+    "routeTransferReversal",
+    "brandReturnRequest",
+    "creatorPayoutProfile"
+  ],
+  "rowCounts": {
+    "brandEscrowVault": 2,
+    "escrowTransactionLedger": 56,
+    "creatorPayoutObligation": 2,
+    "routeTransferAttempt": 0,
+    "routeTransferReversal": 0,
+    "brandReturnRequest": 0,
+    "creatorPayoutProfile": 1
+  },
+  "normalization": "Prisma JSON serialization; fixed model order; rows sorted by ID; raw records not committed",
+  "scope": "Baseline captured before successful browser login/GETs and HTTP matrix; final after browser evidence collection."
+}

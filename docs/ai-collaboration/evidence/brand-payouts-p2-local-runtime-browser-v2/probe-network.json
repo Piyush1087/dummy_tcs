@@ -1,0 +1,87 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "5df18df718e8a69dd22d7c31fab804716d87329a",
+  "frontendTree": "db18346e8471c44b256e96ab39ef55b59ae1380c",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "actor": "Brand Owner",
+  "fixture": "bp-p2-user-owner",
+  "state": "INITIAL_DISCOVERY_LOADED_REAL_BACKEND_PARTIAL_COVERAGE",
+  "screenshot": "1440-owner-ready.png",
+  "networkReference": "probe-network.json",
+  "consoleResult": "See original network/error records",
+  "overflowResult": "Not measured in discovery probe; see browser-contrast.json for confirmation",
+  "accessibilityFocusResult": "SERIOUS_COLOR_CONTRAST; further focus matrix stopped",
+  "browser": "140.0.7339.16",
+  "network": [
+    {
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-CgV_cCHn.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-DSmDZCD1.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-CgV_cCHn.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-DSmDZCD1.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "errors": []
+}

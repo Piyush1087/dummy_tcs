@@ -1,0 +1,233 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "5df18df718e8a69dd22d7c31fab804716d87329a",
+  "frontendTree": "db18346e8471c44b256e96ab39ef55b59ae1380c",
+  "network": [
+    {
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-CgV_cCHn.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-DSmDZCD1.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-CgV_cCHn.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/assets/index-DSmDZCD1.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "console": [
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "blockedExternalAssets": [
+    {
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    }
+  ],
+  "requestInterception": "Only non-loopback assets blocked. No API responses mocked or altered.",
+  "login": {
+    "method": "POST",
+    "path": "/api/v1/auth/login",
+    "status": 200,
+    "tokenStorageInjection": false
+  },
+  "providerInvocation": false
+}
