@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "EXECUTION_BLOCK_1_IN_PROGRESS"
+status: "EXECUTION_BLOCK_1_STOPPED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 architecture_sha: "3fb6b4246aa5f2ecb71c3bbfe99c56e395f30a92"
@@ -29,11 +29,11 @@ authorization_artifact: "BRAND_PAYOUTS_STAGE_B_ACCEPTANCE_AND_EXECUTION_BLOCK_1_
 authorized_segment: "P0_TO_P2"
 next_parent_gate: "BP-P2-FIRST-VERTICAL-SLICE"
 
-phase: "P1_ACCEPTED"
+phase: "P2_BLOCKED"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "3dc8cef560cbe011fa39bfe33c3766786c0eddb7"
 checkpoint_name: "BP-P1-BACKEND-READ"
-next_phase: "P2_FIRST_FRONTEND_VERTICAL_SLICE"
+next_phase: "P2_GATE_RECOVERY"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -48,7 +48,7 @@ dependency_gates:
   campaign_manager_entity_scope: "RESOLVED_FAIL_CLOSED_ZERO_ROWS"
   payment_support_security_policy: "OPEN_BLOCKING"
   complete_v1_source_coresidence: "OPEN_BLOCKING"
-  first_vertical_slice: "OPEN_HUMAN_GATE"
+  first_vertical_slice: "BLOCKED_RUNTIME_AND_BROWSER_EVIDENCE"
   first_financial_reserve_path: "OPEN_HUMAN_GATE"
   india_withholding_if_applicable: "OPEN_HUMAN_GATE"
 
@@ -102,8 +102,15 @@ tests:
   p1_backend_build: "PASS"
   p1_diff_check: "PASS"
   p1_schema_migration_diff: "NONE"
-  p2_frontend: "PENDING"
-  p2_production_shaped: "PENDING"
+  p2_frontend_focused: "PASS_22_OF_22"
+  p2_frontend_full: "PASS_875_OF_875"
+  p2_changed_file_lint: "PASS"
+  p2_changed_file_format: "PASS"
+  p2_frontend_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
+  p2_postgres_http_rbac: "PASS_15_CHECKS_23_REQUESTS_BOUNDED_REAL_P1_STACK"
+  p2_full_app_startup: "FAIL_NOTIFICATIONS_MODULE_IMPORT_INDEX_2_UNDEFINED"
+  p2_browser_responsive: "BLOCKED_CLOUD_BROWSER_LOCAL_PREVIEW_POLICY"
+  p2_production_shaped: "BLOCKED"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -116,8 +123,8 @@ razorpay_gates:
   rz_g4: "OPEN_HUMAN_GATE"
 
 corrections:
-  current_phase_count: 2
-  total_p0_p5_count: 3
+  current_phase_count: 1
+  total_p0_p5_count: 4
   max_per_phase: 2
   max_total_p0_p5: 4
   repeated_failure_limit: 1
@@ -135,10 +142,14 @@ correction_history:
     signature: "LEDGER_REFERENCE_AND_REVERSAL_CHRONOLOGY"
     result: "CORRECTED_AND_ALL_GATES_RERUN_PASS"
     scope: "OMIT_UNPROVEN_COLLABORATION_REFERENCE_AND_REQUIRE_COHERENT_REVERSAL_TIMESTAMPS"
+  - phase: "P2"
+    signature: "V2_RESPONSE_MEDIA_TYPE_PREFIX_ACCEPTANCE"
+    result: "CORRECTED_AND_ALL_FRONTEND_GATES_RERUN_PASS"
+    scope: "REQUIRE_EXACT_V2_MEDIA_TYPE_ESSENCE_WHILE_ALLOWING_STANDARD_PARAMETERS"
 
-last_failure: null
-breaker: null
-stop_reason: null
+last_failure: "P2_EXACT_PRODUCTION_SHAPED_AND_BROWSER_ACCEPTANCE_EVIDENCE_UNAVAILABLE"
+breaker: "PRODUCTION_RUNTIME_FAILURE"
+stop_reason: "BUILT_APP_MODULE_FAILS_BEFORE_ROUTE_EXERCISE_AND_CLOUD_BROWSER_POLICY_BLOCKS_LOCAL_PREVIEW"
 environment: "CHATGPT_WORK_CLOUD_EXECUTION_BLOCK_1_RECOVERY"
 
 checkpoint_policy:
@@ -185,7 +196,24 @@ phase_checkpoints:
       - "REVERSAL_TERMINAL_AND_PARENT_CHRONOLOGY_REQUIRED"
     migrations_created_or_applied: false
     provider_actions: []
-  p2_first_vertical_slice: null
+  p2_first_vertical_slice:
+    status: "IMPLEMENTED_PENDING_ACCEPTANCE_BLOCKED"
+    checkpoint_name: "BP-P2-FIRST-VERTICAL-SLICE"
+    authority_sha: null
+    backend_sha: "60385abbd12d5a363615100c463ac6755ce848ea"
+    backend_tree_sha: "1826f3aad9e57b0cf3226a2a3a1acd951c4f344a"
+    frontend_parent_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
+    frontend_sha: "b69c37bc9c1b1aec0976ab503acbb7274153480d"
+    frontend_tree_sha: "0eea09c409f84b463ff087aa01a3c85b784f53fc"
+    frontend_local_mirror_sha: "bbab564d3a6d2faa2dbaf21e55045b428898936e"
+    changed_file_count: 20
+    postgres_http_rbac_result: "PASS_15_CHECKS_23_REQUESTS"
+    provider_mode: "DISABLED_NOT_INVOKED"
+    migrations_created_or_applied: false
+    parent_accepted: false
+    blockers:
+      - "BUILT_APP_MODULE_NOT_BOOTABLE_NOTIFICATIONS_MODULE_IMPORT_INDEX_2_UNDEFINED"
+      - "LIVE_BROWSER_390_767_768_DESKTOP_SCREENSHOT_DOM_ACCESSIBILITY_EVIDENCE_UNAVAILABLE"
   p3a_operations_cutover: null
   p3s_support: null
   p4_base_convergence: null
@@ -231,9 +259,29 @@ files_changed:
     - "src/features/brand-payouts/services/payout-obligation-projection.service.ts"
     - "src/features/brand-payouts/utils/brand-payouts-cursor.ts"
     - "src/features/brand-payouts/utils/brand-payouts-projection.ts"
-  frontend: []
+  frontend:
+    - "src/features/brand-payouts/api/brand-payouts-client.ts"
+    - "src/features/brand-payouts/brand-payouts-p2.test.ts"
+    - "src/features/brand-payouts/brand-payouts.css"
+    - "src/features/brand-payouts/components/BrandPayoutsRouteGuard.tsx"
+    - "src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx"
+    - "src/features/brand-payouts/components/PayoutObligations.tsx"
+    - "src/features/brand-payouts/components/PayoutsActivity.tsx"
+    - "src/features/brand-payouts/components/PayoutsDetail.tsx"
+    - "src/features/brand-payouts/components/PayoutsOverview.tsx"
+    - "src/features/brand-payouts/components/PayoutsSectionStatus.tsx"
+    - "src/features/brand-payouts/contracts/brand-payouts.contracts.ts"
+    - "src/features/brand-payouts/hooks/use-brand-payouts-detail.ts"
+    - "src/features/brand-payouts/hooks/use-brand-payouts-hub.ts"
+    - "src/features/brand-payouts/hooks/use-brand-payouts-workspace.ts"
+    - "src/features/brand-payouts/utils/brand-payouts-presentation.ts"
+    - "src/features/brand-payouts/utils/export-ledger-csv.ts"
+    - "src/features/brand-payouts/utils/ledger-tab-filter.ts"
+    - "src/features/brand-payouts/utils/map-hub-ledger.ts"
+    - "src/features/brand-payouts/utils/payout-document-exports.ts"
+    - "src/routes/app-routes.tsx"
   provider_evidence: []
 
 uncheckpointed_work: null
 
-last_updated: "2026-09-05T08:20:00Z"
+last_updated: "2026-09-05T09:39:28Z"
