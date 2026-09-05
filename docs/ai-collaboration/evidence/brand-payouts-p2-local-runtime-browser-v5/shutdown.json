@@ -1,0 +1,19 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "privateSessionRemoved": true,
+  "containerRemoved": true,
+  "remainingListeners": 0,
+  "ownedProcessCount": 4,
+  "browserContexts": "All browser scripts closed",
+  "backendTermination": "Controlled Windows termination of owned process trees; graceful Nest shutdown hooks not asserted",
+  "ownedPorts": [
+    3107,
+    4177,
+    55439
+  ],
+  "remainingResources": "NONE",
+  "providerActions": 0
+}

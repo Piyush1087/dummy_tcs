@@ -1,0 +1,67 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "models": [
+    "brandEscrowVault",
+    "escrowTransactionLedger",
+    "creatorPayoutObligation",
+    "routeTransferAttempt",
+    "routeTransferReversal",
+    "brandReturnRequest",
+    "creatorPayoutProfile",
+    "escrowFundingLoad",
+    "escrowFundingLot",
+    "collaborationFundingLotAllocation",
+    "collaborationEscrowLock",
+    "collaborationRefundInstruction",
+    "creatorSettlementProfile",
+    "creatorPayoutFundingAllocation",
+    "brandReturnAllocation",
+    "brandReturnWebhookReceipt",
+    "creatorPayoutDestination",
+    "creatorPayoutDestinationProviderMapping",
+    "collaborationCommercial",
+    "collaboration"
+  ],
+  "normalization": "Prisma JSON serialization; fixed model order; rows sorted by ID; raw records not committed",
+  "lanes": [
+    {
+      "name": "Full HTTP/RBAC",
+      "before": "63c54f3c82ff6cf8ac2b9141caa6f4973474c16b57788f0b1cbf78e6b43f128d",
+      "after": "63c54f3c82ff6cf8ac2b9141caa6f4973474c16b57788f0b1cbf78e6b43f128d",
+      "equal": true
+    },
+    {
+      "name": "Browser preflight, identifier integration, and bounded restoration reproduction",
+      "before": "0aa63dda6848b911a65f47e0422bd51213c521575d9c4cb14c53ebdabecf82d9",
+      "after": "0aa63dda6848b911a65f47e0422bd51213c521575d9c4cb14c53ebdabecf82d9",
+      "equal": true
+    }
+  ],
+  "fixtureBoundary": "30 unrelated-Brand obligations inserted deliberately between read lanes. No cross-boundary equality claim.",
+  "initialRowCounts": {
+    "brandEscrowVault": 2,
+    "escrowTransactionLedger": 56,
+    "creatorPayoutObligation": 2,
+    "routeTransferAttempt": 0,
+    "routeTransferReversal": 0,
+    "brandReturnRequest": 0,
+    "creatorPayoutProfile": 1,
+    "escrowFundingLoad": 0,
+    "escrowFundingLot": 0,
+    "collaborationFundingLotAllocation": 0,
+    "collaborationEscrowLock": 0,
+    "collaborationRefundInstruction": 0,
+    "creatorSettlementProfile": 0,
+    "creatorPayoutFundingAllocation": 0,
+    "brandReturnAllocation": 0,
+    "brandReturnWebhookReceipt": 0,
+    "creatorPayoutDestination": 0,
+    "creatorPayoutDestinationProviderMapping": 0,
+    "collaborationCommercial": 0,
+    "collaboration": 2
+  },
+  "rawRowsRetained": false
+}

@@ -1,0 +1,1819 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "payoutsMutationRequests": [],
+  "publicReferenceDetailRequests": [],
+  "authorizedUnexpectedPayoutsErrors": [],
+  "pageErrors": [],
+  "domInspection": [
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-ready",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-ready",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-ready",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-ready",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-source-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-source-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-source-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-source-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-keyboard",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-keyboard",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-keyboard",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-pointer",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-pointer",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-pointer",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-keyboard",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-keyboard",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-keyboard",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-pointer",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-pointer",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-pointer",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-before-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-after-browser-back",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-keyboard",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-keyboard",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-keyboard",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-pointer",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-pointer",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-pointer",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-keyboard",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-keyboard",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-keyboard",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-pointer",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-pointer",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-pointer",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-before-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-after-browser-back",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-keyboard",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-keyboard",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-keyboard",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-pointer",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-pointer",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-pointer",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-keyboard",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-keyboard",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-keyboard",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-pointer",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-pointer",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-pointer",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-before-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-after-browser-back",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-keyboard",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-keyboard",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-keyboard",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-lifecycle-pointer",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-lifecycle-pointer",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-lifecycle-pointer",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-keyboard",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-keyboard",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-keyboard",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-ready-money-movement-pointer",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-refresh-money-movement-pointer",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "identifier-back-money-movement-pointer",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-before-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-after-browser-back",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-browser-back",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-browser-back",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-back-button",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-back-button",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-browser-back",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-browser-back",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-back-button",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-back-button",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-browser-back",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-browser-back",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-back-button",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-back-button",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-browser-back",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-browser-back",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-exhausted-back-button",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-settled-after-back-button",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-browser-back",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-browser-back",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-back-button",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-back-button",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-browser-back",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-browser-back",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-back-button",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-back-button",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-browser-back",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-browser-back",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-back-button",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-back-button",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-browser-back",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-browser-back",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-exhausted-back-button",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligation-settled-after-back-button",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    }
+  ],
+  "presentationSource": "src/features/brand-payouts/utils/brand-payouts-presentation.ts formats decimal strings and backend timestamps without calculating money or payment due dates.",
+  "fontFailures": "Intentional blocked external font requests, separate from application exceptions.",
+  "settingsActionsInvoked": false
+}

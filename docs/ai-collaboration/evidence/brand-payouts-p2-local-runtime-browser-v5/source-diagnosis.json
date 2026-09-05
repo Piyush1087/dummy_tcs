@@ -1,0 +1,234 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "signature": "P2_PAGINATED_LIST_BACK_RESTORATION_LOSS",
+  "failure": "After list exhaustion and UI detail navigation, browser Back and Back to Payouts discard continuation rows and restart the initial 25-row page.",
+  "reproductions": [
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 390,
+      "backMethod": "browser-back",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "390-owner-activity-exhausted-browser-back.png",
+      "afterScreenshot": "390-owner-activity-settled-after-browser-back.png"
+    },
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 390,
+      "backMethod": "back-button",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "390-owner-activity-exhausted-back-button.png",
+      "afterScreenshot": "390-owner-activity-settled-after-back-button.png"
+    },
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 767,
+      "backMethod": "browser-back",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "767-owner-activity-exhausted-browser-back.png",
+      "afterScreenshot": "767-owner-activity-settled-after-browser-back.png"
+    },
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 767,
+      "backMethod": "back-button",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "767-owner-activity-exhausted-back-button.png",
+      "afterScreenshot": "767-owner-activity-settled-after-back-button.png"
+    },
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 768,
+      "backMethod": "browser-back",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "768-owner-activity-exhausted-browser-back.png",
+      "afterScreenshot": "768-owner-activity-settled-after-browser-back.png"
+    },
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 768,
+      "backMethod": "back-button",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "768-owner-activity-exhausted-back-button.png",
+      "afterScreenshot": "768-owner-activity-settled-after-back-button.png"
+    },
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 1440,
+      "backMethod": "browser-back",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "1440-owner-activity-exhausted-browser-back.png",
+      "afterScreenshot": "1440-owner-activity-settled-after-browser-back.png"
+    },
+    {
+      "actor": "owner",
+      "kind": "activity",
+      "width": 1440,
+      "backMethod": "back-button",
+      "beforeCount": 56,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "1440-owner-activity-exhausted-back-button.png",
+      "afterScreenshot": "1440-owner-activity-settled-after-back-button.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 390,
+      "backMethod": "browser-back",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "390-unrelated-obligation-exhausted-browser-back.png",
+      "afterScreenshot": "390-unrelated-obligation-settled-after-browser-back.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 390,
+      "backMethod": "back-button",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "390-unrelated-obligation-exhausted-back-button.png",
+      "afterScreenshot": "390-unrelated-obligation-settled-after-back-button.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 767,
+      "backMethod": "browser-back",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "767-unrelated-obligation-exhausted-browser-back.png",
+      "afterScreenshot": "767-unrelated-obligation-settled-after-browser-back.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 767,
+      "backMethod": "back-button",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "767-unrelated-obligation-exhausted-back-button.png",
+      "afterScreenshot": "767-unrelated-obligation-settled-after-back-button.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 768,
+      "backMethod": "browser-back",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "768-unrelated-obligation-exhausted-browser-back.png",
+      "afterScreenshot": "768-unrelated-obligation-settled-after-browser-back.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 768,
+      "backMethod": "back-button",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "768-unrelated-obligation-exhausted-back-button.png",
+      "afterScreenshot": "768-unrelated-obligation-settled-after-back-button.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 1440,
+      "backMethod": "browser-back",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "1440-unrelated-obligation-exhausted-browser-back.png",
+      "afterScreenshot": "1440-unrelated-obligation-settled-after-browser-back.png"
+    },
+    {
+      "actor": "unrelated",
+      "kind": "obligation",
+      "width": 1440,
+      "backMethod": "back-button",
+      "beforeCount": 31,
+      "afterCount": 25,
+      "loadMoreReappeared": true,
+      "restored": false,
+      "beforeScreenshot": "1440-unrelated-obligation-exhausted-back-button.png",
+      "afterScreenshot": "1440-unrelated-obligation-settled-after-back-button.png"
+    }
+  ],
+  "settlementGuard": "Primary diagnostic waits until overview is mounted and all list-loading placeholders are absent, then waits another 250ms. It does not infer failure from transient loading.",
+  "sources": [
+    {
+      "file": "src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx",
+      "lines": [
+        20,
+        34,
+        37
+      ],
+      "behavior": "Detail target switches away from and unmounts PayoutsWorkspaceOverview."
+    },
+    {
+      "file": "src/features/brand-payouts/hooks/use-brand-payouts-workspace.ts",
+      "lines": [
+        131,
+        133,
+        135,
+        212
+      ],
+      "behavior": "Continuation arrays exist only in component state; remount initializes empty state and refreshes initial pages."
+    },
+    {
+      "file": "src/features/brand-payouts/components/PayoutsDetail.tsx",
+      "lines": [
+        33,
+        40
+      ],
+      "behavior": "Back uses navigate(-1) for list-originated detail; it does not restore the former overview state."
+    }
+  ],
+  "sourceChangeRequired": "The committed component lifecycle discards pagination state. A port, password, database timezone, or fixture change cannot preserve a state object that is unmounted and reinitialized.",
+  "sourceChanges": "NONE"
+}

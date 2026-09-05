@@ -1,0 +1,30 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "backendBuild": "PASS",
+  "frontendBuild": "PASS_WITH_LARGE_CHUNK_WARNING",
+  "fullAppModule": true,
+  "entry": "dist/main.js",
+  "listening": "127.0.0.1:3107",
+  "ready": true,
+  "payoutRoutes": [
+    "Mapped {/api/v1/brand/payouts, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/obligations, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/obligations/:obligationId, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/activity, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/activity.csv, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/activity/:activityId, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/brand-returns, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/brand-returns/:requestId, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/reserve-requests, GET} route\u001b[39m\u001b[38;5;3m"
+  ],
+  "providerVariables": "Razorpay variables absent; backend environment constructed from allowlist; inert mail constructor configuration",
+  "outboundBlockedEvents": 0,
+  "offeringRefresh": "disabled",
+  "otherWorkers": "Unconditional workers run on empty test queues; no optional provider work queued.",
+  "isolation": "Temporary Node TCP loopback guard and loopback-only server binding; built AppModule unchanged",
+  "bootstrapCorrectionValidated": true,
+  "finalOutboundBlockedEvents": 0
+}

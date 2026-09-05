@@ -1,0 +1,195 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "validationTiming": "Original live response BEFORE cursor redaction; exact corrected frontend Zod contract transpiled in memory, no source edits",
+  "rows": [
+    {
+      "requestIndex": 3,
+      "name": "brandPayoutsOverviewResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 4,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 5,
+      "name": "brandPayoutsObligationsResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 6,
+      "name": "brandPayoutsOverviewResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 7,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 8,
+      "name": "brandPayoutsObligationsResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 9,
+      "name": "brandPayoutsOverviewResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 10,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 11,
+      "name": "brandPayoutsObligationsResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 24,
+      "name": "brandPayoutsOverviewResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 25,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 26,
+      "name": "brandPayoutsObligationsResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 27,
+      "name": "brandPayoutsOverviewResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 28,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 29,
+      "name": "brandPayoutsObligationsResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 33,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 34,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 36,
+      "name": "brandPayoutsObligationDetailResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 42,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 43,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 44,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 45,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 46,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 47,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 48,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 49,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 50,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 51,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 52,
+      "name": "brandPayoutsActivityDetailResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 62,
+      "name": "brandPayoutsActivityResponseSchema",
+      "success": true,
+      "issues": []
+    },
+    {
+      "requestIndex": 63,
+      "name": "brandPayoutsObligationsResponseSchema",
+      "success": true,
+      "issues": []
+    }
+  ]
+}

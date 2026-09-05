@@ -1,0 +1,20 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "signature": "P2_PAGINATED_LIST_BACK_RESTORATION_LOSS",
+  "completeBoundedAccessibilitySweep": true,
+  "settledReproductionCount": 16,
+  "sourceChanges": "NONE",
+  "migrationsCreated": "NONE",
+  "providerActions": "NONE",
+  "p2Acceptance": "NOT_SET",
+  "incompleteDueToCircuitBreaker": [
+    "Complete fresh actor/viewport matrix beyond captured Owner, inactive, empty and unrelated fixtures",
+    "Settings metadata applicability interception and destination verification",
+    "Complete keyboard focus-return and no-trap assessment",
+    "Final-item scrolled bottom-navigation/safe-area clearance"
+  ],
+  "noCompletePassingEvidenceClaim": true
+}

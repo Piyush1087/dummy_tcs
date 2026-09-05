@@ -1,0 +1,141 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "rows": [
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+      "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "anonymous",
+      "state": "route-entry-login",
+      "source": "AUTHORITATIVE_UNAUTHENTICATED_ROUTE",
+      "screenshot": "390-anonymous-route-entry.png",
+      "route": "/login",
+      "protectedFinancialDataRendered": false,
+      "rootMounted": true,
+      "overflow": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "normalPasswordFormVisible": true,
+      "credentialsFilled": false,
+      "fixture": "anonymous",
+      "networkReference": "authentication-entry.json",
+      "consoleResult": "Normal login mounted; no bootstrap exception",
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": "Unauthenticated screenshot; no protected Payouts content"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+      "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "anonymous",
+      "state": "route-entry-login",
+      "source": "AUTHORITATIVE_UNAUTHENTICATED_ROUTE",
+      "screenshot": "767-anonymous-route-entry.png",
+      "route": "/login",
+      "protectedFinancialDataRendered": false,
+      "rootMounted": true,
+      "overflow": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "normalPasswordFormVisible": true,
+      "credentialsFilled": false,
+      "fixture": "anonymous",
+      "networkReference": "authentication-entry.json",
+      "consoleResult": "Normal login mounted; no bootstrap exception",
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": "Unauthenticated screenshot; no protected Payouts content"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+      "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "anonymous",
+      "state": "route-entry-login",
+      "source": "AUTHORITATIVE_UNAUTHENTICATED_ROUTE",
+      "screenshot": "768-anonymous-route-entry.png",
+      "route": "/login",
+      "protectedFinancialDataRendered": false,
+      "rootMounted": true,
+      "overflow": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "normalPasswordFormVisible": true,
+      "credentialsFilled": false,
+      "fixture": "anonymous",
+      "networkReference": "authentication-entry.json",
+      "consoleResult": "Normal login mounted; no bootstrap exception",
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": "Unauthenticated screenshot; no protected Payouts content"
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+      "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "anonymous",
+      "state": "route-entry-login",
+      "source": "AUTHORITATIVE_UNAUTHENTICATED_ROUTE",
+      "screenshot": "1440-anonymous-route-entry.png",
+      "route": "/login",
+      "protectedFinancialDataRendered": false,
+      "rootMounted": true,
+      "overflow": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "normalPasswordFormVisible": true,
+      "credentialsFilled": false,
+      "fixture": "anonymous",
+      "networkReference": "authentication-entry.json",
+      "consoleResult": "Normal login mounted; no bootstrap exception",
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": "Unauthenticated screenshot; no protected Payouts content"
+    }
+  ],
+  "tokenInjection": false
+}

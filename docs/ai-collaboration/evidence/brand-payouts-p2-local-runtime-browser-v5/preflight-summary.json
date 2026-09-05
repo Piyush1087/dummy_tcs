@@ -1,0 +1,12 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "c3ca6ff26d568915276e13140335f5811bb1cc50",
+  "frontendTree": "123a037005608c7568155f128656a360b32d7c49",
+  "initialRows": 76,
+  "identifierAndEarlyRestorationRows": 56,
+  "settledRestorationRows": 32,
+  "completeBoundedSweep": true,
+  "seriousCritical": [],
+  "remainingWorkflow": "Full actor, Settings destination, complete focus/clearance matrix stopped on reproducible source defect."
+}
