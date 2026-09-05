@@ -4056,4 +4056,4 @@ The P3 runtime is the direct transport/security correction descendant of the P1 
 
 [Backend runtime acceptance overlay](c03_backend_api_state_contract_v1.md#p3_runtime_acceptance_overlay) and [verbatim V4 report](../../../ai-collaboration/c03-p3-backend-runtime-acceptance-report-v4.md) supply the accepted backend evidence. P4 architectural eligibility is YES; implementation is NOT STARTED and is not authorized by this assignment. P5 is NOT STARTED. No frontend source is modified.
 
-Systems Architect acceptance SHA = P3_ACCEPTANCE_RECORD_SHA_PENDING_BINDING
+Systems Architect acceptance SHA = c32841516330f37f19effc63423317619ec1ecd5

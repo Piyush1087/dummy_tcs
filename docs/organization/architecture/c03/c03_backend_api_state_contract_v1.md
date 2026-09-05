@@ -460,4 +460,4 @@ P4 consumes this document as semantic/state authority and the P3 runtime SHA abo
 
 [Preserved V4 evidence](../../../ai-collaboration/c03-p3-backend-runtime-acceptance-report-v4.md): full suite 6188 PASS / 753 GUARDED SKIPS / 0 FAIL; build, startup, HTTP privacy/CORS/projections, legacy Apply 410, materialized Notification security and security diff PASS. V2 migration and V3 PostgreSQL/timeout evidence retain their original provenance. ZIP SHA-256 `10c0138beb31f1048978cc8550d1e5a52ec45568599d614c3a6e48a6d21ac02c`. Correction accounting remains authority=1, timeout lane=1, runtime=1, runtime budget remaining=0.
 
-Systems Architect acceptance SHA = P3_ACCEPTANCE_RECORD_SHA_PENDING_BINDING
+Systems Architect acceptance SHA = c32841516330f37f19effc63423317619ec1ecd5

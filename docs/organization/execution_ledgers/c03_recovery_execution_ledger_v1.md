@@ -1125,4 +1125,4 @@ EVIDENCE_ZIP_SHA256 = 10c0138beb31f1048978cc8550d1e5a52ec45568599d614c3a6e48a6d2
 
 The ZIP is preserved externally and is not committed. No runtime tests/build, AWS, provider operation, production access, frontend changes, P4 or P5 implementation are part of this binding.
 
-Systems Architect acceptance SHA = P3_ACCEPTANCE_RECORD_SHA_PENDING_BINDING
+Systems Architect acceptance SHA = c32841516330f37f19effc63423317619ec1ecd5
