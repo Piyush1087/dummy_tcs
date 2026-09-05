@@ -30,7 +30,7 @@ line is admitted here.
 | P1.1D guards / locking / adapters / compatibility | PASS | `ab8d1c022ae165846a40a8737f163bdb5ba7d65c` | 78 | P1.1E |
 | P1.1E PostgreSQL acceptance | PASS | `fa4c7f7b767a71c3d21a0e3835a2bbfc36bcd642` | 78 | P1.2 |
 | P1.2 Opportunity entitlement/read APIs | PASS | `c2f5f1461b847f811edbf1f54e4b427366664989` | 78 | P1.3 |
-| P1.3 Application commands/history | NOT STARTED | — | — | P1.2 PASS |
+| P1.3 Application commands/history | PASS | `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` | 78 | P1.4 |
 | P1.4 Collaboration/Notifications handoff | NOT STARTED | — | — | P1.3 PASS |
 
 ## 3. P1.1A immutable entry
@@ -492,13 +492,210 @@ P2_EXECUTION = NOT STARTED
 NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 ```
 
-## 9. Current continuation
+## 9. P1.3 immutable acceptance entry
+
+Systems Architect final technical review accepted P1.3 through
+`C03_P1_3_DURABLE_ACCEPTANCE_BINDING_V1`. This entry records that supplied
+verdict and previously executed evidence. This docs-only binding performs
+no backend runtime, frontend, Product, architecture, schema, migration, AWS,
+production, or provider operation. No test/build rerun is claimed here.
+
+| Field | Evidence |
+|---|---|
+| Checkpoint | `P1.3 — Application commands and history` |
+| Prior accepted backend SHA | `c2f5f1461b847f811edbf1f54e4b427366664989` |
+| Prior accepted backend tree | `62ed8af61f3e7c40c7a20a60b142507696062872` |
+| Final accepted backend SHA | `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` |
+| Final accepted backend tree | `fdb482942380dbc1cbf086de5907fac798b3e004` |
+| Backend chain | `c2f5f1461b847f811edbf1f54e4b427366664989` → `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` |
+| Linear | YES; one direct child |
+| Merge/rebase/cherry-pick | NONE |
+| Migration count | 78 |
+| Schema changes | NONE |
+| Migration changes | NONE |
+| Backend publication | One coherent P1.3 commit, non-force push, exact SHA/tree fetch-back and clean worktree; PASS |
+| Verdict | `PASS`; supplied Systems Architect acceptance |
+
+### 9.1 Full correction history
+
+1. **Initial implementation:** focused Application tests passed; real
+   PostgreSQL exposed mapped Asset-column failures. The ordinary full suite
+   also exposed legacy-retirement and test-fixture issues.
+2. **Correction 1:** fixed exact physical Asset/Brief SQL mapping,
+   PostgreSQL advisory-lock return typing, test fixture placement, the legacy
+   Apply retirement assertion, and historical Creator projection/evidence
+   checks. Result: PostgreSQL **55 PASS / 1 test-assertion failure**. The
+   database correctly rejected duplicate receipt scope; the assertion expected
+   a constraint name instead of the returned column tuple.
+3. **Correction 2:** fixed the receipt uniqueness assertion to SQLSTATE
+   `23505` and the exact four-column scope (`command_type`, `actor_user_id`,
+   `authority_subject_id`, `idempotency_key_digest`); added
+   history-after-invitation-expiry coverage. Result: PostgreSQL **57/57 PASS**
+   and focused **4918/4918 PASS**.
+4. **Final integration review — STOP:** canonical `Idempotency-Key` was
+   missing from the global CORS allowlist. The runner stopped under
+   `P1_3_CORRECTION_BUDGET_EXHAUSTED`; it did not publish the blocked candidate.
+5. **Systems-authorized residual lane:** preserved the unpublished P1.3
+   candidate, added canonical `Idempotency-Key` to bootstrap CORS, and added
+   CORS/header regression coverage plus real compiled-Nest OPTIONS preflights.
+6. **Residual correction 1:** fixed test-only Nest constructor metadata
+   required by Vitest, following the repository's HTTP-test pattern. No
+   Application/domain behavior changed.
+7. **Final result:** all residual and complete acceptance gates passed;
+   the coherent P1.3 candidate was committed, pushed, and fetched back.
 
 ```text
-LAST_ACCEPTED_CHECKPOINT = P1.2
-CURRENT_CHECKPOINT = P1.3
-P1_3_EXECUTION = NOT STARTED AT TIME OF P1.2 ACCEPTANCE BINDING
-P1_4_EXECUTION = NOT STARTED
+ORIGINAL_CORRECTION_COUNT_P1_3 = 2
+P1_3_RESIDUAL_LANE = 1
+P1_3_RESIDUAL_CORRECTION_COUNT = 1
+P1_3_RESIDUAL_CORRECTION_BUDGET_REMAINING = 0
+```
+
+### 9.2 Accepted implementation contract
+
+- Canonical Submit revalidates the current actor/Owner subject and accepted
+  P1.2 Opportunity policy at submission time.
+- `Idempotency-Key` command contract, digest-only `ApplicationCommandReceipt`,
+  and immutable `C03_APPLICATION_SNAPSHOT_V1`.
+- Same-opportunity/reapply rules, subject×Campaign quota **<= 2**, and
+  subject×Brand quota **<= 5**; safe first/conversion attribution.
+- Durable `application.submitted`, `application.rejected`,
+  `application.withdrawn`, and `application.expired` events.
+- My Applications and Application detail; Owner/Manager pending Withdraw;
+  Assistant historical VIEW without Withdraw authority.
+- Brand canonical Applicant adapter and Reject, bounded internal Expire,
+  and legacy Creator Apply retirement.
+
+Canonical Creator routes:
+
+```text
+POST /api/v1/creator/campaigns/:campaignId/applications
+GET /api/v1/creator/applications
+GET /api/v1/creator/applications/:applicationId
+POST /api/v1/creator/applications/:applicationId/withdraw
+```
+
+Brand canonical surfaces:
+
+```text
+GET /api/v1/brand-uce/campaigns/:campaignId/applications
+POST /api/v1/brand-uce/campaigns/:campaignId/applications/:applicationId/reject
+POST /api/v1/brand-uce/campaigns/:campaignId/applications/:applicationId/approve
+
+FAIL_CLOSED_PENDING_P1_4_HANDOFF =
+C03_CANONICAL_APPLICATION_HANDOFF_NOT_AVAILABLE
+```
+
+Canonical Approve intentionally fails closed. No canonical APPROVED
+Application is committed without its required P1.4 Collaboration handoff.
+
+```text
+POST /api/v1/creator-uce/campaigns/:campaignId/apply
+→ 410 LEGACY_APPLICATION_ENDPOINT_RETIRED
+```
+
+### 9.3 Accepted concurrency and PostgreSQL evidence
+
+P1.3 PostgreSQL total: **57/57 PASS**, including:
+
+- Same Idempotency-Key/same request replay, same key/changed fingerprint
+  conflict, and different-key same-opportunity contention.
+- Owner + Assistant same-opportunity race; subject×Campaign and subject×Brand
+  concurrent quota races.
+- Withdraw vs Reject, Reject vs Expire, and Withdraw vs Expire: one durable
+  terminal winner without history rewrite.
+- Snapshot exactly-one constraint and immutability; Application deletion,
+  identity/selection mutation, and status-transition guards.
+- Append-only event guards, event-version uniqueness, same-opportunity
+  database uniqueness, and receipt scope uniqueness.
+
+| Retained affected PostgreSQL regression | Accepted result |
+|---|---|
+| P1.2 Opportunity | 9/9 PASS |
+| C01 I1 persistence | 22/22 PASS |
+| C01 I5 continuation | 21/21 PASS |
+| C05 Team | 5/5 PASS |
+
+The CORS-only residual changed no Application/domain/database implementation.
+It did not require a PostgreSQL rerun and retained the previously completed
+57/57 domain/database evidence. This docs-only binding also reruns no database
+tests.
+
+### 9.4 Final accepted candidate evidence
+
+| Gate | Accepted result |
+|---|---|
+| Focused residual/regression | 4947 PASS, 0 FAIL |
+| Full backend suite | 6187 PASS, 0 FAIL; 719 canonical guarded skips; 194 files passed, 52 skipped; normal completion |
+| Changed-file format | PASS |
+| Changed-file lint | PASS |
+| Production build | PASS |
+| Startup smoke | PASS |
+| Real Creator OPTIONS preflight | PASS; submit and withdraw |
+| Real Brand OPTIONS preflight | PASS; reject and approve |
+| CORS mutation proof | PASS; Application, snapshot, event and receipt counts unchanged; preflight does not enter the command |
+| Security diff review | PASS |
+| Schema/migration integrity | PASS; 78 migrations; no delta |
+
+### 9.5 Security boundary
+
+```text
+canonical command header = Idempotency-Key
+compatibility CORS header = x-idempotency-key
+x-idempotency-key is NOT canonical command authority
+raw Idempotency-Key = not persisted; not logged; not echoed
+Application responses = Cache-Control: private, no-store
+historical Application reads = current Creator Team authorization
+historical Application reads require current Instagram usability = NO
+AWS / production / live provider activity = NONE
+```
+
+The residual preserves the existing origin and credential policy; it adds no
+wildcard credential allowance or origin relaxation. Real preflights accept
+the canonical header without reflecting credential values. Missing canonical
+keys and compatibility-only keys remain rejected by canonical commands.
+
+### 9.6 P1.4 boundary carried forward
+
+```text
+P1_4 = NOT STARTED
+```
+
+P1.4 remains responsible for the frozen narrow atomic handoff:
+
+```text
+canonical PENDING → APPROVED
++ unique Application-sourced Collaboration
++ approved Application event
++ Creator notification intent
+```
+
+P1.3 did not implement Collaboration provisioning, Notification dual-scope
+persistence, negotiation implementation, Creator Brief Pack, or frontend.
+Recording the next checkpoint does not authorize or begin that implementation.
+
+### 9.7 Systems Architect verdict and execution boundary
+
+```text
+P1_3 = PASS
+P1_3_ACCEPTED_BACKEND_SHA = 4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd
+P1_3_ACCEPTED_BACKEND_TREE = fdb482942380dbc1cbf086de5907fac798b3e004
+PRODUCT_QUESTIONS = NONE
+ARCHITECTURE_CONFLICTS = NONE
+SECURITY_BOUNDARY_CHANGES = NONE
+NEXT_INTERNAL_CHECKPOINT = P1.4
+P1_4_EXECUTION = NOT STARTED AT TIME OF P1.3 ACCEPTANCE BINDING
+P2_EXECUTION = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+## 10. Current continuation
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P1.3
+CURRENT_CHECKPOINT = P1.4
+P1_3 = PASS
+P1_4_EXECUTION = NOT STARTED AT TIME OF P1.3 ACCEPTANCE BINDING
 P2_STATE = NOT STARTED
 P2_EXECUTION = NOT_AUTHORIZED
 NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
