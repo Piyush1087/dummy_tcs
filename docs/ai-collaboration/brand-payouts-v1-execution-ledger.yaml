@@ -31,7 +31,7 @@ next_parent_gate: "BP-P2-FIRST-VERTICAL-SLICE"
 
 phase: "P1_ACCEPTED"
 branch: "brand-payouts/v1-execution-ledger"
-checkpoint_sha: null
+checkpoint_sha: "3dc8cef560cbe011fa39bfe33c3766786c0eddb7"
 checkpoint_name: "BP-P1-BACKEND-READ"
 next_phase: "P2_FIRST_FRONTEND_VERTICAL_SLICE"
 
@@ -174,7 +174,7 @@ phase_checkpoints:
   p1_backend_read:
     status: "ACCEPTED"
     checkpoint_name: "BP-P1-BACKEND-READ"
-    authority_sha: null
+    authority_sha: "3dc8cef560cbe011fa39bfe33c3766786c0eddb7"
     backend_parent_sha: "b19752e476f85509ac2a895ffde6f17180dec7ee"
     backend_sha: "60385abbd12d5a363615100c463ac6755ce848ea"
     backend_tree_sha: "1826f3aad9e57b0cf3226a2a3a1acd951c4f344a"
