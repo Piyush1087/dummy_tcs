@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P2_GATE_RECOVERY_BROWSER_RERUN_REQUIRED"
+status: "SA_EXECUTION_STOPPED_NON_DELEGABLE"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -28,13 +28,13 @@ execution_mode:
 
 authorization_artifact: "BRAND_PAYOUTS_P2_RECOVERY_AND_AUTONOMOUS_SA_CHECKPOINT_AUTHORIZATION_V2"
 authorized_segment: "P2_RECOVERY_AND_AUTONOMOUS_PROVIDER_NEUTRAL_CONTINUATION"
-next_parent_gate: "NONE_TECHNICAL_CHECKPOINTS_DELEGATED_TO_SYSTEMS_ARCHITECT"
+next_parent_gate: "P2_SECOND_SOURCE_DEFECT_CORRECTION_AUTHORITY"
 
-phase: "P2_GATE_RECOVERY_BROWSER_RERUN_REQUIRED"
+phase: "P2_GATE_RECOVERY_CIRCUIT_BREAKER"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "3dc8cef560cbe011fa39bfe33c3766786c0eddb7"
 checkpoint_name: "BP-P1-BACKEND-READ"
-next_phase: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_RERUN"
+next_phase: "PARENT_AUTHORIZATION_REQUIRED_FOR_SECOND_P2_SOURCE_CORRECTION"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -49,7 +49,7 @@ dependency_gates:
   campaign_manager_entity_scope: "RESOLVED_FAIL_CLOSED_ZERO_ROWS"
   payment_support_security_policy: "OPEN_BLOCKING"
   complete_v1_source_coresidence: "OPEN_BLOCKING"
-  first_vertical_slice: "BACKEND_RUNTIME_AND_FRONTEND_SOURCE_RECOVERY_PASS_BROWSER_EVIDENCE_OPEN"
+  first_vertical_slice: "BLOCKED_PAYOUTS_SERIOUS_COLOR_CONTRAST"
   first_financial_reserve_path: "OPEN_HUMAN_GATE"
   india_withholding_if_applicable: "OPEN_HUMAN_GATE"
 
@@ -109,6 +109,14 @@ tests:
   p2_frontend_changed_file_format: "PASS"
   p2_frontend_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
   p2_browser_evidence_v1: "SOURCE_DEFECT_CONFIRMED_AT_259E35BC1163BFBE4402D63D363F09F1284044B6"
+  p2_browser_evidence_v2: "CIRCUIT_BREAKER_CONFIRMED_AT_73781A3BBB6ED8B5CC88E0288FC929142397F924"
+  p2_browser_v1_bootstrap_defect_retest: "PASS_NOT_REPEATED"
+  p2_browser_v2_http_rbac: "PASS_178_ASSERTIONS_64_GET_9_REAL_PASSWORD_LOGINS"
+  p2_browser_v2_runtime_schemas: "PASS_31_LIVE_RESPONSES"
+  p2_browser_v2_financial_read_purity: "PASS_HASH_EQUAL_SEVEN_CANONICAL_MODELS"
+  p2_browser_v2_owner_overflow_sample: "PASS_390_767_768_1440_NO_DOCUMENT_OVERFLOW"
+  p2_browser_v2_accessibility: "FAIL_SERIOUS_COLOR_CONTRAST_THREE_PAYOUTS_ELEMENTS_ALL_REQUIRED_WIDTHS"
+  p2_browser_v2_complete_matrix: "NOT_COMPLETED_CIRCUIT_BREAKER"
   p2_frontend_runtime_recovery_focused: "PASS_27_OF_27"
   p2_frontend_runtime_recovery_full: "PASS_877_OF_877"
   p2_frontend_runtime_recovery_changed_file_lint: "PASS"
@@ -130,8 +138,8 @@ tests:
   p2_full_app_startup: "PASS_ROOT_LIVE_DATABASE_HEALTH_PAYOUTS_ROUTE_401_AND_CONTROLLED_SHUTDOWN"
   p2_diff_check: "PASS"
   p2_schema_migration_diff: "NONE"
-  p2_browser_responsive: "V1_SOURCE_DEFECT_PRESERVED_V2_LOCAL_DESKTOP_RERUN_REQUIRED"
-  p2_production_shaped: "BACKEND_AND_FRONTEND_SOURCE_RECOVERY_PASS_BROWSER_EVIDENCE_OPEN"
+  p2_browser_responsive: "PARTIAL_EVIDENCE_ONLY_NOT_ACCEPTED_SERIOUS_CONTRAST"
+  p2_production_shaped: "BLOCKED_SECOND_GENUINE_P2_SOURCE_DEFECT"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -181,10 +189,28 @@ correction_history:
     scope: "HONOR_EXACT_EXPLICIT_LOCAL_STAGE_FOR_BUILT_PREVIEW_WHILE_RETAINING_NON_LOCAL_LOOPBACK_REJECTION"
     correction_budget: "SEPARATELY_AUTHORIZED_SINGLE_P2_SOURCE_DEFECT_EXCEPTION"
 
-last_failure: "P2_V1_BROWSER_BOOTSTRAP_REJECTED_EXPLICIT_LOCAL_LOOPBACK"
-breaker: null
-stop_reason: "UNAVOIDABLE_LOCAL_DESKTOP_RUNTIME_BROWSER_EVIDENCE_RERUN"
+last_failure: "P2_PAYOUTS_SERIOUS_COLOR_CONTRAST"
+breaker: "SECOND_GENUINE_P2_SOURCE_DEFECT_AFTER_SINGLE_RECOVERY_LOOP_CONSUMED"
+stop_reason: "PARENT_AUTHORIZATION_REQUIRED_FOR_ADDITIONAL_BOUNDED_P2_ACCESSIBILITY_CORRECTION"
 environment: "CHATGPT_WORK_CLOUD_PLUS_AUTHORIZED_LOCAL_DESKTOP_RELAY"
+
+non_delegable_gate:
+  type: "P2_SECOND_SOURCE_DEFECT_CORRECTION_AUTHORITY"
+  decision_owner: "PARENT"
+  requested_scope: "ONE_ADDITIONAL_BOUNDED_ACCESSIBILITY_CORRECTION_AND_BROWSER_EVIDENCE_RERUN"
+  max_production_files: 1
+  preferred_production_scope:
+    - "src/features/brand-payouts/brand-payouts.css"
+  required_validation:
+    - "TARGETED_CONTRAST_REGRESSION"
+    - "FOCUSED_AND_FULL_FRONTEND_GATES"
+    - "FRESH_COMPLETE_LOCAL_BROWSER_EVIDENCE_PACKAGE"
+  prohibited_without_separate_proof:
+    - "GLOBAL_AURORA_TOKEN_CHANGE"
+    - "GLOBAL_AURORA_BUTTON_CHANGE"
+    - "PRODUCT_OR_FINANCIAL_SEMANTIC_CHANGE"
+    - "SCHEMA_OR_MIGRATION_CHANGE"
+    - "PROVIDER_ACTION"
 
 checkpoint_policy:
   max_phases_per_authorized_segment: 3
@@ -292,10 +318,27 @@ phase_checkpoints:
       migrations_created_or_applied: false
       provider_actions: []
     browser_evidence_v2:
-      status: "LOCAL_DESKTOP_RERUN_REQUIRED"
-      expected_report: "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v2.md"
+      status: "P2_RUNTIME_BROWSER_CIRCUIT_BREAKER"
+      commit: "73781a3bbb6ed8b5cc88e0288fc929142397f924"
+      tree: "20fd5da6f8fe9398bbf9bb885b4a8d7984bff2dd"
+      report: "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v2.md"
+      affected_frontend_sha: "5df18df718e8a69dd22d7c31fab804716d87329a"
+      failure_signature: "P2_PAYOUTS_SERIOUS_COLOR_CONTRAST"
+      v1_bootstrap_failure_repeated: false
+      serious_contrast_failures: 3
+      required_widths_failed:
+        - 390
+        - 767
+        - 768
+        - 1440
+      complete_browser_matrix: "NOT_COMPLETED_CIRCUIT_BREAKER"
+      source_changes: false
+      migrations_created_or_applied: false
+      provider_actions: []
     blockers:
-      - "LIVE_BROWSER_V2_390_767_768_1440_SCREENSHOT_DOM_ACCESSIBILITY_EVIDENCE_REQUIRED"
+      - "P2_PAYOUTS_SERIOUS_COLOR_CONTRAST"
+      - "COMPLETE_BROWSER_ACTOR_STATE_KEYBOARD_ACCESSIBILITY_MATRIX_NOT_COMPLETED"
+      - "PARENT_AUTHORIZATION_REQUIRED_FOR_SECOND_P2_SOURCE_CORRECTION"
   p3a_operations_cutover: null
   p3s_support: null
   p4_base_convergence: null
@@ -318,6 +361,7 @@ files_changed:
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-rerun-runner-v1.md"
+    - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v2.md"
     - "docs/organization/architecture/brand-payouts/brand_payouts_p0_executable_contract_register_v1.md"
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_c04_settlement_dependency_handoff_v1.md"
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_campaign_net_terms_correction_handoff_v1.md"
@@ -372,6 +416,6 @@ files_changed:
     - "src/shared/config/resolve-env.test.ts"
   provider_evidence: []
 
-uncheckpointed_work: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_RERUN"
+uncheckpointed_work: "NONE_EXECUTION_STOPPED_NON_DELEGABLE"
 
-last_updated: "2026-09-05T11:23:15Z"
+last_updated: "2026-09-05T16:32:32Z"
