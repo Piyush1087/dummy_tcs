@@ -1,0 +1,167 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "events": [
+    {
+      "actor": "owner",
+      "state": "keyboard-overview",
+      "event": "keyboard-activation",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Notifications",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Open Menu",
+          "href": null,
+          "outline": "rgb(0, 0, 0) auto 0px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        }
+      ],
+      "key": "Enter"
+    },
+    {
+      "width": 390,
+      "event": "detail-entry",
+      "invoking": {
+        "tag": "A",
+        "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+        "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+        "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+        "focusVisible": true,
+        "scrollY": 1921
+      },
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      },
+      "route": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a"
+    },
+    {
+      "width": 390,
+      "event": "escape-nondismissible-page",
+      "route": "?obligation=payout-obligation%3Abp-p2-obligation-a",
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 0
+      }
+    },
+    {
+      "actor": "owner",
+      "state": "keyboard-obligation-detail",
+      "event": "keyboard-activation",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Back to Payouts",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        }
+      ],
+      "key": "Space"
+    },
+    {
+      "width": 390,
+      "event": "back-action-restored-overview",
+      "focus": {
+        "tag": "BODY",
+        "name": "TTheCreatorShopHomeBrand CentreCampaignsBrand pageCollaborationsPayoutsSettingsSupportLogoutUpgrade ",
+        "href": null,
+        "outline": "rgb(14, 18, 20) none 0px",
+        "focusVisible": false,
+        "scrollY": 1744
+      },
+      "route": "/brand/payouts"
+    },
+    {
+      "actor": "owner",
+      "state": "back-action-restoration",
+      "event": "keyboard-activation",
+      "trace": [
+        {
+          "tag": "BUTTON",
+          "name": "Refresh",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "focusVisible": true,
+          "scrollY": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1374
+        },
+        {
+          "tag": "A",
+          "name": "View payout obligation payout-obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?obligation=payout-obligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "SUMMARY",
+          "name": "Data coverage and limitations",
+          "href": null,
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 1921
+        },
+        {
+          "tag": "A",
+          "name": "View activity financial-activity:obligation:bp-p2-obligation-a",
+          "href": "/brand/payouts?activity=financial-activity%3Aobligation%3Abp-p2-obligation-a",
+          "outline": "rgba(52, 211, 153, 0.65) solid 2px",
+          "focusVisible": true,
+          "scrollY": 2610
+        }
+      ],
+      "key": "Enter"
+    }
+  ]
+}

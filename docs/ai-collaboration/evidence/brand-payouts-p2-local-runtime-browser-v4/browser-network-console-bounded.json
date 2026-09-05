@@ -1,0 +1,1886 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "network": [
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "path": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "path": "/api/v1/brand/payouts/activity/financial-activity%3Aledger%3Abp-p2-ledger-a-054",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "path": "/api/v1/brand/payouts/activity/obligation%3Abp-p2-obligation-a%3Acreated",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "path": "/api/v1/brand/payouts/activity/obligation%3Abp-p2-obligation-a%3Acreated",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/assets/index-3846YT-9.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/assets/index-CipHhmzy.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "messages": [
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "CONSOLE_ERROR",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "interceptions": [
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "login",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-link-failure",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "CONTRACT_VALID_UNAVAILABLE_PROJECTION",
+      "path": "/api/v1/brand/payouts/activity/obligation%3Abp-p2-obligation-a%3Acreated",
+      "schemaValid": true
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "CONTRACT_VALID_UNAVAILABLE_PROJECTION",
+      "path": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "schemaValid": true
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "api.fontshare.com",
+      "path": "/v2/css"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "kind": "BLOCK_EXTERNAL_ASSET",
+      "host": "fonts.googleapis.com",
+      "path": "/css2"
+    }
+  ]
+}

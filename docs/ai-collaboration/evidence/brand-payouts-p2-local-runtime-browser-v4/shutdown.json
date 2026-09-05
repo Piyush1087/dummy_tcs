@@ -1,0 +1,20 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "containerRemoved": true,
+  "ownedProcessCount": 4,
+  "remainingListeners": 0,
+  "privateSessionRemoved": true,
+  "browserContexts": "All browser scripts close browsers in finally or normal completion",
+  "backendTermination": "Controlled Windows Stop-Process of owned process trees; no claim of graceful Nest shutdown-hook execution",
+  "database": "Disposable Docker container stopped and removed with --volumes",
+  "ownedPorts": [
+    3107,
+    4177,
+    55439
+  ],
+  "remainingResources": "NONE",
+  "providerActions": 0
+}

@@ -1,0 +1,1835 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "payoutsMutations": [],
+  "unexpectedActivity404s": [
+    {
+      "actor": "owner",
+      "state": "activity-ready",
+      "path": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-source-unavailable",
+      "path": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "back-action-restoration",
+      "path": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "path": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "path": "/api/v1/brand/payouts/activity/financial-activity%3Aledger%3Abp-p2-ledger-a-054",
+      "status": 404,
+      "method": "GET"
+    }
+  ],
+  "pageErrors": [],
+  "domInspection": [
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "ready-partial",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-ready",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "initial-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "refreshing",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "stale-last-known",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "invalid-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "empty",
+      "state": "empty-brand",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "finance",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "manager",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "actor-projection",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "keyboard-obligation-detail",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "back-action-restoration",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    },
+    {
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "unnamedControls": [],
+      "fixedFinancialClaims": false,
+      "forbiddenControls": []
+    }
+  ],
+  "amountAndDateOwnership": {
+    "file": "src/features/brand-payouts/utils/brand-payouts-presentation.ts",
+    "evidence": "Money decimal strings are grouped without numeric arithmetic. Due dates are rendered only when provided by the backend; timestamps are formatted, not derived payment terms."
+  },
+  "diagnostics": "No raw response diagnostic is rendered in activity error; generic fail-closed text.",
+  "fontFailures": "Only intentional blocked external font asset failures; computed styles and Axe still measured on rendered page."
+}

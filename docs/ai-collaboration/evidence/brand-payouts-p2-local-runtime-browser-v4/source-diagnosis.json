@@ -1,0 +1,42 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "signature": "P2_ACTIVITY_DETAIL_PUBLIC_REFERENCE_MISMATCH",
+  "failure": "Authorized UI activity links return 404 for existing lifecycle and money-movement records.",
+  "listExamples": [
+    {
+      "activity_id": "obligation:bp-p2-obligation-a:created",
+      "public_reference": "financial-activity:obligation:bp-p2-obligation-a",
+      "category": "BUSINESS_OBLIGATION"
+    },
+    {
+      "activity_id": "ledger:bp-p2-ledger-a-054:recorded",
+      "public_reference": "financial-activity:ledger:bp-p2-ledger-a-054",
+      "category": "MONEY_MOVEMENT"
+    }
+  ],
+  "frontendLink": {
+    "file": "src/features/brand-payouts/components/PayoutsActivity.tsx",
+    "line": 225,
+    "expression": "?activity=${encodeURIComponent(item.public_reference)}"
+  },
+  "frontendClient": {
+    "file": "src/features/brand-payouts/api/brand-payouts-client.ts",
+    "line": 186,
+    "behavior": "Encodes supplied reference unchanged into /activity/:reference"
+  },
+  "backendParser": {
+    "file": "src/features/brand-payouts/services/financial-activity-projection.service.ts",
+    "line": 1292,
+    "acceptedShape": "(ledger|obligation|transfer|reversal|brand-return):<id>:(recorded|created)",
+    "publicReferenceShape": "financial-activity:<source>:<id>"
+  },
+  "sourceChangeRequired": "The UI reference and built backend parser disagree. Ports, credentials, timestamps, and database fixtures cannot reconcile these immutable source expressions.",
+  "canonicalIdDiagnostic": "200 responses prove record existence and permit the bounded ready-state Axe sweep; direct canonical-ID navigation is not counted as fixing the UI.",
+  "additionalObservations": [
+    "BODY remains active after obligation navigation and Back; no automatic heading focus. Preserved as a manual observation, not a separately established WCAG violation."
+  ],
+  "sourceChanges": "NONE"
+}

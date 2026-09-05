@@ -1,0 +1,3417 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "rows": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "ready-partial",
+      "screenshot": "390-owner-ready-partial.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "ready-partial",
+      "screenshot": "767-owner-ready-partial.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "ready-partial",
+      "screenshot": "768-owner-ready-partial.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "ready-partial",
+      "screenshot": "1440-owner-ready-partial.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-ready",
+      "screenshot": "390-owner-obligation-ready.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-ready",
+      "screenshot": "767-owner-obligation-ready.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-ready",
+      "screenshot": "768-owner-obligation-ready.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-ready",
+      "screenshot": "1440-owner-obligation-ready.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-loading",
+      "screenshot": "390-owner-obligation-loading.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-loading",
+      "screenshot": "767-owner-obligation-loading.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-loading",
+      "screenshot": "768-owner-obligation-loading.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-loading",
+      "screenshot": "1440-owner-obligation-loading.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "screenshot": "390-owner-obligation-unavailable.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "screenshot": "767-owner-obligation-unavailable.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "screenshot": "768-owner-obligation-unavailable.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-unavailable",
+      "screenshot": "1440-owner-obligation-unavailable.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "screenshot": "390-owner-obligation-source-unavailable.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "screenshot": "767-owner-obligation-source-unavailable.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "screenshot": "768-owner-obligation-source-unavailable.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "obligation-source-unavailable",
+      "screenshot": "1440-owner-obligation-source-unavailable.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "screenshot": "390-owner-activity-ready.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "screenshot": "767-owner-activity-ready.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "screenshot": "768-owner-activity-ready.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-unexpected-404",
+      "screenshot": "1440-owner-activity-ready.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-loading",
+      "screenshot": "390-owner-activity-loading.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-loading",
+      "screenshot": "767-owner-activity-loading.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-loading",
+      "screenshot": "768-owner-activity-loading.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-loading",
+      "screenshot": "1440-owner-activity-loading.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "screenshot": "390-owner-activity-unavailable.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "screenshot": "767-owner-activity-unavailable.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "screenshot": "768-owner-activity-unavailable.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-unavailable",
+      "screenshot": "1440-owner-activity-unavailable.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "screenshot": "390-owner-activity-source-unavailable.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "screenshot": "767-owner-activity-source-unavailable.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "screenshot": "768-owner-activity-source-unavailable.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-no-projection-applied",
+      "screenshot": "1440-owner-activity-source-unavailable.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "initial-loading",
+      "screenshot": "390-owner-initial-loading.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "initial-loading",
+      "screenshot": "767-owner-initial-loading.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "initial-loading",
+      "screenshot": "768-owner-initial-loading.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "initial-loading",
+      "screenshot": "1440-owner-initial-loading.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "screenshot": "390-owner-independent-activity-loading.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 1,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "screenshot": "767-owner-independent-activity-loading.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 1,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "screenshot": "768-owner-independent-activity-loading.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 1,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "independent-activity-loading",
+      "screenshot": "1440-owner-independent-activity-loading.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 1,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "screenshot": "390-owner-overview-unavailable-retry.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "screenshot": "767-owner-overview-unavailable-retry.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "screenshot": "768-owner-overview-unavailable-retry.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "overview-unavailable-retry",
+      "screenshot": "1440-owner-overview-unavailable-retry.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "screenshot": "390-owner-section-source-unavailable.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "screenshot": "767-owner-section-source-unavailable.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "screenshot": "768-owner-section-source-unavailable.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "section-source-unavailable",
+      "screenshot": "1440-owner-section-source-unavailable.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "refreshing",
+      "screenshot": "390-owner-refreshing.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "refreshing",
+      "screenshot": "767-owner-refreshing.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "refreshing",
+      "screenshot": "768-owner-refreshing.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "refreshing",
+      "screenshot": "1440-owner-refreshing.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "stale-last-known",
+      "screenshot": "390-owner-stale-last-known.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "stale-last-known",
+      "screenshot": "767-owner-stale-last-known.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "stale-last-known",
+      "screenshot": "768-owner-stale-last-known.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "stale-last-known",
+      "screenshot": "1440-owner-stale-last-known.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "invalid-detail",
+      "screenshot": "390-owner-invalid-detail.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "invalid-detail",
+      "screenshot": "767-owner-invalid-detail.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "invalid-detail",
+      "screenshot": "768-owner-invalid-detail.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "invalid-detail",
+      "screenshot": "1440-owner-invalid-detail.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "empty",
+      "state": "empty-brand",
+      "screenshot": "390-empty-empty-brand.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "empty",
+      "state": "empty-brand",
+      "screenshot": "767-empty-empty-brand.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "empty",
+      "state": "empty-brand",
+      "screenshot": "768-empty-empty-brand.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "empty",
+      "state": "empty-brand",
+      "screenshot": "1440-empty-empty-brand.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "screenshot": "390-inactive-obligation-access-denied.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "screenshot": "767-inactive-obligation-access-denied.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "screenshot": "768-inactive-obligation-access-denied.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "obligation-access-denied",
+      "screenshot": "1440-inactive-obligation-access-denied.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "screenshot": "390-inactive-activity-access-denied.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "screenshot": "767-inactive-activity-access-denied.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "screenshot": "768-inactive-activity-access-denied.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "activity-access-denied",
+      "screenshot": "1440-inactive-activity-access-denied.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "screenshot": "390-unrelated-obligations-pagination-control.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "screenshot": "767-unrelated-obligations-pagination-control.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "screenshot": "768-unrelated-obligations-pagination-control.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "obligations-pagination-control",
+      "screenshot": "1440-unrelated-obligations-pagination-control.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "actor-projection",
+      "screenshot": "390-owner-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "actor-projection",
+      "screenshot": "767-owner-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "actor-projection",
+      "screenshot": "768-owner-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "actor-projection",
+      "screenshot": "1440-owner-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "finance",
+      "state": "actor-projection",
+      "screenshot": "390-finance-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "finance",
+      "state": "actor-projection",
+      "screenshot": "767-finance-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "finance",
+      "state": "actor-projection",
+      "screenshot": "768-finance-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "finance",
+      "state": "actor-projection",
+      "screenshot": "1440-finance-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "manager",
+      "state": "actor-projection",
+      "screenshot": "390-manager-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "manager",
+      "state": "actor-projection",
+      "screenshot": "767-manager-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "manager",
+      "state": "actor-projection",
+      "screenshot": "768-manager-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "manager",
+      "state": "actor-projection",
+      "screenshot": "1440-manager-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "actor-projection",
+      "screenshot": "390-inactive-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "actor-projection",
+      "screenshot": "767-inactive-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "actor-projection",
+      "screenshot": "768-inactive-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "actor-projection",
+      "screenshot": "1440-inactive-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "390-inactive-unauthorized-direct-detail.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "767-inactive-unauthorized-direct-detail.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "768-inactive-unauthorized-direct-detail.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "inactive",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "1440-inactive-unauthorized-direct-detail.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "screenshot": "390-no-membership-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "screenshot": "767-no-membership-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "screenshot": "768-no-membership-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "actor-projection",
+      "screenshot": "1440-no-membership-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "390-no-membership-unauthorized-direct-detail.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "767-no-membership-unauthorized-direct-detail.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "768-no-membership-unauthorized-direct-detail.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "no-membership",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "1440-no-membership-unauthorized-direct-detail.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "screenshot": "390-unrelated-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "screenshot": "767-unrelated-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "screenshot": "768-unrelated-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "actor-projection",
+      "screenshot": "1440-unrelated-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "390-unrelated-unauthorized-direct-detail.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "767-unrelated-unauthorized-direct-detail.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "768-unrelated-unauthorized-direct-detail.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "unrelated",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "1440-unrelated-unauthorized-direct-detail.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "actor-projection",
+      "screenshot": "390-creator-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "actor-projection",
+      "screenshot": "767-creator-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "actor-projection",
+      "screenshot": "768-creator-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "actor-projection",
+      "screenshot": "1440-creator-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "390-creator-unauthorized-direct-detail.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "767-creator-unauthorized-direct-detail.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "768-creator-unauthorized-direct-detail.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "creator",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "1440-creator-unauthorized-direct-detail.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "24px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "actor-projection",
+      "screenshot": "390-admin-actor-projection.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "actor-projection",
+      "screenshot": "767-admin-actor-projection.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "actor-projection",
+      "screenshot": "768-admin-actor-projection.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "actor-projection",
+      "screenshot": "1440-admin-actor-projection.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "390-admin-unauthorized-direct-detail.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "767-admin-unauthorized-direct-detail.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "768-admin-unauthorized-direct-detail.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "admin",
+      "state": "unauthorized-direct-detail",
+      "screenshot": "1440-admin-unauthorized-direct-detail.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "keyboard-obligation-detail",
+      "screenshot": "390-owner-keyboard-obligation-detail.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "back-action-restoration",
+      "screenshot": "390-owner-back-action-restoration.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "screenshot": "390-owner-activity-public-reference-404-0.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "screenshot": "767-owner-activity-public-reference-404-0.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "screenshot": "768-owner-activity-public-reference-404-0.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-0",
+      "screenshot": "1440-owner-activity-public-reference-404-0.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "screenshot": "390-owner-activity-public-reference-404-1.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "screenshot": "767-owner-activity-public-reference-404-1.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "screenshot": "768-owner-activity-public-reference-404-1.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-public-reference-404-1",
+      "screenshot": "1440-owner-activity-public-reference-404-1.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "screenshot": "390-owner-activity-canonical-lifecycle.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "screenshot": "767-owner-activity-canonical-lifecycle.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "screenshot": "768-owner-activity-canonical-lifecycle.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle",
+      "screenshot": "1440-owner-activity-canonical-lifecycle.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "screenshot": "390-owner-activity-canonical-lifecycle-source-unavailable.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "screenshot": "767-owner-activity-canonical-lifecycle-source-unavailable.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "screenshot": "768-owner-activity-canonical-lifecycle-source-unavailable.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-lifecycle-source-unavailable",
+      "screenshot": "1440-owner-activity-canonical-lifecycle-source-unavailable.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "screenshot": "390-owner-activity-canonical-money-movement.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "screenshot": "767-owner-activity-canonical-money-movement.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "screenshot": "768-owner-activity-canonical-money-movement.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement",
+      "screenshot": "1440-owner-activity-canonical-money-movement.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "screenshot": "390-owner-activity-canonical-money-movement-source-unavailable.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "screenshot": "767-owner-activity-canonical-money-movement-source-unavailable.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "screenshot": "768-owner-activity-canonical-money-movement-source-unavailable.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "activity-canonical-money-movement-source-unavailable",
+      "screenshot": "1440-owner-activity-canonical-money-movement-source-unavailable.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 0,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "screenshot": "390-owner-coverage-expanded.png",
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "bodyScrollWidth": 390,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 390,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "screenshot": "767-owner-coverage-expanded.png",
+      "documentScrollWidth": 767,
+      "documentClientWidth": 767,
+      "bodyScrollWidth": 767,
+      "visibleTables": 0,
+      "visibleMobileLists": 2,
+      "rootPaddingBottom": "96px",
+      "fixedBottom": [
+        {
+          "label": "Primary",
+          "rect": {
+            "x": 0,
+            "y": 936,
+            "width": 767,
+            "height": 64,
+            "bottom": 1000
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "screenshot": "768-owner-coverage-expanded.png",
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "bodyScrollWidth": 768,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "owner",
+      "state": "coverage-expanded",
+      "screenshot": "1440-owner-coverage-expanded.png",
+      "documentScrollWidth": 1440,
+      "documentClientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "visibleTables": 2,
+      "visibleMobileLists": 0,
+      "rootPaddingBottom": "32px",
+      "fixedBottom": []
+    }
+  ],
+  "overflowCount": 0,
+  "breakpoint": "Ready overview: mobile lists below 768; tables at 768 and 1440.",
+  "safeAreaStatus": "Padding and fixed-navigation geometry captured. Exhausted-list last-control clearance workflow NOT_COMPLETED_CIRCUIT_BREAKER."
+}

@@ -1,0 +1,21 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "signature": "P2_ACTIVITY_DETAIL_PUBLIC_REFERENCE_MISMATCH",
+  "completeBoundedAccessibilitySweep": true,
+  "seriousCriticalFindings": 0,
+  "sourceChanges": "NONE",
+  "migrationsCreated": "NONE",
+  "providerActions": "NONE",
+  "p2Acceptance": "NOT_SET",
+  "incompleteDueToCircuitBreaker": [
+    "Remaining keyboard activity return and all-width keyboard sequence",
+    "Pagination load-more/exhaustion browser workflow (controls and full HTTP exhaustion verified)",
+    "Settings compatibility destination/deep-link workflow",
+    "Complete refresh/Back restoration matrix",
+    "Exhausted-list safe-area clearance"
+  ],
+  "note": "No full passing evidence claim. V4 required circuit breaker applied after deterministic source mismatch verification."
+}

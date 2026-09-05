@@ -1,0 +1,12 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "purpose": "Consolidated scanner sweep required before circuit-breaker return",
+  "canonicalIdNavigation": "DIAGNOSTIC_ONLY_NOT_A_UI_FIX",
+  "rows": 28,
+  "seriousCritical": [],
+  "sourceChanges": false,
+  "financialActions": false
+}

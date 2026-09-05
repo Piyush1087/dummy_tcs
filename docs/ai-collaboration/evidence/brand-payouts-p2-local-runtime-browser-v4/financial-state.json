@@ -1,0 +1,68 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "models": [
+    "brandEscrowVault",
+    "escrowTransactionLedger",
+    "creatorPayoutObligation",
+    "routeTransferAttempt",
+    "routeTransferReversal",
+    "brandReturnRequest",
+    "creatorPayoutProfile",
+    "escrowFundingLoad",
+    "escrowFundingLot",
+    "collaborationFundingLotAllocation",
+    "collaborationEscrowLock",
+    "collaborationRefundInstruction",
+    "creatorSettlementProfile",
+    "creatorPayoutFundingAllocation",
+    "brandReturnAllocation",
+    "brandReturnWebhookReceipt",
+    "creatorPayoutDestination",
+    "creatorPayoutDestinationProviderMapping",
+    "collaborationCommercial",
+    "collaboration"
+  ],
+  "normalization": "Prisma JSON serialization; fixed model order; rows sorted by ID; raw records not committed",
+  "lanes": [
+    {
+      "name": "Initial HTTP and accessibility preflight",
+      "before": "aa45ac8048c889a9d35018490bf9be4f01d4231822311a121bae1612bc5b9b8e",
+      "afterHttp": "aa45ac8048c889a9d35018490bf9be4f01d4231822311a121bae1612bc5b9b8e",
+      "afterPreflight": "aa45ac8048c889a9d35018490bf9be4f01d4231822311a121bae1612bc5b9b8e",
+      "equal": true
+    },
+    {
+      "name": "Expanded fixture actor/keyboard and bounded diagnostic reads",
+      "before": "5533debd901bcce4bc345416abc006ede2fde48723d3f67a3a47f63f8afc5b0a",
+      "after": "5533debd901bcce4bc345416abc006ede2fde48723d3f67a3a47f63f8afc5b0a",
+      "equal": true
+    }
+  ],
+  "fixtureBoundary": "30 new unrelated-Brand obligations added deliberately between lanes. Hash equality is asserted within each lane, not across this seed write.",
+  "initialRowCounts": {
+    "brandEscrowVault": 2,
+    "escrowTransactionLedger": 56,
+    "creatorPayoutObligation": 2,
+    "routeTransferAttempt": 0,
+    "routeTransferReversal": 0,
+    "brandReturnRequest": 0,
+    "creatorPayoutProfile": 1,
+    "escrowFundingLoad": 0,
+    "escrowFundingLot": 0,
+    "collaborationFundingLotAllocation": 0,
+    "collaborationEscrowLock": 0,
+    "collaborationRefundInstruction": 0,
+    "creatorSettlementProfile": 0,
+    "creatorPayoutFundingAllocation": 0,
+    "brandReturnAllocation": 0,
+    "brandReturnWebhookReceipt": 0,
+    "creatorPayoutDestination": 0,
+    "creatorPayoutDestinationProviderMapping": 0,
+    "collaborationCommercial": 0,
+    "collaboration": 2
+  },
+  "rawRowsRetained": false
+}

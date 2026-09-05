@@ -1,0 +1,27 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "os": "Windows_NT",
+  "release": "10.0.26200",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "packageManager": "npm with existing lockfile-installed dependencies; source package manifests unchanged",
+  "postgres": "17.11",
+  "prisma": "6.19.3",
+  "buildEnvironment": {
+    "VITE_API_URL": "http://127.0.0.1:3107",
+    "VITE_STAGE": "local",
+    "command": "npm run build"
+  },
+  "frontendPreview": "vite preview --host 127.0.0.1 --port 4177 --strictPort",
+  "browser": "Chromium 140.0.7339.16",
+  "automation": "Playwright 1.61.1",
+  "axe": "4.10.3",
+  "buildLogs": {
+    "backend": "\r\n> creatorshop-be@0.0.1 build\r\n> nest build && node scripts/copy-prompt-assets.mjs\r\n\r\ncopy-prompt-assets: src/features/brand-onboarding/prompts → dist/features/brand-onboarding/prompts\r\ncopy-prompt-assets: src/features/brand-centre/prompts → dist/features/brand-centre/prompts\r\ncopy-prompt-assets: src/features/creator-onboarding/prompts → dist/features/creator-onboarding/prompts\r\ncopy-prompt-assets: src/features/brand-onboarding/gatekeeper/runtime/artifacts → dist/features/brand-onboarding/gatekeeper/runtime/artifacts\r\ncopy-prompt-assets: src/features/brand-onboarding/brand-preview/runtime/artifacts → dist/features/brand-onboarding/brand-preview/runtime/artifacts\r\ncopy-prompt-assets: src/features/brand-intelligence/generated/contract-bundles → dist/features/brand-intelligence/generated/contract-bundles\r\ncopy-prompt-assets: ok\r\n",
+    "frontend": "\r\n> creatorshop-fe@0.0.0 build\r\n> tsc -b && vite build\r\n\r\nvite v5.4.21 building for production...\r\ntransforming...\r\n✓ 2109 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\ndist/index.html                     0.51 kB │ gzip:   0.31 kB\r\ndist/assets/index-3846YT-9.css    436.85 kB │ gzip:  66.58 kB\r\ndist/assets/index-CipHhmzy.js   1,190.59 kB │ gzip: 315.95 kB\r\n\r\n(!) Some chunks are larger than 500 kB after minification. Consider:\r\n- Using dynamic import() to code-split the application\r\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\r\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\r\n✓ built in 27.59s\r\n"
+  }
+}

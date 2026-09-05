@@ -1,0 +1,181 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "authoritySha": "8f3689669eae37b3945d6948d5d26c812cff71f5",
+  "classification": "RERUN",
+  "v3EvidenceCommit": "d62c2ebc2e79383f1e93074c20fd7fb991399029",
+  "v3Artifacts": [
+    {
+      "file": "1440-owner-loaded-partial-v2-regression.png",
+      "expected": "0b3d4e524d39ea16348f8a1a8826db9f7683e5404da97ad2bb7feeee1d9c791a",
+      "actual": "0b3d4e524d39ea16348f8a1a8826db9f7683e5404da97ad2bb7feeee1d9c791a",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-obligation-detail.png",
+      "expected": "bf60a32b96f5191d976437fc1ea947a524d9861f152097ba04ef8b0a0f14bd6e",
+      "actual": "bf60a32b96f5191d976437fc1ea947a524d9861f152097ba04ef8b0a0f14bd6e",
+      "matches": true
+    },
+    {
+      "file": "1440-owner-obligation-invoking-focus.png",
+      "expected": "7bcb306e6849021ed68e55cf8873248f776dc3cf5d9959b158f5b9f8dd5d2e9f",
+      "actual": "7bcb306e6849021ed68e55cf8873248f776dc3cf5d9959b158f5b9f8dd5d2e9f",
+      "matches": true
+    },
+    {
+      "file": "1440-unauthenticated-login.png",
+      "expected": "7776291491aa0036dc277d2343503cf73b203baee1976784c37571506a9badd9",
+      "actual": "7776291491aa0036dc277d2343503cf73b203baee1976784c37571506a9badd9",
+      "matches": true
+    },
+    {
+      "file": "390-owner-loaded-partial-v2-regression.png",
+      "expected": "783c33d93ae2e58344818053c7e725bd9e1e16bb1b7cacc5717c9a12d02c87d8",
+      "actual": "783c33d93ae2e58344818053c7e725bd9e1e16bb1b7cacc5717c9a12d02c87d8",
+      "matches": true
+    },
+    {
+      "file": "390-owner-obligation-detail.png",
+      "expected": "9e3beb584ec72d8b6825501d3763582b79ee04a0067a962add351118ce7cd9e4",
+      "actual": "9e3beb584ec72d8b6825501d3763582b79ee04a0067a962add351118ce7cd9e4",
+      "matches": true
+    },
+    {
+      "file": "767-owner-loaded-partial-v2-regression.png",
+      "expected": "c828481071cac43d49b3a68513aa6286897230522fef840862cf50c604a7d85f",
+      "actual": "c828481071cac43d49b3a68513aa6286897230522fef840862cf50c604a7d85f",
+      "matches": true
+    },
+    {
+      "file": "767-owner-obligation-detail.png",
+      "expected": "17153ab783534cc6b66d64e6a259c8c024dc92578ca34422ab8bef9a758c963f",
+      "actual": "17153ab783534cc6b66d64e6a259c8c024dc92578ca34422ab8bef9a758c963f",
+      "matches": true
+    },
+    {
+      "file": "768-owner-loaded-partial-v2-regression.png",
+      "expected": "bad50037853c93b66e9170723529e4f43b3c495f57f085fab9f32f680733f4bc",
+      "actual": "bad50037853c93b66e9170723529e4f43b3c495f57f085fab9f32f680733f4bc",
+      "matches": true
+    },
+    {
+      "file": "768-owner-obligation-detail.png",
+      "expected": "20aaba024395353a0f90cde70ef4caff132c086775b556f240b32aee4507065a",
+      "actual": "20aaba024395353a0f90cde70ef4caff132c086775b556f240b32aee4507065a",
+      "matches": true
+    },
+    {
+      "file": "accessibility-summary.json",
+      "expected": "6065173bbec8d6549db79ba77b383cf9b3b60ec559ed74e8a545af82e2ac571c",
+      "actual": "6065173bbec8d6549db79ba77b383cf9b3b60ec559ed74e8a545af82e2ac571c",
+      "matches": true
+    },
+    {
+      "file": "bootstrap.json",
+      "expected": "b42334c6a70bbe9c8fac172032982f5a48234f7ea206d029568e037f510532d0",
+      "actual": "b42334c6a70bbe9c8fac172032982f5a48234f7ea206d029568e037f510532d0",
+      "matches": true
+    },
+    {
+      "file": "browser-matrix.json",
+      "expected": "08253736c4ff515525457d724e41de679f4cb01e4e3c5b5e3d7f94196a472ae5",
+      "actual": "08253736c4ff515525457d724e41de679f4cb01e4e3c5b5e3d7f94196a472ae5",
+      "matches": true
+    },
+    {
+      "file": "browser-network-console.json",
+      "expected": "a6279ce2a7fb41aa33f946b3d5f6636fd754f22b162212d587101adc7409f8a5",
+      "actual": "a6279ce2a7fb41aa33f946b3d5f6636fd754f22b162212d587101adc7409f8a5",
+      "matches": true
+    },
+    {
+      "file": "circuit-breaker.json",
+      "expected": "068d07b5d92c84443b8afaa431742e6c59f5f36c8f8869e2171ed60bdc4c17c3",
+      "actual": "068d07b5d92c84443b8afaa431742e6c59f5f36c8f8869e2171ed60bdc4c17c3",
+      "matches": true
+    },
+    {
+      "file": "contrast-regression.json",
+      "expected": "27b76acaabad4556b5d322c799aff72a3863eb0e5bf8916153b400362689720c",
+      "actual": "27b76acaabad4556b5d322c799aff72a3863eb0e5bf8916153b400362689720c",
+      "matches": true
+    },
+    {
+      "file": "database-lifecycle.json",
+      "expected": "5eb126ac5f2dfa9b32a954028ee3ae4a9c16ccaf2de38c81a282ace06ec10a6d",
+      "actual": "5eb126ac5f2dfa9b32a954028ee3ae4a9c16ccaf2de38c81a282ace06ec10a6d",
+      "matches": true
+    },
+    {
+      "file": "environment.json",
+      "expected": "25f847e73938b13ea05248b522061c51ef80c516efbd3fb8042e192dfd01bea3",
+      "actual": "25f847e73938b13ea05248b522061c51ef80c516efbd3fb8042e192dfd01bea3",
+      "matches": true
+    },
+    {
+      "file": "financial-state.json",
+      "expected": "33c8af080977fbe667c3f7e3d92f7864fd84b20319181a5a458c6692bd845fce",
+      "actual": "33c8af080977fbe667c3f7e3d92f7864fd84b20319181a5a458c6692bd845fce",
+      "matches": true
+    },
+    {
+      "file": "http-rbac.json",
+      "expected": "a2b8edacdb47387271172505009a20bcfca3149add45d706c2512b34e49f84c2",
+      "actual": "a2b8edacdb47387271172505009a20bcfca3149add45d706c2512b34e49f84c2",
+      "matches": true
+    },
+    {
+      "file": "keyboard-focus.json",
+      "expected": "8ca4e509d0484ea051e313ec51daa9b021d7af1aa599c5361c188afa53707b67",
+      "actual": "8ca4e509d0484ea051e313ec51daa9b021d7af1aa599c5361c188afa53707b67",
+      "matches": true
+    },
+    {
+      "file": "response-schema-validation.json",
+      "expected": "f6b3c640d7fdc1f431873011da807d8b747441904377d5a605f94ca588835edc",
+      "actual": "f6b3c640d7fdc1f431873011da807d8b747441904377d5a605f94ca588835edc",
+      "matches": true
+    },
+    {
+      "file": "runtime.json",
+      "expected": "dc8ea80bb19a3a536a8aef174bbc08a2c6bd2486fe290e0fb0e8ac1357aad95d",
+      "actual": "dc8ea80bb19a3a536a8aef174bbc08a2c6bd2486fe290e0fb0e8ac1357aad95d",
+      "matches": true
+    },
+    {
+      "file": "shutdown.json",
+      "expected": "5a36aa255a5f1ddd06373b941a880f0ce109a42a8d57ced32ea00b55138e6e5c",
+      "actual": "5a36aa255a5f1ddd06373b941a880f0ce109a42a8d57ced32ea00b55138e6e5c",
+      "matches": true
+    },
+    {
+      "file": "viewport-safe-area.json",
+      "expected": "83ca22ba0432368c8a27e0a028644decb0ba7bf1cc317a8cf33f0deece7923db",
+      "actual": "83ca22ba0432368c8a27e0a028644decb0ba7bf1cc317a8cf33f0deece7923db",
+      "matches": true
+    }
+  ],
+  "frontendChanges": [
+    "src/features/brand-payouts/brand-payouts-p2.test.ts",
+    "src/features/brand-payouts/brand-payouts.css"
+  ],
+  "contractsAndApiByteIdentical": true,
+  "sourceCheckouts": {
+    "backend": {
+      "head": "119397ff6836ad12846c1e948409d8d49185c408",
+      "tree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "clean": true
+    },
+    "frontend": {
+      "head": "7ff0a39470316215496dece91f717593e98c89b5",
+      "tree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "clean": true
+    }
+  },
+  "authorityRequiredAncestor": true,
+  "noSchemaMigrationDiff": true,
+  "note": "Full fresh 178-assertion/31-schema lane rerun, not claimed as reused V3 results."
+}

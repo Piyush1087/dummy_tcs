@@ -1,0 +1,609 @@
+{
+  "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+  "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+  "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+  "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+  "getCount": 12,
+  "loginPostCount": 3,
+  "rows": [
+    {
+      "actor": "owner",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 0,
+      "viewport": null,
+      "fixture": "owner",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/0",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/obligation%3Abp-p2-obligation-a%3Acreated",
+      "status": 200,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "schema_version": "brand-payouts.v2",
+        "as_of": "2026-09-05T18:11:58.112Z",
+        "viewer": {
+          "role": "BRAND_OWNER",
+          "projection_scope": "FULL_FINANCIAL"
+        },
+        "sections": [
+          {
+            "section_id": "ACTIVITY",
+            "coverage": "PARTIAL",
+            "freshness": "CURRENT",
+            "source_observed_at": "2026-09-05T18:04:28.499Z",
+            "source_coverage": [
+              {
+                "source": "FINANCIAL_LEDGER",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "PAYOUT_OBLIGATIONS",
+                "status": "PARTIAL",
+                "limitation_reason_code": "IMMUTABLE_ACTIVITY_MILESTONES_INCOMPLETE",
+                "recovery_hint": null
+              },
+              {
+                "source": "BRAND_RETURNS",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "COLLABORATION_RESERVE_REQUESTS",
+                "status": "UNAVAILABLE",
+                "limitation_reason_code": "C04_RESERVE_REQUEST_SOURCE_NOT_AVAILABLE",
+                "recovery_hint": null
+              }
+            ],
+            "legacy_limitations": [
+              {
+                "source": "PAYOUT_OBLIGATIONS",
+                "reason_code": "C04_INSTRUCTION_PROVENANCE_UNAVAILABLE",
+                "detail": "Only evidence preserved by the source is projected."
+              }
+            ],
+            "available_actions": [
+              {
+                "action": "VIEW_DETAIL",
+                "resource_reference": "financial-activity:obligation:bp-p2-obligation-a",
+                "resource_version": "observed:2026-09-05T18:04:28.499Z",
+                "authorized_as_of": "2026-09-05T18:11:58.112Z"
+              }
+            ],
+            "payload": {
+              "activity_id": "obligation:bp-p2-obligation-a:created",
+              "public_reference": "financial-activity:obligation:bp-p2-obligation-a",
+              "resource_version": "observed:2026-09-05T18:04:28.499Z",
+              "source_owner": "PAYOUT_EXECUTION",
+              "source_reference": "payout-obligation:bp-p2-obligation-a",
+              "category": "BUSINESS_OBLIGATION",
+              "is_financial_movement": false,
+              "financial_value": {
+                "amount": "80.0000",
+                "currency": "INR"
+              },
+              "recorded_at": "2026-09-05T18:04:28.499Z",
+              "occurred_at": "2026-09-05T18:04:28.499Z",
+              "source_observed_at": "2026-09-05T18:04:28.499Z",
+              "normalized_status": "OBLIGATION_RECORDED",
+              "actor_source": "COLLABORATION_INSTRUCTION",
+              "references": {
+                "campaign_id": "bp-p2-campaign-a",
+                "collaboration_id": "bp-p2-collab-a",
+                "creator_reference": "bp-p2-creator",
+                "obligation_id": "bp-p2-obligation-a",
+                "brand_return_id": null
+              },
+              "legacy": {
+                "classification": "DISPLAY_WITH_LIMITATION",
+                "limitation_reason_code": "C04_INSTRUCTION_PROVENANCE_UNAVAILABLE"
+              }
+            }
+          }
+        ]
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 1,
+      "viewport": null,
+      "fixture": "owner",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/1",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/financial-activity%3Aledger%3Abp-p2-ledger-a-054",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 2,
+      "viewport": null,
+      "fixture": "owner",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/2",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 200,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "schema_version": "brand-payouts.v2",
+        "as_of": "2026-09-05T18:11:58.702Z",
+        "viewer": {
+          "role": "BRAND_OWNER",
+          "projection_scope": "FULL_FINANCIAL"
+        },
+        "sections": [
+          {
+            "section_id": "ACTIVITY",
+            "coverage": "COMPLETE",
+            "freshness": "CURRENT",
+            "source_observed_at": "2026-09-05T18:04:28.351Z",
+            "source_coverage": [
+              {
+                "source": "FINANCIAL_LEDGER",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "PAYOUT_OBLIGATIONS",
+                "status": "PARTIAL",
+                "limitation_reason_code": "IMMUTABLE_ACTIVITY_MILESTONES_INCOMPLETE",
+                "recovery_hint": null
+              },
+              {
+                "source": "BRAND_RETURNS",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "COLLABORATION_RESERVE_REQUESTS",
+                "status": "UNAVAILABLE",
+                "limitation_reason_code": "C04_RESERVE_REQUEST_SOURCE_NOT_AVAILABLE",
+                "recovery_hint": null
+              }
+            ],
+            "legacy_limitations": [],
+            "available_actions": [
+              {
+                "action": "VIEW_DETAIL",
+                "resource_reference": "financial-activity:ledger:bp-p2-ledger-a-054",
+                "resource_version": "observed:2026-09-05T18:04:28.351Z",
+                "authorized_as_of": "2026-09-05T18:11:58.702Z"
+              }
+            ],
+            "payload": {
+              "activity_id": "ledger:bp-p2-ledger-a-054:recorded",
+              "public_reference": "financial-activity:ledger:bp-p2-ledger-a-054",
+              "resource_version": "observed:2026-09-05T18:04:28.351Z",
+              "source_owner": "FINANCIAL_LEDGER",
+              "source_reference": "ledger:bp-p2-ledger-a-054",
+              "category": "MONEY_MOVEMENT",
+              "is_financial_movement": true,
+              "financial_value": {
+                "amount": "10.0000",
+                "currency": "INR"
+              },
+              "recorded_at": "2026-09-04T11:00:00.123Z",
+              "occurred_at": "2026-09-04T11:00:00.123Z",
+              "source_observed_at": "2026-09-05T18:04:28.351Z",
+              "normalized_status": "SETTLED",
+              "actor_source": "FINANCIAL_LEDGER",
+              "references": {
+                "campaign_id": null,
+                "collaboration_id": null,
+                "creator_reference": null,
+                "obligation_id": null,
+                "brand_return_id": null
+              },
+              "legacy": null
+            }
+          }
+        ]
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 3,
+      "viewport": null,
+      "fixture": "owner",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/3",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "finance",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 4,
+      "viewport": null,
+      "fixture": "finance",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/4",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "finance",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/obligation%3Abp-p2-obligation-a%3Acreated",
+      "status": 200,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "schema_version": "brand-payouts.v2",
+        "as_of": "2026-09-05T18:11:58.933Z",
+        "viewer": {
+          "role": "FINANCE_ADMIN",
+          "projection_scope": "FULL_FINANCIAL"
+        },
+        "sections": [
+          {
+            "section_id": "ACTIVITY",
+            "coverage": "PARTIAL",
+            "freshness": "CURRENT",
+            "source_observed_at": "2026-09-05T18:04:28.499Z",
+            "source_coverage": [
+              {
+                "source": "FINANCIAL_LEDGER",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "PAYOUT_OBLIGATIONS",
+                "status": "PARTIAL",
+                "limitation_reason_code": "IMMUTABLE_ACTIVITY_MILESTONES_INCOMPLETE",
+                "recovery_hint": null
+              },
+              {
+                "source": "BRAND_RETURNS",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "COLLABORATION_RESERVE_REQUESTS",
+                "status": "UNAVAILABLE",
+                "limitation_reason_code": "C04_RESERVE_REQUEST_SOURCE_NOT_AVAILABLE",
+                "recovery_hint": null
+              }
+            ],
+            "legacy_limitations": [
+              {
+                "source": "PAYOUT_OBLIGATIONS",
+                "reason_code": "C04_INSTRUCTION_PROVENANCE_UNAVAILABLE",
+                "detail": "Only evidence preserved by the source is projected."
+              }
+            ],
+            "available_actions": [
+              {
+                "action": "VIEW_DETAIL",
+                "resource_reference": "financial-activity:obligation:bp-p2-obligation-a",
+                "resource_version": "observed:2026-09-05T18:04:28.499Z",
+                "authorized_as_of": "2026-09-05T18:11:58.933Z"
+              }
+            ],
+            "payload": {
+              "activity_id": "obligation:bp-p2-obligation-a:created",
+              "public_reference": "financial-activity:obligation:bp-p2-obligation-a",
+              "resource_version": "observed:2026-09-05T18:04:28.499Z",
+              "source_owner": "PAYOUT_EXECUTION",
+              "source_reference": "payout-obligation:bp-p2-obligation-a",
+              "category": "BUSINESS_OBLIGATION",
+              "is_financial_movement": false,
+              "financial_value": {
+                "amount": "80.0000",
+                "currency": "INR"
+              },
+              "recorded_at": "2026-09-05T18:04:28.499Z",
+              "occurred_at": "2026-09-05T18:04:28.499Z",
+              "source_observed_at": "2026-09-05T18:04:28.499Z",
+              "normalized_status": "OBLIGATION_RECORDED",
+              "actor_source": "COLLABORATION_INSTRUCTION",
+              "references": {
+                "campaign_id": "bp-p2-campaign-a",
+                "collaboration_id": "bp-p2-collab-a",
+                "creator_reference": "bp-p2-creator",
+                "obligation_id": "bp-p2-obligation-a",
+                "brand_return_id": null
+              },
+              "legacy": {
+                "classification": "DISPLAY_WITH_LIMITATION",
+                "limitation_reason_code": "C04_INSTRUCTION_PROVENANCE_UNAVAILABLE"
+              }
+            }
+          }
+        ]
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 5,
+      "viewport": null,
+      "fixture": "finance",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/5",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "finance",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/financial-activity%3Aledger%3Abp-p2-ledger-a-054",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 6,
+      "viewport": null,
+      "fixture": "finance",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/6",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "finance",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 200,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "schema_version": "brand-payouts.v2",
+        "as_of": "2026-09-05T18:11:59.035Z",
+        "viewer": {
+          "role": "FINANCE_ADMIN",
+          "projection_scope": "FULL_FINANCIAL"
+        },
+        "sections": [
+          {
+            "section_id": "ACTIVITY",
+            "coverage": "COMPLETE",
+            "freshness": "CURRENT",
+            "source_observed_at": "2026-09-05T18:04:28.351Z",
+            "source_coverage": [
+              {
+                "source": "FINANCIAL_LEDGER",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "PAYOUT_OBLIGATIONS",
+                "status": "PARTIAL",
+                "limitation_reason_code": "IMMUTABLE_ACTIVITY_MILESTONES_INCOMPLETE",
+                "recovery_hint": null
+              },
+              {
+                "source": "BRAND_RETURNS",
+                "status": "AVAILABLE",
+                "limitation_reason_code": null,
+                "recovery_hint": null
+              },
+              {
+                "source": "COLLABORATION_RESERVE_REQUESTS",
+                "status": "UNAVAILABLE",
+                "limitation_reason_code": "C04_RESERVE_REQUEST_SOURCE_NOT_AVAILABLE",
+                "recovery_hint": null
+              }
+            ],
+            "legacy_limitations": [],
+            "available_actions": [
+              {
+                "action": "VIEW_DETAIL",
+                "resource_reference": "financial-activity:ledger:bp-p2-ledger-a-054",
+                "resource_version": "observed:2026-09-05T18:04:28.351Z",
+                "authorized_as_of": "2026-09-05T18:11:59.035Z"
+              }
+            ],
+            "payload": {
+              "activity_id": "ledger:bp-p2-ledger-a-054:recorded",
+              "public_reference": "financial-activity:ledger:bp-p2-ledger-a-054",
+              "resource_version": "observed:2026-09-05T18:04:28.351Z",
+              "source_owner": "FINANCIAL_LEDGER",
+              "source_reference": "ledger:bp-p2-ledger-a-054",
+              "category": "MONEY_MOVEMENT",
+              "is_financial_movement": true,
+              "financial_value": {
+                "amount": "10.0000",
+                "currency": "INR"
+              },
+              "recorded_at": "2026-09-04T11:00:00.123Z",
+              "occurred_at": "2026-09-04T11:00:00.123Z",
+              "source_observed_at": "2026-09-05T18:04:28.351Z",
+              "normalized_status": "SETTLED",
+              "actor_source": "FINANCIAL_LEDGER",
+              "references": {
+                "campaign_id": null,
+                "collaboration_id": null,
+                "creator_reference": null,
+                "obligation_id": null,
+                "brand_return_id": null
+              },
+              "legacy": null
+            }
+          }
+        ]
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 7,
+      "viewport": null,
+      "fixture": "finance",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/7",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "unrelated",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/financial-activity%3Aobligation%3Abp-p2-obligation-a",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 8,
+      "viewport": null,
+      "fixture": "unrelated",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/8",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "unrelated",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/obligation%3Abp-p2-obligation-a%3Acreated",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 9,
+      "viewport": null,
+      "fixture": "unrelated",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/9",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "unrelated",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/financial-activity%3Aledger%3Abp-p2-ledger-a-054",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 10,
+      "viewport": null,
+      "fixture": "unrelated",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/10",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    },
+    {
+      "actor": "unrelated",
+      "method": "GET",
+      "route": "/api/v1/brand/payouts/activity/ledger%3Abp-p2-ledger-a-054%3Arecorded",
+      "status": 404,
+      "contentType": "application/vnd.creator-shop.brand-payouts.v2+json; charset=utf-8",
+      "body": {
+        "code": "BRAND_PAYOUTS_ACTIVITY_NOT_FOUND",
+        "message": "Financial activity was not found"
+      },
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "7ff0a39470316215496dece91f717593e98c89b5",
+      "frontendTree": "8661f04b7aad64576775968af6b1f0eceaa34c84",
+      "requestIndex": 11,
+      "viewport": null,
+      "fixture": "unrelated",
+      "state": "ACTIVITY_REFERENCE_DIAGNOSIS",
+      "screenshot": null,
+      "networkReference": "activity-reference-defect-http.json#/rows/11",
+      "consoleResult": "NOT_APPLICABLE_HTTP",
+      "overflowResult": "NOT_APPLICABLE_HTTP",
+      "accessibilityFocusResult": "NOT_APPLICABLE_HTTP"
+    }
+  ],
+  "headersRedacted": true
+}
