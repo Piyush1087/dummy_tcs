@@ -351,6 +351,7 @@ architecture, schema, migration, AWS, or provider operation.
 | Schema blob / migrations tree | `2aa416f265f6fc6fc5ac2f7561f4755e6c1d5c99` / `f0cce974cd5744999e49cd1d137e6b1d68de3b62`; Git-object identity authoritative |
 | Backend publication | Both candidate commits pushed normally and fetched back with exact SHA/tree, linear parents and clean worktree; PASS |
 | Verdict | `PASS`; Systems Architect final acceptance supplied by `C03_P1_2_DURABLE_ACCEPTANCE_BINDING_V1` |
+| Systems Architect acceptance SHA | `a4b90f7795eef45a1c64b2b1b172db8570f03a36` (the immutable documentation commit that first published this P1.2 PASS entry) |
 
 ### 8.1 Recovery and correction history
 
