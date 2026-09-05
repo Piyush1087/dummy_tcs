@@ -29,7 +29,7 @@ line is admitted here.
 | P1.1C invitation / ingress / idempotency / events | PASS | `ebad770291b411026542a7d53a7e6a30162bff2e` | 77 | P1.1D |
 | P1.1D guards / locking / adapters / compatibility | PASS | `ab8d1c022ae165846a40a8737f163bdb5ba7d65c` | 78 | P1.1E |
 | P1.1E PostgreSQL acceptance | PASS | `fa4c7f7b767a71c3d21a0e3835a2bbfc36bcd642` | 78 | P1.2 |
-| P1.2 Opportunity entitlement/read APIs | NOT STARTED | — | — | P1.1 PASS |
+| P1.2 Opportunity entitlement/read APIs | PASS | `c2f5f1461b847f811edbf1f54e4b427366664989` | 78 | P1.3 |
 | P1.3 Application commands/history | NOT STARTED | — | — | P1.2 PASS |
 | P1.4 Collaboration/Notifications handoff | NOT STARTED | — | — | P1.3 PASS |
 
@@ -328,10 +328,177 @@ P1_1 = PASS
 NEXT_AUTHORIZED_PHASE = P1.2
 ```
 
-## 8. Current continuation
+## 8. P1.2 immutable acceptance entry
+
+Systems Architect final review accepted P1.2 on 2026-09-05. This entry binds
+that supplied acceptance verdict and the previously executed evidence; the
+documentation binding itself performs no runtime, frontend, Product,
+architecture, schema, migration, AWS, or provider operation.
+
+| Field | Evidence |
+|---|---|
+| Checkpoint | `P1.2 — Opportunity entitlement/read APIs` |
+| Prior accepted backend SHA/tree | `fa4c7f7b767a71c3d21a0e3835a2bbfc36bcd642` / `76597080c6089225936e94a301ea0dc78474eb62` |
+| Semantic/runtime candidate SHA/tree | `d401f658fd321cbe171bf3f86bf18ac3e9a8fb3e` / `3dda92cad06cdb851879266511b261b1e86a50a4` |
+| Final accepted backend SHA/tree | `c2f5f1461b847f811edbf1f54e4b427366664989` / `62ed8af61f3e7c40c7a20a60b142507696062872` |
+| Final parent | `d401f658fd321cbe171bf3f86bf18ac3e9a8fb3e` |
+| Backend chain | `fa4c7f7b767a71c3d21a0e3835a2bbfc36bcd642` → `d401f658fd321cbe171bf3f86bf18ac3e9a8fb3e` → `c2f5f1461b847f811edbf1f54e4b427366664989` |
+| Linear | YES |
+| Merge/rebase/cherry-pick | NONE |
+| Migration count | 78 |
+| Schema changes | NONE IN P1.2 |
+| Migration changes | NONE IN P1.2 |
+| Schema blob / migrations tree | `2aa416f265f6fc6fc5ac2f7561f4755e6c1d5c99` / `f0cce974cd5744999e49cd1d137e6b1d68de3b62`; Git-object identity authoritative |
+| Backend publication | Both candidate commits pushed normally and fetched back with exact SHA/tree, linear parents and clean worktree; PASS |
+| Verdict | `PASS`; Systems Architect final acceptance supplied by `C03_P1_2_DURABLE_ACCEPTANCE_BINDING_V1` |
+
+### 8.1 Recovery and correction history
+
+1. **Attempt 1 — STOP:** zero registered recovery worktrees; implementation
+   none.
+2. **Attempt 2 — bootstrap PASS, then STOP:** dedicated invitation-HMAC
+   configuration remained unresolved, together with raw checkout EOL
+   ambiguity; implementation none.
+3. **Systems correction:** froze dedicated C-03 invitation identity HMAC
+   configuration and made Git-object schema/migration identity authoritative.
+   CRLF checkout bytes alone no longer blocked acceptance.
+4. **Initial P1.2 implementation:** used two bounded implementation
+   corrections, then stopped on the required C-01 Creator Entry architecture
+   regression. The unfinished full-suite/lint/startup acceptance was not
+   represented as passing.
+5. **Systems-authorized residual lane:** restored accepted C-01 platform-entry
+   semantics, preserved stricter C-03 Opportunity semantics, and fixed HMAC
+   whitespace configuration rejection. The existing C-01 architecture test
+   was preserved. No additional residual implementation correction was
+   required. A retained I1 fixed-token fixture collision was resolved through
+   explicitly authorized recreation of only its disposable database, followed
+   by a passing rerun. The completed semantic/runtime candidate was
+   `d401f658fd321cbe171bf3f86bf18ac3e9a8fb3e`.
+6. **Final Systems review finding:** the SST deployment environment omitted
+   the dedicated HMAC runtime projection.
+7. **Final residual correction:** one config-only correction added the
+   dedicated stage-source lookup and canonical runtime projection in SST,
+   documented deployment inputs, and added a static configuration test.
+   Application runtime behavior was unchanged. Final accepted candidate:
+   `c2f5f1461b847f811edbf1f54e4b427366664989`.
 
 ```text
-LAST_ACCEPTED_CHECKPOINT = P1.1
-CURRENT_CHECKPOINT = P1.2
+ORIGINAL_CORRECTION_COUNT_P1_2 = 2
+P1_2_RESIDUAL_LANE = 1
+P1_2_RESIDUAL_CORRECTION_COUNT = 1
+P1_2_RESIDUAL_CORRECTION_BUDGET_REMAINING = 0
+```
+
+### 8.2 Accepted semantic/runtime evidence
+
+Evidence belongs to semantic/runtime candidate
+`d401f658fd321cbe171bf3f86bf18ac3e9a8fb3e`; it was not re-executed by this
+docs-only acceptance binding.
+
+| Gate | Accepted result |
+|---|---|
+| Pure policy matrix | 4,864 PASS |
+| Focused gate | 4,994 PASS |
+| Full backend suite | 6,162 PASS, 0 FAIL; 192 files passed; 49 files / 653 canonical guarded tests skipped; normal completion |
+| P1.2 PostgreSQL | 9/9 PASS |
+| C-01 I1 PostgreSQL persistence | 22/22 PASS |
+| C-01 I5 PostgreSQL continuation | 21/21 PASS |
+| C-05 Team PostgreSQL | 5/5 PASS |
+| C-01/C-03 boundary | Eight focused cases PASS; accepted C-01 formula and stricter C-03 gate remain distinct; Insights non-gating |
+| Lint / format | PASS / PASS |
+| Production build / startup smoke | PASS / PASS; HTTP 200 |
+| Security review | PASS |
+| Schema/migration integrity | PASS; 78 migrations, no P1.2 delta |
+
+### 8.3 Accepted final configuration evidence
+
+Evidence belongs to config-only direct child
+`c2f5f1461b847f811edbf1f54e4b427366664989`.
+
+| Gate | Accepted result |
+|---|---|
+| Focused config/HMAC/C-01–C-03 tests | 38/38 PASS |
+| Full backend suite | 6,156 PASS, 0 FAIL; 192 files passed; 50 files / 662 canonical guarded tests skipped; normal completion |
+| Lint / format | PASS / PASS |
+| Production build / startup smoke | PASS / PASS; HTTP 200 with deterministic non-production HMAC runtime configuration |
+| Security review | PASS; no alternate-secret reuse, logging or real key |
+| PostgreSQL | Not rerun by explicit config-only authority; accepted d401f658 evidence retained |
+| SST deploy | NOT EXECUTED |
+| AWS / production access | NONE / NONE |
+| Provider change | NONE |
+
+### 8.4 Accepted P1.2 contracts and exclusions
+
+- `CampaignOpportunityPolicyService` and `TEASER` / `LOCKED` / `AUTHORIZED`
+  projections with structural pre-gate commercial/Brief redaction.
+- Creator Team VIEW/APPLY capability projection; Assistant does not gain
+  unrelated Settings administration or pending-withdrawal capability.
+- Provider-neutral six-state Opportunity Instagram evaluator, distinct from
+  accepted C-01 platform-entry semantics.
+- `ELIGIBLE` / `INELIGIBLE` / `UNAVAILABLE` eligibility and PUBLIC /
+  ELIGIBLE / INVITE entitlement.
+- Invitation credential exchange, intended-subject verification and monotonic
+  invitation binding.
+- Typed C-01 Campaign continuation, safe ingress attribution and a
+  non-enumerating Creator Opportunities collection.
+
+Accepted routes:
+
+```text
+GET /api/v1/campaign-opportunities/:campaignId
+POST /api/v1/campaign-opportunities/:campaignId/apply-continuation
+GET /api/v1/creator/campaigns/opportunities
+
+P1.3 Application mutation = NOT INCLUDED
+P1.4 Collaboration/Notifications = NOT INCLUDED
+```
+
+### 8.5 Operational deployment prerequisite
+
+Later human/developer environment provisioning must supply dedicated secrets:
+
+```text
+Deployment sources:
+C03_INVITATION_IDENTITY_HMAC_PEPPER_DEV
+C03_INVITATION_IDENTITY_HMAC_PEPPER_PROD
+
+Canonical runtime variable:
+C03_INVITATION_IDENTITY_HMAC_PEPPER
+
+real secret provisioning = NOT PERFORMED BY P1.2
+AWS secret/config mutation = NOT PERFORMED
+production configuration = NOT PERFORMED
+```
+
+SST selects PROD for prod and DEV for all non-prod deployed stages, then
+projects the canonical unsuffixed runtime key. The unsuffixed variable also
+remains the local/direct backend runtime input. This is an operational
+deployment prerequisite, not an open P1.2 Product or architecture blocker.
+
+### 8.6 Systems Architect verdict and execution boundary
+
+```text
+P1_2 = PASS
+P1_2_ACCEPTED_BACKEND_SHA = c2f5f1461b847f811edbf1f54e4b427366664989
+P1_2_ACCEPTED_BACKEND_TREE = 62ed8af61f3e7c40c7a20a60b142507696062872
+PRODUCT_QUESTIONS = NONE
+ARCHITECTURE_CONFLICTS = NONE
+SECURITY_BOUNDARY_CHANGES = NONE
+NEXT_INTERNAL_CHECKPOINT = P1.3
+P1_3_EXECUTION = NOT STARTED AT TIME OF P1.2 ACCEPTANCE BINDING
+P1_4_EXECUTION = NOT STARTED
+P2_EXECUTION = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+## 9. Current continuation
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P1.2
+CURRENT_CHECKPOINT = P1.3
+P1_3_EXECUTION = NOT STARTED AT TIME OF P1.2 ACCEPTANCE BINDING
+P1_4_EXECUTION = NOT STARTED
+P2_STATE = NOT STARTED
 P2_EXECUTION = NOT_AUTHORIZED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 ```
