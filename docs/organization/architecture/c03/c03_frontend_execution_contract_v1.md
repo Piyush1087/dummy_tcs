@@ -5,6 +5,8 @@
 
 Authorization: `C03_P2_ENTRY_PROOF_AND_DURABLE_FRONTEND_CONTRACT_FREEZE_V1`. Starting authority `706a1654bdca8a6fe10bc50bd3ea7f89e32da2cb`; frontend `323658d4b147b95b5629ff8d91fa90b8fe9077e4`, tree `4ff40849c64a98429a89cc8e4f1ff6949815070c`; backend `4b51d52de6d9206545b0a38497c7436bc9d3e095`, tree `0df8adf9a4a45089918dc0f5d3cccd9f4317fede`. Frozen Product/Stage B and [backend contract](c03_backend_api_state_contract_v1.md) remain principal authority.
 
+The following is the historical P2 acceptance snapshot; the P3 runtime integration overlay below supplies the current checkpoint and runtime authority.
+
 ```text
 P1 = PASS
 P2 = PASS
@@ -4019,7 +4021,39 @@ The [complete state register](c03_frontend_state_family_register_v1.md) contains
 
 ## Execution boundary
 
-P3 is the next checkpoint, NOT STARTED and not authorized for execution by this binding. P4/P5 are NOT STARTED. Stop at SA_REVIEW_ONLY.
+At the original P2 binding, P3 was the next checkpoint and NOT STARTED. The P3 acceptance overlay below supersedes that execution checkpoint only. P4/P5 remain NOT STARTED. Stop at SA_REVIEW_ONLY.
 
 Systems Architect acceptance SHA =
 c821d5b55194c50726a0b253ad32f211a3097682
+
+## P3 acceptance — P4 backend runtime integration authority
+
+Authorization: `C03_P3_DURABLE_BACKEND_RUNTIME_ACCEPTANCE_BINDING_V1`. P2 state-family register remains frontend state authority; `C03_BACKEND_API_STATE_CONTRACT_V1` remains semantic/state authority. No P2 state, route, UI or Product decision changes.
+
+```text
+P4_BACKEND_RUNTIME_INTEGRATION_AUTHORITY = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P4_BACKEND_RUNTIME_TREE = 0c9a87f688388533911730b4b77cbc08f75c640b
+P1_BACKEND_SEMANTIC_ACCEPTED_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+P1_BACKEND_SEMANTIC_ACCEPTED_TREE = 0df8adf9a4a45089918dc0f5d3cccd9f4317fede
+P3_BACKEND_RUNTIME_ACCEPTED_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P3_BACKEND_RUNTIME_ACCEPTED_TREE = 0c9a87f688388533911730b4b77cbc08f75c640b
+P3_RUNTIME_PARENT_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+P1 = PASS
+P2 = PASS
+P3 = PASS
+LAST_ACCEPTED_CHECKPOINT = P3
+CURRENT_CHECKPOINT = P4
+P3_RUNTIME_ACCEPTED_BACKEND_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P3_RUNTIME_ACCEPTED_BACKEND_TREE = 0c9a87f688388533911730b4b77cbc08f75c640b
+P4_ARCHITECTURAL_ELIGIBILITY = YES
+P4_STATE = NOT STARTED AT TIME OF P3 ACCEPTANCE BINDING
+P4_EXECUTION = NOT AUTHORIZED BY THIS ASSIGNMENT
+P5_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+The P3 runtime is the direct transport/security correction descendant of the P1 semantic backend. Product and API/state semantics remain unchanged. The accepted Opportunity private/no-store and Authorization/Cookie variance now survive guard rejection, preserving CORS Origin. P4 must integrate against this runtime while preserving the frozen semantic contract and P2 state-family register.
+
+[Backend runtime acceptance overlay](c03_backend_api_state_contract_v1.md#p3_runtime_acceptance_overlay) and [verbatim V4 report](../../../ai-collaboration/c03-p3-backend-runtime-acceptance-report-v4.md) supply the accepted backend evidence. P4 architectural eligibility is YES; implementation is NOT STARTED and is not authorized by this assignment. P5 is NOT STARTED. No frontend source is modified.
+
+Systems Architect acceptance SHA = P3_ACCEPTANCE_RECORD_SHA_PENDING_BINDING

@@ -33,7 +33,27 @@ line is admitted here.
 | P1.3 Application commands/history | PASS | `4780c4924e85039a3cbb9e235b7c3af5a8b4e7dd` | 78 | P1.4 |
 | P1.4 Collaboration/Notifications handoff | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` | 79 | P2 |
 | P1 aggregate backend | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` | 79 | P2 |
-| P2 frontend contract | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` (unchanged P1) | 79 (unchanged) | P3 — NOT STARTED |
+| P2 frontend contract | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` (unchanged P1) | 79 (unchanged) | P3 |
+| P3 backend runtime acceptance | PASS | `8bedbebf9712b6ffe0acb11339813787ef669e62` | 79 (unchanged) | P4 — NOT STARTED |
+
+### Current checkpoint after P3 acceptance
+
+```text
+P1 = PASS
+P2 = PASS
+P3 = PASS
+LAST_ACCEPTED_CHECKPOINT = P3
+CURRENT_CHECKPOINT = P4
+P3_RUNTIME_ACCEPTED_BACKEND_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P3_RUNTIME_ACCEPTED_BACKEND_TREE = 0c9a87f688388533911730b4b77cbc08f75c640b
+P4_ARCHITECTURAL_ELIGIBILITY = YES
+P4_STATE = NOT STARTED AT TIME OF P3 ACCEPTANCE BINDING
+P4_EXECUTION = NOT AUTHORIZED BY THIS ASSIGNMENT
+P5_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+Earlier immutable checkpoint entries below retain their historical state at acceptance.
 
 ## 3. P1.1A immutable entry
 
@@ -713,8 +733,8 @@ Historical entries above retain their checkpoint-time exclusions and verdicts.
 | Merge/rebase/cherry-pick | NONE |
 | Migration | `20260910122000_c03_application_handoff_notifications` |
 | Migration count | 78 → 79 |
-| Committed migration SQL SHA-256 | `55d8dd3cc66264a45a6ad9e8838894d446915d9e55a5e4e128980367d4f7c96b` |
-| Migration checksum method | SHA-256 of exact SQL bytes extracted by `git archive` from accepted backend commit; checkout EOL conversion is not migration identity |
+| Historical CRLF-transformed migration SQL SHA-256 (corrected by P3 evidence authority below) | `55d8dd3cc66264a45a6ad9e8838894d446915d9e55a5e4e128980367d4f7c96b` |
+| Historical reported checksum method (evidence identity superseded by P3 correction below) | SHA-256 of exact SQL bytes extracted by `git archive` from accepted backend commit; checkout EOL conversion is not migration identity |
 | Backend publication | Non-force push, exact fetch-back SHA/tree, clean worktree; PASS |
 | Verdict | PASS; supplied Systems Architect acceptance |
 
@@ -966,3 +986,143 @@ Only the four authorized documentation files are changed. No runtime tests are r
 
 Systems Architect acceptance SHA =
 c821d5b55194c50726a0b253ad32f211a3097682
+
+## P3 durable backend runtime acceptance
+
+Authorization: `C03_P3_DURABLE_BACKEND_RUNTIME_ACCEPTANCE_BINDING_V1`. Systems Architect verdict: **P3 = ACCEPTED**. Starting recovery authority: `6cb664cf9361755e24bc85a9c600311301082739`. This entry supersedes earlier current-checkpoint snapshots without rewriting their acceptance history.
+
+```text
+P1_BACKEND_SEMANTIC_ACCEPTED_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+P1_BACKEND_SEMANTIC_ACCEPTED_TREE = 0df8adf9a4a45089918dc0f5d3cccd9f4317fede
+P3_BACKEND_RUNTIME_ACCEPTED_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P3_BACKEND_RUNTIME_ACCEPTED_TREE = 0c9a87f688388533911730b4b77cbc08f75c640b
+P3_RUNTIME_PARENT_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+```
+
+The P3 runtime is a direct transport/security correction descendant of the frozen P1 semantic backend. C03 Product semantics and API/state semantics are UNCHANGED. P4 must consume `C03_BACKEND_API_STATE_CONTRACT_V1` as semantic contract and `8bedbebf9712b6ffe0acb11339813787ef669e62` as runtime integration backend. P4 is architecturally eligible but not started or authorized by this binding.
+
+### Checksum evidence correction history
+
+```text
+P3_INITIAL_BLOCKED_RUN = MIGRATION_CHECKSUM_DRIFT
+DIAGNOSIS = LINE_ENDING_EVIDENCE_IDENTITY_ERROR
+MIGRATION_SQL_DEFECT = NO
+SCHEMA_DEFECT = NO
+AUTHORITY_CORRECTION = canonical checksum switched from platform-transformed checkout bytes to immutable Git blob bytes
+MIGRATION_COUNT = 79
+FINAL_MIGRATION = 20260910122000_c03_application_handoff_notifications
+IMMUTABLE_GIT_BLOB = 49b858278a963b14653e06937c193e8d9bca3236
+EXACT_COMMITTED_BYTES = 5294
+CANONICAL_IMMUTABLE_GIT_BLOB_SHA256 = 69afa7a872131ad6f0ce80b5ba232c1df0a0010589089bae56ec213559d2b255
+HISTORICAL_CRLF_TRANSFORMED_SHA256 = 55d8dd3cc66264a45a6ad9e8838894d446915d9e55a5e4e128980367d4f7c96b
+```
+
+### Notification timeout residual history
+
+```text
+P3_SECOND_BLOCKED_RUN = CREATOR_NOTIFICATION_POSTGRESQL_TIMEOUT
+AFFECTED_CASES = OWNER, MANAGER, ASSISTANT
+OBSERVED_DEFAULT_CEILING_MS = 5000
+P3_NOTIFICATION_TIMEOUT_DIAGNOSIS = HARNESS_TIMEOUT_ONLY
+BOUNDED_ROLE_CASES = PASS under 30000ms integration ceiling
+SLOWEST_MEASURED_NOTIFICATION_QUERY_READ_MS = 187.688
+POSTGRESQL_BLOCKING_PID = NONE
+DEADLOCK = NONE
+ORPHANED_TRANSACTION = NONE
+RUNTIME_SOURCE_CORRECTION_CONSUMED_BY_TIMEOUT = NO
+```
+
+The 30000ms ceiling is a finite integration-test bound, not a Product or runtime SLA.
+
+### Final runtime correction and accounting
+
+```text
+P3_RUNTIME_CORRECTION_1 = OPPORTUNITY_PRIVATE_RESPONSE_HEADER_PLACEMENT
+BASE_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+ACCEPTED_CORRECTION_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+CHANGED_FILES = src/features/campaign-opportunities/campaign-opportunity.module.ts; src/features/campaign-opportunities/opportunity-private-response.test.ts
+PRODUCT_BEHAVIOR_CHANGED = NO
+OPPORTUNITY_ENTITLEMENT_CHANGED = NO
+AUTHENTICATION_REQUIREMENT_CHANGED = NO
+TEASER_LOCKED_AUTHORIZED_SEMANTICS_CHANGED = NO
+CORS_PERMISSIONS_CHANGED = NO
+SCHEMA_CHANGED = NO
+MIGRATION_CHANGED = NO
+P3_AUTHORITY_CORRECTION_COUNT = 1
+P3_TIMEOUT_RESIDUAL_LANE = 1
+P3_RUNTIME_CORRECTION_COUNT = 1
+P3_RUNTIME_CORRECTION_BUDGET_REMAINING = 0
+```
+
+The already-frozen private/no-store and Authorization/Cookie variance now apply before authentication guards reject. Origin introduced by CORS remains present. Missing/invalid authentication on the protected collection returns generic 401, no protected payload, and does not execute the handler. See the backend runtime overlay for all three canonical routes.
+
+### Final V4 evidence, preserved provenance
+
+[Full runner report, preserved verbatim](../../ai-collaboration/c03-p3-backend-runtime-acceptance-report-v4.md). Its READY_FOR_SA_REVIEW and pre-binding ledger state are historical runner results; the verdict above records the subsequent SA acceptance. The following is the exact V4 result block; retained V2/V3 checks were not rerun for this docs-only binding.
+
+```text
+RESULT = READY_FOR_SA_REVIEW
+RECOVERY_AUTHORITY_SHA = 6cb664cf9361755e24bc85a9c600311301082739
+P3_CORRECTION_BASE_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+P3_CORRECTION_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P3_CORRECTION_TREE = 0c9a87f688388533911730b4b77cbc08f75c640b
+P3_RUNTIME_CORRECTION = OPPORTUNITY_PRIVATE_RESPONSE_HEADER_PLACEMENT
+FILES_CHANGED = src/features/campaign-opportunities/campaign-opportunity.module.ts; src/features/campaign-opportunities/opportunity-private-response.test.ts
+PROTECTED_OPPORTUNITY_UNAUTH_401 = PASS
+PROTECTED_OPPORTUNITY_INVALID_AUTH_401 = PASS
+CACHE_CONTROL = private, no-store
+VARY_TOKENS = Origin, Authorization, Cookie (token/order-insensitive)
+GENERIC_401_BODY = PASS
+HANDLER_SHORT_CIRCUIT_REGRESSION = PASS
+CORS_ORIGIN_VARY_PRESERVED = PASS
+PUBLIC_OPPORTUNITY_PRIVATE_HEADERS = PASS
+OPPORTUNITY_TEASER_HTTP = PASS
+OPPORTUNITY_LOCKED_HTTP = PASS
+OPPORTUNITY_AUTHORIZED_HTTP = PASS
+LEGACY_APPLY_RETIREMENT_HTTP = PASS — 410 LEGACY_APPLICATION_ENDPOINT_RETIRED; no durable mutation
+MATERIALIZED_NOTIFICATION_SECURITY = PASS — 2 materialized notifications; raw credential marker and field checks
+OPPORTUNITY_SECURITY_CONTRACT = 4906 PASS / 9 guarded PostgreSQL skips / zero failures; PostgreSQL coverage retained from V3
+P3_NOTIFICATION_TIMEOUT_DIAGNOSIS = HARNESS_TIMEOUT_ONLY — RETAINED_FROM_V3
+FOCUSED_POSTGRESQL = 100/100 PASS — RETAINED_FROM_V3_PRE_CORRECTION
+P3_ADDITIONAL_CONTENTION = 14/14 PASS — RETAINED_FROM_V3_PRE_CORRECTION
+ADDITIONAL_POSTGRESQL = 62/62 PASS — RETAINED_FROM_V3_PRE_CORRECTION
+FRESH_0_TO_79 = PASS — RETAINED_FROM_V2
+LEGACY_74_TO_79 = PASS — RETAINED_FROM_V2
+PRISMA_INTEGRITY = PASS — RETAINED_FROM_V2
+LEGACY_PERSISTENCE_PRESERVATION = PASS — RETAINED_FROM_V2
+MIGRATION_COUNT = 79
+FINAL_MIGRATION_SHA256 = 69afa7a872131ad6f0ce80b5ba232c1df0a0010589089bae56ec213559d2b255
+FINAL_MIGRATION_COMMITTED_BYTES = 5294
+FULL_TEST_SUITE = 6188 PASS / 753 guarded skips / zero failures; 195 passed files / 54 skipped files; exit0; 307.685s
+PRODUCTION_BUILD = PASS — npm run build exit0; 72.646s; byte-verified scratch source
+STARTUP_SMOKE = PASS
+SECURITY_DIFF_REVIEW = PASS
+P3_AUTHORITY_CORRECTION_COUNT = 1
+P3_TIMEOUT_RESIDUAL_LANE = 1
+P3_RUNTIME_CORRECTION_COUNT = 1
+P3_RUNTIME_CORRECTION_BUDGET_REMAINING = 0
+COMMIT = 8bedbebf9712b6ffe0acb11339813787ef669e62
+PUSH = PASS — NON_FORCE
+FETCH_BACK_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+CLEAN_WORKTREE = YES
+PRODUCT_QUESTIONS = NONE
+ARCHITECTURE_CONFLICTS = NONE
+SECURITY_BOUNDARY_CHANGES = NONE — existing frozen privacy boundary made effective before guard rejection
+P4_STARTED = NO
+P5_STARTED = NO
+AWS_CALLS = NONE
+LIVE_PROVIDER_CALLS = NONE
+PRODUCTION_ACCESS = NONE
+RECOVERY_LEDGER_MODIFIED = NO
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+```text
+CHECKSUM_AUTHORITY_GATE = PASS — RETAINED_FROM_V2
+LEGACY_PRESERVATION = PASS — RETAINED_FROM_V2
+EVIDENCE_ZIP_SHA256 = 10c0138beb31f1048978cc8550d1e5a52ec45568599d614c3a6e48a6d21ac02c
+```
+
+The ZIP is preserved externally and is not committed. No runtime tests/build, AWS, provider operation, production access, frontend changes, P4 or P5 implementation are part of this binding.
+
+Systems Architect acceptance SHA = P3_ACCEPTANCE_RECORD_SHA_PENDING_BINDING

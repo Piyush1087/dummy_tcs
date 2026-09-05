@@ -263,8 +263,11 @@ Sources: `src/features/collaboration/services/approved-application-collaboration
 `src/features/campaign-applications/application-terminal.service.ts`,
 `application-evidence.ts`, `prisma/schema.prisma`, and migration
 `20260910122000_c03_application_handoff_notifications`.
-Committed migration SQL SHA-256:
-`55d8dd3cc66264a45a6ad9e8838894d446915d9e55a5e4e128980367d4f7c96b`.
+Canonical committed migration SQL SHA-256 (`CANONICAL_IMMUTABLE_GIT_BLOB_SHA256`):
+`69afa7a872131ad6f0ce80b5ba232c1df0a0010589089bae56ec213559d2b255`.
+Immutable Git blob `49b858278a963b14653e06937c193e8d9bca3236`, exactly 5294 committed bytes.
+Historical `HISTORICAL_CRLF_TRANSFORMED_SHA256`: `55d8dd3cc66264a45a6ad9e8838894d446915d9e55a5e4e128980367d4f7c96b`.
+P3 corrected evidence identity from CRLF-transformed checkout bytes to immutable Git blob bytes; no migration SQL or schema defect/change.
 
 ## 7. Notification scope, outputs and reads
 
@@ -425,3 +428,36 @@ Systems Architect acceptance SHA =
 `71b449546a7f5d3ef627576e82013fb0ff887d25`
 
 This immutable acceptance record binds P1.4 and the P1 aggregate freeze.
+
+## P3_RUNTIME_ACCEPTANCE_OVERLAY
+
+The status remains `FROZEN_AFTER_ACCEPTED_P1`; the original backend authority above remains the P1 semantic authority. This bounded overlay records accepted executable runtime evidence without refreezing Product or API/state fields.
+
+```text
+P1_BACKEND_SEMANTIC_ACCEPTED_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+P1_BACKEND_SEMANTIC_ACCEPTED_TREE = 0df8adf9a4a45089918dc0f5d3cccd9f4317fede
+P3_BACKEND_RUNTIME_ACCEPTED_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P3_BACKEND_RUNTIME_ACCEPTED_TREE = 0c9a87f688388533911730b4b77cbc08f75c640b
+P3_RUNTIME_PARENT_SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+Runtime accepted SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+Runtime accepted tree = 0c9a87f688388533911730b4b77cbc08f75c640b
+Parent semantic SHA = 4b51d52de6d9206545b0a38497c7436bc9d3e095
+Semantic contract delta = NONE
+Runtime/security correction = Opportunity private response headers made effective before guard rejection
+```
+
+The runtime is the direct transport/security correction descendant of P1. Only `src/features/campaign-opportunities/campaign-opportunity.module.ts` and `src/features/campaign-opportunities/opportunity-private-response.test.ts` changed. Authentication requirements, entitlement, disclosure, TEASER/LOCKED/AUTHORIZED semantics, CORS permissions, schema and all 79 migrations remain unchanged.
+
+| Canonical surface | Accepted private response boundary |
+|---|---|
+| GET `/api/v1/campaign-opportunities/:campaignId` | `Cache-Control: private, no-store`; Vary contains Authorization and Cookie |
+| POST `/api/v1/campaign-opportunities/:campaignId/apply-continuation` | Same boundary; optional authentication remains unchanged |
+| GET `/api/v1/creator/campaigns/opportunities` | Same boundary, including missing/invalid authentication rejection |
+
+CORS-added Origin remains in Vary; assertions are token/order insensitive. Protected collection missing/invalid authentication returns 401 with generic Unauthorized, no protected payload and no handler execution. Middleware applies before guards and later validation. Unchanged successful-handler header metadata cannot erase Origin. This is the accepted executable runtime contract.
+
+P4 consumes this document as semantic/state authority and the P3 runtime SHA above as integration backend. P4/P5 remain NOT STARTED; P4 execution is not authorized by this binding.
+
+[Preserved V4 evidence](../../../ai-collaboration/c03-p3-backend-runtime-acceptance-report-v4.md): full suite 6188 PASS / 753 GUARDED SKIPS / 0 FAIL; build, startup, HTTP privacy/CORS/projections, legacy Apply 410, materialized Notification security and security diff PASS. V2 migration and V3 PostgreSQL/timeout evidence retain their original provenance. ZIP SHA-256 `10c0138beb31f1048978cc8550d1e5a52ec45568599d614c3a6e48a6d21ac02c`. Correction accounting remains authority=1, timeout lane=1, runtime=1, runtime budget remaining=0.
+
+Systems Architect acceptance SHA = P3_ACCEPTANCE_RECORD_SHA_PENDING_BINDING
