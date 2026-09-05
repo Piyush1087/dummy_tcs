@@ -1,0 +1,24 @@
+{
+  "backendBuild": "PASS",
+  "frontendBuild": "PASS; existing large chunk warning",
+  "fullAppModule": true,
+  "entry": "dist/main.js",
+  "listening": "127.0.0.1:3107",
+  "ready": true,
+  "payoutRoutes": [
+    "Mapped {/api/v1/brand/payouts, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/obligations, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/obligations/:obligationId, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/activity, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/activity.csv, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/activity/:activityId, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/brand-returns, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/brand-returns/:requestId, GET} route\u001b[39m\u001b[38;5;3m",
+    "Mapped {/api/v1/brand/payouts/reserve-requests, GET} route\u001b[39m\u001b[38;5;3m"
+  ],
+  "providerVariables": "ABSENT (child environment built from allowlist)",
+  "outboundBlockedEvents": 0,
+  "offeringRefresh": "disabled by OFFERING_PRICE_REFRESH_ENABLED=false",
+  "otherWorkers": "Unconditional workers started against empty local queues; no queued provider jobs. No source modifications to disable them.",
+  "bootstrapIsolation": "Temporary preload restricts Node TCP to loopback and binds server to loopback. Does not replace AppModule or services."
+}

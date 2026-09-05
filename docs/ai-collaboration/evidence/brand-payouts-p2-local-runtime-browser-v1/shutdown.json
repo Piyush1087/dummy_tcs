@@ -1,0 +1,19 @@
+{
+  "backendProcessStopped": true,
+  "frontendPreviewStopped": true,
+  "ownedBrowserProbeTreesStopped": true,
+  "ownedProcessesStopped": 12,
+  "postgresContainerRemoved": true,
+  "postgresDisposableVolumeRemoved": true,
+  "containerName": "bp-p2-relay-pg",
+  "remainingListenersOn3107_4177_55439": 0,
+  "privateSessionFileRemoved": true,
+  "gracefulNestHookProof": false,
+  "method": "Windows Stop-Process on specifically identified owned process trees; docker stop then docker rm --volumes on this run container",
+  "remainingDisposableResources": [],
+  "sourceWorktreesClean": true,
+  "sourceChanges": "NONE",
+  "schemaMigrationDiff": "NONE",
+  "migrationsCreated": 0,
+  "providerActions": 0
+}

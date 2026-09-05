@@ -1,0 +1,17 @@
+{
+  "file": "src/shared/config/resolve-env.ts",
+  "inputs": "built preview: dev=false, stage=local",
+  "results": [
+    {
+      "apiUrl": "http://127.0.0.1:3107",
+      "result": "THREW",
+      "message": "VITE_API_URL must not target localhost in production."
+    },
+    {
+      "apiUrl": "http://localhost:3107",
+      "result": "THREW",
+      "message": "VITE_API_URL must not target localhost in production."
+    }
+  ],
+  "execution": "Pure committed helper transpiled in memory; no network calls; no source changes"
+}

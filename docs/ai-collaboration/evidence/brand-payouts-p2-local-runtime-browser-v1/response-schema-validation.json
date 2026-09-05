@@ -1,0 +1,95 @@
+{
+  "note": "Saved HTTP projections validated against pinned frontend Zod schemas after opaque next_cursor redaction.",
+  "rows": [
+    {
+      "requestIndex": 3,
+      "schema": "brandPayoutsOverviewResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 4,
+      "schema": "brandPayoutsActivityResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 5,
+      "schema": "brandPayoutsObligationsResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 6,
+      "schema": "brandPayoutsOverviewResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 7,
+      "schema": "brandPayoutsActivityResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 8,
+      "schema": "brandPayoutsObligationsResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 9,
+      "schema": "brandPayoutsOverviewResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 10,
+      "schema": "brandPayoutsActivityResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 11,
+      "schema": "brandPayoutsObligationsResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 24,
+      "schema": "brandPayoutsOverviewResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 25,
+      "schema": "brandPayoutsActivityResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 26,
+      "schema": "brandPayoutsObligationsResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 27,
+      "schema": "brandPayoutsOverviewResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 28,
+      "schema": "brandPayoutsActivityResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 29,
+      "schema": "brandPayoutsObligationsResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 33,
+      "schema": "brandPayoutsActivityResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 34,
+      "schema": "brandPayoutsActivityResponseSchema",
+      "pass": true
+    },
+    {
+      "requestIndex": 36,
+      "schema": "brandPayoutsObligationDetailResponseSchema",
+      "pass": true
+    }
+  ]
+}

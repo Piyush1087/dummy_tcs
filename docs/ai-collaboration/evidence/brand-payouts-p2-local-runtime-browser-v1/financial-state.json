@@ -1,0 +1,24 @@
+{
+  "before": "fa04309755c85e3cf2753f23e13c9e94983954f5d5125549708d4f0351a90d0a",
+  "after": "fa04309755c85e3cf2753f23e13c9e94983954f5d5125549708d4f0351a90d0a",
+  "equal": true,
+  "models": [
+    "brandEscrowVault",
+    "escrowTransactionLedger",
+    "creatorPayoutObligation",
+    "routeTransferAttempt",
+    "routeTransferReversal",
+    "brandReturnRequest",
+    "creatorPayoutProfile"
+  ],
+  "rowCounts": {
+    "brandEscrowVault": 2,
+    "escrowTransactionLedger": 56,
+    "creatorPayoutObligation": 2,
+    "routeTransferAttempt": 0,
+    "routeTransferReversal": 0,
+    "brandReturnRequest": 0,
+    "creatorPayoutProfile": 1
+  },
+  "normalization": "Prisma JSON serialization, fixed model order, each table sorted by id; raw financial rows not committed."
+}

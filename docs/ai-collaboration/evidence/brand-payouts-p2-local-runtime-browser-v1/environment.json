@@ -1,0 +1,16 @@
+{
+  "os": "Windows_NT",
+  "release": "10.0.26200",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "packageManager": "npm ci --ignore-scripts",
+  "prisma": "6.19.3",
+  "buildEnvironment": {
+    "VITE_API_URL": "http://127.0.0.1:3107",
+    "VITE_STAGE": "local",
+    "command": "npm run build"
+  },
+  "frontendPreview": "vite preview --host 127.0.0.1 --port 4177 --strictPort",
+  "browserRecord": "browser-failure.json"
+}

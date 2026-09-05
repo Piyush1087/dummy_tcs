@@ -1,0 +1,443 @@
+{
+  "browser": "140.0.7339.16",
+  "automation": "1.61.1",
+  "axe": "4.10.3",
+  "rows": [
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "b69c37bc9c1b1aec0976ab503acbb7274153480d",
+      "frontendTree": "0eea09c409f84b463ff087aa01a3c85b784f53fc",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "actor": "unauthenticated; intended Owner login unreachable",
+      "state": "BOOTSTRAP_SOURCE_DEFECT",
+      "screenshot": "390-unauthenticated-bootstrap-failure.png",
+      "network": [
+        {
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-CgV_cCHn.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-BmTQXILV.js",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "console": [
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "pageerror",
+          "message": "VITE_API_URL must not target localhost in production."
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        }
+      ],
+      "dom": {
+        "bodyText": "",
+        "rootChildCount": 0,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "interactiveCount": 0
+      },
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "accessibility": {
+        "status": "BLOCKED_APP_DID_NOT_RENDER",
+        "blankDocumentScan": {
+          "violations": [
+            {
+              "id": "landmark-one-main",
+              "impact": "moderate",
+              "description": "Ensure the document has a main landmark",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            },
+            {
+              "id": "page-has-heading-one",
+              "impact": "moderate",
+              "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            }
+          ],
+          "passes": 7,
+          "incomplete": []
+        }
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "b69c37bc9c1b1aec0976ab503acbb7274153480d",
+      "frontendTree": "0eea09c409f84b463ff087aa01a3c85b784f53fc",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "actor": "unauthenticated; intended Owner login unreachable",
+      "state": "BOOTSTRAP_SOURCE_DEFECT",
+      "screenshot": "767-unauthenticated-bootstrap-failure.png",
+      "network": [
+        {
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-CgV_cCHn.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-BmTQXILV.js",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "console": [
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "pageerror",
+          "message": "VITE_API_URL must not target localhost in production."
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        }
+      ],
+      "dom": {
+        "bodyText": "",
+        "rootChildCount": 0,
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "interactiveCount": 0
+      },
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "accessibility": {
+        "status": "BLOCKED_APP_DID_NOT_RENDER",
+        "blankDocumentScan": {
+          "violations": [
+            {
+              "id": "landmark-one-main",
+              "impact": "moderate",
+              "description": "Ensure the document has a main landmark",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            },
+            {
+              "id": "page-has-heading-one",
+              "impact": "moderate",
+              "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            }
+          ],
+          "passes": 7,
+          "incomplete": []
+        }
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "b69c37bc9c1b1aec0976ab503acbb7274153480d",
+      "frontendTree": "0eea09c409f84b463ff087aa01a3c85b784f53fc",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "actor": "unauthenticated; intended Owner login unreachable",
+      "state": "BOOTSTRAP_SOURCE_DEFECT",
+      "screenshot": "768-unauthenticated-bootstrap-failure.png",
+      "network": [
+        {
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-CgV_cCHn.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-BmTQXILV.js",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "console": [
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "pageerror",
+          "message": "VITE_API_URL must not target localhost in production."
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        }
+      ],
+      "dom": {
+        "bodyText": "",
+        "rootChildCount": 0,
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "interactiveCount": 0
+      },
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "accessibility": {
+        "status": "BLOCKED_APP_DID_NOT_RENDER",
+        "blankDocumentScan": {
+          "violations": [
+            {
+              "id": "landmark-one-main",
+              "impact": "moderate",
+              "description": "Ensure the document has a main landmark",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            },
+            {
+              "id": "page-has-heading-one",
+              "impact": "moderate",
+              "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            }
+          ],
+          "passes": 7,
+          "incomplete": []
+        }
+      }
+    },
+    {
+      "backendSha": "119397ff6836ad12846c1e948409d8d49185c408",
+      "backendTree": "73521762dfeaf703b301e7a61c17cbda97d797a9",
+      "frontendSha": "b69c37bc9c1b1aec0976ab503acbb7274153480d",
+      "frontendTree": "0eea09c409f84b463ff087aa01a3c85b784f53fc",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "actor": "unauthenticated; intended Owner login unreachable",
+      "state": "BOOTSTRAP_SOURCE_DEFECT",
+      "screenshot": "1440-unauthenticated-bootstrap-failure.png",
+      "network": [
+        {
+          "path": "/brand/payouts",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-CgV_cCHn.css",
+          "status": 200,
+          "method": "GET"
+        },
+        {
+          "path": "/assets/index-BmTQXILV.js",
+          "status": 200,
+          "method": "GET"
+        }
+      ],
+      "console": [
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "pageerror",
+          "message": "VITE_API_URL must not target localhost in production."
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "kind": "console-error",
+          "message": "Failed to load resource: net::ERR_FAILED"
+        }
+      ],
+      "dom": {
+        "bodyText": "",
+        "rootChildCount": 0,
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "interactiveCount": 0
+      },
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "accessibility": {
+        "status": "BLOCKED_APP_DID_NOT_RENDER",
+        "blankDocumentScan": {
+          "violations": [
+            {
+              "id": "landmark-one-main",
+              "impact": "moderate",
+              "description": "Ensure the document has a main landmark",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            },
+            {
+              "id": "page-has-heading-one",
+              "impact": "moderate",
+              "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+              "nodes": [
+                {
+                  "target": [
+                    "html"
+                  ],
+                  "html": "<html lang=\"en\">"
+                }
+              ]
+            }
+          ],
+          "passes": 7,
+          "incomplete": []
+        }
+      }
+    }
+  ]
+}
