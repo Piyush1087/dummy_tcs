@@ -4020,3 +4020,6 @@ The [complete state register](c03_frontend_state_family_register_v1.md) contains
 ## Execution boundary
 
 P3 is the next checkpoint, NOT STARTED and not authorized for execution by this binding. P4/P5 are NOT STARTED. Stop at SA_REVIEW_ONLY.
+
+Systems Architect acceptance SHA =
+c821d5b55194c50726a0b253ad32f211a3097682
