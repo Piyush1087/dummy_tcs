@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P2_ACCEPTED_P3A_READY"
+status: "P3A_SOURCE_CANDIDATES_PENDING_LOCAL_RUNTIME_EVIDENCE"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -38,11 +38,11 @@ authorization_mvp_cutline_artifact: "BRAND_PAYOUTS_MVP_DELIVERY_CUTLINE_AND_POST
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: null
 
-phase: "P2_ACCEPTED"
+phase: "P3A_IMPLEMENTED_PENDING_RUNTIME_EVIDENCE"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: null
-checkpoint_name: "BP-P2-FIRST-VERTICAL-SLICE"
-next_phase: "P3A_MINIMAL_OPERATIONAL_SURFACE_CUTOVER"
+checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
+next_phase: "P3A_LOCAL_RUNTIME_BROWSER_EVIDENCE"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -230,6 +230,22 @@ tests:
   p2_schema_migration_diff: "NONE"
   p2_browser_responsive: "PASS_COMPLETE_V6_MATRIX"
   p2_production_shaped: "PASS_PROVIDER_DISABLED_LOCAL_RUNTIME"
+  p3a_backend_focused: "PASS_13_OF_13"
+  p3a_backend_full: "PASS_1268_OF_1268_615_OPT_IN_SKIPPED"
+  p3a_backend_changed_file_lint: "PASS"
+  p3a_backend_repository_lint: "BASELINE_FAIL_987_PREEXISTING_OUTSIDE_P3A_SCOPE"
+  p3a_backend_build: "PASS"
+  p3a_backend_diff_check: "PASS"
+  p3a_backend_schema_migration_diff: "NONE"
+  p3a_frontend_focused: "PASS_61_OF_61"
+  p3a_frontend_full: "PASS_884_OF_884"
+  p3a_frontend_changed_file_lint: "PASS"
+  p3a_frontend_repository_lint: "BASELINE_FAIL_26_ERRORS_13_WARNINGS_OUTSIDE_P3A_SCOPE"
+  p3a_frontend_typecheck: "PASS"
+  p3a_frontend_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
+  p3a_frontend_diff_check: "PASS"
+  p3a_postgres_security: "PENDING_LOCAL_RUNTIME_RELAY"
+  p3a_built_runtime_browser: "PENDING_LOCAL_RUNTIME_RELAY"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -306,9 +322,9 @@ correction_history:
 last_failure: null
 breaker: null
 stop_reason: null
-environment: "CHATGPT_WORK_CLOUD_PLUS_COMPLETED_LOCAL_DESKTOP_V6_RELAY"
+environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_RELAY"
 
-non_delegable_gate: null
+non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_RUNTIME_RELAY"
 
 local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
@@ -319,6 +335,20 @@ local_runner_relay:
   evidence_commit: "b03613da50561cf4287c022ed46b2048365281e3"
   evidence_tree: "1c731f5d4461a4a6c1febf9fe952ae70b5ba3cbe"
   result: "PASS"
+  source_changes_allowed: false
+  migrations_allowed: false
+  provider_actions_allowed: false
+
+p3a_local_runner_relay:
+  type: "LOCAL_DESKTOP_RUNTIME_RELAY"
+  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
+  prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v1.md"
+  authorized_scope: "P3A_POSTGRES_SECURITY_BUILT_RUNTIME_AND_BROWSER_EVIDENCE_ONLY"
+  backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+  backend_tree_sha: "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24"
+  frontend_sha: "e81c5bf105e8cc03d93f01f5be981cc527e36ca0"
+  frontend_tree_sha: "c32c164e1f4cda963dd8358e33fe253aed77dfcc"
   source_changes_allowed: false
   migrations_allowed: false
   provider_actions_allowed: false
@@ -641,7 +671,26 @@ phase_checkpoints:
       migrations_created_or_applied: false
       provider_actions: []
     blockers: []
-  p3a_operations_cutover: null
+  p3a_operations_cutover:
+    status: "IMPLEMENTED_PENDING_LOCAL_RUNTIME_EVIDENCE"
+    checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
+    authority_sha: "9c991a8e8c8dfc90ccc4cf18e48ab1629d5f5b4f"
+    accepted_p2_ledger_sha: "495ae4f977152b49b0504ed11c441aadd4abcc93"
+    backend_parent_sha: "119397ff6836ad12846c1e948409d8d49185c408"
+    backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+    backend_tree_sha: "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24"
+    backend_changed_file_count: 10
+    backend_production_file_count: 7
+    frontend_parent_sha: "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03"
+    frontend_sha: "e81c5bf105e8cc03d93f01f5be981cc527e36ca0"
+    frontend_tree_sha: "c32c164e1f4cda963dd8358e33fe253aed77dfcc"
+    frontend_changed_file_count: 16
+    frontend_production_file_count: 12
+    migrations_created_or_applied: false
+    provider_actions: []
+    review_owner: "SYSTEMS_ARCHITECT"
+    evidence_status: "PENDING_LOCAL_RUNTIME_RELAY"
+    acceptance_result: "NOT_SET"
   p3s_support: null
   p4_base_convergence: null
   p4a_first_reserve: null
@@ -660,6 +709,7 @@ phase_checkpoints:
 files_changed:
   authority:
     - "docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml"
+    - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-rerun-runner-v1.md"
@@ -681,6 +731,14 @@ files_changed:
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_c04_settlement_dependency_handoff_v1.md"
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_campaign_net_terms_correction_handoff_v1.md"
   backend:
+    - ".env.example"
+    - "src/shared/config/brand-financial-command-surface.ts"
+    - "src/features/brand-escrow/brand-escrow.controller.ts"
+    - "src/features/brand-escrow/brand-return.controller.test.ts"
+    - "src/features/brand-payouts/brand-payouts-p3a.test.ts"
+    - "src/features/notifications/config/notification-event-registry.ts"
+    - "src/features/notifications/notification-engine-policy.test.ts"
+    - "src/features/notifications/types/notifications.types.ts"
     - "src/features/brand-payouts/brand-payouts-p0.architecture.test.ts"
     - "src/features/brand-payouts/contracts/brand-payouts-authorization.contract.ts"
     - "src/features/brand-payouts/contracts/brand-payouts-v2.contract.test.ts"
@@ -707,6 +765,15 @@ files_changed:
     - "src/features/brand-settings/brand-settings.module.ts"
     - "src/features/notifications/notifications-module-composition.test.ts"
   frontend:
+    - "src/features/brand-escrow/api/brand-escrow-client.test.ts"
+    - "src/features/brand-escrow/api/brand-escrow-client.ts"
+    - "src/features/brand-escrow/components/brand-return-drawer.tsx"
+    - "src/features/brand-escrow/components/escrow-account-card.tsx"
+    - "src/features/brand-escrow/components/escrow-top-up-drawer.tsx"
+    - "src/features/brand-escrow/components/treasury-settings.test.ts"
+    - "src/features/brand-payouts/components/PayoutsTreasuryActions.tsx"
+    - "src/pages/brand/settings/brand-settings-escrow-page.tsx"
+    - "src/pages/brand/settings/brand-settings-routing.test.ts"
     - "src/features/brand-payouts/api/brand-payouts-client.ts"
     - "src/features/brand-payouts/brand-payouts-p2.test.ts"
     - "src/features/brand-payouts/brand-payouts.css"
@@ -731,6 +798,11 @@ files_changed:
     - "src/shared/config/resolve-env.test.ts"
   provider_evidence: []
 
-uncheckpointed_work: null
+uncheckpointed_work:
+  phase: "P3A"
+  status: "SOURCE_PUSHED_PENDING_LOCAL_RUNTIME_EVIDENCE"
+  source_repositories_clean: true
+  migrations_created_or_applied: false
+  provider_actions: []
 
-last_updated: "2026-09-05T20:50:30Z"
+last_updated: "2026-09-05T21:30:29Z"
