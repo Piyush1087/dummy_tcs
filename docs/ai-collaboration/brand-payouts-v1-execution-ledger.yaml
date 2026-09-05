@@ -1,8 +1,9 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "EXECUTION_BLOCK_1_STOPPED"
+status: "P2_GATE_RECOVERY_BROWSER_RELAY_REQUIRED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
+execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
 architecture_sha: "3fb6b4246aa5f2ecb71c3bbfe99c56e395f30a92"
 architecture_parent_sha: "7aeb0512cb8270a6bae1169570e82b080f01807e"
 backend_base_sha: "4c5f42858b950b7cd342f8972f99f548f3daa942"
@@ -25,15 +26,15 @@ execution_mode:
   authority: "PRODUCT"
   authorized: true
 
-authorization_artifact: "BRAND_PAYOUTS_STAGE_B_ACCEPTANCE_AND_EXECUTION_BLOCK_1_V1"
-authorized_segment: "P0_TO_P2"
-next_parent_gate: "BP-P2-FIRST-VERTICAL-SLICE"
+authorization_artifact: "BRAND_PAYOUTS_P2_RECOVERY_AND_AUTONOMOUS_SA_CHECKPOINT_AUTHORIZATION_V2"
+authorized_segment: "P2_RECOVERY_AND_AUTONOMOUS_PROVIDER_NEUTRAL_CONTINUATION"
+next_parent_gate: "NONE_TECHNICAL_CHECKPOINTS_DELEGATED_TO_SYSTEMS_ARCHITECT"
 
-phase: "P2_BLOCKED"
+phase: "P2_GATE_RECOVERY_BROWSER_RELAY_REQUIRED"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "3dc8cef560cbe011fa39bfe33c3766786c0eddb7"
 checkpoint_name: "BP-P1-BACKEND-READ"
-next_phase: "P2_GATE_RECOVERY"
+next_phase: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_ACCEPTANCE"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -48,7 +49,7 @@ dependency_gates:
   campaign_manager_entity_scope: "RESOLVED_FAIL_CLOSED_ZERO_ROWS"
   payment_support_security_policy: "OPEN_BLOCKING"
   complete_v1_source_coresidence: "OPEN_BLOCKING"
-  first_vertical_slice: "BLOCKED_RUNTIME_AND_BROWSER_EVIDENCE"
+  first_vertical_slice: "BACKEND_RUNTIME_RECOVERY_PASS_BROWSER_EVIDENCE_OPEN"
   first_financial_reserve_path: "OPEN_HUMAN_GATE"
   india_withholding_if_applicable: "OPEN_HUMAN_GATE"
 
@@ -104,13 +105,24 @@ tests:
   p1_schema_migration_diff: "NONE"
   p2_frontend_focused: "PASS_22_OF_22"
   p2_frontend_full: "PASS_875_OF_875"
-  p2_changed_file_lint: "PASS"
-  p2_changed_file_format: "PASS"
+  p2_frontend_changed_file_lint: "PASS"
+  p2_frontend_changed_file_format: "PASS"
   p2_frontend_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
   p2_postgres_http_rbac: "PASS_15_CHECKS_23_REQUESTS_BOUNDED_REAL_P1_STACK"
-  p2_full_app_startup: "FAIL_NOTIFICATIONS_MODULE_IMPORT_INDEX_2_UNDEFINED"
-  p2_browser_responsive: "BLOCKED_CLOUD_BROWSER_LOCAL_PREVIEW_POLICY"
-  p2_production_shaped: "BLOCKED"
+  p2_boot_module_composition: "PASS_1_OF_1"
+  p2_p0_p1_focused: "PASS_33_OF_33_5_OPT_IN_SKIPPED"
+  p2_p1_postgres_security: "PASS_17_OF_17_POSTGRESQL_17_11_UTC"
+  p2_affected_notifications_brand_centre_intelligence: "PASS_421_OF_421_190_OPT_IN_SKIPPED"
+  p2_full_backend_test: "PASS_1262_OF_1262_615_OPT_IN_SKIPPED"
+  p2_changed_file_lint: "PASS"
+  p2_changed_file_format: "PASS"
+  p2_repository_lint: "BASELINE_FAIL_987_IDENTICAL_TO_ACCEPTED_P1_TREE"
+  p2_backend_build: "PASS"
+  p2_full_app_startup: "PASS_ROOT_LIVE_DATABASE_HEALTH_PAYOUTS_ROUTE_401_AND_CONTROLLED_SHUTDOWN"
+  p2_diff_check: "PASS"
+  p2_schema_migration_diff: "NONE"
+  p2_browser_responsive: "LOCAL_DESKTOP_RELAY_REQUIRED"
+  p2_production_shaped: "BACKEND_PASS_BROWSER_EVIDENCE_OPEN"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -146,11 +158,16 @@ correction_history:
     signature: "V2_RESPONSE_MEDIA_TYPE_PREFIX_ACCEPTANCE"
     result: "CORRECTED_AND_ALL_FRONTEND_GATES_RERUN_PASS"
     scope: "REQUIRE_EXACT_V2_MEDIA_TYPE_ESSENCE_WHILE_ALLOWING_STANDARD_PARAMETERS"
+  - phase: "P2_GATE_RECOVERY"
+    signature: "BASELINE_RUNTIME_BOOT_CORRECTION"
+    result: "CORRECTED_AND_BACKEND_GATE_RERUN_PASS"
+    scope: "DEFER_EXACT_NOTIFICATIONS_AND_BRAND_SETTINGS_IMPORT_EDGES_TO_CLOSE_EXISTING_NEST_MODULE_CYCLES"
+    correction_budget: "SEPARATELY_AUTHORIZED_RECOVERY_EXCEPTION"
 
-last_failure: "P2_EXACT_PRODUCTION_SHAPED_AND_BROWSER_ACCEPTANCE_EVIDENCE_UNAVAILABLE"
-breaker: "PRODUCTION_RUNTIME_FAILURE"
-stop_reason: "BUILT_APP_MODULE_FAILS_BEFORE_ROUTE_EXERCISE_AND_CLOUD_BROWSER_POLICY_BLOCKS_LOCAL_PREVIEW"
-environment: "CHATGPT_WORK_CLOUD_EXECUTION_BLOCK_1_RECOVERY"
+last_failure: null
+breaker: null
+stop_reason: "UNAVOIDABLE_LOCAL_DESKTOP_RUNTIME_BROWSER_EVIDENCE_RELAY"
+environment: "CHATGPT_WORK_CLOUD_PLUS_AUTHORIZED_LOCAL_DESKTOP_RELAY"
 
 checkpoint_policy:
   max_phases_per_authorized_segment: 3
@@ -200,8 +217,10 @@ phase_checkpoints:
     status: "IMPLEMENTED_PENDING_ACCEPTANCE_BLOCKED"
     checkpoint_name: "BP-P2-FIRST-VERTICAL-SLICE"
     authority_sha: null
-    backend_sha: "60385abbd12d5a363615100c463ac6755ce848ea"
-    backend_tree_sha: "1826f3aad9e57b0cf3226a2a3a1acd951c4f344a"
+    accepted_p1_backend_sha: "60385abbd12d5a363615100c463ac6755ce848ea"
+    accepted_p1_backend_tree_sha: "1826f3aad9e57b0cf3226a2a3a1acd951c4f344a"
+    backend_sha: "119397ff6836ad12846c1e948409d8d49185c408"
+    backend_tree_sha: "73521762dfeaf703b301e7a61c17cbda97d797a9"
     frontend_parent_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
     frontend_sha: "b69c37bc9c1b1aec0976ab503acbb7274153480d"
     frontend_tree_sha: "0eea09c409f84b463ff087aa01a3c85b784f53fc"
@@ -211,8 +230,25 @@ phase_checkpoints:
     provider_mode: "DISABLED_NOT_INVOKED"
     migrations_created_or_applied: false
     parent_accepted: false
+    review_owner: "SYSTEMS_ARCHITECT"
+    parent_review: "DELEGATED_BY_689FEB7A46EB2D52B984CE083BE046AC6D38657D"
+    backend_runtime_recovery:
+      classification: "BASELINE_RUNTIME_BOOT_CORRECTION"
+      pre_existed_payouts_p1: true
+      parent_sha: "60385abbd12d5a363615100c463ac6755ce848ea"
+      sha: "119397ff6836ad12846c1e948409d8d49185c408"
+      tree_sha: "73521762dfeaf703b301e7a61c17cbda97d797a9"
+      root_cause: "EAGER_BRAND_CENTRE_IMPORTS_CLOSED_NOTIFICATIONS_BRAND_SETTINGS_BRAND_CENTRE_BRAND_INTELLIGENCE_CYCLES"
+      production_file_count: 2
+      test_file_count: 1
+      production_files:
+        - "src/features/notifications/notifications.module.ts"
+        - "src/features/brand-settings/brand-settings.module.ts"
+      regression_test: "src/features/notifications/notifications-module-composition.test.ts"
+      schema_change: false
+      migrations_created_or_applied: false
+      provider_actions: []
     blockers:
-      - "BUILT_APP_MODULE_NOT_BOOTABLE_NOTIFICATIONS_MODULE_IMPORT_INDEX_2_UNDEFINED"
       - "LIVE_BROWSER_390_767_768_DESKTOP_SCREENSHOT_DOM_ACCESSIBILITY_EVIDENCE_UNAVAILABLE"
   p3a_operations_cutover: null
   p3s_support: null
@@ -233,6 +269,7 @@ phase_checkpoints:
 files_changed:
   authority:
     - "docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml"
+    - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-runner-v1.md"
     - "docs/organization/architecture/brand-payouts/brand_payouts_p0_executable_contract_register_v1.md"
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_c04_settlement_dependency_handoff_v1.md"
     - "docs/organization/handoffs/brand-payouts/brand_payouts_to_campaign_net_terms_correction_handoff_v1.md"
@@ -259,6 +296,9 @@ files_changed:
     - "src/features/brand-payouts/services/payout-obligation-projection.service.ts"
     - "src/features/brand-payouts/utils/brand-payouts-cursor.ts"
     - "src/features/brand-payouts/utils/brand-payouts-projection.ts"
+    - "src/features/notifications/notifications.module.ts"
+    - "src/features/brand-settings/brand-settings.module.ts"
+    - "src/features/notifications/notifications-module-composition.test.ts"
   frontend:
     - "src/features/brand-payouts/api/brand-payouts-client.ts"
     - "src/features/brand-payouts/brand-payouts-p2.test.ts"
@@ -282,6 +322,6 @@ files_changed:
     - "src/routes/app-routes.tsx"
   provider_evidence: []
 
-uncheckpointed_work: null
+uncheckpointed_work: "P2_LOCAL_DESKTOP_RUNTIME_BROWSER_ACCEPTANCE"
 
-last_updated: "2026-09-05T09:39:28Z"
+last_updated: "2026-09-05T10:46:00Z"
