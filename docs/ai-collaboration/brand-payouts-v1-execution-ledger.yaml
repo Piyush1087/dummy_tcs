@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P3A_CONTRAST_CORRECTION_PENDING_V2_LOCAL_RUNTIME_EVIDENCE"
+status: "P3A_DRAWER_CONTRAST_CORRECTION_PENDING_V3_LOCAL_RUNTIME_EVIDENCE"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -38,11 +38,11 @@ authorization_mvp_cutline_artifact: "BRAND_PAYOUTS_MVP_DELIVERY_CUTLINE_AND_POST
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: null
 
-phase: "P3A_BOUNDED_SOURCE_CORRECTION_COMPLETE_PENDING_RUNTIME_EVIDENCE"
+phase: "P3A_BOUNDED_DRAWER_CONTRAST_CORRECTION_COMPLETE_PENDING_RUNTIME_EVIDENCE"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: null
 checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
-next_phase: "P3A_V2_LOCAL_RUNTIME_BROWSER_EVIDENCE"
+next_phase: "P3A_V3_LOCAL_RUNTIME_BROWSER_EVIDENCE"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -261,7 +261,24 @@ tests:
   p3a_frontend_contrast_correction_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
   p3a_frontend_contrast_correction_diff_check: "PASS"
   p3a_frontend_contrast_correction_remote: "PASS_SHA_F6B2C878E652D8131CBAD0983F77FC3BFFCE3AB0_TREE_0984071EE2117362FFB87468AC2E3FDE9BB5064B"
-  p3a_browser_evidence_v2: "PENDING_LOCAL_RUNTIME_RELAY"
+  p3a_browser_evidence_v2: "CIRCUIT_BREAKER_CONFIRMED_AT_DB15BDE0B8C7544B4CC9A314A235045868896D1F"
+  p3a_browser_v2_v1_reuse_integrity: "PASS_ALL_INDEXED_HASHES_AND_SOURCE_BINDING"
+  p3a_browser_v2_frontend_gates: "PASS_62_OF_62_FOCUSED_885_OF_885_FULL_LINT_TYPECHECK_BUILD"
+  p3a_browser_v2_appmodule_configurations: "PASS_PAYOUTS_SETTINGS_MISSING_BLANK_INVALID"
+  p3a_browser_v2_admission_replay: "PASS_168_REQUESTS_300_ASSERTIONS"
+  p3a_browser_v2_financial_fail_closed: "PASS_NO_AVAILABLE_CREDIT_RETURN_MUTATION_OR_DUPLICATE_FOUNDATION"
+  p3a_browser_v2_responsive: "PASS_158_ROWS_ZERO_DOCUMENT_OVERFLOW"
+  p3a_browser_v2_accessibility: "FAIL_ACTIVE_DRAWER_CANCEL_1_81_TO_1_OR_1_92_TO_1"
+  p3a_browser_v2_provider_boundary: "PASS_ZERO_PROVIDER_ACTIONS_OR_EXTERNAL_ATTEMPTS"
+  p3a_frontend_drawer_contrast_correction_focused: "PASS_63_OF_63"
+  p3a_frontend_drawer_contrast_correction_full: "PASS_886_OF_886"
+  p3a_frontend_drawer_contrast_correction_changed_file_lint: "PASS"
+  p3a_frontend_drawer_contrast_correction_changed_file_format: "PASS"
+  p3a_frontend_drawer_contrast_correction_typecheck: "PASS"
+  p3a_frontend_drawer_contrast_correction_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
+  p3a_frontend_drawer_contrast_correction_diff_check: "PASS"
+  p3a_frontend_drawer_contrast_correction_remote: "PASS_SHA_A8800DE192F2E716F405B75F38799271FD9F1A9B_TREE_4C47E51AF0DE16FA8C2F9CE305D02DE37B65A470"
+  p3a_browser_evidence_v3: "PENDING_LOCAL_RUNTIME_RELAY"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -274,8 +291,8 @@ razorpay_gates:
   rz_g4: "OPEN_HUMAN_GATE"
 
 corrections:
-  current_phase_count: 5
-  total_p0_p5_count: 7
+  current_phase_count: 6
+  total_p0_p5_count: 8
   numeric_count_policy: "TELEMETRY_ONLY_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
   repeated_identical_failure_after_bounded_correction: "NON_DELEGABLE_STOP"
   active_default_production_file_ceiling_per_distinct_correction: 3
@@ -285,6 +302,7 @@ corrections:
   pagination_restoration_correction_used: true
   third_distinct_p2_source_defect_detected: true
   p3a_settings_contrast_correction_used: true
+  p3a_drawer_contrast_correction_used: true
   additional_p2_correction_authority: "SATISFIED_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
   cumulative_p0_p5_total_policy: "TELEMETRY_ONLY_NOT_PARENT_STOP_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
 
@@ -342,12 +360,18 @@ correction_history:
     scope: "USE_ACCESSIBLE_DARK_BRAND_GREEN_FOR_SETTINGS_ACTIVE_TABS_ACTION_LINKS_AND_ESCROW_OUTLINE_ACTIONS_WITHOUT_GLOBAL_AURORA_CHANGE"
     correction_budget: "BOUNDED_TECHNICAL_CORRECTION_UNDER_7F03411B9940AB16579CD2E176AC9E721EDEE832"
 
-last_failure: "P3A_SETTINGS_CONTRAST_BELOW_WCAG_AA_AT_85ABA6C74D0D4E9499314C95321E7890336C617E_CORRECTED_PENDING_V2_PROOF"
+  - phase: "P3A"
+    signature: "P3A_DRAWER_CANCEL_CONTRAST_BELOW_WCAG_AA"
+    result: "CORRECTED_AND_ALL_FRONTEND_SOURCE_GATES_PASS_V3_BROWSER_EVIDENCE_REQUIRED"
+    scope: "USE_ACCESSIBLE_DARK_BRAND_GREEN_FOR_ACTIVE_GHOST_ACTIONS_ONLY_INSIDE_TREASURY_DRAWER_FOOTERS_WITHOUT_GLOBAL_AURORA_CHANGE"
+    correction_budget: "BOUNDED_TECHNICAL_CORRECTION_UNDER_7F03411B9940AB16579CD2E176AC9E721EDEE832"
+
+last_failure: "P3A_DRAWER_CANCEL_CONTRAST_BELOW_WCAG_AA_AT_DB15BDE0B8C7544B4CC9A314A235045868896D1F_CORRECTED_PENDING_V3_PROOF"
 breaker: null
 stop_reason: null
-environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V2_RELAY"
+environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V3_RELAY"
 
-non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V2_RUNTIME_RELAY"
+non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V3_RUNTIME_RELAY"
 
 local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
@@ -381,7 +405,7 @@ p3a_local_runner_relay:
 
 p3a_v2_local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
-  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  status: "COMPLETE_CIRCUIT_BREAKER"
   decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
   prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v2.md"
   authorized_scope: "P3A_V1_EVIDENCE_REUSE_FRESH_CORRECTED_BROWSER_AND_DEFERRED_RUNTIME_GATES"
@@ -390,6 +414,26 @@ p3a_v2_local_runner_relay:
   frontend_sha: "f6b2c878e652d8131cbad0983f77fc3bffce3ab0"
   frontend_tree_sha: "0984071ee2117362ffb87468ac2e3fde9bb5064b"
   reused_evidence_commit: "85aba6c74d0d4e9499314c95321e7890336c617e"
+  evidence_commit: "db15bde0b8c7544b4cc9a314a235045868896d1f"
+  evidence_tree: "8251f7f93a17235ceb4c6697ad62a0df5d296934"
+  result: "P3A_DRAWER_CANCEL_CONTRAST_BELOW_WCAG_AA"
+  source_changes_allowed: false
+  migrations_allowed: false
+  provider_actions_allowed: false
+
+p3a_v3_local_runner_relay:
+  type: "LOCAL_DESKTOP_RUNTIME_RELAY"
+  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
+  prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v3.md"
+  authorized_scope: "P3A_V1_V2_EVIDENCE_REUSE_FRESH_DRAWER_BROWSER_AND_COMPOSITE_ACCEPTANCE_PROOF"
+  backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+  backend_tree_sha: "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24"
+  frontend_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+  frontend_tree_sha: "4c47e51af0de16fa8c2f9ce305d02de37b65a470"
+  reused_evidence_commits:
+    - "85aba6c74d0d4e9499314c95321e7890336c617e"
+    - "db15bde0b8c7544b4cc9a314a235045868896d1f"
   source_changes_allowed: false
   migrations_allowed: false
   provider_actions_allowed: false
@@ -713,7 +757,7 @@ phase_checkpoints:
       provider_actions: []
     blockers: []
   p3a_operations_cutover:
-    status: "BOUNDED_CONTRAST_CORRECTION_PENDING_V2_LOCAL_RUNTIME_EVIDENCE"
+    status: "BOUNDED_DRAWER_CONTRAST_CORRECTION_PENDING_V3_LOCAL_RUNTIME_EVIDENCE"
     checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
     authority_sha: "9c991a8e8c8dfc90ccc4cf18e48ab1629d5f5b4f"
     accepted_p2_ledger_sha: "495ae4f977152b49b0504ed11c441aadd4abcc93"
@@ -725,14 +769,16 @@ phase_checkpoints:
     frontend_parent_sha: "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03"
     frontend_pre_contrast_correction_sha: "e81c5bf105e8cc03d93f01f5be981cc527e36ca0"
     frontend_pre_contrast_correction_tree_sha: "c32c164e1f4cda963dd8358e33fe253aed77dfcc"
-    frontend_sha: "f6b2c878e652d8131cbad0983f77fc3bffce3ab0"
-    frontend_tree_sha: "0984071ee2117362ffb87468ac2e3fde9bb5064b"
+    frontend_pre_drawer_contrast_correction_sha: "f6b2c878e652d8131cbad0983f77fc3bffce3ab0"
+    frontend_pre_drawer_contrast_correction_tree_sha: "0984071ee2117362ffb87468ac2e3fde9bb5064b"
+    frontend_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+    frontend_tree_sha: "4c47e51af0de16fa8c2f9ce305d02de37b65a470"
     frontend_changed_file_count: 18
     frontend_production_file_count: 14
     migrations_created_or_applied: false
     provider_actions: []
     review_owner: "SYSTEMS_ARCHITECT"
-    evidence_status: "V1_CIRCUIT_BREAKER_CORRECTED_V2_RELAY_PENDING"
+    evidence_status: "V2_CIRCUIT_BREAKER_CORRECTED_V3_RELAY_PENDING"
     acceptance_result: "NOT_SET"
     browser_evidence_v1:
       status: "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER"
@@ -771,8 +817,46 @@ phase_checkpoints:
       migrations_created_or_applied: false
       provider_actions: []
     browser_evidence_v2:
+      status: "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER"
+      commit: "db15bde0b8c7544b4cc9a314a235045868896d1f"
+      tree: "8251f7f93a17235ceb4c6697ad62a0df5d296934"
+      report: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v2.md"
+      affected_backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+      affected_frontend_sha: "f6b2c878e652d8131cbad0983f77fc3bffce3ab0"
+      failure_signature: "P3A_DRAWER_CANCEL_CONTRAST_BELOW_WCAG_AA"
+      frontend_focused_tests: 62
+      frontend_full_tests: 885
+      appmodule_configurations: 5
+      admission_replay_requests: 168
+      admission_replay_assertions: 300
+      completed_browser_rows: 158
+      serious_p3a_findings: 51
+      critical_findings: 0
+      source_changes: false
+      migrations_created_or_applied: false
+      provider_actions: []
+    frontend_drawer_contrast_source_recovery:
+      classification: "BOUNDED_P3A_TREASURY_DRAWER_CONTRAST_CORRECTION"
+      authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
+      parent_sha: "f6b2c878e652d8131cbad0983f77fc3bffce3ab0"
+      sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+      tree_sha: "4c47e51af0de16fa8c2f9ce305d02de37b65a470"
+      root_cause: "PORTAL_RENDERED_TREASURY_DRAWER_CANCEL_ACTIONS_INHERITED_LOW_CONTRAST_GLOBAL_GHOST_FOREGROUND"
+      production_file_count: 3
+      test_file_count: 1
+      production_files:
+        - "src/features/brand-escrow/brand-escrow.css"
+        - "src/features/brand-escrow/components/brand-return-drawer.tsx"
+        - "src/features/brand-escrow/components/escrow-top-up-drawer.tsx"
+      regression_test: "src/pages/brand/settings/brand-settings-routing.test.ts"
+      corrected_color: "#006C4B"
+      preserved_global_aurora_components: true
+      schema_change: false
+      migrations_created_or_applied: false
+      provider_actions: []
+    browser_evidence_v3:
       status: "PENDING_LOCAL_RUNTIME_RELAY"
-      prompt: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v2.md"
+      prompt: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v3.md"
   p3s_support: null
   p4_base_convergence: null
   p4a_first_reserve: null
@@ -792,6 +876,7 @@ files_changed:
   authority:
     - "docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v2.md"
+    - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v3.md"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v1.md"
@@ -885,9 +970,9 @@ files_changed:
 
 uncheckpointed_work:
   phase: "P3A"
-  status: "CONTRAST_CORRECTION_PUSHED_PENDING_V2_LOCAL_RUNTIME_EVIDENCE"
+  status: "DRAWER_CONTRAST_CORRECTION_PUSHED_PENDING_V3_LOCAL_RUNTIME_EVIDENCE"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-06T05:50:20Z"
+last_updated: "2026-09-06T07:09:52Z"
