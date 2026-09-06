@@ -539,4 +539,4 @@ NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 
 P6 requires later SA authorization. P5 correction count is 1, remaining budget 1, historical accounting only with no post-acceptance mutation authority.
 
-Systems Architect acceptance SHA = P5_ACCEPTANCE_RECORD_SHA_PENDING
+Systems Architect acceptance SHA = 494679e72daa257f3b76a105094fe02cac1c3f04

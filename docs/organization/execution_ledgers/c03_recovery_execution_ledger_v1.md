@@ -1339,4 +1339,4 @@ NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 
 Architectural eligibility does not authorize P6. This assignment is docs-only; P6 and P7 remain not started. No source, package, schema, migration, test implementation, AWS, or provider change is authorized.
 
-Systems Architect acceptance SHA = P5_ACCEPTANCE_RECORD_SHA_PENDING
+Systems Architect acceptance SHA = 494679e72daa257f3b76a105094fe02cac1c3f04

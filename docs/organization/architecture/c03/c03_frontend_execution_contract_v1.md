@@ -4162,4 +4162,4 @@ NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 
 Remaining P5 correction budget is historical checkpoint accounting only; it does not authorize post-acceptance P5 mutation. P6 eligibility is for later SA authorization; this assignment does not start P6 or P7.
 
-Systems Architect acceptance SHA = P5_ACCEPTANCE_RECORD_SHA_PENDING
+Systems Architect acceptance SHA = 494679e72daa257f3b76a105094fe02cac1c3f04
