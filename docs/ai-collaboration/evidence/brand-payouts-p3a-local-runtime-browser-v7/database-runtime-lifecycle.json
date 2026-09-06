@@ -1,0 +1,38 @@
+{
+  "database": {
+    "owned_container": "bp-p3a-v7-pg",
+    "image": "postgres:17-alpine",
+    "listen": "127.0.0.1:55441",
+    "timezone": "UTC",
+    "persistent_volume": false,
+    "migration_count": 74,
+    "migration_deploy": "PASS",
+    "new_or_changed_migrations": "NONE",
+    "seed": {
+      "actors": ["Owner", "Finance Admin"],
+      "normal_password_auth": true,
+      "subscription": "ACTIVE FOUNDERS_BETA INR",
+      "vault_available_inr": 100000,
+      "lot": "PROVEN_SOURCE GATEWAY/INR",
+      "provider_refundable_inr": 100000
+    }
+  },
+  "runtime": {
+    "listen": "127.0.0.1:53131",
+    "modes_in_order": ["PAYOUTS", "SETTINGS"],
+    "full_app_module": true,
+    "root": "PASS_200",
+    "liveness": "PASS_200",
+    "database_health": "PASS_200",
+    "protected_route_mapping": "PASS_401_WITHOUT_AUTH_AND_PASS_IN_AUTHENTICATED_BROWSER",
+    "cors_origin": "http://127.0.0.1:53132",
+    "outbound_deny_record_guard_active_before_bootstrap": true,
+    "outbound_attempts": 0,
+    "controlled_mode_restart": "PASS"
+  },
+  "frontend_preview": {
+    "listen": "127.0.0.1:53132",
+    "exact_source_build": true,
+    "session_injection": false
+  }
+}

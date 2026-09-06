@@ -1,0 +1,15 @@
+{
+  "controlled_backend_shutdown": "PASS",
+  "controlled_frontend_preview_shutdown": "PASS",
+  "owned_database_container_removed": "PASS",
+  "persistent_database_volume": "NONE",
+  "owned_listeners_after_shutdown": [],
+  "private_authenticated_sessions_remaining": 0,
+  "provider_credentials_remaining": 0,
+  "provider_actions": "NONE",
+  "temporary_launcher_removed_after_evidence_copy": true,
+  "backend_worktree_clean": true,
+  "frontend_worktree_clean": true,
+  "source_changes": "NONE",
+  "migration_files_created_or_changed": "NONE"
+}

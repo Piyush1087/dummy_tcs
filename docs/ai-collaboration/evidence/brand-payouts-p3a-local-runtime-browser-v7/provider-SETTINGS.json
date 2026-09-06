@@ -1,0 +1,10 @@
+{
+  "mode": "SETTINGS",
+  "counts": {
+    "capabilities": 4,
+    "assertExecutionAvailable": 2,
+    "createRefund": 0,
+    "fetchRefund": 0,
+    "verifyTrustedFundingEvidence": 0
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "body": "{\"name\":\"TheCreatorShop API\",\"status\":\"ready\"}"
+  },
+  {
+    "path": "/health",
+    "status": 200,
+    "body": "{\"status\":\"ok\",\"info\":{\"database\":{\"status\":\"up\"}},\"error\":{},\"details\":{\"database\":{\"status\":\"up\"}}}"
+  },
+  {
+    "path": "/health/live",
+    "status": 200,
+    "body": "{\"status\":\"ok\"}"
+  },
+  {
+    "path": "/api/v1/escrow/brand-returns/summary",
+    "status": 401,
+    "body": "AUTHENTICATION_REQUIRED"
+  }
+]

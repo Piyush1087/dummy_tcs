@@ -1,0 +1,21 @@
+{
+  "label": "TEST_ONLY_EPHEMERAL_DI_OVERRIDE_NOT_DEPLOYABLE",
+  "file": "test-only-launcher.cjs",
+  "bytes": 2503,
+  "sha256": "0210c24d3ec090b6e9879980f86854ff873674964f0249bc6c526cff48abc7fb",
+  "module_under_test": "exact built AppModule",
+  "override_token": "BrandReturnRefundProvider",
+  "other_overrides": 0,
+  "capability_projection": [{ "sourceType": "GATEWAY", "currency": "INR" }],
+  "assert_execution_available": "throws BrandReturnProviderSetupRequiredError",
+  "must_not_be_called": ["createRefund", "fetchRefund", "verifyTrustedFundingEvidence"],
+  "method_counts": {
+    "capabilities": 8,
+    "assertExecutionAvailable": 4,
+    "createRefund": 0,
+    "fetchRefund": 0,
+    "verifyTrustedFundingEvidence": 0
+  },
+  "provider_credentials_present": false,
+  "provider_actions": "NONE"
+}

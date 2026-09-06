@@ -1,0 +1,267 @@
+{
+  "mode": "PAYOUTS",
+  "results": [
+    {
+      "mode": "PAYOUTS",
+      "role": "Owner",
+      "route": "/brand/payouts",
+      "width": 390,
+      "surface": {
+        "active_command_count": 1,
+        "inactive_route": "/brand/settings/escrow",
+        "inactive_enabled_command_count": 0
+      },
+      "summary": {
+        "currency": "INR",
+        "self_service_returnable_balance": 100000
+      },
+      "pending": {
+        "focused": true,
+        "native_enabled": true,
+        "disabled_attribute": null,
+        "aria_disabled": "true",
+        "focus_visible": true
+      },
+      "browser_post_count": 1,
+      "pending_tab_inside": true,
+      "pending_shift_tab_inside": true,
+      "response_delay_label": "TEST_ONLY_LOCAL_RESPONSE_DELIVERY_DELAY",
+      "backend_response": {
+        "status": 503,
+        "headers": {
+          "x-powered-by": "Express",
+          "access-control-allow-origin": "http://127.0.0.1:53132",
+          "vary": "Origin",
+          "access-control-allow-credentials": "true",
+          "x-ratelimit-limit": "120",
+          "x-ratelimit-remaining": "119",
+          "x-ratelimit-reset": "60",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "91",
+          "etag": "W/\"5b-Lv3RaVXzMQx7IJ5lqyJCHrmR+rY\"",
+          "date": "Sun, 06 Sep 2026 13:11:38 GMT",
+          "connection": "keep-alive",
+          "keep-alive": "timeout=5"
+        },
+        "body": {
+          "code": "PROVIDER_SETUP_REQUIRED",
+          "message": "Brand Return provider runtime is not enabled"
+        },
+        "body_sha256": "e0dcf731661ad20380c1914da6b905b38b339ab49650473a72a47e9c60983dce",
+        "request_body_sha256": "91105c5f27eb875c8e51b951a80221be4c107e58f8d96c6b97b54d0577685800"
+      },
+      "post_503": {
+        "dialog_visible": false,
+        "truthful_error_visible": false
+      },
+      "after_error": null,
+      "error_copy": null,
+      "error_tab_inside": false,
+      "error_shift_tab_inside": false,
+      "escape_restored_exact_invoker": false,
+      "axe": {
+        "violations": 3,
+        "serious": 0,
+        "critical": 0,
+        "serious_rules": [],
+        "critical_rules": []
+      },
+      "overflow": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "contrast": {
+        "color": "rgb(14, 18, 20)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outline": "rgb(14, 18, 20) none 3px",
+        "boxShadow": "none"
+      },
+      "screenshot": "PAYOUTS-390-owner-brand-return-503.png",
+      "external_attempts": [
+        {
+          "method": "GET",
+          "url": "https://api.fontshare.com/v2/css"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://api.fontshare.com/v2/css"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://api.fontshare.com/v2/css"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        }
+      ],
+      "console_errors": [
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+      ],
+      "lane_pass": false,
+      "blocker_signature": "PAYOUTS_REFRESH_UNMOUNTS_RETURN_DRAWER_ON_CANONICAL_503"
+    },
+    {
+      "mode": "PAYOUTS",
+      "role": "Finance Admin",
+      "route": "/brand/payouts",
+      "width": 1440,
+      "surface": {
+        "active_command_count": 1,
+        "inactive_route": "/brand/settings/escrow",
+        "inactive_enabled_command_count": 0
+      },
+      "summary": {
+        "currency": "INR",
+        "self_service_returnable_balance": 100000
+      },
+      "pending": {
+        "focused": true,
+        "native_enabled": true,
+        "disabled_attribute": null,
+        "aria_disabled": "true",
+        "focus_visible": true
+      },
+      "browser_post_count": 1,
+      "pending_tab_inside": true,
+      "pending_shift_tab_inside": true,
+      "response_delay_label": "TEST_ONLY_LOCAL_RESPONSE_DELIVERY_DELAY",
+      "backend_response": {
+        "status": 503,
+        "headers": {
+          "x-powered-by": "Express",
+          "access-control-allow-origin": "http://127.0.0.1:53132",
+          "vary": "Origin",
+          "access-control-allow-credentials": "true",
+          "x-ratelimit-limit": "120",
+          "x-ratelimit-remaining": "118",
+          "x-ratelimit-reset": "53",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "91",
+          "etag": "W/\"5b-Lv3RaVXzMQx7IJ5lqyJCHrmR+rY\"",
+          "date": "Sun, 06 Sep 2026 13:11:45 GMT",
+          "connection": "keep-alive",
+          "keep-alive": "timeout=5"
+        },
+        "body": {
+          "code": "PROVIDER_SETUP_REQUIRED",
+          "message": "Brand Return provider runtime is not enabled"
+        },
+        "body_sha256": "e0dcf731661ad20380c1914da6b905b38b339ab49650473a72a47e9c60983dce",
+        "request_body_sha256": "c62e0b50f80649a1b27ae09a56db82ca747fc6d0be7dd8f2f983f1f08daa6fb6"
+      },
+      "post_503": {
+        "dialog_visible": false,
+        "truthful_error_visible": false
+      },
+      "after_error": null,
+      "error_copy": null,
+      "error_tab_inside": false,
+      "error_shift_tab_inside": false,
+      "escape_restored_exact_invoker": false,
+      "axe": {
+        "violations": 3,
+        "serious": 0,
+        "critical": 0,
+        "serious_rules": [],
+        "critical_rules": []
+      },
+      "overflow": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "contrast": {
+        "color": "rgb(14, 18, 20)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outline": "rgb(14, 18, 20) none 3px",
+        "boxShadow": "none"
+      },
+      "screenshot": "PAYOUTS-1440-finance-admin-brand-return-503.png",
+      "external_attempts": [
+        {
+          "method": "GET",
+          "url": "https://api.fontshare.com/v2/css"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://api.fontshare.com/v2/css"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://api.fontshare.com/v2/css"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        },
+        {
+          "method": "GET",
+          "url": "https://fonts.googleapis.com/css2"
+        }
+      ],
+      "console_errors": [
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+      ],
+      "lane_pass": false,
+      "blocker_signature": "PAYOUTS_REFRESH_UNMOUNTS_RETURN_DRAWER_ON_CANONICAL_503"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "result": "BLOCKED",
+  "stable_signature": "PAYOUTS_REFRESH_UNMOUNTS_RETURN_DRAWER_ON_CANONICAL_503",
+  "lanes_attempted": 4,
+  "lanes_with_exactly_one_browser_post": 4,
+  "form_ready_from_test_capability": 4,
+  "pending_focus_native_enabled_aria_disabled": 4,
+  "pending_dedupe_and_focus_trap": 4,
+  "canonical_provider_setup_required_503": 4,
+  "settings_complete": 2,
+  "payouts_complete": 0,
+  "payouts_blocked": 2,
+  "failure": {
+    "modes": ["PAYOUTS"],
+    "roles": ["Owner", "Finance Admin"],
+    "widths": [390, 1440],
+    "observed": "After the unchanged canonical 503 is released, the Return drawer unmounts. Truthful error copy, submit focus retention, post-error trap, and Escape restoration cannot exist.",
+    "source_chain": [
+      "BrandReturnDrawer catch sets its error and awaits onRefresh",
+      "PayoutsTreasuryActions refreshCanonicalViews calls the workspace refresh",
+      "workspace refresh changes overview status from READY to REFRESHING",
+      "PayoutsTreasuryActions actionable becomes false",
+      "its effect sets returnOpen false"
+    ]
+  },
+  "controls": {
+    "financial_mutation_on_503": "NONE",
+    "brand_return_requests_before_after": [0, 0],
+    "allocations_before_after": [0, 0],
+    "ledger_entries_before_after": [0, 0],
+    "vault_and_lot_changed": false,
+    "serious_p3a_axe_findings": 0,
+    "critical_p3a_axe_findings": 0,
+    "document_overflow_lanes": 0,
+    "provider_methods_beyond_capability_and_assert": 0,
+    "provider_actions": "NONE",
+    "external_provider_attempts": 0
+  },
+  "p3a_acceptance": "NOT_SET",
+  "p4_work": "NONE"
+}

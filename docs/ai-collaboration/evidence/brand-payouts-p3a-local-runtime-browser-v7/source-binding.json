@@ -1,0 +1,31 @@
+{
+  "execution_mode": "LOCAL_DESKTOP_P3A_V7_BRAND_RETURN_ONLY_EVIDENCE",
+  "starting_execution_ledger_head": "803edf862f147a8e00ef431ea67ad2c541695c82",
+  "starting_execution_ledger_tree": "e9062608ede77d6ec81e9ece18bf6cdc29ed6eb9",
+  "required_v6_ancestor": "4c426cda6d7f64e72fe8943de5ec36dcf897cc59",
+  "required_v6_ancestor_verified": true,
+  "backend": {
+    "repository": "Piyush1087/creator-commerce-backend-v2-clone",
+    "branch": "brand-payouts/v1-backend",
+    "sha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "clean_before": true,
+    "clean_after": true,
+    "fresh_build": "PASS"
+  },
+  "frontend": {
+    "repository": "Piyush1087/creator-commerce-frontend-v2-clone",
+    "branch": "brand-payouts/v1-frontend",
+    "sha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+    "tree": "30001818c07b231529935dedf12ca059be6bd6dc",
+    "clean_before": true,
+    "clean_after": true,
+    "fresh_build": "PASS",
+    "local_preview_build_environment": {
+      "VITE_STAGE": "local",
+      "VITE_API_URL": "http://127.0.0.1:53131"
+    }
+  },
+  "source_changes": "NONE",
+  "migration_files_created_or_changed": "NONE"
+}
