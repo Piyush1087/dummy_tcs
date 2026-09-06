@@ -21,9 +21,10 @@ c04_architecture_sha: "de28784662bb92dac6cb927e348f3fc69564af7c"
 c04_backend_handoff_sha: null
 c04_frontend_handoff_sha: null
 c03_recovery_authority_sha: "dc81b54b87bf6fdf90583c7d0e76f176d883ce32"
-c03_current_accepted_backend_sha: "ebad770291b411026542a7d53a7e6a30162bff2e"
-c03_observed_unaccepted_candidate_sha: "aebeb85fd6bba37f88c3805c213c61e7f63b2f5f"
-c03_required_post_p1_4_sha: null
+c03_current_accepted_backend_sha: "aebeb85fd6bba37f88c3805c213c61e7f63b2f5f"
+c03_observed_unaccepted_candidate_sha: null
+c03_required_post_p1_4_sha: "aebeb85fd6bba37f88c3805c213c61e7f63b2f5f"
+c03_post_p1_4_handoff_authority_sha: "df32e63e4ca44de57b40be59167c300ecb886ddd"
 c03_current_accepted_frontend_sha: "66d6a9bc992afcdfb900d7837defd867670bf640"
 c03_required_frontend_integration_sha: null
 p4_canonical_backend_convergence_sha: null
@@ -56,6 +57,7 @@ dependency_gates:
   product_authority: "SATISFIED"
   architecture_parent_acceptance: "SATISFIED"
   c04_architecture: "READY_WITH_RECONCILIATION"
+  c03_post_p1_4_backend_handoff: "SATISFIED"
   c04_backend_settlement_handoff: "OPEN_BLOCKING"
   c04_backend_convergence_tree: "OPEN_BLOCKING"
   c04_financial_recovery_instruction: "OPEN_BLOCKING"
@@ -71,6 +73,7 @@ dependency_gates:
 
 gate_qualifiers:
   c04_architecture: "RECONCILE_RESERVE_APPROVAL_TERM_ELIGIBILITY_RECOVERY_CONFIRMATION"
+  c03_post_p1_4_backend_handoff: "ACCEPTED_HANDOFF_DF32E63_BACKEND_AEBEB85F"
   c04_backend_settlement_handoff: "BLOCKS_P4_AND_P5_NOT_P0_TO_P3"
   c04_frontend: "BLOCKS_ONLY_C04_SPECIFIC_FRONTEND_AND_FINAL_JOINT_ACCEPTANCE"
   c05_readiness: "EXACT_CURRENT_DESTINATION_VERSION_FENCE_REQUIRED_BEFORE_P5"
@@ -1289,4 +1292,4 @@ uncheckpointed_work:
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-06T17:30:00.000Z"
+last_updated: "2026-09-06T17:42:22.987Z"
