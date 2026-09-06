@@ -4057,3 +4057,49 @@ The P3 runtime is the direct transport/security correction descendant of the P1 
 [Backend runtime acceptance overlay](c03_backend_api_state_contract_v1.md#p3_runtime_acceptance_overlay) and [verbatim V4 report](../../../ai-collaboration/c03-p3-backend-runtime-acceptance-report-v4.md) supply the accepted backend evidence. P4 architectural eligibility is YES; implementation is NOT STARTED and is not authorized by this assignment. P5 is NOT STARTED. No frontend source is modified.
 
 Systems Architect acceptance SHA = c32841516330f37f19effc63423317619ec1ecd5
+
+## P4_RUNTIME_ACCEPTANCE_OVERLAY
+
+Authorization: `C03_P4_DURABLE_FRONTEND_ACCEPTANCE_BINDING_V1`. This overlay binds the accepted executable P4 realization without changing the frozen P2 state, design, interaction, Product, or backend semantic authority.
+
+```text
+P2_FRONTEND_STATE_AUTHORITY = UNCHANGED
+P4_FRONTEND_RUNTIME_ACCEPTED_SHA = cbba723f10ca3a6df06e1feba263fe14a03ddc28
+P4_FRONTEND_RUNTIME_ACCEPTED_TREE = cfa23e89e5132a743b60f09df6c901f4a2ed0a77
+P4_RUNTIME_PARENT = 66d6a9bc992afcdfb900d7837defd867670bf640
+BACKEND_INTEGRATION_AUTHORITY = 8bedbebf9712b6ffe0acb11339813787ef669e62
+SEMANTIC_CONTRACT_DELTA = NONE
+STITCH = NOT_USED
+```
+
+P2 remains the state, design, and interaction authority. P4 is the accepted executable frontend realization of that authority. The accepted P4 runtime preserves the canonical Campaign routes, actor/action separation, route-guard decomposition, public-entry redaction, secure invitation continuation, Opportunity and Apply behavior, immutable history, projected Withdraw authority, Collaboration handoff, Creator notifications, subject-aware private-state clearing, responsive behavior, accessibility, and no-image behavior.
+
+```text
+TYPECHECK = PASS
+FULL_TEST_SUITE = 952 passed / 118 files / 0 failed
+PRODUCTION_BUILD = PASS
+CHANGED_FILE_LINT = PASS
+FULL_LINT = BASELINE_DEBT_UNCHANGED
+BASELINE_LINT_ERRORS = 26
+BASELINE_LINT_WARNINGS = 13
+P4_LINT_BLOCKER = NO
+P4_LINT_DEBT = PRE_EXISTING_REPOSITORY_DEBT
+P4_CORRECTION_COUNT = 2
+P4_CORRECTION_BUDGET_REMAINING = 0
+```
+
+The unchanged full-lint debt is non-blocking and is not classified as a P4 change. The external evidence ZIP is `C03_P4_FRONTEND_ACCEPTANCE_EVIDENCE.zip`, SHA-256 `aa1f99dd5a8a61f988e3ee5a1ccd71f526493d8303dd65885a364b0801924792`. Browser and real-backend acceptance used backend `8bedbebf9712b6ffe0acb11339813787ef669e62` and frontend `cbba723f10ca3a6df06e1feba263fe14a03ddc28`.
+
+```text
+P5_FRONTEND_SHELL_AUTHORITY = cbba723f10ca3a6df06e1feba263fe14a03ddc28
+P5_BACKEND_BASE_AUTHORITY = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P5_STATE = NOT STARTED
+P6_STATE = NOT STARTED
+P7_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+P5 may build Creator Brief Pack on these exact accepted surfaces only after separate authorization. This binding performs no P5 implementation.
+
+Systems Architect acceptance SHA =
+PENDING_P4_ACCEPTANCE_RECORD_SHA

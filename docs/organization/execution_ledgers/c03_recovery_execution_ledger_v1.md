@@ -35,6 +35,7 @@ line is admitted here.
 | P1 aggregate backend | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` | 79 | P2 |
 | P2 frontend contract | PASS | `4b51d52de6d9206545b0a38497c7436bc9d3e095` (unchanged P1) | 79 (unchanged) | P3 |
 | P3 backend runtime acceptance | PASS | `8bedbebf9712b6ffe0acb11339813787ef669e62` | 79 (unchanged) | P4 — NOT STARTED |
+| P4 frontend runtime acceptance | PASS | `8bedbebf9712b6ffe0acb11339813787ef669e62` (unchanged backend integration authority) | 79 (unchanged) | P5 — NOT STARTED |
 
 ### Current checkpoint after P3 acceptance
 
@@ -1126,3 +1127,106 @@ EVIDENCE_ZIP_SHA256 = 10c0138beb31f1048978cc8550d1e5a52ec45568599d614c3a6e48a6d2
 The ZIP is preserved externally and is not committed. No runtime tests/build, AWS, provider operation, production access, frontend changes, P4 or P5 implementation are part of this binding.
 
 Systems Architect acceptance SHA = c32841516330f37f19effc63423317619ec1ecd5
+
+## 14. P4 durable frontend runtime acceptance
+
+Authorization: `C03_P4_DURABLE_FRONTEND_ACCEPTANCE_BINDING_V1`. Systems Architect verdict: **P4 = ACCEPTED**. Starting recovery authority: `5528b131c66faba9b8203b482230a47cda42f989`. Earlier checkpoint snapshots remain immutable historical records; this entry is the current continuation authority.
+
+```text
+P1 = PASS
+P2 = PASS
+P3 = PASS
+P4 = PASS
+
+LAST_ACCEPTED_CHECKPOINT = P4
+CURRENT_CHECKPOINT = P5
+
+P4_FRONTEND_RUNTIME_ACCEPTED_SHA = cbba723f10ca3a6df06e1feba263fe14a03ddc28
+P4_FRONTEND_RUNTIME_ACCEPTED_TREE = cfa23e89e5132a743b60f09df6c901f4a2ed0a77
+P4_BACKEND_INTEGRATION_SHA = 8bedbebf9712b6ffe0acb11339813787ef669e62
+
+P4_INITIAL_PASS = 1
+P4_CORRECTION_COUNT = 2
+P4_CORRECTION_BUDGET_REMAINING = 0
+
+P5_FRONTEND_SHELL_AUTHORITY = cbba723f10ca3a6df06e1feba263fe14a03ddc28
+P5_BACKEND_BASE_AUTHORITY = 8bedbebf9712b6ffe0acb11339813787ef669e62
+P5_STATE = NOT STARTED
+P6_STATE = NOT STARTED
+P7_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+### Accepted frontend chain and result
+
+The accepted frontend chain is linear, contains no merge or rebase, and has the following exact commit meanings:
+
+```text
+66d6a9bc992afcdfb900d7837defd867670bf640
+→ f9b8c6ec3dd70d43d770e3364379ce0ac1aa0904  feat(c03): establish creator campaign frontend contracts
+→ 0b0ffd3fdf8e07115f8f9f3547c53435e00672b5  feat(c03): implement opportunity and apply experience
+→ 400d269bc82342224e7f359aa2f45e2dd2a30d11  feat(c03): implement application history and notifications
+→ cbba723f10ca3a6df06e1feba263fe14a03ddc28  test(c03): complete frontend acceptance hardening
+```
+
+```text
+ROUTE_CONTRACT = PASS
+ACTOR_ACTION_COMPATIBILITY = PASS
+ROUTE_GUARD_DECOMPOSITION = PASS
+PUBLIC_CAMPAIGN_ENTRY = PASS
+INVITATION_CONTINUATION_SECURITY = PASS
+OPPORTUNITIES = PASS
+OPPORTUNITY_DOSSIER = PASS
+INSTAGRAM_RECOVERY = PASS
+ASSET_BRIEF_EXPLORER = PASS
+APPLY_REVIEW_SUBMIT = PASS
+IDEMPOTENCY_CLIENT = PASS
+MY_APPLICATIONS = PASS
+WITHDRAW_ROLE_PROJECTION = PASS
+HISTORICAL_WITHOUT_INSTAGRAM = PASS
+COLLABORATION_LINK = PASS
+CREATOR_NOTIFICATIONS = PASS
+SUBJECT_AWARE_CACHE_CLEARING = PASS
+STALE_MARKETPLACE_SEMANTICS = REMOVED_FROM_REACHABLE_C03
+BACKEND_CODE_ERROR_MAPPING = PASS
+NO_IMAGE = PASS
+RESPONSIVE_DESKTOP = PASS
+RESPONSIVE_TABLET = PASS
+RESPONSIVE_390 = PASS
+RESPONSIVE_375 = PASS
+KEYBOARD_ACCESSIBILITY = PASS
+FOCUS_MANAGEMENT = PASS
+LIVE_REGIONS = PASS
+TOUCH_TARGETS = PASS
+HORIZONTAL_OVERFLOW = PASS
+NETWORK_SECURITY = PASS
+DOM_REDACTION = PASS
+STORAGE_SECURITY = PASS
+REAL_BACKEND_INTEGRATION = PASS
+STITCH_USED = NO
+BACKEND_CHANGES = NONE
+```
+
+### Validation and evidence
+
+```text
+TYPECHECK = PASS
+FULL_TEST_SUITE = 952 passed / 118 files / 0 failed
+PRODUCTION_BUILD = PASS
+CHANGED_FILE_LINT = PASS
+FULL_LINT = BASELINE_DEBT_UNCHANGED
+BASELINE_LINT_ERRORS = 26
+BASELINE_LINT_WARNINGS = 13
+P4_CHANGED_FILE_LINT = PASS
+P4_LINT_BLOCKER = NO
+P4_LINT_DEBT = PRE_EXISTING_REPOSITORY_DEBT
+```
+
+The full lint result is not a PASS. Its 26 errors and 13 warnings are unchanged pre-existing repository debt; all P4 changed files pass lint. The preserved [P4 runner report](../../ai-collaboration/c03-p4-frontend-implementation-and-acceptance-report-v1.md) records the full result and exact correction history.
+
+The external `C03_P4_FRONTEND_ACCEPTANCE_EVIDENCE.zip` has SHA-256 `aa1f99dd5a8a61f988e3ee5a1ccd71f526493d8303dd65885a364b0801924792` and is not committed. Browser and real-backend acceptance ran against backend `8bedbebf9712b6ffe0acb11339813787ef669e62` and frontend `cbba723f10ca3a6df06e1feba263fe14a03ddc28`.
+
+P5 may consume the exact accepted frontend shell and backend base authorities above, but P5 implementation is not authorized by this assignment. P6 and P7 are not started. Publication stops at SA review.
+
+Systems Architect acceptance SHA =
+PENDING_P4_ACCEPTANCE_RECORD_SHA
