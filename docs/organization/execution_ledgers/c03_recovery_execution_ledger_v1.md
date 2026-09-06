@@ -1368,3 +1368,57 @@ NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 The zero-mutation/commit/push values describe the preserved V1 run. [Preserved P6 V1 report](../../ai-collaboration/c03-p6-joint-acceptance-report-v1.md); external `C03_P6_JOINT_ACCEPTANCE_EVIDENCE.zip` SHA-256 `c2a3c310c430e921c4fa03658f7c44b11dd597c16c484bd8aed0a0cbb815f4c7`. The ZIP is not committed.
 
 P6 remains open. This assignment authorizes P6_TRACKED_BACKEND_CORRECTION_1 from `3712f56930a8785b5cb61a9ed31fb43b240cb421`, after publication of this reconciliation. Full matrix/runtime resume is not authorized until SA accepts the correction. Frontend remains `82ed3c9ef849be8353565a1901b6f5fb065c37e1`. Product and architecture are unchanged; only the derived contract is reconciled. P5 acceptance history remains intact.
+
+## 17. P6 corrected backend candidate durable binding
+
+Authorization: `C03_P6_CORRECTED_BACKEND_CANDIDATE_DURABLE_BINDING_V1`. P5 remains closed and durably bound. P6 remains open with corrected candidates ready for a separately authorized resume.
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P5
+CURRENT_CHECKPOINT = P6
+P6_STATE = OPEN — CORRECTED CANDIDATES READY FOR RESUME
+
+P6_BACKEND_CANDIDATE_SHA = aebeb85fd6bba37f88c3805c213c61e7f63b2f5f
+P6_BACKEND_CANDIDATE_TREE = 86c5bb769598dd19a634dcd867350e53eaa06f75
+P6_BACKEND_PARENT_SHA = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P6_FRONTEND_CANDIDATE_SHA = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P6_FRONTEND_CANDIDATE_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+
+P6_TRACKED_CORRECTION_COUNT = 1
+P6_HARNESS_CORRECTION_COUNT = 2
+P6_HARNESS_CORRECTION_BUDGET_REMAINING = 0
+
+P6_MATRIX_STATE = NOT YET RESUMED AFTER CORRECTION
+P6_RUNTIME_STATE = NOT YET RESUMED AFTER CORRECTION
+P7_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+The accepted backend correction is the direct chain `3712f56930a8785b5cb61a9ed31fb43b240cb421` → `aebeb85fd6bba37f88c3805c213c61e7f63b2f5f`. The parent remains historical accepted P5 authority; the child is the current P6 backend candidate. Frontend requires no semantic correction and remains unchanged.
+
+```text
+DEFECT_1 = GLOBAL_VALID_INVITATION_VISIBILITY_ENTITLEMENT
+DEFECT_2 = VALID_INVITATION_SUPPRESSED_ELIGIBLE_ONLY_ELIGIBILITY_EVALUATION
+ROOT_CAUSE = COMPOUND_ELIGIBLE_ONLY_INVITATION_ENTITLEMENT_DRIFT
+
+FULL_BACKEND_SUITE = 6206 PASS / 765 GUARDED SKIPS
+P6_CORRECTION_POSTGRESQL = 61 PASS
+BACKEND_BUILD = PASS
+BACKEND_STARTUP = PASS
+HTTP_REDACTION = PASS
+CHANGED_SCOPE_LINT = PASS
+
+SCHEMA_CHANGE = NONE
+MIGRATION_CHANGE = NONE
+MIGRATION_COUNT = 79
+```
+
+The validation values above are accepted runner evidence and were not rerun for this docs-only binding. The [preserved compound correction report](../../ai-collaboration/c03-p6-compound-eligible-only-correction-report-v2.md) records the exact five-file scope and correction details. External `C03_P6_COMPOUND_ELIGIBLE_ONLY_CORRECTION_EVIDENCE.zip` SHA-256: `fd7434434fc5bc9d423a00aaa94c24f7e7089ae1a72a5101c9447fa44c4c03f9`; the ZIP is not committed.
+
+Harness correction 1 discarded a faulty auxiliary token-comparison result caused by template-literal handling and retained final lint/executable-test evidence. Harness correction 2 isolated compiled HTTP collection checks in a fresh single-Campaign database while preserving assertions. Both are `HARNESS_ONLY`, with `NO_PRODUCT_SEMANTIC_CHANGE` and `NO_CANDIDATE_BEHAVIOR_CHANGE`. The count is final for resumed P6: no reset and no remaining harness allowance.
+
+P6 V1 remains `BLOCKED BEFORE MATRIX`, with `0 / 13,271,040` evaluated due to derived-contract/implementation drift. The next attempt remains `BLOCKED BEFORE BACKEND MUTATION`, with the second eligibility-evaluation defect identified and `BACKEND_COMMIT = NONE`. These are historical runs, not failures of the corrected candidate.
+
+This binding does not authorize full P6 matrix/runtime execution, another tracked correction, P7, or source changes.
+
+Systems Architect acceptance SHA = P6_CORRECTION_ACCEPTANCE_RECORD_SHA_PENDING

@@ -557,3 +557,67 @@ PREVIOUS_DERIVED_CONTRACT_TEXT = SUPERSEDED_BY_AUTHORITY_RECONCILIATION
 For PUBLIC, invitation may provide ingress/attribution context but is not needed for entitlement. For ELIGIBLE_CREATORS_ONLY, invitation may provide ingress/attribution/continuation context but MUST NOT substitute for authoritative backend ELIGIBLE. For INVITE_ONLY, valid matching invitation supplies visibility entitlement and bypasses ordinary targeting eligibility only. All classes preserve current Creator/Team and usable Instagram gates.
 
 INVITATION_IS_NOT_ELIGIBLE_ONLY_ENTITLEMENT. Invitation records and continuation are not prohibited for ELIGIBLE_ONLY. Product and architecture semantics and the P6 matrix expectation remain unchanged. Full P6 resume requires SA acceptance of the separately authorized backend correction.
+
+## P6_COMPOUND_ELIGIBLE_ONLY_CORRECTION_ACCEPTANCE
+
+Authorization: `C03_P6_CORRECTED_BACKEND_CANDIDATE_DURABLE_BINDING_V1`. The accepted compound correction establishes the current backend candidate for resumed P6 while preserving the P1 semantic authority, P3 runtime overlay, P5 Brief Pack overlay, and P6 authority reconciliation above.
+
+```text
+P6_BACKEND_CANDIDATE_SHA = aebeb85fd6bba37f88c3805c213c61e7f63b2f5f
+P6_BACKEND_CANDIDATE_TREE = 86c5bb769598dd19a634dcd867350e53eaa06f75
+P6_BACKEND_PARENT_SHA = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P6_FRONTEND_CANDIDATE_SHA = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P6_FRONTEND_CANDIDATE_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+PRODUCT_DELTA = NONE
+ARCHITECTURE_DELTA = NONE
+SCHEMA_DELTA = NONE
+MIGRATION_DELTA = NONE
+```
+
+The exact correction chain is `3712f56930a8785b5cb61a9ed31fb43b240cb421` → `aebeb85fd6bba37f88c3805c213c61e7f63b2f5f`, one direct child with no merge or rebase. The former SHA remains the historical accepted P5 backend. The latter is the current P6 backend candidate after correcting the latent Product-contract defect.
+
+The five-file delta is:
+
+```text
+src/features/campaign-opportunities/campaign-opportunity-policy.service.ts
+src/features/campaign-opportunities/campaign-opportunity.service.ts
+src/features/campaign-opportunities/opportunity-contract.test.ts
+src/features/campaign-opportunities/opportunity-policy.test.ts
+src/features/campaign-opportunities/opportunity.postgres.test.ts
+```
+
+```text
+DEFECT_1 = GLOBAL_VALID_INVITATION_VISIBILITY_ENTITLEMENT
+DEFECT_2 = VALID_INVITATION_SUPPRESSED_ELIGIBLE_ONLY_ELIGIBILITY_EVALUATION
+ROOT_CAUSE = COMPOUND_ELIGIBLE_ONLY_INVITATION_ENTITLEMENT_DRIFT
+```
+
+The final visibility entitlement is:
+
+```text
+PUBLIC = authenticated Creator + usable Instagram
+ELIGIBLE_CREATORS_ONLY = authenticated Creator + usable Instagram + authoritative backend ELIGIBLE
+INVITE_ONLY = authenticated Creator + usable Instagram + valid matching invitation
+
+ELIGIBLE_ONLY: invitation is NOT entitlement
+INVITE_ONLY: invitation bypasses ordinary targeting eligibility
+PUBLIC: eligibility and invitation do not determine entitlement
+```
+
+Invitation context may remain valid ingress, continuation, and attribution lineage without becoming ELIGIBLE_ONLY entitlement. No other runtime semantic delta is accepted.
+
+Accepted correction evidence records 6,206 ordinary backend passes with 765 guarded skips, 61 separately executed PostgreSQL passes, and passing build, startup, raw HTTP redaction, and changed-scope lint. These are preserved runner results; this docs-only binding reruns no runtime check. External evidence: `C03_P6_COMPOUND_ELIGIBLE_ONLY_CORRECTION_EVIDENCE.zip`, SHA-256 `fd7434434fc5bc9d423a00aaa94c24f7e7089ae1a72a5101c9447fa44c4c03f9`.
+
+```text
+P6_TRACKED_CORRECTION_COUNT = 1
+P6_HARNESS_CORRECTION_COUNT = 2
+P6_HARNESS_CORRECTION_BUDGET_REMAINING = 0
+```
+
+The two harness-only corrections were: (1) the auxiliary TypeScript token-comparison checker mishandled template literals after formatting; its result was discarded and final lint plus executable tests supplied validation, and (2) the initial compiled HTTP harness expected an empty collection in a database containing unrelated eligible Campaign fixtures; it was rerun in a fresh single-Campaign database with the same empty-collection and redaction assertions. Both are `HARNESS_ONLY`, with `NO_PRODUCT_SEMANTIC_CHANGE` and `NO_CANDIDATE_BEHAVIOR_CHANGE`.
+
+P6 V1 remains historically blocked before the 13,271,040-cell matrix (`0 / 13,271,040`) by derived-contract/implementation drift. The subsequent correction attempt remains historically blocked before backend mutation after discovering the eligibility-evaluation suppression; its backend commit was `NONE`. Neither blocked run is a failure of the corrected candidate.
+
+Full P6 matrix/runtime execution is not resumed by this binding. No further tracked correction is authorized; a later candidate defect returns to SA review.
+
+Systems Architect acceptance SHA = P6_CORRECTION_ACCEPTANCE_RECORD_SHA_PENDING
