@@ -1,0 +1,45 @@
+{
+  "status": "NOT_APPROVED_NOT_APPLIED",
+  "schema": "brand-payouts-m1-v2-crosswalk-v1",
+  "baseTree": "6c01d65e5a32eecfcd7e42715923ea8478d071fb",
+  "domains": [
+    {
+      "name": "reserveApproval",
+      "prisma": ["FinancialReserveApproval", "FinancialReserveApprovalStatus"],
+      "sql": ["financial_reserve_approvals"],
+      "databaseOnly": ["bp_m1_reserve_amounts_check", "bp_m1_reserve_currency_check", "bp_m1_reserve_hash_check", "bp_m1_reserve_version_check", "bp_m1_reserve_approver_role_check", "bp_m1_reserve_time_check", "bp_m1_reserve_validate_insert", "bp_m1_reserve_guard_update_delete"],
+      "proof": "C04 tuple, requester/approver membership-user-role-Brand tuples, immutable audit/economics, legal state transition, monotonic version, set-once lock/ledger/timestamps, delete denial"
+    },
+    {
+      "name": "reserveExecutionAttempt",
+      "prisma": ["FinancialReserveExecutionAttempt", "FinancialReserveExecutionOutcome"],
+      "sql": ["financial_reserve_execution_attempts"],
+      "databaseOnly": ["bp_m1_attempt_terminal_evidence_check", "bp_m1_attempt_time_check", "bp_m1_attempt_one_success_key", "bp_m1_attempt_guard_update_delete"],
+      "proof": "CLAIMED insert followed by exactly one terminal set-once completion; no delete, repeat completion, linkage/lease mutation, terminal-to-terminal mutation, or second success"
+    },
+    {
+      "name": "obligationProvenance",
+      "prisma": ["CreatorPayoutObligation", "PayoutObligationProvenanceMode", "PayoutObligationLifecycle", "PayoutObligationGate"],
+      "sql": ["creator_payout_obligations"],
+      "databaseOnly": ["bp_m1_obligation_amounts_check", "bp_m1_obligation_time_check", "bp_m1_obligation_validate_guard"],
+      "proof": "new rows require complete CANONICAL_C04 tuple bound to immutable authority; existing rows remain LEGACY_UNRECONCILED; due evidence set once; outstanding equals entitlement-settled+reversed"
+    },
+    {
+      "name": "destinationAndTransfer",
+      "prisma": ["RouteTransferAttempt", "PayoutTransferSnapshotMode", "PayoutTransferDisposition"],
+      "sql": ["route_transfer_attempts"],
+      "databaseOnly": ["bp_m1_transfer_time_check", "bp_m1_transfer_terminal_check", "bp_m1_transfer_validate_guard"],
+      "proof": "destination identity/version and mapping identity/provider match C05 and obligation Creator; profile_state_version remains separate; milestones and terminal disposition are ordered and set once"
+    },
+    {
+      "name": "reconciledReceipt",
+      "prisma": ["PayoutReconciledReceipt", "PayoutReceiptEntityType", "PayoutReceiptEventClass"],
+      "sql": ["payout_reconciled_receipts"],
+      "databaseOnly": ["bp_m1_receipt_time_check", "bp_m1_receipt_validate_insert", "bp_m1_receipt_guard_update_delete"],
+      "proof": "dedupe identity, normalized entity/event, occurrence/receive/reconcile ordering, exact attempt-obligation linkage, immutable insert-only evidence"
+    }
+  ],
+  "foreignKeyPolicy": "ON UPDATE RESTRICT ON DELETE RESTRICT for every M1 financial/audit relation",
+  "backfill": "NONE",
+  "providerActions": "NONE"
+}

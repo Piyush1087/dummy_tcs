@@ -1205,7 +1205,7 @@ phase_checkpoints:
       provider_actions: []
   p3s_support: null
   p4_base_convergence:
-    status: "COMPLETE_AWAITING_BP_G10_M1_APPROVAL"
+    status: "ACCEPTED_UNCHANGED_AWAITING_BP_G10_M1_V2_APPROVAL"
     branch: "brand-payouts/v1-backend-convergence"
     parent_sha: "fc4d4b59e2a44d7ddced6bc5dde5119c501ec275"
     sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
@@ -1219,9 +1219,14 @@ phase_checkpoints:
     migrations_created_or_changed: false
     provider_actions: []
     m1:
-      status: "NOT_APPROVED_NOT_APPLIED"
-      sql_path: "docs/ai-collaboration/evidence/brand-payouts-wave-b-p4-base-m1-v1/NOT_APPROVED_NOT_APPLIED-brand-payouts-m1.sql"
-      sql_sha256: "683e5266c3e1913e39f151f70d8bd449f0816b5926913220156f97ddda6ec805"
+      v1_status: "NOT_APPROVED_SUPERSEDED"
+      v1_sql_path: "docs/ai-collaboration/evidence/brand-payouts-wave-b-p4-base-m1-v1/NOT_APPROVED_NOT_APPLIED-brand-payouts-m1.sql"
+      v1_sql_sha256: "683e5266c3e1913e39f151f70d8bd449f0816b5926913220156f97ddda6ec805"
+      v2_status: "NOT_APPROVED_NOT_APPLIED_PENDING_HUMAN_APPROVAL"
+      v2_prisma_patch_path: "docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v2/NOT_APPROVED_NOT_APPLIED-prisma-schema-m1-v2.patch"
+      v2_sql_path: "docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v2/NOT_APPROVED_NOT_APPLIED-brand-payouts-m1-v2.sql"
+      v2_sql_sha256: "a52c3c4eac416b4404196299f1790fe3c3215606789caf51da5744b30d32e8a4"
+      v2_crosswalk_path: "docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v2/NOT_APPROVED_NOT_APPLIED-m1-v2-crosswalk.json"
       backend_commit: false
       applied: false
   p4a_first_reserve: null
@@ -1336,10 +1341,10 @@ files_changed:
   provider_evidence: []
 
 uncheckpointed_work:
-  phase: "BP_G10_M1_V2_PROPOSAL"
-  status: "AWAITING_EXTERNAL_LOCAL_CODEX_CONSOLIDATED_CORRECTION"
+  phase: "BP_G10_M1_V2_HUMAN_GATE"
+  status: "M1_V2_HUMAN_APPROVAL_REQUIRED"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-07T01:20:00.000Z"
+last_updated: "2026-09-07T03:30:00.000Z"

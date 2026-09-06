@@ -1,0 +1,11 @@
+{
+  "status": "NOT_APPROVED_NOT_APPLIED",
+  "hashDomain": "git-blob-bytes",
+  "artifacts": [
+    {"path":"docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml","bytes":76299,"sha256":"b66abbcb029a4d8db88f5918515e5f80a9e6c3ff06edce510fba720ba9b15317"},
+    {"path":"docs/ai-collaboration/brand-payouts-bp-g10-m1-v2-review.md","bytes":4558,"sha256":"d1ade6050a7fb880df1c9571ae1606bee560d544013b4fdad7bb94e42e976de4"},
+    {"path":"docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v2/NOT_APPROVED_NOT_APPLIED-prisma-schema-m1-v2.patch","bytes":34553,"sha256":"d35d2dabad9bc914dc1152709db3dc89a0b27d437e9764a635ba754c274d219c"},
+    {"path":"docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v2/NOT_APPROVED_NOT_APPLIED-brand-payouts-m1-v2.sql","bytes":27878,"sha256":"a52c3c4eac416b4404196299f1790fe3c3215606789caf51da5744b30d32e8a4"},
+    {"path":"docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v2/NOT_APPROVED_NOT_APPLIED-m1-v2-crosswalk.json","bytes":3084,"sha256":"534dcd76af943b088fde62b195aca4c1ff6a8015b877f2447899f36a6a2e4993"}
+  ]
+}
