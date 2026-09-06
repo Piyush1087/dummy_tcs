@@ -4181,4 +4181,4 @@ The final frontend regression is 970/970 tests and 252/252 suites, with typechec
 
 Browser, keyboard accessibility, responsive, network security, storage/DOM security, and session/workspace clearing checks passed at 1440x900, 768x1024, 390x844, and 375x812. The preserved [V7 runner report](../../../ai-collaboration/c03-p6-final-execution-route-report-v7.md) contains the complete accepted record.
 
-Systems Architect P6 acceptance SHA = P6_FINAL_ACCEPTANCE_RECORD_SHA_PENDING
+Systems Architect P6 acceptance SHA = d65fcaed0c90f51358d29b0114043bd2f50fcfd1

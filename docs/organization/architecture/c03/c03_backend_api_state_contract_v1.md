@@ -642,4 +642,4 @@ The canonical visibility authority remains PUBLIC for an authenticated Creator w
 
 The preserved [V7 runner report](../../../ai-collaboration/c03-p6-final-execution-route-report-v7.md) records the final 12/12 canonical gate result. External evidence is `C03_P6_FINAL_EXECUTION_ROUTE_V7_EVIDENCE.zip`, SHA-256 `78215308571af534653ec71fe63e172584ea80bf4ee3672db8aa3e086354a001`; it is not committed.
 
-Systems Architect P6 acceptance SHA = P6_FINAL_ACCEPTANCE_RECORD_SHA_PENDING
+Systems Architect P6 acceptance SHA = d65fcaed0c90f51358d29b0114043bd2f50fcfd1
