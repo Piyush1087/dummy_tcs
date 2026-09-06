@@ -30,6 +30,10 @@ c03_required_frontend_integration_sha: null
 p4_canonical_backend_convergence_sha: null
 c05_dependency_sha: "156d5834266077be7e2b6a2d459bae5489edbbd6"
 c05_frontend_dependency_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
+campaign_bp_g05_status: "SATISFIED"
+campaign_bp_g05_tested_backend_sha: "2c390802a4cebd7e6ce5086c7609774b1ff3f3d1"
+campaign_bp_g05_acceptance_sha: "7901c7743ac1bb46b6ed4f74b768998dbebd28f4"
+campaign_bp_g05_accepted_tree: "d255ebb2c8458326c7d3fb473a325057ccfa5b4f"
 
 execution_mode:
   recommendation: "HYBRID_RUN"
@@ -63,7 +67,7 @@ dependency_gates:
   c04_financial_recovery_instruction: "OPEN_BLOCKING"
   c04_frontend: "OPEN_NON_SERIALIZING"
   c05_readiness: "READY_WITH_RECONCILIATION"
-  campaign_exact_net_terms: "OPEN_BLOCKING"
+  campaign_exact_net_terms: "SATISFIED"
   campaign_manager_entity_scope: "RESOLVED_FAIL_CLOSED_ZERO_ROWS"
   payment_support_security_policy: "OPEN_BLOCKING"
   complete_v1_source_coresidence: "OPEN_BLOCKING"
@@ -77,7 +81,7 @@ gate_qualifiers:
   c04_backend_settlement_handoff: "BLOCKS_P4_AND_P5_NOT_P0_TO_P3"
   c04_frontend: "BLOCKS_ONLY_C04_SPECIFIC_FRONTEND_AND_FINAL_JOINT_ACCEPTANCE"
   c05_readiness: "EXACT_CURRENT_DESTINATION_VERSION_FENCE_REQUIRED_BEFORE_P5"
-  campaign_exact_net_terms: "BLOCKS_CANONICAL_DUE_AND_AUTOMATIC_EXECUTION"
+  campaign_exact_net_terms: "ACCEPTED_7901C774_ALL_FIVE_TERMS_EXACT_C04_CONVERGENCE_REQUIRED"
   campaign_manager_entity_scope: "NO_BRAND_WIDE_FALLBACK_RETURN_ZERO_ROWS_UNTIL_PROVEN"
   payment_support_security_policy: "BLOCKS_ONLY_M2_AND_P3S_SUPPORT"
   complete_v1_source_coresidence: "DEFERRED_FROM_NORMAL_PATH_HANDOFF"
@@ -102,9 +106,15 @@ migrations:
   campaign_net_term_migration:
     owner: "CAMPAIGN"
     counted_in_payouts_total: false
-    status: "OPEN"
+    status: "ACCEPTED_PUBLISHED_NOT_APPLIED_TO_SHARED_OR_PRODUCTION_DATABASE"
     applied: false
-    sha: null
+    tested_backend_sha: "2c390802a4cebd7e6ce5086c7609774b1ff3f3d1"
+    acceptance_sha: "7901c7743ac1bb46b6ed4f74b768998dbebd28f4"
+    migrations:
+      - id: "20260910120000_campaign_bp_g05_extend_payout_terms"
+        sha256: "02fb0645cd10f26e1f219a0d36a927475507d3ba4ca7b0a73df4523b0428714e"
+      - id: "20260910121000_campaign_bp_g05_reconcile_exact_payout_terms"
+        sha256: "6d00cdf0dc80e01d7213c497a758fe3c4b10cdf0c2869f744ba8ec4c036b34a7"
   c04_convergence_migrations:
     owner: "C04"
     counted_in_payouts_total: false
@@ -1292,4 +1302,4 @@ uncheckpointed_work:
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-06T17:42:22.987Z"
+last_updated: "2026-09-06T19:49:59.270Z"
