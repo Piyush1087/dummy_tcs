@@ -1,0 +1,34 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "PINNED_IMMUTABLE_SOURCE",
+  "backend": {
+    "head": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "status": "CLEAN"
+  },
+  "frontend": {
+    "head": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "tree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "status": "CLEAN",
+    "parent": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0"
+  },
+  "authority": {
+    "startingHead": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "startingTree": "7283ed875a9135be6d8e2be31bcc064d65410deb"
+  },
+  "correctionFiles": [
+    "src/features/brand-escrow/brand-escrow.css",
+    "src/features/settings/settings.css",
+    "src/pages/brand/settings/brand-settings-routing.test.ts"
+  ],
+  "sourceChanges": "NONE",
+  "migrationsCreated": "NONE",
+  "providerActions": "NONE"
+}

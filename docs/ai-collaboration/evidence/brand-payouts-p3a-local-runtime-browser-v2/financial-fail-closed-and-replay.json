@@ -1,0 +1,234 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "DISPOSABLE_LOCAL_DATABASE_FINANCIAL_PURITY",
+  "requests": 168,
+  "rejectedOrReturnUnexpectedMutations": [],
+  "replayMutations": [],
+  "admittedTopUpInitialDeltas": [
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "claim": "PAYOUTS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "claim": "PAYOUTS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "MISSING",
+      "actor": "owner",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "MISSING",
+      "actor": "owner",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "MISSING",
+      "actor": "finance",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "MISSING",
+      "actor": "finance",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "BLANK",
+      "actor": "owner",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "BLANK",
+      "actor": "owner",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "BLANK",
+      "actor": "finance",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "BLANK",
+      "actor": "finance",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "INVALID",
+      "actor": "owner",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "INVALID",
+      "actor": "owner",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "INVALID",
+      "actor": "finance",
+      "claim": "SETTINGS",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    },
+    {
+      "mode": "INVALID",
+      "actor": "finance",
+      "claim": "LEGACY_MISSING",
+      "status": 503,
+      "countDelta": {
+        "escrowTransactionLedger": 2,
+        "escrowFundingLoad": 1
+      }
+    }
+  ],
+  "primaryVault": {
+    "availableBalance": "70000",
+    "totalPooledBalance": "100000",
+    "expectedAvailableUnchanged": "70000"
+  },
+  "fundingLoads": {
+    "count": 23,
+    "uniqueIdempotencyKeys": 23,
+    "states": [
+      "LOAD_INITIATED"
+    ]
+  },
+  "ledgerGroups": [
+    {
+      "transactionType": "LOAD_FEE",
+      "transactionStatus": "PENDING",
+      "count": 23
+    },
+    {
+      "transactionType": "RESERVE",
+      "transactionStatus": "CLEARED",
+      "count": 27
+    },
+    {
+      "transactionType": "LOAD",
+      "transactionStatus": "PENDING",
+      "count": 23
+    },
+    {
+      "transactionType": "CREATOR_PAYOUT_SETTLEMENT",
+      "transactionStatus": "CLEARED",
+      "count": 29
+    }
+  ],
+  "brandReturnRequests": 1,
+  "expectedSeededOnly": 1,
+  "brandReturnAllocations": 0,
+  "result": "PASS_NO_AVAILABLE_CREDIT_NO_RETURN_MUTATION_NO_DUPLICATE_FOUNDATION"
+}

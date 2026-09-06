@@ -1,0 +1,25 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "REUSED_IMMUTABLE_V1_EVIDENCE",
+  "commit": "85aba6c74d0d4e9499314c95321e7890336c617e",
+  "expectedTree": "fc57d68fac98bb0ac001bcd52f3f9fe41dbe716f",
+  "indexedArtifactsVerified": 124,
+  "indexedHashMismatches": 0,
+  "evidenceOnlyCommit": true,
+  "sourceProviderMigrationChanges": "NONE",
+  "result": "PASS",
+  "inherited": [
+    "backend focused/full/lint/build/diff",
+    "six PostgreSQL/security suites 50/50",
+    "74 committed-migration checksums per V1 database",
+    "20-model read purity",
+    "zero provider/external attempts for V1 lanes"
+  ]
+}

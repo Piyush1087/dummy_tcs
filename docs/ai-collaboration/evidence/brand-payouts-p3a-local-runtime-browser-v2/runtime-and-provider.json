@@ -1,0 +1,210 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "FULL_APPMODULE_LOOPBACK_RUNTIME",
+  "entry": "dist/main.js",
+  "freshBackendBuild": {
+    "result": "PASS",
+    "logSha256": "649e94d5901bf07094368148746a0114ed56b80174f220c595c43fe9815a0038"
+  },
+  "freshFrontendProductionBuild": {
+    "result": "PASS",
+    "logSha256": "7217f668e271943f3f5353e9cbfce435d8c11374064d4d1f8dcc5312258ba0aa"
+  },
+  "frontend": "single production-built Vite preview",
+  "configurations": [
+    {
+      "mode": "PAYOUTS",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "ready": true
+    },
+    {
+      "mode": "SETTINGS",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "ready": true
+    },
+    {
+      "mode": "MISSING",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "ready": true
+    },
+    {
+      "mode": "BLANK",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "ready": true
+    },
+    {
+      "mode": "INVALID",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "ready": true
+    }
+  ],
+  "canonicalRoutesMapped": true,
+  "processRestartPerConfiguration": true,
+  "providerVariables": "ABSENT",
+  "outboundGuardInstalledBeforeBootstrap": true,
+  "outboundBlockedEvents": 0,
+  "providerRequestsTransmitted": 0,
+  "providerActions": "NONE"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "FRESH_CORRECTED_FRONTEND_GATES",
+  "node": "v24.19.0",
+  "focused": {
+    "files": 4,
+    "tests": 62,
+    "passed": 62,
+    "logSha256": "d1318b241e22da93da7cf500e5ff062be2a13a516582b0d1ea9dd729bd0c3a2e"
+  },
+  "full": {
+    "files": 113,
+    "tests": 885,
+    "passed": 885,
+    "logSha256": "517e0802a2bb31e3a35e1a24480636a69ebd77aa2ce873549e0352193adc4055"
+  },
+  "changedFileLint": {
+    "result": "PASS",
+    "files": 3,
+    "logSha256": "e79f3a629a8a0f6d7d1fed5f4241be378b9f488858f56dd5c33e6ac4446d8047"
+  },
+  "typecheck": {
+    "result": "PASS",
+    "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "productionBuild": {
+    "result": "PASS",
+    "localStage": true,
+    "apiOrigin": "LOOPBACK_REDACTED",
+    "logSha256": "7217f668e271943f3f5353e9cbfce435d8c11374064d4d1f8dcc5312258ba0aa",
+    "onlyExpectedLargeChunkWarning": true
+  }
+}

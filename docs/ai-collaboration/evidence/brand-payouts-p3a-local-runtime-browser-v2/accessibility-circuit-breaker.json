@@ -1,0 +1,562 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "SOURCE_DEFECT_EVIDENCE",
+  "signature": "P3A_DRAWER_CANCEL_CONTRAST_BELOW_WCAG_AA",
+  "scansCompleted": 158,
+  "seriousRows": 55,
+  "criticalInstances": 0,
+  "drawerSeriousRows": 51,
+  "exactFailure": {
+    "selector": ".aurora-button--ghost",
+    "accessibleName": "Cancel",
+    "foreground": "#34d399",
+    "payoutDrawerBackground": "#ffffff",
+    "payoutRatio": 1.92,
+    "settingsDrawerBackground": "#f8f8f8",
+    "settingsRatio": 1.81,
+    "fontSize": "14px",
+    "requiredRatio": 4.5,
+    "axeRule": "color-contrast",
+    "impact": "serious"
+  },
+  "modes": [
+    "PAYOUTS",
+    "SETTINGS"
+  ],
+  "widths": [
+    390,
+    767,
+    768,
+    1440
+  ],
+  "states": [
+    "add-funds-open",
+    "add-funds-validation",
+    "add-funds-ready",
+    "brand-return-open",
+    "brand-return-validation",
+    "brand-return-ready",
+    "add-funds-fail-closed",
+    "brand-return-fail-closed"
+  ],
+  "correctedSelectorsPass": [
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "width": 390,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "width": 767,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "width": 768,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "width": 1440,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "width": 390,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "width": 767,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "width": 768,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "width": 1440,
+      "correction": {
+        "openPayouts": {
+          "text": "Open Payouts",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "width": 390,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "width": 767,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "width": 768,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "width": 1440,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "width": 390,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "width": 767,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "width": 768,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "width": 1440,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "width": 390,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "width": 767,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "width": 768,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "width": 1440,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        "refreshStatus": {
+          "text": "Refresh status",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "width": 390,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "width": 767,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "width": 768,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "width": 1440,
+      "correction": {
+        "activeTab": {
+          "text": "Finance & Escrow",
+          "color": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        }
+      },
+      "serious": 0,
+      "critical": 0
+    }
+  ],
+  "v1WhyMissed": "V1 bounded drawer Axe ran against the workspace root. SideDrawer uses a portal outside that root, so its interactive footer was excluded. V2 scans the full rendered document as required.",
+  "unrelatedObserved": {
+    "selector": "#sign-in-method-email-code",
+    "state": "unauthenticated-entry",
+    "seriousRows": 4,
+    "ratio": 1.92,
+    "classification": "PREEXISTING_AUTH_SURFACE_OUTSIDE_P3A_OWNERSHIP_RETAINED_FOR_REVIEW"
+  },
+  "suspectedSourceFiles": [
+    "src/features/brand-escrow/components/escrow-top-up-drawer.tsx",
+    "src/features/brand-escrow/components/brand-return-drawer.tsx",
+    "src/design-system/aurora/components.css",
+    "src/features/brand-escrow/brand-escrow.css"
+  ],
+  "sourceChangeRequired": "A committed selector/token correction is required for the actual ghost Cancel buttons rendered in the portal. Runtime configuration cannot change their committed foreground/background colors."
+}

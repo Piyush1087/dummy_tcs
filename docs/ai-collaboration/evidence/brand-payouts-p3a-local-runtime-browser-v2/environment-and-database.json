@@ -1,0 +1,23 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "SANITIZED_LOCAL_ENVIRONMENT",
+  "os": "win32 10.0.26200",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "chrome": "152.0.7977.76",
+  "playwright": "1.61.1",
+  "axe": "4.10.3",
+  "postgresql": "17.x disposable loopback container",
+  "sessionTimezone": "UTC",
+  "migrationsApplied": 74,
+  "migrationSource": "ALL_AND_ONLY_COMMITTED",
+  "migrationsCreated": "NONE"
+}

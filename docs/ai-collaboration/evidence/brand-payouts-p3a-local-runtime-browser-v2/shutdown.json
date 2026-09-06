@@ -1,0 +1,20 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b"
+  },
+  "classification": "CONTROLLED_DISPOSABLE_RESOURCE_CLEANUP",
+  "ownedBackendStopped": true,
+  "ownedPreviewStopped": true,
+  "databaseContainerRemoved": true,
+  "databaseVolumeRemovedWithContainer": true,
+  "remainingOwnedListeners": 0,
+  "portsChecked": [3107, 4177, 55439],
+  "sessionMaterialRemoved": true,
+  "temporaryFixtureAndAutomationScriptsRemoved": true,
+  "sourceChanges": "NONE",
+  "providerActions": "NONE",
+  "result": "PASS"
+}

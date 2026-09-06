@@ -1,0 +1,34 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "result": "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER",
+  "signature": "P3A_DRAWER_CANCEL_CONTRAST_BELOW_WCAG_AA",
+  "affectedFrontend": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+  "affectedBackend": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "completedGates": [
+    "V1 reuse integrity PASS",
+    "fresh corrected frontend 62/62 and 885/885 PASS",
+    "changed-file lint/typecheck/production build PASS",
+    "five full-AppModule configurations healthy",
+    "mutation admission/replay matrix PASS",
+    "corrected Settings selectors PASS at all widths",
+    "zero overflow in 158 completed browser rows",
+    "zero provider action"
+  ],
+  "incompleteBecauseCircuitOpened": [
+    "complete zero-serious Axe gate",
+    "remaining browser matrix after defect discovery",
+    "P3A acceptance"
+  ],
+  "sourceChanges": "NONE",
+  "migrationsCreated": "NONE",
+  "providerActions": "NONE",
+  "p3aAcceptance": "NOT_SET",
+  "p4Work": "NONE"
+}

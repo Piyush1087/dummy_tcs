@@ -1,0 +1,268 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b"
+  },
+  "classification": "MACHINE_READABLE_EVIDENCE_INDEX",
+  "artifactCount": 51,
+  "artifacts": [
+    {
+      "path": "PAYOUTS-1440-anonymous-unauthenticated-entry.png",
+      "sha256": "9913e740cdd4b531d20cdeda7589cee62f0c21cbdeb0d40084fd75719e46bbd2",
+      "bytes": 31816
+    },
+    {
+      "path": "PAYOUTS-1440-owner-add-funds-open.png",
+      "sha256": "1b308f599df6da5285388806eaff5385b5ce9274bf3aac7d998ed58b9ed0909e",
+      "bytes": 689691
+    },
+    {
+      "path": "PAYOUTS-1440-owner-brand-return-open.png",
+      "sha256": "77a26e44694da0f1b7d03e9f934824dfd554107c007c98946b874244fd1f1ad1",
+      "bytes": 710315
+    },
+    {
+      "path": "PAYOUTS-1440-owner-payouts-surface.png",
+      "sha256": "07f4751cfa2004b2de1f43c5c5997d3cabb17ed69905b3aa97381b138a4ca5af",
+      "bytes": 582447
+    },
+    {
+      "path": "PAYOUTS-1440-owner-settings-surface.png",
+      "sha256": "3b622405a99d9d52e74478efd27a4cd17188c07df020abff0475afc806f70e12",
+      "bytes": 47505
+    },
+    {
+      "path": "PAYOUTS-390-anonymous-unauthenticated-entry.png",
+      "sha256": "f886e8b65e063f7e78aa17418e8b6ada562e2fbf30633e16d11eb7cd8d1e110d",
+      "bytes": 26325
+    },
+    {
+      "path": "PAYOUTS-390-owner-add-funds-open.png",
+      "sha256": "d27e8823cb3a0264fc9211826db305e5ef93a88d325fe272a65e122d7296e628",
+      "bytes": 759001
+    },
+    {
+      "path": "PAYOUTS-390-owner-brand-return-open.png",
+      "sha256": "a50ce085c84282c69fb8ca3cfe365df0fc98158bbd1f95106e9da3d1d470d225",
+      "bytes": 888734
+    },
+    {
+      "path": "PAYOUTS-390-owner-payouts-surface.png",
+      "sha256": "5acb13a5fe3d7d2e0c411dc23f93e3e37547181cd43c32b027d688c2715d0a70",
+      "bytes": 789181
+    },
+    {
+      "path": "PAYOUTS-390-owner-settings-surface.png",
+      "sha256": "bb80a61e3f5917bebf05767de736d9de1b074f4d597bb817ab701278ea8b8e67",
+      "bytes": 38336
+    },
+    {
+      "path": "PAYOUTS-767-anonymous-unauthenticated-entry.png",
+      "sha256": "aa462099f7bccf33a5a84c9fb2ea35df041f37229a15c5252aa7ed022ef17cca",
+      "bytes": 28426
+    },
+    {
+      "path": "PAYOUTS-767-owner-add-funds-open.png",
+      "sha256": "ebcbdb7893e3a4c8e09a528540771f38afbbfa18c2371eb7375ee6de58f73d59",
+      "bytes": 748686
+    },
+    {
+      "path": "PAYOUTS-767-owner-brand-return-open.png",
+      "sha256": "75e3d3a4fd8cf3ce48e847d902e0509e451f882323d3eb1c93a514096a64867a",
+      "bytes": 774873
+    },
+    {
+      "path": "PAYOUTS-767-owner-payouts-surface.png",
+      "sha256": "4923beda69f0a7643b09bb70d8b49b172e8d6e87c6a819d5ef61dfed480c925c",
+      "bytes": 722034
+    },
+    {
+      "path": "PAYOUTS-767-owner-settings-surface.png",
+      "sha256": "f6d239e35d5286465f8d37ce3eb7485a54a5c793d91d87bd0d643ac601b4d0f6",
+      "bytes": 40636
+    },
+    {
+      "path": "PAYOUTS-768-anonymous-unauthenticated-entry.png",
+      "sha256": "51c45dc60ef18cb435332a38b36fa98d0819ec2c5512dd657c6a6adcf4d66b2b",
+      "bytes": 28978
+    },
+    {
+      "path": "PAYOUTS-768-owner-add-funds-open.png",
+      "sha256": "dd057786579d3b3875400e26a040a35ee43da640d15cbb7a6b3baf4e25eaf51b",
+      "bytes": 637383
+    },
+    {
+      "path": "PAYOUTS-768-owner-brand-return-open.png",
+      "sha256": "9fac180672dd79385b7396bcd5fafc9e5eefd4c712fc409324bc5fc6c3b6dccf",
+      "bytes": 643583
+    },
+    {
+      "path": "PAYOUTS-768-owner-payouts-surface.png",
+      "sha256": "ea280c3adc5c5eb1cce2c30698c421581ee8d80ea57b0ba67be94ca89c2b41d8",
+      "bytes": 583677
+    },
+    {
+      "path": "PAYOUTS-768-owner-settings-surface.png",
+      "sha256": "cb3611afef2b16ecf530242e9f82068f1ae3deeab35979d056b388c76c5e5aba",
+      "bytes": 45991
+    },
+    {
+      "path": "SETTINGS-1440-owner-add-funds-open.png",
+      "sha256": "dd530ee90f55fe0d6166c11b11b4bbb19f0b71ddbcb40d50d1cfcdb293927ca7",
+      "bytes": 425463
+    },
+    {
+      "path": "SETTINGS-1440-owner-brand-return-open.png",
+      "sha256": "f450570f1bb359061e6469b848620f7b36efed879111173588561bc65799c900",
+      "bytes": 446951
+    },
+    {
+      "path": "SETTINGS-1440-owner-payouts-surface.png",
+      "sha256": "660ceb8833779750bbd72c6461bd1534bf0a92c26b5f5219ed5eecc048fcd90e",
+      "bytes": 577296
+    },
+    {
+      "path": "SETTINGS-1440-owner-settings-surface.png",
+      "sha256": "f47979a8c5709cbe16bdaafc044d37e3e98ff6956222a5654965a8f51131a8e0",
+      "bytes": 325892
+    },
+    {
+      "path": "SETTINGS-390-owner-add-funds-open.png",
+      "sha256": "c5843556b88cb72c7cf64d9a8d304d1335faa0abca6d2918e5f7eb8bbb0f5e43",
+      "bytes": 276256
+    },
+    {
+      "path": "SETTINGS-390-owner-brand-return-open.png",
+      "sha256": "b514479d665d51505166b912bc9d9caeaa0c21b7475c58e0f29477cbccc1509b",
+      "bytes": 287233
+    },
+    {
+      "path": "SETTINGS-390-owner-payouts-surface.png",
+      "sha256": "5fec260fa9983a75cd6ccc2b02e98447984d60167a3133125807e4be38c87346",
+      "bytes": 785313
+    },
+    {
+      "path": "SETTINGS-390-owner-settings-surface.png",
+      "sha256": "7ded3e16e5a1cc3a62f87d28ccf62cef14f6eb220a76f1365b31a99492318fb4",
+      "bytes": 293335
+    },
+    {
+      "path": "SETTINGS-767-owner-add-funds-open.png",
+      "sha256": "de779ad25038e1f65694b703e65e936206393518076427c52159652533374759",
+      "bytes": 295174
+    },
+    {
+      "path": "SETTINGS-767-owner-brand-return-open.png",
+      "sha256": "a2649f775cb4a335f853662a6cf9418b95e71d648a9db0485ba1ee90e305d32f",
+      "bytes": 330615
+    },
+    {
+      "path": "SETTINGS-767-owner-payouts-surface.png",
+      "sha256": "d69e142967cb8ba1210c999e20fab25ed9542f3174c350906b240a71db3a4c49",
+      "bytes": 718847
+    },
+    {
+      "path": "SETTINGS-767-owner-settings-surface.png",
+      "sha256": "93fd8305aab02e4914f05e913fd0bedc170e5cb3b352db389b6fa3c280ec86da",
+      "bytes": 303818
+    },
+    {
+      "path": "SETTINGS-768-owner-add-funds-open.png",
+      "sha256": "f52c03f19d50838a8ff2e2dba5482058a0dcfd7456fb9d8e1078cf1b089946cc",
+      "bytes": 351200
+    },
+    {
+      "path": "SETTINGS-768-owner-brand-return-open.png",
+      "sha256": "3f49d19d612547ab1a77e82b8e8f1c413f6336fdad73d3455df65970aa9a4aa7",
+      "bytes": 372264
+    },
+    {
+      "path": "SETTINGS-768-owner-payouts-surface.png",
+      "sha256": "f520353e047caa28e223e1d3340e39afc396a25936b42ffa1ef4d15dfaed0315",
+      "bytes": 578630
+    },
+    {
+      "path": "SETTINGS-768-owner-settings-surface.png",
+      "sha256": "3776c123cb9d08b53437c907fc47d4d4b5828ee7bdfcb7f323b26576dcd96a02",
+      "bytes": 305547
+    },
+    {
+      "path": "accessibility-circuit-breaker.json",
+      "sha256": "70e2adceaa38b70f4f9162a596842fef669dc0673a9962a20f047ae60ffc2ef0",
+      "bytes": 14637
+    },
+    {
+      "path": "browser-PAYOUTS.json",
+      "sha256": "43c798d4a0fb15d32de54ec3c0611c70b9aa070e17409f4d86c2a81063f22b67",
+      "bytes": 4825458
+    },
+    {
+      "path": "browser-SETTINGS.json",
+      "sha256": "2e59a070c51735375696eb75055f21cd544ac93254c1569adbf59f420cf9e883",
+      "bytes": 2024544
+    },
+    {
+      "path": "circuit-breaker.json",
+      "sha256": "a5312799ba8ea2b5244cf2fc799863c5c00ccbbcaf5394ad78cac7f1003638ec",
+      "bytes": 1347
+    },
+    {
+      "path": "contrast-correction.json",
+      "sha256": "ebcc52108085d23117145f959e7e97d7db77dffbd378e6fb2269438e70117dee",
+      "bytes": 1446
+    },
+    {
+      "path": "database-lifecycle.json",
+      "sha256": "4963670945ad95c7b99e97eabd3380c6dfd25321ede151f78911035e9e1471e4",
+      "bytes": 727
+    },
+    {
+      "path": "environment-and-database.json",
+      "sha256": "980bc885e9d5069985607efa037faf0fb88157b6e863b9674e7f3dcb0df4dd04",
+      "bytes": 821
+    },
+    {
+      "path": "financial-fail-closed-and-replay.json",
+      "sha256": "85afa91967d2a37bef75e6b27b1aaa4474414a4424c1486af7b8fe1f3d831203",
+      "bytes": 5314
+    },
+    {
+      "path": "fresh-frontend-gates.json",
+      "sha256": "4e721c8332582fadd33a02db3f8fcb5655a47861e5740c4cbc026a96e38b9a6d",
+      "bytes": 1318
+    },
+    {
+      "path": "http-mutation-admission.json",
+      "sha256": "0c0f1a9ba18e3fe8e8d9035bb08c66b5b5683f44ea2b8bcd660bfd9105a7156f",
+      "bytes": 112711
+    },
+    {
+      "path": "runtime-and-provider.json",
+      "sha256": "4dc94b04716c2d847de0a8c1bec97e69b1311a1858173321e1c9bdadd81ca880",
+      "bytes": 4750
+    },
+    {
+      "path": "shutdown.json",
+      "sha256": "883121dfe5950baa14748a5ef4d339823fcdd869ad7c7033e9b2c1761df5f5d8",
+      "bytes": 722
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "8083438cc3860978945ed114658727725597689ef5278e819daa4ee0f2129535",
+      "bytes": 1246
+    },
+    {
+      "path": "v1-reuse-integrity.json",
+      "sha256": "c4e5f6d98d3d580920529ef752f77fdc63612617b6f86de660d950be0bef2cfa",
+      "bytes": 988
+    },
+    {
+      "path": "brand-payouts-v1-p3a-local-runtime-browser-evidence-v2.md",
+      "location": "..",
+      "sha256": "ba462d684ccbee064ac15913a884695ed1530cb971fc92a7af1eaf7803a9c879",
+      "bytes": 4889
+    }
+  ]
+}

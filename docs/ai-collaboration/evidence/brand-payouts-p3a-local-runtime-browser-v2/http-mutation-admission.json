@@ -1,0 +1,3010 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b",
+    "authorityStart": "cf5f6a734cafec5d23851bb21e506947a4528e24",
+    "v1EvidenceCommit": "85aba6c74d0d4e9499314c95321e7890336c617e"
+  },
+  "classification": "FRESH_FULL_APPMODULE_HTTP_MUTATION_ADMISSION",
+  "configurations": [
+    {
+      "mode": "PAYOUTS",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "projections": [
+        {
+          "actor": "owner",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "ADD_FUNDS",
+                  "resource_reference": "brand-payouts:vault:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:13:42.005Z"
+                },
+                {
+                  "action": "REQUEST_BRAND_RETURN",
+                  "resource_reference": "brand-payouts:vault:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.347Z",
+                  "authorized_as_of": "2026-09-06T06:13:42.005Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "finance",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "ADD_FUNDS",
+                  "resource_reference": "brand-payouts:vault:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:13:42.051Z"
+                },
+                {
+                  "action": "REQUEST_BRAND_RETURN",
+                  "resource_reference": "brand-payouts:vault:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.362Z",
+                  "authorized_as_of": "2026-09-06T06:13:42.051Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "manager",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [],
+              "rowCount": null
+            }
+          ]
+        }
+      ],
+      "requestCount": 32,
+      "assertionCount": 60,
+      "failures": [],
+      "requests": [
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "e82153505ed8114e781635b330499f1b853ad80ecbcefe212b19cb9a66113d58",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "PAYOUTS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS,SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS,SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "f60e680dddb4a4c496b133492437fa8617233339db1457ef81ebdf3ca211db9b",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "PAYOUTS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS,SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS,SETTINGS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS,SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS,SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "changed": false,
+          "countDelta": {}
+        }
+      ]
+    },
+    {
+      "mode": "SETTINGS",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "projections": [
+        {
+          "actor": "owner",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:08.650Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.347Z",
+                  "authorized_as_of": "2026-09-06T06:14:08.650Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "finance",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:08.704Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.362Z",
+                  "authorized_as_of": "2026-09-06T06:14:08.704Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "manager",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [],
+              "rowCount": null
+            }
+          ]
+        }
+      ],
+      "requestCount": 34,
+      "assertionCount": 60,
+      "failures": [],
+      "requests": [
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "5c8d325ce3dd951102e35c803b8eb2b6527812a14e29e55084a4e6572757a31f",
+          "afterHash": "3670d9939ca8120e63363fb1fff00d68b0b119c24233edbce81b54f4fa33f255",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "3670d9939ca8120e63363fb1fff00d68b0b119c24233edbce81b54f4fa33f255",
+          "afterHash": "3670d9939ca8120e63363fb1fff00d68b0b119c24233edbce81b54f4fa33f255",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "3670d9939ca8120e63363fb1fff00d68b0b119c24233edbce81b54f4fa33f255",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "750b49a22883c03f0bb8df21c581df12d87a2f7041bdb32675ff47f7c42463d4",
+          "afterHash": "24bc66feea38e5e53cbe000efe72a7198266da8b7a06b895aa8b48b97be1f737",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "24bc66feea38e5e53cbe000efe72a7198266da8b7a06b895aa8b48b97be1f737",
+          "afterHash": "24bc66feea38e5e53cbe000efe72a7198266da8b7a06b895aa8b48b97be1f737",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "24bc66feea38e5e53cbe000efe72a7198266da8b7a06b895aa8b48b97be1f737",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "changed": false,
+          "countDelta": {}
+        }
+      ]
+    },
+    {
+      "mode": "MISSING",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "projections": [
+        {
+          "actor": "owner",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:17.296Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.347Z",
+                  "authorized_as_of": "2026-09-06T06:14:17.296Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "finance",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:17.331Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.362Z",
+                  "authorized_as_of": "2026-09-06T06:14:17.331Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "manager",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [],
+              "rowCount": null
+            }
+          ]
+        }
+      ],
+      "requestCount": 34,
+      "assertionCount": 60,
+      "failures": [],
+      "requests": [
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "6cfc1420ea34a9b325c65f6a58c01d9e6df6139b75547e26a7c34370b97de659",
+          "afterHash": "f216288887aa2e1a995b79d1adb6bab43b506c062cd46e985be399461f6165f2",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "f216288887aa2e1a995b79d1adb6bab43b506c062cd46e985be399461f6165f2",
+          "afterHash": "f216288887aa2e1a995b79d1adb6bab43b506c062cd46e985be399461f6165f2",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "f216288887aa2e1a995b79d1adb6bab43b506c062cd46e985be399461f6165f2",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "320f0be26cbf9e9e494800f160e360481450858b92beff28238cd5b18d0f4909",
+          "afterHash": "3f3d81b8130128dd53c98a47d71b77736085c491a2114b9ecdfe6fb364ea1c4f",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "3f3d81b8130128dd53c98a47d71b77736085c491a2114b9ecdfe6fb364ea1c4f",
+          "afterHash": "3f3d81b8130128dd53c98a47d71b77736085c491a2114b9ecdfe6fb364ea1c4f",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "3f3d81b8130128dd53c98a47d71b77736085c491a2114b9ecdfe6fb364ea1c4f",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "changed": false,
+          "countDelta": {}
+        }
+      ]
+    },
+    {
+      "mode": "BLANK",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "projections": [
+        {
+          "actor": "owner",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:26.156Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.347Z",
+                  "authorized_as_of": "2026-09-06T06:14:26.156Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "finance",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:26.212Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.362Z",
+                  "authorized_as_of": "2026-09-06T06:14:26.212Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "manager",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [],
+              "rowCount": null
+            }
+          ]
+        }
+      ],
+      "requestCount": 34,
+      "assertionCount": 60,
+      "failures": [],
+      "requests": [
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "c0acf35e4b0834ea5505556c87441e39c4b3e201c5904dc8c54c97a8dc6df051",
+          "afterHash": "fee01e34cf7836d07566fc19b213bec698518a94796f10dea83e705f0742d76c",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "fee01e34cf7836d07566fc19b213bec698518a94796f10dea83e705f0742d76c",
+          "afterHash": "fee01e34cf7836d07566fc19b213bec698518a94796f10dea83e705f0742d76c",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "fee01e34cf7836d07566fc19b213bec698518a94796f10dea83e705f0742d76c",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "b0abab27fef53f2410f888c444c8a64416a24c48581bc134c4dd12f0f9e1ade5",
+          "afterHash": "a16bf27dacc1fb94c9fafd7e7b79c649f6cf8a65b1f50a88bf3ed14fcb77438d",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "a16bf27dacc1fb94c9fafd7e7b79c649f6cf8a65b1f50a88bf3ed14fcb77438d",
+          "afterHash": "a16bf27dacc1fb94c9fafd7e7b79c649f6cf8a65b1f50a88bf3ed14fcb77438d",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "a16bf27dacc1fb94c9fafd7e7b79c649f6cf8a65b1f50a88bf3ed14fcb77438d",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "changed": false,
+          "countDelta": {}
+        }
+      ]
+    },
+    {
+      "mode": "INVALID",
+      "health": {
+        "/": {
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        "/health/live": {
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "/health": {
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      },
+      "projections": [
+        {
+          "actor": "owner",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:36.882Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.347Z",
+                  "authorized_as_of": "2026-09-06T06:14:36.882Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "finance",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [
+                {
+                  "action": "OPEN_SETTINGS_ADD_FUNDS",
+                  "resource_reference": "brand-settings:secure-escrow:add-funds",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z",
+                  "authorized_as_of": "2026-09-06T06:14:36.924Z"
+                },
+                {
+                  "action": "OPEN_SETTINGS_BRAND_RETURN",
+                  "resource_reference": "brand-settings:secure-escrow:brand-return",
+                  "resource_version": "vault:2026-09-06T06:11:22.459Z:membership:2026-09-06T06:11:22.362Z",
+                  "authorized_as_of": "2026-09-06T06:14:36.924Z"
+                }
+              ],
+              "rowCount": null
+            }
+          ]
+        },
+        {
+          "actor": "manager",
+          "status": 200,
+          "actions": [],
+          "sections": [
+            {
+              "actions": [],
+              "rowCount": null
+            }
+          ]
+        }
+      ],
+      "requestCount": 34,
+      "assertionCount": 60,
+      "failures": [],
+      "requests": [
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "b207edf29dfb0496e09ec771c79e8d2dcc08cb1aeb2be08d80720cc61ceab76e",
+          "afterHash": "922e3bba2756c9e2625526cb0208839608b99a6775c368d6e403dd063a047365",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "922e3bba2756c9e2625526cb0208839608b99a6775c368d6e403dd063a047365",
+          "afterHash": "922e3bba2756c9e2625526cb0208839608b99a6775c368d6e403dd063a047365",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "922e3bba2756c9e2625526cb0208839608b99a6775c368d6e403dd063a047365",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "owner",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "5f5790f52b20fcf5d14b7cd27958a731e77bbf240f5f24c9ac14f9f6a0fcb098",
+          "afterHash": "124050e9ffc20ed2caec9947f01d4a3f756689f5f01a382ecec9d90a674d1401",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "124050e9ffc20ed2caec9947f01d4a3f756689f5f01a382ecec9d90a674d1401",
+          "afterHash": "124050e9ffc20ed2caec9947f01d4a3f756689f5f01a382ecec9d90a674d1401",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "124050e9ffc20ed2caec9947f01d4a3f756689f5f01a382ecec9d90a674d1401",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": true,
+          "countDelta": {
+            "escrowTransactionLedger": 2,
+            "escrowFundingLoad": 1
+          }
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS_REPLAY",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "message": "Payment gateway handshake failed",
+            "error": "Service Unavailable",
+            "statusCode": 503
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 503,
+          "body": {
+            "code": "PROVIDER_SETUP_REQUIRED",
+            "message": "Brand Return provider runtime is not enabled"
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "finance",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 409,
+          "body": {
+            "code": "BRAND_FINANCIAL_COMMAND_SURFACE_INACTIVE",
+            "message": "This financial command surface is inactive. Refresh and use the canonical Brand financial workspace."
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "ADD_FUNDS",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "LEGACY_MISSING",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "INVALID",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        },
+        {
+          "actor": "manager",
+          "command": "BRAND_RETURN",
+          "claim": "SETTINGS,PAYOUTS",
+          "status": 403,
+          "body": {
+            "message": "Financial mutations require a Brand Owner or Finance Admin",
+            "error": "Forbidden",
+            "statusCode": 403
+          },
+          "beforeHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "afterHash": "2878432a10ba26ace9037a61426e297cca8580baa70b12ed292a811f860c73e6",
+          "changed": false,
+          "countDelta": {}
+        }
+      ]
+    }
+  ]
+}

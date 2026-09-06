@@ -1,0 +1,47 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b"
+  },
+  "classification": "ACTUAL_COMPUTED_BROWSER_STYLE_AND_RATIO",
+  "viewports": [390, 767, 768, 1440],
+  "height": 1000,
+  "rows": [
+    {
+      "element": "Open Payouts",
+      "selector": ".settings-team__action-link",
+      "mode": "PAYOUTS",
+      "actors": ["owner", "finance"],
+      "foreground": "rgb(0, 108, 75)",
+      "background": "rgb(255, 255, 255)",
+      "ratio": 6.47,
+      "seriousAxe": 0,
+      "criticalAxe": 0
+    },
+    {
+      "element": "Finance & Escrow active Settings tab",
+      "selector": ".brand-settings__tab--active",
+      "mode": "PAYOUTS_AND_SETTINGS",
+      "actors": ["owner", "finance", "manager"],
+      "foreground": "rgb(0, 108, 75)",
+      "background": "rgb(248, 248, 248)",
+      "ratio": 6.09,
+      "seriousAxe": 0,
+      "criticalAxe": 0
+    },
+    {
+      "element": "Refresh status",
+      "selector": ".brand-escrow-card button.aurora-button--outline",
+      "mode": "SETTINGS",
+      "actors": ["owner", "finance"],
+      "foreground": "rgb(0, 108, 75)",
+      "background": "rgb(255, 255, 255)",
+      "ratio": 6.47,
+      "seriousAxe": 0,
+      "criticalAxe": 0
+    }
+  ],
+  "result": "PASS_CORRECTION_VERIFIED"
+}

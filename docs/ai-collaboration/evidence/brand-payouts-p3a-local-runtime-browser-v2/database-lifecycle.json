@@ -1,0 +1,19 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+    "frontendTree": "0984071ee2117362ffb87468ac2e3fde9bb5064b"
+  },
+  "classification": "FRESH_DISPOSABLE_LOOPBACK_DATABASE",
+  "postgresql": "17.x",
+  "sessionTimezone": "UTC",
+  "databaseStartedEmpty": true,
+  "committedMigrationsApplied": 74,
+  "allAndOnlyCommittedMigrations": true,
+  "migrationStatus": "ALL_APPLIED",
+  "migrationLogSha256": "64fe6dcffa36b1a5bf878aecd6244d0f179cd5d464ce7a84885f53f3059a91b5",
+  "migrationsCreated": "NONE",
+  "containerRemoved": true,
+  "volumeDisposableWithContainer": true
+}
