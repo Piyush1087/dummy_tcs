@@ -1229,4 +1229,4 @@ The external `C03_P4_FRONTEND_ACCEPTANCE_EVIDENCE.zip` has SHA-256 `aa1f99dd5a8a
 P5 may consume the exact accepted frontend shell and backend base authorities above, but P5 implementation is not authorized by this assignment. P6 and P7 are not started. Publication stops at SA review.
 
 Systems Architect acceptance SHA =
-PENDING_P4_ACCEPTANCE_RECORD_SHA
+8b7a01fa07c224f413daef72fcbe303772e9170e
