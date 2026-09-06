@@ -620,4 +620,4 @@ P6 V1 remains historically blocked before the 13,271,040-cell matrix (`0 / 13,27
 
 Full P6 matrix/runtime execution is not resumed by this binding. No further tracked correction is authorized; a later candidate defect returns to SA review.
 
-Systems Architect acceptance SHA = P6_CORRECTION_ACCEPTANCE_RECORD_SHA_PENDING
+Systems Architect acceptance SHA = b123ce2601471dbf4912162fbea3ab0a1fe355bf

@@ -1421,4 +1421,4 @@ P6 V1 remains `BLOCKED BEFORE MATRIX`, with `0 / 13,271,040` evaluated due to de
 
 This binding does not authorize full P6 matrix/runtime execution, another tracked correction, P7, or source changes.
 
-Systems Architect acceptance SHA = P6_CORRECTION_ACCEPTANCE_RECORD_SHA_PENDING
+Systems Architect acceptance SHA = b123ce2601471dbf4912162fbea3ab0a1fe355bf
