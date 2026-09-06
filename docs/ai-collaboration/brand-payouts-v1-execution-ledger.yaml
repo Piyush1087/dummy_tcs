@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P3A_DRAWER_CONTRAST_CORRECTION_PENDING_V3_LOCAL_RUNTIME_EVIDENCE"
+status: "P3A_RUNTIME_AUTHORITY_CLARIFIED_PENDING_V4_LOCAL_RUNTIME_EVIDENCE"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -38,11 +38,11 @@ authorization_mvp_cutline_artifact: "BRAND_PAYOUTS_MVP_DELIVERY_CUTLINE_AND_POST
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: null
 
-phase: "P3A_BOUNDED_DRAWER_CONTRAST_CORRECTION_COMPLETE_PENDING_RUNTIME_EVIDENCE"
+phase: "P3A_DRAWER_CORRECTION_SOURCE_GATES_PASS_PENDING_V4_RUNTIME_EVIDENCE"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: null
 checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
-next_phase: "P3A_V3_LOCAL_RUNTIME_BROWSER_EVIDENCE"
+next_phase: "P3A_V4_LOCAL_RUNTIME_BROWSER_EVIDENCE"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -75,6 +75,11 @@ gate_qualifiers:
 migrations:
   expected_new_payouts_migrations: 2
   max_new_financial_migrations_without_human_review: 0
+  disposable_local_database_bootstrap:
+    status: "AUTHORIZED_EXISTING_COMMITTED_MIGRATIONS_ONLY"
+    authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
+    new_or_changed_migration_files_allowed: false
+    shared_or_persistent_database_allowed: false
   m1_financial_contract:
     status: "PROPOSAL_NOT_AUTHORIZED"
     applied: false
@@ -278,7 +283,12 @@ tests:
   p3a_frontend_drawer_contrast_correction_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
   p3a_frontend_drawer_contrast_correction_diff_check: "PASS"
   p3a_frontend_drawer_contrast_correction_remote: "PASS_SHA_A8800DE192F2E716F405B75F38799271FD9F1A9B_TREE_4C47E51AF0DE16FA8C2F9CE305D02DE37B65A470"
-  p3a_browser_evidence_v3: "PENDING_LOCAL_RUNTIME_RELAY"
+  p3a_browser_evidence_v3: "CIRCUIT_BREAKER_CONFIRMED_AT_858942AC73DEBFAEBD89492A49E74AAF17C16D3E"
+  p3a_browser_v3_reuse_integrity: "PASS_175_OF_175_V1_V2_ARTIFACTS"
+  p3a_browser_v3_frontend_gates: "PASS_63_OF_63_FOCUSED_886_OF_886_FULL_LINT_FORMAT_TYPECHECK_BUILD_DIFF"
+  p3a_browser_v3_runtime_browser: "NOT_EXECUTED_AUTHORITY_WORDING_CONFLICT"
+  p3a_v3_migration_authorization_conflict: "RESOLVED_BY_689FEB7_EXISTING_COMMITTED_MIGRATIONS_ALLOWED_ONLY_IN_FRESH_OWNED_DISPOSABLE_DATABASE"
+  p3a_browser_evidence_v4: "PENDING_LOCAL_RUNTIME_RELAY"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -366,12 +376,12 @@ correction_history:
     scope: "USE_ACCESSIBLE_DARK_BRAND_GREEN_FOR_ACTIVE_GHOST_ACTIONS_ONLY_INSIDE_TREASURY_DRAWER_FOOTERS_WITHOUT_GLOBAL_AURORA_CHANGE"
     correction_budget: "BOUNDED_TECHNICAL_CORRECTION_UNDER_7F03411B9940AB16579CD2E176AC9E721EDEE832"
 
-last_failure: "P3A_DRAWER_CANCEL_CONTRAST_BELOW_WCAG_AA_AT_DB15BDE0B8C7544B4CC9A314A235045868896D1F_CORRECTED_PENDING_V3_PROOF"
+last_failure: "P3A_V3_MIGRATION_AUTHORIZATION_CONFLICT_AT_858942AC73DEBFAEBD89492A49E74AAF17C16D3E_RESOLVED_PENDING_V4_RUNTIME_PROOF"
 breaker: null
 stop_reason: null
-environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V3_RELAY"
+environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V4_RELAY"
 
-non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V3_RUNTIME_RELAY"
+non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V4_RUNTIME_RELAY"
 
 local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
@@ -423,7 +433,7 @@ p3a_v2_local_runner_relay:
 
 p3a_v3_local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
-  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  status: "COMPLETE_AUTHORITY_WORDING_CIRCUIT_BREAKER"
   decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
   prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v3.md"
   authorized_scope: "P3A_V1_V2_EVIDENCE_REUSE_FRESH_DRAWER_BROWSER_AND_COMPOSITE_ACCEPTANCE_PROOF"
@@ -434,8 +444,33 @@ p3a_v3_local_runner_relay:
   reused_evidence_commits:
     - "85aba6c74d0d4e9499314c95321e7890336c617e"
     - "db15bde0b8c7544b4cc9a314a235045868896d1f"
+  evidence_commit: "858942ac73debfaebd89492a49e74aaf17c16d3e"
+  evidence_tree: "2364b6e4eab2f46ae57ac24b4390a3c92828f6cc"
+  result: "P3A_V3_MIGRATION_AUTHORIZATION_CONFLICT"
   source_changes_allowed: false
   migrations_allowed: false
+  provider_actions_allowed: false
+
+p3a_v4_local_runner_relay:
+  type: "LOCAL_DESKTOP_RUNTIME_RELAY"
+  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
+  prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v4.md"
+  authorized_scope: "P3A_V1_V2_V3_EVIDENCE_REUSE_DISPOSABLE_RUNTIME_DRAWER_BROWSER_AND_COMPOSITE_PROOF"
+  migration_authorization:
+    existing_committed_to_fresh_owned_disposable_database: true
+    create_or_change_migration_files: false
+    apply_m1_or_m2: false
+    shared_or_persistent_database: false
+  backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+  backend_tree_sha: "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24"
+  frontend_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+  frontend_tree_sha: "4c47e51af0de16fa8c2f9ce305d02de37b65a470"
+  reused_evidence_commits:
+    - "85aba6c74d0d4e9499314c95321e7890336c617e"
+    - "db15bde0b8c7544b4cc9a314a235045868896d1f"
+    - "858942ac73debfaebd89492a49e74aaf17c16d3e"
+  source_changes_allowed: false
   provider_actions_allowed: false
 
 checkpoint_policy:
@@ -757,7 +792,7 @@ phase_checkpoints:
       provider_actions: []
     blockers: []
   p3a_operations_cutover:
-    status: "BOUNDED_DRAWER_CONTRAST_CORRECTION_PENDING_V3_LOCAL_RUNTIME_EVIDENCE"
+    status: "SOURCE_GATES_PASS_RUNTIME_AUTHORITY_CLARIFIED_PENDING_V4_EVIDENCE"
     checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
     authority_sha: "9c991a8e8c8dfc90ccc4cf18e48ab1629d5f5b4f"
     accepted_p2_ledger_sha: "495ae4f977152b49b0504ed11c441aadd4abcc93"
@@ -778,7 +813,7 @@ phase_checkpoints:
     migrations_created_or_applied: false
     provider_actions: []
     review_owner: "SYSTEMS_ARCHITECT"
-    evidence_status: "V2_CIRCUIT_BREAKER_CORRECTED_V3_RELAY_PENDING"
+    evidence_status: "V3_AUTHORITY_WORDING_BREAKER_RESOLVED_V4_RELAY_PENDING"
     acceptance_result: "NOT_SET"
     browser_evidence_v1:
       status: "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER"
@@ -855,8 +890,31 @@ phase_checkpoints:
       migrations_created_or_applied: false
       provider_actions: []
     browser_evidence_v3:
+      status: "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER"
+      commit: "858942ac73debfaebd89492a49e74aaf17c16d3e"
+      tree: "2364b6e4eab2f46ae57ac24b4390a3c92828f6cc"
+      report: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v3.md"
+      affected_backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+      affected_frontend_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+      failure_signature: "P3A_V3_MIGRATION_AUTHORIZATION_CONFLICT"
+      v1_v2_artifacts_verified: 175
+      frontend_focused_tests: 63
+      frontend_full_tests: 886
+      runtime_started: false
+      browser_matrix_started: false
+      source_changes: false
+      migrations_created_or_applied: false
+      provider_actions: []
+    v3_migration_authorization_resolution:
+      classification: "RUNNER_INSTRUCTION_CLARIFICATION_NO_SOURCE_CHANGE"
+      authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
+      existing_committed_migrations_to_fresh_owned_disposable_database: "AUTHORIZED_AND_REQUIRED"
+      migration_files_created_or_changed: "PROHIBITED"
+      m1_or_m2_application: "PROHIBITED"
+      shared_or_persistent_database_application: "PROHIBITED"
+    browser_evidence_v4:
       status: "PENDING_LOCAL_RUNTIME_RELAY"
-      prompt: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v3.md"
+      prompt: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v4.md"
   p3s_support: null
   p4_base_convergence: null
   p4a_first_reserve: null
@@ -877,6 +935,7 @@ files_changed:
     - "docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v2.md"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v3.md"
+    - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v4.md"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v1.md"
@@ -970,9 +1029,9 @@ files_changed:
 
 uncheckpointed_work:
   phase: "P3A"
-  status: "DRAWER_CONTRAST_CORRECTION_PUSHED_PENDING_V3_LOCAL_RUNTIME_EVIDENCE"
+  status: "DRAWER_SOURCE_GATES_PASS_RUNTIME_AUTHORITY_CLARIFIED_PENDING_V4_EVIDENCE"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-06T07:09:52Z"
+last_updated: "2026-09-06T08:02:55Z"
