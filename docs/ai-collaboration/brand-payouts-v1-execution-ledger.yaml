@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P3A_ACCEPTED_WAVE_B_DEEP_PLANNING_COMPLETE_DEPENDENCY_GATED"
+status: "P3A_ACCEPTED_WAVE_B_DEEP_PLANNING_ACCEPTED_DEPENDENCY_GATED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -8,6 +8,7 @@ execution_amendment_sha: "3e1120dcf361b3046c97b6ad0cc5c08e6ec2e71e"
 recovery_charter_sha: "23a074b01dbca141ddc997113a6ecbbc14e19f82"
 superfast_wave_execution_amendment_sha: "634db2b0def32ca3b703fa9806d267b1d89dd7ef"
 wave_b_deep_plan_sha: "bec420628c57d609f6ca1443f0f1ffe74cfe5d4d"
+wave_b_deep_plan_parent_disposition: "ACCEPTED"
 accessibility_recovery_authority_sha: "3e1120dcf361b3046c97b6ad0cc5c08e6ec2e71e"
 activity_detail_identifier_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
 pagination_restoration_correction_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
@@ -45,7 +46,7 @@ model_routing: "SOL_HIGH_FINANCIAL_CONVERGENCE_SOL_MEDIUM_READINESS_AND_IMPLEMEN
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: "BP_G10_EXACT_M1_APPROVAL_AFTER_BP_P4_BASE_CONVERGENCE"
 
-phase: "WAVE_B_DEEP_PLANNING_COMPLETE"
+phase: "WAVE_B_DEEP_PLANNING_ACCEPTED"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "67224e5f59175d7300af8984bc2bf8ec1da1d6cb"
 checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
@@ -1283,9 +1284,9 @@ files_changed:
 
 uncheckpointed_work:
   phase: "WAVE_B"
-  status: "DEEP_PLANNING_COMPLETE_SOURCE_NOT_STARTED_DEPENDENCY_GATED"
+  status: "DEEP_PLANNING_ACCEPTED_SOURCE_NOT_STARTED_DEPENDENCY_GATED"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-06T17:10:00.000Z"
+last_updated: "2026-09-06T17:30:00.000Z"
