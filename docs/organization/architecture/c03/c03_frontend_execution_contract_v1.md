@@ -4103,3 +4103,63 @@ P5 may build Creator Brief Pack on these exact accepted surfaces only after sepa
 
 Systems Architect acceptance SHA =
 8b7a01fa07c224f413daef72fcbe303772e9170e
+
+## P5_CREATOR_BRIEF_PACK_ACCEPTANCE_OVERLAY
+
+Authorization: `C03_P5_DURABLE_CREATOR_BRIEF_PACK_ACCEPTANCE_BINDING_V1`. P2 state/design authority and P4 executable frontend realization remain unchanged. This overlay freezes the accepted P5 addition; earlier not-started statements remain historical checkpoint records.
+
+```text
+P5_BACKEND_ACCEPTED_SHA = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P5_BACKEND_ACCEPTED_TREE = 16d559c9f0e349717b31f41c6ba2fa8b39213060
+P5_FRONTEND_ACCEPTED_SHA = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P5_FRONTEND_ACCEPTED_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+PDF_RENDERER = FEATURE_LOCAL_JSPDF
+PACKAGE_DELTA = NONE
+```
+
+Application detail → **Download Brief** → GET immutable `CreatorBriefPackV1` → strict Zod validation → deterministic client-side jsPDF → transient browser download. The action remains available for valid canonical Application history in PENDING, APPROVED, REJECTED, WITHDRAWN and EXPIRED, subject to current Team authorization. Current Instagram usability does not gate access. Session/subject changes clear private state and prevent stale downloads.
+
+Filename: `creator-shop-brief-pack-<applicationId>.pdf`.
+
+The renderer is feature-local and client-side, uses no external PDF service or new font package/files, and derives stable document metadata from Application identity/submittedAt. It preserves deterministic normalized content/layout, exact decimal amounts and authored zero, handles long-content page breaking, uses bounded unsupported-glyph fallback and sanitized external references, and has no remote image dependency. The deliberate no-image output does not fetch Brand logos. Transient object URLs are revoked after download.
+
+C03 Application Brief Pack means **what the Creator applied to**. C04 Collaboration Brief Pack means **what Brand + Creator agreed to execute**. P5 does not create or redefine C04 artifact behavior.
+
+The external evidence bundle is `C03_P5_CREATOR_BRIEF_PACK_ACCEPTANCE_EVIDENCE.zip`, SHA-256 `3718c40c76c4e5fc0bbb223f1c550df039d7380f968c3e626fdfd431f900841f`. The ZIP and sample PDFs are not committed. Validation below is preserved accepted P5 evidence; this documentation binding performs no new runtime tests, builds, or PDF regeneration.
+
+```text
+BACKEND_FULL_SUITE = 6189 PASS / 759 GUARDED SKIPS
+P5_POSTGRESQL = 6 PASS
+BACKEND_BUILD = PASS
+BACKEND_STARTUP = PASS
+FRONTEND_FULL_SUITE = 970 PASS / 121 FILES
+FRONTEND_TYPECHECK = PASS
+FRONTEND_BUILD = PASS
+CHANGED_FILE_LINT = PASS
+FULL_LINT = BASELINE_DEBT_UNCHANGED
+BASELINE_LINT_ERRORS = 26
+BASELINE_LINT_WARNINGS = 13
+P5_LINT_BLOCKER = NO
+```
+
+Full lint is not PASS: 26 errors and 13 warnings remain unchanged baseline debt. Accepted PDF determinism concerns the evidenced renderer and inputs; no broader cross-environment byte-identity guarantee is introduced.
+
+The [P5 ledger continuation](../../execution_ledgers/c03_recovery_execution_ledger_v1.md#15-p5-durable-creator-brief-pack-acceptance) records the exact accepted evidence matrix and correction description. The [verbatim P5 runner report](../../../ai-collaboration/c03-p5-creator-brief-pack-implementation-and-acceptance-report-v1.md) retains original runtime provenance.
+
+```text
+P5_INITIAL_PASS = 1
+P5_CORRECTION_COUNT = 1
+P5_CORRECTION_BUDGET_REMAINING = 1
+P6_BACKEND_CANDIDATE_INPUT = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P6_BACKEND_CANDIDATE_TREE = 16d559c9f0e349717b31f41c6ba2fa8b39213060
+P6_FRONTEND_CANDIDATE_INPUT = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P6_FRONTEND_CANDIDATE_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+P6_ARCHITECTURAL_ELIGIBILITY = YES
+P6_STATE = NOT STARTED
+P7_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+Remaining P5 correction budget is historical checkpoint accounting only; it does not authorize post-acceptance P5 mutation. P6 eligibility is for later SA authorization; this assignment does not start P6 or P7.
+
+Systems Architect acceptance SHA = P5_ACCEPTANCE_RECORD_SHA_PENDING

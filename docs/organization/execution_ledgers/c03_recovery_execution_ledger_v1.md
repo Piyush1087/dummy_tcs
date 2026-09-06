@@ -1230,3 +1230,113 @@ P5 may consume the exact accepted frontend shell and backend base authorities ab
 
 Systems Architect acceptance SHA =
 8b7a01fa07c224f413daef72fcbe303772e9170e
+
+## 15. P5 durable Creator Brief Pack acceptance
+
+Authorization: `C03_P5_DURABLE_CREATOR_BRIEF_PACK_ACCEPTANCE_BINDING_V1`. Systems Architect verdict: **P5 = ACCEPTED**. Starting recovery authority: `919a7f9c09d077aa9cb49a5cdd0c6a6ba809e70f`. Earlier checkpoint entries remain historical records; this entry is the current continuation authority.
+
+```text
+P1 = PASS
+P2 = PASS
+P3 = PASS
+P4 = PASS
+P5 = PASS
+LAST_ACCEPTED_CHECKPOINT = P5
+CURRENT_CHECKPOINT = P6
+P5_BACKEND_RUNTIME_ACCEPTED_SHA = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P5_BACKEND_RUNTIME_ACCEPTED_TREE = 16d559c9f0e349717b31f41c6ba2fa8b39213060
+P5_FRONTEND_RUNTIME_ACCEPTED_SHA = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P5_FRONTEND_RUNTIME_ACCEPTED_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+P5_INITIAL_PASS = 1
+P5_CORRECTION_COUNT = 1
+P5_CORRECTION_BUDGET_REMAINING = 1
+P6_STATE = NOT STARTED AT TIME OF P5 ACCEPTANCE BINDING
+P7_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+P5 correction budget remaining is historical checkpoint accounting only and does not authorize post-acceptance P5 mutation. The exact accepted correction description from `correction-accounting.json` is: "P5A PostgreSQL fixture needed disconnectedAt for existing DISCONNECTED constraint".
+
+The accepted backend is one direct child of `8bedbebf9712b6ffe0acb11339813787ef669e62`; the accepted frontend is one direct child of `cbba723f10ca3a6df06e1feba263fe14a03ddc28`. Neither chain contains a merge or rebase. The exact six backend and eleven frontend changed files are preserved in the [verbatim P5 runner report](../../ai-collaboration/c03-p5-creator-brief-pack-implementation-and-acceptance-report-v1.md).
+
+The external evidence bundle is `C03_P5_CREATOR_BRIEF_PACK_ACCEPTANCE_EVIDENCE.zip`, SHA-256 `3718c40c76c4e5fc0bbb223f1c550df039d7380f968c3e626fdfd431f900841f`. The ZIP and sample PDFs are not committed. Validation below is preserved accepted P5 evidence; this documentation binding performs no new runtime tests, builds, or PDF regeneration.
+
+```text
+BRIEF_PACK_ROUTE = PASS
+CURRENT_TEAM_AUTHORIZATION = PASS
+OWNER_ACCESS = PASS
+MANAGER_ACCESS = PASS
+ASSISTANT_ACCESS = PASS
+INACTIVE_TEAM_DENIED = PASS
+CROSS_SUBJECT_NON_ENUMERATING = PASS
+CURRENT_INSTAGRAM_INDEPENDENCE = PASS
+CURRENT_CAMPAIGN_INDEPENDENCE = PASS
+CURRENT_ASSET_INDEPENDENCE = PASS
+CURRENT_BRIEF_INDEPENDENCE = PASS
+TERMINAL_HISTORY_ACCESS = PASS
+SNAPSHOT_ONLY_PROJECTION = PASS
+INCOMPLETE_SNAPSHOT = APPLICATION_BRIEF_PACK_UNAVAILABLE
+PRIVATE_NO_STORE = PASS
+RESPONSE_REDACTION = PASS
+FIXED = PASS
+NEGOTIABLE = PASS
+INR = PASS
+USD = PASS
+AUTHORED_ZERO = PASS
+SUPPORT_PRESENT_ABSENT = PASS
+DOWNLOAD_BRIEF_ACTION = PASS
+STABLE_FILENAME = PASS
+PDF_DETERMINISM = PASS
+LONG_CONTENT_PAGE_BREAKS = PASS
+UNICODE_SPECIAL_CHARACTERS = PASS
+NO_IMAGE = PASS
+PDF_FORBIDDEN_DATA_SCAN = PASS
+REAL_BROWSER_DOWNLOAD = PASS
+PDF_RENDER_VISUAL_QA = PASS
+STORAGE_SECURITY = PASS
+NETWORK_SECURITY = PASS
+```
+
+
+```text
+BACKEND_FULL_SUITE = 6189 PASS / 759 GUARDED SKIPS
+P5_POSTGRESQL = 6 PASS
+BACKEND_BUILD = PASS
+BACKEND_STARTUP = PASS
+FRONTEND_FULL_SUITE = 970 PASS / 121 FILES
+FRONTEND_TYPECHECK = PASS
+FRONTEND_BUILD = PASS
+CHANGED_FILE_LINT = PASS
+FULL_LINT = BASELINE_DEBT_UNCHANGED
+BASELINE_LINT_ERRORS = 26
+BASELINE_LINT_WARNINGS = 13
+P5_LINT_BLOCKER = NO
+```
+
+Full lint is not PASS: 26 errors and 13 warnings remain unchanged baseline debt.
+
+```text
+P5_SCHEMA_CHANGE = NONE
+P5_MIGRATION_CHANGE = NONE
+MIGRATION_COUNT = 79
+PDF_PERSISTENCE = NONE
+BINARY_BACKEND_STORAGE = NONE
+AWS_STORAGE = NONE
+```
+
+### P6 candidate authority for later SA authorization
+
+```text
+P6_BACKEND_CANDIDATE_INPUT = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P6_BACKEND_CANDIDATE_TREE = 16d559c9f0e349717b31f41c6ba2fa8b39213060
+P6_FRONTEND_CANDIDATE_INPUT = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P6_FRONTEND_CANDIDATE_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+P6_ARCHITECTURAL_ELIGIBILITY = YES
+P6_STATE = NOT STARTED
+P7_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+Architectural eligibility does not authorize P6. This assignment is docs-only; P6 and P7 remain not started. No source, package, schema, migration, test implementation, AWS, or provider change is authorized.
+
+Systems Architect acceptance SHA = P5_ACCEPTANCE_RECORD_SHA_PENDING

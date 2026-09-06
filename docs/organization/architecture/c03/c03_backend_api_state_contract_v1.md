@@ -461,3 +461,82 @@ P4 consumes this document as semantic/state authority and the P3 runtime SHA abo
 [Preserved V4 evidence](../../../ai-collaboration/c03-p3-backend-runtime-acceptance-report-v4.md): full suite 6188 PASS / 753 GUARDED SKIPS / 0 FAIL; build, startup, HTTP privacy/CORS/projections, legacy Apply 410, materialized Notification security and security diff PASS. V2 migration and V3 PostgreSQL/timeout evidence retain their original provenance. ZIP SHA-256 `10c0138beb31f1048978cc8550d1e5a52ec45568599d614c3a6e48a6d21ac02c`. Correction accounting remains authority=1, timeout lane=1, runtime=1, runtime budget remaining=0.
 
 Systems Architect acceptance SHA = c32841516330f37f19effc63423317619ec1ecd5
+
+## P5_CREATOR_BRIEF_PACK_ACCEPTANCE_OVERLAY
+
+Authorization: `C03_P5_DURABLE_CREATOR_BRIEF_PACK_ACCEPTANCE_BINDING_V1`. P1 semantic authority and the P3 runtime overlay above remain unchanged. This overlay freezes the accepted P5 addition; earlier not-started statements retain their checkpoint-time meaning.
+
+```text
+P5_BACKEND_ACCEPTED_SHA = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P5_BACKEND_ACCEPTED_TREE = 16d559c9f0e349717b31f41c6ba2fa8b39213060
+P5_FRONTEND_ACCEPTED_SHA = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P5_FRONTEND_ACCEPTED_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+```
+
+### Route and current authorization
+
+`GET /api/v1/creator/applications/:applicationId/brief-pack` requires an authenticated User, current active C05 Creator Team membership, and stored Application subject/workspace match. Owner, Manager and Assistant access is accepted; inactive membership is denied. Wrong current Creator subject/workspace returns non-enumerating `404 APPLICATION_NOT_FOUND`.
+
+```text
+CURRENT_INSTAGRAM_REQUIRED = NO
+CURRENT_CAMPAIGN_REQUIRED = NO
+CURRENT_ASSET_REQUIRED = NO
+CURRENT_BRIEF_REQUIRED = NO
+CURRENT_ELIGIBILITY_REQUIRED = NO
+CURRENT_INVITATION_REQUIRED = NO
+APPLICATION_TERMINAL_STATUS_BLOCKS_ACCESS = NO
+```
+
+### CreatorBriefPackV1 projection
+
+Source authority is the immutable C03 Application snapshot only. Complete evidence requires `authorityVersion = C03_CANONICAL` and `snapshot.schemaVersion = C03_APPLICATION_SNAPSHOT_V1`; exact Application/Campaign/Asset/Brief/Creator-subject and workspace lineage and submission timestamps must match. Malformed or incomplete evidence returns `409 APPLICATION_BRIEF_PACK_UNAVAILABLE`.
+
+The accepted projection has `schemaVersion: 1` and the following explicit partitions:
+
+| Partition | Accepted fields |
+|---|---|
+| application | applicationId, reference, submittedAt |
+| brand | name, description, logoUrl, domain; nullable |
+| campaign | name, objective, platforms, publishingStart, publishingEnd, applicationDeadline |
+| commercial | compensationModel, offer, currency, receivesBrandSupport, brandSupportType, brandSupportEstimatedValue |
+| asset | kind; nullable offering (name, description, imageUrl, url); nullable offer (offerName, description, entityLink) |
+| brief | briefName, creativeIntent, creatorBrief, briefType, platform, briefLevelGuidance, referenceContent, usageRights, creatorRequirements, deliverables |
+| ordered deliverables | id, format, displayOrder, configuration, creativeGuidance, amplifyTargetDeliverableId; ordered by displayOrder then id |
+
+Commercial amounts remain exact decimal strings, including authored zero, with FIXED/NEGOTIABLE and INR/USD. Guidance, requirements, references, usage rights, selected Asset and Brief are snapshotted authored content. Current mutable Campaign, Asset, Brief, Instagram, eligibility and invitation evidence are not read as pack content.
+
+Actor identity, membership identity, Creator private data, email/contact/shipping, attribution, UTMs, invitation evidence, eligibility evidence, provider identifiers/credentials/diagnostics, internal/private notes, Notification internals, Idempotency-Key and command receipt/event internals are structurally excluded from the backend pack itself. This is not a frontend-ignore-only policy. Creator-subject evidence validates lineage without entering the projection; authored structured trees reject private metadata keys.
+
+### Private response and persistence
+
+The route inherits the existing Application pre-guard private response boundary: `Cache-Control: private, no-store` and `Vary` containing `Authorization` and `Cookie`, for success and pre-handler failures. Existing CORS variance is preserved. No new privacy mechanism is introduced.
+
+```text
+P5_SCHEMA_CHANGE = NONE
+P5_MIGRATION_CHANGE = NONE
+MIGRATION_COUNT = 79
+PDF_PERSISTENCE = NONE
+BINARY_BACKEND_STORAGE = NONE
+AWS_STORAGE = NONE
+```
+
+C03 Application Brief Pack records **what the Creator applied to**. C04 Collaboration Brief Pack records **what Brand + Creator agreed to execute**. P5 does not create or redefine C04 Collaboration artifact behavior.
+
+The external evidence bundle is `C03_P5_CREATOR_BRIEF_PACK_ACCEPTANCE_EVIDENCE.zip`, SHA-256 `3718c40c76c4e5fc0bbb223f1c550df039d7380f968c3e626fdfd431f900841f`. The ZIP and sample PDFs are not committed. Validation below is preserved accepted P5 evidence; this documentation binding performs no new runtime tests, builds, or PDF regeneration.
+
+Accepted evidence and validation are recorded in the [P5 ledger continuation](../../execution_ledgers/c03_recovery_execution_ledger_v1.md#15-p5-durable-creator-brief-pack-acceptance) and [preserved runner report](../../../ai-collaboration/c03-p5-creator-brief-pack-implementation-and-acceptance-report-v1.md).
+
+```text
+P6_BACKEND_CANDIDATE_INPUT = 3712f56930a8785b5cb61a9ed31fb43b240cb421
+P6_BACKEND_CANDIDATE_TREE = 16d559c9f0e349717b31f41c6ba2fa8b39213060
+P6_FRONTEND_CANDIDATE_INPUT = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P6_FRONTEND_CANDIDATE_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+P6_ARCHITECTURAL_ELIGIBILITY = YES
+P6_STATE = NOT STARTED
+P7_STATE = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+P6 requires later SA authorization. P5 correction count is 1, remaining budget 1, historical accounting only with no post-acceptance mutation authority.
+
+Systems Architect acceptance SHA = P5_ACCEPTANCE_RECORD_SHA_PENDING
