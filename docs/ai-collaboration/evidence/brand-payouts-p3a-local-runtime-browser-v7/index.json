@@ -62,13 +62,13 @@
     },
     {
       "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v7/financial-after.json",
-      "bytes": 383,
-      "sha256": "c3cd4a3f256d6c7eb27ec006bcd6a655de14813988fe07abfa91dcc7af63e8e8"
+      "bytes": 367,
+      "sha256": "d1eae4fae1c5091a65ebc2b14558c2ed43dd616c8057c39ea191d88c1d6f6128"
     },
     {
       "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v7/financial-before.json",
-      "bytes": 383,
-      "sha256": "c3cd4a3f256d6c7eb27ec006bcd6a655de14813988fe07abfa91dcc7af63e8e8"
+      "bytes": 367,
+      "sha256": "d1eae4fae1c5091a65ebc2b14558c2ed43dd616c8057c39ea191d88c1d6f6128"
     },
     {
       "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v7/guard-PAYOUTS.json",
@@ -97,13 +97,13 @@
     },
     {
       "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v7/reuse-integrity.json",
-      "bytes": 798,
-      "sha256": "19096eca6f507c6e7a8f39ad1f1397d478a69f30ad0442ad7fbcfdc449514d29"
+      "bytes": 753,
+      "sha256": "82433e120ed42343223d511025e39ccfb1cf72ff929808e0fcc936ea40f58170"
     },
     {
       "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v7/runtime-health.json",
-      "bytes": 536,
-      "sha256": "4dd2b73237ec6f5621cef0ee1b5e4389611fa541e73f50897d22545124fb85e9"
+      "bytes": 514,
+      "sha256": "34e9043c7e07eb4d7bde6ec3f54592137d5b216fe0003c27bbe1d51eb7f1b809"
     },
     {
       "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v7/source-binding.json",
