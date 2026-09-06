@@ -1,0 +1,34 @@
+{
+  "executionMode": "WAVE_A_SAME_RUNNER_CLASS_A_CORRECTION_AND_FOCUSED_ACCEPTANCE",
+  "executionLedgerStartingHead": "7def5369670e106f832382e7a01e46109142252d",
+  "requiredV7Ancestor": "050dcc5cbfaea4bfb3aa0180959105a2c5a5bcc0",
+  "v7AncestorVerified": true,
+  "backend": {
+    "sha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "readOnly": true,
+    "clean": true
+  },
+  "frontend": {
+    "startingSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+    "startingTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+    "correctionCommit": "7c75a4c8f5a0df3a1fb82d2f707b1c6b03d56d2a",
+    "correctionTree": "956bae22a91aeaf53733f9e913d500b9750577e2",
+    "parent": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+    "remoteVerified": true,
+    "files": [
+      "src/features/brand-payouts/components/PayoutsTreasuryActions.tsx",
+      "src/features/brand-payouts/brand-payouts-p2.test.ts"
+    ],
+    "productionFileCount": 1,
+    "testFileCount": 1,
+    "clean": true
+  },
+  "correctionDiff": {
+    "file": "frontend-correction.diff",
+    "bytes": 8570,
+    "sha256": "a4bcde7b726dbd6da6f9562cf56970b28163800a00cf904cd9043e7d99e331a7"
+  },
+  "backendSourceChanges": "NONE",
+  "migrationFilesCreatedOrChanged": "NONE"
+}

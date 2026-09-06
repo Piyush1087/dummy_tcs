@@ -1,0 +1,168 @@
+{
+  "results": [
+    {
+      "mode": "PAYOUTS",
+      "role": "Owner",
+      "route": "/brand/payouts",
+      "width": 390,
+      "summary": {
+        "currency": "INR",
+        "self_service_returnable_balance": 100000
+      },
+      "keyboard": {
+        "invoker_focus_visible": true,
+        "submit_focus_visible_before": true
+      },
+      "pending": {
+        "focused": true,
+        "native_enabled": true,
+        "disabled_attribute": null,
+        "aria_disabled": "true",
+        "focus_visible": true
+      },
+      "browser_post_count": 1,
+      "pending_tab_inside": true,
+      "pending_shift_tab_inside": true,
+      "response_delay_label": "TEST_ONLY_LOCAL_RESPONSE_DELIVERY_DELAY",
+      "backend_response": {
+        "status": 503,
+        "headers": {
+          "x-powered-by": "Express",
+          "access-control-allow-origin": "http://127.0.0.1:53132",
+          "vary": "Origin",
+          "access-control-allow-credentials": "true",
+          "x-ratelimit-limit": "120",
+          "x-ratelimit-remaining": "119",
+          "x-ratelimit-reset": "60",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "91",
+          "etag": "W/\"5b-Lv3RaVXzMQx7IJ5lqyJCHrmR+rY\"",
+          "date": "Sun, 06 Sep 2026 15:42:21 GMT",
+          "connection": "keep-alive",
+          "keep-alive": "timeout=5"
+        },
+        "body": {
+          "code": "PROVIDER_SETUP_REQUIRED",
+          "message": "Brand Return provider runtime is not enabled"
+        },
+        "body_sha256": "e0dcf731661ad20380c1914da6b905b38b339ab49650473a72a47e9c60983dce",
+        "request_body_sha256": "0a9d8fb63d2e4f7d4db154fb3f878a1217380214076775da78ea7fb160d09af3"
+      },
+      "refresh_proof": {
+        "observed": true,
+        "dialogMissing": false,
+        "samples": 3
+      },
+      "after_error": {
+        "dialog_mounted": true,
+        "truthful_error_visible": true,
+        "focused": true,
+        "native_enabled": true,
+        "focus_visible": true
+      },
+      "error_tab_inside": true,
+      "error_shift_tab_inside": true,
+      "escape_restored_exact_invoker": true,
+      "axe": {
+        "total_violations": 5,
+        "serious": 0,
+        "critical": 0
+      },
+      "overflow": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "screenshot": "PAYOUTS-390-owner-brand-return-v8.png",
+      "browser_static_requests_blocked": [
+        "https://api.fontshare.com/v2/css",
+        "https://fonts.googleapis.com/css2"
+      ],
+      "escaped_non_loopback_requests": 0,
+      "unexpected_console_errors": [],
+      "lane_pass": true
+    },
+    {
+      "mode": "PAYOUTS",
+      "role": "Finance Admin",
+      "route": "/brand/payouts",
+      "width": 1440,
+      "summary": {
+        "currency": "INR",
+        "self_service_returnable_balance": 100000
+      },
+      "keyboard": {
+        "invoker_focus_visible": true,
+        "submit_focus_visible_before": true
+      },
+      "pending": {
+        "focused": true,
+        "native_enabled": true,
+        "disabled_attribute": null,
+        "aria_disabled": "true",
+        "focus_visible": true
+      },
+      "browser_post_count": 1,
+      "pending_tab_inside": true,
+      "pending_shift_tab_inside": true,
+      "response_delay_label": "TEST_ONLY_LOCAL_RESPONSE_DELIVERY_DELAY",
+      "backend_response": {
+        "status": 503,
+        "headers": {
+          "x-powered-by": "Express",
+          "access-control-allow-origin": "http://127.0.0.1:53132",
+          "vary": "Origin",
+          "access-control-allow-credentials": "true",
+          "x-ratelimit-limit": "120",
+          "x-ratelimit-remaining": "118",
+          "x-ratelimit-reset": "55",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "91",
+          "etag": "W/\"5b-Lv3RaVXzMQx7IJ5lqyJCHrmR+rY\"",
+          "date": "Sun, 06 Sep 2026 15:42:26 GMT",
+          "connection": "keep-alive",
+          "keep-alive": "timeout=5"
+        },
+        "body": {
+          "code": "PROVIDER_SETUP_REQUIRED",
+          "message": "Brand Return provider runtime is not enabled"
+        },
+        "body_sha256": "e0dcf731661ad20380c1914da6b905b38b339ab49650473a72a47e9c60983dce",
+        "request_body_sha256": "dff671e744ea1510a559fc6a9e58e178cc43f1245daff344ab983a9927491e50"
+      },
+      "refresh_proof": {
+        "observed": true,
+        "dialogMissing": false,
+        "samples": 3
+      },
+      "after_error": {
+        "dialog_mounted": true,
+        "truthful_error_visible": true,
+        "focused": true,
+        "native_enabled": true,
+        "focus_visible": true
+      },
+      "error_tab_inside": true,
+      "error_shift_tab_inside": true,
+      "escape_restored_exact_invoker": true,
+      "axe": {
+        "total_violations": 5,
+        "serious": 0,
+        "critical": 0
+      },
+      "overflow": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "screenshot": "PAYOUTS-1440-finance-admin-brand-return-v8.png",
+      "browser_static_requests_blocked": [
+        "https://api.fontshare.com/v2/css",
+        "https://fonts.googleapis.com/css2"
+      ],
+      "escaped_non_loopback_requests": 0,
+      "unexpected_console_errors": [],
+      "lane_pass": true
+    }
+  ]
+}

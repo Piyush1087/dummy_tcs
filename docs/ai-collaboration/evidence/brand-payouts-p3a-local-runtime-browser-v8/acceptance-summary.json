@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "payoutsReturnPostError": "PASS_2_OF_2",
+  "v7SettingsReturnPostError": "REUSED_PASS_2_OF_2",
+  "submissionFocusAndDedupe": "PASS_4_OF_4_COMPOSITE",
+  "payoutsBrowserPosts": 2,
+  "payoutsCanonical503Responses": 2,
+  "refreshIntervalsObserved": 2,
+  "drawerMissingDuringRefresh": 0,
+  "truthfulPostErrorCopy": "PASS_2_OF_2",
+  "postErrorFocusAndTrap": "PASS_2_OF_2",
+  "escapeExactInvokerRestore": "PASS_2_OF_2",
+  "financialMutationOn503": "NONE",
+  "seriousP3aAxeFindings": 0,
+  "criticalP3aAxeFindings": 0,
+  "documentOverflowLanes": 0,
+  "providerMethodsBeyondCapabilityAndAssert": 0,
+  "providerActions": "NONE",
+  "p3aAcceptance": "NOT_SET",
+  "p4Work": "NONE"
+}

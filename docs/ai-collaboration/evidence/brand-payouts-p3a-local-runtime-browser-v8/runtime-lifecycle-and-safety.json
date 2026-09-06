@@ -1,0 +1,59 @@
+{
+  "database": {
+    "ownedContainer": "bp-p3a-v8-pg",
+    "image": "postgres:17-alpine",
+    "listen": "127.0.0.1:55442",
+    "timezone": "UTC",
+    "persistentVolume": false,
+    "migrationCount": 74,
+    "migrationDeploy": "PASS",
+    "migrationFilesCreatedOrChanged": "NONE",
+    "seed": "Owner, Finance Admin, ACTIVE FOUNDERS_BETA INR, 100000 INR vault, credited PROVEN_SOURCE GATEWAY/INR lot"
+  },
+  "backendRuntime": {
+    "listen": "127.0.0.1:53131",
+    "exactBuiltAppModule": true,
+    "root": "PASS_200",
+    "liveness": "PASS_200",
+    "databaseHealth": "PASS_200",
+    "protectedRouteMapping": "PASS_401_UNAUTHENTICATED_AND_PASS_AUTHENTICATED",
+    "controlledShutdown": "PASS"
+  },
+  "frontendPreview": {
+    "listen": "127.0.0.1:53132",
+    "correctionCommit": "7c75a4c8f5a0df3a1fb82d2f707b1c6b03d56d2a",
+    "normalAuthentication": true,
+    "sessionInjection": false,
+    "controlledShutdown": "PASS"
+  },
+  "launcher": {
+    "label": "TEST_ONLY_EPHEMERAL_DI_OVERRIDE_NOT_DEPLOYABLE",
+    "file": "test-only-launcher.cjs",
+    "bytes": 2503,
+    "sha256": "0210c24d3ec090b6e9879980f86854ff873674964f0249bc6c526cff48abc7fb",
+    "overriddenProviders": ["BrandReturnRefundProvider"],
+    "otherOverrides": 0
+  },
+  "provider": {
+    "credentialsPresent": false,
+    "capabilitiesCalls": 4,
+    "assertExecutionAvailableCalls": 2,
+    "createRefundCalls": 0,
+    "fetchRefundCalls": 0,
+    "verifyTrustedFundingEvidenceCalls": 0,
+    "actions": "NONE"
+  },
+  "outboundGuard": {
+    "activeBeforeBootstrap": true,
+    "backendNonLoopbackAttempts": 0,
+    "escapedBrowserNonLoopbackRequests": 0,
+    "providerAttempts": 0
+  },
+  "cleanup": {
+    "ownedListenersRemaining": 0,
+    "ownedDatabaseRemaining": false,
+    "privateSessionsRemaining": 0,
+    "temporaryLauncherRemovedAfterEvidenceCopy": true,
+    "sourceWorktreesClean": true
+  }
+}

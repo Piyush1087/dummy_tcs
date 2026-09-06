@@ -1,0 +1,51 @@
+{
+  "label": "REUSED_IMMUTABLE_P3A_V1_TO_V7_EVIDENCE",
+  "ledgerHead": "7def5369670e106f832382e7a01e46109142252d",
+  "versions": [
+    {
+      "version": "V1",
+      "expected": 124,
+      "indexed": 124,
+      "failures": 0
+    },
+    {
+      "version": "V2",
+      "expected": 51,
+      "indexed": 51,
+      "failures": 0
+    },
+    {
+      "version": "V3",
+      "expected": 12,
+      "indexed": 12,
+      "failures": 0
+    },
+    {
+      "version": "V4",
+      "expected": 24,
+      "indexed": 24,
+      "failures": 0
+    },
+    {
+      "version": "V5",
+      "expected": 124,
+      "indexed": 124,
+      "failures": 0
+    },
+    {
+      "version": "V6",
+      "expected": 38,
+      "indexed": 38,
+      "failures": 0
+    },
+    {
+      "version": "V7",
+      "expected": 21,
+      "indexed": 21,
+      "failures": 0
+    }
+  ],
+  "total": 394,
+  "failureCount": 0,
+  "failures": []
+}

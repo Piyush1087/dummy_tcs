@@ -1,0 +1,92 @@
+{
+  "evidenceVersion": "V8",
+  "result": "PASS",
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendCorrectionCommit": "7c75a4c8f5a0df3a1fb82d2f707b1c6b03d56d2a",
+  "frontendCorrectionTree": "956bae22a91aeaf53733f9e913d500b9750577e2",
+  "executionLedgerStartingHead": "7def5369670e106f832382e7a01e46109142252d",
+  "artifactCount": 16,
+  "indexExcludedFromSelfHash": true,
+  "artifacts": [
+    {
+      "path": "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v8.md",
+      "bytes": 5225,
+      "sha256": "144a6f855abea55d05f08b3ca897f1eaae458df22f06e783b44a44e092654204"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/PAYOUTS-1440-finance-admin-brand-return-v8.png",
+      "bytes": 234604,
+      "sha256": "32875aafdc13d077dc9e9fd20d71c151f1dd418cf4a2cf694d7367f29d09ee0f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/PAYOUTS-390-owner-brand-return-v8.png",
+      "bytes": 134791,
+      "sha256": "a6b675737a488ba734e9c7e05caf7216dd254f2e32f77bf1f35400aac1849b1e"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/acceptance-summary.json",
+      "bytes": 692,
+      "sha256": "5edc5519d9ec8cce41dd5d541209f8db5f151565ff593c52497168755ea3c4ca"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/browser-PAYOUTS.json",
+      "bytes": 5315,
+      "sha256": "eed72546fdc49897dae973bac9e03f21475e37ebb99d510da836ff839adfd6b0"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/financial-after.json",
+      "bytes": 367,
+      "sha256": "d1eae4fae1c5091a65ebc2b14558c2ed43dd616c8057c39ea191d88c1d6f6128"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/financial-before.json",
+      "bytes": 367,
+      "sha256": "d1eae4fae1c5091a65ebc2b14558c2ed43dd616c8057c39ea191d88c1d6f6128"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/frontend-correction.diff",
+      "bytes": 8570,
+      "sha256": "a4bcde7b726dbd6da6f9562cf56970b28163800a00cf904cd9043e7d99e331a7"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/guard.json",
+      "bytes": 21,
+      "sha256": "e734d5d0959ce875042011a852db9034d201588636b6cb6fbde4ed37d41c678a"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/provider.json",
+      "bytes": 184,
+      "sha256": "da159c37e06ba1eb7f39480a077951e94177f89c27648c800eac71ba39908532"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/reuse-integrity.json",
+      "bytes": 888,
+      "sha256": "e7b3cc547f25e9ef7144ef652e1067a13a458815523ba16fd45d57785ec301ad"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/runtime-health.json",
+      "bytes": 514,
+      "sha256": "34e9043c7e07eb4d7bde6ec3f54592137d5b216fe0003c27bbe1d51eb7f1b809"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/runtime-lifecycle-and-safety.json",
+      "bytes": 1855,
+      "sha256": "8f3137aa20ac220baeecf864cde687f8f4887576aed269bd86b283cdc850d38e"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/source-binding-and-correction.json",
+      "bytes": 1273,
+      "sha256": "c04c2c445ceec8af692dfb21fe3d3642624d93decd43bc3464c4db07de56092b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/source-gates.json",
+      "bytes": 1096,
+      "sha256": "ff4cf7bddf53435d91c0f2bc8b5e61a5f27d5e359e53669379ac9fcfef2cf619"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v8/test-only-launcher.cjs",
+      "bytes": 2503,
+      "sha256": "0210c24d3ec090b6e9879980f86854ff873674964f0249bc6c526cff48abc7fb"
+    }
+  ]
+}

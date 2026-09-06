@@ -1,0 +1,16 @@
+{
+  "brandReturnRequests": 0,
+  "brandReturnAllocations": 0,
+  "ledgerEntries": 0,
+  "vault": {
+    "totalPooledBalance": "100000",
+    "availableBalance": "100000",
+    "activeReturnCommitment": "0"
+  },
+  "lot": {
+    "availableAmount": "100000",
+    "returnCommittedAmount": "0",
+    "externallyReturnedAmount": "0",
+    "providerRefundableAmount": "100000"
+  }
+}

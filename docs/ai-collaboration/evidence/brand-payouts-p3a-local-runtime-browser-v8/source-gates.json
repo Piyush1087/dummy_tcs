@@ -1,0 +1,37 @@
+{
+  "targetedRegression": {
+    "command": "npx vitest run --config vitest.config.ts src/features/brand-payouts/brand-payouts-p2.test.ts -t preserves an open Return drawer through a retained-data refresh without enabling new commands",
+    "result": "PASS",
+    "testsPassed": 1,
+    "testsSkipped": 30
+  },
+  "affectedFocusedFile": {
+    "command": "npx vitest run --config vitest.config.ts src/features/brand-payouts/brand-payouts-p2.test.ts",
+    "result": "PASS",
+    "testsPassed": 31,
+    "testsFailed": 0
+  },
+  "changedFileFormatting": {
+    "tool": "Prettier",
+    "files": 2,
+    "result": "PASS"
+  },
+  "changedFileLint": {
+    "tool": "ESLint",
+    "files": 2,
+    "result": "PASS"
+  },
+  "typecheck": {
+    "command": "npm run typecheck",
+    "result": "PASS"
+  },
+  "build": {
+    "environment": "VITE_STAGE=local VITE_API_URL=http://127.0.0.1:53131",
+    "command": "npm run build",
+    "result": "PASS",
+    "javascriptAsset": "dist/assets/index-CRF3IncB.js",
+    "cssAsset": "dist/assets/index-DdjQArWM.css"
+  },
+  "fullRepositorySuiteRun": false,
+  "unrelatedFilesChanged": 0
+}
