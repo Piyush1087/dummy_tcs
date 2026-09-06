@@ -1340,3 +1340,31 @@ NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 Architectural eligibility does not authorize P6. This assignment is docs-only; P6 and P7 remain not started. No source, package, schema, migration, test implementation, AWS, or provider change is authorized.
 
 Systems Architect acceptance SHA = 494679e72daa257f3b76a105094fe02cac1c3f04
+
+## 16. P6 authority reconciliation before backend correction
+
+Authorization: `C03_P6_ELIGIBLE_ONLY_INVITATION_AUTHORITY_RECONCILIATION_AND_BACKEND_CORRECTION_V1`. SA accepted the V1 stop as correct and resolved the conflict as latent backend Product-contract drift.
+
+```text
+P6_V1 = BLOCKED_BEFORE_EXECUTION
+RESULT = BLOCKED
+POLICY_MATRIX_TOTAL = 13271040
+POLICY_MATRIX_EVALUATED = 0
+RUNTIME_GATES = NOT EXECUTED
+CANDIDATE_MUTATION = NONE
+COMMITS = NONE
+PUSHES = NONE
+P7_STARTED = NO
+BLOCKER_CLASS = LATENT_BACKEND_PRODUCT_CONTRACT_DRIFT
+MATRIX_HARNESS_DEFECT = NO
+P6_HARNESS_CORRECTION_COUNT = 0
+P6_TRACKED_CORRECTION_COUNT = 0
+BACKEND_CORRECTION_REQUIRED = YES
+FRONTEND_CORRECTION_REQUIRED = NOT_ESTABLISHED
+P7 = NOT STARTED
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+The zero-mutation/commit/push values describe the preserved V1 run. [Preserved P6 V1 report](../../ai-collaboration/c03-p6-joint-acceptance-report-v1.md); external `C03_P6_JOINT_ACCEPTANCE_EVIDENCE.zip` SHA-256 `c2a3c310c430e921c4fa03658f7c44b11dd597c16c484bd8aed0a0cbb815f4c7`. The ZIP is not committed.
+
+P6 remains open. This assignment authorizes P6_TRACKED_BACKEND_CORRECTION_1 from `3712f56930a8785b5cb61a9ed31fb43b240cb421`, after publication of this reconciliation. Full matrix/runtime resume is not authorized until SA accepts the correction. Frontend remains `82ed3c9ef849be8353565a1901b6f5fb065c37e1`. Product and architecture are unchanged; only the derived contract is reconciled. P5 acceptance history remains intact.

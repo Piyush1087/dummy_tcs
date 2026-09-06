@@ -76,7 +76,7 @@ a valid deliverable graph are required for selection.
 | Product visibility | Persisted policy value | Entitlement after current Creator context and usable Instagram |
 |---|---|---|
 | `PUBLIC` | `EVERYONE` | Entitled |
-| `ELIGIBLE_CREATORS_ONLY` | `ELIGIBLE_ONLY` | Backend `ELIGIBLE` or valid invitation |
+| `ELIGIBLE_CREATORS_ONLY` | `ELIGIBLE_ONLY` | Authoritative backend `ELIGIBLE` |
 | `INVITE_ONLY` | `INVITED_ONLY` | Valid matching invitation |
 
 Missing/conflicting visibility fails closed. Eligibility is exactly
@@ -540,3 +540,20 @@ NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 P6 requires later SA authorization. P5 correction count is 1, remaining budget 1, historical accounting only with no post-acceptance mutation authority.
 
 Systems Architect acceptance SHA = 494679e72daa257f3b76a105094fe02cac1c3f04
+
+## P6_AUTHORITY_RECONCILIATION
+
+Authorization: `C03_P6_ELIGIBLE_ONLY_INVITATION_AUTHORITY_RECONCILIATION_AND_BACKEND_CORRECTION_V1`. The former derived entitlement text (Backend ELIGIBLE or valid invitation) was DERIVED_CONTRACT_DRIFT. Historical backend `3712f56930a8785b5cb61a9ed31fb43b240cb421` implemented that incorrect derived text; P6 identified a LATENT_RUNTIME_PRODUCT_CONTRACT_DEFECT. P5 acceptance remains historical evidence and is not rewritten. That SHA is not an acceptable final P6 backend until corrected.
+
+```text
+P6_V1_DISCOVERY = ELIGIBLE_ONLY_INVITATION_BYPASS_DRIFT
+FROZEN_PRODUCT_RULE = ELIGIBLE_ONLY_REQUIRES_BACKEND_ELIGIBLE
+INVITE_ONLY_RULE = VALID_MATCHING_INVITATION
+PRODUCT_CHANGE = NONE
+ARCHITECTURE_CHANGE = NONE
+PREVIOUS_DERIVED_CONTRACT_TEXT = SUPERSEDED_BY_AUTHORITY_RECONCILIATION
+```
+
+For PUBLIC, invitation may provide ingress/attribution context but is not needed for entitlement. For ELIGIBLE_CREATORS_ONLY, invitation may provide ingress/attribution/continuation context but MUST NOT substitute for authoritative backend ELIGIBLE. For INVITE_ONLY, valid matching invitation supplies visibility entitlement and bypasses ordinary targeting eligibility only. All classes preserve current Creator/Team and usable Instagram gates.
+
+INVITATION_IS_NOT_ELIGIBLE_ONLY_ENTITLEMENT. Invitation records and continuation are not prohibited for ELIGIBLE_ONLY. Product and architecture semantics and the P6 matrix expectation remain unchanged. Full P6 resume requires SA acceptance of the separately authorized backend correction.
