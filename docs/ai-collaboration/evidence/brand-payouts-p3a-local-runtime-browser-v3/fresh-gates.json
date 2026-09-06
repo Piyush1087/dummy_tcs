@@ -1,0 +1,35 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+    "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+    "authoritySha": "3f6a27960326f6c0ed82fa7bed380d8fbfd1f528"
+  },
+  "classification": "FRESH_V3_SOURCE_GATES",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "focused": {
+    "passed": 63,
+    "files": 4
+  },
+  "full": {
+    "passed": 886,
+    "files": 113
+  },
+  "lint": {
+    "exitCode": 0,
+    "errors": 0,
+    "warnings": 1,
+    "note": "CSS ignored by repository ESLint configuration; three TypeScript/TSX files linted. Prettier checks all four changed files."
+  },
+  "format": "PASS",
+  "typecheck": "PASS",
+  "productionBuild": {
+    "result": "PASS",
+    "stage": "local",
+    "apiOrigin": "http://127.0.0.1:3107",
+    "warning": "Existing large-chunk warning"
+  },
+  "sourceDiffCheck": "PASS"
+}

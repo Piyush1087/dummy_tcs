@@ -1,0 +1,24 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+    "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+    "authoritySha": "3f6a27960326f6c0ed82fa7bed380d8fbfd1f528"
+  },
+  "classification": "AUTHORITY_CONFLICT_NOT_SOURCE_DEFECT",
+  "signature": "P3A_V3_MIGRATION_AUTHORIZATION_CONFLICT",
+  "directInstruction": "Do not ... create or apply migrations",
+  "runnerSection0": "Do not ... create/apply a migration",
+  "runnerSection5": "Use a fresh loopback-only PostgreSQL database with UTC sessions and apply all and only committed migrations.",
+  "clarificationRequested": true,
+  "clarificationReceived": false,
+  "dependentWork": "NOT_EXECUTED",
+  "sourceCorrectionRequired": false,
+  "safeRetry": "Explicitly authorize only committed migrations in a disposable loopback database, or supply an authorized equivalent immutable disposable database clone.",
+  "runtime": "NOT_STARTED",
+  "browserMatrix": "NOT_RUN",
+  "compositeGate": "NOT_ESTABLISHED",
+  "p3aAcceptance": "NOT_SET",
+  "p4Work": "NONE"
+}

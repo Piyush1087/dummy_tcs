@@ -1,0 +1,73 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+    "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+    "authoritySha": "3f6a27960326f6c0ed82fa7bed380d8fbfd1f528"
+  },
+  "classification": "V3_BOUNDED_BLOCKER_EVIDENCE",
+  "result": "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER",
+  "artifacts": [
+    {
+      "path": "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v3.md",
+      "sha256": "0c9d99bd4cf00f19c9200d8a71fc984794f88487adf9d94ece3d7e709ab7ccb8",
+      "bytes": 2160
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/blocker.json",
+      "sha256": "2c4fa8f6438c756905dae900bd9c12b9a7e0122076c6a967cf1e479fd87cbfdc",
+      "bytes": 1175
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/build.log",
+      "sha256": "7823d07ebc1a302751b9de685951cd187ca903f1f8ab04befc5ef68d8e2836c5",
+      "bytes": 673
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/cleanup.json",
+      "sha256": "8795829c4185f63014f4c0f559ea3a8752653b92fd77b74c6f867a4cc7d6ab7c",
+      "bytes": 704
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/focused.log",
+      "sha256": "a7fdefc6c052a62a89ab150eef5c15efdde08c133ddf71c11e3f74eb3b734d9f",
+      "bytes": 2858
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+      "bytes": 66
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/fresh-gates.json",
+      "sha256": "82b4ab1090a4c899b01000ee5a496ccc235b055d1866e94fd2b630c9b783217c",
+      "bytes": 978
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/full.log",
+      "sha256": "d29f03242b709b73af01b1917c8fa844a45f08f8272687537a73c507a31e86a3",
+      "bytes": 56835
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/lint.log",
+      "sha256": "70eb743079a5f9ec12de97201e964e53ee87147f669fbf8ae5c3aef68631df6a",
+      "bytes": 178
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/reuse-integrity.json",
+      "sha256": "1ed4753e1bbeaea3712bc4803a7287d2afd27a24158b299acbcbf60ee21937cf",
+      "bytes": 1086
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/source-binding.json",
+      "sha256": "9e16aa5f76196b3851c252428c6a5c530e2309abe97c29725358e153b0e4511f",
+      "bytes": 28659
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/typecheck.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ]
+}

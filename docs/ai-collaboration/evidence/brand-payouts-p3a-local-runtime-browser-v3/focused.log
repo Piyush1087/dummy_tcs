@@ -1,0 +1,28 @@
+
+ RUN  v2.1.9 [WORKSPACE]/frontend
+
+stderr | src/features/brand-payouts/brand-payouts-p2.test.ts > route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/brand-payouts/brand-payouts-p2.test.ts (28 tests) 5044ms
+   ✓ truthful first-slice rendering > distinguishes movement from lifecycle and preserves legacy due uncertainty 321ms
+   ✓ truthful first-slice rendering > shows a version-bound Settings deep link only for a complete current snapshot 557ms
+   ✓ stable financial detail navigation > preserves expanded activity and obligation pages across both detail return paths 2280ms
+ ✓ src/features/brand-escrow/components/treasury-settings.test.ts (17 tests) 4380ms
+   ✓ FE-D Treasury role matrix > allows BRAND_OWNER to add funds and request Brand Return 652ms
+   ✓ FE-D top-up fail-closed handoff > enforces the INR minimum and never credits on checkout success 405ms
+   ✓ FE-D top-up fail-closed handoff > treats provider handoff failure as a possibly pending load 451ms
+   ✓ FE-D Brand Return > renders backend-authoritative USD without an INR fallback 755ms
+   ✓ FE-D Brand Return > blocks an amount above the backend-confirmed returnable balance 347ms
+stderr | src/pages/brand/settings/brand-settings-routing.test.ts > FE-E Brand Settings routing and composition > redirects the Settings root deterministically to General
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/brand/settings/brand-settings-routing.test.ts (9 tests) 657ms
+ ✓ src/features/brand-escrow/api/brand-escrow-client.test.ts (9 tests) 70ms
+
+ Test Files  4 passed (4)
+      Tests  63 passed (63)
+   Start at  13:23:42
+   Duration  51.67s (transform 2.53s, setup 0ms, collect 15.24s, tests 10.15s, environment 22.73s, prepare 1.45s)

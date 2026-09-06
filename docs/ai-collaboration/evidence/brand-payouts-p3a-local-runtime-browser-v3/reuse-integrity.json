@@ -1,0 +1,30 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+    "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+    "authoritySha": "3f6a27960326f6c0ed82fa7bed380d8fbfd1f528"
+  },
+  "classification": "VERIFIED_IMMUTABLE_V1_V2_EVIDENCE",
+  "verificationMethod": "Read each committed blob by Git object ID; compare SHA-256 and exact byte length with committed index. No newline normalization.",
+  "results": [
+    {
+      "version": 1,
+      "commit": "85aba6c74d0d4e9499314c95321e7890336c617e",
+      "tree": "fc57d68fac98bb0ac001bcd52f3f9fe41dbe716f",
+      "artifacts": 124,
+      "failures": []
+    },
+    {
+      "version": 2,
+      "commit": "db15bde0b8c7544b4cc9a314a235045868896d1f",
+      "tree": "8251f7f93a17235ceb4c6697ad62a0df5d296934",
+      "artifacts": 51,
+      "failures": []
+    }
+  ],
+  "sourceBindingVerified": true,
+  "evidenceOnlyCommitFileSetsVerified": true,
+  "providerActionDeclarations": "NONE"
+}

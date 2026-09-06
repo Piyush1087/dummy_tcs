@@ -1,0 +1,21 @@
+{
+  "sourceBinding": {
+    "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+    "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+    "authoritySha": "3f6a27960326f6c0ed82fa7bed380d8fbfd1f528"
+  },
+  "classification": "NO_RUNTIME_RESOURCES_CREATED",
+  "backendProcessesStarted": 0,
+  "previewProcessesStarted": 0,
+  "browserProcessesStarted": 0,
+  "containersCreated": 0,
+  "volumesCreated": 0,
+  "databasesCreated": 0,
+  "migrationsApplied": 0,
+  "migrationsCreated": 0,
+  "providerActions": 0,
+  "sessionSecretsCreated": 0,
+  "sourceWorktreesClean": true
+}
