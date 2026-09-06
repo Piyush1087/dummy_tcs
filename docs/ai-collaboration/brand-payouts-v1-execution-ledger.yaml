@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "WAVE_B_PREFLIGHT_AND_P4_BASE_AUTHORIZED_AWAITING_EXTERNAL_RUNNER"
+status: "P4_BASE_ACCEPTED_M1_V1_NOT_APPROVED_CONSOLIDATED_CORRECTION_REQUIRED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -11,6 +11,10 @@ wave_b_deep_plan_sha: "bec420628c57d609f6ca1443f0f1ffe74cfe5d4d"
 wave_b_deep_plan_parent_disposition: "ACCEPTED"
 wave_b_readiness_activation_artifact: "BRAND_PAYOUTS_WAVE_B_CONSOLIDATED_READINESS_AND_EXECUTION_ACTIVATION_V1"
 wave_b_runner_assignment_sha: "fc0a40d834cc9a627b5ed1952a2524d7853259af"
+wave_b_preflight_p4_evidence_sha: "1cc20581ee862f3fe47df53db8811da0ecbc1187"
+m1_v1_sql_sha256: "683e5266c3e1913e39f151f70d8bd449f0816b5926913220156f97ddda6ec805"
+m1_v1_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V2"
+m1_consolidated_correction_assignment_sha: "7a10da78565f7bed85abb348d33dc85220172a19"
 accessibility_recovery_authority_sha: "3e1120dcf361b3046c97b6ad0cc5c08e6ec2e71e"
 activity_detail_identifier_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
 pagination_restoration_correction_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
@@ -34,7 +38,8 @@ c03_required_post_p1_4_sha: "aebeb85fd6bba37f88c3805c213c61e7f63b2f5f"
 c03_post_p1_4_handoff_authority_sha: "df32e63e4ca44de57b40be59167c300ecb886ddd"
 c03_current_accepted_frontend_sha: "66d6a9bc992afcdfb900d7837defd867670bf640"
 c03_required_frontend_integration_sha: null
-p4_canonical_backend_convergence_sha: null
+p4_canonical_backend_convergence_sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
+p4_canonical_backend_convergence_tree: "6c01d65e5a32eecfcd7e42715923ea8478d071fb"
 c05_dependency_sha: "156d5834266077be7e2b6a2d459bae5489edbbd6"
 c05_frontend_dependency_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
 campaign_bp_g05_status: "SATISFIED"
@@ -58,11 +63,11 @@ model_routing: "SOL_HIGH_FINANCIAL_CONVERGENCE_SOL_MEDIUM_READINESS_AND_IMPLEMEN
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: "BP_G10_EXACT_M1_APPROVAL_AFTER_BP_P4_BASE_CONVERGENCE"
 
-phase: "WAVE_B_PREFLIGHT_AND_P4_BASE_EXTERNAL_RUNNER_RELAY"
+phase: "BP_G10_M1_V1_REVIEW_COMPLETE_CORRECTION_REQUIRED"
 branch: "brand-payouts/v1-execution-ledger"
-checkpoint_sha: "67224e5f59175d7300af8984bc2bf8ec1da1d6cb"
-checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
-next_phase: "WAVE_B_CONSOLIDATED_PREFLIGHT_THEN_P4_BASE_CONVERGENCE"
+checkpoint_sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
+checkpoint_name: "BP-P4-BASE-CONVERGENCE"
+next_phase: "BP_G10_M1_V2_EXACT_PROPOSAL_REVIEW"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -70,7 +75,7 @@ dependency_gates:
   c04_architecture: "READY_WITH_RECONCILIATION"
   c03_post_p1_4_backend_handoff: "SATISFIED"
   c04_backend_settlement_handoff: "SATISFIED"
-  c04_backend_convergence_tree: "OPEN_TECHNICAL_GATE_P4_BASE"
+  c04_backend_convergence_tree: "SATISFIED_ACCEPTED_5DC9EEF4"
   c04_financial_recovery_instruction: "SATISFIED"
   c04_frontend: "OPEN_NON_SERIALIZING"
   c05_readiness: "READY_WITH_RECONCILIATION"
@@ -105,9 +110,12 @@ migrations:
     new_or_changed_migration_files_allowed: false
     shared_or_persistent_database_allowed: false
   m1_financial_contract:
-    status: "PROPOSAL_NOT_AUTHORIZED"
+    status: "V1_NOT_APPROVED_V2_CORRECTION_REQUIRED"
     applied: false
     sha: null
+    v1_evidence_sha: "1cc20581ee862f3fe47df53db8811da0ecbc1187"
+    v1_sql_sha256: "683e5266c3e1913e39f151f70d8bd449f0816b5926913220156f97ddda6ec805"
+    correction_assignment_sha: "7a10da78565f7bed85abb348d33dc85220172a19"
   m2_payment_support_case:
     status: "PROPOSAL_NOT_AUTHORIZED"
     applied: false
@@ -1328,10 +1336,10 @@ files_changed:
   provider_evidence: []
 
 uncheckpointed_work:
-  phase: "BP_G10_M1_HUMAN_GATE"
-  status: "M1_HUMAN_APPROVAL_REQUIRED"
+  phase: "BP_G10_M1_V2_PROPOSAL"
+  status: "AWAITING_EXTERNAL_LOCAL_CODEX_CONSOLIDATED_CORRECTION"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-07T03:00:00.000Z"
+last_updated: "2026-09-07T01:20:00.000Z"
