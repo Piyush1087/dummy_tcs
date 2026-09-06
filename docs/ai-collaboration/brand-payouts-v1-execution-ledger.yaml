@@ -1349,9 +1349,12 @@ files_changed:
 
 uncheckpointed_work:
   phase: "BP_G10_M1_V3_PROPOSAL"
-  status: "AWAITING_EXTERNAL_LOCAL_CODEX_RESIDUAL_SAFETY_CORRECTION"
+  status: "PENDING_HUMAN_BP_G10_APPROVAL"
+  evidence: "docs/ai-collaboration/brand-payouts-bp-g10-m1-v3-review.md"
+  v2_disposition: "NOT_APPROVED_SUPERSEDED"
+  p4_base_status: "ACCEPTED_UNCHANGED"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-07T02:20:00.000Z"
+last_updated: "2026-09-07T04:00:00.000Z"

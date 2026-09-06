@@ -1,0 +1,12 @@
+{
+  "schema": "brand-payouts.m1.v3.sha256-manifest/1",
+  "algorithm": "SHA-256",
+  "files": {
+    "NOT_APPROVED_NOT_APPLIED-brand-payouts-m1-v3.sql": "a553261e8935ea80ca26653e08d410965eaf05f95c961677df2a04cea9e9175d",
+    "NOT_APPROVED_NOT_APPLIED-prisma-schema-m1-v3.patch": "c2ab25b9fe8e6cd1469c8cbdd80cc9cb9c3cb994ebdd04bbefdce6032ee65766",
+    "crosswalk.json": "feae760aff22233be71980825018963312b08be8665389bec4d3c940718559a0",
+    "status-disposition-matrix.json": "58bec1849b3ebe5535a290fe5815f99acef8f3690b3ca13724186b711b207321"
+  },
+  "v2SqlSha256": "a52c3c4eac416b4404196299f1790fe3c3215606789caf51da5744b30d32e8a4",
+  "providerActions": []
+}

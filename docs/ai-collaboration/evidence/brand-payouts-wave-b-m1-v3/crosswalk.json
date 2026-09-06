@@ -1,0 +1,22 @@
+{
+  "schema": "brand-payouts.m1.v3.crosswalk/1",
+  "base": {"sha":"5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1","tree":"6c01d65e5a32eecfcd7e42715923ea8478d071fb","migrationCount":84},
+  "prismaSqlParity": [
+    {"area":"reserve requester observation","prisma":"FinancialReserveApproval.requesterObservedAt","sql":"requester_observed_at"},
+    {"area":"C05 readiness","prisma":"RouteTransferAttempt readiness/profile/destination snapshot fields","sql":"readiness_checked_at plus six non-secret snapshot columns"},
+    {"area":"terminal evidence","prisma":"RouteTransferAttempt.finalReasonCode","sql":"final_reason_code"},
+    {"area":"worker terminal lookup","prisma":"bp_m1_transfer_terminal_idx","sql":"bp_m1_transfer_terminal_idx"}
+  ],
+  "sqlOnlyInvariants": [
+    "explicit reserve status/evidence tuples and transition graph",
+    "requester observation and current approver RBAC validation",
+    "C04 normal Creator-entitlement tenant/subject/agreement and exact Kolkata NET due binding",
+    "new legacy obligation and transfer insert rejection",
+    "C05 current profile/destination/mapping/economics readiness binding",
+    "null-safe transfer milestones and terminal evidence",
+    "receipt event/entity/disposition compatibility",
+    "delete prohibition, immutable provenance, set-once evidence and terminal rows"
+  ],
+  "legacy": {"backfill":false,"existingRowsRetained":true,"newLegacyInsertsRejected":true},
+  "providerActions": []
+}

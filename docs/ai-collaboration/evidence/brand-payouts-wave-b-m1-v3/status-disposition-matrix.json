@@ -1,0 +1,18 @@
+{
+  "schema": "brand-payouts.m1.v3.status-matrix/1",
+  "reserveApproval": {
+    "APPROVED_AWAITING_EXECUTION": {"started":false,"completed":false,"failed":false,"failureCode":false,"escrowLock":false,"ledger":false},
+    "EXECUTING": {"started":true,"completed":false,"failed":false,"failureCode":false,"escrowLock":false,"ledger":false},
+    "AWAITING_FUNDS": {"started":true,"completed":false,"failed":true,"failureCode":true,"escrowLock":false,"ledger":false},
+    "ACTION_REQUIRED": {"started":true,"completed":false,"failed":true,"failureCode":true,"escrowLock":false,"ledger":false},
+    "COMPLETED": {"started":true,"completed":true,"failed":false,"failureCode":false,"escrowLock":true,"ledger":true,"immutable":true},
+    "SUPERSEDED": {"started":false,"completed":false,"failed":false,"failureCode":false,"escrowLock":false,"ledger":false,"immutable":true}
+  },
+  "transfer": {
+    "IN_FLIGHT": {"started":true,"final":false,"reasonCode":false},
+    "SUCCEEDED": {"started":true,"providerRequestCompleted":true,"failure":false,"reasonCode":false,"final":true},
+    "RETRYABLE_FAILURE": {"started":true,"failure":true,"reasonCode":true,"final":true},
+    "TERMINAL_FAILURE": {"started":true,"failure":true,"reasonCode":true,"final":true},
+    "AMBIGUOUS_RECONCILIATION_REQUIRED": {"started":true,"providerRequestCompleted":true,"failure":true,"reasonCode":true,"final":true}
+  }
+}
