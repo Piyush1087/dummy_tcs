@@ -1,0 +1,17 @@
+{
+  "database": "fresh owned disposable loopback PostgreSQL container",
+  "postgresVersion": "17.11",
+  "timezone": "UTC",
+  "migrationSourceChanges": "NONE",
+  "disposableReplay": "YES_74",
+  "persistentMutation": "NONE",
+  "migrationRows": 74,
+  "migrationSourceFiles": 74,
+  "migrationChecksumMismatches": 0,
+  "orderedSourceChecksumListSha256": "772f19f4319add8ad8e14e31b628333dc812451f3405117776e36a5fc4e540e7",
+  "root": { "status": 200, "body": { "name": "TheCreatorShop API", "status": "ready" } },
+  "liveness": { "status": 200, "body": { "status": "ok" } },
+  "databaseHealth": { "status": 200, "database": "up" },
+  "compiledAppModule": "PASS",
+  "controlledShutdown": "PASS"
+}

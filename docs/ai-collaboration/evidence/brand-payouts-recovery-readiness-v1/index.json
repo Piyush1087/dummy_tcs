@@ -1,0 +1,22 @@
+{
+  "evidenceVersion": "BRAND_PAYOUTS_RECOVERY_EXECUTION_ENVIRONMENT_READINESS_V1",
+  "charterSha": "23a074b01dbca141ddc997113a6ecbbc14e19f82",
+  "startingLedgerSha": "1bd5b3c97f222312e2d3ba8650d88e3670b1b98d",
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "result": "READY_FOR_REPLACEMENT_SA_INITIATION",
+  "artifactCount": 10,
+  "indexExcludedFromSelfHash": true,
+  "artifacts": [
+    { "path": "docs/ai-collaboration/brand-payouts-recovery-execution-environment-readiness-v1.md", "bytes": 7917, "sha256": "f1d0d3698067400a5d39199e926151df9a60c125aad8fce7fc4c5862665d52a5" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/source-binding.json", "bytes": 714, "sha256": "0a5a575198aafe4941c4f2539aa9868a3babfe9139f5474810415cdd07d54c36" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/tooling-builds.json", "bytes": 641, "sha256": "2f4780087c9e02e94a188d68d515eb572490621ce7c0b3752d54e42db400ec8d" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/postgres-runtime.json", "bytes": 689, "sha256": "4c64ae37686b92a9e4f751eb6749b2fe9ce295011235134fb19a0b0cd1eaa65b" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/actor-modes.json", "bytes": 806, "sha256": "0e3a2f2cdfe43be69e25138e3eff8fe957a2cc4c3c1f0d2aff67085268ddad07" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/browser-accessibility.json", "bytes": 1148, "sha256": "6bd3f1bab08cfe20877a3b4a96fa133c680a6e065465d8a51d7ced4cacd29f52" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/test-boundary-isolation.json", "bytes": 1045, "sha256": "ee5a0ae0149edf862925c80072d67c676f2e560b68e2dc71865d7449b8aea0f8" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/outbound-provider-guard.json", "bytes": 485, "sha256": "930e3378d85c27f14043193559bf3b1c83cf6f0fd081fac35433df3a5b2dec4c" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/cleanup.json", "bytes": 486, "sha256": "91924e1f8168d621a79fed39b0231ebd5e49ac932bffe8a73055b0b00633dcf5" },
+    { "path": "docs/ai-collaboration/evidence/brand-payouts-recovery-readiness-v1/browser-390.png", "bytes": 3750, "sha256": "ab25e0959bed6dc0cf459e8c803bd7378b06adaec63c466549c1d227585ca028" }
+  ]
+}

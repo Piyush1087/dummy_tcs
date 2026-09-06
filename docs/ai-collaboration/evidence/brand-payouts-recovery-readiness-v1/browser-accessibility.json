@@ -1,0 +1,15 @@
+{
+  "builtPreview": "PASS_HTTP_200_LOOPBACK",
+  "browser": "Playwright Chromium 149.0.7827.55",
+  "viewports": [390, 767, 768, 1440],
+  "exactViewportControl": "PASS_4_OF_4",
+  "artifacts": ["browser-390.png"],
+  "domCapture": { "captured": true, "bytes": 581261, "sha256": "2071972e0a33af7179ffc07c446bc64edad551d66963291342729791d087a305", "rawRetained": false, "reason": "compact evidence policy" },
+  "consoleCapture": "PASS_ZERO_MESSAGES",
+  "networkCapture": "PASS",
+  "applicationAxe": { "serious": 0, "critical": 0, "knownModerate": ["landmark-one-main", "page-has-heading-one"] },
+  "axeHarnessDetectionProbe": { "serious": 1, "critical": 2, "purpose": "prove serious/critical reporting capability on an isolated synthetic DOM" },
+  "keyboard": { "Enter": "PASS", "Tab": "PASS", "Shift+Tab": "PASS", "Escape": "PASS", "activeElementRead": "PASS", "invokerRestoration": "PASS" },
+  "finalGuardedProbe": { "blockedPublicFontRequests": 24, "escapedNonLoopbackRequests": 0 },
+  "correction": { "discardedPreparationProbePublicFontResponses": 28, "remediation": "install browser route guard before navigation and repeat only browser probe" }
+}

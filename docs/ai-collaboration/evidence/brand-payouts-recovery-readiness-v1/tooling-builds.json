@@ -1,0 +1,19 @@
+{
+  "platform": "Windows",
+  "git": "2.55.0.windows.3",
+  "node": "24.19.0",
+  "npm": "11.17.0",
+  "dockerClient": "29.7.2",
+  "dockerServer": "29.7.2",
+  "playwright": "1.61.1",
+  "chromium": "149.0.7827.55",
+  "backendInstall": "PASS_NPM_CI",
+  "backendInitialBuild": "FAILED_EMPTY_PRISMA_CLIENT_AFTER_SUPPRESSED_LIFECYCLE",
+  "environmentRepair": "npm run prisma:generate",
+  "backendRepeatedBuild": "PASS",
+  "frontendInstall": "PASS_NPM_CI",
+  "frontendProductionLocalPreviewBuild": "PASS",
+  "frontendBuildWarning": "chunk larger than 500 kB",
+  "isolatedWorktreeCreateRemove": "PASS",
+  "applicationSourceOrManifestChanges": "NONE"
+}

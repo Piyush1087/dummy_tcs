@@ -1,0 +1,9 @@
+{
+  "charterSha": "23a074b01dbca141ddc997113a6ecbbc14e19f82",
+  "startingLedgerSha": "1bd5b3c97f222312e2d3ba8650d88e3670b1b98d",
+  "ledgerBranch": "brand-payouts/v1-execution-ledger",
+  "charterAncestor": true,
+  "backend": { "repository": "Piyush1087/creator-commerce-backend-v2-clone", "branch": "brand-payouts/v1-backend", "sha": "12d235345e2748f676d36d61c62ed4bd9c049592", "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24", "clean": true },
+  "frontend": { "repository": "Piyush1087/creator-commerce-frontend-v2-clone", "branch": "brand-payouts/v1-frontend", "sha": "f775d33f729e02c020ced5b0a7ffcc662110db9e", "tree": "30001818c07b231529935dedf12ca059be6bd6dc", "clean": true },
+  "branchDivergence": false
+}

@@ -1,0 +1,13 @@
+{
+  "ownedProcesses": "REMOVED",
+  "ports": { "53031": "FREE", "53032": "FREE", "53033": "FREE", "55439": "FREE" },
+  "postgresContainerAndStorage": "REMOVED",
+  "temporaryWorktree": "REMOVED",
+  "temporaryLauncher": "REMOVED",
+  "browserProfiles": "REMOVED_ON_BROWSER_CLOSE",
+  "generatedCredentialsAndSessions": "DESTROYED_WITH_DISPOSABLE_DATABASE",
+  "temporaryScriptsAndFiles": "REMOVED",
+  "backendSourceCleanAtPin": true,
+  "frontendSourceCleanAtPin": true,
+  "cleanup": "PASS"
+}

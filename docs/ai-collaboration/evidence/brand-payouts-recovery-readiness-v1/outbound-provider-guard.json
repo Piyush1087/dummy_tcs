@@ -1,0 +1,13 @@
+{
+  "guardInstalledBeforeBackendBootstrap": true,
+  "providerVariablesRemoved": true,
+  "razorpayCredentialsRead": false,
+  "backendPayoutsNonLoopbackAttempts": 0,
+  "backendSettingsNonLoopbackAttempts": 0,
+  "testBoundaryNonLoopbackAttempts": 0,
+  "acceptedBrowserProbeEscapedNonLoopbackRequests": 0,
+  "acceptedBrowserProbeBlockedPublicFontRequests": 24,
+  "providerMethodInvocationsBeyondCapabilityAndAssert": 0,
+  "providerSdkOrClientInvocations": 0,
+  "providerActions": "NONE"
+}

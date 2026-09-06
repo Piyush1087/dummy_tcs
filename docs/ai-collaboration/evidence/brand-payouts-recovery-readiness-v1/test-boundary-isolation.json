@@ -1,0 +1,16 @@
+{
+  "label": "TEST_ONLY_EPHEMERAL_DI_OVERRIDE_NOT_DEPLOYABLE",
+  "launcherLocation": "outside all repository worktrees",
+  "launcherSha256": "2816a0db491e9eb3365c9b40b28549565856788bc5d3c0161b4bee5b372d2b03",
+  "launcherBytes": 2749,
+  "importedProvenance": "exact built AppModule at backend SHA 12d235345e2748f676d36d61c62ed4bd9c049592",
+  "onlyOverride": "BrandReturnRefundProvider",
+  "capabilities": [{ "sourceType": "GATEWAY", "currency": "INR" }],
+  "positiveSummary": { "available_balance": 1000, "proven_source_available_balance": 1000, "self_service_returnable_balance": 1000, "currency": "INR" },
+  "assertExecutionAvailable": { "calls": 1, "error": "BrandReturnProviderSetupRequiredError", "code": "PROVIDER_SETUP_REQUIRED", "status": 503 },
+  "methodCounts": { "capabilities": 2, "assertExecutionAvailable": 1, "createRefund": 0, "fetchRefund": 0, "verifyTrustedFundingEvidence": 0 },
+  "returnSubmissionLaneExecuted": false,
+  "launcherDeleted": true,
+  "presentInDeployableSourceOrConfig": false,
+  "productionSelectable": false
+}

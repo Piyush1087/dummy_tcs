@@ -1,0 +1,15 @@
+{
+  "normalAuthentication": "PASSWORD_LOGIN_PLUS_AUTH_ME",
+  "actors": [
+    { "actor": "Owner", "role": "BRAND_OWNER", "login": "PASS", "brandBinding": true },
+    { "actor": "Finance Admin", "role": "FINANCE_ADMIN", "login": "PASS", "brandBinding": true },
+    { "actor": "Campaign Manager", "role": "CAMPAIGN_MANAGER", "login": "PASS", "brandBinding": true },
+    { "actor": "cross-Brand Owner", "role": "BRAND_OWNER", "login": "PASS", "separateBrandBinding": true }
+  ],
+  "unauthorizedProbeStatus": 401,
+  "modes": [
+    { "mode": "PAYOUTS", "fullCompiledAppModule": "PASS", "singleActiveSurfaceConfiguration": true, "health": "PASS" },
+    { "mode": "SETTINGS", "fullCompiledAppModule": "PASS", "singleActiveSurfaceConfiguration": true, "health": "PASS" }
+  ],
+  "financialCommandSubmitted": false
+}
