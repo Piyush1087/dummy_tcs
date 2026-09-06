@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P3A_FOCUS_RETURN_CORRECTION_PENDING_V5_LOCAL_RUNTIME_EVIDENCE"
+status: "P3A_SUBMISSION_FOCUS_CORRECTION_PENDING_V6_FOCUSED_RUNTIME_EVIDENCE"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -35,14 +35,17 @@ authorization_artifact: "BRAND_PAYOUTS_P2_RECOVERY_AND_AUTONOMOUS_SA_CHECKPOINT_
 authorization_amendment_artifact: "BRAND_PAYOUTS_P2_CONTRAST_CORRECTION_AND_SA_AUTONOMY_AMENDMENT_V1"
 authorization_activity_detail_amendment_artifact: "BRAND_PAYOUTS_P2_ACTIVITY_DETAIL_IDENTIFIER_CORRECTION_AND_SA_TECHNICAL_AUTONOMY_AMENDMENT_V1"
 authorization_mvp_cutline_artifact: "BRAND_PAYOUTS_MVP_DELIVERY_CUTLINE_AND_POST_P2_EXECUTION_AUTHORITY_V1"
+execution_topology_artifact: "BRAND_PAYOUTS_DISCIPLINE_BATCHED_EXECUTION_TOPOLOGY_AMENDMENT_V1"
+execution_topology: "DISCIPLINE_BATCHED_WAVES"
+model_routing: "BOUNDARY_BASED_LUNA_MECHANICAL_TERRA_IMPLEMENTATION_SOL_FINANCIAL_REVIEW"
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: null
 
-phase: "P3A_FOCUS_RETURN_CORRECTION_SOURCE_GATES_PASS_PENDING_V5_RUNTIME_EVIDENCE"
+phase: "P3A_SUBMISSION_FOCUS_CORRECTION_SOURCE_GATES_PASS_PENDING_V6_FOCUSED_RUNTIME_EVIDENCE"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: null
 checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
-next_phase: "P3A_V5_LOCAL_RUNTIME_BROWSER_EVIDENCE"
+next_phase: "P3A_V6_FOCUSED_LOCAL_RUNTIME_BROWSER_EVIDENCE"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -305,7 +308,24 @@ tests:
   p3a_frontend_focus_return_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
   p3a_frontend_focus_return_diff_check: "PASS"
   p3a_frontend_focus_return_remote: "PASS_SHA_CA1A289670968EACF2C2C5C31AC626921AA8EFBA_TREE_F410720EB7B176D7F5F0E6D359B9083B362D957E"
-  p3a_browser_evidence_v5: "PENDING_LOCAL_RUNTIME_RELAY"
+  p3a_browser_evidence_v5: "CIRCUIT_BREAKER_CONFIRMED_AT_96D202591C6EC0D1343BEB549BFBFDEC492BE7A5"
+  p3a_browser_v5_reuse_integrity: "PASS_211_OF_211_V1_TO_V4_ARTIFACTS"
+  p3a_browser_v5_frontend_gates: "PASS_29_OF_29_TARGETED_64_OF_64_FOCUSED_887_OF_887_FULL"
+  p3a_browser_v5_runtime_modes: "PASS_PAYOUTS_AND_SETTINGS_FULL_APPMODULE"
+  p3a_browser_v5_trigger_focus_dedupe: "PASS_16_OF_16_PAYOUTS_ROLE_COMMAND_WIDTH_LANES"
+  p3a_browser_v5_accessibility: "PASS_96_SCANS_ZERO_SERIOUS_OR_CRITICAL_ZERO_OVERFLOW"
+  p3a_browser_v5_submission_focus: "FAIL_BODY_AND_BACKGROUND_TAB_AFTER_CANONICAL_503"
+  p3a_browser_v5_provider_boundary: "PASS_ZERO_PROVIDER_ACTIONS"
+  p3a_frontend_submission_focus_targeted: "PASS_19_OF_19"
+  p3a_frontend_submission_focus_focused: "PASS_66_OF_66"
+  p3a_frontend_submission_focus_full: "PASS_889_OF_889"
+  p3a_frontend_submission_focus_changed_file_lint: "PASS"
+  p3a_frontend_submission_focus_changed_file_format: "PASS"
+  p3a_frontend_submission_focus_typecheck: "PASS"
+  p3a_frontend_submission_focus_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
+  p3a_frontend_submission_focus_diff_check: "PASS"
+  p3a_frontend_submission_focus_remote: "PASS_SHA_F775D33F729E02C020CED5B0A7FFCC662110DB9E_TREE_30001818C07B231529935DEDF12CA059BE6BD6DC"
+  p3a_browser_evidence_v6: "PENDING_FOCUSED_LOCAL_RUNTIME_RELAY"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -318,8 +338,8 @@ razorpay_gates:
   rz_g4: "OPEN_HUMAN_GATE"
 
 corrections:
-  current_phase_count: 7
-  total_p0_p5_count: 9
+  current_phase_count: 4
+  total_p0_p5_count: 14
   numeric_count_policy: "TELEMETRY_ONLY_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
   repeated_identical_failure_after_bounded_correction: "NON_DELEGABLE_STOP"
   active_default_production_file_ceiling_per_distinct_correction: 3
@@ -331,6 +351,7 @@ corrections:
   p3a_settings_contrast_correction_used: true
   p3a_drawer_contrast_correction_used: true
   p3a_drawer_focus_return_correction_used: true
+  p3a_drawer_submission_focus_correction_used: true
   additional_p2_correction_authority: "SATISFIED_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
   cumulative_p0_p5_total_policy: "TELEMETRY_ONLY_NOT_PARENT_STOP_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
 
@@ -400,12 +421,18 @@ correction_history:
     scope: "KEEP_INVOKED_ASYNC_TREASURY_COMMAND_FOCUSABLE_WITH_ARIA_DISABLED_AND_REENTRY_GUARD_WHILE_NATIVELY_DISABLING_ONLY_THE_SIBLING_COMMAND"
     correction_budget: "ONE_PRODUCTION_FILE_WITHIN_DELEGATED_TECHNICAL_AUTHORITY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
 
-last_failure: "P3A_DRAWER_FOCUS_RETURN_FAILURE_AT_176F9CD01E7E32AA82D2EA723D819BCC820E7E92_CORRECTED_PENDING_V5_PROOF"
+  - phase: "P3A"
+    signature: "P3A_DRAWER_SUBMISSION_FOCUS_ESCAPES_MODAL"
+    result: "CORRECTED_AND_ALL_FRONTEND_SOURCE_GATES_PASS_V6_FOCUSED_BROWSER_EVIDENCE_REQUIRED"
+    scope: "KEEP_ADD_FUNDS_AND_BRAND_RETURN_SUBMIT_CONTROLS_FOCUSABLE_WITH_ARIA_DISABLED_AND_REENTRY_GUARDS_DURING_SUBMISSION_AND_UNKNOWN_OUTCOME"
+    correction_budget: "TWO_PRODUCTION_FILES_WITHIN_DELEGATED_TECHNICAL_AUTHORITY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
+
+last_failure: "P3A_DRAWER_SUBMISSION_FOCUS_ESCAPES_MODAL_AT_96D202591C6EC0D1343BEB549BFBFDEC492BE7A5_CORRECTED_PENDING_V6_FOCUSED_PROOF"
 breaker: null
 stop_reason: null
-environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V5_RELAY"
+environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V6_FOCUSED_RELAY"
 
-non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V5_RUNTIME_RELAY"
+non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V6_FOCUSED_RUNTIME_RELAY"
 
 local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
@@ -502,7 +529,7 @@ p3a_v4_local_runner_relay:
 
 p3a_v5_local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
-  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  status: "COMPLETE_CIRCUIT_BREAKER"
   decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
   prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v5.md"
   authorized_scope: "P3A_V1_TO_V4_EVIDENCE_REUSE_FOCUS_RETURN_AND_COMPLETE_DRAWER_COMPOSITE_PROOF"
@@ -520,6 +547,35 @@ p3a_v5_local_runner_relay:
     - "db15bde0b8c7544b4cc9a314a235045868896d1f"
     - "858942ac73debfaebd89492a49e74aaf17c16d3e"
     - "176f9cd01e7e32aa82d2ea723d819bcc820e7e92"
+  evidence_commit: "96d202591c6ec0d1343beb549bfbfdec492be7a5"
+  evidence_tree: "2dc558ae069ad2da9e1e99747f51fc74d4b3692e"
+  result: "P3A_DRAWER_SUBMISSION_FOCUS_ESCAPES_MODAL"
+  source_changes_allowed: false
+  provider_actions_allowed: false
+
+p3a_v6_local_runner_relay:
+  type: "LOCAL_DESKTOP_RUNTIME_RELAY"
+  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
+  prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v6.md"
+  execution_topology: "DISCIPLINE_BATCHED_FOCUSED_P3A_RECOVERY"
+  recommended_model: "GPT_5_6_TERRA_HIGH_OR_CLOSEST_AVAILABLE_BALANCED_AGENTIC_MODEL"
+  authorized_scope: "P3A_V1_TO_V5_EVIDENCE_REUSE_EIGHT_LANE_SUBMISSION_FOCUS_AND_CUTOVER_COMPOSITE_PROOF"
+  migration_authorization:
+    existing_committed_to_fresh_owned_disposable_database: true
+    create_or_change_migration_files: false
+    apply_m1_or_m2: false
+    shared_or_persistent_database: false
+  backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+  backend_tree_sha: "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24"
+  frontend_sha: "f775d33f729e02c020ced5b0a7ffcc662110db9e"
+  frontend_tree_sha: "30001818c07b231529935dedf12ca059be6bd6dc"
+  reused_evidence_commits:
+    - "85aba6c74d0d4e9499314c95321e7890336c617e"
+    - "db15bde0b8c7544b4cc9a314a235045868896d1f"
+    - "858942ac73debfaebd89492a49e74aaf17c16d3e"
+    - "176f9cd01e7e32aa82d2ea723d819bcc820e7e92"
+    - "96d202591c6ec0d1343beb549bfbfdec492be7a5"
   source_changes_allowed: false
   provider_actions_allowed: false
 
