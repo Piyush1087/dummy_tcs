@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P3A_RUNTIME_AUTHORITY_CLARIFIED_PENDING_V4_LOCAL_RUNTIME_EVIDENCE"
+status: "P3A_FOCUS_RETURN_CORRECTION_PENDING_V5_LOCAL_RUNTIME_EVIDENCE"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -38,11 +38,11 @@ authorization_mvp_cutline_artifact: "BRAND_PAYOUTS_MVP_DELIVERY_CUTLINE_AND_POST
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: null
 
-phase: "P3A_DRAWER_CORRECTION_SOURCE_GATES_PASS_PENDING_V4_RUNTIME_EVIDENCE"
+phase: "P3A_FOCUS_RETURN_CORRECTION_SOURCE_GATES_PASS_PENDING_V5_RUNTIME_EVIDENCE"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: null
 checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
-next_phase: "P3A_V4_LOCAL_RUNTIME_BROWSER_EVIDENCE"
+next_phase: "P3A_V5_LOCAL_RUNTIME_BROWSER_EVIDENCE"
 
 dependency_gates:
   product_authority: "SATISFIED"
@@ -288,7 +288,24 @@ tests:
   p3a_browser_v3_frontend_gates: "PASS_63_OF_63_FOCUSED_886_OF_886_FULL_LINT_FORMAT_TYPECHECK_BUILD_DIFF"
   p3a_browser_v3_runtime_browser: "NOT_EXECUTED_AUTHORITY_WORDING_CONFLICT"
   p3a_v3_migration_authorization_conflict: "RESOLVED_BY_689FEB7_EXISTING_COMMITTED_MIGRATIONS_ALLOWED_ONLY_IN_FRESH_OWNED_DISPOSABLE_DATABASE"
-  p3a_browser_evidence_v4: "PENDING_LOCAL_RUNTIME_RELAY"
+  p3a_browser_evidence_v4: "CIRCUIT_BREAKER_CONFIRMED_AT_176F9CD01E7E32AA82D2EA723D819BCC820E7E92"
+  p3a_browser_v4_reuse_integrity: "PASS_187_OF_187_V1_V2_V3_ARTIFACTS"
+  p3a_browser_v4_disposable_migrations: "PASS_74_EXISTING_COMMITTED_CHECKSUMS_NO_M1_M2"
+  p3a_browser_v4_runtime: "PASS_PAYOUTS_FULL_APPMODULE_ROOT_LIVE_DATABASE_HEALTH"
+  p3a_browser_v4_contrast: "PASS_TWO_390_OWNER_ADD_FUNDS_ROWS_6_09_TO_1"
+  p3a_browser_v4_accessibility: "PASS_ZERO_SERIOUS_OR_CRITICAL_IN_TWO_COMPLETED_ROWS"
+  p3a_browser_v4_focus_return: "FAIL_ESCAPE_RETURNS_TO_BODY_THREE_OF_THREE"
+  p3a_browser_v4_provider_boundary: "PASS_ZERO_PROVIDER_ACTIONS"
+  p3a_frontend_focus_return_targeted: "PASS_29_OF_29"
+  p3a_frontend_focus_return_focused: "PASS_64_OF_64"
+  p3a_frontend_focus_return_full: "PASS_887_OF_887"
+  p3a_frontend_focus_return_changed_file_lint: "PASS"
+  p3a_frontend_focus_return_changed_file_format: "PASS"
+  p3a_frontend_focus_return_typecheck: "PASS"
+  p3a_frontend_focus_return_build: "PASS_WITH_PREEXISTING_LARGE_CHUNK_WARNING"
+  p3a_frontend_focus_return_diff_check: "PASS"
+  p3a_frontend_focus_return_remote: "PASS_SHA_CA1A289670968EACF2C2C5C31AC626921AA8EFBA_TREE_F410720EB7B176D7F5F0E6D359B9083B362D957E"
+  p3a_browser_evidence_v5: "PENDING_LOCAL_RUNTIME_RELAY"
 
 provider_mode: "DISABLED_FAIL_CLOSED"
 provider_actions: []
@@ -301,8 +318,8 @@ razorpay_gates:
   rz_g4: "OPEN_HUMAN_GATE"
 
 corrections:
-  current_phase_count: 6
-  total_p0_p5_count: 8
+  current_phase_count: 7
+  total_p0_p5_count: 9
   numeric_count_policy: "TELEMETRY_ONLY_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
   repeated_identical_failure_after_bounded_correction: "NON_DELEGABLE_STOP"
   active_default_production_file_ceiling_per_distinct_correction: 3
@@ -313,6 +330,7 @@ corrections:
   third_distinct_p2_source_defect_detected: true
   p3a_settings_contrast_correction_used: true
   p3a_drawer_contrast_correction_used: true
+  p3a_drawer_focus_return_correction_used: true
   additional_p2_correction_authority: "SATISFIED_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
   cumulative_p0_p5_total_policy: "TELEMETRY_ONLY_NOT_PARENT_STOP_BY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
 
@@ -376,12 +394,18 @@ correction_history:
     scope: "USE_ACCESSIBLE_DARK_BRAND_GREEN_FOR_ACTIVE_GHOST_ACTIONS_ONLY_INSIDE_TREASURY_DRAWER_FOOTERS_WITHOUT_GLOBAL_AURORA_CHANGE"
     correction_budget: "BOUNDED_TECHNICAL_CORRECTION_UNDER_7F03411B9940AB16579CD2E176AC9E721EDEE832"
 
-last_failure: "P3A_V3_MIGRATION_AUTHORIZATION_CONFLICT_AT_858942AC73DEBFAEBD89492A49E74AAF17C16D3E_RESOLVED_PENDING_V4_RUNTIME_PROOF"
+  - phase: "P3A"
+    signature: "P3A_DRAWER_FOCUS_RETURN_FAILURE"
+    result: "CORRECTED_AND_ALL_FRONTEND_SOURCE_GATES_PASS_V5_BROWSER_EVIDENCE_REQUIRED"
+    scope: "KEEP_INVOKED_ASYNC_TREASURY_COMMAND_FOCUSABLE_WITH_ARIA_DISABLED_AND_REENTRY_GUARD_WHILE_NATIVELY_DISABLING_ONLY_THE_SIBLING_COMMAND"
+    correction_budget: "ONE_PRODUCTION_FILE_WITHIN_DELEGATED_TECHNICAL_AUTHORITY_7F03411B9940AB16579CD2E176AC9E721EDEE832"
+
+last_failure: "P3A_DRAWER_FOCUS_RETURN_FAILURE_AT_176F9CD01E7E32AA82D2EA723D819BCC820E7E92_CORRECTED_PENDING_V5_PROOF"
 breaker: null
 stop_reason: null
-environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V4_RELAY"
+environment: "CHATGPT_WORK_CLOUD_PLUS_PENDING_LOCAL_DESKTOP_P3A_V5_RELAY"
 
-non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V4_RUNTIME_RELAY"
+non_delegable_gate: "UNAVOIDABLE_LOCAL_DESKTOP_P3A_V5_RUNTIME_RELAY"
 
 local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
@@ -453,7 +477,7 @@ p3a_v3_local_runner_relay:
 
 p3a_v4_local_runner_relay:
   type: "LOCAL_DESKTOP_RUNTIME_RELAY"
-  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  status: "COMPLETE_CIRCUIT_BREAKER"
   decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
   prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v4.md"
   authorized_scope: "P3A_V1_V2_V3_EVIDENCE_REUSE_DISPOSABLE_RUNTIME_DRAWER_BROWSER_AND_COMPOSITE_PROOF"
@@ -470,6 +494,32 @@ p3a_v4_local_runner_relay:
     - "85aba6c74d0d4e9499314c95321e7890336c617e"
     - "db15bde0b8c7544b4cc9a314a235045868896d1f"
     - "858942ac73debfaebd89492a49e74aaf17c16d3e"
+  evidence_commit: "176f9cd01e7e32aa82d2ea723d819bcc820e7e92"
+  evidence_tree: "b443bba4b8af664444618bd27f6e5da7df1a6223"
+  result: "P3A_DRAWER_FOCUS_RETURN_FAILURE"
+  source_changes_allowed: false
+  provider_actions_allowed: false
+
+p3a_v5_local_runner_relay:
+  type: "LOCAL_DESKTOP_RUNTIME_RELAY"
+  status: "PROMPT_COMMITTED_PENDING_MANUAL_RELAY"
+  decision_owner: "SYSTEMS_ARCHITECT_AFTER_EVIDENCE_RETURN"
+  prompt_path: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v5.md"
+  authorized_scope: "P3A_V1_TO_V4_EVIDENCE_REUSE_FOCUS_RETURN_AND_COMPLETE_DRAWER_COMPOSITE_PROOF"
+  migration_authorization:
+    existing_committed_to_fresh_owned_disposable_database: true
+    create_or_change_migration_files: false
+    apply_m1_or_m2: false
+    shared_or_persistent_database: false
+  backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+  backend_tree_sha: "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24"
+  frontend_sha: "ca1a289670968eacf2c2c5c31ac626921aa8efba"
+  frontend_tree_sha: "f410720eb7b176d7f5f0e6d359b9083b362d957e"
+  reused_evidence_commits:
+    - "85aba6c74d0d4e9499314c95321e7890336c617e"
+    - "db15bde0b8c7544b4cc9a314a235045868896d1f"
+    - "858942ac73debfaebd89492a49e74aaf17c16d3e"
+    - "176f9cd01e7e32aa82d2ea723d819bcc820e7e92"
   source_changes_allowed: false
   provider_actions_allowed: false
 
@@ -792,7 +842,7 @@ phase_checkpoints:
       provider_actions: []
     blockers: []
   p3a_operations_cutover:
-    status: "SOURCE_GATES_PASS_RUNTIME_AUTHORITY_CLARIFIED_PENDING_V4_EVIDENCE"
+    status: "FOCUS_RETURN_CORRECTION_SOURCE_GATES_PASS_PENDING_V5_EVIDENCE"
     checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
     authority_sha: "9c991a8e8c8dfc90ccc4cf18e48ab1629d5f5b4f"
     accepted_p2_ledger_sha: "495ae4f977152b49b0504ed11c441aadd4abcc93"
@@ -806,14 +856,16 @@ phase_checkpoints:
     frontend_pre_contrast_correction_tree_sha: "c32c164e1f4cda963dd8358e33fe253aed77dfcc"
     frontend_pre_drawer_contrast_correction_sha: "f6b2c878e652d8131cbad0983f77fc3bffce3ab0"
     frontend_pre_drawer_contrast_correction_tree_sha: "0984071ee2117362ffb87468ac2e3fde9bb5064b"
-    frontend_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
-    frontend_tree_sha: "4c47e51af0de16fa8c2f9ce305d02de37b65a470"
+    frontend_pre_focus_return_correction_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+    frontend_pre_focus_return_correction_tree_sha: "4c47e51af0de16fa8c2f9ce305d02de37b65a470"
+    frontend_sha: "ca1a289670968eacf2c2c5c31ac626921aa8efba"
+    frontend_tree_sha: "f410720eb7b176d7f5f0e6d359b9083b362d957e"
     frontend_changed_file_count: 18
     frontend_production_file_count: 14
     migrations_created_or_applied: false
     provider_actions: []
     review_owner: "SYSTEMS_ARCHITECT"
-    evidence_status: "V3_AUTHORITY_WORDING_BREAKER_RESOLVED_V4_RELAY_PENDING"
+    evidence_status: "V4_FOCUS_RETURN_BREAKER_CORRECTED_V5_RELAY_PENDING"
     acceptance_result: "NOT_SET"
     browser_evidence_v1:
       status: "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER"
@@ -913,8 +965,45 @@ phase_checkpoints:
       m1_or_m2_application: "PROHIBITED"
       shared_or_persistent_database_application: "PROHIBITED"
     browser_evidence_v4:
+      status: "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER"
+      commit: "176f9cd01e7e32aa82d2ea723d819bcc820e7e92"
+      tree: "b443bba4b8af664444618bd27f6e5da7df1a6223"
+      report: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v4.md"
+      affected_backend_sha: "12d235345e2748f676d36d61c62ed4bd9c049592"
+      affected_frontend_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+      failure_signature: "P3A_DRAWER_FOCUS_RETURN_FAILURE"
+      v1_v2_v3_artifacts_verified: 187
+      existing_committed_migration_checksums: 74
+      payouts_runtime_health: "PASS"
+      completed_browser_rows: 2
+      isolated_focus_reproductions: 3
+      drawer_contrast_ratio: 6.090545
+      serious_or_critical_in_completed_rows: 0
+      source_changes: false
+      migration_files_created_or_changed: false
+      disposable_existing_committed_migrations_applied: true
+      provider_actions: []
+    frontend_focus_return_source_recovery:
+      classification: "BOUNDED_P3A_ASYNC_INVOKER_FOCUS_RETENTION_CORRECTION"
+      authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
+      parent_sha: "a8800de192f2e716f405b75f38799271fd9f1a9b"
+      sha: "ca1a289670968eacf2c2c5c31ac626921aa8efba"
+      tree_sha: "f410720eb7b176d7f5f0e6d359b9083b362d957e"
+      root_cause: "NATIVE_DISABLE_DURING_ASYNC_AUTHORITY_READ_BLURRED_INVOKER_BEFORE_SIDEDRAWER_CAPTURED_RETURN_TARGET"
+      correction: "ARIA_DISABLE_INVOKER_WITH_REENTRY_GUARD_AND_NATIVE_DISABLE_ONLY_SIBLING_COMMAND"
+      production_file_count: 1
+      test_file_count: 1
+      production_files:
+        - "src/features/brand-payouts/components/PayoutsTreasuryActions.tsx"
+      regression_test: "src/features/brand-payouts/brand-payouts-p2.test.ts"
+      add_funds_and_brand_return_covered: true
+      shared_side_drawer_changed: false
+      schema_change: false
+      migrations_created_or_applied: false
+      provider_actions: []
+    browser_evidence_v5:
       status: "PENDING_LOCAL_RUNTIME_RELAY"
-      prompt: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v4.md"
+      prompt: "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v5.md"
   p3s_support: null
   p4_base_convergence: null
   p4a_first_reserve: null
@@ -936,6 +1025,7 @@ files_changed:
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v2.md"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v3.md"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v4.md"
+    - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v5.md"
     - "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-runner-v1.md"
     - "docs/ai-collaboration/brand-payouts-v1-p2-local-runtime-browser-evidence-v1.md"
@@ -1029,9 +1119,9 @@ files_changed:
 
 uncheckpointed_work:
   phase: "P3A"
-  status: "DRAWER_SOURCE_GATES_PASS_RUNTIME_AUTHORITY_CLARIFIED_PENDING_V4_EVIDENCE"
+  status: "FOCUS_RETURN_CORRECTION_PUSHED_PENDING_V5_LOCAL_RUNTIME_EVIDENCE"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-06T08:02:55Z"
+last_updated: "2026-09-06T08:28:35Z"
