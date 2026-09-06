@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P3A_ACCEPTED_WAVE_B_DEEP_PLANNING_ACCEPTED_DEPENDENCY_GATED"
+status: "P3A_ACCEPTED_WAVE_B_PREFLIGHT_AUTHORIZED_ALL_UPSTREAM_GATES_SATISFIED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -9,6 +9,7 @@ recovery_charter_sha: "23a074b01dbca141ddc997113a6ecbbc14e19f82"
 superfast_wave_execution_amendment_sha: "634db2b0def32ca3b703fa9806d267b1d89dd7ef"
 wave_b_deep_plan_sha: "bec420628c57d609f6ca1443f0f1ffe74cfe5d4d"
 wave_b_deep_plan_parent_disposition: "ACCEPTED"
+wave_b_readiness_activation_artifact: "BRAND_PAYOUTS_WAVE_B_CONSOLIDATED_READINESS_AND_EXECUTION_ACTIVATION_V1"
 accessibility_recovery_authority_sha: "3e1120dcf361b3046c97b6ad0cc5c08e6ec2e71e"
 activity_detail_identifier_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
 pagination_restoration_correction_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
@@ -18,7 +19,12 @@ architecture_parent_sha: "7aeb0512cb8270a6bae1169570e82b080f01807e"
 backend_base_sha: "4c5f42858b950b7cd342f8972f99f548f3daa942"
 frontend_base_sha: "323658d4b147b95b5629ff8d91fa90b8fe9077e4"
 c04_architecture_sha: "de28784662bb92dac6cb927e348f3fc69564af7c"
-c04_backend_handoff_sha: null
+c04_backend_handoff_sha: "fc4d4b59e2a44d7ddced6bc5dde5119c501ec275"
+c04_backend_handoff_tree: "083c52dc06c19a23f47491935b472ee5e62bd1c5"
+c04_backend_runtime_sha: "373eaa382f555c376df78c0e95c72ff55cc43791"
+c04_backend_runtime_tree: "bd5c3c9570adeeacf2f35df8c4a399637e7bd312"
+c04_backend_migration_count: 84
+c04_prior_frontend_sha_unchanged: "106de9988ea2d4bd534205b083f63ae7ecd1878c"
 c04_frontend_handoff_sha: null
 c03_recovery_authority_sha: "dc81b54b87bf6fdf90583c7d0e76f176d883ce32"
 c03_current_accepted_backend_sha: "aebeb85fd6bba37f88c3805c213c61e7f63b2f5f"
@@ -51,20 +57,20 @@ model_routing: "SOL_HIGH_FINANCIAL_CONVERGENCE_SOL_MEDIUM_READINESS_AND_IMPLEMEN
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: "BP_G10_EXACT_M1_APPROVAL_AFTER_BP_P4_BASE_CONVERGENCE"
 
-phase: "WAVE_B_DEEP_PLANNING_ACCEPTED"
+phase: "WAVE_B_EXECUTION_READINESS_PREFLIGHT_AUTHORIZED"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "67224e5f59175d7300af8984bc2bf8ec1da1d6cb"
 checkpoint_name: "BP-P3A-OPERATIONS-CUTOVER"
-next_phase: "WAVE_B_EXECUTION_READINESS_PREFLIGHT_AFTER_BP_G05_BP_G06_BP_G08"
+next_phase: "WAVE_B_CONSOLIDATED_PREFLIGHT_THEN_P4_BASE_CONVERGENCE"
 
 dependency_gates:
   product_authority: "SATISFIED"
   architecture_parent_acceptance: "SATISFIED"
   c04_architecture: "READY_WITH_RECONCILIATION"
   c03_post_p1_4_backend_handoff: "SATISFIED"
-  c04_backend_settlement_handoff: "OPEN_BLOCKING"
-  c04_backend_convergence_tree: "OPEN_BLOCKING"
-  c04_financial_recovery_instruction: "OPEN_BLOCKING"
+  c04_backend_settlement_handoff: "SATISFIED"
+  c04_backend_convergence_tree: "OPEN_TECHNICAL_GATE_P4_BASE"
+  c04_financial_recovery_instruction: "SATISFIED"
   c04_frontend: "OPEN_NON_SERIALIZING"
   c05_readiness: "READY_WITH_RECONCILIATION"
   campaign_exact_net_terms: "SATISFIED"
@@ -78,7 +84,9 @@ dependency_gates:
 gate_qualifiers:
   c04_architecture: "RECONCILE_RESERVE_APPROVAL_TERM_ELIGIBILITY_RECOVERY_CONFIRMATION"
   c03_post_p1_4_backend_handoff: "ACCEPTED_HANDOFF_DF32E63_BACKEND_AEBEB85F"
-  c04_backend_settlement_handoff: "BLOCKS_P4_AND_P5_NOT_P0_TO_P3"
+  c04_backend_settlement_handoff: "ACCEPTED_FC4D4B59_RUNTIME_373EAA38_MIGRATIONS_84"
+  c04_backend_convergence_tree: "PAYOUTS_BP_G08A_TO_BE_PROVEN_AT_P4_BASE"
+  c04_financial_recovery_instruction: "ACCEPTED_VERSIONED_ABNORMAL_AND_RECOVERY_AUTHORITY"
   c04_frontend: "BLOCKS_ONLY_C04_SPECIFIC_FRONTEND_AND_FINAL_JOINT_ACCEPTANCE"
   c05_readiness: "EXACT_CURRENT_DESTINATION_VERSION_FENCE_REQUIRED_BEFORE_P5"
   campaign_exact_net_terms: "ACCEPTED_7901C774_ALL_FIVE_TERMS_EXACT_C04_CONVERGENCE_REQUIRED"
@@ -118,9 +126,13 @@ migrations:
   c04_convergence_migrations:
     owner: "C04"
     counted_in_payouts_total: false
-    status: "OPEN_PENDING_CANONICAL_BASE"
+    status: "ACCEPTED_UPSTREAM_84_MIGRATION_TREE_PENDING_PAYOUTS_P4_BASE_CONVERGENCE"
     applied: false
-    sha: null
+    runtime_sha: "373eaa382f555c376df78c0e95c72ff55cc43791"
+    handoff_sha: "fc4d4b59e2a44d7ddced6bc5dde5119c501ec275"
+    migration_count: 84
+    inherited_c03_migrations_unchanged: 79
+    c04_forward_migrations_added: 5
 
 tests:
   phase_c_document_validation: "PASS"
@@ -1297,9 +1309,9 @@ files_changed:
 
 uncheckpointed_work:
   phase: "WAVE_B"
-  status: "DEEP_PLANNING_ACCEPTED_SOURCE_NOT_STARTED_DEPENDENCY_GATED"
+  status: "CONSOLIDATED_PREFLIGHT_AUTHORIZED_SOURCE_NOT_STARTED"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-06T19:49:59.270Z"
+last_updated: "2026-09-06T20:37:14.989Z"
