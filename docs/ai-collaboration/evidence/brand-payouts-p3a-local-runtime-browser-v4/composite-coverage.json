@@ -1,0 +1,39 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "result": "BLOCKED",
+  "reused": [
+    {
+      "gate": "Backend PostgreSQL/security",
+      "result": "50/50 V1"
+    },
+    {
+      "gate": "Financial authorization, role/surface admission and replay",
+      "result": "168 requests / 300 assertions V2; five configurations"
+    },
+    {
+      "gate": "Canonical single vault/ledger/funding/Return/provider/authorization paths",
+      "result": "V1/V2 source and HTTP bindings; no intervening backend changes"
+    },
+    {
+      "gate": "Campaign Manager read-only; one command surface; non-drawer responsive/identity/pagination",
+      "result": "V2 immutable scope only; failed V2 drawer Axe excluded"
+    },
+    {
+      "gate": "Frontend source tests, lint/format/typecheck/diff",
+      "result": "V3 63 focused / 886 full and passing gates"
+    }
+  ],
+  "fresh": {
+    "migrationBootstrap": "PASS_AUTHORIZED_74",
+    "buildRuntime": "PASS_PAYOUTS_ONLY",
+    "drawerContrast": "PASS_TWO_ROWS_NOT_COMPLETE",
+    "keyboard": "FAIL_FOCUS_RETURN",
+    "allWidthsAndModes": "DEFERRED_AFTER_BREAKER",
+    "providerActions": "NONE"
+  },
+  "limits": "No P3A acceptance, provider capability, production readiness or P4 claim"
+}

@@ -1,0 +1,273 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "classification": "AUTHORITATIVE_LOCAL_BACKEND_NO_INTERCEPTION_NO_AXE",
+  "trials": [
+    {
+      "trial": 1,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "route": "/brand/payouts",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "axeExecuted": false,
+      "inputChanged": false,
+      "before": {
+        "tag": "BUTTON",
+        "name": "Add funds",
+        "triggerDisabled": false
+      },
+      "opened": {
+        "tag": "BUTTON",
+        "name": "Close Add funds",
+        "triggerDisabled": false
+      },
+      "after": {
+        "tag": "BODY",
+        "name": "BODY",
+        "triggerDisabled": false
+      },
+      "focusReturned": false,
+      "trace": [
+        {
+          "event": "focusin",
+          "tag": "BUTTON",
+          "name": "Add funds"
+        },
+        {
+          "event": "focusout",
+          "tag": "BUTTON",
+          "name": "Verifying…"
+        },
+        {
+          "event": "focusin",
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        },
+        {
+          "event": "focusout",
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      ],
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+      "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+      "screenshot": "PAYOUTS-390-owner-add-funds-focus-return-trial-1.png",
+      "networkReference": "focus-reproduction.json#/network",
+      "consoleReference": "focus-reproduction.json#/console",
+      "accessibility": "NOT_RESCANNED; reproduction deliberately excludes Axe",
+      "overflow": "See same viewport base row; not independently remeasured",
+      "result": "FAIL_FOCUS_RETURN"
+    },
+    {
+      "trial": 2,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "route": "/brand/payouts",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "axeExecuted": false,
+      "inputChanged": false,
+      "before": {
+        "tag": "BUTTON",
+        "name": "Add funds",
+        "triggerDisabled": false
+      },
+      "opened": {
+        "tag": "BUTTON",
+        "name": "Close Add funds",
+        "triggerDisabled": false
+      },
+      "after": {
+        "tag": "BODY",
+        "name": "BODY",
+        "triggerDisabled": false
+      },
+      "focusReturned": false,
+      "trace": [
+        {
+          "event": "focusin",
+          "tag": "BUTTON",
+          "name": "Add funds"
+        },
+        {
+          "event": "focusout",
+          "tag": "BUTTON",
+          "name": "Verifying…"
+        },
+        {
+          "event": "focusin",
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        },
+        {
+          "event": "focusout",
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      ],
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+      "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+      "screenshot": "PAYOUTS-390-owner-add-funds-focus-return-trial-2.png",
+      "networkReference": "focus-reproduction.json#/network",
+      "consoleReference": "focus-reproduction.json#/console",
+      "accessibility": "NOT_RESCANNED; reproduction deliberately excludes Axe",
+      "overflow": "See same viewport base row; not independently remeasured",
+      "result": "FAIL_FOCUS_RETURN"
+    },
+    {
+      "trial": 3,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "route": "/brand/payouts",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "axeExecuted": false,
+      "inputChanged": false,
+      "before": {
+        "tag": "BUTTON",
+        "name": "Add funds",
+        "triggerDisabled": false
+      },
+      "opened": {
+        "tag": "BUTTON",
+        "name": "Close Add funds",
+        "triggerDisabled": false
+      },
+      "after": {
+        "tag": "BODY",
+        "name": "BODY",
+        "triggerDisabled": false
+      },
+      "focusReturned": false,
+      "trace": [
+        {
+          "event": "focusin",
+          "tag": "BUTTON",
+          "name": "Add funds"
+        },
+        {
+          "event": "focusout",
+          "tag": "BUTTON",
+          "name": "Verifying…"
+        },
+        {
+          "event": "focusin",
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        },
+        {
+          "event": "focusout",
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      ],
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+      "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+      "screenshot": "PAYOUTS-390-owner-add-funds-focus-return-trial-3.png",
+      "networkReference": "focus-reproduction.json#/network",
+      "consoleReference": "focus-reproduction.json#/console",
+      "accessibility": "NOT_RESCANNED; reproduction deliberately excludes Axe",
+      "overflow": "See same viewport base row; not independently remeasured",
+      "result": "FAIL_FOCUS_RETURN"
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "path": "/brand/payouts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/assets/index-BSLGiLrH.js",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/refresh",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/brand/payouts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/brand/payouts/obligations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/brand/payouts/activity",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/escrow/vault",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/escrow/vault",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/escrow/vault",
+      "status": 200
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ]
+}

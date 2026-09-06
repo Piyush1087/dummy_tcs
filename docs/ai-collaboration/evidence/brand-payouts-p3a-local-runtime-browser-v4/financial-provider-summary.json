@@ -1,0 +1,34 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "endState": {
+    "counts": {
+      "brandEscrowVault": 1,
+      "escrowFundingLoad": 0,
+      "escrowFundingLot": 0,
+      "escrowTransactionLedger": 0,
+      "brandReturnRequest": 0,
+      "brandReturnAllocation": 0,
+      "brandReturnWebhookReceipt": 0
+    },
+    "vault": {
+      "availableBalance": "100000",
+      "totalPooledBalance": "100000",
+      "lockedCampaignFunds": "0",
+      "activeReturnCommitment": "0"
+    },
+    "classification": "END_STATE_ONLY_NOT_FRESH_BEFORE_AFTER_PROOF",
+    "noCommandSubmissions": true
+  },
+  "creditedBrowserCommandPosts": [],
+  "reproductionCommandPosts": [],
+  "browserExternalRequests": "Only blocked font requests; no transmission. Application/backend/provider traffic restricted to loopback.",
+  "providerInvocations": 0,
+  "providerActions": 0,
+  "financialSuccessClaims": 0,
+  "freshReadPurity": "NOT_CLAIMED; exact accepted V1/V2 financial evidence reused",
+  "interceptedResponses": 0
+}

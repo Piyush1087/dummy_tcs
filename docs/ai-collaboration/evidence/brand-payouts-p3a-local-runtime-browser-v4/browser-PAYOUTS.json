@@ -1,0 +1,1026 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "mode": "PAYOUTS",
+  "rows": [
+    {
+      "id": 1,
+      "mode": "PAYOUTS",
+      "route": "/brand/payouts",
+      "actor": "owner",
+      "drawer": "add-funds",
+      "state": "open",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-390-owner-add-funds-open.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "networkCountAtCapture": 32,
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "consoleCountAtCapture": 11,
+      "focus": {
+        "entry": "Close Add funds",
+        "tabs": [
+          {
+            "name": "Amount (INR)",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Cancel",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Close Add funds",
+            "inDialog": true,
+            "outline": "rgb(16, 16, 16) auto 1px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Amount (INR)",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Cancel",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Close Add funds",
+            "inDialog": true,
+            "outline": "rgb(16, 16, 16) auto 1px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Amount (INR)",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Cancel",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Close Add funds",
+            "inDialog": true,
+            "outline": "rgb(16, 16, 16) auto 1px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Amount (INR)",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Cancel",
+            "inDialog": true,
+            "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+            "boxShadow": "none"
+          },
+          {
+            "name": "Close Add funds",
+            "inDialog": true,
+            "outline": "rgb(16, 16, 16) auto 1px",
+            "boxShadow": "none"
+          }
+        ],
+        "containment": true,
+        "visibleFocus": true
+      },
+      "axe": {
+        "version": "4.10.3",
+        "violations": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensure role attribute has an appropriate value for the element",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-sidedrawer"
+                ],
+                "html": "<aside class=\"aurora-sidedrawer\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\":r0:\" style=\"width: 480px;\">",
+                "failureSummary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element",
+                "any": [
+                  {
+                    "id": "aria-allowed-role",
+                    "data": [
+                      "dialog"
+                    ],
+                    "relatedNodes": [],
+                    "impact": "minor",
+                    "message": "ARIA role dialog is not allowed for given element"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-main-is-top-level",
+            "impact": "moderate",
+            "description": "Ensure the main landmark is at top level",
+            "nodes": [
+              {
+                "target": [
+                  ".bp-workspace"
+                ],
+                "html": "<main class=\"bp-workspace\">",
+                "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark.",
+                "any": [
+                  {
+                    "id": "landmark-is-top-level",
+                    "data": {
+                      "role": "main"
+                    },
+                    "relatedNodes": [],
+                    "impact": "moderate",
+                    "message": "The main landmark is contained in another landmark."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "description": "Ensure the document has at most one banner landmark",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one banner landmark",
+                "any": [
+                  {
+                    "id": "page-no-duplicate-banner",
+                    "data": null,
+                    "relatedNodes": [
+                      {
+                        "html": "<header class=\"aurora-sidedrawer__header\">",
+                        "target": [
+                          ".aurora-sidedrawer__header"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "Document has more than one banner landmark"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-main",
+            "impact": "moderate",
+            "description": "Ensure the document has at most one main landmark",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one main landmark",
+                "any": [
+                  {
+                    "id": "page-no-duplicate-main",
+                    "data": null,
+                    "relatedNodes": [
+                      {
+                        "html": "<main class=\"bp-workspace\">",
+                        "target": [
+                          ".bp-workspace"
+                        ]
+                      },
+                      {
+                        "html": "<main class=\"aurora-sidedrawer__content\">",
+                        "target": [
+                          ".aurora-sidedrawer__content"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "Document has more than one main landmark"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Ensure landmarks are unique",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+                "any": [
+                  {
+                    "id": "landmark-is-unique",
+                    "data": {
+                      "role": "banner",
+                      "accessibleText": null
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<header class=\"aurora-sidedrawer__header\">",
+                        "target": [
+                          ".aurora-sidedrawer__header"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                  }
+                ]
+              },
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+                "any": [
+                  {
+                    "id": "landmark-is-unique",
+                    "data": {
+                      "role": "main",
+                      "accessibleText": null
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<main class=\"bp-workspace\">",
+                        "target": [
+                          ".bp-workspace"
+                        ]
+                      },
+                      {
+                        "html": "<main class=\"aurora-sidedrawer__content\">",
+                        "target": [
+                          ".aurora-sidedrawer__content"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "section:nth-child(1) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  "section:nth-child(2) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(2)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ]
+          }
+        ],
+        "passes": 40
+      },
+      "dom": {
+        "text": "Add funds\n\nOpen checkout for this Brand vault.\n\nAmount (INR)\nConfirmed funding only\n\nCheckout success does not immediately update Available balance. Funding remains unavailable while Pending and becomes usable only after payment confirmation.\n\nIndia minimum top-up: ₹5,000.\n\nCancel\nContinue to provider",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": "Close Add funds",
+            "disabled": false
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "Amount (INR)",
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": "Cancel",
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": "Continue to provider",
+            "disabled": true
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "disabled": false,
+          "contrast": 6.0905450171769555,
+          "rect": {
+            "x": 48,
+            "y": 862,
+            "width": 294,
+            "height": 48,
+            "bottom": 910
+          },
+          "hitVisible": true
+        },
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "safeArea": {
+          "viewportHeight": 1000,
+          "footerBottom": 968,
+          "bottomClearance": 90
+        },
+        "focusInside": true
+      },
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+      "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+      "consoleResult": "Expected anonymous auth refresh 401, blocked fonts and Axe font-preload warnings; zero page errors or unexpected Payouts errors",
+      "overflowResult": "PASS",
+      "accessibilityResult": "Zero serious/critical; minor and moderate findings retained",
+      "cancelSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlsClassification": "Disabled Continue to provider is excluded from active Cancel contrast claim"
+    },
+    {
+      "id": 2,
+      "mode": "PAYOUTS",
+      "route": "/brand/payouts",
+      "actor": "owner",
+      "drawer": "add-funds",
+      "state": "client-validation",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-390-owner-add-funds-client-validation.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "networkCountAtCapture": 38,
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "consoleCountAtCapture": 15,
+      "focus": {
+        "keyboardInput": true
+      },
+      "axe": {
+        "version": "4.10.3",
+        "violations": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensure role attribute has an appropriate value for the element",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-sidedrawer"
+                ],
+                "html": "<aside class=\"aurora-sidedrawer\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\":r0:\" style=\"width: 480px;\">",
+                "failureSummary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element",
+                "any": [
+                  {
+                    "id": "aria-allowed-role",
+                    "data": [
+                      "dialog"
+                    ],
+                    "relatedNodes": [],
+                    "impact": "minor",
+                    "message": "ARIA role dialog is not allowed for given element"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-main-is-top-level",
+            "impact": "moderate",
+            "description": "Ensure the main landmark is at top level",
+            "nodes": [
+              {
+                "target": [
+                  ".bp-workspace"
+                ],
+                "html": "<main class=\"bp-workspace\">",
+                "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark.",
+                "any": [
+                  {
+                    "id": "landmark-is-top-level",
+                    "data": {
+                      "role": "main"
+                    },
+                    "relatedNodes": [],
+                    "impact": "moderate",
+                    "message": "The main landmark is contained in another landmark."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "description": "Ensure the document has at most one banner landmark",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one banner landmark",
+                "any": [
+                  {
+                    "id": "page-no-duplicate-banner",
+                    "data": null,
+                    "relatedNodes": [
+                      {
+                        "html": "<header class=\"aurora-sidedrawer__header\">",
+                        "target": [
+                          ".aurora-sidedrawer__header"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "Document has more than one banner landmark"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-main",
+            "impact": "moderate",
+            "description": "Ensure the document has at most one main landmark",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one main landmark",
+                "any": [
+                  {
+                    "id": "page-no-duplicate-main",
+                    "data": null,
+                    "relatedNodes": [
+                      {
+                        "html": "<main class=\"bp-workspace\">",
+                        "target": [
+                          ".bp-workspace"
+                        ]
+                      },
+                      {
+                        "html": "<main class=\"aurora-sidedrawer__content\">",
+                        "target": [
+                          ".aurora-sidedrawer__content"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "Document has more than one main landmark"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Ensure landmarks are unique",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+                "any": [
+                  {
+                    "id": "landmark-is-unique",
+                    "data": {
+                      "role": "banner",
+                      "accessibleText": null
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<header class=\"aurora-sidedrawer__header\">",
+                        "target": [
+                          ".aurora-sidedrawer__header"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                  }
+                ]
+              },
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+                "any": [
+                  {
+                    "id": "landmark-is-unique",
+                    "data": {
+                      "role": "main",
+                      "accessibleText": null
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<main class=\"bp-workspace\">",
+                        "target": [
+                          ".bp-workspace"
+                        ]
+                      },
+                      {
+                        "html": "<main class=\"aurora-sidedrawer__content\">",
+                        "target": [
+                          ".aurora-sidedrawer__content"
+                        ]
+                      }
+                    ],
+                    "impact": "moderate",
+                    "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "section:nth-child(1) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  "section:nth-child(2) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(2)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ]
+          }
+        ],
+        "passes": 40
+      },
+      "dom": {
+        "text": "Add funds\n\nOpen checkout for this Brand vault.\n\nAmount (INR)\nThe minimum INR top-up is ₹5,000.\nConfirmed funding only\n\nCheckout success does not immediately update Available balance. Funding remains unavailable while Pending and becomes usable only after payment confirmation.\n\nIndia minimum top-up: ₹5,000.\n\nCancel\nContinue to provider",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": "Close Add funds",
+            "disabled": false
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "Amount (INR)The minimum INR top-up is ₹5,000.",
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": "Cancel",
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": "Continue to provider",
+            "disabled": true
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "disabled": false,
+          "contrast": 6.0905450171769555,
+          "rect": {
+            "x": 48,
+            "y": 862,
+            "width": 294,
+            "height": 48,
+            "bottom": 910
+          },
+          "hitVisible": true
+        },
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "safeArea": {
+          "viewportHeight": 1000,
+          "footerBottom": 968,
+          "bottomClearance": 90
+        },
+        "focusInside": true
+      },
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+      "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+      "consoleResult": "Expected anonymous auth refresh 401, blocked fonts and Axe font-preload warnings; zero page errors or unexpected Payouts errors",
+      "overflowResult": "PASS",
+      "accessibilityResult": "Zero serious/critical; minor and moderate findings retained",
+      "cancelSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlsClassification": "Disabled Continue to provider is excluded from active Cancel contrast claim"
+    }
+  ],
+  "network": [
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:4177/brand/payouts",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:4177/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:4177/assets/index-BSLGiLrH.js",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "POST",
+      "url": "http://127.0.0.1:3107/api/v1/auth/refresh",
+      "status": 401
+    },
+    {
+      "actor": "owner",
+      "method": "POST",
+      "url": "http://127.0.0.1:3107/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:4177/brand/payouts",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:4177/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:4177/assets/index-BSLGiLrH.js",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "POST",
+      "url": "http://127.0.0.1:3107/api/v1/auth/refresh",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:3107/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:3107/api/v1/brand/payouts/obligations",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:3107/api/v1/brand/payouts",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:3107/api/v1/brand/payouts/activity",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "http://127.0.0.1:3107/api/v1/escrow/vault",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "actor": "owner",
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ],
+  "console": [
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "location": "http://127.0.0.1:3107/api/v1/auth/refresh"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "actor": "owner",
+      "type": "warning",
+      "text": "Couldn't load preload assets:  ProgressEvent",
+      "location": "<axe-scanner-source>"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "actor": "owner",
+      "type": "warning",
+      "text": "Couldn't load preload assets:  ProgressEvent",
+      "location": "<axe-scanner-source>"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "actor": "owner",
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "location": "https://fonts.googleapis.com/css2"
+    }
+  ],
+  "interceptions": [],
+  "failures": [
+    {
+      "signature": "P3A_FOCUS_RETURN_FAILURE",
+      "stack": [
+        "Error: P3A_FOCUS_RETURN_FAILURE",
+        "    at <temporary-harness>\\browser.cjs:17:565"
+      ]
+    }
+  ]
+}

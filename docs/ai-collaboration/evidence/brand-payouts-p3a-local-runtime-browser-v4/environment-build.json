@@ -1,0 +1,21 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "os": "Windows_NT 10.0.26200",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "packageManager": "npm",
+  "playwright": "1.61.1",
+  "axe": "4.10.3",
+  "chrome": "152.0.7977.76",
+  "backendBuild": "npm run build; exit 0",
+  "frontendBuild": "npm run build; exit 0; NODE_ENV=production VITE_STAGE=local VITE_API_URL loopback:3107",
+  "buildCount": {
+    "backend": 1,
+    "frontend": 1
+  }
+}

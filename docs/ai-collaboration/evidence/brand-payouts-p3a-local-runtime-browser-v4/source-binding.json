@@ -1,0 +1,32 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "verification": {
+    "backend": {
+      "head": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "remote": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "parent": "119397ff6836ad12846c1e948409d8d49185c408",
+      "status": ""
+    },
+    "frontend": {
+      "head": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "remote": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "tree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+      "parent": "f6b2c878e652d8131cbad0983f77fc3bffce3ab0",
+      "status": ""
+    },
+    "authority": {
+      "head": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+      "remote": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+      "tree": "598a9193c30f5cfb4561bcb026be98e049bcdeb3",
+      "parent": "858942ac73debfaebd89492a49e74aaf17c16d3e",
+      "status": ""
+    }
+  },
+  "ancestry": "V3 evidence is ancestor of V4 runner; verified with git merge-base --is-ancestor",
+  "sourceWorktreesClean": true
+}

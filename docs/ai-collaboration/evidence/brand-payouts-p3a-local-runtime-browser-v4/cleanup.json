@@ -1,0 +1,13 @@
+{
+  "ownedProcessesRemaining": 0,
+  "ownedListenersRemaining": 0,
+  "containerAbsent": true,
+  "ownedVolumeAbsent": true,
+  "temporaryScriptsAndPrivateMaterialRemaining": [],
+  "backendStatus": [],
+  "frontendStatus": [],
+  "backendHead": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendHead": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "shutdownMethod": "Controlled termination of owned Windows PIDs; disposable container and anonymous volume removed with docker rm -f -v",
+  "sharedDatabaseUntouched": true
+}

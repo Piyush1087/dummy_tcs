@@ -1,0 +1,75 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "mode": "PAYOUTS",
+  "fullAppModule": true,
+  "entry": "dist/main.js",
+  "frontend": "one production Vite preview on loopback",
+  "health": [
+    {
+      "path": "/",
+      "status": 200,
+      "body": "{\"name\":\"TheCreatorShop API\",\"status\":\"ready\"}"
+    },
+    {
+      "path": "/health/live",
+      "status": 200,
+      "body": "{\"status\":\"ok\"}"
+    },
+    {
+      "path": "/health",
+      "status": 200,
+      "body": "{\"status\":\"ok\",\"info\":{\"database\":{\"status\":\"up\"}},\"error\":{},\"details\":{\"database\":{\"status\":\"up\"}}}"
+    }
+  ],
+  "listeningPorts": {
+    "backend": 3107,
+    "preview": 4177,
+    "postgres": 55439
+  },
+  "providerVariables": "ABSENT from explicitly constructed environment",
+  "guard": "Node net.Socket.connect denies non-loopback; net.Server.listen bound to loopback; loaded before dist/main.js",
+  "outboundBlockedAttempts": 0,
+  "ready": true,
+  "mappedRoutes": [
+    "Mapped {/health/live, GET} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/health, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/creator/settings/payouts/bank, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/creator/settings/payouts, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/creator/settings/payouts/destination, PUT} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/creator/settings/payouts/destination/:destinationId, DELETE} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/creator/settings/payouts/legal-profile, PUT} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/collaboration/threads/:collaborationId/securement/fund-escrow, POST} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/api/v1/escrow/initialize, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow/vault, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow/ledger, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow/topup-intent, POST} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/api/v1/escrow/calculate-breakdown, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow/brand-returns/summary, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow/brand-returns, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow/brand-returns/:requestId, GET} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/api/v1/escrow/brand-returns, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow-engine/lock-collaboration-funds, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow-engine/disburse-tranche-payout, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/escrow-interlock/transition-stage, POST} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/api/v1/escrow-interlock/trigger-rule-refund, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/hardened-escrow/lock-funds, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/webhooks/escrow, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/webhooks/escrow/route, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/webhooks/escrow/brand-returns, POST} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/obligations, GET} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/obligations/:obligationId, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/activity, GET} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/activity.csv, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/activity/:activityId, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/brand-returns, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/brand-returns/:requestId, GET} route\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "Mapped {/api/v1/brand/payouts/reserve-requests, GET} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "Mapped {/api/v1/creator/payouts, GET} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m"
+  ],
+  "SETTINGS": "NOT_STARTED_AFTER_CIRCUIT_BREAKER"
+}

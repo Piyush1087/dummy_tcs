@@ -1,0 +1,72 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "signature": "P3A_DRAWER_FOCUS_RETURN_FAILURE",
+  "mode": "PAYOUTS",
+  "actor": "Owner",
+  "route": "/brand/payouts",
+  "viewport": {
+    "width": 390,
+    "height": 1000
+  },
+  "state": "Add funds Escape close",
+  "reproduction": [
+    "Build pinned backend and frontend with production/local preview configuration",
+    "Run full backend with BRAND_PAYOUTS_COMMAND_SURFACE=PAYOUTS, provider variables absent, fresh owned migrated database and active Owner",
+    "Authenticate through password form; focus Add funds and press Enter",
+    "Drawer focuses Close Add funds. Press Escape. Wait one second",
+    "Drawer closes; document.activeElement is BODY while Add funds is enabled; reproduced in three recorded trials without Axe or input changes"
+  ],
+  "suspectedSource": [
+    {
+      "file": "src/features/brand-payouts/components/PayoutsTreasuryActions.tsx",
+      "lines": [
+        72,
+        75,
+        77,
+        78,
+        209,
+        211
+      ],
+      "reason": "Asynchronous authority fetch disables focused invoking button and changes text to Verifying before portal opens"
+    },
+    {
+      "file": "src/design-system/aurora/components/SideDrawer.tsx",
+      "lines": [
+        38,
+        69
+      ],
+      "reason": "Captures document.activeElement on open and restores that element on cleanup; too late to retain invoking button after disabled-focus loss"
+    }
+  ],
+  "whySourceChangeRequired": "Observed focusout on Verifying button precedes portal focus; cleanup leaves BODY focused. Environment/port/database changes cannot retain the invoking DOM focus target across this application state transition.",
+  "contrast": "PASS for two completed 390px Owner/Add funds rows only: rgb(0,108,75) on rgb(248,248,248), 6.090545:1",
+  "seriousCriticalAxeInCompletedRows": 0,
+  "completedSafeGates": [
+    "Pinned clean source and remote binding",
+    "187/187 immutable artifact hashes and byte sizes",
+    "74 accepted migration checksums, UTC disposable database",
+    "Fresh backend and single frontend production builds",
+    "PAYOUTS full-AppModule ready, root/live/database health 200",
+    "Two full-document Axe/contrast/overflow rows",
+    "12 Tab containment and visible-focus observations",
+    "Three isolated no-Axe focus-return reproductions"
+  ],
+  "deferred": [
+    "Remaining 31 base open rows and state variants",
+    "SETTINGS backend restart and fresh browser mode",
+    "Finance drawer matrix",
+    "Brand Return drawer matrix",
+    "Provider-absent presentation submissions",
+    "All-width contrast and composite P3A completion"
+  ],
+  "sourceChanges": "NONE",
+  "migrationFilesCreatedOrChanged": "NONE",
+  "existingMigrationsApplied": "YES",
+  "providerActions": "NONE",
+  "P3AAcceptance": "NOT_SET",
+  "P4Work": "NONE"
+}

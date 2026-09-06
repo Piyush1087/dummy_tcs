@@ -1,0 +1,132 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "classification": "REUSED_IMMUTABLE_V1_V2_V3_EVIDENCE",
+  "inactiveEmailCode": {
+    "seriousRuleInstances": 4,
+    "ownership": "Unchanged sign-in outside P3A",
+    "source": "V2 accessibility-circuit-breaker.json, verified immutable index",
+    "freshlyRescanned": false
+  },
+  "freshLowerSeverity": [
+    {
+      "id": 1,
+      "state": "open",
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "state": "client-validation",
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "ownership": {
+    "landmark-main-is-top-level": "Nested Payouts workspace main inside shell main",
+    "landmark-no-duplicate-main": "Shell/workspace and portal main landmarks",
+    "landmark-no-duplicate-banner": "Shell header and portal header",
+    "landmark-unique": "Duplicated unlabelled shell/portal landmarks",
+    "aria-allowed-role": "Shared SideDrawer aside with dialog role"
+  },
+  "impact": "Navigation semantics remain imperfect; retained minor/moderate findings are below serious/critical Axe threshold. Independent keyboard focus-return requirement fails and blocks completion."
+}

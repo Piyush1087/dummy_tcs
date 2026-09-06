@@ -1,0 +1,1532 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "frontendTree": "4c47e51af0de16fa8c2f9ce305d02de37b65a470",
+  "authoritySha": "6743d1163e53b796b145d69ad9d67dc034fbcd0e",
+  "classification": "REUSED_IMMUTABLE_V1_V2_V3_EVIDENCE",
+  "total": 187,
+  "passed": 187,
+  "packages": [
+    {
+      "version": 1,
+      "commit": "85aba6c74d0d4e9499314c95321e7890336c617e",
+      "tree": "fc57d68fac98bb0ac001bcd52f3f9fe41dbe716f",
+      "checks": [
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-finance-payouts-commands.png",
+          "expected": "bfc13ce917f86aac7f7737a539bb8d7ebfebdc1e45125e46b4372b3dbf14c968",
+          "actual": "bfc13ce917f86aac7f7737a539bb8d7ebfebdc1e45125e46b4372b3dbf14c968",
+          "expectedBytes": 586350,
+          "actualBytes": 586350,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-finance-settings-compatibility.png",
+          "expected": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "actual": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "expectedBytes": 47617,
+          "actualBytes": 47617,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-manager-payouts-commands.png",
+          "expected": "606e61df8974b1e2fd5fd646a566d8e4f5eb32a016e8798c9f2bf28d2de8ff8c",
+          "actual": "606e61df8974b1e2fd5fd646a566d8e4f5eb32a016e8798c9f2bf28d2de8ff8c",
+          "expectedBytes": 100787,
+          "actualBytes": 100787,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-manager-settings-compatibility.png",
+          "expected": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+          "actual": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+          "expectedBytes": 40224,
+          "actualBytes": 40224,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-owner-add-funds-open.png",
+          "expected": "f3b31da25114c82cf2e549ae20058fdf55a34ee85b283175e5a47b175c393888",
+          "actual": "f3b31da25114c82cf2e549ae20058fdf55a34ee85b283175e5a47b175c393888",
+          "expectedBytes": 681712,
+          "actualBytes": 681712,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-owner-add-funds-ready-no-submit.png",
+          "expected": "326e0c240475b1c1af0a44bb2b7eecb3b1193187712c3296227bf1cf1126086c",
+          "actual": "326e0c240475b1c1af0a44bb2b7eecb3b1193187712c3296227bf1cf1126086c",
+          "expectedBytes": 684023,
+          "actualBytes": 684023,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-owner-add-funds-validation.png",
+          "expected": "abff776d9006acfc3eabd1f33e97149e8e68ea8b2d0c8234838c9d37f07a7894",
+          "actual": "abff776d9006acfc3eabd1f33e97149e8e68ea8b2d0c8234838c9d37f07a7894",
+          "expectedBytes": 684257,
+          "actualBytes": 684257,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-owner-brand-return-open.png",
+          "expected": "1b3ae03d67d73d5d1ad5a01ce733d52b7608d29e113a6a202fd674c75524611b",
+          "actual": "1b3ae03d67d73d5d1ad5a01ce733d52b7608d29e113a6a202fd674c75524611b",
+          "expectedBytes": 695978,
+          "actualBytes": 695978,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-owner-brand-return-validation.png",
+          "expected": "8a468258aaa4ae7e898e5ce6847c6fb8246f0957bef0e1d7eb4e69330f04ae40",
+          "actual": "8a468258aaa4ae7e898e5ce6847c6fb8246f0957bef0e1d7eb4e69330f04ae40",
+          "expectedBytes": 698132,
+          "actualBytes": 698132,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-owner-payouts-commands.png",
+          "expected": "e7c39dae2bb756abbf79b6b878184f1c4975e8500c4e8dc31270f19f1d8cc6c7",
+          "actual": "e7c39dae2bb756abbf79b6b878184f1c4975e8500c4e8dc31270f19f1d8cc6c7",
+          "expectedBytes": 586342,
+          "actualBytes": 586342,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-1440-owner-settings-compatibility.png",
+          "expected": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "actual": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "expectedBytes": 47617,
+          "actualBytes": 47617,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-finance-payouts-commands.png",
+          "expected": "fd46bed8dab1862217fb37e2131dbbefd75c57409b697a75ac22cdee19de1d56",
+          "actual": "fd46bed8dab1862217fb37e2131dbbefd75c57409b697a75ac22cdee19de1d56",
+          "expectedBytes": 781330,
+          "actualBytes": 781330,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-finance-settings-compatibility.png",
+          "expected": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "actual": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "expectedBytes": 38464,
+          "actualBytes": 38464,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-manager-payouts-commands.png",
+          "expected": "22799c34c4b3f9a08f639252683ee709190812677197b3dbe9899ae0386b23cb",
+          "actual": "22799c34c4b3f9a08f639252683ee709190812677197b3dbe9899ae0386b23cb",
+          "expectedBytes": 92235,
+          "actualBytes": 92235,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-manager-settings-compatibility.png",
+          "expected": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+          "actual": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+          "expectedBytes": 32623,
+          "actualBytes": 32623,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-owner-add-funds-open.png",
+          "expected": "9fc40aefe941b32e0bf39ff97b385a38b46edea3eb67ebfb3b93bbbefecdcfdd",
+          "actual": "9fc40aefe941b32e0bf39ff97b385a38b46edea3eb67ebfb3b93bbbefecdcfdd",
+          "expectedBytes": 751899,
+          "actualBytes": 751899,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-owner-add-funds-ready-no-submit.png",
+          "expected": "69bb466567d0ed4a733fa9b109ac07876411a4a3e4e741303da9ea5263b72039",
+          "actual": "69bb466567d0ed4a733fa9b109ac07876411a4a3e4e741303da9ea5263b72039",
+          "expectedBytes": 757079,
+          "actualBytes": 757079,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-owner-add-funds-validation.png",
+          "expected": "00ce980da5349f84db78e10930cde6be66fcf41e25bcca799ba5eba2d7f34148",
+          "actual": "00ce980da5349f84db78e10930cde6be66fcf41e25bcca799ba5eba2d7f34148",
+          "expectedBytes": 755621,
+          "actualBytes": 755621,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-owner-brand-return-open.png",
+          "expected": "7c71cb6aceedb377dfdd767feec9f1a6702b84c15d033bf9a80c37c6a7800c8d",
+          "actual": "7c71cb6aceedb377dfdd767feec9f1a6702b84c15d033bf9a80c37c6a7800c8d",
+          "expectedBytes": 773361,
+          "actualBytes": 773361,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-owner-brand-return-validation.png",
+          "expected": "b057d0172682836a6754f79b8411f42b275e64c8c5b674cc7b360e7952d8fcc8",
+          "actual": "b057d0172682836a6754f79b8411f42b275e64c8c5b674cc7b360e7952d8fcc8",
+          "expectedBytes": 776373,
+          "actualBytes": 776373,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-owner-payouts-commands.png",
+          "expected": "e9341713be13576f9f2d82dee71aa4045ab50970858ff81860d534179861fddc",
+          "actual": "e9341713be13576f9f2d82dee71aa4045ab50970858ff81860d534179861fddc",
+          "expectedBytes": 781541,
+          "actualBytes": 781541,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-390-owner-settings-compatibility.png",
+          "expected": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "actual": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "expectedBytes": 38464,
+          "actualBytes": 38464,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-finance-payouts-commands.png",
+          "expected": "5c370e8930f9059968c8bcf33e22cded1f11d1ea5ec24f98f1b335b3c0eb0c5e",
+          "actual": "5c370e8930f9059968c8bcf33e22cded1f11d1ea5ec24f98f1b335b3c0eb0c5e",
+          "expectedBytes": 722915,
+          "actualBytes": 722915,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-finance-settings-compatibility.png",
+          "expected": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "actual": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "expectedBytes": 40701,
+          "actualBytes": 40701,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-manager-payouts-commands.png",
+          "expected": "bb397c80e0c8f8837e311f631042948635eb27cdd9fda11648d9217d632f4956",
+          "actual": "bb397c80e0c8f8837e311f631042948635eb27cdd9fda11648d9217d632f4956",
+          "expectedBytes": 99207,
+          "actualBytes": 99207,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-manager-settings-compatibility.png",
+          "expected": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+          "actual": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+          "expectedBytes": 34362,
+          "actualBytes": 34362,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-owner-add-funds-open.png",
+          "expected": "264e9600e72f059d9530b7bb337ed667933e9d243b9d6fbaeface4a7660c4789",
+          "actual": "264e9600e72f059d9530b7bb337ed667933e9d243b9d6fbaeface4a7660c4789",
+          "expectedBytes": 701233,
+          "actualBytes": 701233,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-owner-add-funds-ready-no-submit.png",
+          "expected": "e1fde4f31940cd7c9381dcf30611140dabede85472c0fc4841b60f69cdc511b0",
+          "actual": "e1fde4f31940cd7c9381dcf30611140dabede85472c0fc4841b60f69cdc511b0",
+          "expectedBytes": 703929,
+          "actualBytes": 703929,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-owner-add-funds-validation.png",
+          "expected": "302aa56f255e2f7ed65a4254f625a0511608b9eca9dcc187bf2e11941437900d",
+          "actual": "302aa56f255e2f7ed65a4254f625a0511608b9eca9dcc187bf2e11941437900d",
+          "expectedBytes": 703180,
+          "actualBytes": 703180,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-owner-brand-return-open.png",
+          "expected": "84b8ced938769acef3a67d51da13b90d4357a8ceb3a52f05c442384a3ccbb3e1",
+          "actual": "84b8ced938769acef3a67d51da13b90d4357a8ceb3a52f05c442384a3ccbb3e1",
+          "expectedBytes": 712020,
+          "actualBytes": 712020,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-owner-brand-return-validation.png",
+          "expected": "f876459ba71179c8a217241ff507ef99fd340f33c6308387a275266f0fdde502",
+          "actual": "f876459ba71179c8a217241ff507ef99fd340f33c6308387a275266f0fdde502",
+          "expectedBytes": 713460,
+          "actualBytes": 713460,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-owner-payouts-commands.png",
+          "expected": "d3e3e9d10257966dcb7ff9ab05397dfd5ad11ec5271a84d6e52311d39b4e6bf1",
+          "actual": "d3e3e9d10257966dcb7ff9ab05397dfd5ad11ec5271a84d6e52311d39b4e6bf1",
+          "expectedBytes": 722972,
+          "actualBytes": 722972,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-767-owner-settings-compatibility.png",
+          "expected": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "actual": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "expectedBytes": 40701,
+          "actualBytes": 40701,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-finance-payouts-commands.png",
+          "expected": "10d5e9f11fe64e51c6d4452e50f63883575c138b1152cc9341a73802987d2d32",
+          "actual": "10d5e9f11fe64e51c6d4452e50f63883575c138b1152cc9341a73802987d2d32",
+          "expectedBytes": 574451,
+          "actualBytes": 574451,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-finance-settings-compatibility.png",
+          "expected": "fee6a4260ea31e401fcc9be16f33cf9fababb9ea301191c78ce8a9a28f49a9ae",
+          "actual": "fee6a4260ea31e401fcc9be16f33cf9fababb9ea301191c78ce8a9a28f49a9ae",
+          "expectedBytes": 46158,
+          "actualBytes": 46158,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-manager-payouts-commands.png",
+          "expected": "c15ff0f9f4fa22bb8efcdbafa61862b46ada814647de03973c81dcb6b401abaa",
+          "actual": "c15ff0f9f4fa22bb8efcdbafa61862b46ada814647de03973c81dcb6b401abaa",
+          "expectedBytes": 112307,
+          "actualBytes": 112307,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-manager-settings-compatibility.png",
+          "expected": "86d21aa1b5467980adb3cc9e889c13a3bd39ef5d576b00f32d22e8c9307444e6",
+          "actual": "86d21aa1b5467980adb3cc9e889c13a3bd39ef5d576b00f32d22e8c9307444e6",
+          "expectedBytes": 37975,
+          "actualBytes": 37975,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-owner-add-funds-open.png",
+          "expected": "16128f599c5ea8a847e36e2e1f3304091b4ffc66cfb6dabdaff893bd88aa2544",
+          "actual": "16128f599c5ea8a847e36e2e1f3304091b4ffc66cfb6dabdaff893bd88aa2544",
+          "expectedBytes": 591942,
+          "actualBytes": 591942,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-owner-add-funds-ready-no-submit.png",
+          "expected": "922d404007b8d7ee4977ad53e82b5857a2fbe010eeed47b192cfac04da7d7c8f",
+          "actual": "922d404007b8d7ee4977ad53e82b5857a2fbe010eeed47b192cfac04da7d7c8f",
+          "expectedBytes": 594170,
+          "actualBytes": 594170,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-owner-add-funds-validation.png",
+          "expected": "ab78d2772e0cc25553dbdecbbe71b49a8aa75afba37de2cc0071c9a9ed01e6dc",
+          "actual": "ab78d2772e0cc25553dbdecbbe71b49a8aa75afba37de2cc0071c9a9ed01e6dc",
+          "expectedBytes": 594583,
+          "actualBytes": 594583,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-owner-brand-return-open.png",
+          "expected": "0e241c622f029d3d5a23f0aff129ab77c98c7d4c58aed63ad16ec16cd353f4d3",
+          "actual": "0e241c622f029d3d5a23f0aff129ab77c98c7d4c58aed63ad16ec16cd353f4d3",
+          "expectedBytes": 598549,
+          "actualBytes": 598549,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-owner-brand-return-validation.png",
+          "expected": "eb24c76d3539b48bb02f11899ccc3b1f2280d169caa4d68f721790b213de026a",
+          "actual": "eb24c76d3539b48bb02f11899ccc3b1f2280d169caa4d68f721790b213de026a",
+          "expectedBytes": 599495,
+          "actualBytes": 599495,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-owner-payouts-commands.png",
+          "expected": "564671339d3b6e182b0aa5e9a72dd05aaa214fe87d0e1c4646d057c9f149e376",
+          "actual": "564671339d3b6e182b0aa5e9a72dd05aaa214fe87d0e1c4646d057c9f149e376",
+          "expectedBytes": 574561,
+          "actualBytes": 574561,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/PAYOUTS-768-owner-settings-compatibility.png",
+          "expected": "88148b5703954cf21a603ac376cacb87f31c608dda4f077beed00067bc07d4cc",
+          "actual": "88148b5703954cf21a603ac376cacb87f31c608dda4f077beed00067bc07d4cc",
+          "expectedBytes": 46077,
+          "actualBytes": 46077,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-finance-payouts-commands.png",
+          "expected": "0e34172971e7b0739408e04e955fb2f949357675e32504c14ef02bace8899daf",
+          "actual": "0e34172971e7b0739408e04e955fb2f949357675e32504c14ef02bace8899daf",
+          "expectedBytes": 581232,
+          "actualBytes": 581232,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-finance-settings-compatibility.png",
+          "expected": "b1918d9a8a5481672b39a9f8caede24a2bafb535845ab7243e0d20e14dda7ac0",
+          "actual": "b1918d9a8a5481672b39a9f8caede24a2bafb535845ab7243e0d20e14dda7ac0",
+          "expectedBytes": 265193,
+          "actualBytes": 265193,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-manager-payouts-commands.png",
+          "expected": "7e4813617fc8f93b41825bfcdfb19854f9e4ceb94b5b040afb0cee45095deb7b",
+          "actual": "7e4813617fc8f93b41825bfcdfb19854f9e4ceb94b5b040afb0cee45095deb7b",
+          "expectedBytes": 100912,
+          "actualBytes": 100912,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-manager-settings-compatibility.png",
+          "expected": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+          "actual": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+          "expectedBytes": 40224,
+          "actualBytes": 40224,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-owner-add-funds-open.png",
+          "expected": "1f9b5b778088dcc15b8fe707d4343070233c82ba9ab9ab798cf4c6432ed3003f",
+          "actual": "1f9b5b778088dcc15b8fe707d4343070233c82ba9ab9ab798cf4c6432ed3003f",
+          "expectedBytes": 353183,
+          "actualBytes": 353183,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-owner-add-funds-ready-no-submit.png",
+          "expected": "8c0d8fa0ec0daad03873f319eb55beccd4da987a8a1909958ba96a28b6d08774",
+          "actual": "8c0d8fa0ec0daad03873f319eb55beccd4da987a8a1909958ba96a28b6d08774",
+          "expectedBytes": 355161,
+          "actualBytes": 355161,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-owner-add-funds-validation.png",
+          "expected": "ea14109350f63a49c2387e775db5acc5dd262f666be22265b4f11d37f5f175e8",
+          "actual": "ea14109350f63a49c2387e775db5acc5dd262f666be22265b4f11d37f5f175e8",
+          "expectedBytes": 355943,
+          "actualBytes": 355943,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-owner-payouts-commands.png",
+          "expected": "00f0bc31d4d655c16f2c75a6389d5c3cba0b7de6b8b277b8d97acf0218206821",
+          "actual": "00f0bc31d4d655c16f2c75a6389d5c3cba0b7de6b8b277b8d97acf0218206821",
+          "expectedBytes": 581247,
+          "actualBytes": 581247,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-1440-owner-settings-compatibility.png",
+          "expected": "b1918d9a8a5481672b39a9f8caede24a2bafb535845ab7243e0d20e14dda7ac0",
+          "actual": "b1918d9a8a5481672b39a9f8caede24a2bafb535845ab7243e0d20e14dda7ac0",
+          "expectedBytes": 265193,
+          "actualBytes": 265193,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-finance-payouts-commands.png",
+          "expected": "8590d4d6cde99d44514e7ae3f36849959223cfceb57ccd839aa2ecabb2545b57",
+          "actual": "8590d4d6cde99d44514e7ae3f36849959223cfceb57ccd839aa2ecabb2545b57",
+          "expectedBytes": 776606,
+          "actualBytes": 776606,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-finance-settings-compatibility.png",
+          "expected": "9dcdad1d30d6544e2c1f4702f9a5ec02094e27d292237db993521341d7128060",
+          "actual": "9dcdad1d30d6544e2c1f4702f9a5ec02094e27d292237db993521341d7128060",
+          "expectedBytes": 240911,
+          "actualBytes": 240911,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-manager-payouts-commands.png",
+          "expected": "6017379409981e41d04f87a3b5e17d454faaa9dc2f6bd492a6167ace8481e0c7",
+          "actual": "6017379409981e41d04f87a3b5e17d454faaa9dc2f6bd492a6167ace8481e0c7",
+          "expectedBytes": 92277,
+          "actualBytes": 92277,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-manager-settings-compatibility.png",
+          "expected": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+          "actual": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+          "expectedBytes": 32623,
+          "actualBytes": 32623,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-owner-add-funds-open.png",
+          "expected": "2dc421be95b47a9acc4127858a8d98bcbe3c2f73f646662bfe3aafca7f57e3c6",
+          "actual": "2dc421be95b47a9acc4127858a8d98bcbe3c2f73f646662bfe3aafca7f57e3c6",
+          "expectedBytes": 225070,
+          "actualBytes": 225070,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-owner-add-funds-ready-no-submit.png",
+          "expected": "5ce4000526079057bd014c2e2d8a884832b905c70eb2af40fa51dbc04e75ba8b",
+          "actual": "5ce4000526079057bd014c2e2d8a884832b905c70eb2af40fa51dbc04e75ba8b",
+          "expectedBytes": 227483,
+          "actualBytes": 227483,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-owner-add-funds-validation.png",
+          "expected": "e945c9ea793299a330f0cc3c629b839ab40162a08977a2c99fd133b4bf0898b6",
+          "actual": "e945c9ea793299a330f0cc3c629b839ab40162a08977a2c99fd133b4bf0898b6",
+          "expectedBytes": 226678,
+          "actualBytes": 226678,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-owner-payouts-commands.png",
+          "expected": "6cc639a1ef6eb84afc701b47012c78843d194f73f7c9ae62ac88ba604595824a",
+          "actual": "6cc639a1ef6eb84afc701b47012c78843d194f73f7c9ae62ac88ba604595824a",
+          "expectedBytes": 776742,
+          "actualBytes": 776742,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-390-owner-settings-compatibility.png",
+          "expected": "9dcdad1d30d6544e2c1f4702f9a5ec02094e27d292237db993521341d7128060",
+          "actual": "9dcdad1d30d6544e2c1f4702f9a5ec02094e27d292237db993521341d7128060",
+          "expectedBytes": 240911,
+          "actualBytes": 240911,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-finance-payouts-commands.png",
+          "expected": "f01b47686361a0606e5e16ca781aafd743279ae6a9791f6d9941552dff464bc5",
+          "actual": "f01b47686361a0606e5e16ca781aafd743279ae6a9791f6d9941552dff464bc5",
+          "expectedBytes": 719572,
+          "actualBytes": 719572,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-finance-settings-compatibility.png",
+          "expected": "04a1b8b5fdb42470b75ac6fca76fea65333260c7c15f65ab55fa35b109a5cfca",
+          "actual": "04a1b8b5fdb42470b75ac6fca76fea65333260c7c15f65ab55fa35b109a5cfca",
+          "expectedBytes": 250322,
+          "actualBytes": 250322,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-manager-payouts-commands.png",
+          "expected": "db8af887d5cbe162700955925740cde35ee12a8023459bafb51ed0cbef502646",
+          "actual": "db8af887d5cbe162700955925740cde35ee12a8023459bafb51ed0cbef502646",
+          "expectedBytes": 99395,
+          "actualBytes": 99395,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-manager-settings-compatibility.png",
+          "expected": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+          "actual": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+          "expectedBytes": 34362,
+          "actualBytes": 34362,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-owner-add-funds-open.png",
+          "expected": "fa755f3daa18b10a2af1a18f222e740cdb34acc0148e47c9edbbe044950320f2",
+          "actual": "fa755f3daa18b10a2af1a18f222e740cdb34acc0148e47c9edbbe044950320f2",
+          "expectedBytes": 232666,
+          "actualBytes": 232666,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-owner-add-funds-ready-no-submit.png",
+          "expected": "eb10e5cb036f27dbdbaeb4eebf0c60658af6c41a8f5816bb81b032a507a97b3e",
+          "actual": "eb10e5cb036f27dbdbaeb4eebf0c60658af6c41a8f5816bb81b032a507a97b3e",
+          "expectedBytes": 235554,
+          "actualBytes": 235554,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-owner-add-funds-validation.png",
+          "expected": "714e750b996b93299fc9cb0be01a3a621a06abc30411097a035edbec1a7c3999",
+          "actual": "714e750b996b93299fc9cb0be01a3a621a06abc30411097a035edbec1a7c3999",
+          "expectedBytes": 234750,
+          "actualBytes": 234750,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-owner-payouts-commands.png",
+          "expected": "cdfe1e65c13705457d64de69ceac48c1cee069dc167acffe5749a28e8dc17e99",
+          "actual": "cdfe1e65c13705457d64de69ceac48c1cee069dc167acffe5749a28e8dc17e99",
+          "expectedBytes": 719644,
+          "actualBytes": 719644,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-767-owner-settings-compatibility.png",
+          "expected": "04a1b8b5fdb42470b75ac6fca76fea65333260c7c15f65ab55fa35b109a5cfca",
+          "actual": "04a1b8b5fdb42470b75ac6fca76fea65333260c7c15f65ab55fa35b109a5cfca",
+          "expectedBytes": 250322,
+          "actualBytes": 250322,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-finance-payouts-commands.png",
+          "expected": "ec7d16db70df89bab826a7e8ff68c456245a0155228f3cb65e75300f78d3eded",
+          "actual": "ec7d16db70df89bab826a7e8ff68c456245a0155228f3cb65e75300f78d3eded",
+          "expectedBytes": 568747,
+          "actualBytes": 568747,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-finance-settings-compatibility.png",
+          "expected": "ec21bd5be8ab6f5a027f84adf43b33ff68cbe8f41512369560c30d99b53ccf12",
+          "actual": "ec21bd5be8ab6f5a027f84adf43b33ff68cbe8f41512369560c30d99b53ccf12",
+          "expectedBytes": 252154,
+          "actualBytes": 252154,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-manager-payouts-commands.png",
+          "expected": "4e99f40b3126112aaece4da05df289de2fe9cb3140228b33b2cd71a109dc87c6",
+          "actual": "4e99f40b3126112aaece4da05df289de2fe9cb3140228b33b2cd71a109dc87c6",
+          "expectedBytes": 112540,
+          "actualBytes": 112540,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-manager-settings-compatibility.png",
+          "expected": "1e35a1905ac2448171d5c7d713695af6b407152ee95698fc00569ebdb052108f",
+          "actual": "1e35a1905ac2448171d5c7d713695af6b407152ee95698fc00569ebdb052108f",
+          "expectedBytes": 37993,
+          "actualBytes": 37993,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-owner-add-funds-open.png",
+          "expected": "e2fe2f738454a0f492b0e9ff5aa23d46ea60e3f0bfff1fefb834ae3b5cacff09",
+          "actual": "e2fe2f738454a0f492b0e9ff5aa23d46ea60e3f0bfff1fefb834ae3b5cacff09",
+          "expectedBytes": 283074,
+          "actualBytes": 283074,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-owner-add-funds-ready-no-submit.png",
+          "expected": "285178bf794216a5d3d4ee16d7edd149d2da1e1ac749da33d30120358d6931dc",
+          "actual": "285178bf794216a5d3d4ee16d7edd149d2da1e1ac749da33d30120358d6931dc",
+          "expectedBytes": 285291,
+          "actualBytes": 285291,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-owner-add-funds-validation.png",
+          "expected": "5a2a6423b060bed52612f9c261fb92f2c17f219fed83b6d5ae6ff09eded278bd",
+          "actual": "5a2a6423b060bed52612f9c261fb92f2c17f219fed83b6d5ae6ff09eded278bd",
+          "expectedBytes": 285524,
+          "actualBytes": 285524,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-owner-payouts-commands.png",
+          "expected": "73d3cff3ca9bba6d664f2361bf60a27adf78f2c418d173a6bac735d0cd67a8ca",
+          "actual": "73d3cff3ca9bba6d664f2361bf60a27adf78f2c418d173a6bac735d0cd67a8ca",
+          "expectedBytes": 568812,
+          "actualBytes": 568812,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/SETTINGS-768-owner-settings-compatibility.png",
+          "expected": "e198ae946fc2d28f70c72de69017f19fd37780d8bbcefb32f6b24adff4d936c6",
+          "actual": "e198ae946fc2d28f70c72de69017f19fd37780d8bbcefb32f6b24adff4d936c6",
+          "expectedBytes": 252204,
+          "actualBytes": 252204,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/accessibility-failure.json",
+          "expected": "781c8f2ff1b8684a11f0ac8e9a5dc2a85ad6140dd2d363355d2da3d9e9327aed",
+          "actual": "781c8f2ff1b8684a11f0ac8e9a5dc2a85ad6140dd2d363355d2da3d9e9327aed",
+          "expectedBytes": 138483,
+          "actualBytes": 138483,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/bounded-drawers-PAYOUTS.json",
+          "expected": "69a3a1a5ae10b083cd7e03c461481f561b57796a7f181115309e3d678ea68f16",
+          "actual": "69a3a1a5ae10b083cd7e03c461481f561b57796a7f181115309e3d678ea68f16",
+          "expectedBytes": 325254,
+          "actualBytes": 325254,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/bounded-drawers-SETTINGS.json",
+          "expected": "3cab0ddf9889e086664c851f978de3d82a9ca926397d448ee404d37dbb65027f",
+          "actual": "3cab0ddf9889e086664c851f978de3d82a9ca926397d448ee404d37dbb65027f",
+          "expectedBytes": 93434,
+          "actualBytes": 93434,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/browser-preflight-PAYOUTS.json",
+          "expected": "09b2b31206492eb4f0290b48c9c4decf91b8a66c6fe104f8ac08ee69c45b986e",
+          "actual": "09b2b31206492eb4f0290b48c9c4decf91b8a66c6fe104f8ac08ee69c45b986e",
+          "expectedBytes": 583863,
+          "actualBytes": 583863,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/browser-preflight-SETTINGS.json",
+          "expected": "7a43c1d3e317673dd7669a99255becc9125efccc9976f85bd3b64f937f77e414",
+          "actual": "7a43c1d3e317673dd7669a99255becc9125efccc9976f85bd3b64f937f77e414",
+          "expectedBytes": 623518,
+          "actualBytes": 623518,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/browser-summary.json",
+          "expected": "4bf940fc7bbad3383ac8a6b404d0eb781675703833e7d95d7daca473de4ed11f",
+          "actual": "4bf940fc7bbad3383ac8a6b404d0eb781675703833e7d95d7daca473de4ed11f",
+          "expectedBytes": 16874,
+          "actualBytes": 16874,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/built-runtime.json",
+          "expected": "914aeb042bf149abbbd73b7e93bdc2b5ef96db995692436a5e7aac397b26346d",
+          "actual": "914aeb042bf149abbbd73b7e93bdc2b5ef96db995692436a5e7aac397b26346d",
+          "expectedBytes": 4931,
+          "actualBytes": 4931,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/circuit-breaker.json",
+          "expected": "c419a504b47b058c865663fba07fd26e4e3ff589be92c6a63f07580016fe2e36",
+          "actual": "c419a504b47b058c865663fba07fd26e4e3ff589be92c6a63f07580016fe2e36",
+          "expectedBytes": 1749,
+          "actualBytes": 1749,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/database-lifecycle.json",
+          "expected": "76e1d40dd647b89c9a2fa14a50b53addb66f84b78c9649fd1f7021a404fe1e9e",
+          "actual": "76e1d40dd647b89c9a2fa14a50b53addb66f84b78c9649fd1f7021a404fe1e9e",
+          "expectedBytes": 19821,
+          "actualBytes": 19821,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-1440-finance-payouts-commands.png",
+          "expected": "2faa57101f9891c4d52484e17f64cdd311493426b3223c56f0ade53a69d4a166",
+          "actual": "2faa57101f9891c4d52484e17f64cdd311493426b3223c56f0ade53a69d4a166",
+          "expectedBytes": 586312,
+          "actualBytes": 586312,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-1440-finance-settings-compatibility.png",
+          "expected": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "actual": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "expectedBytes": 47617,
+          "actualBytes": 47617,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-1440-manager-payouts-commands.png",
+          "expected": "960ac94df70a4dbbacb206b299c3ccefedf579271406ee2d2baf2b2391051c8c",
+          "actual": "960ac94df70a4dbbacb206b299c3ccefedf579271406ee2d2baf2b2391051c8c",
+          "expectedBytes": 100779,
+          "actualBytes": 100779,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-1440-manager-settings-compatibility.png",
+          "expected": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+          "actual": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+          "expectedBytes": 40224,
+          "actualBytes": 40224,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-1440-owner-payouts-commands.png",
+          "expected": "e4c66ad2dd2e9e7febeb95b3e0982873ad2e7adf748e4eedd421f8984c574533",
+          "actual": "e4c66ad2dd2e9e7febeb95b3e0982873ad2e7adf748e4eedd421f8984c574533",
+          "expectedBytes": 586326,
+          "actualBytes": 586326,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-1440-owner-settings-compatibility.png",
+          "expected": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "actual": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+          "expectedBytes": 47617,
+          "actualBytes": 47617,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-390-finance-payouts-commands.png",
+          "expected": "25643f7a4ab651f427bebbd44babd7fb24908bb5c57eeccc7c6c698026e6f87a",
+          "actual": "25643f7a4ab651f427bebbd44babd7fb24908bb5c57eeccc7c6c698026e6f87a",
+          "expectedBytes": 781295,
+          "actualBytes": 781295,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-390-finance-settings-compatibility.png",
+          "expected": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "actual": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "expectedBytes": 38464,
+          "actualBytes": 38464,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-390-manager-payouts-commands.png",
+          "expected": "1594ac47c9916048588c01e7195c5578df9050f0281ed45ad6cef6a309fc3edc",
+          "actual": "1594ac47c9916048588c01e7195c5578df9050f0281ed45ad6cef6a309fc3edc",
+          "expectedBytes": 92313,
+          "actualBytes": 92313,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-390-manager-settings-compatibility.png",
+          "expected": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+          "actual": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+          "expectedBytes": 32623,
+          "actualBytes": 32623,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-390-owner-payouts-commands.png",
+          "expected": "7c7b9072e763113ca380080ef8661b1832f47999bc06eae82e429b3ef1e8053f",
+          "actual": "7c7b9072e763113ca380080ef8661b1832f47999bc06eae82e429b3ef1e8053f",
+          "expectedBytes": 781437,
+          "actualBytes": 781437,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-390-owner-settings-compatibility.png",
+          "expected": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "actual": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+          "expectedBytes": 38464,
+          "actualBytes": 38464,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-767-finance-payouts-commands.png",
+          "expected": "43a7d95738eb34b6fea8f24e03685190d592d7689dd2b5b87be943be66588b65",
+          "actual": "43a7d95738eb34b6fea8f24e03685190d592d7689dd2b5b87be943be66588b65",
+          "expectedBytes": 722916,
+          "actualBytes": 722916,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-767-finance-settings-compatibility.png",
+          "expected": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "actual": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "expectedBytes": 40701,
+          "actualBytes": 40701,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-767-manager-payouts-commands.png",
+          "expected": "8ef8f3ffb17bcc7ee1fd81c18d30a2eca5551f76bfea19e36bdddd84b73a63cd",
+          "actual": "8ef8f3ffb17bcc7ee1fd81c18d30a2eca5551f76bfea19e36bdddd84b73a63cd",
+          "expectedBytes": 99201,
+          "actualBytes": 99201,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-767-manager-settings-compatibility.png",
+          "expected": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+          "actual": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+          "expectedBytes": 34362,
+          "actualBytes": 34362,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-767-owner-payouts-commands.png",
+          "expected": "c7947c1e47e6cfed7060c786be5ae3fc04d0647a816807055a5f63712f52fecd",
+          "actual": "c7947c1e47e6cfed7060c786be5ae3fc04d0647a816807055a5f63712f52fecd",
+          "expectedBytes": 722987,
+          "actualBytes": 722987,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-767-owner-settings-compatibility.png",
+          "expected": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "actual": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+          "expectedBytes": 40701,
+          "actualBytes": 40701,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-768-finance-payouts-commands.png",
+          "expected": "91e2bebca415fa48b78850c08227c2286881913e6af0acf5b3588c30ebd99a83",
+          "actual": "91e2bebca415fa48b78850c08227c2286881913e6af0acf5b3588c30ebd99a83",
+          "expectedBytes": 574433,
+          "actualBytes": 574433,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-768-finance-settings-compatibility.png",
+          "expected": "29f729935c06a2665d1275a17ff04ddaa267c62eb870ac24a30ba27fd9cac9ca",
+          "actual": "29f729935c06a2665d1275a17ff04ddaa267c62eb870ac24a30ba27fd9cac9ca",
+          "expectedBytes": 46092,
+          "actualBytes": 46092,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-768-manager-payouts-commands.png",
+          "expected": "3261f539fc1ef7ff37d8393288bf47eb128a8ab8d74fd273804bb7b4ce20e7d2",
+          "actual": "3261f539fc1ef7ff37d8393288bf47eb128a8ab8d74fd273804bb7b4ce20e7d2",
+          "expectedBytes": 112304,
+          "actualBytes": 112304,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-768-manager-settings-compatibility.png",
+          "expected": "86d21aa1b5467980adb3cc9e889c13a3bd39ef5d576b00f32d22e8c9307444e6",
+          "actual": "86d21aa1b5467980adb3cc9e889c13a3bd39ef5d576b00f32d22e8c9307444e6",
+          "expectedBytes": 37975,
+          "actualBytes": 37975,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-768-owner-payouts-commands.png",
+          "expected": "93207404e8fd2f0d3d97813e891ca96f3b521870024bef1c4e0ff5e681ecc68f",
+          "actual": "93207404e8fd2f0d3d97813e891ca96f3b521870024bef1c4e0ff5e681ecc68f",
+          "expectedBytes": 574579,
+          "actualBytes": 574579,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-PAYOUTS-768-owner-settings-compatibility.png",
+          "expected": "88148b5703954cf21a603ac376cacb87f31c608dda4f077beed00067bc07d4cc",
+          "actual": "88148b5703954cf21a603ac376cacb87f31c608dda4f077beed00067bc07d4cc",
+          "expectedBytes": 46077,
+          "actualBytes": 46077,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment-build-attempt-browser-preflight-PAYOUTS.json",
+          "expected": "65bb452ed5264615c149e813b63b433d7e9fcb4ca352706afe5d12675d978bd4",
+          "actual": "65bb452ed5264615c149e813b63b433d7e9fcb4ca352706afe5d12675d978bd4",
+          "expectedBytes": 489349,
+          "actualBytes": 489349,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/environment.json",
+          "expected": "4e47d1cdfabfb7d2380db036a47034e3870cc2212818300bc8b567cec95f5982",
+          "actual": "4e47d1cdfabfb7d2380db036a47034e3870cc2212818300bc8b567cec95f5982",
+          "expectedBytes": 1974,
+          "actualBytes": 1974,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/financial-purity.json",
+          "expected": "6f731e6ba5e506968ef5ab655c9d8c2514fb7ea8908a06c2391a48298a2a7d7a",
+          "actual": "6f731e6ba5e506968ef5ab655c9d8c2514fb7ea8908a06c2391a48298a2a7d7a",
+          "expectedBytes": 10415,
+          "actualBytes": 10415,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/harness-correction.json",
+          "expected": "da26e4858129e11919fe693257263c9b0c425d07356de3a4bb7626c50667e233",
+          "actual": "da26e4858129e11919fe693257263c9b0c425d07356de3a4bb7626c50667e233",
+          "expectedBytes": 1078,
+          "actualBytes": 1078,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/network-provider-summary.json",
+          "expected": "4cfc3295519e34b28b25dc8239474e5fde875f7fb3135fa3b3c186f9dfa27444",
+          "actual": "4cfc3295519e34b28b25dc8239474e5fde875f7fb3135fa3b3c186f9dfa27444",
+          "expectedBytes": 1036,
+          "actualBytes": 1036,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/postgresql-security.json",
+          "expected": "bdc87d30d008f722d63c8786f770fcefcb738f8bc01dd5d5328fd23c4e3cb105",
+          "actual": "bdc87d30d008f722d63c8786f770fcefcb738f8bc01dd5d5328fd23c4e3cb105",
+          "expectedBytes": 132731,
+          "actualBytes": 132731,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/shutdown.json",
+          "expected": "d8d8f4095fd8cd2d4d97d43d8f8e2f75d2fbb0727fee8f53888a988f3a578dde",
+          "actual": "d8d8f4095fd8cd2d4d97d43d8f8e2f75d2fbb0727fee8f53888a988f3a578dde",
+          "expectedBytes": 906,
+          "actualBytes": 906,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/source-binding.json",
+          "expected": "5d7ced685a105f437f78aa621d34427cc2f7cda7b1864a4133d63252e3b402c5",
+          "actual": "5d7ced685a105f437f78aa621d34427cc2f7cda7b1864a4133d63252e3b402c5",
+          "expectedBytes": 9321,
+          "actualBytes": 9321,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/source-gates.json",
+          "expected": "a7ac70eb9ed2ce2a8fa5adebf81ff52f9dd455d04a8905bb0a057f7c4c292e9f",
+          "actual": "a7ac70eb9ed2ce2a8fa5adebf81ff52f9dd455d04a8905bb0a057f7c4c292e9f",
+          "expectedBytes": 41012,
+          "actualBytes": 41012,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v1/validation.json",
+          "expected": "98ecfddcc560bbc2a3422129d9f5a96f1ed82198a2e711d27a7805b968b8be1b",
+          "actual": "98ecfddcc560bbc2a3422129d9f5a96f1ed82198a2e711d27a7805b968b8be1b",
+          "expectedBytes": 617,
+          "actualBytes": 617,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v1.md",
+          "expected": "51f0ff03567ce711aa1d9bff4c462fd459430fe8616483576bfcf9b12255c358",
+          "actual": "51f0ff03567ce711aa1d9bff4c462fd459430fe8616483576bfcf9b12255c358",
+          "expectedBytes": 10324,
+          "actualBytes": 10324,
+          "pass": true
+        }
+      ],
+      "evidenceOnly": true
+    },
+    {
+      "version": 2,
+      "commit": "db15bde0b8c7544b4cc9a314a235045868896d1f",
+      "tree": "8251f7f93a17235ceb4c6697ad62a0df5d296934",
+      "checks": [
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-1440-anonymous-unauthenticated-entry.png",
+          "expected": "9913e740cdd4b531d20cdeda7589cee62f0c21cbdeb0d40084fd75719e46bbd2",
+          "actual": "9913e740cdd4b531d20cdeda7589cee62f0c21cbdeb0d40084fd75719e46bbd2",
+          "expectedBytes": 31816,
+          "actualBytes": 31816,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-1440-owner-add-funds-open.png",
+          "expected": "1b308f599df6da5285388806eaff5385b5ce9274bf3aac7d998ed58b9ed0909e",
+          "actual": "1b308f599df6da5285388806eaff5385b5ce9274bf3aac7d998ed58b9ed0909e",
+          "expectedBytes": 689691,
+          "actualBytes": 689691,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-1440-owner-brand-return-open.png",
+          "expected": "77a26e44694da0f1b7d03e9f934824dfd554107c007c98946b874244fd1f1ad1",
+          "actual": "77a26e44694da0f1b7d03e9f934824dfd554107c007c98946b874244fd1f1ad1",
+          "expectedBytes": 710315,
+          "actualBytes": 710315,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-1440-owner-payouts-surface.png",
+          "expected": "07f4751cfa2004b2de1f43c5c5997d3cabb17ed69905b3aa97381b138a4ca5af",
+          "actual": "07f4751cfa2004b2de1f43c5c5997d3cabb17ed69905b3aa97381b138a4ca5af",
+          "expectedBytes": 582447,
+          "actualBytes": 582447,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-1440-owner-settings-surface.png",
+          "expected": "3b622405a99d9d52e74478efd27a4cd17188c07df020abff0475afc806f70e12",
+          "actual": "3b622405a99d9d52e74478efd27a4cd17188c07df020abff0475afc806f70e12",
+          "expectedBytes": 47505,
+          "actualBytes": 47505,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-390-anonymous-unauthenticated-entry.png",
+          "expected": "f886e8b65e063f7e78aa17418e8b6ada562e2fbf30633e16d11eb7cd8d1e110d",
+          "actual": "f886e8b65e063f7e78aa17418e8b6ada562e2fbf30633e16d11eb7cd8d1e110d",
+          "expectedBytes": 26325,
+          "actualBytes": 26325,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-390-owner-add-funds-open.png",
+          "expected": "d27e8823cb3a0264fc9211826db305e5ef93a88d325fe272a65e122d7296e628",
+          "actual": "d27e8823cb3a0264fc9211826db305e5ef93a88d325fe272a65e122d7296e628",
+          "expectedBytes": 759001,
+          "actualBytes": 759001,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-390-owner-brand-return-open.png",
+          "expected": "a50ce085c84282c69fb8ca3cfe365df0fc98158bbd1f95106e9da3d1d470d225",
+          "actual": "a50ce085c84282c69fb8ca3cfe365df0fc98158bbd1f95106e9da3d1d470d225",
+          "expectedBytes": 888734,
+          "actualBytes": 888734,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-390-owner-payouts-surface.png",
+          "expected": "5acb13a5fe3d7d2e0c411dc23f93e3e37547181cd43c32b027d688c2715d0a70",
+          "actual": "5acb13a5fe3d7d2e0c411dc23f93e3e37547181cd43c32b027d688c2715d0a70",
+          "expectedBytes": 789181,
+          "actualBytes": 789181,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-390-owner-settings-surface.png",
+          "expected": "bb80a61e3f5917bebf05767de736d9de1b074f4d597bb817ab701278ea8b8e67",
+          "actual": "bb80a61e3f5917bebf05767de736d9de1b074f4d597bb817ab701278ea8b8e67",
+          "expectedBytes": 38336,
+          "actualBytes": 38336,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-767-anonymous-unauthenticated-entry.png",
+          "expected": "aa462099f7bccf33a5a84c9fb2ea35df041f37229a15c5252aa7ed022ef17cca",
+          "actual": "aa462099f7bccf33a5a84c9fb2ea35df041f37229a15c5252aa7ed022ef17cca",
+          "expectedBytes": 28426,
+          "actualBytes": 28426,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-767-owner-add-funds-open.png",
+          "expected": "ebcbdb7893e3a4c8e09a528540771f38afbbfa18c2371eb7375ee6de58f73d59",
+          "actual": "ebcbdb7893e3a4c8e09a528540771f38afbbfa18c2371eb7375ee6de58f73d59",
+          "expectedBytes": 748686,
+          "actualBytes": 748686,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-767-owner-brand-return-open.png",
+          "expected": "75e3d3a4fd8cf3ce48e847d902e0509e451f882323d3eb1c93a514096a64867a",
+          "actual": "75e3d3a4fd8cf3ce48e847d902e0509e451f882323d3eb1c93a514096a64867a",
+          "expectedBytes": 774873,
+          "actualBytes": 774873,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-767-owner-payouts-surface.png",
+          "expected": "4923beda69f0a7643b09bb70d8b49b172e8d6e87c6a819d5ef61dfed480c925c",
+          "actual": "4923beda69f0a7643b09bb70d8b49b172e8d6e87c6a819d5ef61dfed480c925c",
+          "expectedBytes": 722034,
+          "actualBytes": 722034,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-767-owner-settings-surface.png",
+          "expected": "f6d239e35d5286465f8d37ce3eb7485a54a5c793d91d87bd0d643ac601b4d0f6",
+          "actual": "f6d239e35d5286465f8d37ce3eb7485a54a5c793d91d87bd0d643ac601b4d0f6",
+          "expectedBytes": 40636,
+          "actualBytes": 40636,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-768-anonymous-unauthenticated-entry.png",
+          "expected": "51c45dc60ef18cb435332a38b36fa98d0819ec2c5512dd657c6a6adcf4d66b2b",
+          "actual": "51c45dc60ef18cb435332a38b36fa98d0819ec2c5512dd657c6a6adcf4d66b2b",
+          "expectedBytes": 28978,
+          "actualBytes": 28978,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-768-owner-add-funds-open.png",
+          "expected": "dd057786579d3b3875400e26a040a35ee43da640d15cbb7a6b3baf4e25eaf51b",
+          "actual": "dd057786579d3b3875400e26a040a35ee43da640d15cbb7a6b3baf4e25eaf51b",
+          "expectedBytes": 637383,
+          "actualBytes": 637383,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-768-owner-brand-return-open.png",
+          "expected": "9fac180672dd79385b7396bcd5fafc9e5eefd4c712fc409324bc5fc6c3b6dccf",
+          "actual": "9fac180672dd79385b7396bcd5fafc9e5eefd4c712fc409324bc5fc6c3b6dccf",
+          "expectedBytes": 643583,
+          "actualBytes": 643583,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-768-owner-payouts-surface.png",
+          "expected": "ea280c3adc5c5eb1cce2c30698c421581ee8d80ea57b0ba67be94ca89c2b41d8",
+          "actual": "ea280c3adc5c5eb1cce2c30698c421581ee8d80ea57b0ba67be94ca89c2b41d8",
+          "expectedBytes": 583677,
+          "actualBytes": 583677,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/PAYOUTS-768-owner-settings-surface.png",
+          "expected": "cb3611afef2b16ecf530242e9f82068f1ae3deeab35979d056b388c76c5e5aba",
+          "actual": "cb3611afef2b16ecf530242e9f82068f1ae3deeab35979d056b388c76c5e5aba",
+          "expectedBytes": 45991,
+          "actualBytes": 45991,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-1440-owner-add-funds-open.png",
+          "expected": "dd530ee90f55fe0d6166c11b11b4bbb19f0b71ddbcb40d50d1cfcdb293927ca7",
+          "actual": "dd530ee90f55fe0d6166c11b11b4bbb19f0b71ddbcb40d50d1cfcdb293927ca7",
+          "expectedBytes": 425463,
+          "actualBytes": 425463,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-1440-owner-brand-return-open.png",
+          "expected": "f450570f1bb359061e6469b848620f7b36efed879111173588561bc65799c900",
+          "actual": "f450570f1bb359061e6469b848620f7b36efed879111173588561bc65799c900",
+          "expectedBytes": 446951,
+          "actualBytes": 446951,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-1440-owner-payouts-surface.png",
+          "expected": "660ceb8833779750bbd72c6461bd1534bf0a92c26b5f5219ed5eecc048fcd90e",
+          "actual": "660ceb8833779750bbd72c6461bd1534bf0a92c26b5f5219ed5eecc048fcd90e",
+          "expectedBytes": 577296,
+          "actualBytes": 577296,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-1440-owner-settings-surface.png",
+          "expected": "f47979a8c5709cbe16bdaafc044d37e3e98ff6956222a5654965a8f51131a8e0",
+          "actual": "f47979a8c5709cbe16bdaafc044d37e3e98ff6956222a5654965a8f51131a8e0",
+          "expectedBytes": 325892,
+          "actualBytes": 325892,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-390-owner-add-funds-open.png",
+          "expected": "c5843556b88cb72c7cf64d9a8d304d1335faa0abca6d2918e5f7eb8bbb0f5e43",
+          "actual": "c5843556b88cb72c7cf64d9a8d304d1335faa0abca6d2918e5f7eb8bbb0f5e43",
+          "expectedBytes": 276256,
+          "actualBytes": 276256,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-390-owner-brand-return-open.png",
+          "expected": "b514479d665d51505166b912bc9d9caeaa0c21b7475c58e0f29477cbccc1509b",
+          "actual": "b514479d665d51505166b912bc9d9caeaa0c21b7475c58e0f29477cbccc1509b",
+          "expectedBytes": 287233,
+          "actualBytes": 287233,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-390-owner-payouts-surface.png",
+          "expected": "5fec260fa9983a75cd6ccc2b02e98447984d60167a3133125807e4be38c87346",
+          "actual": "5fec260fa9983a75cd6ccc2b02e98447984d60167a3133125807e4be38c87346",
+          "expectedBytes": 785313,
+          "actualBytes": 785313,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-390-owner-settings-surface.png",
+          "expected": "7ded3e16e5a1cc3a62f87d28ccf62cef14f6eb220a76f1365b31a99492318fb4",
+          "actual": "7ded3e16e5a1cc3a62f87d28ccf62cef14f6eb220a76f1365b31a99492318fb4",
+          "expectedBytes": 293335,
+          "actualBytes": 293335,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-767-owner-add-funds-open.png",
+          "expected": "de779ad25038e1f65694b703e65e936206393518076427c52159652533374759",
+          "actual": "de779ad25038e1f65694b703e65e936206393518076427c52159652533374759",
+          "expectedBytes": 295174,
+          "actualBytes": 295174,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-767-owner-brand-return-open.png",
+          "expected": "a2649f775cb4a335f853662a6cf9418b95e71d648a9db0485ba1ee90e305d32f",
+          "actual": "a2649f775cb4a335f853662a6cf9418b95e71d648a9db0485ba1ee90e305d32f",
+          "expectedBytes": 330615,
+          "actualBytes": 330615,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-767-owner-payouts-surface.png",
+          "expected": "d69e142967cb8ba1210c999e20fab25ed9542f3174c350906b240a71db3a4c49",
+          "actual": "d69e142967cb8ba1210c999e20fab25ed9542f3174c350906b240a71db3a4c49",
+          "expectedBytes": 718847,
+          "actualBytes": 718847,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-767-owner-settings-surface.png",
+          "expected": "93fd8305aab02e4914f05e913fd0bedc170e5cb3b352db389b6fa3c280ec86da",
+          "actual": "93fd8305aab02e4914f05e913fd0bedc170e5cb3b352db389b6fa3c280ec86da",
+          "expectedBytes": 303818,
+          "actualBytes": 303818,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-768-owner-add-funds-open.png",
+          "expected": "f52c03f19d50838a8ff2e2dba5482058a0dcfd7456fb9d8e1078cf1b089946cc",
+          "actual": "f52c03f19d50838a8ff2e2dba5482058a0dcfd7456fb9d8e1078cf1b089946cc",
+          "expectedBytes": 351200,
+          "actualBytes": 351200,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-768-owner-brand-return-open.png",
+          "expected": "3f49d19d612547ab1a77e82b8e8f1c413f6336fdad73d3455df65970aa9a4aa7",
+          "actual": "3f49d19d612547ab1a77e82b8e8f1c413f6336fdad73d3455df65970aa9a4aa7",
+          "expectedBytes": 372264,
+          "actualBytes": 372264,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-768-owner-payouts-surface.png",
+          "expected": "f520353e047caa28e223e1d3340e39afc396a25936b42ffa1ef4d15dfaed0315",
+          "actual": "f520353e047caa28e223e1d3340e39afc396a25936b42ffa1ef4d15dfaed0315",
+          "expectedBytes": 578630,
+          "actualBytes": 578630,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/SETTINGS-768-owner-settings-surface.png",
+          "expected": "3776c123cb9d08b53437c907fc47d4d4b5828ee7bdfcb7f323b26576dcd96a02",
+          "actual": "3776c123cb9d08b53437c907fc47d4d4b5828ee7bdfcb7f323b26576dcd96a02",
+          "expectedBytes": 305547,
+          "actualBytes": 305547,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/accessibility-circuit-breaker.json",
+          "expected": "70e2adceaa38b70f4f9162a596842fef669dc0673a9962a20f047ae60ffc2ef0",
+          "actual": "70e2adceaa38b70f4f9162a596842fef669dc0673a9962a20f047ae60ffc2ef0",
+          "expectedBytes": 14637,
+          "actualBytes": 14637,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/browser-PAYOUTS.json",
+          "expected": "43c798d4a0fb15d32de54ec3c0611c70b9aa070e17409f4d86c2a81063f22b67",
+          "actual": "43c798d4a0fb15d32de54ec3c0611c70b9aa070e17409f4d86c2a81063f22b67",
+          "expectedBytes": 4825458,
+          "actualBytes": 4825458,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/browser-SETTINGS.json",
+          "expected": "2e59a070c51735375696eb75055f21cd544ac93254c1569adbf59f420cf9e883",
+          "actual": "2e59a070c51735375696eb75055f21cd544ac93254c1569adbf59f420cf9e883",
+          "expectedBytes": 2024544,
+          "actualBytes": 2024544,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/circuit-breaker.json",
+          "expected": "a5312799ba8ea2b5244cf2fc799863c5c00ccbbcaf5394ad78cac7f1003638ec",
+          "actual": "a5312799ba8ea2b5244cf2fc799863c5c00ccbbcaf5394ad78cac7f1003638ec",
+          "expectedBytes": 1347,
+          "actualBytes": 1347,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/contrast-correction.json",
+          "expected": "ebcc52108085d23117145f959e7e97d7db77dffbd378e6fb2269438e70117dee",
+          "actual": "ebcc52108085d23117145f959e7e97d7db77dffbd378e6fb2269438e70117dee",
+          "expectedBytes": 1446,
+          "actualBytes": 1446,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/database-lifecycle.json",
+          "expected": "4963670945ad95c7b99e97eabd3380c6dfd25321ede151f78911035e9e1471e4",
+          "actual": "4963670945ad95c7b99e97eabd3380c6dfd25321ede151f78911035e9e1471e4",
+          "expectedBytes": 727,
+          "actualBytes": 727,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/environment-and-database.json",
+          "expected": "980bc885e9d5069985607efa037faf0fb88157b6e863b9674e7f3dcb0df4dd04",
+          "actual": "980bc885e9d5069985607efa037faf0fb88157b6e863b9674e7f3dcb0df4dd04",
+          "expectedBytes": 821,
+          "actualBytes": 821,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/financial-fail-closed-and-replay.json",
+          "expected": "85afa91967d2a37bef75e6b27b1aaa4474414a4424c1486af7b8fe1f3d831203",
+          "actual": "85afa91967d2a37bef75e6b27b1aaa4474414a4424c1486af7b8fe1f3d831203",
+          "expectedBytes": 5314,
+          "actualBytes": 5314,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/fresh-frontend-gates.json",
+          "expected": "4e721c8332582fadd33a02db3f8fcb5655a47861e5740c4cbc026a96e38b9a6d",
+          "actual": "4e721c8332582fadd33a02db3f8fcb5655a47861e5740c4cbc026a96e38b9a6d",
+          "expectedBytes": 1318,
+          "actualBytes": 1318,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/http-mutation-admission.json",
+          "expected": "0c0f1a9ba18e3fe8e8d9035bb08c66b5b5683f44ea2b8bcd660bfd9105a7156f",
+          "actual": "0c0f1a9ba18e3fe8e8d9035bb08c66b5b5683f44ea2b8bcd660bfd9105a7156f",
+          "expectedBytes": 112711,
+          "actualBytes": 112711,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/runtime-and-provider.json",
+          "expected": "4dc94b04716c2d847de0a8c1bec97e69b1311a1858173321e1c9bdadd81ca880",
+          "actual": "4dc94b04716c2d847de0a8c1bec97e69b1311a1858173321e1c9bdadd81ca880",
+          "expectedBytes": 4750,
+          "actualBytes": 4750,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/shutdown.json",
+          "expected": "883121dfe5950baa14748a5ef4d339823fcdd869ad7c7033e9b2c1761df5f5d8",
+          "actual": "883121dfe5950baa14748a5ef4d339823fcdd869ad7c7033e9b2c1761df5f5d8",
+          "expectedBytes": 722,
+          "actualBytes": 722,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/source-binding.json",
+          "expected": "8083438cc3860978945ed114658727725597689ef5278e819daa4ee0f2129535",
+          "actual": "8083438cc3860978945ed114658727725597689ef5278e819daa4ee0f2129535",
+          "expectedBytes": 1246,
+          "actualBytes": 1246,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v2/v1-reuse-integrity.json",
+          "expected": "c4e5f6d98d3d580920529ef752f77fdc63612617b6f86de660d950be0bef2cfa",
+          "actual": "c4e5f6d98d3d580920529ef752f77fdc63612617b6f86de660d950be0bef2cfa",
+          "expectedBytes": 988,
+          "actualBytes": 988,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v2.md",
+          "expected": "ba462d684ccbee064ac15913a884695ed1530cb971fc92a7af1eaf7803a9c879",
+          "actual": "ba462d684ccbee064ac15913a884695ed1530cb971fc92a7af1eaf7803a9c879",
+          "expectedBytes": 4889,
+          "actualBytes": 4889,
+          "pass": true
+        }
+      ],
+      "evidenceOnly": true
+    },
+    {
+      "version": 3,
+      "commit": "858942ac73debfaebd89492a49e74aaf17c16d3e",
+      "tree": "2364b6e4eab2f46ae57ac24b4390a3c92828f6cc",
+      "checks": [
+        {
+          "path": "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v3.md",
+          "expected": "0c9d99bd4cf00f19c9200d8a71fc984794f88487adf9d94ece3d7e709ab7ccb8",
+          "actual": "0c9d99bd4cf00f19c9200d8a71fc984794f88487adf9d94ece3d7e709ab7ccb8",
+          "expectedBytes": 2160,
+          "actualBytes": 2160,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/blocker.json",
+          "expected": "2c4fa8f6438c756905dae900bd9c12b9a7e0122076c6a967cf1e479fd87cbfdc",
+          "actual": "2c4fa8f6438c756905dae900bd9c12b9a7e0122076c6a967cf1e479fd87cbfdc",
+          "expectedBytes": 1175,
+          "actualBytes": 1175,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/build.log",
+          "expected": "7823d07ebc1a302751b9de685951cd187ca903f1f8ab04befc5ef68d8e2836c5",
+          "actual": "7823d07ebc1a302751b9de685951cd187ca903f1f8ab04befc5ef68d8e2836c5",
+          "expectedBytes": 673,
+          "actualBytes": 673,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/cleanup.json",
+          "expected": "8795829c4185f63014f4c0f559ea3a8752653b92fd77b74c6f867a4cc7d6ab7c",
+          "actual": "8795829c4185f63014f4c0f559ea3a8752653b92fd77b74c6f867a4cc7d6ab7c",
+          "expectedBytes": 704,
+          "actualBytes": 704,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/focused.log",
+          "expected": "a7fdefc6c052a62a89ab150eef5c15efdde08c133ddf71c11e3f74eb3b734d9f",
+          "actual": "a7fdefc6c052a62a89ab150eef5c15efdde08c133ddf71c11e3f74eb3b734d9f",
+          "expectedBytes": 2858,
+          "actualBytes": 2858,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/format.log",
+          "expected": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+          "actual": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+          "expectedBytes": 66,
+          "actualBytes": 66,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/fresh-gates.json",
+          "expected": "82b4ab1090a4c899b01000ee5a496ccc235b055d1866e94fd2b630c9b783217c",
+          "actual": "82b4ab1090a4c899b01000ee5a496ccc235b055d1866e94fd2b630c9b783217c",
+          "expectedBytes": 978,
+          "actualBytes": 978,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/full.log",
+          "expected": "d29f03242b709b73af01b1917c8fa844a45f08f8272687537a73c507a31e86a3",
+          "actual": "d29f03242b709b73af01b1917c8fa844a45f08f8272687537a73c507a31e86a3",
+          "expectedBytes": 56835,
+          "actualBytes": 56835,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/lint.log",
+          "expected": "70eb743079a5f9ec12de97201e964e53ee87147f669fbf8ae5c3aef68631df6a",
+          "actual": "70eb743079a5f9ec12de97201e964e53ee87147f669fbf8ae5c3aef68631df6a",
+          "expectedBytes": 178,
+          "actualBytes": 178,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/reuse-integrity.json",
+          "expected": "1ed4753e1bbeaea3712bc4803a7287d2afd27a24158b299acbcbf60ee21937cf",
+          "actual": "1ed4753e1bbeaea3712bc4803a7287d2afd27a24158b299acbcbf60ee21937cf",
+          "expectedBytes": 1086,
+          "actualBytes": 1086,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/source-binding.json",
+          "expected": "9e16aa5f76196b3851c252428c6a5c530e2309abe97c29725358e153b0e4511f",
+          "actual": "9e16aa5f76196b3851c252428c6a5c530e2309abe97c29725358e153b0e4511f",
+          "expectedBytes": 28659,
+          "actualBytes": 28659,
+          "pass": true
+        },
+        {
+          "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v3/typecheck.log",
+          "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "expectedBytes": 0,
+          "actualBytes": 0,
+          "pass": true
+        }
+      ],
+      "evidenceOnly": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendSha": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "JSON": "PASS_ALL_PARSED",
+  "sensitiveValueAndMachinePathScan": "PASS_AFTER_SANITIZING_SCANNER_SOURCE_LOCATIONS",
+  "manualEvidenceReview": "Report, focus traces, full Axe nodes, console/network, build/migration logs and screenshot inspected",
+  "images": [
+    {
+      "file": "PAYOUTS-390-owner-add-funds-client-validation.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-focus-return-trial-1.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-focus-return-trial-2.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-focus-return-trial-3.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-open.png",
+      "width": 390,
+      "height": 3109
+    }
+  ],
+  "sourceWorktrees": "CLEAN_PINNED",
+  "priorEvidenceAndLedger": "UNCHANGED; additive V4 paths only",
+  "scope": "BOUNDED_CIRCUIT_BREAKER_NOT_COMPLETE_MATRIX"
+}

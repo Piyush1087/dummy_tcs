@@ -1,0 +1,18 @@
+
+> creatorshop-fe@0.0.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 2110 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.51 kB │ gzip:   0.31 kB
+dist/assets/index-DdjQArWM.css    437.14 kB │ gzip:  66.63 kB
+dist/assets/index-BSLGiLrH.js   1,197.69 kB │ gzip: 317.59 kB
+✓ built in 30.20s
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
