@@ -1,0 +1,36 @@
+{
+  "schema": "brand-payouts-wave-b-p4-base-m1-evidence-index-v1",
+  "status": "M1_HUMAN_APPROVAL_REQUIRED",
+  "p4_base": {
+    "sha": "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1",
+    "tree": "6c01d65e5a32eecfcd7e42715923ea8478d071fb",
+    "parent": "fc4d4b59e2a44d7ddced6bc5dde5119c501ec275"
+  },
+  "m1": {
+    "committed_to_backend": false,
+    "applied": false,
+    "sql_sha256": "683e5266c3e1913e39f151f70d8bd449f0816b5926913220156f97ddda6ec805"
+  },
+  "artifacts": [
+    {
+      "path": "docs/ai-collaboration/brand-payouts-wave-b-p4-base-and-m1-proposal-v1.md",
+      "bytes": 5069,
+      "sha256": "eb90c5dfb254c29bde03645e2eed968198b1866f6f93a9616cf96f2bb25065e3"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-wave-b-p4-base-m1-v1/NOT_APPROVED_NOT_APPLIED-brand-payouts-m1-prisma-delta.patch",
+      "bytes": 1618,
+      "sha256": "36c3cc178a8cd43a850163b045d9fed66c64df969f857278c4f48095d56c3fcb"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-wave-b-p4-base-m1-v1/NOT_APPROVED_NOT_APPLIED-brand-payouts-m1.sql",
+      "bytes": 11118,
+      "sha256": "683e5266c3e1913e39f151f70d8bd449f0816b5926913220156f97ddda6ec805"
+    },
+    {
+      "path": "docs/ai-collaboration/brand-payouts-v1-execution-ledger.yaml",
+      "bytes": 76390,
+      "sha256": "a8102a9e6f28c0ebc95207daa5e3e5922153b496faa1c5423d217d5a467e49f0"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+STATUS: NOT_APPROVED_NOT_APPLIED
+BASE_TREE: 6c01d65e5a32eecfcd7e42715923ea8478d071fb
+
+Exact Prisma model delta (field mappings match the companion SQL):
+
+Add `FinancialReserveApproval` with the SQL columns, unique keys, indexes and
+relations defined in `NOT_APPROVED_NOT_APPLIED-brand-payouts-m1.sql`.
+Add child `FinancialReserveExecutionAttempt` with `(approvalId,
+attemptSequence)` uniqueness and lease/outcome fields. Prisma cannot express
+the partial unique-success index or immutability triggers; those remain exact
+SQL-only invariants.
+
+Extend `CreatorPayoutObligation` with nullable authority instruction/agreement
+identity, version/hash, due-evidence tuple, lifecycle/gate, and additive amount
+milestones from the companion SQL. Existing rows remain null/legacy-shaped;
+there is no inferred backfill.
+
+Extend `RouteTransferAttempt` with nullable destination version/fingerprint,
+normalized outcome and provider receipt identity/observed timestamp. Prisma
+cannot express the set-once trigger; it remains SQL-only.
+
+Add reverse relation arrays on `CollaborationReserveInstruction`,
+`Collaboration`, `CollaborationCommercialAgreement`, and `BrandProfile`, plus
+optional one-to-one reverse relations on `CollaborationEscrowLock` and
+`EscrowTransactionLedger`. No existing field or relation is removed.
+
+This text is the review delta, not a schema mutation. On approval the database
+owner must render these exact mapped fields into `prisma/schema.prisma`, run
+`prisma format`, and verify the generated SQL is byte-equivalent in effect to
+the hashed companion SQL before creating the single authorized M1 directory.
