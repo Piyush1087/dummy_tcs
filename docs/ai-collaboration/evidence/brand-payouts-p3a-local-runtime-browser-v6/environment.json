@@ -1,0 +1,21 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "os": "Windows_NT 10.0.26200",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "playwright": "1.61.1",
+  "axe": "4.10.3",
+  "browser": "Google Chrome 152.0.7977.76",
+  "viewportHeights": [
+    1000
+  ],
+  "widths": [
+    390,
+    1440
+  ]
+}

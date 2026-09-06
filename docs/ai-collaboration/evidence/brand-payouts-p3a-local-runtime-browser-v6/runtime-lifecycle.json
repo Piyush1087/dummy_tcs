@@ -1,0 +1,136 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "lifecycle": [
+    {
+      "mode": "PAYOUTS",
+      "entry": "dist/main.js",
+      "fullAppModule": true,
+      "health": [
+        {
+          "path": "/",
+          "status": 200,
+          "body": "{\"name\":\"TheCreatorShop API\",\"status\":\"ready\"}"
+        },
+        {
+          "path": "/health/live",
+          "status": 200,
+          "body": "{\"status\":\"ok\"}"
+        },
+        {
+          "path": "/health",
+          "status": 200,
+          "body": "{\"status\":\"ok\",\"info\":{\"database\":{\"status\":\"up\"}},\"error\":{},\"details\":{\"database\":{\"status\":\"up\"}}}"
+        }
+      ],
+      "ready": true,
+      "outboundBlockedAttempts": 0,
+      "mappedRoutes": [
+        "Mapped {/health/live, GET} route +1ms",
+        "Mapped {/health, GET} route +0ms",
+        "Mapped {/api/v1/creator/settings/payouts/bank, POST} route +1ms",
+        "Mapped {/api/v1/creator/settings/payouts, GET} route +0ms",
+        "Mapped {/api/v1/creator/settings/payouts/destination, PUT} route +1ms",
+        "Mapped {/api/v1/creator/settings/payouts/destination/:destinationId, DELETE} route +0ms",
+        "Mapped {/api/v1/creator/settings/payouts/legal-profile, PUT} route +0ms",
+        "Mapped {/api/v1/collaboration/threads/:collaborationId/securement/fund-escrow, POST} route +0ms",
+        "Mapped {/api/v1/escrow/initialize, POST} route +0ms",
+        "Mapped {/api/v1/escrow/vault, GET} route +1ms",
+        "Mapped {/api/v1/escrow/ledger, GET} route +0ms",
+        "Mapped {/api/v1/escrow/topup-intent, POST} route +0ms",
+        "Mapped {/api/v1/escrow/calculate-breakdown, POST} route +0ms",
+        "Mapped {/api/v1/escrow/brand-returns/summary, GET} route +0ms",
+        "Mapped {/api/v1/escrow/brand-returns, GET} route +1ms",
+        "Mapped {/api/v1/escrow/brand-returns/:requestId, GET} route +0ms",
+        "Mapped {/api/v1/escrow/brand-returns, POST} route +0ms",
+        "Mapped {/api/v1/escrow-engine/lock-collaboration-funds, POST} route +0ms",
+        "Mapped {/api/v1/escrow-engine/disburse-tranche-payout, POST} route +0ms",
+        "Mapped {/api/v1/escrow-interlock/transition-stage, POST} route +1ms",
+        "Mapped {/api/v1/escrow-interlock/trigger-rule-refund, POST} route +0ms",
+        "Mapped {/api/v1/hardened-escrow/lock-funds, POST} route +0ms",
+        "Mapped {/api/v1/webhooks/escrow, POST} route +0ms",
+        "Mapped {/api/v1/webhooks/escrow/route, POST} route +1ms",
+        "Mapped {/api/v1/webhooks/escrow/brand-returns, POST} route +0ms",
+        "Mapped {/api/v1/brand/payouts, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/obligations, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/obligations/:obligationId, GET} route +1ms",
+        "Mapped {/api/v1/brand/payouts/activity, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/activity.csv, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/activity/:activityId, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/brand-returns, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/brand-returns/:requestId, GET} route +1ms",
+        "Mapped {/api/v1/brand/payouts/reserve-requests, GET} route +0ms",
+        "Mapped {/api/v1/creator/payouts, GET} route +0ms"
+      ]
+    },
+    {
+      "mode": "SETTINGS",
+      "entry": "dist/main.js",
+      "fullAppModule": true,
+      "health": [
+        {
+          "path": "/",
+          "status": 200,
+          "body": "{\"name\":\"TheCreatorShop API\",\"status\":\"ready\"}"
+        },
+        {
+          "path": "/health/live",
+          "status": 200,
+          "body": "{\"status\":\"ok\"}"
+        },
+        {
+          "path": "/health",
+          "status": 200,
+          "body": "{\"status\":\"ok\",\"info\":{\"database\":{\"status\":\"up\"}},\"error\":{},\"details\":{\"database\":{\"status\":\"up\"}}}"
+        }
+      ],
+      "ready": true,
+      "outboundBlockedAttempts": 0,
+      "mappedRoutes": [
+        "Mapped {/health/live, GET} route +0ms",
+        "Mapped {/health, GET} route +0ms",
+        "Mapped {/api/v1/creator/settings/payouts/bank, POST} route +0ms",
+        "Mapped {/api/v1/creator/settings/payouts, GET} route +1ms",
+        "Mapped {/api/v1/creator/settings/payouts/destination, PUT} route +0ms",
+        "Mapped {/api/v1/creator/settings/payouts/destination/:destinationId, DELETE} route +0ms",
+        "Mapped {/api/v1/creator/settings/payouts/legal-profile, PUT} route +0ms",
+        "Mapped {/api/v1/collaboration/threads/:collaborationId/securement/fund-escrow, POST} route +0ms",
+        "Mapped {/api/v1/escrow/initialize, POST} route +0ms",
+        "Mapped {/api/v1/escrow/vault, GET} route +0ms",
+        "Mapped {/api/v1/escrow/ledger, GET} route +0ms",
+        "Mapped {/api/v1/escrow/topup-intent, POST} route +0ms",
+        "Mapped {/api/v1/escrow/calculate-breakdown, POST} route +1ms",
+        "Mapped {/api/v1/escrow/brand-returns/summary, GET} route +0ms",
+        "Mapped {/api/v1/escrow/brand-returns, GET} route +0ms",
+        "Mapped {/api/v1/escrow/brand-returns/:requestId, GET} route +0ms",
+        "Mapped {/api/v1/escrow/brand-returns, POST} route +0ms",
+        "Mapped {/api/v1/escrow-engine/lock-collaboration-funds, POST} route +0ms",
+        "Mapped {/api/v1/escrow-engine/disburse-tranche-payout, POST} route +1ms",
+        "Mapped {/api/v1/escrow-interlock/transition-stage, POST} route +0ms",
+        "Mapped {/api/v1/escrow-interlock/trigger-rule-refund, POST} route +0ms",
+        "Mapped {/api/v1/hardened-escrow/lock-funds, POST} route +0ms",
+        "Mapped {/api/v1/webhooks/escrow, POST} route +1ms",
+        "Mapped {/api/v1/webhooks/escrow/route, POST} route +2ms",
+        "Mapped {/api/v1/webhooks/escrow/brand-returns, POST} route +1ms",
+        "Mapped {/api/v1/brand/payouts, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/obligations, GET} route +1ms",
+        "Mapped {/api/v1/brand/payouts/obligations/:obligationId, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/activity, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/activity.csv, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/activity/:activityId, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/brand-returns, GET} route +0ms",
+        "Mapped {/api/v1/brand/payouts/brand-returns/:requestId, GET} route +1ms",
+        "Mapped {/api/v1/brand/payouts/reserve-requests, GET} route +0ms",
+        "Mapped {/api/v1/creator/payouts, GET} route +1ms"
+      ]
+    }
+  ],
+  "frontend": "One production/local built Vite preview at loopback port 4178",
+  "backendPort": 3108,
+  "databasePort": 55440,
+  "providerVariables": "ABSENT",
+  "outboundGuard": "Loaded before dist/main.js; rejects non-loopback sockets and binds listeners to loopback"
+}

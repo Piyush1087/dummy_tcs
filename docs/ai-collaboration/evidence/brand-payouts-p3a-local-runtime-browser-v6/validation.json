@@ -1,0 +1,76 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "JSON": "ALL_PARSED",
+  "screenshots": [
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-canonical-503.png",
+      "width": 1440,
+      "height": 1968
+    },
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-submission-response-delayed.png",
+      "width": 1440,
+      "height": 1968
+    },
+    {
+      "file": "PAYOUTS-1440-finance-brand-return-canonical-form-unreachable.png",
+      "width": 1440,
+      "height": 2093
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-canonical-503.png",
+      "width": 390,
+      "height": 4786
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-submission-response-delayed.png",
+      "width": 390,
+      "height": 4786
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-canonical-form-unreachable.png",
+      "width": 390,
+      "height": 5143
+    },
+    {
+      "file": "SETTINGS-1440-finance-add-funds-canonical-503.png",
+      "width": 1440,
+      "height": 3045
+    },
+    {
+      "file": "SETTINGS-1440-finance-add-funds-submission-response-delayed.png",
+      "width": 1440,
+      "height": 3045
+    },
+    {
+      "file": "SETTINGS-1440-finance-brand-return-canonical-form-unreachable.png",
+      "width": 1440,
+      "height": 3179
+    },
+    {
+      "file": "SETTINGS-390-owner-add-funds-canonical-503.png",
+      "width": 390,
+      "height": 4532
+    },
+    {
+      "file": "SETTINGS-390-owner-add-funds-submission-response-delayed.png",
+      "width": 390,
+      "height": 4532
+    },
+    {
+      "file": "SETTINGS-390-owner-brand-return-canonical-form-unreachable.png",
+      "width": 390,
+      "height": 4698
+    }
+  ],
+  "rows": 12,
+  "fullDocumentScans": 8,
+  "serious": 0,
+  "critical": 0,
+  "overflow": 0,
+  "sensitiveScan": "PASS",
+  "sourceWorktrees": "CLEAN_PINNED",
+  "scope": "V6_ONLY",
+  "result": "BOUNDED_CIRCUIT_BREAKER"
+}

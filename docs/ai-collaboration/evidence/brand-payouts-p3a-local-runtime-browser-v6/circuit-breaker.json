@@ -1,0 +1,34 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "signature": "P3A_V6_BRAND_RETURN_FORM_READY_UNREACHABLE_WITH_FAIL_CLOSED_PROVIDER",
+  "exactReproduction": "Seed canonical PROVEN_SOURCE GATEWAY funding load/lot with available and refundable INR value in fresh migrated database. Boot pinned full AppModule with all provider variables absent. GET /api/v1/escrow/brand-returns/summary reports proven_source_available_balance=100000 but self_service_returnable_balance=0 because FailClosedBrandReturnRefundProvider.capabilities() returns []. In PAYOUTS Owner/Finance drawers at 390/1440, any positive amount exceeds the authoritative self-service limit. In SETTINGS Owner/Finance at 390/1440, Return unused funds is natively disabled. A valid request cannot be prepared or submitted in four required V6 lanes without altering the response/provider binding/source.",
+  "suspectedSourceFiles": [
+    "src/features/brand-escrow/brand-escrow.module.ts",
+    "src/features/brand-escrow/services/brand-return-provider.adapter.ts",
+    "src/features/brand-escrow/services/brand-return.service.ts",
+    "src/features/brand-escrow/components/brand-return-drawer.tsx",
+    "src/features/brand-escrow/components/escrow-account-card.tsx"
+  ],
+  "whySourceChangeRequired": "The runtime binds only an adapter with an empty capability list. Database provenance alone cannot make the server-derived self_service_returnable_balance positive. The runner forbids provider configuration/actions and response-body alteration, so the prescribed valid Return submission has no authorized environment-only construction.",
+  "completedSafeGates": [
+    "335/335 evidence artifacts",
+    "19/19 targeted and 66/66 focused",
+    "lint/Prettier/typecheck/build",
+    "74 migration checksums",
+    "PAYOUTS and SETTINGS full AppModule health",
+    "4/4 Add funds focused lanes pass pending focus/dedupe, 503 focus/trap, Axe/overflow/contrast and invoker return",
+    "4/4 Return lanes preserve canonical unreachable evidence",
+    "8/8 lane screenshots; 8 full-document lane scans total",
+    "zero serious/critical P3A Axe and overflow",
+    "zero provider attempt/action"
+  ],
+  "sourceChanges": "NONE",
+  "migrationFilesCreatedOrChanged": "NONE",
+  "providerActions": "NONE",
+  "P3AAcceptance": "NOT_SET",
+  "P4Work": "NONE"
+}

@@ -1,0 +1,70 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "state": {
+    "counts": {
+      "brandEscrowVault": 1,
+      "escrowFundingLoad": 12,
+      "escrowFundingLot": 1,
+      "escrowTransactionLedger": 22,
+      "brandReturnRequest": 0,
+      "brandReturnAllocation": 0,
+      "brandReturnWebhookReceipt": 0
+    },
+    "vaults": [
+      {
+        "availableBalance": "100000",
+        "totalPooledBalance": "100000",
+        "lockedCampaignFunds": "0",
+        "activeReturnCommitment": "0"
+      }
+    ],
+    "vaultHash": "5a2aee6b140427fb3738e2ee1db1b35d47a5aee1d81f63ee44ad503c8eb48abb",
+    "lots": [
+      {
+        "provenanceStatus": "PROVEN_SOURCE",
+        "sourceType": "GATEWAY",
+        "currency": "INR",
+        "availableAmount": "100000",
+        "providerRefundableAmount": "100000",
+        "providerPaymentId": "PRESENT_REDACTED"
+      }
+    ]
+  },
+  "addFundsCommands": {
+    "count": 4,
+    "statuses": [
+      503,
+      503,
+      503,
+      503
+    ],
+    "creditedPendingFoundations": {
+      "loads": 4,
+      "ledgerRows": 8
+    },
+    "discardedHarnessAttemptFoundations": {
+      "loads": 7,
+      "ledgerRows": 14,
+      "classification": "Canonical 503 attempts caused by disclosed automation locator/readiness retries; no provider action or AVAILABLE credit"
+    },
+    "totalPostSeedPendingFoundations": {
+      "loads": 11,
+      "ledgerRows": 22
+    },
+    "availableVaultUnchanged": true
+  },
+  "brandReturnCommands": {
+    "count": 0,
+    "reason": "Form cannot be made valid from canonical summary; no request attempted"
+  },
+  "providerVariables": "ABSENT",
+  "providerExternalAttempts": 0,
+  "providerActions": 0,
+  "interceptedRequestOrResponseBodies": 0,
+  "responseDeliveryDelayOnly": 4,
+  "financialSuccessClaims": 0
+}

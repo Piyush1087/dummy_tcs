@@ -1,0 +1,13 @@
+{
+  "ownedProcessesRemaining": 0,
+  "ownedListenersRemaining": 0,
+  "containerRemoved": true,
+  "volumeRemoved": true,
+  "temporaryScriptsOrPrivateMaterialRemaining": [],
+  "backendStatus": [],
+  "frontendStatus": [],
+  "backendHead": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendHead": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "sharedDatabaseUntouched": true,
+  "shutdown": "Owned PIDs stopped; disposable Docker container and volume removed; browser contexts closed"
+}

@@ -1,0 +1,23 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "targeted": {
+    "file": "treasury-settings.test.ts",
+    "passed": 19,
+    "failed": 0
+  },
+  "focused": {
+    "files": 4,
+    "passed": 66,
+    "failed": 0
+  },
+  "changedFileESLint": "PASS",
+  "changedFilePrettier": "PASS",
+  "typecheck": "PASS",
+  "productionLocalPreviewBuild": "PASS",
+  "fullSuite": "REUSED_SA_RESULT_889_OF_889_NOT_RERUN_PER_RUNNER",
+  "diffIntegrity": "PASS"
+}

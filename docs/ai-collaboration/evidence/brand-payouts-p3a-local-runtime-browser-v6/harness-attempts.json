@@ -1,0 +1,35 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "gateCredit": "NONE",
+  "attempts": [
+    {
+      "type": "PREVIEW_TIMING",
+      "detail": "Runtime helper initially launched preview while production build was still finishing. It was stopped before any browser capture; credited preview was started after build PASS."
+    },
+    {
+      "type": "SUBMIT_LOCATOR",
+      "detail": "Name-based locator stopped resolving after label changed to Opening checkout. Replaced only temporary automation reference with the same captured element handle."
+    },
+    {
+      "type": "PENDING_REFOCUS",
+      "detail": "Name-based refocus failed for the same label change. Replaced with the same element handle."
+    },
+    {
+      "type": "ALERT_ROLE",
+      "detail": "Shared Alert does not expose role=alert. Waited for exact visible Top-up unavailable text."
+    },
+    {
+      "type": "PENDING_AXE",
+      "detail": "Axe injection during delayed response disturbed one exploratory focus measurement. V6 requires one scan after the 503, so credited pending observations exclude Axe and each completed Add funds lane has a full-document post-503 scan."
+    },
+    {
+      "type": "SETTINGS_STARTUP",
+      "detail": "First health probe/browser attempt preceded SETTINGS readiness. Credited run began after root/live/database health PASS."
+    }
+  ],
+  "sourceOrAssertionChanges": "NONE"
+}

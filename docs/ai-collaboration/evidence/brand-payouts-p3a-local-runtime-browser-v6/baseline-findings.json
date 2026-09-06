@@ -1,0 +1,345 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "immutable": "Four inactive Email-code serious findings outside P3A plus minor/moderate landmark findings retained from verified V1-V5",
+  "fresh": [
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "seriousP3A": 0,
+  "criticalP3A": 0,
+  "overflowRows": 0
+}

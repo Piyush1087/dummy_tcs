@@ -1,0 +1,13 @@
+
+ RUN  v2.1.9 <workspace>/frontend
+
+ ✓ src/features/brand-escrow/components/treasury-settings.test.ts (19 tests) 3203ms
+   ✓ FE-D Treasury role matrix > allows BRAND_OWNER to add funds and request Brand Return 389ms
+   ✓ FE-D top-up fail-closed handoff > keeps submission focus inside the drawer and rejects duplicate top-ups 652ms
+   ✓ FE-D top-up fail-closed handoff > enforces the INR minimum and never credits on checkout success 373ms
+   ✓ FE-D Brand Return > keeps submission focus inside the drawer and rejects duplicate returns 313ms
+
+ Test Files  1 passed (1)
+      Tests  19 passed (19)
+   Start at  15:22:48
+   Duration  42.40s (transform 3.07s, setup 0ms, collect 12.80s, tests 3.20s, environment 23.16s, prepare 1.52s)

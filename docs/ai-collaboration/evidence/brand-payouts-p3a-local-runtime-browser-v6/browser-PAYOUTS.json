@@ -1,0 +1,2649 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "mode": "PAYOUTS",
+  "rows": [
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "state": "submission-response-delayed",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "route": "/brand/payouts",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-390-owner-add-funds-submission-response-delayed.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "axe": {
+        "classification": "NOT_RUN_DURING_RESPONSE_DELAY",
+        "violations": [],
+        "incomplete": []
+      },
+      "dom": {
+        "drawerOpen": true,
+        "text": "Add funds\n\nOpen checkout for this Brand vault.\n\nAmount (INR)\nConfirmed funding only\n\nCheckout success does not immediately update Available balance. Funding remains unavailable while Pending and becomes usable only after payment confirmation.\n\nIndia minimum top-up: ₹5,000.\n\nCancel\nOpening checkout…",
+        "active": {
+          "tag": "BUTTON",
+          "name": "Opening checkout…",
+          "inDrawer": true,
+          "disabled": false,
+          "ariaDisabled": "true"
+        },
+        "controls": [
+          {
+            "name": "Close Add funds",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Amount (INR)",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Cancel",
+            "disabled": true,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Opening checkout…",
+            "disabled": false,
+            "ariaDisabled": "true"
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(107, 114, 128)",
+          "background": "rgb(243, 244, 246)",
+          "ratio": 4.3929342157461635,
+          "bottomClearance": 90
+        },
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390
+        }
+      },
+      "delayClassification": "TEST_ONLY_LOCAL_RESPONSE_DELIVERY_DELAY",
+      "pending": {
+        "postCount": 1,
+        "requestHash": "487e8414824f08ef276226748539665700a4105fe6610a56f216b5db3c47c367",
+        "responseStatus": 503,
+        "responseHash": "5b763d3301a5e1f08f1fa3bd88453304cdd689d712c253c921983e101cd3221c",
+        "headersHash": "1e01f4b46249a05e9cf87bc17a4d565693ca0c4b6f47c7683c54d217a98e8986",
+        "focused": true,
+        "nativelyEnabled": true,
+        "ariaDisabled": "true"
+      },
+      "pendingTrap": {
+        "steps": [
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Opening checkout…",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          }
+        ],
+        "pass": true
+      },
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+      "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "accessibilityClassification": "NOT_SCANNED_DURING_RESPONSE_DELAY; matching lane scanned after unchanged 503",
+      "consoleClassification": "Expected anonymous refresh 401, blocked external fonts, canonical command 503; no page errors",
+      "contrastSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlClassification": "Disabled controls excluded from active contrast claim"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "state": "canonical-503",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "route": "/brand/payouts",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-390-owner-add-funds-canonical-503.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "axe": {
+        "version": "4.10.3",
+        "violations": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-sidedrawer"
+                ],
+                "html": "<aside class=\"aurora-sidedrawer\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\":r0:\" style=\"width: 480px;\">",
+                "failureSummary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element"
+              }
+            ]
+          },
+          {
+            "id": "landmark-main-is-top-level",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".bp-workspace"
+                ],
+                "html": "<main class=\"bp-workspace\">",
+                "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one banner landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-main",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              },
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "section:nth-child(1) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  ".bp-mobile-list"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  "section:nth-child(2) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(2)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ]
+          }
+        ]
+      },
+      "dom": {
+        "drawerOpen": true,
+        "text": "Add funds\n\nOpen checkout for this Brand vault.\n\n!\n\nTop-up unavailable\n\nPayment gateway handshake failed\n\nAmount (INR)\nConfirmed funding only\n\nCheckout success does not immediately update Available balance. Funding remains unavailable while Pending and becomes usable only after payment confirmation.\n\nIndia minimum top-up: ₹5,000.\n\nCancel\nContinue to provider",
+        "active": {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "inDrawer": true,
+          "disabled": false,
+          "ariaDisabled": null
+        },
+        "controls": [
+          {
+            "name": "Close Add funds",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Amount (INR)",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Cancel",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Continue to provider",
+            "disabled": false,
+            "ariaDisabled": null
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "ratio": 6.0905450171769555,
+          "bottomClearance": 90
+        },
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390
+        }
+      },
+      "response": {
+        "status": 503,
+        "unchangedResponseHash": "5b763d3301a5e1f08f1fa3bd88453304cdd689d712c253c921983e101cd3221c",
+        "unchangedHeadersHash": "1e01f4b46249a05e9cf87bc17a4d565693ca0c4b6f47c7683c54d217a98e8986"
+      },
+      "postTrap": {
+        "steps": [
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Cancel",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          }
+        ],
+        "pass": true
+      },
+      "focusReturned": true,
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+      "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "accessibilityClassification": "FULL_DOCUMENT_AXE_WITH_PORTAL",
+      "consoleClassification": "Expected anonymous refresh 401, blocked external fonts, canonical command 503; no page errors",
+      "contrastSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlClassification": "Disabled controls excluded from active contrast claim"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "state": "canonical-form-unreachable",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "route": "/brand/payouts",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-390-owner-brand-return-canonical-form-unreachable.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "axe": {
+        "version": "4.10.3",
+        "violations": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-sidedrawer"
+                ],
+                "html": "<aside class=\"aurora-sidedrawer\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\":r0:\" style=\"width: 500px;\">",
+                "failureSummary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element"
+              }
+            ]
+          },
+          {
+            "id": "landmark-main-is-top-level",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".bp-workspace"
+                ],
+                "html": "<main class=\"bp-workspace\">",
+                "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one banner landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-main",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              },
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "section:nth-child(1) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  ".bp-mobile-list"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  "section:nth-child(2) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(2)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(3)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "target": [
+                  ".settings-modal__confirm > span"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ]
+          }
+        ]
+      },
+      "dom": {
+        "drawerOpen": true,
+        "text": "Return unused funds\n\nReturn eligible available money to its original external source(s).\n\nSelf-service returnable now\n₹0.00\nReturn amount (INR)\nHow Brand Return works\n\nEligible original funding sources are selected automatically in order. One request may span multiple sources. You cannot select a bank, card, payment, or source.\n\nProcessing is asynchronous. An accepted request is not complete until its status changes to Completed.\n\nI confirm that I am returning unused eligible funds to original payment source(s), selected automatically.\nCancel\nConfirm Brand Return",
+        "active": {
+          "tag": "BUTTON",
+          "name": "Close Return unused funds",
+          "inDrawer": true,
+          "disabled": false,
+          "ariaDisabled": null
+        },
+        "controls": [
+          {
+            "name": "Close Return unused funds",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Return amount (INR)",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "I confirm that I am returning unused eligible funds to original payment source(s), selected automatically.",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Cancel",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Confirm Brand Return",
+            "disabled": true,
+            "ariaDisabled": null
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "ratio": 6.0905450171769555,
+          "bottomClearance": 90
+        },
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390
+        }
+      },
+      "returnSummaryText": "Return unused funds\n\nReturn eligible available money to its original external source(s).\n\nSelf-service returnable now\n₹0.00\nReturn amount (INR)\nHow Brand Return works\n\nEligible original funding sources are selected automatically in order. One request may span multiple sources. You cannot select a bank, card, payment, or source.\n\nProcessing is asynchronous. An accepted request is not complete until its status changes to Completed.\n\nI confirm that I am returning unused eligible funds to original payment source(s), selected automatically.\nCancel\nConfirm Brand Return",
+      "blocker": "SELF_SERVICE_RETURNABLE_ZERO_DESPITE_PROVEN_SOURCE",
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+      "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "accessibilityClassification": "FULL_DOCUMENT_AXE_WITH_PORTAL",
+      "consoleClassification": "Expected anonymous refresh 401, blocked external fonts, canonical command 503; no page errors",
+      "contrastSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlClassification": "Disabled controls excluded from active contrast claim"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "state": "submission-response-delayed",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/brand/payouts",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-1440-finance-add-funds-submission-response-delayed.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "axe": {
+        "classification": "NOT_RUN_DURING_RESPONSE_DELAY",
+        "violations": [],
+        "incomplete": []
+      },
+      "dom": {
+        "drawerOpen": true,
+        "text": "Add funds\n\nOpen checkout for this Brand vault.\n\nAmount (INR)\nConfirmed funding only\n\nCheckout success does not immediately update Available balance. Funding remains unavailable while Pending and becomes usable only after payment confirmation.\n\nIndia minimum top-up: ₹5,000.\n\nCancel\nOpening checkout…",
+        "active": {
+          "tag": "BUTTON",
+          "name": "Opening checkout…",
+          "inDrawer": true,
+          "disabled": false,
+          "ariaDisabled": "true"
+        },
+        "controls": [
+          {
+            "name": "Close Add funds",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Amount (INR)",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Cancel",
+            "disabled": true,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Opening checkout…",
+            "disabled": false,
+            "ariaDisabled": "true"
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(107, 114, 128)",
+          "background": "rgb(243, 244, 246)",
+          "ratio": 4.3929342157461635,
+          "bottomClearance": 32
+        },
+        "overflow": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440
+        }
+      },
+      "delayClassification": "TEST_ONLY_LOCAL_RESPONSE_DELIVERY_DELAY",
+      "pending": {
+        "postCount": 1,
+        "requestHash": "2227f07a1b96e9b06dac09d9b7dcf4ed34c3e03993a4e9ff36671b147532457d",
+        "responseStatus": 503,
+        "responseHash": "5b763d3301a5e1f08f1fa3bd88453304cdd689d712c253c921983e101cd3221c",
+        "headersHash": "a8f49208cd30917d2814884982c99e3545f6820340cd8ddd1980a1724d7aeaad",
+        "focused": true,
+        "nativelyEnabled": true,
+        "ariaDisabled": "true"
+      },
+      "pendingTrap": {
+        "steps": [
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Opening checkout…",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          }
+        ],
+        "pass": true
+      },
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+      "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "accessibilityClassification": "NOT_SCANNED_DURING_RESPONSE_DELAY; matching lane scanned after unchanged 503",
+      "consoleClassification": "Expected anonymous refresh 401, blocked external fonts, canonical command 503; no page errors",
+      "contrastSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlClassification": "Disabled controls excluded from active contrast claim"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "state": "canonical-503",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/brand/payouts",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-1440-finance-add-funds-canonical-503.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "axe": {
+        "version": "4.10.3",
+        "violations": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-sidedrawer"
+                ],
+                "html": "<aside class=\"aurora-sidedrawer\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\":r0:\" style=\"width: 480px;\">",
+                "failureSummary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element"
+              }
+            ]
+          },
+          {
+            "id": "landmark-main-is-top-level",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".bp-workspace"
+                ],
+                "html": "<main class=\"bp-workspace\">",
+                "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one banner landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-main",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              },
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "section:nth-child(1) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  "section:nth-child(2) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(2)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ]
+          }
+        ]
+      },
+      "dom": {
+        "drawerOpen": true,
+        "text": "Add funds\n\nOpen checkout for this Brand vault.\n\n!\n\nTop-up unavailable\n\nPayment gateway handshake failed\n\nAmount (INR)\nConfirmed funding only\n\nCheckout success does not immediately update Available balance. Funding remains unavailable while Pending and becomes usable only after payment confirmation.\n\nIndia minimum top-up: ₹5,000.\n\nCancel\nContinue to provider",
+        "active": {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "inDrawer": true,
+          "disabled": false,
+          "ariaDisabled": null
+        },
+        "controls": [
+          {
+            "name": "Close Add funds",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Amount (INR)",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Cancel",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Continue to provider",
+            "disabled": false,
+            "ariaDisabled": null
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "ratio": 6.0905450171769555,
+          "bottomClearance": 32
+        },
+        "overflow": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440
+        }
+      },
+      "response": {
+        "status": 503,
+        "unchangedResponseHash": "5b763d3301a5e1f08f1fa3bd88453304cdd689d712c253c921983e101cd3221c",
+        "unchangedHeadersHash": "a8f49208cd30917d2814884982c99e3545f6820340cd8ddd1980a1724d7aeaad"
+      },
+      "postTrap": {
+        "steps": [
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Cancel",
+            "inDrawer": true
+          },
+          {
+            "name": "",
+            "inDrawer": true
+          },
+          {
+            "name": "Close Add funds",
+            "inDrawer": true
+          }
+        ],
+        "pass": true
+      },
+      "focusReturned": true,
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+      "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "accessibilityClassification": "FULL_DOCUMENT_AXE_WITH_PORTAL",
+      "consoleClassification": "Expected anonymous refresh 401, blocked external fonts, canonical command 503; no page errors",
+      "contrastSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlClassification": "Disabled controls excluded from active contrast claim"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "state": "canonical-form-unreachable",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/brand/payouts",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "screenshot": "PAYOUTS-1440-finance-brand-return-canonical-form-unreachable.png",
+      "networkReference": "browser-PAYOUTS.json#/network",
+      "consoleReference": "browser-PAYOUTS.json#/console",
+      "axe": {
+        "version": "4.10.3",
+        "violations": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-sidedrawer"
+                ],
+                "html": "<aside class=\"aurora-sidedrawer\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\":r0:\" style=\"width: 500px;\">",
+                "failureSummary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element"
+              }
+            ]
+          },
+          {
+            "id": "landmark-main-is-top-level",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".bp-workspace"
+                ],
+                "html": "<main class=\"bp-workspace\">",
+                "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one banner landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-no-duplicate-main",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+              }
+            ]
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-header"
+                ],
+                "html": "<header class=\"aurora-header\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              },
+              {
+                "target": [
+                  ".aurora-shell__main"
+                ],
+                "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "section:nth-child(1) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              },
+              {
+                "target": [
+                  "section:nth-child(2) > .bp-section-status > .bp-section-status__line[aria-label=\"Pagination completeness\"]"
+                ],
+                "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".aurora-sidedrawer__subtitle"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(2)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "target": [
+                  ".brand-escrow-explainer > p:nth-child(3)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "target": [
+                  ".settings-modal__confirm > span"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ]
+          }
+        ]
+      },
+      "dom": {
+        "drawerOpen": true,
+        "text": "Return unused funds\n\nReturn eligible available money to its original external source(s).\n\nSelf-service returnable now\n₹0.00\nReturn amount (INR)\nHow Brand Return works\n\nEligible original funding sources are selected automatically in order. One request may span multiple sources. You cannot select a bank, card, payment, or source.\n\nProcessing is asynchronous. An accepted request is not complete until its status changes to Completed.\n\nI confirm that I am returning unused eligible funds to original payment source(s), selected automatically.\nCancel\nConfirm Brand Return",
+        "active": {
+          "tag": "BUTTON",
+          "name": "Close Return unused funds",
+          "inDrawer": true,
+          "disabled": false,
+          "ariaDisabled": null
+        },
+        "controls": [
+          {
+            "name": "Close Return unused funds",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Return amount (INR)",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "I confirm that I am returning unused eligible funds to original payment source(s), selected automatically.",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Cancel",
+            "disabled": false,
+            "ariaDisabled": null
+          },
+          {
+            "name": "Confirm Brand Return",
+            "disabled": true,
+            "ariaDisabled": null
+          }
+        ],
+        "cancel": {
+          "foreground": "rgb(0, 108, 75)",
+          "background": "rgb(248, 248, 248)",
+          "ratio": 6.0905450171769555,
+          "bottomClearance": 32
+        },
+        "overflow": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440
+        }
+      },
+      "returnSummaryText": "Return unused funds\n\nReturn eligible available money to its original external source(s).\n\nSelf-service returnable now\n₹0.00\nReturn amount (INR)\nHow Brand Return works\n\nEligible original funding sources are selected automatically in order. One request may span multiple sources. You cannot select a bank, card, payment, or source.\n\nProcessing is asynchronous. An accepted request is not complete until its status changes to Completed.\n\nI confirm that I am returning unused eligible funds to original payment source(s), selected automatically.\nCancel\nConfirm Brand Return",
+      "blocker": "SELF_SERVICE_RETURNABLE_ZERO_DESPITE_PROVEN_SOURCE",
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+      "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "accessibilityClassification": "FULL_DOCUMENT_AXE_WITH_PORTAL",
+      "consoleClassification": "Expected anonymous refresh 401, blocked external fonts, canonical command 503; no page errors",
+      "contrastSelector": ".brand-escrow-drawer-footer .aurora-button--ghost",
+      "disabledControlClassification": "Disabled controls excluded from active contrast claim"
+    }
+  ],
+  "network": [
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 401
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/obligations",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/activity",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/escrow/vault",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/escrow/topup-intent",
+      "status": 503
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 401
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/activity",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/obligations",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/escrow/brand-returns/summary",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 401
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/obligations",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/activity",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/escrow/vault",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/escrow/topup-intent",
+      "status": 503
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 401
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:4178/assets/index-ejzmlX0c.js",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "POST",
+      "url": "http://127.0.0.1:3108/api/v1/auth/refresh",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/obligations",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts/activity",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/brand/payouts",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "http://127.0.0.1:3108/api/v1/escrow/brand-returns/summary",
+      "status": 200
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "outcome": "BLOCKED_EXTERNAL_NO_TRANSMISSION"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://api.fontshare.com/v2/css",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ],
+  "console": [
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "source": "http://127.0.0.1:3108/api/v1/auth/refresh"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "source": "http://127.0.0.1:3108/api/v1/escrow/topup-intent"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "warning",
+      "text": "Couldn't load preload assets:  ProgressEvent",
+      "source": "<axe-scanner-source>"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "add-funds",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "source": "http://127.0.0.1:3108/api/v1/auth/refresh"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "warning",
+      "text": "Couldn't load preload assets:  ProgressEvent",
+      "source": "<axe-scanner-source>"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "command": "brand-return",
+      "width": 390,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "source": "http://127.0.0.1:3108/api/v1/auth/refresh"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "source": "http://127.0.0.1:3108/api/v1/escrow/topup-intent"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "warning",
+      "text": "Couldn't load preload assets:  ProgressEvent",
+      "source": "<axe-scanner-source>"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "add-funds",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "source": "http://127.0.0.1:3108/api/v1/auth/refresh"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "warning",
+      "text": "Couldn't load preload assets:  ProgressEvent",
+      "source": "<axe-scanner-source>"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://api.fontshare.com/v2/css"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "command": "brand-return",
+      "width": 1440,
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "source": "https://fonts.googleapis.com/css2"
+    }
+  ],
+  "failures": []
+}

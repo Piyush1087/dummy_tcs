@@ -1,0 +1,36 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "repositories": {
+    "backend": {
+      "head": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "remote": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "status": ""
+    },
+    "frontend": {
+      "head": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "tree": "30001818c07b231529935dedf12ca059be6bd6dc",
+      "parent": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+      "remote": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+      "status": ""
+    },
+    "authority": {
+      "head": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "tree": "cb57fad3096f6b58daa647b244b4037d20a14e0c",
+      "parent": "96d202591c6ec0d1343beb549bfbfdec492be7a5",
+      "remote": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+      "status": ""
+    }
+  },
+  "requiredParent": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "exactDelta": [
+    "src/features/brand-escrow/components/escrow-top-up-drawer.tsx",
+    "src/features/brand-escrow/components/brand-return-drawer.tsx",
+    "src/features/brand-escrow/components/treasury-settings.test.ts"
+  ],
+  "sharedSideDrawerApiAuthorizationFinancialCssSchemaMigrationsPackagesLockfiles": "UNCHANGED"
+}

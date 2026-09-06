@@ -1,0 +1,204 @@
+{
+  "evidenceVersion": "V6",
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "f775d33f729e02c020ced5b0a7ffcc662110db9e",
+  "frontendTree": "30001818c07b231529935dedf12ca059be6bd6dc",
+  "authoritySha": "14e3598fd87da4e4762a8840fc4984b40b76daa3",
+  "result": "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER",
+  "failureSignature": "P3A_V6_BRAND_RETURN_FORM_READY_UNREACHABLE_WITH_FAIL_CLOSED_PROVIDER",
+  "artifactCount": 38,
+  "indexExcludedFromSelfHash": true,
+  "artifacts": [
+    {
+      "path": "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v6.md",
+      "bytes": 8824,
+      "sha256": "c6eb381f869d31e7ff8ffd170b838137cce6dc5737e3b411d04a5f4962a3f9e2"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/PAYOUTS-1440-finance-add-funds-canonical-503.png",
+      "bytes": 296761,
+      "sha256": "50082ab8a7dada9eae119b31076b29c6fe471478f9a35f7ab230348460a1d2be"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/PAYOUTS-1440-finance-add-funds-submission-response-delayed.png",
+      "bytes": 291990,
+      "sha256": "337cfb4f751258e4b7dad44ab657eb8a404aea1602c9d10e5ae61ad1a8272eae"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/PAYOUTS-1440-finance-brand-return-canonical-form-unreachable.png",
+      "bytes": 313256,
+      "sha256": "00534a487b49fd0c5c3a44e5c00d8f7bc89c76c84fc762761dc6dcc60607a965"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/PAYOUTS-390-owner-add-funds-canonical-503.png",
+      "bytes": 180926,
+      "sha256": "35b7d2e24a97b8b56a90e54c2e4e062bdbd536a099e3fded21d90c9743fa8cf6"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/PAYOUTS-390-owner-add-funds-submission-response-delayed.png",
+      "bytes": 177460,
+      "sha256": "44b712f3a664569519a09d5f3ad9749815dd5f66a31fb7420c83ed83e47a3aba"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/PAYOUTS-390-owner-brand-return-canonical-form-unreachable.png",
+      "bytes": 197667,
+      "sha256": "7bcf474e0a770870be89b3a856e6d28e9a849bf565a37d819ba61425285a2ef4"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/SETTINGS-1440-finance-add-funds-canonical-503.png",
+      "bytes": 282022,
+      "sha256": "d6fc1ae73009c139dcada697bdff9da584c46c89aa63690b77dfc269856e87f6"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/SETTINGS-1440-finance-add-funds-submission-response-delayed.png",
+      "bytes": 277401,
+      "sha256": "c1d207fed6555e32c2beaa299c81f3092498530ac7b68a29ad73574d693fecd0"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/SETTINGS-1440-finance-brand-return-canonical-form-unreachable.png",
+      "bytes": 202898,
+      "sha256": "12ff38584ec1667becd9abc81120eb0ea29d976771c5ed7a4354e474ed454bd9"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/SETTINGS-390-owner-add-funds-canonical-503.png",
+      "bytes": 163113,
+      "sha256": "b34914d3f7c7aee6066bb71348d2ed79980a13921387e945a675f4bdd6b6322d"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/SETTINGS-390-owner-add-funds-submission-response-delayed.png",
+      "bytes": 161618,
+      "sha256": "16621de0ffacdd209cccaa60dad5d18740ab5ff534d1eec7cd2cba5742ed0524"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/SETTINGS-390-owner-brand-return-canonical-form-unreachable.png",
+      "bytes": 175084,
+      "sha256": "9a358cd17e84e47c2127bc5941ca3305d60e80eb2a979c5aaa31b1464c701ff0"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/backend-build.log",
+      "bytes": 840,
+      "sha256": "c3e9cf298f3ea06d315f8f9810c29870ae811c3cace0ec1073b49be5d57307ff"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/baseline-findings.json",
+      "bytes": 7443,
+      "sha256": "27272ec72dcb136e85a4c1d371e933954dd93417a22012ad3a8bc44d9eb0c28e"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/browser-PAYOUTS.json",
+      "bytes": 83642,
+      "sha256": "39116d477c106cd963628410a817a5b659254b39fc09c0800d2dfae8375b97f8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/browser-SETTINGS.json",
+      "bytes": 92191,
+      "sha256": "0b5b16ce2e23966d3fba169f08ab706bc1b555f8d06976337b81f9f4acac74e8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/build.log",
+      "bytes": 727,
+      "sha256": "6f92e2d2f5d141cbcee1566fa6c8c553af386951c887b89ae86371725dd5c621"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/circuit-breaker.json",
+      "bytes": 2560,
+      "sha256": "a6dd54030927ec0a33e5e4e7de802be310f589e1d6088656a10365d2f2990443"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/cleanup.json",
+      "bytes": 486,
+      "sha256": "33b1e3184309f321586c6cb852641479dc49a6453c755346f1a79a4876983332"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/composite-coverage.json",
+      "bytes": 790,
+      "sha256": "7e8895b416e98d2a53d337d6fc5d7dc71fe049e3878c3a2b5e236f3b581727d8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/database-lifecycle.json",
+      "bytes": 18592,
+      "sha256": "01562b4cd5af4bcd204449f76792028d80df7445a2774de75c54688e5c1103a9"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/environment.json",
+      "bytes": 572,
+      "sha256": "a2d7e3b95377e5bd41b5d8ce7fdf6b6d5c8e3dd342ce3b7922b006606bb41824"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/financial-provider-summary.json",
+      "bytes": 2020,
+      "sha256": "59a8e1cf7fcbabfccf891f38daec28f9bfd83ed1e2fb5a26b233c4b977e9d1fc"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/focused.log",
+      "bytes": 3357,
+      "sha256": "312f65b9a14c752bf95768fbcd481c45ed66a1c99b2f43355feba411e01e6d83"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/format.log",
+      "bytes": 66,
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/fresh-source-gates.json",
+      "bytes": 697,
+      "sha256": "3d5a1ea1e62693cc90e88fee9c9dab1bfca964d28c370f0806d0d7114713b2dc"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/harness-attempts.json",
+      "bytes": 1640,
+      "sha256": "a67c53d03570ec01ac88b510fe3b0f3d2f85405a4c46e1298d8ecec7d7454801"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/lint.log",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/migrations.log",
+      "bytes": 10949,
+      "sha256": "0c08a3ac9badd59f5e0585c2efc8c33f6df1cc987b746d10a929190565a7b76e"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/preview.log",
+      "bytes": 39,
+      "sha256": "827f003db62c2f638917eb93134a87438b81a130b61d74a8fec9bac267ee1c59"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/response-delay-dedupe.json",
+      "bytes": 6648,
+      "sha256": "e806212ffbbde458cee4575fb91c625f5287bdb3eef6be385f1882642081619c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/reuse-integrity.json",
+      "bytes": 99937,
+      "sha256": "1d909e9e2c008c6ca35e172fb48c13bc23d3e64a74ab15e18dd513f2c7058412"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/runtime-lifecycle.json",
+      "bytes": 7040,
+      "sha256": "93a34afa432dfa0ec0a41e6d7213ce761edfacf7beacfcf45e1a2f89d6574679"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/source-binding.json",
+      "bytes": 1502,
+      "sha256": "731f946807d81628bb95a09214e4898a9b41fa887092282016384ec94bd4210d"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/targeted.log",
+      "bytes": 742,
+      "sha256": "5fcb55f968f08df0bf89315de3311fd8c126760260c9acaf8dc905ec882c57fc"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/typecheck.log",
+      "bytes": 43,
+      "sha256": "59bafa1cb949ae0a738b8f6752b020d9543c9d1391e43bfecaf40b1084b59c78"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v6/validation.json",
+      "bytes": 1940,
+      "sha256": "ce1e8490333ce2e1ad8ff3160689c59b038572af153d34c41d50f7f2befbec04"
+    }
+  ]
+}

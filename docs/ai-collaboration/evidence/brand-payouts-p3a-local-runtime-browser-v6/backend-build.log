@@ -1,0 +1,11 @@
+
+> creatorshop-be@0.0.1 build
+> nest build && node scripts/copy-prompt-assets.mjs
+
+copy-prompt-assets: src/features/brand-onboarding/prompts → dist/features/brand-onboarding/prompts
+copy-prompt-assets: src/features/brand-centre/prompts → dist/features/brand-centre/prompts
+copy-prompt-assets: src/features/creator-onboarding/prompts → dist/features/creator-onboarding/prompts
+copy-prompt-assets: src/features/brand-onboarding/gatekeeper/runtime/artifacts → dist/features/brand-onboarding/gatekeeper/runtime/artifacts
+copy-prompt-assets: src/features/brand-onboarding/brand-preview/runtime/artifacts → dist/features/brand-onboarding/brand-preview/runtime/artifacts
+copy-prompt-assets: src/features/brand-intelligence/generated/contract-bundles → dist/features/brand-intelligence/generated/contract-bundles
+copy-prompt-assets: ok

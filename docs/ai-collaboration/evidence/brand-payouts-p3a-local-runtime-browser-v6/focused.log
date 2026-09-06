@@ -1,0 +1,32 @@
+
+ RUN  v2.1.9 <workspace>/frontend
+
+stderr | src/pages/brand/settings/brand-settings-routing.test.ts > FE-E Brand Settings routing and composition > redirects the Settings root deterministically to General
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/brand/settings/brand-settings-routing.test.ts (9 tests) 709ms
+   ✓ FE-E Brand Settings routing and composition > redirects the Settings root deterministically to General 325ms
+stderr | src/features/brand-payouts/brand-payouts-p2.test.ts > route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/brand-escrow/api/brand-escrow-client.test.ts (9 tests) 39ms
+ ✓ src/features/brand-escrow/components/treasury-settings.test.ts (19 tests) 4721ms
+   ✓ FE-D Treasury role matrix > allows BRAND_OWNER to add funds and request Brand Return 676ms
+   ✓ FE-D top-up fail-closed handoff > keeps submission focus inside the drawer and rejects duplicate top-ups 647ms
+   ✓ FE-D top-up fail-closed handoff > enforces the INR minimum and never credits on checkout success 353ms
+   ✓ FE-D Brand Return > keeps submission focus inside the drawer and rejects duplicate returns 381ms
+   ✓ FE-D Brand Return > fails closed when provider execution is unavailable 341ms
+   ✓ FE-D Brand Return > renders every canonical lifecycle without collapsing PARTIAL or ACTION_REQUIRED 435ms
+ ✓ src/features/brand-payouts/brand-payouts-p2.test.ts (29 tests) 4676ms
+   ✓ truthful first-slice rendering > distinguishes movement from lifecycle and preserves legacy due uncertainty 643ms
+   ✓ truthful first-slice rendering > shows a version-bound Settings deep link only for a complete current snapshot 412ms
+   ✓ truthful first-slice rendering > restores focus to each async Treasury command invoker after Escape 438ms
+   ✓ stable financial detail navigation > preserves expanded activity and obligation pages across both detail return paths 850ms
+   ✓ stable financial detail navigation > routes desktop and mobile activity links by activity ID while preserving the public reference 496ms
+
+ Test Files  4 passed (4)
+      Tests  66 passed (66)
+   Start at  15:23:33
+   Duration  18.57s (transform 13.52s, setup 0ms, collect 20.20s, tests 10.14s, environment 15.74s, prepare 1.43s)
