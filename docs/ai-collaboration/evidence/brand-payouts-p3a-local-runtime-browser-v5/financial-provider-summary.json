@@ -1,0 +1,108 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "snapshots": {
+    "before-PAYOUTS": {
+      "counts": {
+        "brandEscrowVault": 1,
+        "escrowFundingLoad": 0,
+        "escrowFundingLot": 0,
+        "escrowTransactionLedger": 0,
+        "brandReturnRequest": 0,
+        "brandReturnAllocation": 0,
+        "brandReturnWebhookReceipt": 0
+      },
+      "vaults": [
+        {
+          "availableBalance": "100000",
+          "totalPooledBalance": "100000",
+          "lockedCampaignFunds": "0",
+          "activeReturnCommitment": "0"
+        }
+      ],
+      "vaultHash": "5a2aee6b140427fb3738e2ee1db1b35d47a5aee1d81f63ee44ad503c8eb48abb"
+    },
+    "after-PAYOUTS": {
+      "counts": {
+        "brandEscrowVault": 1,
+        "escrowFundingLoad": 2,
+        "escrowFundingLot": 0,
+        "escrowTransactionLedger": 4,
+        "brandReturnRequest": 0,
+        "brandReturnAllocation": 0,
+        "brandReturnWebhookReceipt": 0
+      },
+      "vaults": [
+        {
+          "availableBalance": "100000",
+          "totalPooledBalance": "100000",
+          "lockedCampaignFunds": "0",
+          "activeReturnCommitment": "0"
+        }
+      ],
+      "vaultHash": "5a2aee6b140427fb3738e2ee1db1b35d47a5aee1d81f63ee44ad503c8eb48abb"
+    },
+    "before-SETTINGS": {
+      "counts": {
+        "brandEscrowVault": 1,
+        "escrowFundingLoad": 2,
+        "escrowFundingLot": 0,
+        "escrowTransactionLedger": 4,
+        "brandReturnRequest": 0,
+        "brandReturnAllocation": 0,
+        "brandReturnWebhookReceipt": 0
+      },
+      "vaults": [
+        {
+          "availableBalance": "100000",
+          "totalPooledBalance": "100000",
+          "lockedCampaignFunds": "0",
+          "activeReturnCommitment": "0"
+        }
+      ],
+      "vaultHash": "5a2aee6b140427fb3738e2ee1db1b35d47a5aee1d81f63ee44ad503c8eb48abb"
+    },
+    "after-SETTINGS": {
+      "counts": {
+        "brandEscrowVault": 1,
+        "escrowFundingLoad": 3,
+        "escrowFundingLot": 0,
+        "escrowTransactionLedger": 6,
+        "brandReturnRequest": 0,
+        "brandReturnAllocation": 0,
+        "brandReturnWebhookReceipt": 0
+      },
+      "vaults": [
+        {
+          "availableBalance": "100000",
+          "totalPooledBalance": "100000",
+          "lockedCampaignFunds": "0",
+          "activeReturnCommitment": "0"
+        }
+      ],
+      "vaultHash": "5a2aee6b140427fb3738e2ee1db1b35d47a5aee1d81f63ee44ad503c8eb48abb"
+    }
+  },
+  "vaultByteEquivalent": true,
+  "canonicalFinancialPosts": 3,
+  "statuses": [
+    503,
+    503,
+    503
+  ],
+  "pendingFoundations": {
+    "loads": 3,
+    "ledgerRows": 6
+  },
+  "fundingLots": 0,
+  "brandReturns": 0,
+  "providerActions": 0,
+  "externalProviderRequests": 0,
+  "backendOutboundAttempts": 0,
+  "classification": "Fresh bounded presentation commands only; full admission/replay and read purity reused, not rerun",
+  "realResponseBodyChanges": 0,
+  "financialSuccessClaims": 0
+}

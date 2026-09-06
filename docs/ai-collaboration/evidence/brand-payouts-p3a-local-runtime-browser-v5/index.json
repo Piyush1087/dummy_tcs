@@ -1,0 +1,635 @@
+{
+  "evidenceVersion": "V5",
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "result": "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER",
+  "failureSignature": "P3A_DRAWER_SUBMISSION_FOCUS_ESCAPES_MODAL",
+  "artifactCount": 124,
+  "rowMetadata": "Rows inherit artifact pins and retain explicit mode/actor/viewport/state/source; unscanned reproduction is distinguished",
+  "indexExcludedFromSelfHash": true,
+  "artifacts": [
+    {
+      "path": "docs/ai-collaboration/brand-payouts-v1-p3a-local-runtime-browser-evidence-v5.md",
+      "bytes": 11519,
+      "sha256": "7e4d5d438473fdb085344a4e49d23bfc9f41d23b2bcf61d7a5772c4dc1c44dce"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-add-funds-authority-read-pending.png",
+      "bytes": 128704,
+      "sha256": "71efed31164ff8965e4f49ca3af0e6c459a641edde823c8be351c7a8c2b7a434"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-add-funds-client-validation.png",
+      "bytes": 224825,
+      "sha256": "3c867e4567ee4879fa93c28885e04950cece20e5849341df6613e1e3380acdd3"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-add-funds-open.png",
+      "bytes": 223084,
+      "sha256": "8938a7da4d5931d890aef5ff0db62982a1f73910e05db3896cfb56d12a2bd201"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-add-funds-provider-absent-fail-closed.png",
+      "bytes": 248136,
+      "sha256": "ae382569f93721710c3fe3c90f22d7532677538b430f2daad8fb64583f345f96"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-add-funds-ready-to-submit.png",
+      "bytes": 225219,
+      "sha256": "d445d7543c8c7967bb90b0d73dd64cb75ca33f7a9f9da44d8135792930ba285e"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-add-funds-reopen-cancel.png",
+      "bytes": 223084,
+      "sha256": "8938a7da4d5931d890aef5ff0db62982a1f73910e05db3896cfb56d12a2bd201"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-add-funds-reopen-close.png",
+      "bytes": 223084,
+      "sha256": "8938a7da4d5931d890aef5ff0db62982a1f73910e05db3896cfb56d12a2bd201"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-brand-return-authority-read-pending.png",
+      "bytes": 125673,
+      "sha256": "e3ac5447cd90628a43a120c6f65415c8f2b20d003db63a53aa51775eebb4ad86"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-brand-return-client-validation.png",
+      "bytes": 239057,
+      "sha256": "604313cbdadf65205e93a4df137f1c306613c2df99dfb85b8169d99a66a248a5"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-brand-return-open.png",
+      "bytes": 237242,
+      "sha256": "b0b86cea7a3daa87e882d1c6ad2d8377750ea395afd4c7154f0af841a2d6994c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-brand-return-reopen-cancel.png",
+      "bytes": 237242,
+      "sha256": "b0b86cea7a3daa87e882d1c6ad2d8377750ea395afd4c7154f0af841a2d6994c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-finance-brand-return-reopen-close.png",
+      "bytes": 237242,
+      "sha256": "b0b86cea7a3daa87e882d1c6ad2d8377750ea395afd4c7154f0af841a2d6994c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-add-funds-authority-read-pending.png",
+      "bytes": 128683,
+      "sha256": "449effed2821545c86632d841be8e5f1e5b3bdeb96727a04529901da19546f81"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-add-funds-client-validation.png",
+      "bytes": 224795,
+      "sha256": "a5db573d612052a6687acdeb1912789b56f28028609dc1077e7f48c125b5e1f2"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-add-funds-open.png",
+      "bytes": 223053,
+      "sha256": "99eade457e0e7e12a33def99a020583cc6896fd1f78e97cfe005d5debda0faab"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-add-funds-provider-absent-fail-closed.png",
+      "bytes": 229313,
+      "sha256": "00b90f90df88c52a9e8cce0711b398bc7ab225e1def8a67ab8bc537594653bd9"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-add-funds-ready-to-submit.png",
+      "bytes": 225190,
+      "sha256": "bb71043834e1b1f6232248b3efd029a30a617c8dd1eb541e525f876e553db836"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-add-funds-reopen-cancel.png",
+      "bytes": 223053,
+      "sha256": "99eade457e0e7e12a33def99a020583cc6896fd1f78e97cfe005d5debda0faab"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-add-funds-reopen-close.png",
+      "bytes": 223053,
+      "sha256": "99eade457e0e7e12a33def99a020583cc6896fd1f78e97cfe005d5debda0faab"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-brand-return-authority-read-pending.png",
+      "bytes": 125653,
+      "sha256": "faa0f4f35d9d105b84e5e1cc92e69cd680dbddff67e81c6b4ad04b5e8570a8f4"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-brand-return-client-validation.png",
+      "bytes": 239031,
+      "sha256": "4b925afc09f6da9a2c72dfe0d6423b4af1e67166ad6b8efc68411609eb15b494"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-brand-return-open.png",
+      "bytes": 237207,
+      "sha256": "bf1d798d617b4e75ce420616d13c892ae8230dad1f24d225623376651c98b967"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-brand-return-reopen-cancel.png",
+      "bytes": 237207,
+      "sha256": "bf1d798d617b4e75ce420616d13c892ae8230dad1f24d225623376651c98b967"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-1440-owner-brand-return-reopen-close.png",
+      "bytes": 237207,
+      "sha256": "bf1d798d617b4e75ce420616d13c892ae8230dad1f24d225623376651c98b967"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-add-funds-authority-read-pending.png",
+      "bytes": 132853,
+      "sha256": "f661c99d370371f92731a897742eabeaa4bc292c294cedcf310cf320aa37da87"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-add-funds-client-validation.png",
+      "bytes": 118852,
+      "sha256": "a8e3bd6932af55ff569c5dedded63abd47930e50f62edbf52b2bd0b132a1a64f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-add-funds-open.png",
+      "bytes": 117645,
+      "sha256": "153c648e86a006b499b894512c8a3908551a172db3814ff135f0fa01b541b7af"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-add-funds-provider-absent-fail-closed.png",
+      "bytes": 130212,
+      "sha256": "e075f934904b35365eb592208146a6f8e17d02268269470311960d0864f12d04"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-add-funds-ready-to-submit.png",
+      "bytes": 120068,
+      "sha256": "064903d3ed2533f33841508fa08559e5e4aedc0ea0751fff9d48a48c82e6c1c9"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-add-funds-reopen-cancel.png",
+      "bytes": 117645,
+      "sha256": "153c648e86a006b499b894512c8a3908551a172db3814ff135f0fa01b541b7af"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-add-funds-reopen-close.png",
+      "bytes": 117645,
+      "sha256": "153c648e86a006b499b894512c8a3908551a172db3814ff135f0fa01b541b7af"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-brand-return-authority-read-pending.png",
+      "bytes": 129895,
+      "sha256": "24e1b3f48eca295f646156ad6b79bbb3bd97a37b329cd944a94832ceb2d7d609"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-brand-return-client-validation.png",
+      "bytes": 129330,
+      "sha256": "fa483c6fc1af92c663918135f46feeb1bcd67662388cc651d0cfd5a7c9603fa8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-brand-return-open.png",
+      "bytes": 128044,
+      "sha256": "9ad26eb353377e1d95b16d76a37bdc7ba2f14ebf07bbe5b590543e36684cbe83"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-brand-return-reopen-cancel.png",
+      "bytes": 128044,
+      "sha256": "9ad26eb353377e1d95b16d76a37bdc7ba2f14ebf07bbe5b590543e36684cbe83"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-finance-brand-return-reopen-close.png",
+      "bytes": 128044,
+      "sha256": "9ad26eb353377e1d95b16d76a37bdc7ba2f14ebf07bbe5b590543e36684cbe83"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-add-funds-authority-read-pending.png",
+      "bytes": 132978,
+      "sha256": "dc577b4ba0effd028de66991403a8a5f1844201761b91983fcdcbc950bc144c5"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-add-funds-client-validation.png",
+      "bytes": 118904,
+      "sha256": "2f2ccccfc8c7794a15f84335d4f9c738b9fee77a5159102b6e94f6d4c40fd210"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-add-funds-open.png",
+      "bytes": 117699,
+      "sha256": "93382a6c8c768774cef636ebf3a1c17ddd72f169bb0ae08eb12bcdd84c5e579f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-add-funds-provider-absent-fail-closed.png",
+      "bytes": 122859,
+      "sha256": "7383aacb281a8f0f23cd12f7e496998a47e7915c04e50d919182483588b39ba4"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-add-funds-ready-to-submit.png",
+      "bytes": 120122,
+      "sha256": "9328ab68422144aebb4da5dda82d807464e174fdb3d30a993a4591e1e0bad632"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-add-funds-reopen-cancel.png",
+      "bytes": 117699,
+      "sha256": "93382a6c8c768774cef636ebf3a1c17ddd72f169bb0ae08eb12bcdd84c5e579f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-add-funds-reopen-close.png",
+      "bytes": 117699,
+      "sha256": "93382a6c8c768774cef636ebf3a1c17ddd72f169bb0ae08eb12bcdd84c5e579f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-brand-return-authority-read-pending.png",
+      "bytes": 130018,
+      "sha256": "90ba8c0bf7647d9586bd1231f268dceb8ff81601727e773750bb963b52c15c46"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-brand-return-client-validation.png",
+      "bytes": 129383,
+      "sha256": "e4e40d062fc343d936efa9c57f1f46c0a9acdf368a7e315a362e306986cd153e"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-brand-return-open.png",
+      "bytes": 128096,
+      "sha256": "86b33bdef1a6231fa8c6395a540c8cb2dd3cdc8e4fea2e68438c5e0352b9100f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-brand-return-reopen-cancel.png",
+      "bytes": 128096,
+      "sha256": "86b33bdef1a6231fa8c6395a540c8cb2dd3cdc8e4fea2e68438c5e0352b9100f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-390-owner-brand-return-reopen-close.png",
+      "bytes": 128096,
+      "sha256": "86b33bdef1a6231fa8c6395a540c8cb2dd3cdc8e4fea2e68438c5e0352b9100f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-add-funds-authority-read-pending.png",
+      "bytes": 133431,
+      "sha256": "fd887df0318d8deab74dbd4f81d42503f8a6b291549a141059edeb8cdc9ecbbe"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-add-funds-client-validation.png",
+      "bytes": 112833,
+      "sha256": "c65bf6264bc7ea0ed02dbecbe2d932c3e6386927f612f23f70c410c7abe545c8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-add-funds-open.png",
+      "bytes": 111460,
+      "sha256": "d6c648af5ca3661833a5374a3e43ea6d233220dd220bcc20bfcd9a74e930f584"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-add-funds-provider-absent-fail-closed.png",
+      "bytes": 122376,
+      "sha256": "44ea83259ae0cc05fcdb4ab6f06c2d611894f2edaeff04674702681fcb575351"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-add-funds-ready-to-submit.png",
+      "bytes": 114228,
+      "sha256": "6ad43fb4be4a4d69a028b4edfa58b8f3f0f08404792ace9ab8f919cc39394434"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-add-funds-reopen-cancel.png",
+      "bytes": 111460,
+      "sha256": "d6c648af5ca3661833a5374a3e43ea6d233220dd220bcc20bfcd9a74e930f584"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-add-funds-reopen-close.png",
+      "bytes": 111460,
+      "sha256": "d6c648af5ca3661833a5374a3e43ea6d233220dd220bcc20bfcd9a74e930f584"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-brand-return-authority-read-pending.png",
+      "bytes": 130627,
+      "sha256": "dc110616858168d74f9f52abd0be57a949ef8dd1be5704286e6dbae01f4df084"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-brand-return-client-validation.png",
+      "bytes": 123738,
+      "sha256": "6c663f194c12b2e40ad4517f0ebd11d0828467e43f62f8f2b004fd10b3d7c458"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-brand-return-open.png",
+      "bytes": 122477,
+      "sha256": "f6aea3e93fee30eda28a7de4dce51be0b28d92f58ef6313a34e420701e9eaaec"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-brand-return-reopen-cancel.png",
+      "bytes": 122477,
+      "sha256": "f6aea3e93fee30eda28a7de4dce51be0b28d92f58ef6313a34e420701e9eaaec"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-finance-brand-return-reopen-close.png",
+      "bytes": 122477,
+      "sha256": "f6aea3e93fee30eda28a7de4dce51be0b28d92f58ef6313a34e420701e9eaaec"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-add-funds-authority-read-pending.png",
+      "bytes": 133449,
+      "sha256": "1a3c40090362f88e44b8776b98ba5435f5bbb4769489c44ad8b5203f7a6eb76b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-add-funds-client-validation.png",
+      "bytes": 112775,
+      "sha256": "4d49334ffa9e84e85d1e8bba61a038523d3e5d7ff5251a2ae909ab34d156b740"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-add-funds-open.png",
+      "bytes": 111403,
+      "sha256": "042a283561c910a1bb6c94e9c33a73eb246f763bb16326ef5c802d25a9f973d8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-add-funds-provider-absent-fail-closed.png",
+      "bytes": 117252,
+      "sha256": "ff32bf2d3f09c57607daf1868221e630e8d977887365f6dd5e98eae30f7aa0b9"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-add-funds-ready-to-submit.png",
+      "bytes": 114166,
+      "sha256": "e0c12805ee3d4b9faf0d672908dfd98752daf848e108ca01d56a1e31d8f90d15"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-add-funds-reopen-cancel.png",
+      "bytes": 111403,
+      "sha256": "042a283561c910a1bb6c94e9c33a73eb246f763bb16326ef5c802d25a9f973d8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-add-funds-reopen-close.png",
+      "bytes": 111403,
+      "sha256": "042a283561c910a1bb6c94e9c33a73eb246f763bb16326ef5c802d25a9f973d8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-brand-return-authority-read-pending.png",
+      "bytes": 130652,
+      "sha256": "23fc0997ef2732ba92552c880d071b28b8af6a19579546a5a2048f4ae6eeb0c1"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-brand-return-client-validation.png",
+      "bytes": 123678,
+      "sha256": "74ded996e05ab75864627135107aa278d1889b1175e6f92a884e0fb6ef1eebd4"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-brand-return-open.png",
+      "bytes": 122419,
+      "sha256": "1469a64abfb7c7fdd1140edca52790a2527932b69efd1d72fd07e18c2741879f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-brand-return-reopen-cancel.png",
+      "bytes": 122419,
+      "sha256": "1469a64abfb7c7fdd1140edca52790a2527932b69efd1d72fd07e18c2741879f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-767-owner-brand-return-reopen-close.png",
+      "bytes": 122419,
+      "sha256": "1469a64abfb7c7fdd1140edca52790a2527932b69efd1d72fd07e18c2741879f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-add-funds-authority-read-pending.png",
+      "bytes": 148048,
+      "sha256": "f5f77bb07d2e43011a5d45da141ee0a649683504b47e75ba95e9e392cc1bab56"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-add-funds-client-validation.png",
+      "bytes": 170028,
+      "sha256": "5456b0a3d7334c542e824018a9bfc789ee2565fd89f5f8fb4cc71789b97b214c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-add-funds-open.png",
+      "bytes": 167885,
+      "sha256": "ba7063cba6cee6ff3229fd1172a295099e8e937d5be934a53f1084a5242ca98b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-add-funds-provider-absent-fail-closed.png",
+      "bytes": 178797,
+      "sha256": "98f5534553354c4e6f8bf36f17433f670c82b778c8087d32431f2576d6c71fff"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-add-funds-ready-to-submit.png",
+      "bytes": 170253,
+      "sha256": "8c3e5c192cb52becef12803205f653d8654c6082ffbb9c06ba0bc18149b2d573"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-add-funds-reopen-cancel.png",
+      "bytes": 167885,
+      "sha256": "ba7063cba6cee6ff3229fd1172a295099e8e937d5be934a53f1084a5242ca98b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-add-funds-reopen-close.png",
+      "bytes": 167885,
+      "sha256": "ba7063cba6cee6ff3229fd1172a295099e8e937d5be934a53f1084a5242ca98b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-brand-return-authority-read-pending.png",
+      "bytes": 144715,
+      "sha256": "5ce7b0e5e254168e3ed05e1312a125ae914862aa4692a7af9971f231ae84dedd"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-brand-return-client-validation.png",
+      "bytes": 175633,
+      "sha256": "470540d026d10a0cd55d862079e261d6035f860a8ba9dc9154741cf4b84f1fc1"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-brand-return-open.png",
+      "bytes": 174727,
+      "sha256": "a7b8d311a832acd0bdd8659267ebb92bf5860780559892d95e8b973408e03f6d"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-brand-return-reopen-cancel.png",
+      "bytes": 174727,
+      "sha256": "a7b8d311a832acd0bdd8659267ebb92bf5860780559892d95e8b973408e03f6d"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-finance-brand-return-reopen-close.png",
+      "bytes": 174727,
+      "sha256": "a7b8d311a832acd0bdd8659267ebb92bf5860780559892d95e8b973408e03f6d"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-add-funds-authority-read-pending.png",
+      "bytes": 148118,
+      "sha256": "1b12eafe5e6c3906fe15e0b7627da9e8e751310ce92b3379165c08143e2bec40"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-add-funds-client-validation.png",
+      "bytes": 169962,
+      "sha256": "0cf83bc27b9a5189ac10f837a000b79512b900a25561cd881f75c0eaf92131da"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-add-funds-open.png",
+      "bytes": 167812,
+      "sha256": "9ffc4880548e4d33c6cbbbb58aa39727cfc64dda5b3b0483c2ca14e5d3fb9dd9"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-add-funds-provider-absent-fail-closed.png",
+      "bytes": 173580,
+      "sha256": "ec9fbc74a5b6a8ac80eb7b6b64f491d510ec64b8dcb80f3dce1d07b3aeb4403d"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-add-funds-ready-to-submit.png",
+      "bytes": 170187,
+      "sha256": "9dc1425a0e3067d6560f9701b105381954b0983d60a1ed7a83b03e23fdfc0fc2"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-add-funds-reopen-cancel.png",
+      "bytes": 167814,
+      "sha256": "6e29671855ba419a1aeea000de8c2e95ed8bf1380138ce829bfa1a9cee941f4c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-add-funds-reopen-close.png",
+      "bytes": 167812,
+      "sha256": "9ffc4880548e4d33c6cbbbb58aa39727cfc64dda5b3b0483c2ca14e5d3fb9dd9"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-brand-return-authority-read-pending.png",
+      "bytes": 144788,
+      "sha256": "0cc0dcf6a5834cd9f08eaa0e1936bb0cc314771d5c3dc0af0497f41e3ae6a9dd"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-brand-return-client-validation.png",
+      "bytes": 175566,
+      "sha256": "05bd37528c2817c382a82abde97dce1a44b94efbaa790c8890baead0e720af62"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-brand-return-open.png",
+      "bytes": 174657,
+      "sha256": "872f395ac042ba2dafe9b5dffbf233fd7be7e21182cb4bcec5d65c61fd42f946"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-brand-return-reopen-cancel.png",
+      "bytes": 174657,
+      "sha256": "872f395ac042ba2dafe9b5dffbf233fd7be7e21182cb4bcec5d65c61fd42f946"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/PAYOUTS-768-owner-brand-return-reopen-close.png",
+      "bytes": 174657,
+      "sha256": "872f395ac042ba2dafe9b5dffbf233fd7be7e21182cb4bcec5d65c61fd42f946"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/SETTINGS-390-owner-add-funds-post-failure-tab-escape.png",
+      "bytes": 120777,
+      "sha256": "6c5bc00435edf27504f64dcc814657e7fa529d1904890ba925fd4c66f0abacbe"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/backend-build.log",
+      "bytes": 840,
+      "sha256": "c3e9cf298f3ea06d315f8f9810c29870ae811c3cace0ec1073b49be5d57307ff"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/baseline-findings.json",
+      "bytes": 114696,
+      "sha256": "b1d00b783e07e5f7c5c7f11895173e0e62c3d8b9609f5fca4558a5d0a5e67d69"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/browser-PAYOUTS.json",
+      "bytes": 1206276,
+      "sha256": "6122630d07d63a56248b97ca4d672a221fa28c2d5516ca0ac848765e524483c4"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/build.log",
+      "bytes": 727,
+      "sha256": "4ec7392361bd935acada418e238074d186714e94e30fa46be99e324f337cdd54"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/circuit-breaker.json",
+      "bytes": 2696,
+      "sha256": "6a77f2c3de240b2ff409fcea43f39860bf8e0489c412f1b83173b8ec84812f1b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/cleanup.json",
+      "bytes": 655,
+      "sha256": "f34c7ffe9e60ee2a5d47a38c163ce96ea64808ff8ad2763e2805ce48b56ec5d1"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/composite-coverage.json",
+      "bytes": 974,
+      "sha256": "41cdaa01b7d7cbf15ffd1d95c9353459645dd7e79129b786df3e55c3b42e4cf8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/database-lifecycle.json",
+      "bytes": 18588,
+      "sha256": "2b68c7218c7b37c152dd2d82d644fa6f8c1ec14321291d8bb2122ca4b9fa5502"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/environment.json",
+      "bytes": 750,
+      "sha256": "dc978b96bec516fc22fda7800ea9b03bef199de9472b416877c4c4973e01b370"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/failclosed-PAYOUTS.json",
+      "bytes": 105297,
+      "sha256": "bf3b5a6ccd20a414a8c20f1f403d07848d80a7656a0decedc37e842def5fb3e8"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/financial-provider-summary.json",
+      "bytes": 3185,
+      "sha256": "592af6cd9055f509de47e978698f01c16ed72e4104879cbab1cc459c22437c98"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/focused.log",
+      "bytes": 5088,
+      "sha256": "df8db931f057b5b55235cfaefc11fa9d55d2d022141f71509ceb01d98982480e"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/format.log",
+      "bytes": 66,
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/fresh-source-gates.json",
+      "bytes": 797,
+      "sha256": "904c8cc07cc4000ed7b684eeb3fe71e1b07cf96551d8d0f6a49536a955cb5de5"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/full-standard-env.log",
+      "bytes": 59788,
+      "sha256": "f825cce347cc88ccf77472dc416f52d8fb097df73db47df2901946b8d7e1dda2"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/harness-attempts.json",
+      "bytes": 1370,
+      "sha256": "88b92bbcc5de8bcfc240f38a7f0b1e4cd3f71550d572bfb82c611d1569d70ded"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/lint.log",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/migrations.log",
+      "bytes": 10949,
+      "sha256": "fd80efb5a5b83cee7acfb118f870047414f0b52af09c9eb800f5cbd08781f68c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/preview.log",
+      "bytes": 39,
+      "sha256": "0a78f38d67f4c2c485abaa90a79b5a50c10bbe92372554f0dd6333e7f91c829f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/reuse-integrity.json",
+      "bytes": 133981,
+      "sha256": "a4435a73a11e1bec0deda9e9d64ff8c80fb851e37d9dcda3d5c20d09841e4352"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/runtime-lifecycle.json",
+      "bytes": 7066,
+      "sha256": "ce886e2b9f9bd143e1ddad250174f4870d9a1179eac37f5e6bdc7914122a2e59"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/source-binding.json",
+      "bytes": 1452,
+      "sha256": "6112cf98f1c12acc1d9e651e834233271374f20316d5fae9984b8a289affb93f"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/submission-focus-reproduction.json",
+      "bytes": 4408,
+      "sha256": "cdf6551b13cfdecb12b8dc7f02c001bd6d1b32270200257b2783fdeaa9d3d26c"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/targeted.log",
+      "bytes": 1781,
+      "sha256": "bb7dddfc5f3738dbd70b7ec6e7f3b727427b135633f6ca4aa2936398333c5221"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/typecheck.log",
+      "bytes": 43,
+      "sha256": "59bafa1cb949ae0a738b8f6752b020d9543c9d1391e43bfecaf40b1084b59c78"
+    },
+    {
+      "path": "docs/ai-collaboration/evidence/brand-payouts-p3a-local-runtime-browser-v5/validation.json",
+      "bytes": 12370,
+      "sha256": "8dd95db887422230fa25e7c2fe70e7170cf2240d9a2a46c76d2c64636c936c6d"
+    }
+  ]
+}

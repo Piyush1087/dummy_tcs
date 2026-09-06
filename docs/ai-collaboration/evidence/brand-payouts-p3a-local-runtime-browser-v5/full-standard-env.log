@@ -1,0 +1,516 @@
+
+ RUN  v2.1.9 <workspace>/frontend
+
+stderr | src/features/brand-payouts/brand-payouts-p2.test.ts > route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/settings/components/brand/brand-integrations-settings.test.ts (38 tests) 3941ms
+   ✓ BS-06 role and authorization-health presentation > no-integration initial connect for BRAND_OWNER is true 727ms
+ ✓ src/features/brand-escrow/components/treasury-settings.test.ts (17 tests) 3406ms
+   ✓ FE-D Treasury role matrix > allows BRAND_OWNER to add funds and request Brand Return 953ms
+   ✓ FE-D top-up fail-closed handoff > treats provider handoff failure as a possibly pending load 328ms
+   ✓ FE-D Brand Return > renders backend-authoritative INR and keeps an eligible mutation available 350ms
+ ✓ src/features/brand-payouts/brand-payouts-p2.test.ts (29 tests) 6030ms
+   ✓ route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data 376ms
+   ✓ truthful first-slice rendering > shows a version-bound Settings deep link only for a complete current snapshot 673ms
+   ✓ truthful first-slice rendering > restores focus to each async Treasury command invoker after Escape 668ms
+   ✓ stable financial detail navigation > preserves expanded activity and obligation pages across both detail return paths 1824ms
+   ✓ stable financial detail navigation > routes desktop and mobile activity links by activity ID while preserving the public reference 868ms
+stderr | src/features/settings/components/brand/brand-general-settings.test.ts > BS-01 General Settings > loads authoritative values and keeps email, country, currency and Brand identity read-only
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/creator-onboarding/components/creator-entry-view.test.ts > Creator Entry state surface > renders direct unauthenticated account entry with shared sign-in
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/creator-onboarding/components/creator-entry-view.test.ts (13 tests) 6280ms
+   ✓ Creator Entry state surface > renders direct unauthenticated account entry with shared sign-in 1147ms
+   ✓ Creator Entry state surface > recovers campaign context from server presence after a component remount 3445ms
+   ✓ Creator Entry state surface > moves password registration to verification and supports verify plus resend 364ms
+   ✓ Creator Entry state surface > surfaces existing-account sign-in behavior and routes Google through registration 322ms
+   ✓ Creator Entry state surface > discards only through the server endpoint 632ms
+ ✓ src/features/brand-onboarding/components/social-sync-view.test.ts (19 tests) 8809ms
+   ✓ Brand onboarding canonical Instagram OAuth > uses explicit INITIAL_CONNECT for an authenticated Brand Owner 4781ms
+   ✓ Brand onboarding canonical Instagram OAuth > exchanges code plus state once and scrubs secrets (StrictMode=true) 697ms
+   ✓ Brand onboarding canonical Instagram OAuth > reports partial access without calling it a full Insights connection 942ms
+   ✓ Brand onboarding canonical Instagram OAuth > does not mislabel a permission-evidence failure as connected 541ms
+ ✓ src/features/settings/components/brand/brand-general-settings.test.ts (10 tests) 7938ms
+   ✓ BS-01 General Settings > loads authoritative values and keeps email, country, currency and Brand identity read-only 2828ms
+   ✓ BS-01 General Settings > keeps unrelated identity fields out while composing Account security 518ms
+   ✓ BS-01 General Settings > BRAND_OWNER saves only the three allowed fields and leaves Brand identity unchanged 1978ms
+   ✓ BS-01 General Settings > FINANCE_ADMIN saves only the three allowed fields and leaves Brand identity unchanged 437ms
+   ✓ BS-01 General Settings > shows save failure and retains unsaved values 309ms
+   ✓ BS-01 General Settings > returns invitation capacity after cancelling a pending seat and refetching 1003ms
+ ✓ src/features/auth/api/auth-client.test.ts (16 tests) 68ms
+ ✓ src/features/settings/components/brand/team-invitation-acceptance.test.ts (16 tests) 1390ms
+ ✓ src/features/settings/api/instagram-integrations-client.test.ts (10 tests) 30ms
+stderr | src/pages/brand/settings/brand-settings-routing.test.ts > FE-E Brand Settings routing and composition > redirects the Settings root deterministically to General
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/brand/settings/brand-settings-routing.test.ts (9 tests) 1176ms
+   ✓ FE-E Brand Settings routing and composition > redirects the Settings root deterministically to General 695ms
+ ✓ src/features/settings/components/brand/settings-fe-b-reconciliation.test.ts (10 tests) 4039ms
+   ✓ FE-B canonical billing profile > renders only canonical fields, readiness, and the backend lifecycle 571ms
+   ✓ FE-B canonical billing profile > submits the canonical payload and solicits GSTIN only for India 1731ms
+   ✓ FE-B canonical billing profile > rejects a 256-character legal entity name client-side 447ms
+   ✓ FE-B personal notification preferences > Brand Owner can edit their own six optional-email preferences 412ms
+ ✓ src/features/brand-escrow/api/brand-escrow-client.test.ts (9 tests) 45ms
+ ✓ src/features/creator-payout-settings/components/creator-payout-legal-settings.test.ts (9 tests) 7561ms
+   ✓ C-05 Creator payout and legal Settings UI > renders only the masked destination with an explicitly unverified status 327ms
+   ✓ C-05 Creator payout and legal Settings UI > shows only India bank and UPI rails for an India legal profile 1096ms
+   ✓ C-05 Creator payout and legal Settings UI > shows only US bank and PayPal rails for a US legal profile 1910ms
+   ✓ C-05 Creator payout and legal Settings UI > clears secure values after Escape and restores focus to the trigger 1223ms
+   ✓ C-05 Creator payout and legal Settings UI > submits a complete India bank write contract without displaying it afterward 1014ms
+   ✓ C-05 Creator payout and legal Settings UI > keeps tax identifiers, PAN, KYC, and verification controls outside the legal form 842ms
+   ✓ C-05 Creator payout and legal Settings UI > uses the accessible Aurora drawer as a mobile sheet seam 916ms
+ ✓ src/features/settings/components/creator/creator-team-settings.test.ts (9 tests) 1774ms
+   ✓ C05 Creator Team Settings > allows OWNER to manage non-Owner membership but protects Owner controls 519ms
+   ✓ C05 Creator Team Settings > submits normalized invite and role actions through bounded callbacks 395ms
+stderr | src/features/auth/components/sign-in-card.test.ts > sign-in card > supports arrow-key navigation between sign-in methods
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/auth/components/sign-in-card.test.ts (14 tests) 1455ms
+   ✓ sign-in card > supports arrow-key navigation between sign-in methods 476ms
+stderr | src/features/creator-onboarding/creator-settings-guard-scope.test.ts > Creator Settings guard-scope correction > redirects incomplete Creator home access to Creator Entry
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/creator-onboarding/creator-settings-guard-scope.test.ts (17 tests) 612ms
+ ✓ src/features/settings/components/brand/brand-team-settings.test.ts (11 tests) 1732ms
+   ✓ BS-02 Team actions > Finance cannot select Owner for invite or promotion and can change ordinary roles 377ms
+stderr | src/features/settings/components/brand/account-security-settings.test.ts > BS-12 Account security > renders active sign-in methods truthfully without provider identifiers
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/settings/components/brand/account-security-settings.test.ts (8 tests) 1512ms
+   ✓ BS-12 Account security > renders active sign-in methods truthfully without provider identifiers 380ms
+   ✓ BS-12 Account security > validates current password, canonical bounds, and matching confirmation 366ms
+   ✓ BS-12 Account security > accepts a new password of 128 characters and redirects after session revocation 303ms
+ ✓ src/features/creator-onboarding/api/creator-entry-client.test.ts (5 tests) 27ms
+ ✓ src/features/pricing/api/pricing-client-fe-b.test.ts (27 tests) 29ms
+ ✓ src/features/pricing/components/pricing-billing-panel-fe-b.test.ts (7 tests) 2289ms
+   ✓ FE-B subscription actions and role authority > Brand Owner can confirm only period-end cancellation 1060ms
+   ✓ FE-B subscription actions and role authority > Finance Admin can confirm only period-end cancellation 345ms
+ ✓ src/features/settings/components/creator/creator-instagram-settings.test.ts (5 tests) 1601ms
+   ✓ Creator Instagram Settings UI > renders the canonical healthy state without other platforms or Marketplace 639ms
+   ✓ Creator Instagram Settings UI > shows same-account recovery and the permanent identity policy 398ms
+   ✓ Creator Instagram Settings UI > uses an accessible confirmation drawer before disconnecting 354ms
+ ✓ src/features/pricing/components/pricing-lifecycle-fe-b.test.ts (11 tests) 582ms
+   ✓ FE-B Founder’s Beta catalog > shows one purchasable plan and three actionless upcoming tiers 415ms
+stderr | src/features/auth/components/auth-recovery.test.ts > password recovery > keeps forgot-password copy generic
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/auth/components/auth-recovery.test.ts (4 tests) 766ms
+   ✓ password recovery > keeps forgot-password copy generic 343ms
+ ✓ src/features/brand-onboarding/api/brand-social-sync-client.test.ts (6 tests) 28ms
+ ✓ src/shared/auth/auth-session.test.ts (7 tests) 29ms
+ ✓ src/features/settings/components/creator/creator-team-invitation-acceptance.test.ts (7 tests) 394ms
+ ✓ src/features/settings/api/creator-instagram-settings-client.test.ts (6 tests) 28ms
+stderr | src/features/settings/components/creator/creator-instagram-settings-oauth-callback.test.ts > Creator Instagram Settings OAuth callback > uses C-01 completion for a Settings initial-connect marker
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/settings/components/creator/creator-profile-contact-settings.test.ts (3 tests) 1140ms
+   ✓ CreatorProfileContactSettings > submits long international contact values without client truncation 857ms
+ ✓ src/shared/creator/creator-workspace-actor-context.test.ts (6 tests) 854ms
+   ✓ Creator workspace actor context convergence > returns to LOADING immediately when the authenticated User changes 379ms
+ ✓ src/features/settings/components/creator/creator-instagram-settings-oauth-callback.test.ts (4 tests) 1115ms
+   ✓ Creator Instagram Settings OAuth callback > uses C-01 completion for a Settings initial-connect marker 340ms
+ ✓ src/features/settings/api/brand-settings-client.test.ts (4 tests) 20ms
+stderr | src/pages/creator/onboarding/creator-instagram-oauth-callback-page.test.ts > Creator Instagram callback > captures code+state, immediately scrubs the query, and completes initial connection
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/creator/onboarding/creator-instagram-oauth-callback-page.test.ts (3 tests) 119ms
+stderr | src/features/creator-campaigns/components/campaign-detail-continuation.test.ts > public Campaign Creator Entry continuation > issues exactly once without a JavaScript token and enters Creator Entry
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/creator-campaigns/components/campaign-detail-continuation.test.ts (2 tests) 558ms
+   ✓ public Campaign Creator Entry continuation > issues exactly once without a JavaScript token and enters Creator Entry 441ms
+ ✓ src/features/settings/api/creator-team-client.test.ts (4 tests) 20ms
+ ✓ src/features/settings/api/creator-profile-contact-client.test.ts (3 tests) 26ms
+stderr | src/features/creator-onboarding/components/creator-platform-route-guard.test.ts > Creator platform frontend guard > renders a usable Creator route and ignores Insights as a separate gate
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/creator-onboarding/components/creator-platform-route-guard.test.ts (3 tests) 135ms
+ ✓ src/features/brand-onboarding/api/brand-auth-foundation.test.ts (2 tests) 17ms
+stderr | src/pages/public/marketplace/public-invite-landing-page.test.ts > public invitation navigation > builds an encoded, internal Campaign destination
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/public/marketplace/public-invite-landing-page.test.ts (2 tests) 121ms
+ ✓ src/features/brand-onboarding/utils/delegated-instagram-oauth-handoff.test.ts (4 tests) 10ms
+stderr | src/shared/auth/require-auth.test.ts > RequireAuth > waits while startup refresh is unresolved
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/shared/auth/require-auth.test.ts (3 tests) 80ms
+stderr | src/shared/auth/use-logout.test.ts > useLogout > keeps the current authenticated route when server logout fails
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/shared/auth/use-logout.test.ts (1 test) 228ms
+ ✓ src/design-system/aurora/components/SideDrawer.test.ts (1 test) 549ms
+   ✓ Aurora SideDrawer accessibility > focuses and traps the modal, then restores focus after Escape 546ms
+ ✓ src/pages/creator/onboarding/creator-instagram-oauth-callback-route.test.ts (3 tests) 49ms
+ ✓ src/features/brand-onboarding/schemas/brand-preview-runtime-schema.test.ts (9 tests) 22ms
+ ✓ src/features/uce/readiness/canonical-campaign-readiness-controller.test.ts (22 tests) 19ms
+ ✓ src/features/brand-onboarding/utils/google-id-token.test.ts (1 test) 13ms
+ ✓ src/features/brand-centre/schemas/brand-centre-brand-schema.test.ts (33 tests) 353ms
+ ✓ src/features/uce/campaign-page/campaign-page-model.test.ts (9 tests) 35ms
+ ✓ src/features/brand-onboarding/api/gatekeeper-client.test.ts (10 tests) 40ms
+ ✓ src/features/brand-centre/adapters/brand-processor-runtime.test.ts (19 tests) 108ms
+ ✓ src/features/uce/api/brand-uce-client.campaign-page.test.ts (9 tests) 23ms
+ ✓ src/features/uce/campaign-page/CanonicalCampaignPage.test.ts (7 tests) 61ms
+ ✓ src/features/brand-centre/adapters/map-brand-workspace.test.ts (20 tests) 80ms
+ ✓ src/features/uce/campaign-page/CampaignWorkspaceContent.test.ts (6 tests) 26ms
+ ✓ src/features/brand-centre/schemas/product-intelligence-schema.test.ts (27 tests) 31ms
+ ✓ src/features/brand-onboarding/services/gatekeeper-recovery.test.ts (6 tests) 16ms
+ ✓ src/features/collaboration/utils/collaboration-g1b-interaction.test.ts (7 tests) 9ms
+ ✓ src/features/brand-centre/queries/brand-workspace-cache.test.ts (7 tests) 90ms
+ ✓ src/features/uce/components/campaign-strategy/campaign-strategy-model.test.ts (21 tests) 61ms
+ ✓ src/layouts/app-shell/creator-shell-capabilities.test.ts (8 tests) 13ms
+ ✓ src/features/collaboration/utils/collaboration-g1c-ownership.test.ts (6 tests) 14ms
+ ✓ src/features/brand-onboarding/schemas/gatekeeper-runtime-schema.test.ts (8 tests) 12ms
+ ✓ src/features/creator-onboarding/creator-entry-architecture.test.ts (6 tests) 24ms
+ ✓ src/features/uce/autosave/canonical-campaign-autosave-controller.test.ts (8 tests) 18ms
+stderr | src/features/brand-centre/components/brand-workspace/brand-workspace.test.ts > functional Brand workspace > Brand and canonical Offerings have destinations; unavailable workspaces are natively disabled
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at WorkspaceLinks
+    at div
+    at nav
+    at BrandWorkspaceNavigation
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at WorkspaceLinks
+    at div
+    at nav
+    at BrandWorkspaceNavigation
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at WorkspaceLinks
+    at div
+    at details
+    at nav
+    at BrandWorkspaceNavigation
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at WorkspaceLinks
+    at div
+    at details
+    at nav
+    at BrandWorkspaceNavigation
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/features/brand-centre/components/brand-workspace/brand-workspace.test.ts (11 tests) 144ms
+ ✓ src/features/brand-centre/components/product-intelligence/product-intelligence.test.ts (10 tests) 63ms
+ ✓ src/features/brand-onboarding/mappers/map-brand-preview-state.test.ts (4 tests) 9ms
+stderr | src/features/collaboration/schemas/collaboration-read.schemas.test.ts > Collaboration read validation > rejects malformed canonical reads
+Collaboration read contract rejected {
+  surface: 'threads',
+  issues: [ { code: 'invalid_enum_value', path: [Array] } ]
+}
+
+stderr | src/features/collaboration/schemas/collaboration-read.schemas.test.ts > Collaboration read validation > rejects missing publishingRequired on canonical details
+Collaboration read contract rejected {
+  surface: 'detail',
+  issues: [ { code: 'invalid_type', path: [Array] } ]
+}
+
+ ✓ src/features/collaboration/schemas/collaboration-read.schemas.test.ts (4 tests) 17ms
+ ✓ src/routes/c05-frontend-convergence.architecture.test.ts (6 tests) 20ms
+ ✓ src/features/uce/components/creator-strategy/creator-strategy-model.test.ts (8 tests) 49ms
+ ✓ src/features/brand-onboarding/components/brand-preview-runtime-integration.test.ts (1 test) 27ms
+ ✓ src/features/uce/components/create-campaign-frame/create-campaign-frame-model.test.ts (19 tests) 13ms
+ ✓ src/features/uce/components/campaign-strategy/campaign-strategy-accessibility.test.ts (4 tests) 46ms
+ ✓ src/features/uce/components/commercial-strategy/commercial-strategy-model.test.ts (7 tests) 46ms
+ ✓ src/features/collaboration/utils/collaboration-context-references.test.ts (3 tests) 6ms
+ ✓ src/features/brand-centre/components/brand-workspace/brand-visual-composition.test.ts (9 tests) 141ms
+stderr | src/layouts/app-shell/creator-shell-rendering.test.ts > Creator shell rendering > renders exactly six expanded Creator destinations without upgrade or Marketplace
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at aside
+    at AppSidebar (<workspace>\frontend\src\layouts\app-shell\AppSidebar.tsx:21:23)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at aside
+    at AppSidebar (<workspace>\frontend\src\layouts\app-shell\AppSidebar.tsx:21:23)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at aside
+    at AppSidebar (<workspace>\frontend\src\layouts\app-shell\AppSidebar.tsx:21:23)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at aside
+    at AppSidebar (<workspace>\frontend\src\layouts\app-shell\AppSidebar.tsx:21:23)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at aside
+    at AppSidebar (<workspace>\frontend\src\layouts\app-shell\AppSidebar.tsx:21:23)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at aside
+    at AppSidebar (<workspace>\frontend\src\layouts\app-shell\AppSidebar.tsx:21:23)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/layouts/app-shell/creator-shell-rendering.test.ts > Creator shell rendering > renders four non-link mobile recovery destinations with accessible reasons
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/layouts/app-shell/creator-shell-rendering.test.ts > Creator shell rendering > keeps Settings actionable in the expanded recovery menu
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/layouts/app-shell/creator-shell-rendering.test.ts (3 tests) 97ms
+ ✓ src/features/creator-payout-settings/c05-p1d-frontend.architecture.test.ts (4 tests) 30ms
+ ✓ src/features/uce/components/commercial-strategy/commercial-strategy-layout.test.ts (4 tests) 170ms
+ ✓ src/features/settings/components/creator/creator-instagram-settings.architecture.test.ts (5 tests) 28ms
+ ✓ src/features/brand-centre/api/brand-centre-brand-client.test.ts (6 tests) 383ms
+   ✓ authenticated Brand consumer client > uses only the bounded route, existing authorization, abort and no Brand selector 319ms
+ ✓ src/features/brand-centre/queries/use-product-intelligence.test.ts (1 test) 12ms
+ ✓ src/features/brand-centre/api/product-intelligence-client.test.ts (4 tests) 36ms
+ ✓ src/features/uce/api/canonical-campaign-draft-client.test.ts (3 tests) 19ms
+ ✓ src/features/settings/utils/creator-settings-navigation.test.ts (3 tests) 7ms
+ ✓ src/features/uce/api/brand-uce-client.context-read.test.ts (2 tests) 17ms
+ ✓ src/features/brand-onboarding/utils/brand-audit-pdf.test.ts (1 test) 362ms
+   ✓ Brand audit PDF export > generates the audit through the current jsPDF/autotable chain 361ms
+ ✓ src/features/collaboration/api/collaboration-socket-client.test.ts (2 tests) 10ms
+ ✓ src/shared/navigation/safe-internal-path.test.ts (33 tests) 14ms
+ ✓ src/features/auth/post-login-redirect.test.ts (23 tests) 14ms
+ ✓ src/features/auth/auth-security-static.test.ts (4 tests) 112ms
+ ✓ src/pages/brand/settings/brand-settings-billing-page.test.ts (2 tests) 5ms
+ ✓ src/features/settings/contracts/creator-instagram-settings.contracts.test.ts (3 tests) 5ms
+ ✓ src/shared/config/resolve-env.test.ts (5 tests) 8ms
+ ✓ src/features/brand-onboarding/mappers/map-gatekeeper-result.test.ts (2 tests) 6ms
+ ✓ src/features/brand-centre/queries/product-intelligence-cache.test.ts (3 tests) 8ms
+ ✓ src/features/collaboration/utils/collaboration-inbox-identity.test.ts (1 test) 4ms
+stderr | src/features/settings/components/creator-settings-shell.test.ts > CreatorSettingsShell > fails closed while access is unresolved and keeps Account security actionable
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at nav
+    at div
+    at CreatorSettingsShell (<workspace>\frontend\src\features\settings\components\creator-settings-shell.tsx:14:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/features/settings/components/creator-settings-shell.test.ts > CreatorSettingsShell > announces truthful recovery reasons on disabled administrative tabs
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at nav
+    at div
+    at CreatorSettingsShell (<workspace>\frontend\src\features\settings\components\creator-settings-shell.tsx:14:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/features/settings/components/creator-settings-shell.test.ts (2 tests) 44ms
+ ✓ src/features/brand-onboarding/api/brand-preview-client.test.ts (2 tests) 17ms
+ ✓ src/features/collaboration/utils/collaboration-selection.test.ts (4 tests) 6ms
+ ✓ src/features/collaboration/utils/collaboration-route-access.test.ts (3 tests) 8ms
+ ✓ src/features/collaboration/utils/collaboration-stage-progress.test.ts (3 tests) 6ms
+ ✓ src/features/brand-centre/contracts/brand-component-path.test.ts (8 tests) 10ms
+stderr | src/layouts/app-shell/mobile-navigation-accessibility.test.ts > mobile shell closed-menu accessibility > open=false retains routes and controls focus/AT exposure
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarFooterNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarFooterNavLink.tsx:8:3)
+    at div
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/layouts/app-shell/mobile-navigation-accessibility.test.ts > mobile shell closed-menu accessibility > open=true retains routes and controls focus/AT exposure
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarNavLink.tsx:8:3)
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (<workspace>\frontend\node_modules\react-router-dom\dist\umd\react-router-dom.development.js:807:9)
+    at SidebarFooterNavLink (<workspace>\frontend\src\layouts\app-shell\SidebarFooterNavLink.tsx:8:3)
+    at div
+    at nav
+    at div
+    at MobileNavigation (<workspace>\frontend\src\layouts\app-shell\MobileNavigation.tsx:22:3)
+    at Router (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (<workspace>\frontend\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/layouts/app-shell/mobile-navigation-accessibility.test.ts (2 tests) 55ms
+ ✓ src/shared/api/health.test.ts (2 tests) 16ms
+ ✓ src/features/brand-onboarding/schemas/url-schema.test.ts (6 tests) 9ms
+ ✓ src/features/settings/components/shared-account-security.architecture.test.ts (1 test) 10ms
+ ✓ src/features/collaboration/utils/collaboration-g1c-bank-cutover.test.ts (2 tests) 7ms
+ ✓ src/layouts/app-shell/bottom-nav-items.test.ts (1 test) 5ms
+ ✓ src/features/collaboration/utils/collaboration-empty-workspace.test.ts (1 test) 5ms
+ ✓ src/features/brand-onboarding/components/gatekeeper-confirmation-modal.test.ts (2 tests) 6ms
+ ✓ src/features/collaboration/utils/collaboration-mobile-step.test.ts (2 tests) 4ms
+
+ Test Files  113 passed (113)
+      Tests  887 passed (887)
+   Start at  14:40:47
+   Duration  111.00s (transform 30.58s, setup 0ms, collect 86.21s, tests 71.82s, environment 81.29s, prepare 27.88s)

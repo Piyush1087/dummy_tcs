@@ -1,0 +1,19 @@
+
+ RUN  v2.1.9 <workspace>/frontend
+
+stderr | src/features/brand-payouts/brand-payouts-p2.test.ts > route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/brand-payouts/brand-payouts-p2.test.ts (29 tests) 4434ms
+   ✓ route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data 351ms
+   ✓ truthful first-slice rendering > distinguishes movement from lifecycle and preserves legacy due uncertainty 420ms
+   ✓ truthful first-slice rendering > shows a version-bound Settings deep link only for a complete current snapshot 754ms
+   ✓ truthful first-slice rendering > restores focus to each async Treasury command invoker after Escape 501ms
+   ✓ stable financial detail navigation > preserves expanded activity and obligation pages across both detail return paths 854ms
+   ✓ stable financial detail navigation > routes desktop and mobile activity links by activity ID while preserving the public reference 308ms
+
+ Test Files  1 passed (1)
+      Tests  29 passed (29)
+   Start at  14:36:20
+   Duration  43.99s (transform 1.68s, setup 0ms, collect 11.27s, tests 4.43s, environment 26.64s, prepare 801ms)

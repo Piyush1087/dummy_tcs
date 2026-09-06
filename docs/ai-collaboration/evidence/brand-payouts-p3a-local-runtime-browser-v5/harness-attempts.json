@@ -1,0 +1,28 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "gateCredit": "NONE",
+  "fullSuiteAttempt": {
+    "passed": 881,
+    "failed": 6,
+    "cause": "Preview VITE_API_URL leaked into test environment; six assertions expected relative URLs. Repeated unchanged full suite with standard test env: 887 passed.",
+    "affectedFiles": [
+      "src/shared/auth/auth-session.test.ts",
+      "src/features/brand-onboarding/api/gatekeeper-client.test.ts"
+    ],
+    "assertionsWeakened": false
+  },
+  "fieldLocatorAttempt": {
+    "completedRows": 3,
+    "cause": "Validation adds error text to the input label, invalidating exact label locator for editing ready amount. Changed temporary locator to dialog decimal input; retained named-control evidence. No source or assertion change.",
+    "screenshots": "Discarded exploratory screenshots superseded by credited captures"
+  },
+  "earlyPreview": {
+    "cause": "Preview launched before fresh frontend build finished, then stopped before any browser gate. Fresh built preview started after successful build.",
+    "gateCredit": "NONE",
+    "ownedProcessRemoved": true
+  }
+}

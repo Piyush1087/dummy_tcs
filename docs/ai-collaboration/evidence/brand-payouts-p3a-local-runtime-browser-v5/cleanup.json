@@ -1,0 +1,15 @@
+{
+  "ownedProcessCount": 0,
+  "ownedListenerCount": 0,
+  "containerRemoved": true,
+  "volumeRemoved": true,
+  "remainingTemporaryScriptsOrPrivateMaterial": [],
+  "backendStatus": [],
+  "frontendStatus": [],
+  "backendHead": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendHead": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "sharedDatabaseUntouched": true,
+  "shutdown": "Controlled owned-PID termination on Windows; Docker rm -f -v removed owned disposable database and anonymous volume; browser contexts closed normally",
+  "PAYOUTSRestartedAs": "SETTINGS",
+  "earlyPreview": "Stopped before browser evidence; replaced by fresh-built preview"
+}

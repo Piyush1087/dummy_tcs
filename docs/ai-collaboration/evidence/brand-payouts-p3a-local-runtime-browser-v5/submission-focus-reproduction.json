@@ -1,0 +1,187 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "mode": "SETTINGS",
+  "actor": "owner",
+  "route": "/brand/settings/escrow",
+  "viewport": {
+    "width": 390,
+    "height": 1000
+  },
+  "source": "REAL_LOCAL_CANONICAL_RESPONSE_NO_BODY_OR_TIMING_INTERCEPTION",
+  "axeExecuted": false,
+  "before": {
+    "tag": "BUTTON",
+    "name": "Continue to provider",
+    "inDialog": true,
+    "modalOpen": true,
+    "selector": "button.aurora-button.aurora-button--primary.aurora-button--md"
+  },
+  "canonicalStatus": 503,
+  "after": {
+    "tag": "BODY",
+    "name": "BODY",
+    "inDialog": false,
+    "modalOpen": true,
+    "selector": "body"
+  },
+  "tabs": [
+    {
+      "tag": "BODY",
+      "name": "BODY",
+      "inDialog": false,
+      "modalOpen": true,
+      "selector": "body"
+    },
+    {
+      "tag": "BUTTON",
+      "name": "Notifications",
+      "inDialog": false,
+      "modalOpen": true,
+      "selector": "button.aurora-header__btn"
+    },
+    {
+      "tag": "BUTTON",
+      "name": "Open Menu",
+      "inDialog": false,
+      "modalOpen": true,
+      "selector": "button.aurora-header__btn.aurora-header__menu-trigger"
+    },
+    {
+      "tag": "A",
+      "name": "General",
+      "inDialog": false,
+      "modalOpen": true,
+      "selector": "a.brand-settings__tab"
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "path": "/brand/settings/escrow",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/assets/index-C_gUhPpS.js",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/refresh",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/brand/settings/escrow",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/assets/index-DdjQArWM.css",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/assets/index-C_gUhPpS.js",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/refresh",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/brand/payouts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/escrow/vault",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/escrow/topup-intent",
+      "status": 503
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    }
+  ],
+  "screenshot": "SETTINGS-390-owner-add-funds-post-failure-tab-escape.png",
+  "signature": "P3A_DRAWER_SUBMISSION_FOCUS_ESCAPES_MODAL",
+  "networkReference": "submission-focus-reproduction.json#/network",
+  "consoleReference": "submission-focus-reproduction.json#/console",
+  "axe": "NOT_RUN_TO_ISOLATE_NATIVE_KEYBOARD_FAILURE"
+}

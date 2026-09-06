@@ -1,0 +1,58 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "signature": "P3A_DRAWER_SUBMISSION_FOCUS_ESCAPES_MODAL",
+  "reproduction": "SETTINGS; Owner; /brand/settings/escrow; 390x1000; keyboard-open Add funds, type 5000, focus Continue to provider, Enter; real POST returns 503. Drawer remains open, focus becomes BODY; Tab reaches Notifications, Open Menu and General behind modal. No Axe or interception in isolated reproduction.",
+  "PAYOUTSObservations": "Same BODY focus with drawer open in eight provider-absent rows: both roles and all four widths",
+  "suspectedSource": [
+    {
+      "file": "src/features/brand-escrow/components/escrow-top-up-drawer.tsx",
+      "lines": [
+        76,
+        138
+      ],
+      "reason": "Focused submit control becomes natively disabled on submitting and loses focus"
+    },
+    {
+      "file": "src/design-system/aurora/components/SideDrawer.tsx",
+      "lines": [
+        49,
+        56,
+        59
+      ],
+      "reason": "Tab containment wraps first/last elements only; does not recover focus after it leaves the modal"
+    }
+  ],
+  "whySourceChangeRequired": "The application disables its focused submit control without retaining modal focus; shared modal key handling permits background navigation from BODY. Environment, fixture, or port changes cannot repair this DOM focus transition.",
+  "correctedV4TriggerRegression": "PASS_ALL_16_PAYOUTS_ROLE_COMMAND_WIDTH_COMBINATIONS; distinct new submission-state defect",
+  "completed": {
+    "reuse": 211,
+    "targeted": 29,
+    "focused": 64,
+    "full": 887,
+    "payoutsBaseOpenRows": 16,
+    "payoutsBrowserRows": 88,
+    "providerAbsentAxeRows": 8,
+    "fullDocumentAxeScans": 96,
+    "serious": 0,
+    "critical": 0,
+    "overflow": 0,
+    "pendingTimingDedupeChecks": 16
+  },
+  "deferred": [
+    "Full SETTINGS drawer matrix",
+    "Remaining eight SETTINGS Return base rows and eight Settings Add funds base rows",
+    "Brand Return ready-to-submit and provider-absent presentation under actual zero eligibility",
+    "Complete composite P3A gate"
+  ],
+  "additionalCoverageConstraint": "Real fail-closed Return eligibility is zero. No body override was authorized or used; clarification was requested but no answer received before source circuit breaker.",
+  "sourceChanges": "NONE",
+  "migrationFilesChanged": "NONE",
+  "existingMigrationsApplied": "YES",
+  "providerActions": "NONE",
+  "P3AAcceptance": "NOT_SET",
+  "P4Work": "NONE"
+}

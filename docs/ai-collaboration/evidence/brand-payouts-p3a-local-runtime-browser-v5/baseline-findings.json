@@ -1,0 +1,5436 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "signIn": "Four unchanged inactive Email-code serious findings are immutable V2 baseline outside P3A; not freshly rescanned",
+  "freshLowerSeverity": [
+    {
+      "id": 1,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "ready-to-submit",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "authority-read-pending",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "open",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "client-validation",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-cancel",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "artifact": "browser-PAYOUTS.json",
+      "state": "reopen-close",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "owner",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "owner",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "owner",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "owner",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "finance",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "finance",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "finance",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "artifact": "failclosed-PAYOUTS.json",
+      "state": "provider-absent-fail-closed",
+      "actor": "finance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "selectors": [
+            [
+              ".aurora-sidedrawer"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".bp-workspace"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "selectors": [
+            [
+              ".aurora-header"
+            ],
+            [
+              ".aurora-shell__main"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "ownership": "Shared SideDrawer aside/dialog role (minor), shell/workspace/portal main and banner landmark nesting/duplication (moderate); retained as semantic-navigation baseline below serious/critical threshold",
+  "blockingStandard": "Independent modal keyboard containment fails after command submission even though Axe reports zero serious/critical"
+}

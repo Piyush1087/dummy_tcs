@@ -1,0 +1,19 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "targeted": 29,
+  "focused": 64,
+  "full": 887,
+  "changedFileESLint": "PASS",
+  "changedFilePrettier": "PASS",
+  "typecheck": "PASS",
+  "diffIntegrity": "PASS",
+  "backendBuild": "PASS",
+  "frontendProductionBuild": "PASS_ONE_BUILD",
+  "warning": "Existing large-chunk warning only",
+  "testEnvironment": "NODE_ENV=test; standard full suite without preview VITE_API_URL or VITE_STAGE",
+  "buildEnvironment": "NODE_ENV=production; VITE_STAGE=local; VITE_API_URL=http://127.0.0.1:3107"
+}

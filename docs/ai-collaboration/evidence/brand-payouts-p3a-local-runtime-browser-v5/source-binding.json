@@ -1,0 +1,36 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "repositories": {
+    "backend": {
+      "head": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "parent": "119397ff6836ad12846c1e948409d8d49185c408",
+      "remote": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "status": ""
+    },
+    "frontend": {
+      "head": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+      "tree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+      "parent": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+      "remote": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+      "status": ""
+    },
+    "authority": {
+      "head": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+      "tree": "093e8dd4f1ff0a12f5dfea6b2cda265f89c55298",
+      "parent": "176f9cd01e7e32aa82d2ea723d819bcc820e7e92",
+      "remote": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+      "status": ""
+    }
+  },
+  "requiredParent": "a8800de192f2e716f405b75f38799271fd9f1a9b",
+  "exactDelta": [
+    "src/features/brand-payouts/components/PayoutsTreasuryActions.tsx",
+    "src/features/brand-payouts/brand-payouts-p2.test.ts"
+  ],
+  "otherSourceSchemaMigrationPackageLockfileChanges": "NONE"
+}

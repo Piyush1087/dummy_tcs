@@ -1,0 +1,47 @@
+
+ RUN  v2.1.9 <workspace>/frontend
+
+stderr | src/pages/brand/settings/brand-settings-routing.test.ts > FE-E Brand Settings routing and composition > redirects the Settings root deterministically to General
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/brand-payouts/brand-payouts-p2.test.ts > route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/brand/settings/brand-settings-routing.test.ts (9 tests) 6341ms
+   ✓ FE-E Brand Settings routing and composition > redirects the Settings root deterministically to General 912ms
+   ✓ FE-E Brand Settings routing and composition > loads the Integrations route directly with the correct active tab 527ms
+   ✓ FE-E Brand Settings routing and composition > keeps Billing overview billing-only and Finance visibly and semantically active 2122ms
+   ✓ FE-E Brand Settings routing and composition > mounts the complete Treasury workspace only on Secure escrow during rollback 1480ms
+   ✓ FE-E Brand Settings routing and composition > turns Settings into a compatibility deep link when Payouts is active 1257ms
+ ✓ src/features/brand-escrow/components/treasury-settings.test.ts (17 tests) 13699ms
+   ✓ FE-D Treasury role matrix > allows BRAND_OWNER to add funds and request Brand Return 4425ms
+   ✓ FE-D Treasury role matrix > allows FINANCE_ADMIN to add funds and request Brand Return 1340ms
+   ✓ FE-D Treasury role matrix > keeps Campaign Manager Treasury-readable with every mutation absent 348ms
+   ✓ FE-D vault and fixed-point money truth > keeps legacy unknown-source available money visible but not returnable 534ms
+   ✓ FE-D top-up fail-closed handoff > enforces the INR minimum and never credits on checkout success 1845ms
+   ✓ FE-D top-up fail-closed handoff > treats provider handoff failure as a possibly pending load 1306ms
+   ✓ FE-D Brand Return > renders backend-authoritative INR and keeps an eligible mutation available 460ms
+   ✓ FE-D Brand Return > renders unavailable summary semantics and blocks null-currency mutation 304ms
+   ✓ FE-D Brand Return > blocks an amount above the backend-confirmed returnable balance 852ms
+   ✓ FE-D Brand Return > submits an eligible amount and presents PROCESSING, not completion 381ms
+   ✓ FE-D Brand Return > fails closed when provider execution is unavailable 603ms
+   ✓ FE-D Brand Return > renders every canonical lifecycle without collapsing PARTIAL or ACTION_REQUIRED 308ms
+ ✓ src/features/brand-escrow/api/brand-escrow-client.test.ts (9 tests) 94ms
+ ✓ src/features/brand-payouts/brand-payouts-p2.test.ts (29 tests) 14723ms
+   ✓ snapshot pagination and presentation > formats exact money without binary-float coercion and uses Kolkata display time 1039ms
+   ✓ route and detail fail-closed behavior > loads a URL-addressable Brand Return detail without exposing source data 1713ms
+   ✓ truthful first-slice rendering > renders initial, unavailable, refreshing, and genuine new-Brand states 548ms
+   ✓ truthful first-slice rendering > renders separate authoritative buckets and an unavailable bucket 912ms
+   ✓ truthful first-slice rendering > distinguishes movement from lifecycle and preserves legacy due uncertainty 1165ms
+   ✓ truthful first-slice rendering > loads overview, activity, and obligations independently 1530ms
+   ✓ truthful first-slice rendering > shows a version-bound Settings deep link only for a complete current snapshot 1659ms
+   ✓ truthful first-slice rendering > exposes both canonical commands only when the server selects Payouts 386ms
+   ✓ truthful first-slice rendering > restores focus to each async Treasury command invoker after Escape 1947ms
+   ✓ stable financial detail navigation > preserves expanded activity and obligation pages across both detail return paths 2029ms
+
+ Test Files  4 passed (4)
+      Tests  64 passed (64)
+   Start at  14:37:06
+   Duration  23.32s (transform 5.36s, setup 0ms, collect 16.19s, tests 34.86s, environment 12.55s, prepare 1.19s)

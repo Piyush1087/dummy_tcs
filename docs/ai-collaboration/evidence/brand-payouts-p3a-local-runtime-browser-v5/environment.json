@@ -1,0 +1,25 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "frontendTree": "f410720eb7b176d7f5f0e6d359b9083b362d957e",
+  "authoritySha": "fc1db87b220b2be7d3e9ad3301e4c85bddf16716",
+  "os": "Windows_NT 10.0.26200",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "packageManager": "npm",
+  "playwright": "1.61.1",
+  "axe": "4.10.3",
+  "browser": "Google Chrome 152.0.7977.76",
+  "productionPreview": {
+    "stage": "local",
+    "apiOrigin": "http://127.0.0.1:3107",
+    "previewOrigin": "http://127.0.0.1:4177"
+  },
+  "buildCount": {
+    "backend": 1,
+    "frontend": 1
+  },
+  "sourceChanges": "NONE"
+}

@@ -1,0 +1,501 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "frontendSha": "ca1a289670968eacf2c2c5c31ac626921aa8efba",
+  "JSON": "ALL_PARSED",
+  "links": {
+    "passed": 17,
+    "failed": 0
+  },
+  "screenshots": [
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-authority-read-pending.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-client-validation.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-open.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-provider-absent-fail-closed.png",
+      "width": 1440,
+      "height": 1343
+    },
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-ready-to-submit.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-reopen-cancel.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-add-funds-reopen-close.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-brand-return-authority-read-pending.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-brand-return-client-validation.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-brand-return-open.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-brand-return-reopen-cancel.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-finance-brand-return-reopen-close.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-authority-read-pending.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-client-validation.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-open.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-provider-absent-fail-closed.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-ready-to-submit.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-reopen-cancel.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-reopen-close.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-brand-return-authority-read-pending.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-brand-return-client-validation.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-brand-return-open.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-brand-return-reopen-cancel.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-1440-owner-brand-return-reopen-close.png",
+      "width": 1440,
+      "height": 1272
+    },
+    {
+      "file": "PAYOUTS-390-finance-add-funds-authority-read-pending.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-add-funds-client-validation.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-add-funds-open.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-add-funds-provider-absent-fail-closed.png",
+      "width": 390,
+      "height": 3358
+    },
+    {
+      "file": "PAYOUTS-390-finance-add-funds-ready-to-submit.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-add-funds-reopen-cancel.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-add-funds-reopen-close.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-brand-return-authority-read-pending.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-brand-return-client-validation.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-brand-return-open.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-brand-return-reopen-cancel.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-finance-brand-return-reopen-close.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-authority-read-pending.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-client-validation.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-open.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-provider-absent-fail-closed.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-ready-to-submit.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-reopen-cancel.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-reopen-close.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-authority-read-pending.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-client-validation.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-open.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-reopen-cancel.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-reopen-close.png",
+      "width": 390,
+      "height": 3109
+    },
+    {
+      "file": "PAYOUTS-767-finance-add-funds-authority-read-pending.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-add-funds-client-validation.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-add-funds-open.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-add-funds-provider-absent-fail-closed.png",
+      "width": 767,
+      "height": 2434
+    },
+    {
+      "file": "PAYOUTS-767-finance-add-funds-ready-to-submit.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-add-funds-reopen-cancel.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-add-funds-reopen-close.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-brand-return-authority-read-pending.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-brand-return-client-validation.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-brand-return-open.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-brand-return-reopen-cancel.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-finance-brand-return-reopen-close.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-authority-read-pending.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-client-validation.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-open.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-provider-absent-fail-closed.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-ready-to-submit.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-reopen-cancel.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-reopen-close.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-brand-return-authority-read-pending.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-brand-return-client-validation.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-brand-return-open.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-brand-return-reopen-cancel.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-767-owner-brand-return-reopen-close.png",
+      "width": 767,
+      "height": 2302
+    },
+    {
+      "file": "PAYOUTS-768-finance-add-funds-authority-read-pending.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-add-funds-client-validation.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-add-funds-open.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-add-funds-provider-absent-fail-closed.png",
+      "width": 768,
+      "height": 2041
+    },
+    {
+      "file": "PAYOUTS-768-finance-add-funds-ready-to-submit.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-add-funds-reopen-cancel.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-add-funds-reopen-close.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-brand-return-authority-read-pending.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-brand-return-client-validation.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-brand-return-open.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-brand-return-reopen-cancel.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-finance-brand-return-reopen-close.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-authority-read-pending.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-client-validation.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-open.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-provider-absent-fail-closed.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-ready-to-submit.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-reopen-cancel.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-reopen-close.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-brand-return-authority-read-pending.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-brand-return-client-validation.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-brand-return-open.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-brand-return-reopen-cancel.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "PAYOUTS-768-owner-brand-return-reopen-close.png",
+      "width": 768,
+      "height": 1970
+    },
+    {
+      "file": "SETTINGS-390-owner-add-funds-post-failure-tab-escape.png",
+      "width": 390,
+      "height": 3452
+    }
+  ],
+  "sensitiveValueAndMachinePathScan": "PASS",
+  "manualReview": "Source diff, report, Axe nodes, focus/timing traces, request/console streams, financial snapshots, source logs and representative screenshots reviewed",
+  "sourceWorktrees": "CLEAN_PINNED",
+  "scope": "V5_REPORT_AND_V5_DIRECTORY_ONLY",
+  "result": "BOUNDED_SOURCE_CIRCUIT_BREAKER"
+}
