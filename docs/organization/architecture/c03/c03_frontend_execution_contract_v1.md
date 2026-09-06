@@ -4163,3 +4163,22 @@ NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
 Remaining P5 correction budget is historical checkpoint accounting only; it does not authorize post-acceptance P5 mutation. P6 eligibility is for later SA authorization; this assignment does not start P6 or P7.
 
 Systems Architect acceptance SHA = 494679e72daa257f3b76a105094fe02cac1c3f04
+
+## P6_FINAL_JOINT_SYSTEM_ACCEPTANCE
+
+Authorization: `C03_P6_FINAL_JOINT_ACCEPTANCE_DURABLE_BINDING_V1`. Historical P4 and P5 checkpoint identities remain unchanged. Historical P6 blocked records remain valid; V7 is the final P6 outcome.
+
+```text
+P6_FRONTEND_ACCEPTED_SHA = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P6_FRONTEND_ACCEPTED_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+P6_FRONTEND_ACCEPTANCE = PASS
+P6_BROWSER_ACCEPTANCE = PASS
+P6_ACCESSIBILITY_ACCEPTANCE = PASS
+P6_PDF_ACCEPTANCE = PASS
+```
+
+The final frontend regression is 970/970 tests and 252/252 suites, with typecheck and build passing. Changed-file lint passed for 42/42 files. Full repository lint is `PASS_WITH_UNCHANGED_BASELINE_DEBT`: 26 errors and 13 warnings, with normalized diagnostics exactly matching the accepted baseline. It is not clean lint.
+
+Browser, keyboard accessibility, responsive, network security, storage/DOM security, and session/workspace clearing checks passed at 1440x900, 768x1024, 390x844, and 375x812. The preserved [V7 runner report](../../../ai-collaboration/c03-p6-final-execution-route-report-v7.md) contains the complete accepted record.
+
+Systems Architect P6 acceptance SHA = P6_FINAL_ACCEPTANCE_RECORD_SHA_PENDING

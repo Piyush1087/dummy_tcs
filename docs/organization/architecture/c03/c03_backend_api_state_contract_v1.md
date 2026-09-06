@@ -621,3 +621,25 @@ P6 V1 remains historically blocked before the 13,271,040-cell matrix (`0 / 13,27
 Full P6 matrix/runtime execution is not resumed by this binding. No further tracked correction is authorized; a later candidate defect returns to SA review.
 
 Systems Architect acceptance SHA = b123ce2601471dbf4912162fbea3ab0a1fe355bf
+
+## P6_FINAL_JOINT_SYSTEM_ACCEPTANCE
+
+Authorization: `C03_P6_FINAL_JOINT_ACCEPTANCE_DURABLE_BINDING_V1`. Historical P6 V1 and Resume V2 through V6 blocked records remain valid. The final V7 PASS supersedes them only as the final P6 outcome.
+
+```text
+P6_BACKEND_ACCEPTED_SHA = aebeb85fd6bba37f88c3805c213c61e7f63b2f5f
+P6_BACKEND_ACCEPTED_TREE = 86c5bb769598dd19a634dcd867350e53eaa06f75
+P6_STATUS = ACCEPTED
+PRODUCT_DELTA = NONE
+ARCHITECTURE_DELTA = NONE
+SCHEMA_DELTA = NONE
+MIGRATION_DELTA_AFTER_P1 = NONE
+```
+
+`3712f56930a8785b5cb61a9ed31fb43b240cb421` is the historical P5 backend. `aebeb85fd6bba37f88c3805c213c61e7f63b2f5f` is the final P6 accepted backend.
+
+The canonical visibility authority remains PUBLIC for an authenticated Creator with usable Instagram, ELIGIBLE_CREATORS_ONLY for an authenticated Creator with usable Instagram and authoritative backend ELIGIBLE, and INVITE_ONLY for an authenticated Creator with usable Instagram and a valid matching invitation. `INVITATION_IS_NOT_ELIGIBLE_ONLY_ENTITLEMENT`.
+
+The preserved [V7 runner report](../../../ai-collaboration/c03-p6-final-execution-route-report-v7.md) records the final 12/12 canonical gate result. External evidence is `C03_P6_FINAL_EXECUTION_ROUTE_V7_EVIDENCE.zip`, SHA-256 `78215308571af534653ec71fe63e172584ea80bf4ee3672db8aa3e086354a001`; it is not committed.
+
+Systems Architect P6 acceptance SHA = P6_FINAL_ACCEPTANCE_RECORD_SHA_PENDING

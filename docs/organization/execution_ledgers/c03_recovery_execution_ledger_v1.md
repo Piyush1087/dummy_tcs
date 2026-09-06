@@ -1422,3 +1422,49 @@ P6 V1 remains `BLOCKED BEFORE MATRIX`, with `0 / 13,271,040` evaluated due to de
 This binding does not authorize full P6 matrix/runtime execution, another tracked correction, P7, or source changes.
 
 Systems Architect acceptance SHA = b123ce2601471dbf4912162fbea3ab0a1fe355bf
+
+## 18. P6 final joint system acceptance
+
+Authorization: `C03_P6_FINAL_JOINT_ACCEPTANCE_DURABLE_BINDING_V1`. The Systems Architect accepted `C03_P6_FINAL_EXECUTION_ROUTE_REPORT_V7`. P6 V1, Resume V2, Resume V3, Resume V4, Resume V5, and V6 retain their historically blocked status. V7 supersedes those runs only as the final P6 outcome.
+
+```text
+LAST_ACCEPTED_CHECKPOINT = P6
+CURRENT_CHECKPOINT = P7_PENDING_AUTHORIZATION
+P6_STATE = ACCEPTED
+
+P6_FINAL_BACKEND_SHA = aebeb85fd6bba37f88c3805c213c61e7f63b2f5f
+P6_FINAL_BACKEND_TREE = 86c5bb769598dd19a634dcd867350e53eaa06f75
+P6_FINAL_FRONTEND_SHA = 82ed3c9ef849be8353565a1901b6f5fb065c37e1
+P6_FINAL_FRONTEND_TREE = f039d59aef7b0c8dd1fdb6ebb34cda961761c597
+
+TWELVE_CANONICAL_GATES = 12/12 PASS
+
+P7_STATE = NOT STARTED
+P7_AUTHORIZATION = PENDING_SEPARATE_SA_REVIEW
+```
+
+Final P6 acceptance includes the complete 13,271,040/13,271,040 policy matrix with zero failures and digest `91a7f94a6010b61f0f7fdc8b4e105b8351fac6353bacc1193df6bc7f4d4dd082`; migration replay and upgrade; 242/242 accepted PostgreSQL lane invocations; backend 6,206 pass, zero fail, and 765 intentionally pending across 540/540 suites; frontend 970/970 across 252/252 suites; browser, accessibility, PDF, C04 regression, and security/integrity acceptance.
+
+Full repository lint remains `PASS_WITH_UNCHANGED_BASELINE_DEBT`, with exactly 26 errors and 13 warnings and normalized diagnostics exactly matching the accepted baseline. `P6_NEW_TRACKED_DIFF = NONE` and high-confidence secret findings are zero.
+
+```text
+P6_TRACKED_CORRECTION_COUNT = 1
+P6_HARNESS_CORRECTION_COUNT = 2
+P6_HARNESS_CORRECTION_BUDGET_REMAINING = 0
+P6_RESIDUAL_ORACLE_RECONCILIATION_COUNT = 1
+P6_LEGACY_FIXTURE_ROUTE_RECONCILIATION_COUNT = 1
+P6_RCA_PROVEN_FIXTURE_ADOPTION_COUNT = 1
+P6_FINAL_EXECUTION_ROUTE_RECONCILIATION_COUNT = 1
+P6_FINAL_EXECUTION_ROUTE_RECONCILIATION_REMAINING = 0
+```
+
+These counts are acceptance-process history and do not alter final runtime semantics. The preserved [V7 runner report](../../ai-collaboration/c03-p6-final-execution-route-report-v7.md) is backed by external `C03_P6_FINAL_EXECUTION_ROUTE_V7_EVIDENCE.zip`, SHA-256 `78215308571af534653ec71fe63e172584ea80bf4ee3672db8aa3e086354a001`. The external artifacts are not committed.
+
+```text
+P6 = DURABLY_ACCEPTED
+P7 = NOT STARTED
+P7 = ELIGIBLE_FOR_SEPARATE_SA_AUTHORIZATION
+NEXT_AUTHORIZED_BOUNDARY = SA_REVIEW_ONLY
+```
+
+Systems Architect P6 acceptance SHA = P6_FINAL_ACCEPTANCE_RECORD_SHA_PENDING
