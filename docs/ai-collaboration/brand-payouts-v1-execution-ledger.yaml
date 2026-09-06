@@ -1,6 +1,6 @@
 schema_version: "1.0"
 run_id: "brand-payouts-v1"
-status: "P4_BASE_ACCEPTED_M1_V3_NOT_APPROVED_CONSOLIDATED_RESIDUAL_CORRECTION_REQUIRED"
+status: "P4_BASE_ACCEPTED_M1_V3_NOT_APPROVED_APPROVAL_GRADE_V4_RECONCILIATION_REQUIRED"
 
 authority_sha: "f15a91d0ace8b2c424a539d79dbb120869233105"
 execution_authority_sha: "689feb7a46eb2d52b984ce083be046ac6d38657d"
@@ -23,6 +23,8 @@ m1_v3_evidence_sha: "e14657b250cb4324bd2e1785ac67f6c8aecdf098"
 m1_v3_sql_sha256: "352a866d9bb094b4a256ab3bc5612c51bbf6efd6f1ce8b6e218ffdfe94b861d7"
 m1_v3_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V4"
 m1_v3_residual_correction_assignment_sha: "63fb3faadaea77055d66113568bfe41c8b54daf2"
+m1_v3_residual_correction_assignment_disposition: "SUPERSEDED_BY_APPROVAL_GRADE_RECONCILIATION"
+m1_v4_approval_grade_reconciliation_assignment_sha: "c230ad2c4dda66afb0b813413e2ba8e7f4fc5fe4"
 accessibility_recovery_authority_sha: "3e1120dcf361b3046c97b6ad0cc5c08e6ec2e71e"
 activity_detail_identifier_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
 pagination_restoration_correction_authority_sha: "7f03411b9940ab16579cd2e176ac9e721edee832"
@@ -71,7 +73,7 @@ model_routing: "SOL_HIGH_FINANCIAL_CONVERGENCE_SOL_MEDIUM_READINESS_AND_IMPLEMEN
 authorized_segment: "PROVIDER_DISABLED_NORMAL_PATH_HANDOFF"
 next_parent_gate: "BP_G10_EXACT_M1_APPROVAL_AFTER_BP_P4_BASE_CONVERGENCE"
 
-phase: "BP_G10_M1_V3_REVIEW_COMPLETE_CONSOLIDATED_RESIDUAL_CORRECTION_REQUIRED"
+phase: "BP_G10_M1_APPROVAL_GRADE_RECONCILIATION_COMPLETE_V4_PROPOSAL_REQUIRED"
 branch: "brand-payouts/v1-execution-ledger"
 checkpoint_sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
 checkpoint_name: "BP-P4-BASE-CONVERGENCE"
@@ -118,7 +120,7 @@ migrations:
     new_or_changed_migration_files_allowed: false
     shared_or_persistent_database_allowed: false
   m1_financial_contract:
-    status: "V1_V2_V3_NOT_APPROVED_V4_CONSOLIDATED_RESIDUAL_CORRECTION_REQUIRED"
+    status: "V1_V2_V3_NOT_APPROVED_V4_APPROVAL_GRADE_RECONCILIATION_REQUIRED"
     applied: false
     sha: null
     v1_evidence_sha: "1cc20581ee862f3fe47df53db8811da0ecbc1187"
@@ -132,6 +134,9 @@ migrations:
     v3_sql_sha256: "352a866d9bb094b4a256ab3bc5612c51bbf6efd6f1ce8b6e218ffdfe94b861d7"
     v3_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V4"
     v3_residual_correction_assignment_sha: "63fb3faadaea77055d66113568bfe41c8b54daf2"
+    v3_residual_correction_assignment_disposition: "SUPERSEDED"
+    v4_approval_grade_reconciliation_assignment_sha: "c230ad2c4dda66afb0b813413e2ba8e7f4fc5fe4"
+    approval_grade_register_scope: "R1_TO_R18_COMPLETE"
   m2_payment_support_case:
     status: "PROPOSAL_NOT_AUTHORIZED"
     applied: false
@@ -1250,6 +1255,8 @@ phase_checkpoints:
       v3_crosswalk_path: "docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v3/crosswalk.json"
       v3_status_matrix_path: "docs/ai-collaboration/evidence/brand-payouts-wave-b-m1-v3/status-disposition-matrix.json"
       v3_residual_correction_assignment_sha: "63fb3faadaea77055d66113568bfe41c8b54daf2"
+      v3_residual_correction_assignment_disposition: "SUPERSEDED"
+      v4_approval_grade_reconciliation_assignment_sha: "c230ad2c4dda66afb0b813413e2ba8e7f4fc5fe4"
       backend_commit: false
       applied: false
   p4a_first_reserve: null
@@ -1364,14 +1371,16 @@ files_changed:
   provider_evidence: []
 
 uncheckpointed_work:
-  phase: "BP_G10_M1_V4_PROPOSAL_CORRECTION"
-  status: "V3_NOT_APPROVED_CONSOLIDATED_RESIDUAL_CORRECTION_REQUIRED"
-  evidence: "docs/ai-collaboration/brand-payouts-v1-bp-g10-m1-v3-consolidated-residual-correction-runner-v1.md"
+  phase: "BP_G10_M1_V4_APPROVAL_GRADE_RECONCILIATION"
+  status: "V3_NOT_APPROVED_V4_COMPLETE_RECONCILIATION_REQUIRED"
+  evidence: "docs/ai-collaboration/brand-payouts-v1-bp-g10-m1-approval-grade-reconciliation-and-v4-runner-v2.md"
   v2_disposition: "NOT_APPROVED_SUPERSEDED"
   v3_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V4"
   v3_evidence_sha: "e14657b250cb4324bd2e1785ac67f6c8aecdf098"
   v3_sql_sha256: "352a866d9bb094b4a256ab3bc5612c51bbf6efd6f1ce8b6e218ffdfe94b861d7"
-  correction_assignment_sha: "63fb3faadaea77055d66113568bfe41c8b54daf2"
+  superseded_correction_assignment_sha: "63fb3faadaea77055d66113568bfe41c8b54daf2"
+  correction_assignment_sha: "c230ad2c4dda66afb0b813413e2ba8e7f4fc5fe4"
+  reconciliation_register: "R1_TO_R18_COMPLETE"
   p4_base_status: "ACCEPTED_UNCHANGED"
   source_repositories_clean: true
   migrations_created_or_applied: false
