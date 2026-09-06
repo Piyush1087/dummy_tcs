@@ -1,0 +1,18 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "ALL_RECORDED",
+  "actor": "RUNNER",
+  "source": "LOCAL_ARTIFACT_AUDIT",
+  "jsonLeafValuesInspected": 29600,
+  "sensitivePatternMatches": 0,
+  "ephemeralSecretExactMatchesBeforeDeletion": 0,
+  "creditedProductionRows": 80,
+  "allReferencesChecked": true,
+  "sourceWorktreesClean": true,
+  "cleanupComplete": true,
+  "errors": [],
+  "p3aAcceptance": "NOT_SET"
+}

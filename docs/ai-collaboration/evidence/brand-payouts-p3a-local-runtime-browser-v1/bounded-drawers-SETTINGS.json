@@ -1,0 +1,3436 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "SETTINGS",
+  "actor": "owner",
+  "source": "AUTHORITATIVE_LOCAL_BACKEND",
+  "fixture": "UUID_owner",
+  "rows": [
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-open",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-owner-add-funds-open.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 390,
+          "right": 710
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 646,
+              "right": 686
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-validation",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-owner-add-funds-validation.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 390,
+          "right": 710
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 646,
+              "right": 686
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-ready-no-submit",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-owner-add-funds-ready-no-submit.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 390,
+          "right": 710
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 646,
+              "right": 686
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 406,
+              "right": 694
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 390,
+        "documentClientWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-open",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-owner-add-funds-open.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 767,
+          "right": 1087
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1023,
+              "right": 1063
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-validation",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-owner-add-funds-validation.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 767,
+          "right": 1087
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1023,
+              "right": 1063
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-ready-no-submit",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-owner-add-funds-ready-no-submit.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 767,
+          "documentClientWidth": 767,
+          "bodyScrollWidth": 767
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 767,
+          "right": 1087
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1023,
+              "right": 1063
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 783,
+              "right": 1071
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 767,
+        "documentClientWidth": 767,
+        "bodyScrollWidth": 767
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-open",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-owner-add-funds-open.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 768,
+          "right": 1088
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1024,
+              "right": 1064
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-validation",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-owner-add-funds-validation.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 768,
+          "right": 1088
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1024,
+              "right": 1064
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-ready-no-submit",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-owner-add-funds-ready-no-submit.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 768,
+          "documentClientWidth": 768,
+          "bodyScrollWidth": 768
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 768,
+          "right": 1088
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1024,
+              "right": 1064
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 784,
+              "right": 1072
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 768,
+        "documentClientWidth": 768,
+        "bodyScrollWidth": 768
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-open",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-owner-add-funds-open.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 1440,
+          "right": 1760
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1696,
+              "right": 1736
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "BUTTON",
+          "name": "Close Add funds"
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-validation",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-owner-add-funds-validation.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 1440,
+          "right": 1760
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1696,
+              "right": 1736
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    },
+    {
+      "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+      "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+      "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+      "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "fixture": "UUID_owner",
+      "source": "AUTHORITATIVE_LOCAL_BACKEND",
+      "state": "add-funds-ready-no-submit",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-owner-add-funds-ready-no-submit.png",
+      "networkReference": "bounded-drawers-SETTINGS.json",
+      "consoleResult": "Page exceptions captured in messages. Full console-stream gate deferred after circuit breaker.",
+      "dom": {
+        "text": "The Creator Shop\nHome\nBrand Centre\nCampaigns\nBrand page\nCollaborations\nPayouts\nSettings\nSupport\nLogout",
+        "overflow": {
+          "documentScrollWidth": 1440,
+          "documentClientWidth": 1440,
+          "bodyScrollWidth": 1440
+        },
+        "rect": {
+          "top": 0,
+          "bottom": 1000,
+          "left": 1440,
+          "right": 1760
+        },
+        "viewportHeight": 1000,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "name": "Close menu",
+            "disabled": false,
+            "rect": {
+              "top": 24,
+              "bottom": 64,
+              "left": 1696,
+              "right": 1736
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Home",
+            "disabled": false,
+            "rect": {
+              "top": 105,
+              "bottom": 152,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand Centre",
+            "disabled": false,
+            "rect": {
+              "top": 160,
+              "bottom": 207,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Campaigns",
+            "disabled": false,
+            "rect": {
+              "top": 215,
+              "bottom": 262,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Brand page",
+            "disabled": false,
+            "rect": {
+              "top": 270,
+              "bottom": 317,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Collaborations",
+            "disabled": false,
+            "rect": {
+              "top": 325,
+              "bottom": 372,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Payouts",
+            "disabled": false,
+            "rect": {
+              "top": 380,
+              "bottom": 427,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "A",
+            "name": "Settings",
+            "disabled": false,
+            "rect": {
+              "top": 435,
+              "bottom": 482,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgb(52, 211, 153)",
+            "background": "rgba(52, 211, 153, 0.15)"
+          },
+          {
+            "tag": "A",
+            "name": "Support",
+            "disabled": false,
+            "rect": {
+              "top": 888,
+              "bottom": 932,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "name": "Logout",
+            "disabled": false,
+            "rect": {
+              "top": 940,
+              "bottom": 984,
+              "left": 1456,
+              "right": 1744
+            },
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "focus": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      },
+      "axe": {
+        "engine": {
+          "name": "axe-core",
+          "version": "4.10.3"
+        },
+        "violations": [],
+        "passes": [
+          "aria-allowed-role",
+          "aria-hidden-focus",
+          "duplicate-id-aria"
+        ]
+      },
+      "overflowResult": {
+        "documentScrollWidth": 1440,
+        "documentClientWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "accessibilityFocusResult": {
+        "axe": {
+          "engine": {
+            "name": "axe-core",
+            "version": "4.10.3"
+          },
+          "violations": [],
+          "passes": [
+            "aria-allowed-role",
+            "aria-hidden-focus",
+            "duplicate-id-aria"
+          ]
+        },
+        "active": {
+          "tag": "INPUT",
+          "name": ""
+        }
+      }
+    }
+  ],
+  "network": [
+    {
+      "state": "login",
+      "path": "/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "login",
+      "path": "/assets/index-BspmSqL-.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "login",
+      "path": "/assets/index-BddUu5TJ.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "login",
+      "path": "/api/v1/auth/refresh",
+      "status": 401,
+      "method": "POST"
+    },
+    {
+      "state": "login",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/brand/settings/escrow",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BspmSqL-.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BddUu5TJ.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/brand/settings/escrow",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BspmSqL-.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BddUu5TJ.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/brand/settings/escrow",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BspmSqL-.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BddUu5TJ.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/brand/settings/escrow",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BspmSqL-.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/assets/index-BddUu5TJ.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/refresh",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/payouts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/brand-returns/summary",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/vault",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/brand/settings/general",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "state": "add-funds-entry",
+      "path": "/api/v1/escrow/ledger",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "messages": [],
+  "keyboard": [
+    {
+      "width": 390,
+      "kind": "add-funds",
+      "event": "keyboard-entry",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Billing overview",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "A",
+          "name": "Secure escrow",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh status",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Add funds",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        }
+      ],
+      "active": {
+        "tag": "BUTTON",
+        "name": "Close Add funds",
+        "visible": true,
+        "outline": "rgb(16, 16, 16) auto 1px",
+        "withinDialog": true
+      }
+    },
+    {
+      "width": 390,
+      "kind": "add-funds",
+      "event": "escape-close-and-focus-return",
+      "cycle": [
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        }
+      ],
+      "contained": true,
+      "after": {
+        "tag": "BUTTON",
+        "name": "Add funds",
+        "visible": true,
+        "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+        "withinDialog": false
+      }
+    },
+    {
+      "width": 767,
+      "kind": "add-funds",
+      "event": "keyboard-entry",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Billing overview",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "A",
+          "name": "Secure escrow",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh status",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Add funds",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        }
+      ],
+      "active": {
+        "tag": "BUTTON",
+        "name": "Close Add funds",
+        "visible": true,
+        "outline": "rgb(16, 16, 16) auto 1px",
+        "withinDialog": true
+      }
+    },
+    {
+      "width": 767,
+      "kind": "add-funds",
+      "event": "escape-close-and-focus-return",
+      "cycle": [
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        }
+      ],
+      "contained": true,
+      "after": {
+        "tag": "BUTTON",
+        "name": "Add funds",
+        "visible": true,
+        "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+        "withinDialog": false
+      }
+    },
+    {
+      "width": 768,
+      "kind": "add-funds",
+      "event": "keyboard-entry",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Billing overview",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "A",
+          "name": "Secure escrow",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh status",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Add funds",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        }
+      ],
+      "active": {
+        "tag": "BUTTON",
+        "name": "Close Add funds",
+        "visible": true,
+        "outline": "rgb(16, 16, 16) auto 1px",
+        "withinDialog": true
+      }
+    },
+    {
+      "width": 768,
+      "kind": "add-funds",
+      "event": "escape-close-and-focus-return",
+      "cycle": [
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        }
+      ],
+      "contained": true,
+      "after": {
+        "tag": "BUTTON",
+        "name": "Add funds",
+        "visible": true,
+        "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+        "withinDialog": false
+      }
+    },
+    {
+      "width": 1440,
+      "kind": "add-funds",
+      "event": "keyboard-entry",
+      "trace": [
+        {
+          "tag": "A",
+          "name": "Billing overview",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "A",
+          "name": "Secure escrow",
+          "visible": true,
+          "outline": "color(srgb 0.203922 0.827451 0.6 / 0.45) solid 3px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Refresh status",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Add funds",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": false
+        }
+      ],
+      "active": {
+        "tag": "BUTTON",
+        "name": "Close Add funds",
+        "visible": true,
+        "outline": "rgb(16, 16, 16) auto 1px",
+        "withinDialog": true
+      }
+    },
+    {
+      "width": 1440,
+      "kind": "add-funds",
+      "event": "escape-close-and-focus-return",
+      "cycle": [
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Cancel",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Continue to provider",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close Add funds",
+          "visible": true,
+          "outline": "rgb(16, 16, 16) auto 1px",
+          "withinDialog": true
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "visible": true,
+          "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+          "withinDialog": true
+        }
+      ],
+      "contained": true,
+      "after": {
+        "tag": "BUTTON",
+        "name": "Add funds",
+        "visible": true,
+        "outline": "rgba(52, 211, 153, 0.5) solid 2px",
+        "withinDialog": false
+      }
+    }
+  ],
+  "financialCommandsSubmitted": 0
+}

@@ -1,0 +1,521 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "container": "DISPOSABLE_P3A_CONTAINER",
+  "loopbackOnly": true,
+  "utc": true,
+  "initialReadiness": "First immediate pg_isready check reported no response during startup; subsequent check accepted connections before migration/test work.",
+  "databases": [
+    {
+      "purpose": "src/features/brand-payouts/brand-payouts-p1.security.test.ts",
+      "nameClassification": "bp_p1_p3a",
+      "migrationCount": 74,
+      "allChecksumsMatch": true,
+      "timezone": "UTC"
+    },
+    {
+      "purpose": "src/features/brand-centre/brand-workspace-authorization.postgres.test.ts",
+      "nameClassification": "bs07_p3a",
+      "migrationCount": 74,
+      "allChecksumsMatch": true,
+      "timezone": "UTC"
+    },
+    {
+      "purpose": "src/features/brand-escrow/brand-return.postgres.test.ts",
+      "nameClassification": "bs04_p3a",
+      "migrationCount": 74,
+      "allChecksumsMatch": true,
+      "timezone": "UTC"
+    },
+    {
+      "purpose": "src/features/notifications/notification-hardening.postgres.test.ts",
+      "nameClassification": "notifications_p3a",
+      "migrationCount": 74,
+      "allChecksumsMatch": true,
+      "timezone": "UTC"
+    },
+    {
+      "purpose": "src/features/notifications/notification-workers.postgres.test.ts",
+      "nameClassification": "notification_workers_p3a",
+      "migrationCount": 74,
+      "allChecksumsMatch": true,
+      "timezone": "UTC"
+    },
+    {
+      "purpose": "src/features/notifications/operational-producers.postgres.test.ts",
+      "nameClassification": "p2b_p3a",
+      "migrationCount": 74,
+      "allChecksumsMatch": true,
+      "timezone": "UTC"
+    }
+  ],
+  "runtime": {
+    "timezone": "UTC",
+    "version": "17.11 (Debian 17.11-1.pgdg13+2)",
+    "migrations": [
+      {
+        "name": "20260514180000_init_discovery_and_users",
+        "checksum": "95667f6db71c87e8d0a0f0c33abf20a78290986d109733d13b6b45d2bd187d2d",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260514180100_brand_profiles_and_lifecycle",
+        "checksum": "ad664305fd34acdef9b532a17eef40be5d2061824d9f76a5a0123605c21bc6c6",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260515060635",
+        "checksum": "28d05fac108b2277de5e0c665454b1feb1d3590fa84800be6ac73ffd332bd0c3",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260515120000_product_surface_scan_alignment",
+        "checksum": "2f26693d90b538a8124577e768afe7b11a6cb480891a42d7f6db53de1cbb6e16",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260525091845_add_user_auth_fields",
+        "checksum": "d3a904d315242f319d773e75157285038d8b1837e0cef1f0efb01617025ee2ac",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260525093955_remove_user_hashed_password",
+        "checksum": "67d8910661f99f2062c4021284d2179802b30a2826048660a9ee9789cba5fd9d",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260525112347_add_surface_scan_attempts",
+        "checksum": "344306d0f57f4361722c546e7cf80dbaa6718803b326d3b0fd93cd9eb1b26dcd",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260527114736_brand_centre_tab1_tab3",
+        "checksum": "e9ce0c63fd9f579f5fea33df9135e45849692eb56334bdcbf1b06594e53e18c8",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260527120000_brand_centre_foundation",
+        "checksum": "167a3c1a8d4c6bfa02b5e73c7763197908cce977dac2ca5ce13a53c96a70ed20",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260527140000_brand_centre_tab1_tab3",
+        "checksum": "5c2a78ea814c56b302bbafc180e022044df7f33479c126ab47ebe2aea694e47b",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260527180000_brand_profile_plan_started_at",
+        "checksum": "0ea54e3941af5f2c1a8c4bce8ab4a09baf7de566787205c47d72322982ed71eb",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260527200000_brand_profile_surface_scrape_and_activity",
+        "checksum": "4948a25340688ae7e8513615cf39fba2cc34ad42ed909d3842bf57428f8f0069",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260601120000_uce_universal_campaign_engine",
+        "checksum": "0b6dae148661a3eb282df7de7c9a9757b8b040fc0700438d7cae02db2757ccf5",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260602133000_brand_centre_uce_bridge",
+        "checksum": "d12bcad332660884228f757c47cf5bff15c0eea85d7706a2aad8e5bf75e773cd",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260604120000_collaboration_module",
+        "checksum": "c55ff0de606d28bd505c47d474e0c110a847d16cca654859a1d7ad5052f67721",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260608120000_brand_escrow_module",
+        "checksum": "d3599bb2b7c96f7194e7607b815c3f1e7ee4557a89a0f27c595880ec8cda201e",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260608140000_pricing_module",
+        "checksum": "55964a7edc89f8df16ce7bd2917e35b91c816e37ed3b29b6337bf5f20eeebbe6",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260608160000_pricing_billing_invoices",
+        "checksum": "03d221792acdd9fddca9ecf055c7a2aaeb6eb1b6685248f29592913411a808e9",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260611130000_co_pilot_module",
+        "checksum": "72e6be37bb427ba1203a9cb8dc43574e16cd2e085ad3ae587f8f626f8bec97ed",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260611140000_co_pilot_feedback",
+        "checksum": "d2e67258bdac87d686e4e4301908b8919c2993ba8ebef09250180d932f9df89a",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260624120000_creator_marketplace",
+        "checksum": "49203a30ccd264607741bec521c298652f53d3715e96c415cbcf61638a2f17d6",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260624130000_post_marketplace_schema_align",
+        "checksum": "98c6f5cccf6ef7c3623ab817303657bb0876e1e9578c77e4d531acf23d7f66e1",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260624140000_payouts_hub_alignment",
+        "checksum": "a8bf81debd1c06466c2ebd2907f7b5dc17623fd38ac23de9ca8973c693d3f45b",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260628120000_settings_module",
+        "checksum": "4de0d20d7a4fedf267de21607a721bf29ee17bcd51da827193a9c062f3798462",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260629120000_notifications_module",
+        "checksum": "f6e7ed46534c7ffb70330439ef3092ef3e12e7654799315e58ef8c2cda648749",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260703120000_creator_onboarding_and_centre",
+        "checksum": "8fac623fc2619669a8a883d6a22b48cf0779a812c9fdc76997b6f41682c36e6a",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260703140000_creator_deferred_features",
+        "checksum": "cbec769c324f137ba8c67af27f09ed8a9c9a0a9f9047ec1edb1d2025624827fb",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260704120000_command_center_phase_alignment",
+        "checksum": "0e82f19ca4b32894dfdcf07f97fbe8b55638775b9ac7b3dd197f3ff470c61fe9",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260710120000_discovery_leads_step1_cache",
+        "checksum": "94fc84d7c98e7b4d77168449ced8f28a7fbb5d6c008f854211baaf6a56a27ac5",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260715120000_brand_intelligence_scans",
+        "checksum": "39ce8c1bedecc91f1f2eca70a323b52c9a4616e4e26f8a64a11152cdbdd195c7",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260716110000_brand_intelligence_jobs_waitlist_reason",
+        "checksum": "c3bc2d7026c5515204b6f6784a859a9db63b4686dedaf3fd01d2213ef22f97ca",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260724120000_stage_1a_failed_fallback",
+        "checksum": "97663c16758fb385889fdd4c11528d9ee46f6accb244e726b596163fe96e95b9",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260725140000_uce_add_asset_brief_wizard",
+        "checksum": "b6cfe6b1f28ddb7bf97ffad695e466c1f93b101f6339d8248a66d82515465f0d",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260727120000_uce_campaign_status_archived",
+        "checksum": "c2d6f4a169c205cd80c537db0923c3628548fd4c4700a6a989ccc64990023091",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260728100000_co_pilot_validation_checklist_format",
+        "checksum": "d2071b15f8bf2c8f70cfcfeb9c79e82ac1cffe0a9a8dcf7f228a283c75f1c154",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260805090000_brand_password_and_integrations",
+        "checksum": "8cb6f760903c18edcd9e2ab421dbaea8050595599b9a8ece9731b24c0cba12cc",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260810120000_uce_campaign_status_published_live",
+        "checksum": "2d57450a3c6f7780713eb6f7318b6ef41c4f5079f54d5ec76c5c76b0cf1c64c5",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260810120100_uce_campaign_status_drop_active",
+        "checksum": "b5f2df255b6d596f20ae6605d47541f086cd6ffabc15d5864b4b01e51923f779",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260811120000_uce_application_and_share",
+        "checksum": "916badf4d8a89a6f04736491af202fd92d976f840049ed7df65b1a12de63e1c0",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260812170000_uce_campaign_canonical_definition",
+        "checksum": "16d51caad411fb77d6cf53990f89e7b23cd6504f6e52c1482da13a3aaa46190f",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260815000100_add_canonical_campaign_assets",
+        "checksum": "5f56cdf28056522603c924ed7938a7d3cc809b78493e18c79ff0bb6cc7674838",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260815000200_add_canonical_campaign_briefs",
+        "checksum": "17d0c9d234efc82ee6c2372338d7d521264b27b0c20735dcbb2439b5d2f67942",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260820120000_gatekeeper_submission_audit",
+        "checksum": "6ed147d5ab6d619da4bf0707e37de73124a6861bf56122ad2650f0ba71e5a075",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260821120000_gatekeeper_recovery_requests",
+        "checksum": "6812a644a5211a37083e336fed37b90e0e2cb029f62b0e8d1668829c12aae1a0",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260822120000_brand_preview_runtime",
+        "checksum": "437fec61a47d33ff6b5b86acd45eab01727b768dda9149835025f311a48af813",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260825120000_brand_intelligence_w1_0a_persistence",
+        "checksum": "78c49e27490ae64ddcedd1b590a1dc5497fd0be933a5c66acb130a489f529b5b",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260825181500_add_data_extraction_wave1_evidence_persistence",
+        "checksum": "fc002489618b17048bef657f167be8ff765e430ad920cbca1afb390e76e82c08",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260826140000_brand_centre_canonical_state",
+        "checksum": "0bc89479443f21b811652bcab970314aa46dbe693b5d576c1e50fca56f7f27d7",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260826180000_data_extraction_wave2_supported_capabilities",
+        "checksum": "f0104c7b8429ca41eb2fe6e892082b80a5394764e7068d18a330f9f4de4a3f0c",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260826190000_brand_instagram_oauth_state",
+        "checksum": "e127f0faa1ca955cd8544b1683ed1cc5ffcdbbeed58261661e8bdc34f4b1c5ea",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260827223000_product_intelligence_v1_canonical_offering_foundation",
+        "checksum": "fbb7ca95439b62f93482dc9556f8b50da484391847f79ce01be22ae48d9948e1",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260827234500_product_intelligence_v1_generic_intelligence_subject_scope",
+        "checksum": "a04548d8ece504159ca5aa804572af90b675ed45021df791e8c94df201e09771",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260828120000_bs03_billing_profile",
+        "checksum": "be70390894426aee42cbaccfdf34cb4c9475602b5ed433330ad31e246a403621",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260828120000_bs08_subscription_lifecycle_foundation",
+        "checksum": "2a98b968661851122c88d64bd239265f9e85d453a5803848b4c688790f06e566",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260828120000_data_extraction_offering_commercial_evidence",
+        "checksum": "679f1ef486f5a9e06902d17eb7fddb9a0239a6afddf3f5b05394f77f441b45df",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260829120000_bs03_billing_identity_history",
+        "checksum": "13c50ac73da963316af33e77dae188853cd67e060f464e6fd96bf049e74cc01c",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260830120000_bs08_p2c1_cancellation_provider_safety",
+        "checksum": "8c2abc0d715ff1f67b8cb36c0877f3c601c33795a799d08f612c8873ca6fba11",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260831120000_bs09_p1_brand_escrow_funding_foundation",
+        "checksum": "4bee642913c44c6456379b5c26344ec66cb0a9750dd1073985ad051a78dfc397",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260901120000_bs05_notification_engine_reconciliation",
+        "checksum": "3dc8133dc1e9fe402138410f7f5792a5546bfecb315ce0d87ff14ca0dfdcd266",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260901130000_bs05_p1c1_snapshot_fencing",
+        "checksum": "6d7bc20b8c3989f495144c3f3be36d8f7aa50a6ba45391a53b3b6384f55f949a",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260902120000_bs06_instagram_reconciliation",
+        "checksum": "8f74622bc0bda5ef917937b559a4334c69e4722f0d0d253b17065f58474916fc",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260903120000_bs06_invalidate_legacy_oauth_states",
+        "checksum": "51ee448282d2e97c857bfff45eb6bc2f2135157712d31708efc18aa308312226",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260904120000_bs09_p3c2_route_payout_rebuild",
+        "checksum": "96c795385d54b8817f3bbea690f2f81a4fd98e9804046083ae96674b313881cb",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260905120000_bs09_p3c2c1_financial_boundary",
+        "checksum": "bb9e570a0506c26f1ae54fc975a527c92b283c68d1f141d99f57f1c1db77e197",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260906120000_bs04_brand_return",
+        "checksum": "7bdf77903f7e188bb18197eca3fef6bd2232df7d24ce0a4906ad6cd79e50f40a",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260907120000_bs12_auth_security",
+        "checksum": "b0642f5444c130a319197001decf33100eb530a95f25d41d86211788980a6134",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260908120000_c01_i1_organization_workspace_foundation",
+        "checksum": "df7aae895b6fba0d3a12204f0412d408453d484e7cb2329217d8d49771cea919",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260908121000_c01_i1_provider_oauth_transaction",
+        "checksum": "070dc111914b4abb3d34f8863280dcd18d4ad9f26fe058486c5796780c5b0e92",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260908122000_c01_i1_creator_provider_health",
+        "checksum": "31ff221998313c0c57d72b30279bae19e5c430c9f1b517e1d260ba289014b91e",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260908123000_c01_i1_campaign_continuation",
+        "checksum": "9273360c374feba169b1288563b6523c1f726b440317ab483fdaf53054bd1167",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260909120000_c05_p0_team_user_identity",
+        "checksum": "66e2216cd8570a6de8b52892c1b59eda411c9a8cd23e29ae8ac19df3c0d2d87f",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260909121000_c05_p0_contact_phone",
+        "checksum": "47145c3d9bbb95f071d9ea4891587881bb0cbc1739e8e9933b08ba76bb73c196",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260909122000_c05_p0_legal_profile",
+        "checksum": "2b132fc18f480c5da97f7c09bba0ef14567e10123b1cd9e82547a2e19e255c9a",
+        "finished": true,
+        "sourceChecksumMatches": true
+      },
+      {
+        "name": "20260909123000_c05_p0_payout_destination",
+        "checksum": "a0546bfb2ce222aced04f99d0aa65310e7147fc72f51c83df4b10b84e29fa7de",
+        "finished": true,
+        "sourceChecksumMatches": true
+      }
+    ]
+  },
+  "fixtureSummary": {
+    "actors": 9,
+    "brands": 3,
+    "vaults": 2,
+    "obligations": 32,
+    "ledgerRows": 31,
+    "historicalActionRequiredReturns": 2,
+    "ids": "Deterministic test UUIDs",
+    "password": "One random non-durable password, canonical hashing and repository-supported password auth; removed at shutdown.",
+    "subscriptions": "Disposable trial-only access; no provider identifiers or subscription calls."
+  },
+  "newMigrationsCreatedOrApplied": 0,
+  "committedMigrationsPerDatabase": 74,
+  "cleanupReference": "shutdown.json"
+}

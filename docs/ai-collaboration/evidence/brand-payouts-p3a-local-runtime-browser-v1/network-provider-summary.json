@@ -1,0 +1,21 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "financialCommandRequests": [],
+  "payoutsMutationRequests": [],
+  "non2xxPayoutsResponses": [],
+  "pageExceptions": [],
+  "consoleKinds": [
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ],
+  "classification": "Anonymous authentication 401 and deliberately blocked external-font failures are expected. No mutation response was intercepted, no financial command submitted, and no provider outcome is claimed.",
+  "outboundApplicationGuardEvents": 0,
+  "providerActions": 0,
+  "externalFontRequests": "Blocked by browser route allowlist; contrast measured from actual fallback rendering."
+}

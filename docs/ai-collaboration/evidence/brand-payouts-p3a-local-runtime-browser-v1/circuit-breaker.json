@@ -1,0 +1,34 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "signature": "P3A_SETTINGS_CONTRAST_BELOW_WCAG_AA",
+  "completeBoundedAccessibilitySweep": true,
+  "completedSafeGates": [
+    "Exact source heads/trees/parents/ancestry and clean worktrees",
+    "13/13 backend and 61/61 frontend focused tests; changed-file lint",
+    "1268 backend passed + 615 opt-in skipped; 884 frontend passed",
+    "Typecheck, fresh production builds, backend assets and diff checks",
+    "All six PostgreSQL/security suites: 50/50, 74 migration checksums per database",
+    "Full built AppModule health in PAYOUTS and SETTINGS; same final production preview",
+    "80 credited Axe scans across both modes and all widths; bounded drawer keyboard observations",
+    "20-model financial purity across both read-only browser lanes",
+    "Zero financial command submissions and zero provider actions"
+  ],
+  "deferred": [
+    "Full HTTP mutation-admission and stale-claim matrix",
+    "Built-runtime accepted fail-closed Add funds/Return submissions and replay",
+    "Missing/blank/invalid process fallback runtime checks",
+    "Complete loading/stale/unavailable/mixed/no-vault browser matrix",
+    "Notification/detail link integration and P2 pagination/identity browser smoke",
+    "Complete Product-truth, keyboard and safe-area acceptance matrix"
+  ],
+  "p3aAcceptance": "NOT_SET",
+  "sourceChanges": "NONE",
+  "migrationsCreated": "NONE",
+  "providerActions": "NONE"
+}

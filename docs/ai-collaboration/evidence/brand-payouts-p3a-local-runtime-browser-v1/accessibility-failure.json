@@ -1,0 +1,4064 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "signature": "P3A_SETTINGS_CONTRAST_BELOW_WCAG_AA",
+  "creditedProductionScans": 80,
+  "seriousFindings": 22,
+  "criticalFindings": 0,
+  "allFindings": [
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 0,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 0,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 1,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 1,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 2,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 2,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 3,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 3,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 4,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 5,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 6,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 7,
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 8,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 8,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 9,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 9,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 10,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 10,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 11,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 11,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 12,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 13,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 14,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 15,
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"settings-card\">",
+                  "target": [
+                    "section"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"settings-team__action-link\" href=\"/brand/payouts\">Open Payouts</a>",
+          "target": [
+            ".settings-team__action-link"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 16,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 16,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-390-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 17,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 17,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 18,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 18,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 19,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 19,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 21,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-767-manager-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 22,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-768-manager-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-PAYOUTS.json",
+      "rowIndex": 23,
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "PAYOUTS-1440-manager-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 0,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 0,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 1,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 1,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 2,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 2,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 3,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-owner-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 3,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-owner-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 4,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 5,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 6,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 7,
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-owner-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 8,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 8,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 9,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 9,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 10,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 10,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 11,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-finance-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 11,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-finance-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 12,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 13,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 14,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 15,
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-finance-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.92,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"brand-escrow-card\">",
+                  "target": [
+                    ".brand-escrow-card"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"aurora-button aurora-button--outline aurora-button--sm\">",
+          "target": [
+            ".aurora-button--sm"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 16,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 16,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-390-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 17,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 17,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 18,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 18,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 19,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-manager-payouts-commands.png",
+      "id": "landmark-main-is-top-level",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is contained in another landmark."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 19,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-manager-payouts-commands.png",
+      "id": "landmark-no-duplicate-main",
+      "severity": "moderate",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"aurora-shell__main aurora-shell__main--flush\">",
+                  "target": [
+                    ".aurora-shell__main"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Document has more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<main class=\"bp-workspace\">",
+          "target": [
+            ".bp-workspace"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 21,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-767-manager-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 22,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-768-manager-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "artifact": "browser-preflight-SETTINGS.json",
+      "rowIndex": 23,
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "SETTINGS-1440-manager-settings-compatibility.png",
+      "id": "color-contrast",
+      "severity": "serious",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#34d399",
+                "bgColor": "#f8f8f8",
+                "contrastRatio": 1.81,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"aurora-shell\">",
+                  "target": [
+                    ".aurora-shell"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a aria-current=\"page\" class=\"brand-settings__tab brand-settings__tab--active\" href=\"/brand/settings/billing\">",
+          "target": [
+            ".brand-settings__tab--active"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "selectorReproductions": {
+    ".settings-team__action-link": [
+      {
+        "mode": "PAYOUTS",
+        "actor": "owner",
+        "width": 390,
+        "screenshot": "PAYOUTS-390-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "owner",
+        "width": 767,
+        "screenshot": "PAYOUTS-767-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "owner",
+        "width": 768,
+        "screenshot": "PAYOUTS-768-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "owner",
+        "width": 1440,
+        "screenshot": "PAYOUTS-1440-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "finance",
+        "width": 390,
+        "screenshot": "PAYOUTS-390-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "finance",
+        "width": 767,
+        "screenshot": "PAYOUTS-767-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "finance",
+        "width": 768,
+        "screenshot": "PAYOUTS-768-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "finance",
+        "width": 1440,
+        "screenshot": "PAYOUTS-1440-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      }
+    ],
+    ".brand-settings__tab--active": [
+      {
+        "mode": "PAYOUTS",
+        "actor": "owner",
+        "width": 767,
+        "screenshot": "PAYOUTS-767-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "owner",
+        "width": 768,
+        "screenshot": "PAYOUTS-768-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "owner",
+        "width": 1440,
+        "screenshot": "PAYOUTS-1440-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "finance",
+        "width": 767,
+        "screenshot": "PAYOUTS-767-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "finance",
+        "width": 768,
+        "screenshot": "PAYOUTS-768-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "finance",
+        "width": 1440,
+        "screenshot": "PAYOUTS-1440-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "manager",
+        "width": 767,
+        "screenshot": "PAYOUTS-767-manager-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "manager",
+        "width": 768,
+        "screenshot": "PAYOUTS-768-manager-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "PAYOUTS",
+        "actor": "manager",
+        "width": 1440,
+        "screenshot": "PAYOUTS-1440-manager-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "owner",
+        "width": 767,
+        "screenshot": "SETTINGS-767-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "owner",
+        "width": 768,
+        "screenshot": "SETTINGS-768-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "owner",
+        "width": 1440,
+        "screenshot": "SETTINGS-1440-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "finance",
+        "width": 767,
+        "screenshot": "SETTINGS-767-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "finance",
+        "width": 768,
+        "screenshot": "SETTINGS-768-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "finance",
+        "width": 1440,
+        "screenshot": "SETTINGS-1440-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "manager",
+        "width": 767,
+        "screenshot": "SETTINGS-767-manager-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "manager",
+        "width": 768,
+        "screenshot": "SETTINGS-768-manager-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "manager",
+        "width": 1440,
+        "screenshot": "SETTINGS-1440-manager-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.81 (foreground color: #34d399, background color: #f8f8f8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#f8f8f8",
+            "contrastRatio": 1.81,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      }
+    ],
+    ".aurora-button--sm": [
+      {
+        "mode": "SETTINGS",
+        "actor": "owner",
+        "width": 390,
+        "screenshot": "SETTINGS-390-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "owner",
+        "width": 767,
+        "screenshot": "SETTINGS-767-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "owner",
+        "width": 768,
+        "screenshot": "SETTINGS-768-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "owner",
+        "width": 1440,
+        "screenshot": "SETTINGS-1440-owner-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "finance",
+        "width": 390,
+        "screenshot": "SETTINGS-390-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "finance",
+        "width": 767,
+        "screenshot": "SETTINGS-767-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "finance",
+        "width": 768,
+        "screenshot": "SETTINGS-768-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      },
+      {
+        "mode": "SETTINGS",
+        "actor": "finance",
+        "width": 1440,
+        "screenshot": "SETTINGS-1440-finance-settings-compatibility.png",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.92 (foreground color: #34d399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "data": [
+          {
+            "fgColor": "#34d399",
+            "bgColor": "#ffffff",
+            "contrastRatio": 1.92,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  "ownership": [
+    {
+      "selector": ".settings-team__action-link",
+      "newP3AUse": "src/pages/brand/settings/brand-settings-escrow-page.tsx:61",
+      "inheritedStyle": "src/features/settings/settings.css:593",
+      "failure": "New Open Payouts link uses #34d399 on #ffffff at 14px: 1.92:1 against required 4.5:1.",
+      "classification": "NEW_P3A_LINK_USING_INACCESSIBLE_SHARED_STYLE"
+    },
+    {
+      "selector": ".brand-settings__tab--active",
+      "source": "src/features/settings/settings.css:71",
+      "failure": "Inherited active tab uses #34d399 on #f8f8f8: 1.81:1 against required 4.5:1.",
+      "classification": "INHERITED_SERIOUS_SETTINGS_FINDING"
+    },
+    {
+      "selector": ".aurora-button--sm",
+      "source": "src/features/brand-escrow/components/escrow-account-card.tsx",
+      "style": "src/design-system/aurora/components.css",
+      "failure": "Inherited rollback Refresh status control uses #34d399 on white at 12px: 1.92:1 against required 4.5:1.",
+      "classification": "INHERITED_SERIOUS_ROLLBACK_FINDING"
+    }
+  ],
+  "knownModerateLandmarks": "Nested and duplicate main findings reproduce on Payouts overview and are retained in allFindings. No rule disabled.",
+  "noStyleInjectionOrSourceChange": true,
+  "sourceCorrectionNeeded": "The final pinned production DOM/styles choose insufficient foreground/background contrast. A database, port, credential, or process-mode adjustment cannot fix those committed color choices. Source correction is required; none attempted."
+}

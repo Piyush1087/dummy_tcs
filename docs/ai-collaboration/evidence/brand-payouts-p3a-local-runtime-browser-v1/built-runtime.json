@@ -1,0 +1,130 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "fullAppModule": true,
+  "entry": "dist/main.js",
+  "frontend": "One final production-built Vite preview reused unchanged for both credited process configurations.",
+  "processConfigurationChangedOnlyByRestart": true,
+  "modes": [
+    {
+      "mode": "PAYOUTS",
+      "ready": true,
+      "health": [
+        {
+          "path": "/",
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        {
+          "path": "/health/live",
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        {
+          "path": "/health",
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      ],
+      "payoutRoutes": [
+        "Mapped {/api/v1/brand/payouts, GET} route",
+        "Mapped {/api/v1/brand/payouts/obligations, GET} route",
+        "Mapped {/api/v1/brand/payouts/obligations/:obligationId, GET} route",
+        "Mapped {/api/v1/brand/payouts/activity, GET} route",
+        "Mapped {/api/v1/brand/payouts/activity.csv, GET} route",
+        "Mapped {/api/v1/brand/payouts/activity/:activityId, GET} route",
+        "Mapped {/api/v1/brand/payouts/brand-returns, GET} route",
+        "Mapped {/api/v1/brand/payouts/brand-returns/:requestId, GET} route",
+        "Mapped {/api/v1/brand/payouts/reserve-requests, GET} route"
+      ],
+      "canonicalCommandRoutes": [
+        "Mapped {/api/v1/escrow/topup-intent, POST} route",
+        "Mapped {/api/v1/escrow/brand-returns, POST} route"
+      ],
+      "outboundBlockedEvents": 0
+    },
+    {
+      "mode": "SETTINGS",
+      "ready": true,
+      "health": [
+        {
+          "path": "/",
+          "status": 200,
+          "body": {
+            "name": "TheCreatorShop API",
+            "status": "ready"
+          }
+        },
+        {
+          "path": "/health/live",
+          "status": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        {
+          "path": "/health",
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "info": {
+              "database": {
+                "status": "up"
+              }
+            },
+            "error": {},
+            "details": {
+              "database": {
+                "status": "up"
+              }
+            }
+          }
+        }
+      ],
+      "payoutRoutes": [
+        "Mapped {/api/v1/brand/payouts, GET} route",
+        "Mapped {/api/v1/brand/payouts/obligations, GET} route",
+        "Mapped {/api/v1/brand/payouts/obligations/:obligationId, GET} route",
+        "Mapped {/api/v1/brand/payouts/activity, GET} route",
+        "Mapped {/api/v1/brand/payouts/activity.csv, GET} route",
+        "Mapped {/api/v1/brand/payouts/activity/:activityId, GET} route",
+        "Mapped {/api/v1/brand/payouts/brand-returns, GET} route",
+        "Mapped {/api/v1/brand/payouts/brand-returns/:requestId, GET} route",
+        "Mapped {/api/v1/brand/payouts/reserve-requests, GET} route"
+      ],
+      "canonicalCommandRoutes": [
+        "Mapped {/api/v1/escrow/topup-intent, POST} route",
+        "Mapped {/api/v1/escrow/brand-returns, POST} route"
+      ],
+      "outboundBlockedEvents": 0
+    }
+  ],
+  "providerVariables": "Absent in an explicitly constructed allowlisted environment; inert local mail constructor values only.",
+  "optionalWork": "Offering refresh and optional browser worker disabled; seeded queues are empty/inert.",
+  "guardPolicy": "const net=require('node:net');\nconst original=net.Socket.prototype.connect;\nnet.Socket.prototype.connect=function(...args){\n const opt=Array.isArray(args[0])?args[0]:args;\n const first=opt[0];const host=typeof first==='object'?first.host:typeof opt[1]==='string'?opt[1]:'localhost';\n if(host&&!['localhost','127.0.0.1','::1'].includes(host)){console.error('P3A_OUTBOUND_BLOCKED');throw new Error('P3A local runtime permits loopback only');}\n return original.apply(this,args);\n};\nconst originalListen=net.Server.prototype.listen;\nnet.Server.prototype.listen=function(...args){if(typeof args[0]==='number'||typeof args[0]==='string'&&/^\\d+$/.test(args[0]))args.splice(1,typeof args[1]==='string'?1:0,'127.0.0.1');return originalListen.apply(this,args)};",
+  "guardInstalledBeforeMain": true,
+  "financialCommandsSubmitted": 0
+}

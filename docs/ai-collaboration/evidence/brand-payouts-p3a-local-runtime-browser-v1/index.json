@@ -1,0 +1,760 @@
+{
+  "schemaVersion": 1,
+  "result": "P3A_RUNTIME_BROWSER_CIRCUIT_BREAKER",
+  "failureSignature": "P3A_SETTINGS_CONTRAST_BELOW_WCAG_AA",
+  "authoritySha": "74bc2d5cbc86dd04c72c5bcbdee29afbd9725d68",
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED; source gates NOT_APPLICABLE",
+  "actor": "AS_RECORDED test actor or suite fixture",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "rowMetadataRule": "Rows inherit applicable mode/actor/source and source pins from enclosing records; matrix rows include explicit metadata. Discarded build artifacts are never credited.",
+  "hashRule": "Every supporting artifact and report is hashed; index excludes itself.",
+  "artifacts": [
+    {
+      "file": "PAYOUTS-1440-finance-payouts-commands.png",
+      "sha256": "bfc13ce917f86aac7f7737a539bb8d7ebfebdc1e45125e46b4372b3dbf14c968",
+      "bytes": 586350,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-finance-settings-compatibility.png",
+      "sha256": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+      "bytes": 47617,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-manager-payouts-commands.png",
+      "sha256": "606e61df8974b1e2fd5fd646a566d8e4f5eb32a016e8798c9f2bf28d2de8ff8c",
+      "bytes": 100787,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-manager-settings-compatibility.png",
+      "sha256": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+      "bytes": 40224,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-open.png",
+      "sha256": "f3b31da25114c82cf2e549ae20058fdf55a34ee85b283175e5a47b175c393888",
+      "bytes": 681712,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-ready-no-submit.png",
+      "sha256": "326e0c240475b1c1af0a44bb2b7eecb3b1193187712c3296227bf1cf1126086c",
+      "bytes": 684023,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-owner-add-funds-validation.png",
+      "sha256": "abff776d9006acfc3eabd1f33e97149e8e68ea8b2d0c8234838c9d37f07a7894",
+      "bytes": 684257,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-owner-brand-return-open.png",
+      "sha256": "1b3ae03d67d73d5d1ad5a01ce733d52b7608d29e113a6a202fd674c75524611b",
+      "bytes": 695978,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-owner-brand-return-validation.png",
+      "sha256": "8a468258aaa4ae7e898e5ce6847c6fb8246f0957bef0e1d7eb4e69330f04ae40",
+      "bytes": 698132,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-owner-payouts-commands.png",
+      "sha256": "e7c39dae2bb756abbf79b6b878184f1c4975e8500c4e8dc31270f19f1d8cc6c7",
+      "bytes": 586342,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-1440-owner-settings-compatibility.png",
+      "sha256": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+      "bytes": 47617,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-finance-payouts-commands.png",
+      "sha256": "fd46bed8dab1862217fb37e2131dbbefd75c57409b697a75ac22cdee19de1d56",
+      "bytes": 781330,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-finance-settings-compatibility.png",
+      "sha256": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+      "bytes": 38464,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-manager-payouts-commands.png",
+      "sha256": "22799c34c4b3f9a08f639252683ee709190812677197b3dbe9899ae0386b23cb",
+      "bytes": 92235,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-manager-settings-compatibility.png",
+      "sha256": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+      "bytes": 32623,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-open.png",
+      "sha256": "9fc40aefe941b32e0bf39ff97b385a38b46edea3eb67ebfb3b93bbbefecdcfdd",
+      "bytes": 751899,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-ready-no-submit.png",
+      "sha256": "69bb466567d0ed4a733fa9b109ac07876411a4a3e4e741303da9ea5263b72039",
+      "bytes": 757079,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-owner-add-funds-validation.png",
+      "sha256": "00ce980da5349f84db78e10930cde6be66fcf41e25bcca799ba5eba2d7f34148",
+      "bytes": 755621,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-open.png",
+      "sha256": "7c71cb6aceedb377dfdd767feec9f1a6702b84c15d033bf9a80c37c6a7800c8d",
+      "bytes": 773361,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-owner-brand-return-validation.png",
+      "sha256": "b057d0172682836a6754f79b8411f42b275e64c8c5b674cc7b360e7952d8fcc8",
+      "bytes": 776373,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-owner-payouts-commands.png",
+      "sha256": "e9341713be13576f9f2d82dee71aa4045ab50970858ff81860d534179861fddc",
+      "bytes": 781541,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-390-owner-settings-compatibility.png",
+      "sha256": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+      "bytes": 38464,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-finance-payouts-commands.png",
+      "sha256": "5c370e8930f9059968c8bcf33e22cded1f11d1ea5ec24f98f1b335b3c0eb0c5e",
+      "bytes": 722915,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-finance-settings-compatibility.png",
+      "sha256": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+      "bytes": 40701,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-manager-payouts-commands.png",
+      "sha256": "bb397c80e0c8f8837e311f631042948635eb27cdd9fda11648d9217d632f4956",
+      "bytes": 99207,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-manager-settings-compatibility.png",
+      "sha256": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+      "bytes": 34362,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-open.png",
+      "sha256": "264e9600e72f059d9530b7bb337ed667933e9d243b9d6fbaeface4a7660c4789",
+      "bytes": 701233,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-ready-no-submit.png",
+      "sha256": "e1fde4f31940cd7c9381dcf30611140dabede85472c0fc4841b60f69cdc511b0",
+      "bytes": 703929,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-owner-add-funds-validation.png",
+      "sha256": "302aa56f255e2f7ed65a4254f625a0511608b9eca9dcc187bf2e11941437900d",
+      "bytes": 703180,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-owner-brand-return-open.png",
+      "sha256": "84b8ced938769acef3a67d51da13b90d4357a8ceb3a52f05c442384a3ccbb3e1",
+      "bytes": 712020,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-owner-brand-return-validation.png",
+      "sha256": "f876459ba71179c8a217241ff507ef99fd340f33c6308387a275266f0fdde502",
+      "bytes": 713460,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-owner-payouts-commands.png",
+      "sha256": "d3e3e9d10257966dcb7ff9ab05397dfd5ad11ec5271a84d6e52311d39b4e6bf1",
+      "bytes": 722972,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-767-owner-settings-compatibility.png",
+      "sha256": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+      "bytes": 40701,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-finance-payouts-commands.png",
+      "sha256": "10d5e9f11fe64e51c6d4452e50f63883575c138b1152cc9341a73802987d2d32",
+      "bytes": 574451,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-finance-settings-compatibility.png",
+      "sha256": "fee6a4260ea31e401fcc9be16f33cf9fababb9ea301191c78ce8a9a28f49a9ae",
+      "bytes": 46158,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-manager-payouts-commands.png",
+      "sha256": "c15ff0f9f4fa22bb8efcdbafa61862b46ada814647de03973c81dcb6b401abaa",
+      "bytes": 112307,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-manager-settings-compatibility.png",
+      "sha256": "86d21aa1b5467980adb3cc9e889c13a3bd39ef5d576b00f32d22e8c9307444e6",
+      "bytes": 37975,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-open.png",
+      "sha256": "16128f599c5ea8a847e36e2e1f3304091b4ffc66cfb6dabdaff893bd88aa2544",
+      "bytes": 591942,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-ready-no-submit.png",
+      "sha256": "922d404007b8d7ee4977ad53e82b5857a2fbe010eeed47b192cfac04da7d7c8f",
+      "bytes": 594170,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-owner-add-funds-validation.png",
+      "sha256": "ab78d2772e0cc25553dbdecbbe71b49a8aa75afba37de2cc0071c9a9ed01e6dc",
+      "bytes": 594583,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-owner-brand-return-open.png",
+      "sha256": "0e241c622f029d3d5a23f0aff129ab77c98c7d4c58aed63ad16ec16cd353f4d3",
+      "bytes": 598549,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-owner-brand-return-validation.png",
+      "sha256": "eb24c76d3539b48bb02f11899ccc3b1f2280d169caa4d68f721790b213de026a",
+      "bytes": 599495,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-owner-payouts-commands.png",
+      "sha256": "564671339d3b6e182b0aa5e9a72dd05aaa214fe87d0e1c4646d057c9f149e376",
+      "bytes": 574561,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "PAYOUTS-768-owner-settings-compatibility.png",
+      "sha256": "88148b5703954cf21a603ac376cacb87f31c608dda4f077beed00067bc07d4cc",
+      "bytes": 46077,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-finance-payouts-commands.png",
+      "sha256": "0e34172971e7b0739408e04e955fb2f949357675e32504c14ef02bace8899daf",
+      "bytes": 581232,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-finance-settings-compatibility.png",
+      "sha256": "b1918d9a8a5481672b39a9f8caede24a2bafb535845ab7243e0d20e14dda7ac0",
+      "bytes": 265193,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-manager-payouts-commands.png",
+      "sha256": "7e4813617fc8f93b41825bfcdfb19854f9e4ceb94b5b040afb0cee45095deb7b",
+      "bytes": 100912,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-manager-settings-compatibility.png",
+      "sha256": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+      "bytes": 40224,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-owner-add-funds-open.png",
+      "sha256": "1f9b5b778088dcc15b8fe707d4343070233c82ba9ab9ab798cf4c6432ed3003f",
+      "bytes": 353183,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-owner-add-funds-ready-no-submit.png",
+      "sha256": "8c0d8fa0ec0daad03873f319eb55beccd4da987a8a1909958ba96a28b6d08774",
+      "bytes": 355161,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-owner-add-funds-validation.png",
+      "sha256": "ea14109350f63a49c2387e775db5acc5dd262f666be22265b4f11d37f5f175e8",
+      "bytes": 355943,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-owner-payouts-commands.png",
+      "sha256": "00f0bc31d4d655c16f2c75a6389d5c3cba0b7de6b8b277b8d97acf0218206821",
+      "bytes": 581247,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-1440-owner-settings-compatibility.png",
+      "sha256": "b1918d9a8a5481672b39a9f8caede24a2bafb535845ab7243e0d20e14dda7ac0",
+      "bytes": 265193,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-finance-payouts-commands.png",
+      "sha256": "8590d4d6cde99d44514e7ae3f36849959223cfceb57ccd839aa2ecabb2545b57",
+      "bytes": 776606,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-finance-settings-compatibility.png",
+      "sha256": "9dcdad1d30d6544e2c1f4702f9a5ec02094e27d292237db993521341d7128060",
+      "bytes": 240911,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-manager-payouts-commands.png",
+      "sha256": "6017379409981e41d04f87a3b5e17d454faaa9dc2f6bd492a6167ace8481e0c7",
+      "bytes": 92277,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-manager-settings-compatibility.png",
+      "sha256": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+      "bytes": 32623,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-owner-add-funds-open.png",
+      "sha256": "2dc421be95b47a9acc4127858a8d98bcbe3c2f73f646662bfe3aafca7f57e3c6",
+      "bytes": 225070,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-owner-add-funds-ready-no-submit.png",
+      "sha256": "5ce4000526079057bd014c2e2d8a884832b905c70eb2af40fa51dbc04e75ba8b",
+      "bytes": 227483,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-owner-add-funds-validation.png",
+      "sha256": "e945c9ea793299a330f0cc3c629b839ab40162a08977a2c99fd133b4bf0898b6",
+      "bytes": 226678,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-owner-payouts-commands.png",
+      "sha256": "6cc639a1ef6eb84afc701b47012c78843d194f73f7c9ae62ac88ba604595824a",
+      "bytes": 776742,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-390-owner-settings-compatibility.png",
+      "sha256": "9dcdad1d30d6544e2c1f4702f9a5ec02094e27d292237db993521341d7128060",
+      "bytes": 240911,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-finance-payouts-commands.png",
+      "sha256": "f01b47686361a0606e5e16ca781aafd743279ae6a9791f6d9941552dff464bc5",
+      "bytes": 719572,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-finance-settings-compatibility.png",
+      "sha256": "04a1b8b5fdb42470b75ac6fca76fea65333260c7c15f65ab55fa35b109a5cfca",
+      "bytes": 250322,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-manager-payouts-commands.png",
+      "sha256": "db8af887d5cbe162700955925740cde35ee12a8023459bafb51ed0cbef502646",
+      "bytes": 99395,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-manager-settings-compatibility.png",
+      "sha256": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+      "bytes": 34362,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-owner-add-funds-open.png",
+      "sha256": "fa755f3daa18b10a2af1a18f222e740cdb34acc0148e47c9edbbe044950320f2",
+      "bytes": 232666,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-owner-add-funds-ready-no-submit.png",
+      "sha256": "eb10e5cb036f27dbdbaeb4eebf0c60658af6c41a8f5816bb81b032a507a97b3e",
+      "bytes": 235554,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-owner-add-funds-validation.png",
+      "sha256": "714e750b996b93299fc9cb0be01a3a621a06abc30411097a035edbec1a7c3999",
+      "bytes": 234750,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-owner-payouts-commands.png",
+      "sha256": "cdfe1e65c13705457d64de69ceac48c1cee069dc167acffe5749a28e8dc17e99",
+      "bytes": 719644,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-767-owner-settings-compatibility.png",
+      "sha256": "04a1b8b5fdb42470b75ac6fca76fea65333260c7c15f65ab55fa35b109a5cfca",
+      "bytes": 250322,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-finance-payouts-commands.png",
+      "sha256": "ec7d16db70df89bab826a7e8ff68c456245a0155228f3cb65e75300f78d3eded",
+      "bytes": 568747,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-finance-settings-compatibility.png",
+      "sha256": "ec21bd5be8ab6f5a027f84adf43b33ff68cbe8f41512369560c30d99b53ccf12",
+      "bytes": 252154,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-manager-payouts-commands.png",
+      "sha256": "4e99f40b3126112aaece4da05df289de2fe9cb3140228b33b2cd71a109dc87c6",
+      "bytes": 112540,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-manager-settings-compatibility.png",
+      "sha256": "1e35a1905ac2448171d5c7d713695af6b407152ee95698fc00569ebdb052108f",
+      "bytes": 37993,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-owner-add-funds-open.png",
+      "sha256": "e2fe2f738454a0f492b0e9ff5aa23d46ea60e3f0bfff1fefb834ae3b5cacff09",
+      "bytes": 283074,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-owner-add-funds-ready-no-submit.png",
+      "sha256": "285178bf794216a5d3d4ee16d7edd149d2da1e1ac749da33d30120358d6931dc",
+      "bytes": 285291,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-owner-add-funds-validation.png",
+      "sha256": "5a2a6423b060bed52612f9c261fb92f2c17f219fed83b6d5ae6ff09eded278bd",
+      "bytes": 285524,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-owner-payouts-commands.png",
+      "sha256": "73d3cff3ca9bba6d664f2361bf60a27adf78f2c418d173a6bac735d0cd67a8ca",
+      "bytes": 568812,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "SETTINGS-768-owner-settings-compatibility.png",
+      "sha256": "e198ae946fc2d28f70c72de69017f19fd37780d8bbcefb32f6b24adff4d936c6",
+      "bytes": 252204,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "accessibility-failure.json",
+      "sha256": "781c8f2ff1b8684a11f0ac8e9a5dc2a85ad6140dd2d363355d2da3d9e9327aed",
+      "bytes": 138483,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "bounded-drawers-PAYOUTS.json",
+      "sha256": "69a3a1a5ae10b083cd7e03c461481f561b57796a7f181115309e3d678ea68f16",
+      "bytes": 325254,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "bounded-drawers-SETTINGS.json",
+      "sha256": "3cab0ddf9889e086664c851f978de3d82a9ca926397d448ee404d37dbb65027f",
+      "bytes": 93434,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "browser-preflight-PAYOUTS.json",
+      "sha256": "09b2b31206492eb4f0290b48c9c4decf91b8a66c6fe104f8ac08ee69c45b986e",
+      "bytes": 583863,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "browser-preflight-SETTINGS.json",
+      "sha256": "7a43c1d3e317673dd7669a99255becc9125efccc9976f85bd3b64f937f77e414",
+      "bytes": 623518,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "browser-summary.json",
+      "sha256": "4bf940fc7bbad3383ac8a6b404d0eb781675703833e7d95d7daca473de4ed11f",
+      "bytes": 16874,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "built-runtime.json",
+      "sha256": "914aeb042bf149abbbd73b7e93bdc2b5ef96db995692436a5e7aac397b26346d",
+      "bytes": 4931,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "circuit-breaker.json",
+      "sha256": "c419a504b47b058c865663fba07fd26e4e3ff589be92c6a63f07580016fe2e36",
+      "bytes": 1749,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "database-lifecycle.json",
+      "sha256": "76e1d40dd647b89c9a2fa14a50b53addb66f84b78c9649fd1f7021a404fe1e9e",
+      "bytes": 19821,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-1440-finance-payouts-commands.png",
+      "sha256": "2faa57101f9891c4d52484e17f64cdd311493426b3223c56f0ade53a69d4a166",
+      "bytes": 586312,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-1440-finance-settings-compatibility.png",
+      "sha256": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+      "bytes": 47617,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-1440-manager-payouts-commands.png",
+      "sha256": "960ac94df70a4dbbacb206b299c3ccefedf579271406ee2d2baf2b2391051c8c",
+      "bytes": 100779,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-1440-manager-settings-compatibility.png",
+      "sha256": "765b830189e3d74be568a4d9170a2fe3dbfe0701edb19809d1456716d8b41c26",
+      "bytes": 40224,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-1440-owner-payouts-commands.png",
+      "sha256": "e4c66ad2dd2e9e7febeb95b3e0982873ad2e7adf748e4eedd421f8984c574533",
+      "bytes": 586326,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-1440-owner-settings-compatibility.png",
+      "sha256": "94152c40d99350e6d416afae6923367b6232b8ae2e63e4f803d71878e769780a",
+      "bytes": 47617,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-390-finance-payouts-commands.png",
+      "sha256": "25643f7a4ab651f427bebbd44babd7fb24908bb5c57eeccc7c6c698026e6f87a",
+      "bytes": 781295,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-390-finance-settings-compatibility.png",
+      "sha256": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+      "bytes": 38464,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-390-manager-payouts-commands.png",
+      "sha256": "1594ac47c9916048588c01e7195c5578df9050f0281ed45ad6cef6a309fc3edc",
+      "bytes": 92313,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-390-manager-settings-compatibility.png",
+      "sha256": "448d32ab34b06d8a3425df04a5fde3f5797f17ed98d06c7333b2c8666b9afb4d",
+      "bytes": 32623,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-390-owner-payouts-commands.png",
+      "sha256": "7c7b9072e763113ca380080ef8661b1832f47999bc06eae82e429b3ef1e8053f",
+      "bytes": 781437,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-390-owner-settings-compatibility.png",
+      "sha256": "8aca77c5ae5888fa01e499699af457de5ada4e12b26856b4e09b2ad13c835a1d",
+      "bytes": 38464,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-767-finance-payouts-commands.png",
+      "sha256": "43a7d95738eb34b6fea8f24e03685190d592d7689dd2b5b87be943be66588b65",
+      "bytes": 722916,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-767-finance-settings-compatibility.png",
+      "sha256": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+      "bytes": 40701,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-767-manager-payouts-commands.png",
+      "sha256": "8ef8f3ffb17bcc7ee1fd81c18d30a2eca5551f76bfea19e36bdddd84b73a63cd",
+      "bytes": 99201,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-767-manager-settings-compatibility.png",
+      "sha256": "f72628c0cf0f3e160072b7f4a71d0f9ba5c0ea43a112dd1943e33090ea38706a",
+      "bytes": 34362,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-767-owner-payouts-commands.png",
+      "sha256": "c7947c1e47e6cfed7060c786be5ae3fc04d0647a816807055a5f63712f52fecd",
+      "bytes": 722987,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-767-owner-settings-compatibility.png",
+      "sha256": "808922bea4fad6424d98ff9201f39cdf6b5cd3c44ef560104b720855c7b966b7",
+      "bytes": 40701,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-768-finance-payouts-commands.png",
+      "sha256": "91e2bebca415fa48b78850c08227c2286881913e6af0acf5b3588c30ebd99a83",
+      "bytes": 574433,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-768-finance-settings-compatibility.png",
+      "sha256": "29f729935c06a2665d1275a17ff04ddaa267c62eb870ac24a30ba27fd9cac9ca",
+      "bytes": 46092,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-768-manager-payouts-commands.png",
+      "sha256": "3261f539fc1ef7ff37d8393288bf47eb128a8ab8d74fd273804bb7b4ce20e7d2",
+      "bytes": 112304,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-768-manager-settings-compatibility.png",
+      "sha256": "86d21aa1b5467980adb3cc9e889c13a3bd39ef5d576b00f32d22e8c9307444e6",
+      "bytes": 37975,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-768-owner-payouts-commands.png",
+      "sha256": "93207404e8fd2f0d3d97813e891ca96f3b521870024bef1c4e0ff5e681ecc68f",
+      "bytes": 574579,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-PAYOUTS-768-owner-settings-compatibility.png",
+      "sha256": "88148b5703954cf21a603ac376cacb87f31c608dda4f077beed00067bc07d4cc",
+      "bytes": 46077,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment-build-attempt-browser-preflight-PAYOUTS.json",
+      "sha256": "65bb452ed5264615c149e813b63b433d7e9fcb4ca352706afe5d12675d978bd4",
+      "bytes": 489349,
+      "classification": "DISCARDED_BUILD_ATTEMPT"
+    },
+    {
+      "file": "environment.json",
+      "sha256": "4e47d1cdfabfb7d2380db036a47034e3870cc2212818300bc8b567cec95f5982",
+      "bytes": 1974,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "financial-purity.json",
+      "sha256": "6f731e6ba5e506968ef5ab655c9d8c2514fb7ea8908a06c2391a48298a2a7d7a",
+      "bytes": 10415,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "harness-correction.json",
+      "sha256": "da26e4858129e11919fe693257263c9b0c425d07356de3a4bb7626c50667e233",
+      "bytes": 1078,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "network-provider-summary.json",
+      "sha256": "4cfc3295519e34b28b25dc8239474e5fde875f7fb3135fa3b3c186f9dfa27444",
+      "bytes": 1036,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "postgresql-security.json",
+      "sha256": "bdc87d30d008f722d63c8786f770fcefcb738f8bc01dd5d5328fd23c4e3cb105",
+      "bytes": 132731,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "shutdown.json",
+      "sha256": "d8d8f4095fd8cd2d4d97d43d8f8e2f75d2fbb0727fee8f53888a988f3a578dde",
+      "bytes": 906,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "source-binding.json",
+      "sha256": "5d7ced685a105f437f78aa621d34427cc2f7cda7b1864a4133d63252e3b402c5",
+      "bytes": 9321,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "source-gates.json",
+      "sha256": "a7ac70eb9ed2ce2a8fa5adebf81ff52f9dd455d04a8905bb0a057f7c4c292e9f",
+      "bytes": 41012,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "validation.json",
+      "sha256": "98ecfddcc560bbc2a3422129d9f5a96f1ed82198a2e711d27a7805b968b8be1b",
+      "bytes": 617,
+      "classification": "P3A_BOUNDED_FAILURE_EVIDENCE"
+    },
+    {
+      "file": "../../brand-payouts-v1-p3a-local-runtime-browser-evidence-v1.md",
+      "sha256": "51f0ff03567ce711aa1d9bff4c462fd459430fe8616483576bfcf9b12255c358",
+      "bytes": 10324
+    }
+  ]
+}

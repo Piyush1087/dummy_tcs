@@ -1,0 +1,17 @@
+{
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "temporaryScriptsAndSessionMaterialRemoved": true,
+  "remainingOwnedListeners": 0,
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "containerAndAnonymousVolumeRemoved": true,
+  "providerActions": 0,
+  "termination": "Controlled Windows process-tree termination; graceful Nest shutdown hooks not asserted",
+  "latestOwnedProcessTreeStopped": 3,
+  "cleanupReview": "Recursive cleanup was rejected by automatic review. Inspection confirmed a flat directory; file-by-file nonrecursive deletion and empty-directory removal completed successfully.",
+  "actor": "RUNNER",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "source": "LOCAL_RESOURCE_VERIFICATION",
+  "browserContexts": "All scripts completed and closed browsers",
+  "mode": "ALL_OWNED_MODES"
+}

@@ -1,0 +1,273 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "scope": "Bounded read-only runtime/browser lanes, including discarded-build reads. Not the deferred per-command/per-read complete admission matrix.",
+  "normalization": "Fixed 20 canonical model order, rows ordered by ID, SHA-256 of Prisma JSON per model; raw rows withheld.",
+  "snapshots": [
+    {
+      "phase": "before",
+      "models": {
+        "brandEscrowVault": {
+          "count": 2,
+          "sha256": "a76eb20deebee1728a3ab566be231de1ee1b971935c6e2ab2c862d100d77951a"
+        },
+        "escrowTransactionLedger": {
+          "count": 31,
+          "sha256": "d459536e9774832dc1dbce7d26053efad3b5d8dae3107189dc147a3d07a59633"
+        },
+        "creatorPayoutObligation": {
+          "count": 32,
+          "sha256": "bc2fb3c176b12cd7997e9bbf231eb0a0cb25e2a46b3ea26e842db1eadafc2f55"
+        },
+        "routeTransferAttempt": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "routeTransferReversal": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnRequest": {
+          "count": 2,
+          "sha256": "ffdc9dcbbc448d71b4bcf76c47005793e32e4ca58c437022edc884c9f097d4bf"
+        },
+        "creatorPayoutProfile": {
+          "count": 1,
+          "sha256": "c4a6000325638c55c25571bb32d08b99ade90ab6eef888f805cdcbfbe4b9340b"
+        },
+        "escrowFundingLoad": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "escrowFundingLot": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationFundingLotAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationEscrowLock": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationRefundInstruction": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorSettlementProfile": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutFundingAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnWebhookReceipt": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutDestination": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutDestinationProviderMapping": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationCommercial": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaboration": {
+          "count": 2,
+          "sha256": "b3231c327a95172066fa3c6feb739c0d07b804c0c3f282c57baac273b92a3b6c"
+        }
+      }
+    },
+    {
+      "phase": "after-payouts",
+      "models": {
+        "brandEscrowVault": {
+          "count": 2,
+          "sha256": "a76eb20deebee1728a3ab566be231de1ee1b971935c6e2ab2c862d100d77951a"
+        },
+        "escrowTransactionLedger": {
+          "count": 31,
+          "sha256": "d459536e9774832dc1dbce7d26053efad3b5d8dae3107189dc147a3d07a59633"
+        },
+        "creatorPayoutObligation": {
+          "count": 32,
+          "sha256": "bc2fb3c176b12cd7997e9bbf231eb0a0cb25e2a46b3ea26e842db1eadafc2f55"
+        },
+        "routeTransferAttempt": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "routeTransferReversal": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnRequest": {
+          "count": 2,
+          "sha256": "ffdc9dcbbc448d71b4bcf76c47005793e32e4ca58c437022edc884c9f097d4bf"
+        },
+        "creatorPayoutProfile": {
+          "count": 1,
+          "sha256": "c4a6000325638c55c25571bb32d08b99ade90ab6eef888f805cdcbfbe4b9340b"
+        },
+        "escrowFundingLoad": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "escrowFundingLot": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationFundingLotAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationEscrowLock": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationRefundInstruction": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorSettlementProfile": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutFundingAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnWebhookReceipt": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutDestination": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutDestinationProviderMapping": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationCommercial": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaboration": {
+          "count": 2,
+          "sha256": "b3231c327a95172066fa3c6feb739c0d07b804c0c3f282c57baac273b92a3b6c"
+        }
+      }
+    },
+    {
+      "phase": "after-settings",
+      "models": {
+        "brandEscrowVault": {
+          "count": 2,
+          "sha256": "a76eb20deebee1728a3ab566be231de1ee1b971935c6e2ab2c862d100d77951a"
+        },
+        "escrowTransactionLedger": {
+          "count": 31,
+          "sha256": "d459536e9774832dc1dbce7d26053efad3b5d8dae3107189dc147a3d07a59633"
+        },
+        "creatorPayoutObligation": {
+          "count": 32,
+          "sha256": "bc2fb3c176b12cd7997e9bbf231eb0a0cb25e2a46b3ea26e842db1eadafc2f55"
+        },
+        "routeTransferAttempt": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "routeTransferReversal": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnRequest": {
+          "count": 2,
+          "sha256": "ffdc9dcbbc448d71b4bcf76c47005793e32e4ca58c437022edc884c9f097d4bf"
+        },
+        "creatorPayoutProfile": {
+          "count": 1,
+          "sha256": "c4a6000325638c55c25571bb32d08b99ade90ab6eef888f805cdcbfbe4b9340b"
+        },
+        "escrowFundingLoad": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "escrowFundingLot": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationFundingLotAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationEscrowLock": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationRefundInstruction": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorSettlementProfile": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutFundingAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnAllocation": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "brandReturnWebhookReceipt": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutDestination": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "creatorPayoutDestinationProviderMapping": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaborationCommercial": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "collaboration": {
+          "count": 2,
+          "sha256": "b3231c327a95172066fa3c6feb739c0d07b804c0c3f282c57baac273b92a3b6c"
+        }
+      }
+    }
+  ],
+  "payoutsEqual": true,
+  "settingsEqual": true,
+  "financialCommandPosts": 0,
+  "availableCredits": 0,
+  "brandReturnMutations": 0
+}

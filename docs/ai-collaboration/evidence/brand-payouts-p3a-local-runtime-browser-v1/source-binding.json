@@ -1,0 +1,211 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "authority": {
+    "head": "74bc2d5cbc86dd04c72c5bcbdee29afbd9725d68",
+    "tree": "79699e19da7a3872c51dae81aad16ef84fb7c717",
+    "clean": true
+  },
+  "backend": {
+    "head": "12d235345e2748f676d36d61c62ed4bd9c049592",
+    "tree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+    "parent": "119397ff6836ad12846c1e948409d8d49185c408",
+    "clean": true,
+    "files": [
+      ".env.example",
+      "src/features/brand-escrow/brand-escrow.controller.ts",
+      "src/features/brand-escrow/brand-return.controller.test.ts",
+      "src/features/brand-payouts/brand-payouts-p3a.test.ts",
+      "src/features/brand-payouts/contracts/brand-payouts-v2.contract.ts",
+      "src/features/brand-payouts/services/brand-payouts-query.service.ts",
+      "src/features/notifications/config/notification-event-registry.ts",
+      "src/features/notifications/notification-engine-policy.test.ts",
+      "src/features/notifications/types/notifications.types.ts",
+      "src/shared/config/brand-financial-command-surface.ts"
+    ],
+    "diffSha256": "124d36a5ca846e5a0ce088b91cdfea2d28dc2f1b223a20df42f7aaf3e0d56d53",
+    "changedFileHashes": [
+      {
+        "file": ".env.example",
+        "parentBlob": "e9da46f94890c65093db885858bf3a26d7636f64",
+        "headBlob": "76b0883ecc9bc32adfb3a2b630e0810f4b763d47"
+      },
+      {
+        "file": "src/features/brand-escrow/brand-escrow.controller.ts",
+        "parentBlob": "e4c71ca85286077a89a7708fd9a879cc9780e07f",
+        "headBlob": "3ac1dfa5c4df1ac51b2ce15574272d445ed3be32"
+      },
+      {
+        "file": "src/features/brand-escrow/brand-return.controller.test.ts",
+        "parentBlob": "32e3beff93ea00b7a1eb1d4a78bf92085e98f0cd",
+        "headBlob": "e72db119df0bf7bd1199610b3f037296ad4d5322"
+      },
+      {
+        "file": "src/features/brand-payouts/brand-payouts-p3a.test.ts",
+        "parentBlob": null,
+        "headBlob": "4573ceefb156bd520bfa58baed4729bbd784e697"
+      },
+      {
+        "file": "src/features/brand-payouts/contracts/brand-payouts-v2.contract.ts",
+        "parentBlob": "8a17559024dd41d9f709d6b2464d955d4eee9667",
+        "headBlob": "045c01be3796f2684deba6fd659b0dcc9615e898"
+      },
+      {
+        "file": "src/features/brand-payouts/services/brand-payouts-query.service.ts",
+        "parentBlob": "d4470c79ac66c28730d4fb61e1645ae3f269f88b",
+        "headBlob": "c57aa5aa54ebdfcf0dcd07bee8cf4f4e02c1a362"
+      },
+      {
+        "file": "src/features/notifications/config/notification-event-registry.ts",
+        "parentBlob": "2bcf2ee7e0b859e52139cb2d0e1f865eacd9b378",
+        "headBlob": "f075b296b4d1c9a5c3209fb76279d634792126f5"
+      },
+      {
+        "file": "src/features/notifications/notification-engine-policy.test.ts",
+        "parentBlob": "3b072da1767e5340a6a0a89f034c56ef633070ae",
+        "headBlob": "2333f906ca8d9c6aa94dcd31839a913bd8572514"
+      },
+      {
+        "file": "src/features/notifications/types/notifications.types.ts",
+        "parentBlob": "9b86cdc81483cbba6f9390cd2fffe0f09aafc4ef",
+        "headBlob": "06cd6776932a3ce785a0c0ee4fb9f5044be27bce"
+      },
+      {
+        "file": "src/shared/config/brand-financial-command-surface.ts",
+        "parentBlob": null,
+        "headBlob": "5e6d513bdb0349693825bd3f5e3e678861dc7cf0"
+      }
+    ]
+  },
+  "frontend": {
+    "head": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+    "tree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+    "parent": "ec412013cb7eeaa119a7cded6fb7f5ef0c40df03",
+    "clean": true,
+    "files": [
+      "src/features/brand-escrow/api/brand-escrow-client.test.ts",
+      "src/features/brand-escrow/api/brand-escrow-client.ts",
+      "src/features/brand-escrow/components/brand-return-drawer.tsx",
+      "src/features/brand-escrow/components/escrow-account-card.tsx",
+      "src/features/brand-escrow/components/escrow-top-up-drawer.tsx",
+      "src/features/brand-escrow/components/treasury-settings.test.ts",
+      "src/features/brand-payouts/api/brand-payouts-client.ts",
+      "src/features/brand-payouts/brand-payouts-p2.test.ts",
+      "src/features/brand-payouts/brand-payouts.css",
+      "src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx",
+      "src/features/brand-payouts/components/PayoutsDetail.tsx",
+      "src/features/brand-payouts/components/PayoutsTreasuryActions.tsx",
+      "src/features/brand-payouts/contracts/brand-payouts.contracts.ts",
+      "src/features/brand-payouts/hooks/use-brand-payouts-detail.ts",
+      "src/pages/brand/settings/brand-settings-escrow-page.tsx",
+      "src/pages/brand/settings/brand-settings-routing.test.ts"
+    ],
+    "diffSha256": "15988c10a3b402cafa4dac5d104dadb5a8001745f718149d1453aa1706b8e2fc",
+    "changedFileHashes": [
+      {
+        "file": "src/features/brand-escrow/api/brand-escrow-client.test.ts",
+        "parentBlob": "1aa6f1b3a897016a58667fc0518a1a268ad20196",
+        "headBlob": "ad27e9a0e7d7419aae88bf921d56fbc386d197a5"
+      },
+      {
+        "file": "src/features/brand-escrow/api/brand-escrow-client.ts",
+        "parentBlob": "61894d7ceecaeeeee02cf67d04c084341881c299",
+        "headBlob": "965170f747b502bf2be8d2e34a9ebcfc07c0f4a3"
+      },
+      {
+        "file": "src/features/brand-escrow/components/brand-return-drawer.tsx",
+        "parentBlob": "d19131c955d343de2186db4f7e4146bb8e88a280",
+        "headBlob": "3c018d0d5ccb765725f34931a2eb4cebb5d008a9"
+      },
+      {
+        "file": "src/features/brand-escrow/components/escrow-account-card.tsx",
+        "parentBlob": "3f4abf449bd1605cf7059a0e3aa705fa0cc67591",
+        "headBlob": "8a707e0a504a3efabebc5233ba3eb1eeb0158d7d"
+      },
+      {
+        "file": "src/features/brand-escrow/components/escrow-top-up-drawer.tsx",
+        "parentBlob": "21349d2c725f5b7440e46cd2007e0d4d95b9d1c0",
+        "headBlob": "a0f1f451840761cf6ac34412a1ac0de99c86ed35"
+      },
+      {
+        "file": "src/features/brand-escrow/components/treasury-settings.test.ts",
+        "parentBlob": "efb63aeed27533ffc0e4291d06733707515a404c",
+        "headBlob": "5c2774a422866c50a064e1b33e0ef5a9ec61f9e6"
+      },
+      {
+        "file": "src/features/brand-payouts/api/brand-payouts-client.ts",
+        "parentBlob": "a451ff3083f77afda4901ee8fa829d1f94fde5d4",
+        "headBlob": "b185286f4950c69edaa15eca0c2e946f08d62eed"
+      },
+      {
+        "file": "src/features/brand-payouts/brand-payouts-p2.test.ts",
+        "parentBlob": "68292a95f59d9bc8c1d5004f28c5bee47f1d57f4",
+        "headBlob": "3fb8eddbd9592a41ddb0ee08db35a3bc126abe94"
+      },
+      {
+        "file": "src/features/brand-payouts/brand-payouts.css",
+        "parentBlob": "1e8626a43e3d87149683c7ad7b161907d38ac140",
+        "headBlob": "388e19c9e04c223c627f77f47bf20cebb981a4d3"
+      },
+      {
+        "file": "src/features/brand-payouts/components/BrandPayoutsWorkspace.tsx",
+        "parentBlob": "7f5a4485ff1a3da3c0820ec4ca5078b3989259c6",
+        "headBlob": "a8441a27d5f5109367c948859c07127dd83f8b6d"
+      },
+      {
+        "file": "src/features/brand-payouts/components/PayoutsDetail.tsx",
+        "parentBlob": "5df02e06357379fe1bc19746769418608706135e",
+        "headBlob": "602a20e8a1fc28ab9a426f3839364c7b56bdc240"
+      },
+      {
+        "file": "src/features/brand-payouts/components/PayoutsTreasuryActions.tsx",
+        "parentBlob": null,
+        "headBlob": "22f80ec8fb0242d60a59b90fac20cdf209fbd5ec"
+      },
+      {
+        "file": "src/features/brand-payouts/contracts/brand-payouts.contracts.ts",
+        "parentBlob": "f1202a21fa99c8015ef2b3d0d13303a6b971309c",
+        "headBlob": "f273446168af8a1d8c4b938d9df19ffe210533ac"
+      },
+      {
+        "file": "src/features/brand-payouts/hooks/use-brand-payouts-detail.ts",
+        "parentBlob": "7898d4dcec89a8af870689b077cb70cf552a7543",
+        "headBlob": "8a3968bba55ac319757d47de8555b4a6b3214137"
+      },
+      {
+        "file": "src/pages/brand/settings/brand-settings-escrow-page.tsx",
+        "parentBlob": "1ca3a51de42aaeef9e5b43652d9a7de9f76aadd4",
+        "headBlob": "1f9737b25ec2e49cf089d8b55eb84e77713b27b1"
+      },
+      {
+        "file": "src/pages/brand/settings/brand-settings-routing.test.ts",
+        "parentBlob": "6e0c319d57057c9b9bc67760fb14e9369ecb7c1a",
+        "headBlob": "8c53b7909d19ea3eb71a9b3fa2b97953c75b5852"
+      }
+    ]
+  },
+  "requiredAncestorsVerified": true,
+  "productionFileCounts": {
+    "backend": 7,
+    "frontend": 12
+  },
+  "noSchemaMigrationPackageLockProviderAdapterDiff": true,
+  "finalSourceClean": {
+    "backend": true,
+    "frontend": true
+  },
+  "scopeSummary": "One bounded P3A phase. Surface resolver and role-before-surface admission; capability family projection; reused canonical drawers/clients; Settings compatibility branch; bounded Return and notification detail references.",
+  "requiredAncestors": {
+    "backend": "60385abbd12d5a363615100c463ac6755ce848ea",
+    "frontend": "323658d4b147b95b5629ff8d91fa90b8fe9077e4",
+    "authority": [
+      "495ae4f977152b49b0504ed11c441aadd4abcc93",
+      "9c991a8e8c8dfc90ccc4cf18e48ab1629d5f5b4f"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "os": "Windows_NT",
+  "release": "10.0.26200",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "npm": "11.17.0",
+  "packageManager": "npm; existing lockfile dependencies unchanged",
+  "docker": "29.7.2",
+  "postgres": "17.11 (Debian 17.11-1.pgdg13+2)",
+  "browser": "Chromium 140.0.7339.16",
+  "automation": "1.61.1",
+  "axe": "4.10.3",
+  "frontendBuild": {
+    "NODE_ENV": "production",
+    "VITE_STAGE": "local",
+    "apiOrigin": "LOOPBACK_3107",
+    "typecheckExit": 0,
+    "buildExit": 0,
+    "log": "vite v5.4.21 building for production...\ntransforming...\n✓ 2110 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                     0.51 kB │ gzip:   0.31 kB\ndist/assets/index-BspmSqL-.css    437.02 kB │ gzip:  66.59 kB\ndist/assets/index-BddUu5TJ.js   1,197.63 kB │ gzip: 317.58 kB\n\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: http[LOCAL_PATH_REDACTED]\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n✓ built in 6.94s\n",
+    "assets": [
+      {
+        "file": "index-BddUu5TJ.js",
+        "sha256": "a37bff3c95f556d8799986a6cea01c8d44f74e2853f0e802968aace6db67bfa8"
+      },
+      {
+        "file": "index-BspmSqL-.css",
+        "sha256": "5849ca0381b0bbf299ea29f2ad234cd65c8c7fc25dd270ee041b359db068a402"
+      }
+    ]
+  },
+  "backendBuild": {
+    "exitCode": 0,
+    "assetCopyExit": 0
+  },
+  "viewportWidths": [
+    390,
+    767,
+    768,
+    1440
+  ],
+  "viewportHeight": 1000
+}

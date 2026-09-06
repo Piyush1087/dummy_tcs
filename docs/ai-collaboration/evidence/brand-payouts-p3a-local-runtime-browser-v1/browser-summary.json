@@ -1,0 +1,707 @@
+{
+  "backendSha": "12d235345e2748f676d36d61c62ed4bd9c049592",
+  "backendTree": "1dd5900068aa7f7fa3aa25dcc0eaef33ee4d7e24",
+  "frontendSha": "e81c5bf105e8cc03d93f01f5be981cc527e36ca0",
+  "frontendTree": "c32c164e1f4cda963dd8358e33fe253aed77dfcc",
+  "mode": "AS_RECORDED",
+  "actor": "TEST_FIXTURES",
+  "source": "LOCAL_TEST_EVIDENCE_NOT_PROVIDER_PROOF",
+  "matrices": [
+    {
+      "file": "browser-preflight-PAYOUTS.json",
+      "rows": 24
+    },
+    {
+      "file": "browser-preflight-SETTINGS.json",
+      "rows": 24
+    },
+    {
+      "file": "bounded-drawers-PAYOUTS.json",
+      "rows": 20
+    },
+    {
+      "file": "bounded-drawers-SETTINGS.json",
+      "rows": 12
+    }
+  ],
+  "creditedProductionScans": 80,
+  "overflowRows": [],
+  "surfaceControls": [
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-390-owner-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-767-owner-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-768-owner-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-1440-owner-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-390-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-767-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-768-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-1440-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-390-finance-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-767-finance-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-768-finance-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": false
+        }
+      ],
+      "screenshot": "PAYOUTS-1440-finance-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-390-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-767-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-768-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-1440-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-390-manager-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-767-manager-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-768-manager-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-1440-manager-payouts-commands.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-390-manager-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-767-manager-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-768-manager-settings-compatibility.png"
+    },
+    {
+      "mode": "PAYOUTS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "PAYOUTS-1440-manager-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-390-owner-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-767-owner-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-768-owner-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-1440-owner-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-390-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-767-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-768-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "owner",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-1440-owner-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-390-finance-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-767-finance-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-768-finance-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-1440-finance-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-390-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-767-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-768-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "finance",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [
+        {
+          "name": "Add funds",
+          "disabled": false
+        },
+        {
+          "name": "Return unused funds",
+          "disabled": true
+        }
+      ],
+      "screenshot": "SETTINGS-1440-finance-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-390-manager-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-767-manager-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-768-manager-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "payouts-commands",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-1440-manager-payouts-commands.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-390-manager-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 767,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-767-manager-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-768-manager-settings-compatibility.png"
+    },
+    {
+      "mode": "SETTINGS",
+      "actor": "manager",
+      "state": "settings-compatibility",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "commands": [],
+      "screenshot": "SETTINGS-1440-manager-settings-compatibility.png"
+    }
+  ],
+  "boundedDrawerSweep": "Payouts Add funds: open/invalid/ready without submit; Payouts Return: open/invalid under actual zero eligibility; rollback Add funds: open/invalid/ready without submit. Each at all four widths. No summary eligibility interception or financial POST.",
+  "keyboard": "Entry by Tab/Enter, exact dialog focus, 16-Tab containment, Escape close and focus-return observations retained in bounded-drawers files. Field values set through automation; this is not a complete keyboard acceptance claim.",
+  "completeP3ABrowserMatrix": false,
+  "stopReason": "Serious production Settings contrast findings"
+}
