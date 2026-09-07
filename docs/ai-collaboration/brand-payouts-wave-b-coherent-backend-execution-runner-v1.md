@@ -14,7 +14,7 @@ The C04 Brand Payouts lineage dependency is accepted:
 - migration 85:
   `20260911125000_c04_brand_payouts_reserve_entitlement_lineage`
 - migration SQL SHA-256:
-  `aa5c1900d06a1c240413be547f8ebe23b933085f93c766b51fdd2933bf91da0f`
+  `6e384abdaf7cf9fa35973ca31e1a5cb541f60bd328937ff3d27844b9dfdb4d72`
 - C04 handoff:
   `docs/ai-collaboration/c04-brand-payouts-lineage-implementation-handoff.md`
 
