@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    [
+      "existing confirmations",
+      "legacy defaults; lineage/funding ref null; valid"
+    ],
+    [
+      "existing authority",
+      "legacy lineage null; hash unchanged"
+    ],
+    [
+      "canonical APPLIED complete + projection/event",
+      "valid"
+    ],
+    [
+      "canonical authority without projection/event",
+      "deferred commit failure"
+    ],
+    [
+      "CLAIMED",
+      "enum value absent; impossible"
+    ],
+    [
+      "partial/uppercase digest/invalid ref/over-scale",
+      "CHECK rejects"
+    ],
+    [
+      "failure during enum/column/FK/index/function/trigger",
+      "explicit transaction rolls back all"
+    ],
+    [
+      "retry after rollback",
+      "starts from unchanged 84-migration schema"
+    ],
+    [
+      "historical promotion",
+      "not performed"
+    ]
+  ]
+}

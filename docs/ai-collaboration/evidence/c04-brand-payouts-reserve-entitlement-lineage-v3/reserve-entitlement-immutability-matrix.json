@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "reserve": {
+    "insert": "serialized, exact predecessor/version rules",
+    "update": "canonical rejected under shared lock",
+    "delete": "canonical rejected under shared lock",
+    "supersession": "append next row only; APPLIED completed current cannot be superseded"
+  },
+  "entitlement": {
+    "insert": "exact APPLIED projection-coupled confirmation and sole current reserve under shared lock",
+    "update": "canonical rejected across identity/hash/agreement/resolution/economics/effective/source/lineage",
+    "delete": "canonical rejected",
+    "hash": "recomputed byte-for-byte from stored canonical Creator fields"
+  },
+  "legacy": "existing legacy behavior is not newly guarded"
+}

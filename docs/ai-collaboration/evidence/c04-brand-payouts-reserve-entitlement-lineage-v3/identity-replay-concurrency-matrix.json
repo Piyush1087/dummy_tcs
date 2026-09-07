@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "identity": [
+    "confirmationType",
+    "confirmationId"
+  ],
+  "full_mutation_tuple": [
+    "fundingConfirmationRef",
+    "lowercase bodyDigest",
+    "collaboration",
+    "reserve id/request/version/hash",
+    "agreement id/version/hash",
+    "approval ref",
+    "attempt ref",
+    "lock",
+    "ledger",
+    "Brand",
+    "Campaign",
+    "Creator",
+    "exact amount/currency",
+    "disposition"
+  ],
+  "outcomes": [
+    [
+      "exact identity/full tuple",
+      "APPLIED winner reread => replay"
+    ],
+    [
+      "changed any tuple field",
+      "identity reused conflict"
+    ],
+    [
+      "approval/attempt/reserve/ledger uniqueness",
+      "classified non-identity conflict; no replay"
+    ],
+    [
+      "unrelated P2002",
+      "conflict; no winner reread"
+    ],
+    [
+      "losing claim",
+      "zero securement call and zero broadcast"
+    ],
+    [
+      "confirmation/supersession",
+      "shared advisory key gives one serial outcome"
+    ],
+    [
+      "entitlement/supersession",
+      "shared advisory key gives one serial outcome"
+    ]
+  ]
+}

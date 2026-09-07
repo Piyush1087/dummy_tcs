@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "disposition": "NOT_APPROVED_NOT_APPLIED",
+  "corrections": [
+    {
+      "id": "V3-01",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "funding_confirmation_ref persisted, digested, compared, projection-coupled"
+    },
+    {
+      "id": "V3-02",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "no CLAIMED enum/state; final row is transaction-invisible until commit"
+    },
+    {
+      "id": "V3-03",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "deferred exact projection/event constraint"
+    },
+    {
+      "id": "V3-04",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "explicit BEGIN/COMMIT and rollback/retry analysis"
+    },
+    {
+      "id": "V3-05",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "one canonical 1..80 reference grammar"
+    },
+    {
+      "id": "V3-06",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "DECIMAL(14,2), 12 integer digits, scale 2 end-to-end"
+    },
+    {
+      "id": "V3-07",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "canonical reserve and entitlement append-only guards"
+    },
+    {
+      "id": "V3-08",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "stored Creator row reconstructs hash; other definitions exclude lineage"
+    },
+    {
+      "id": "V3-09",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "P2002 target classification plus exact winner reread"
+    },
+    {
+      "id": "V3-10",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "one broadcast after successful outer commit only"
+    },
+    {
+      "id": "V3-11",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "proof": "24 behavioral tests plus exact post-approval interleavings"
+    }
+  ]
+}

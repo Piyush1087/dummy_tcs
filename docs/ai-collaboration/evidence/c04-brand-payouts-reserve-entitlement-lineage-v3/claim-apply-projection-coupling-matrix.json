@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "model": "insert final APPLIED authority before mutation inside one transaction; row remains invisible externally; deferred trigger validates projection/event at commit",
+  "cases": [
+    [
+      "runtime success",
+      "authority + exact agreement projection + exact SYSTEM event commit"
+    ],
+    [
+      "failure before insert",
+      "nothing"
+    ],
+    [
+      "failure after insert",
+      "rollback"
+    ],
+    [
+      "failure during projection",
+      "rollback"
+    ],
+    [
+      "failure before commit",
+      "rollback"
+    ],
+    [
+      "direct SQL authority only",
+      "deferred constraint fails commit"
+    ],
+    [
+      "projection mismatch ref/lock/amount/currency/state/event",
+      "deferred constraint fails commit"
+    ],
+    [
+      "orphan CLAIMED",
+      "not representable by enum or CHECK"
+    ]
+  ]
+}

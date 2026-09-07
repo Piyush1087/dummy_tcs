@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "prisma_visible": {
+    "enums": 3,
+    "columns": [
+      "funding_confirmation_ref",
+      "lineage and application columns",
+      "entitlement lineage columns"
+    ],
+    "decimal": "Decimal(14,2)",
+    "foreign_keys": 9,
+    "relations": "bidirectional"
+  },
+  "sql_only": {
+    "checks": [
+      "canonical complete tuple/reference/digest/scale",
+      "entitlement lineage tuple"
+    ],
+    "partial_unique": [
+      "one sufficient confirmation per reserve",
+      "approval reference",
+      "execution attempt"
+    ],
+    "functions": [
+      "reserve serialization",
+      "funding validation",
+      "deferred projection coupling",
+      "reserve authority guard",
+      "entitlement validation"
+    ],
+    "triggers": 6,
+    "transaction": "explicit BEGIN/COMMIT"
+  },
+  "drift": "NO_NEW_UNEXPLAINED_PRISMA_VISIBLE_DRIFT"
+}
