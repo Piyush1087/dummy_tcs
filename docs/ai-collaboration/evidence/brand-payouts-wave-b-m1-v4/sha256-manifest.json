@@ -1,0 +1,17 @@
+{
+  "schema":"brand-payouts.m1.v4.manifest/1",
+  "disposition":"CLASS_C_NO_EXECUTABLE_PROPOSAL",
+  "algorithm":"SHA-256",
+  "files":{
+    "CLASS_C_NO_SAFE_M1_V4.sql":"6a49866452297d7ffc0242113c0a5b6a24079360d67f9f4d4f5223ebd767c9d0",
+    "CLASS_C_NO_SAFE_PRISMA_M1_V4.patch":"ec2f86a9cec77fd29d187f455d803d074436ce4ba2262d87382c808db6c564b6",
+    "concurrency-lineage.json":"68b768c104ee037fd59a3c036adac7c2b96a1b5173180bb39affcce8aeb412e6",
+    "deployment-recovery.md":"7ac3f6b6024e4ad0fdc80c145bff2dfb3fcc6f5d8abe3eb01e7fefcf12068073",
+    "exhaustive-object-crosswalk.json":"2b459b1668b139e544dbf37a08b0b217d3dc947103d6f6fbe77cc50aaaefb167",
+    "migration-truth-table.json":"e73408d320b85f9d087a5d8e7eda060c8512c31ab3e23e5ee7777c540138ae6b",
+    "state-matrices.json":"bd6a231385ba56d4b11d87543345fe49f372e7feb44aeb18fff2a39de3f4c993",
+    "trigger-path-table.json":"95ff0fdd00a2ed96e52ac0b24c714c9013becf24fb489fbb872d6f25fcf2808c"
+  },
+  "v3RemoteSqlSha256":"352a866d9bb094b4a256ab3bc5612c51bbf6efd6f1ce8b6e218ffdfe94b861d7",
+  "providerActions":[]
+}

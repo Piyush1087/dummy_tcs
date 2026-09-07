@@ -1,0 +1,11 @@
+{
+  "schema":"brand-payouts.m1.v4.migration-truth/1",
+  "proposal":"CLASS_C_NO_EXECUTABLE_DDL",
+  "rows":[
+    {"case":"fresh_0_to_85","result":"BLOCKED","reason":"no truthful M1 V4 can be generated"},
+    {"case":"empty_84_to_85","result":"BLOCKED","reason":"same Class C authority gap"},
+    {"case":"populated_84_to_85","result":"BLOCKED","reason":"V3 is mode-unsafe and V4 cannot be completed without upstream lineage"},
+    {"case":"legacy_rows","result":"UNCHANGED","backfill":false,"newCanonicalWrites":"DISABLED"},
+    {"case":"application_rollback","result":"SAFE_CURRENT_STATE","reason":"no V4 DDL or writer was deployed"}
+  ]
+}

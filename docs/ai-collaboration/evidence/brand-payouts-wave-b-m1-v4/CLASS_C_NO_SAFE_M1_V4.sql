@@ -1,0 +1,13 @@
+-- BRAND PAYOUTS M1 V4 — CLASS C STOP; NOT APPROVED; NOT APPLIED
+-- Frozen P4 Base: 5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1
+-- No executable DDL is proposed.
+--
+-- C04 collaboration_financial_authority_instructions identifies its normal
+-- Creator-entitlement source by collaboration_financial_resolutions.id.
+-- It has no reserve_instruction_id, approval_id, escrow_lock_id, or immutable
+-- relational lineage key. Reserve/lock references instead live in separate,
+-- mutable collaboration_commercial_agreements fields and JSON event payloads.
+-- Therefore one additive M1 cannot prove which exact reserve protected this
+-- entitlement without heuristic selection or an upstream C04 writer change.
+-- R8 and consequently R12/R15 cannot be satisfied truthfully.
+-- STOP: upstream authority/schema reconciliation is required.

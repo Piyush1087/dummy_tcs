@@ -1372,8 +1372,8 @@ files_changed:
 
 uncheckpointed_work:
   phase: "BP_G10_M1_V4_APPROVAL_GRADE_RECONCILIATION"
-  status: "V3_NOT_APPROVED_V4_COMPLETE_RECONCILIATION_REQUIRED"
-  evidence: "docs/ai-collaboration/brand-payouts-v1-bp-g10-m1-approval-grade-reconciliation-and-v4-runner-v2.md"
+  status: "CLASS_C_BLOCKED_UPSTREAM_C04_EXACT_RESERVE_ENTITLEMENT_LINEAGE_REQUIRED"
+  evidence: "docs/ai-collaboration/brand-payouts-bp-g10-m1-v4-class-c-review.md"
   v2_disposition: "NOT_APPROVED_SUPERSEDED"
   v3_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V4"
   v3_evidence_sha: "e14657b250cb4324bd2e1785ac67f6c8aecdf098"
@@ -1381,9 +1381,14 @@ uncheckpointed_work:
   superseded_correction_assignment_sha: "63fb3faadaea77055d66113568bfe41c8b54daf2"
   correction_assignment_sha: "c230ad2c4dda66afb0b813413e2ba8e7f4fc5fe4"
   reconciliation_register: "R1_TO_R18_COMPLETE"
+  reconciliation_result: "CLASS_C"
+  class_c_blockers:
+    - "C04_NORMAL_CREATOR_ENTITLEMENT_HAS_NO_IMMUTABLE_RELATIONAL_LINK_TO_EXACT_RESERVE_INSTRUCTION_AND_AUTHORITATIVE_LOCK_CONFIRMATION"
+  m1_v4_executable_sql: false
+  m1_v4_prisma_patch: false
   p4_base_status: "ACCEPTED_UNCHANGED"
   source_repositories_clean: true
   migrations_created_or_applied: false
   provider_actions: []
 
-last_updated: "2026-09-07T04:00:00.000Z"
+last_updated: "2026-09-07T05:00:00.000Z"

@@ -1,0 +1,50 @@
+{
+  "schema":"brand-payouts.m1.v4.exhaustive-crosswalk/1",
+  "base":{"sha":"5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1","tree":"6c01d65e5a32eecfcd7e42715923ea8478d071fb","migrations":84},
+  "classC":"C04_AUTHORITY_HAS_NO_IMMUTABLE_EXACT_RESERVE_LINEAGE",
+  "existingAuthorityObjects":[
+    {"object":"collaboration_reserve_instructions","authority":"C04","purpose":"versioned reserve request","key":"id","currentness":"status REQUESTED plus no superseding row"},
+    {"object":"collaboration_financial_authority_instructions","authority":"C04","purpose":"versioned entitlement/refund authority","sourceKey":"source_financial_ref -> financial resolution","missing":["reserve_instruction_id","escrow_lock_id"]},
+    {"object":"collaboration_commercial_agreements.funding_instruction_ref","authority":"C04","purpose":"mutable projection","immutable":false},
+    {"object":"collaboration_commercial_agreements.escrow_lock_ref","authority":"C04","purpose":"mutable projection","immutable":false},
+    {"object":"collaboration_events.payload","authority":"C04","purpose":"JSON audit payload","relationallyConstrained":false},
+    {"object":"collaboration_trusted_confirmations","authority":"C04","purpose":"confirmation dedupe","stores":"identity and digest only","missing":["reserve_instruction_id","escrow_lock_id","ledger_transaction_id"]},
+    {"object":"collaboration_escrow_locks","authority":"canonical escrow","purpose":"reserve lock","exactAuthorityBacklink":false},
+    {"object":"escrow_transaction_ledger","authority":"canonical ledger","purpose":"money movement","reserveApprovalBacklink":false},
+    {"object":"creator_payout_profiles","authority":"C05","purpose":"mutable readiness/profile state"},
+    {"object":"creator_payout_destinations","authority":"C05","purpose":"versioned non-secret destination identity plus encrypted payload"},
+    {"object":"creator_payout_destination_provider_mappings","authority":"C05","purpose":"mutable provider mapping","immutableVersionKey":false},
+    {"object":"creator_payout_obligations","authority":"Brand Payouts","purpose":"obligation","V4Change":"blocked"},
+    {"object":"route_transfer_attempts","authority":"Brand Payouts","purpose":"provider create/observation/settlement lifecycle","V4Change":"blocked"},
+    {"object":"creator_payout_funding_allocations","authority":"canonical escrow","purpose":"protected funding allocation"}
+  ],
+  "proposedObjectClasses":[
+    {"class":"enums","items":["reserve approval status","reserve attempt outcome","obligation provenance/lifecycle/gate","create outcome","reconciliation state","receipt entity/event"],"status":"not emitted after Class C"},
+    {"class":"tables","items":["financial reserve approvals","reserve execution attempts","normalized receipts","authoritative settlement linkage"],"status":"not emitted after Class C"},
+    {"class":"altered tables","items":["creator payout obligations","route transfer attempts","funding allocation/ledger linkage"],"status":"not emitted after Class C"},
+    {"class":"constraints","items":["FK","unique","check","partial unique"],"status":"cannot be exhaustively finalized without upstream key"},
+    {"class":"indexes","items":["claim","due","terminal","receipt","reconciliation"],"status":"cannot be finalized before reachable schema"},
+    {"class":"functions/triggers","items":["insert validation","transition guards","set-once","receipt semantic guard"],"status":"cannot safely encode missing authority"}
+  ],
+  "register":[
+    {"id":"R1","result":"REQUIRES_REDESIGN","finding":"V3 unconditional transfer CHECK breaks populated legacy rows"},
+    {"id":"R2","result":"BLOCKED_BY_CLASS_C","finding":"no complete V4 object set can be truthfully finalized"},
+    {"id":"R3","result":"DESIGNABLE","finding":"nullable requester observation and server-owned timestamps required"},
+    {"id":"R4","result":"DESIGNABLE","finding":"current reserve requires REQUESTED plus anti-supersession predicate"},
+    {"id":"R5","result":"DESIGNABLE","finding":"supersession only pre-execution; attempts retain episode history"},
+    {"id":"R6","result":"DESIGNABLE","finding":"initial CLAIMED, one live claim, contiguous sequence under parent lock"},
+    {"id":"R7","result":"BLOCKED_BY_CLASS_C","finding":"C04 confirmation cannot relationally identify exact approval/ledger outcome"},
+    {"id":"R8","result":"CLASS_C","finding":"no immutable exact reserve-to-entitlement lineage in P4 Base"},
+    {"id":"R9","result":"DESIGNABLE_AFTER_R8","finding":"canonical state/economics graph can be constrained once lineage exists"},
+    {"id":"R10","result":"DESIGNABLE","finding":"five Kolkata calendar-day terms and UTC storage"},
+    {"id":"R11","result":"DESIGNABLE","finding":"immutable snapshot at insert; current recheck only at claim; later evidence append unaffected by drift"},
+    {"id":"R12","result":"BLOCKED_BY_R8","finding":"protected funding claim cannot be proven"},
+    {"id":"R13","result":"DESIGNABLE","finding":"create outcome must be separate from later transfer and settlement state"},
+    {"id":"R14","result":"DESIGNABLE","finding":"explicit null-safe milestone branches"},
+    {"id":"R15","result":"BLOCKED_BY_R8","finding":"exact allocation consumption cannot be tied to entitlement lineage"},
+    {"id":"R16","result":"DESIGNABLE_AFTER_R15","finding":"receipt semantics depend on authoritative settlement linkage"},
+    {"id":"R17","result":"DESIGNABLE","finding":"Owner/Finance approval, worker-derived tenant identity, no secrets"},
+    {"id":"R18","result":"CLASS_C_STOP","finding":"safe one-migration rollout unavailable until upstream immutable key exists"}
+  ],
+  "enforcementLegend":{"PRISMA_VISIBLE":"fields relations enums ordinary indexes","SQL_ONLY":"checks partial indexes transition and semantic triggers","APPLICATION":"transaction lock order and provider capability","UPSTREAM_REQUIRED":"immutable C04 reserve-entitlement lineage"}
+}

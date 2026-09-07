@@ -1,0 +1,6 @@
+# CLASS C STOP — NO PRISMA PATCH
+#
+# A literal financial schema patch is intentionally absent. Adding a nullable
+# or caller-populated reserve lineage field would create the exact heuristic or
+# caller-authored authority forbidden by R8. The frozen upstream C04 authority
+# must first publish an immutable relational reserve/lock lineage.

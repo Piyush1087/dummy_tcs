@@ -1,0 +1,17 @@
+{
+  "schema":"brand-payouts.m1.v4.concurrency-lineage/1",
+  "lineage":[
+    {"from":"C04 reserve instruction","to":"approval","requiredKey":"reserve_instruction_id unique","available":true},
+    {"from":"approval","to":"attempt","requiredKey":"approval_id + sequence; one live partial unique","availableInV4":false},
+    {"from":"attempt","to":"lock/ledger","requiredKey":"exact FKs plus deterministic ledger identity","availableInV4":false},
+    {"from":"lock/ledger","to":"C04 confirmation","requiredKey":"immutable relational confirmation outcome","available":false,"classC":true},
+    {"from":"C04 Creator entitlement","to":"exact reserve instruction/lock","requiredKey":"immutable upstream lineage","available":false,"classC":true},
+    {"from":"entitlement and reserve","to":"obligation","requiredKey":"authority + reserve approval + lock","availableInV4":false},
+    {"from":"obligation","to":"transfer claim","requiredKey":"one live/accepted attempt and full outstanding identity","availableInV4":false},
+    {"from":"C05","to":"attempt","requiredKey":"profile state + destination version + immutable mapping snapshot","availableInV4":false},
+    {"from":"authoritative settlement","to":"allocation/vault/obligation/ledger","requiredKey":"settlement evidence unique plus direct ledger FK","availableInV4":false}
+  ],
+  "lockOrder":["obligation","transfer attempt","funding allocation","vault","ledger identity"],
+  "idempotency":["reserve request/instruction unique","approval request/instruction unique","one successful reserve attempt","one live transfer create","ambiguous blocks retry","one settlement evidence","one settlement ledger identity"],
+  "conclusion":"Exact-once mechanics are designable, but cannot start from a provable protected-reserve lineage on the frozen source."
+}

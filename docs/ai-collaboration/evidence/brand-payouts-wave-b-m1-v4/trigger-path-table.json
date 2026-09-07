@@ -1,0 +1,20 @@
+{
+  "schema":"brand-payouts.m1.v4.trigger-paths/1",
+  "classC":true,
+  "paths":[
+    {"entity":"approval","insert":"initial state/version/evidence only; validate current C04 reserve and approver","update":"legal graph, +1 version, server time, set-once episode","delete":"deny"},
+    {"entity":"reserve attempt","insert":"CLAIMED only; parent EXECUTING; next sequence; one live","update":"single terminal transition; parent outcome coupling","delete":"deny"},
+    {"entity":"obligation","insert":"canonical C04 plus exact reserve lineage required","update":"state graph and settlement transaction only","delete":"deny canonical"},
+    {"entity":"transfer attempt","insert":"CURRENT_C05 plus due/funding/resolution claim","update":"append create and observation evidence; current readiness drift may record failure","delete":"deny canonical"},
+    {"entity":"receipt","insert":"dedupe and event/milestone semantics","update":"deny","delete":"deny"},
+    {"entity":"settlement effect","insert":"authoritative settlement only; allocation/vault/obligation/ledger transaction","update":"replay stable only","delete":"deny"}
+  ],
+  "nullableCheckTruthTable":[
+    {"expression":"legacy altered-row checks","TRUE":"legacy mode and legacy fields unchanged","FALSE":"partial promotion","UNKNOWN":"must be eliminated by mode branch"},
+    {"expression":"reserve timestamps","TRUE":"required predecessor non-null and ordered","FALSE":"missing/out-of-order","UNKNOWN":"explicitly rejected"},
+    {"expression":"attempt outcome","TRUE":"one exhaustive outcome tuple","FALSE":"contradictory tuple","UNKNOWN":"all nullable fields explicitly tested"},
+    {"expression":"obligation arithmetic","TRUE":"canonical positive exact arithmetic","FALSE":"mismatch/reversal normal path","UNKNOWN":"canonical branch requires operands"},
+    {"expression":"transfer milestones","TRUE":"reachable ordered branch","FALSE":"missing predecessor/contradiction","UNKNOWN":"explicitly rejected"},
+    {"expression":"receipt time","TRUE":"optional provider time guarded and remaining times ordered","FALSE":"reverse order","UNKNOWN":"explicit provider null branch"}
+  ]
+}

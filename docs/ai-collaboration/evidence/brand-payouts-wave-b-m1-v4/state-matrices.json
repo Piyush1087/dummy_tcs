@@ -1,0 +1,38 @@
+{
+  "schema":"brand-payouts.m1.v4.state-matrices/1",
+  "disposition":"DESIGN_COMPLETE_BUT_NOT_RENDERABLE_AS_SAFE_M1",
+  "reserveApproval":{
+    "APPROVED_AWAITING_EXECUTION":{"start":false,"failure":false,"lock":false,"ledger":false,"next":["EXECUTING","SUPERSEDED"]},
+    "EXECUTING":{"start":true,"next":["COMPLETED","AWAITING_FUNDS","ACTION_REQUIRED"]},
+    "AWAITING_FUNDS":{"priorAttemptEvidence":"preserved","next":["EXECUTING"]},
+    "ACTION_REQUIRED":{"priorAttemptEvidence":"preserved","next":[]},
+    "COMPLETED":{"successfulAttempt":true,"exactLock":true,"exactLedger":true,"immutable":true},
+    "SUPERSEDED":{"allowedOnlyBeforeExecution":true,"immutable":true}
+  },
+  "reserveAttempt":{
+    "CLAIMED":{"initial":true,"singleLive":true,"next":["SUCCEEDED","SHORTFALL","RETRYABLE_FAILURE","TERMINAL_FAILURE","SUPERSEDED"]},
+    "terminal":{"completedAt":true,"immutable":true,"failureCodeRequiredExceptSucceeded":true}
+  },
+  "obligation":[
+    {"status":"ELIGIBLE","lifecycle":"SCHEDULED","gate":"NOT_YET_DUE","settled":false},
+    {"status":"ELIGIBLE","lifecycle":"READY_QUEUED","gate":"READY","settled":false},
+    {"status":"EXECUTING","lifecycle":"PROCESSING","gate":"READY","settled":false},
+    {"status":"BLOCKED","lifecycle":"ACTION_REQUIRED","gate":"NON_READY_EXACT_REASON","settled":false},
+    {"status":"SETTLED","lifecycle":"SETTLED","gate":"READY","settled":true}
+  ],
+  "providerCreateAndTransfer":[
+    {"create":"NOT_STARTED","transfer":"CREATED","settlement":"PENDING"},
+    {"create":"ACCEPTED","transfer":"PROCESSING_OR_HELD","settlement":"PENDING","executionReference":true},
+    {"create":"FAILED","transfer":"FAILED","settlement":"BLOCKED","reason":true},
+    {"create":"AMBIGUOUS","transfer":"HELD_RECONCILIATION","settlement":"PENDING","retryBlocked":true},
+    {"create":"ACCEPTED","transfer":"PROCESSED","settlement":"PENDING"},
+    {"create":"ACCEPTED","transfer":"SETTLED","settlement":"CONFIRMED","authoritativeSettlement":true}
+  ],
+  "receipts":{
+    "TRANSFER_ACCEPTED":"accepted create plus execution reference",
+    "TRANSFER_PROCESSED":"processed milestone",
+    "TRANSFER_FAILED":"compatible failure plus reason",
+    "TRANSFER_HELD":"actual hold or ambiguous reconciliation",
+    "SETTLEMENT_RECORDED":"settled attempt plus exact allocation/vault/ledger effect"
+  }
+}
