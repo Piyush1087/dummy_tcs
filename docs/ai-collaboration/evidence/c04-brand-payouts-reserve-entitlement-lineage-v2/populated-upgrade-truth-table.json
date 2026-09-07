@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "migration_application": "NOT_APPLIED",
+  "rows": [
+    [
+      "existing confirmation",
+      "LEGACY_UNRECONCILED",
+      "LEGACY_APPLIED",
+      "new lineage columns null",
+      "valid; no inference"
+    ],
+    [
+      "existing authority",
+      "LEGACY_UNRECONCILED",
+      "lineage ids null",
+      "valid; hash meaning unchanged"
+    ],
+    [
+      "new canonical claim",
+      "CANONICAL_PAYOUTS_V1",
+      "CLAIMED",
+      "complete tuple",
+      "valid only before same-transaction projection"
+    ],
+    [
+      "new canonical applied",
+      "CANONICAL_PAYOUTS_V1",
+      "APPLIED",
+      "complete tuple plus server applied time",
+      "valid"
+    ],
+    [
+      "partial canonical row",
+      "any",
+      "any",
+      "missing tuple field",
+      "CHECK/trigger rejects"
+    ],
+    [
+      "canonical historical promotion",
+      "n/a",
+      "n/a",
+      "n/a",
+      "not permitted"
+    ]
+  ]
+}

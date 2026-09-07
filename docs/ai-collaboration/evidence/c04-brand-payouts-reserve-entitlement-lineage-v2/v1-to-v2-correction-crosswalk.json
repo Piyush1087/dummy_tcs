@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "disposition": "NOT_APPROVED_NOT_APPLIED",
+  "base": "fc4d4b59e2a44d7ddced6bc5dde5119c501ec275",
+  "corrections": [
+    {
+      "id": "V2-01",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "atomic CLAIMED→domain mutation→APPLIED transaction"
+    },
+    {
+      "id": "V2-02",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "complete normalized immutable tuple plus winner reread"
+    },
+    {
+      "id": "V2-03",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "server SHA-256 recomputation and strict Zod boundary"
+    },
+    {
+      "id": "V2-04",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "canonical decimal string, scale <= 4, Prisma.Decimal only"
+    },
+    {
+      "id": "V2-05",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "explicit collaboration_id equals reserve collaboration"
+    },
+    {
+      "id": "V2-06",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "shared advisory transaction lock and exact supersedes chain"
+    },
+    {
+      "id": "V2-07",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "agreement/current reserve/APPLIED confirmation under shared lock"
+    },
+    {
+      "id": "V2-08",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "lineage hash fields only on normal Creator entitlement and persisted"
+    },
+    {
+      "id": "V2-09",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "1..80 canonical reference format"
+    },
+    {
+      "id": "V2-10",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "Prisma relations for all DDL foreign keys; SQL-only objects inventoried"
+    },
+    {
+      "id": "V2-11",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "race/crash matrix and post-approval PostgreSQL plan"
+    },
+    {
+      "id": "V2-12",
+      "status": "RESOLVED_IN_PROPOSAL",
+      "evidence": "behavioral unit proposal plus post-approval integration plan"
+    }
+  ]
+}

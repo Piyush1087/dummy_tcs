@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "identity": [
+    "confirmationType",
+    "confirmationId"
+  ],
+  "normalized_tuple": [
+    "bodyDigest(lowercase,server verified)",
+    "collaborationId",
+    "reserveInstructionId",
+    "reserveRequestId",
+    "reserveInstructionVersion",
+    "reserveInstructionHash",
+    "commercialAgreementId",
+    "agreementVersion",
+    "agreementHash",
+    "payoutsApprovalRef",
+    "reserveExecutionAttemptRef",
+    "escrowLockId",
+    "reserveLedgerTransactionId",
+    "brandProfileId",
+    "campaignId",
+    "creatorProfileId",
+    "confirmedAmount(exact decimal)",
+    "currency",
+    "disposition"
+  ],
+  "cases": [
+    [
+      "concurrent exact duplicate",
+      "one commit; loser P2002 rereads APPLIED exact winner; replay"
+    ],
+    [
+      "changed digest/body",
+      "TRUSTED_CONFIRMATION_IDENTITY_REUSED"
+    ],
+    [
+      "changed reserve/request/version/hash",
+      "conflict; zero losing mutation"
+    ],
+    [
+      "changed approval/attempt",
+      "conflict; zero losing mutation"
+    ],
+    [
+      "changed lock/ledger",
+      "conflict; zero losing mutation"
+    ],
+    [
+      "different Collaboration or party/agreement",
+      "conflict; zero losing mutation"
+    ],
+    [
+      "crash before claim",
+      "no row, no mutation"
+    ],
+    [
+      "crash after claim/during projection/before commit",
+      "transaction rollback; no false APPLIED"
+    ],
+    [
+      "delayed exact duplicate",
+      "idempotent replay"
+    ],
+    [
+      "out-of-order conflict",
+      "fail closed"
+    ]
+  ]
+}

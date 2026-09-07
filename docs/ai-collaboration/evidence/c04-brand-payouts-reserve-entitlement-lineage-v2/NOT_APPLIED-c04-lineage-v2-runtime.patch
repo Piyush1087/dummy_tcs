@@ -1,0 +1,466 @@
+diff --git a/src/features/collaboration/schemas/collaboration-commercial-command.schema.ts b/src/features/collaboration/schemas/collaboration-commercial-command.schema.ts
+index 45314b2..8370710 100644
+--- a/src/features/collaboration/schemas/collaboration-commercial-command.schema.ts
++++ b/src/features/collaboration/schemas/collaboration-commercial-command.schema.ts
+@@ -37,7 +37,9 @@ export const confirmEscrowFundingSchema = z
+     ...commandEnvelope,
+     fundingConfirmationRef: evidenceRef,
+     escrowLockRef: evidenceRef,
+-    confirmedAmount: z.coerce.number().finite().nonnegative(),
++    confirmedAmount: z
++      .string()
++      .regex(/^(?:0|[1-9]\d{0,11})(?:\.\d{1,4})?$/),
+     currency: z
+       .string()
+       .trim()
+diff --git a/src/features/collaboration/services/collaboration-securement.service.ts b/src/features/collaboration/services/collaboration-securement.service.ts
+index f2587f8..8f13da7 100644
+--- a/src/features/collaboration/services/collaboration-securement.service.ts
++++ b/src/features/collaboration/services/collaboration-securement.service.ts
+@@ -185,11 +185,20 @@ export class CollaborationSecurementService {
+           },
+         });
+       }
++      await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtextextended(${`c04-reserve:${collaborationId}`}, 0))`;
++      const priorInstruction = await tx.collaborationReserveInstruction.findFirst({
++        where: {
++          collaborationId,
++          commercialAgreementId: agreement.id,
++          supersededBy: { none: {} },
++        },
++        orderBy: { instructionVersion: "desc" },
++        select: { id: true, instructionVersion: true, trustedConfirmations: { where: { applicationState: "APPLIED" }, select: { id: true }, take: 1 } },
++      });
++      if (priorInstruction?.trustedConfirmations.length)
++        commandConflict("INVALID_STATE", "A completed reserve instruction cannot be superseded", row.aggregateVersion);
+       const instructionId = randomUUID();
+-      const instructionVersion =
+-        (await tx.collaborationReserveInstruction.count({
+-          where: { collaborationId },
+-        })) + 1;
++      const instructionVersion = (priorInstruction?.instructionVersion ?? 0) + 1;
+       const instructionHash = financialAuthorityHash({
+         instructionId,
+         instructionVersion,
+@@ -230,9 +239,12 @@ export class CollaborationSecurementService {
+           requestedByUserId: user.id,
+           status: "REQUESTED",
+           idempotencyKey: input.commandId,
++          supersedesInstructionId: priorInstruction?.id,
+         },
+       });
+       if (
++        (row.authorityVersion === "CANONICAL_V1" &&
++          agreement.paymentRail === "PLATFORM_ESCROW") ||
+         this.brandWorkspace.isFinancialReadOnly(brandContext.membership.role)
+       ) {
+         const version = row.aggregateVersion + 1;
+@@ -352,6 +364,7 @@ export class CollaborationSecurementService {
+     actor: TrustedFundingConfirmationActor,
+     collaborationId: string,
+     raw: unknown,
++    transactionClient?: Prisma.TransactionClient,
+   ) {
+     if (actor.actorClass !== CollaborationActorClass.SYSTEM) {
+       unauthorizedActor("Escrow confirmation requires a trusted SYSTEM path");
+@@ -362,7 +375,7 @@ export class CollaborationSecurementService {
+       aggregateVersion: number;
+       securementState: CollaborationSecurementState;
+     };
+-    await this.prisma.$transaction(async (tx) => {
++    const apply = async (tx: Prisma.TransactionClient) => {
+       if (
+         await replayOrThrow(
+           tx,
+@@ -495,8 +508,11 @@ export class CollaborationSecurementService {
+           ? CollaborationSecurementState.COMPLETED
+           : CollaborationSecurementState.PROCESSING_FUNDING,
+       };
+-    });
+-    void this.realtime.broadcast(collaborationId, "thread.updated");
++    };
++    if (transactionClient) await apply(transactionClient);
++    else await this.prisma.$transaction(apply);
++    if (!transactionClient)
++      void this.realtime.broadcast(collaborationId, "thread.updated");
+     return { collaborationId, ...response };
+   }
+ 
+diff --git a/src/features/collaboration/services/collaboration-settlement.service.ts b/src/features/collaboration/services/collaboration-settlement.service.ts
+index 548a7a9..903a06a 100644
+--- a/src/features/collaboration/services/collaboration-settlement.service.ts
++++ b/src/features/collaboration/services/collaboration-settlement.service.ts
+@@ -137,6 +137,7 @@ export class CollaborationSettlementService {
+         resolutionType: "NORMAL_SUCCESS",
+         sourceFinancialRef: resolutionRecord.id,
+         effectiveAt: now,
++        ...(await this.requireExactProtectedFundingLineage(tx, row.id)),
+       });
+       await this.bump(tx, row);
+       await appendCommandEvent(tx, {
+@@ -571,6 +572,44 @@ export class CollaborationSettlementService {
+     return resolution;
+   }
+ 
++  private async requireExactProtectedFundingLineage(
++    tx: Prisma.TransactionClient,
++    collaborationId: string,
++  ) {
++    await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtextextended(${`c04-reserve:${collaborationId}`}, 0))`;
++    const agreement = await tx.collaborationCommercialAgreement.findUniqueOrThrow({
++      where: { collaborationId },
++      select: { id: true },
++    });
++    const rows = await tx.collaborationTrustedConfirmation.findMany({
++      where: {
++        collaborationId,
++        confirmationType: "ESCROW_FUNDING",
++        lineageMode: "CANONICAL_PAYOUTS_V1",
++        applicationState: "APPLIED",
++        disposition: "COMPLETED_SUFFICIENT",
++        commercialAgreementId: agreement.id,
++        reserveInstruction: {
++          commercialAgreementId: agreement.id,
++          supersededBy: { none: {} },
++          status: "REQUESTED",
++        },
++      },
++      select: { id: true, reserveInstructionId: true },
++      take: 2,
++    });
++    if (rows.length !== 1 || !rows[0].reserveInstructionId) {
++      commandConflict(
++        "INVALID_STATE",
++        "Exactly one current protected-funding lineage is required",
++      );
++    }
++    return {
++      fundingConfirmationId: rows[0].id,
++      reserveInstructionId: rows[0].reserveInstructionId,
++    };
++  }
++
+   private async ensureEligibleSettlement(
+     tx: Prisma.TransactionClient,
+     row: SettlementRow,
+diff --git a/src/features/collaboration/services/collaboration-trusted-confirmation.service.test.ts b/src/features/collaboration/services/collaboration-trusted-confirmation.service.test.ts
+new file mode 100644
+index 0000000..18eb76a
+--- /dev/null
++++ b/src/features/collaboration/services/collaboration-trusted-confirmation.service.test.ts
+@@ -0,0 +1,107 @@
++import { ConflictException } from "@nestjs/common";
++import { Prisma } from "@prisma/client";
++import { describe, expect, it, vi } from "vitest";
++
++import { financialAuthorityHash } from "../utils/collaboration-financial-authority";
++import {
++  CollaborationTrustedConfirmationService,
++  trustedEscrowConfirmationSchema,
++} from "./collaboration-trusted-confirmation.service";
++
++const ids = {
++  collaborationId: "00000000-0000-4000-8000-000000000001",
++  escrowLockRef: "00000000-0000-4000-8000-000000000002",
++  reserveInstructionId: "00000000-0000-4000-8000-000000000003",
++  commercialAgreementId: "00000000-0000-4000-8000-000000000004",
++  reserveLedgerTransactionId: "00000000-0000-4000-8000-000000000005",
++  brandProfileId: "00000000-0000-4000-8000-000000000006",
++  campaignId: "00000000-0000-4000-8000-000000000007",
++  creatorProfileId: "00000000-0000-4000-8000-000000000008",
++};
++
++function validInput() {
++  const input: any = {
++    confirmationId: "confirmation-1", bodyDigest: "0".repeat(64), ...ids,
++    expectedAggregateVersion: 7, fundingConfirmationRef: "funding-1", confirmedAmount: "125.2500",
++    currency: "INR", reserveRequestId: "request-1", reserveInstructionVersion: 2,
++    reserveInstructionHash: "a".repeat(64), agreementVersion: 3, agreementHash: "b".repeat(64),
++    payoutsApprovalRef: "approval-1", reserveExecutionAttemptRef: "attempt-1",
++  };
++  const tuple = {
++    confirmationType: "ESCROW_FUNDING", confirmationId: input.confirmationId,
++    collaborationId: input.collaborationId, reserveInstructionId: input.reserveInstructionId,
++    reserveRequestId: input.reserveRequestId, reserveInstructionVersion: input.reserveInstructionVersion,
++    reserveInstructionHash: input.reserveInstructionHash, commercialAgreementId: input.commercialAgreementId,
++    agreementVersion: input.agreementVersion, agreementHash: input.agreementHash,
++    payoutsApprovalRef: input.payoutsApprovalRef, reserveExecutionAttemptRef: input.reserveExecutionAttemptRef,
++    escrowLockId: input.escrowLockRef, reserveLedgerTransactionId: input.reserveLedgerTransactionId,
++    brandProfileId: input.brandProfileId, campaignId: input.campaignId, creatorProfileId: input.creatorProfileId,
++    confirmedAmount: "125.2500", currency: "INR", disposition: "COMPLETED_SUFFICIENT",
++  };
++  input.bodyDigest = financialAuthorityHash(tuple);
++  return { input, tuple };
++}
++
++describe("C04 trusted confirmation atomic claim", () => {
++  it("claims before mutation and marks APPLIED in the same transaction", async () => {
++    const { input } = validInput();
++    const calls: string[] = [];
++    const tx: any = {
++      collaborationTrustedConfirmation: {
++        create: vi.fn(async () => { calls.push("claim"); return { id: "claim" }; }),
++        update: vi.fn(async () => { calls.push("applied"); }),
++      },
++    };
++    const prisma: any = { $transaction: (fn: any) => fn(tx) };
++    const securement: any = { confirmEscrowFunding: vi.fn(async () => { calls.push("mutation"); return {}; }) };
++    const service = new CollaborationTrustedConfirmationService(prisma, securement);
++    await expect(service.consumeEscrow(input)).resolves.toMatchObject({ replayed: false });
++    expect(calls).toEqual(["claim", "mutation", "applied"]);
++    expect(securement.confirmEscrowFunding.mock.calls[0][3]).toBe(tx);
++  });
++
++  it("rereads an APPLIED exact winner and never invokes securement after P2002", async () => {
++    const { input, tuple } = validInput();
++    const race = new Prisma.PrismaClientKnownRequestError("race", { code: "P2002", clientVersion: "test" });
++    const prisma: any = {
++      $transaction: vi.fn(async () => { throw race; }),
++      collaborationTrustedConfirmation: { findUnique: vi.fn(async () => ({ ...tuple, bodyDigest: input.bodyDigest, applicationState: "APPLIED" })) },
++    };
++    const securement: any = { confirmEscrowFunding: vi.fn() };
++    const service = new CollaborationTrustedConfirmationService(prisma, securement);
++    await expect(service.consumeEscrow(input)).resolves.toEqual({ collaborationId: input.collaborationId, replayed: true });
++    expect(securement.confirmEscrowFunding).not.toHaveBeenCalled();
++  });
++
++  it.each([
++    "collaborationId", "reserveInstructionId", "reserveRequestId",
++    "reserveInstructionVersion", "reserveInstructionHash",
++    "commercialAgreementId", "agreementVersion", "agreementHash",
++    "payoutsApprovalRef", "reserveExecutionAttemptRef", "escrowLockId",
++    "reserveLedgerTransactionId", "brandProfileId", "campaignId",
++    "creatorProfileId", "confirmedAmount", "currency", "disposition",
++  ])(
++    "rejects changed replay tuple family %s", async (field) => {
++      const { input, tuple } = validInput();
++      const race = new Prisma.PrismaClientKnownRequestError("race", { code: "P2002", clientVersion: "test" });
++      const prisma: any = { $transaction: async () => { throw race; }, collaborationTrustedConfirmation: {
++        findUnique: async () => ({
++          ...tuple,
++          [field]: field === "confirmedAmount" ? "125.2600" : "changed",
++          bodyDigest: input.bodyDigest,
++          applicationState: "APPLIED",
++        }),
++      } };
++      await expect(new CollaborationTrustedConfirmationService(prisma, { confirmEscrowFunding: vi.fn() } as any).consumeEscrow(input))
++        .rejects.toBeInstanceOf(ConflictException);
++    },
++  );
++
++  it("normalizes digest case, rejects mismatch, and rejects noncanonical decimals", async () => {
++    const { input } = validInput();
++    expect(() => trustedEscrowConfirmationSchema.parse({ ...input, confirmedAmount: 125.25 })).toThrow();
++    expect(() => trustedEscrowConfirmationSchema.parse({ ...input, confirmedAmount: "01.00" })).toThrow();
++    const service = new CollaborationTrustedConfirmationService({} as any, {} as any);
++    await expect(service.consumeEscrow({ ...input, bodyDigest: "f".repeat(64) })).rejects.toBeInstanceOf(ConflictException);
++  });
++});
+diff --git a/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts b/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts
+index eea3f64..f2785c3 100644
+--- a/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts
++++ b/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts
+@@ -1,78 +1,81 @@
+ import { ConflictException, Injectable } from "@nestjs/common";
+ import { Prisma } from "@prisma/client";
++import { z } from "zod";
+ 
+ import { PrismaService } from "../../../prisma/prisma.service";
++import { financialAuthorityHash } from "../utils/collaboration-financial-authority";
+ import { CollaborationSecurementService } from "./collaboration-securement.service";
+ 
+-export type TrustedEscrowConfirmation = {
+-  confirmationId: string;
+-  bodyDigest: string;
+-  collaborationId: string;
+-  expectedAggregateVersion: number;
+-  fundingConfirmationRef: string;
+-  escrowLockRef: string;
+-  confirmedAmount: number;
+-  currency: string;
+-};
++const reference = z.string().regex(/^[A-Za-z0-9][A-Za-z0-9:_./-]{0,79}$/);
++const hash = z.string().regex(/^[a-f0-9]{64}$/i);
++const exactAmount = z.string().regex(/^(?:0|[1-9]\d{0,11})(?:\.\d{1,4})?$/)
++  .refine((value) => new Prisma.Decimal(value).greaterThan(0));
+ 
+-/** Provider-neutral boundary. Provider request bodies never cross this service. */
++export const trustedEscrowConfirmationSchema = z.object({
++  confirmationId: reference, bodyDigest: hash, collaborationId: z.string().uuid(),
++  expectedAggregateVersion: z.number().int().nonnegative(), fundingConfirmationRef: reference,
++  escrowLockRef: z.string().uuid(), confirmedAmount: exactAmount, currency: z.string().regex(/^[A-Z]{3}$/),
++  reserveInstructionId: z.string().uuid(), reserveRequestId: reference,
++  reserveInstructionVersion: z.number().int().positive(), reserveInstructionHash: hash,
++  commercialAgreementId: z.string().uuid(), agreementVersion: z.number().int().positive(), agreementHash: hash,
++  payoutsApprovalRef: reference, reserveExecutionAttemptRef: reference,
++  reserveLedgerTransactionId: z.string().uuid(), brandProfileId: z.string().uuid(),
++  campaignId: z.string().uuid(), creatorProfileId: z.string().uuid(),
++}).strict();
++
++export type TrustedEscrowConfirmation = z.infer<typeof trustedEscrowConfirmationSchema>;
++
++const normalizedTuple = (input: TrustedEscrowConfirmation) => ({
++  confirmationType: "ESCROW_FUNDING", confirmationId: input.confirmationId,
++  collaborationId: input.collaborationId, reserveInstructionId: input.reserveInstructionId,
++  reserveRequestId: input.reserveRequestId, reserveInstructionVersion: input.reserveInstructionVersion,
++  reserveInstructionHash: input.reserveInstructionHash.toLowerCase(), commercialAgreementId: input.commercialAgreementId,
++  agreementVersion: input.agreementVersion, agreementHash: input.agreementHash.toLowerCase(),
++  payoutsApprovalRef: input.payoutsApprovalRef, reserveExecutionAttemptRef: input.reserveExecutionAttemptRef,
++  escrowLockId: input.escrowLockRef, reserveLedgerTransactionId: input.reserveLedgerTransactionId,
++  brandProfileId: input.brandProfileId, campaignId: input.campaignId, creatorProfileId: input.creatorProfileId,
++  confirmedAmount: new Prisma.Decimal(input.confirmedAmount).toFixed(4), currency: input.currency,
++  disposition: "COMPLETED_SUFFICIENT",
++});
++
++const sameTuple = (row: Record<string, any>, tuple: ReturnType<typeof normalizedTuple>) =>
++  Object.entries(tuple).every(([key, value]) => key === "confirmedAmount"
++    ? new Prisma.Decimal(row[key]).equals(new Prisma.Decimal(value)) : row[key] === value);
++
++/** The identity claim, domain projection and APPLIED transition share one transaction. */
+ @Injectable()
+ export class CollaborationTrustedConfirmationService {
+-  constructor(
+-    private readonly prisma: PrismaService,
+-    private readonly securement: CollaborationSecurementService,
+-  ) {}
++  constructor(private readonly prisma: PrismaService, private readonly securement: CollaborationSecurementService) {}
+ 
+-  async consumeEscrow(input: TrustedEscrowConfirmation) {
+-    if (!/^[a-f0-9]{64}$/i.test(input.bodyDigest)) {
+-      throw new ConflictException("Trusted confirmation digest is invalid");
+-    }
+-    const existing =
+-      await this.prisma.collaborationTrustedConfirmation.findUnique({
+-        where: {
+-          confirmationType_confirmationId: {
+-            confirmationType: "ESCROW_FUNDING",
+-            confirmationId: input.confirmationId,
+-          },
+-        },
+-      });
+-    if (existing) {
+-      if (
+-        existing.collaborationId !== input.collaborationId ||
+-        existing.bodyDigest !== input.bodyDigest
+-      ) {
+-        throw new ConflictException("Trusted confirmation identity was reused");
+-      }
+-      return { collaborationId: input.collaborationId, replayed: true };
+-    }
+-    const result = await this.securement.confirmEscrowFunding(
+-      { actorClass: "SYSTEM" },
+-      input.collaborationId,
+-      {
+-        commandId: `trusted:escrow:${input.confirmationId}`,
+-        expectedAggregateVersion: input.expectedAggregateVersion,
+-        fundingConfirmationRef: input.fundingConfirmationRef,
+-        escrowLockRef: input.escrowLockRef,
+-        confirmedAmount: input.confirmedAmount,
+-        currency: input.currency,
+-      },
+-    );
++  async consumeEscrow(raw: unknown) {
++    const input = trustedEscrowConfirmationSchema.parse(raw);
++    const tuple = normalizedTuple(input);
++    const digest = financialAuthorityHash(tuple).toLowerCase();
++    if (digest !== input.bodyDigest.toLowerCase())
++      throw new ConflictException("Trusted confirmation digest does not match its canonical tuple");
+     try {
+-      await this.prisma.collaborationTrustedConfirmation.create({
+-        data: {
+-          collaborationId: input.collaborationId,
+-          confirmationType: "ESCROW_FUNDING",
+-          confirmationId: input.confirmationId,
+-          bodyDigest: input.bodyDigest.toLowerCase(),
+-        },
++      const result = await this.prisma.$transaction(async (tx) => {
++        const claim = await tx.collaborationTrustedConfirmation.create({
++          data: { ...tuple, bodyDigest: digest, lineageMode: "CANONICAL_PAYOUTS_V1", applicationState: "CLAIMED" },
++        });
++        const applied = await this.securement.confirmEscrowFunding(
++          { actorClass: "SYSTEM" }, input.collaborationId,
++          { commandId: `trusted:escrow:${input.confirmationId}`, expectedAggregateVersion: input.expectedAggregateVersion,
++            fundingConfirmationRef: input.fundingConfirmationRef, escrowLockRef: input.escrowLockRef,
++            confirmedAmount: input.confirmedAmount, currency: input.currency }, tx,
++        );
++        await tx.collaborationTrustedConfirmation.update({ where: { id: claim.id }, data: { applicationState: "APPLIED" } });
++        return applied;
+       });
++      return { ...result, replayed: false };
+     } catch (error) {
+-      if (
+-        !(error instanceof Prisma.PrismaClientKnownRequestError) ||
+-        error.code !== "P2002"
+-      )
+-        throw error;
++      if (!(error instanceof Prisma.PrismaClientKnownRequestError) || error.code !== "P2002") throw error;
++      const winner = await this.prisma.collaborationTrustedConfirmation.findUnique({
++        where: { confirmationType_confirmationId: { confirmationType: "ESCROW_FUNDING", confirmationId: input.confirmationId } },
++      });
++      if (!winner || winner.applicationState !== "APPLIED" || winner.bodyDigest !== digest || !sameTuple(winner, tuple))
++        throw new ConflictException("Trusted confirmation identity was reused");
++      return { collaborationId: input.collaborationId, replayed: true };
+     }
+-    return { ...result, replayed: false };
+   }
+ }
+diff --git a/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts b/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts
+index db7d491..d9fa2f5 100644
+--- a/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts
++++ b/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts
+@@ -23,6 +23,8 @@ export async function appendFinancialAuthority(
+     resolutionType: string;
+     sourceFinancialRef: string;
+     effectiveAt: Date;
++    fundingConfirmationId?: string;
++    reserveInstructionId?: string;
+   },
+ ) {
+   if (!input.agreement.agreementHash) {
+@@ -66,6 +68,17 @@ export async function appendFinancialAuthority(
+       : []),
+   ];
+   for (const definition of definitions) {
++    const canonicalCreatorLineage =
++      definition.kind === "CREATOR_ENTITLEMENT" &&
++      input.resolutionType === "NORMAL_SUCCESS";
++    if (
++      canonicalCreatorLineage &&
++      (!input.fundingConfirmationId || !input.reserveInstructionId)
++    )
++      commandConflict(
++        "INVALID_STATE",
++        "Normal Creator entitlement requires exact protected-funding lineage",
++      );
+     const prior = await tx.collaborationFinancialAuthorityInstruction.findFirst(
+       {
+         where: {
+@@ -101,6 +114,12 @@ export async function appendFinancialAuthority(
+       sourceFinancialRef: input.sourceFinancialRef,
+       supersedesInstructionId: prior?.id ?? null,
+       effectiveAt: input.effectiveAt.toISOString(),
++      ...(canonicalCreatorLineage
++        ? {
++            fundingConfirmationId: input.fundingConfirmationId!,
++            reserveInstructionId: input.reserveInstructionId!,
++          }
++        : {}),
+     };
+     await tx.collaborationFinancialAuthorityInstruction.create({
+       data: {
+@@ -122,6 +141,15 @@ export async function appendFinancialAuthority(
+         sourceFinancialRef: input.sourceFinancialRef,
+         supersedesInstructionId: prior?.id,
+         effectiveAt: input.effectiveAt,
++        fundingLineageMode: canonicalCreatorLineage
++          ? "CANONICAL_PAYOUTS_V1"
++          : "LEGACY_UNRECONCILED",
++        fundingConfirmationId: canonicalCreatorLineage
++          ? input.fundingConfirmationId
++          : undefined,
++        reserveInstructionId: canonicalCreatorLineage
++          ? input.reserveInstructionId
++          : undefined,
+       },
+     });
+   }

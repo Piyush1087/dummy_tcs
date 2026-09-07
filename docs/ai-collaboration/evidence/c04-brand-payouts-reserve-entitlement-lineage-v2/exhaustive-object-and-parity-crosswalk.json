@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "prisma_visible": {
+    "enums": [
+      "CollaborationFundingLineageMode",
+      "CollaborationFundingConfirmationDisposition",
+      "CollaborationFundingConfirmationApplicationState"
+    ],
+    "columns": 22,
+    "foreign_keys": 9,
+    "relations": "modeled_bidirectionally",
+    "indexes": [
+      "c04_entitlement_confirmation_key",
+      "c04_lineage_ledger_key",
+      "c04_lineage_reserve_disposition_idx"
+    ]
+  },
+  "sql_only": {
+    "checks": [
+      "c04_confirmation_mode_tuple_ck",
+      "c04_payouts_refs_ck",
+      "c04_entitlement_lineage_tuple_ck"
+    ],
+    "partial_unique": [
+      "c04_one_completed_confirmation_per_reserve",
+      "c04_one_current_reserve_per_stream"
+    ],
+    "functions": [
+      "c04_validate_funding_lineage",
+      "c04_validate_entitlement_lineage",
+      "c04_serialize_reserve_instruction"
+    ],
+    "triggers": [
+      "c04_funding_lineage_validate",
+      "c04_entitlement_lineage_validate",
+      "c04_reserve_instruction_serialize_insert"
+    ],
+    "reason": "Prisma cannot model PostgreSQL CHECK, partial-index predicates, functions, triggers or advisory-lock behavior; all are additive migration-owned objects."
+  },
+  "migration_diff": "base-to-assembled datamodel enumerated all Prisma-visible columns, enums, FKs and indexes; no unexplained Prisma-visible FK drift",
+  "future_drift_policy": "SQL-only objects remain explicitly named and migration-owned; a future migration must preserve/recreate them."
+}

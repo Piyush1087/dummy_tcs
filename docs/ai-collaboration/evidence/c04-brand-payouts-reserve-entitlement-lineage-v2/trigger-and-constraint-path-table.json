@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "paths": [
+    {
+      "path": "trusted confirmation INSERT",
+      "guards": [
+        "mode tuple CHECK",
+        "bounded refs CHECK",
+        "unique identity",
+        "unique ledger",
+        "shared advisory lock",
+        "explicit collaboration=reserve",
+        "agreement/hash/version",
+        "lock/ledger/party/economics parity"
+      ],
+      "effect": "server observed_at; CLAIMED only"
+    },
+    {
+      "path": "trusted confirmation UPDATE",
+      "guards": [
+        "only CLAIMED→APPLIED",
+        "entire immutable tuple unchanged"
+      ],
+      "effect": "server lineage_applied_at"
+    },
+    {
+      "path": "trusted confirmation DELETE",
+      "guards": [
+        "always denied"
+      ],
+      "effect": "none"
+    },
+    {
+      "path": "reserve INSERT",
+      "guards": [
+        "shared advisory lock",
+        "one current stream",
+        "version 1/null predecessor or exact current predecessor/+1",
+        "no completed confirmation"
+      ],
+      "effect": "serialized currentness"
+    },
+    {
+      "path": "normal Creator entitlement INSERT",
+      "guards": [
+        "shared advisory lock",
+        "exact agreement/current reserve/APPLIED completed confirmation",
+        "lineage/hash parity"
+      ],
+      "effect": "canonical lineage accepted"
+    },
+    {
+      "path": "legacy/abnormal authority",
+      "guards": [
+        "lineage fields null"
+      ],
+      "effect": "legacy behavior preserved"
+    }
+  ],
+  "null_unknown_review": "Every canonical predicate uses IS NULL/IS DISTINCT FROM or positive equality inside explicit rejection branches; SQL UNKNOWN cannot make a partial tuple valid."
+}

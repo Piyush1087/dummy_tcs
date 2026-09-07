@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "lock": "pg_advisory_xact_lock(hashtextextended('c04-reserve:' || collaboration_id,0))",
+  "order": [
+    "acquire collaboration advisory lock",
+    "resolve exact agreement",
+    "lock/resolve current unsuperseded reserve",
+    "validate no APPLIED confirmation",
+    "write superseding reserve or claim/apply confirmation or emit entitlement"
+  ],
+  "deadlock_avoidance": "one key per operation; no second C04 reserve key is acquired",
+  "cases": [
+    [
+      "publication/publication",
+      "versions serialize; new row supersedes exact prior"
+    ],
+    [
+      "publication/confirmation",
+      "one serial result; completed reserve cannot be superseded"
+    ],
+    [
+      "publication/entitlement",
+      "one serial result; entitlement sees exact current reserve"
+    ],
+    [
+      "confirmation/entitlement",
+      "entitlement requires APPLIED confirmation"
+    ],
+    [
+      "completed/supersede",
+      "rejected"
+    ]
+  ]
+}
