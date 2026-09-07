@@ -1371,35 +1371,32 @@ files_changed:
   provider_evidence: []
 
 uncheckpointed_work:
-  phase: "C04_BP_EXACT_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION_PROPOSAL"
-  status: "C04_LINEAGE_PROPOSAL_COMPLETE_PENDING_HUMAN_APPROVAL"
+  phase: "C04_BP_EXACT_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION_PROPOSAL_V2"
+  status: "V1_NOT_APPROVED_BOUNDED_V2_CORRECTION_PENDING_EXTERNAL_LOCAL_CODEX"
   parent_approval: "APPROVE_C04_BOUNDED_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION"
-  class_c_evidence: "docs/ai-collaboration/brand-payouts-bp-g10-m1-v4-class-c-review.md"
-  class_c_evidence_sha: "a9977653c99bab9b5273e5f9cc0a0d44ca60c7b6"
-  class_c_blockers:
-    - "C04_NORMAL_CREATOR_ENTITLEMENT_HAS_NO_IMMUTABLE_RELATIONAL_LINK_TO_EXACT_RESERVE_INSTRUCTION_AND_AUTHORITATIVE_LOCK_CONFIRMATION"
-  correction_assignment: "docs/ai-collaboration/c04-brand-payouts-exact-reserve-entitlement-lineage-correction-proposal-runner-v1.md"
-  correction_assignment_sha: "80399efdf05595cbf0ee320ea1f6b0623612fdd7"
-  authorized_scope:
-    - "ONE_CONSOLIDATED_C04_RECONCILIATION_AND_PREFLIGHT"
-    - "EXACT_ADDITIVE_C04_MIGRATION_PROPOSAL"
-    - "EXACT_C04_RUNTIME_PATCH_PROPOSAL"
-    - "STATIC_CROSS_REVIEW"
-  prohibited_scope:
-    - "BACKEND_SOURCE_MUTATION"
-    - "MIGRATION_CREATION_IN_BACKEND_OR_APPLICATION"
-    - "DATABASE_MUTATION"
-    - "P4A_P4B_P5A"
-    - "PROVIDER_ACTION"
-    - "CANONICAL_MERGE"
-  m1_v1_to_v3: "NOT_APPROVED_SUPERSEDED"
-  m1_v4: "CLASS_C_SENTINEL_NO_EXECUTABLE_PROPOSAL"
-  proposal_evidence: "docs/ai-collaboration/c04-brand-payouts-reserve-entitlement-lineage-correction-proposal-v1.md"
-  independent_class_c_blockers: []
+  c04_sa_disposition: "NOT_APPROVED_BOUNDED_CORRECTION_REQUIRED"
+  v1_proposal_evidence_sha: "cdcab07a7e641aa88c38e4dfec113d26a1462f85"
+  v1_proposal_tree: "9fcb1042af8b03acc565705e1a04b0afd8ee544f"
+  v1_sql_sha256: "91d997ce8d618b165e7cbdd07ea08c103f8647931b6ffe29cc26c7380e81a7ba"
+  v1_runtime_patch_sha256: "86346e8b0e627d5ff1b00a3c52fc304555b432a27375c55e2a901a972c2e1723"
+  v1_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V2"
+  v2_correction_assignment: "docs/ai-collaboration/c04-brand-payouts-lineage-proposal-v2-bounded-correction-runner-v1.md"
+  v2_correction_assignment_sha: "c539f196dda0c0e7f7b588ea114cfa05332e2bba"
+  v2_complete_correction_register:
+    - "CONFIRMATION_IDENTITY_ATOMIC_CLAIM_BEFORE_DOMAIN_MUTATION"
+    - "FULL_NORMALIZED_IMMUTABLE_REPLAY_TUPLE"
+    - "DIGEST_DERIVATION_AND_EXACT_DECIMAL_INPUT"
+    - "CROSS_COLLABORATION_SUBSTITUTION_CLOSURE"
+    - "RESERVE_CURRENTNESS_AND_SUPERSESSION_SERIALIZATION"
+    - "ENTITLEMENT_SELECTION_LOCKING_AND_HASH_PERSISTENCE_PARITY"
+    - "BOUNDED_EXTERNAL_PAYOUTS_REFERENCES"
+    - "PRISMA_DDL_RELATIONAL_PARITY"
+    - "BEHAVIORAL_REPLAY_CONCURRENCY_AND_CRASH_TESTS"
   p4_base_status: "ACCEPTED_UNCHANGED"
   p4_base_sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
+  backend_source_changed: false
   migrations_created_or_applied: false
-  source_repositories_clean: true
+  postgres_ddl_applied: false
   provider_actions: []
 
 last_updated: "2026-09-07T07:30:00.000Z"
