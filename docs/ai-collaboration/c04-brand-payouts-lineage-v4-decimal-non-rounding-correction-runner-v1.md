@@ -29,7 +29,7 @@ immutability and migration property unchanged.
 - V3 evidence commit: `ce3865ca5adb17063df5ef59824a3a97dfc4ede8`
 - V3 evidence tree: `f8c4852a3cb84fa8d1ddb151608e2887571c21ca`
 - V3 SQL SHA-256: `dc288af4135c876576d6662a18b13649ec47e609f4372d229df639e2ecebc804`
-- V3 runtime patch SHA-256: `8cdf1280765d5ba48161abc7223fd6a073a2cc35c83aaa8d56df8da14aed0e4eed`
+- V3 runtime patch SHA-256: `8cdf1280765ba48161abc7223fd6a073a2cc35c83aaa8d56df8da14aed0e4eed`
 - V3 disposition: `SUPERSEDED_FOR_CONFIRMED_AMOUNT_DDL_ONLY`
 
 ## 3. Preserve completed evidence
