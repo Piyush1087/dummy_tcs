@@ -1,0 +1,20 @@
+{
+  "schema":"c04.brand-payouts.lineage.matrix/1",
+  "states":[
+    {"state":"RESERVE_REQUESTED","requires":"current REQUESTED instruction; no superseding row","next":"Payouts approval"},
+    {"state":"PAYOUTS_APPROVED","requires":"non-empty stable approval ref","next":"execution attempt"},
+    {"state":"RESERVE_EXECUTED","requires":"non-empty stable successful attempt ref; exact lock and cleared reserve ledger","next":"trusted confirmation"},
+    {"state":"CONFIRMED_SUFFICIENT","requires":"complete canonical tuple and exact economics","next":"normal entitlement","terminal":true},
+    {"state":"NORMAL_ENTITLEMENT","requires":"unique completed confirmation plus same current reserve/agreement/subject/economics","next":"Payouts obligation"}
+  ],
+  "replay":[
+    {"case":"same confirmation type/id/body/lineage","result":"same record and response"},
+    {"case":"same identity changed body","result":"conflict"},
+    {"case":"same approval/execution/ledger reused","result":"unique conflict"},
+    {"case":"superseded reserve","result":"reject"},
+    {"case":"duplicate entitlement confirmation","result":"unique conflict"},
+    {"case":"delayed duplicate","result":"stable replay"},
+    {"case":"out-of-order entitlement before confirmation","result":"FK/trigger reject"}
+  ],
+  "partialConfirmationPolicy":"NO_CANONICAL_PARTIAL_CONFIRMATION. Shortfall/retry history remains owned by Payouts approval attempts; C04 publishes only one authoritative completed-sufficient confirmation after exact durable reserve effect."
+}

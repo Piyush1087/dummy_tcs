@@ -1,0 +1,197 @@
+diff --git a/src/features/collaboration/c04-lineage-proposal.test.ts b/src/features/collaboration/c04-lineage-proposal.test.ts
+new file mode 100644
+index 0000000..a2e243a
+--- /dev/null
++++ b/src/features/collaboration/c04-lineage-proposal.test.ts
+@@ -0,0 +1,40 @@
++import { readFileSync } from "node:fs";
++import { join } from "node:path";
++import { describe, expect, it } from "vitest";
++
++describe("C04 protected-funding lineage proposal", () => {
++  const source = (path: string) =>
++    readFileSync(join(process.cwd(), path), "utf8");
++
++  it("makes canonical securement request-only for every Brand role", () => {
++    expect(
++      source(
++        "src/features/collaboration/services/collaboration-securement.service.ts",
++      ),
++    ).toContain('agreement.paymentRail === "PLATFORM_ESCROW"');
++  });
++
++  it("persists exact reserve, approval, execution, lock and ledger lineage", () => {
++    const confirmation = source(
++      "src/features/collaboration/services/collaboration-trusted-confirmation.service.ts",
++    );
++    for (const field of [
++      "reserveInstructionId",
++      "reserveInstructionHash",
++      "payoutsApprovalRef",
++      "reserveExecutionAttemptRef",
++      "escrowLockId",
++      "reserveLedgerTransactionId",
++    ])
++      expect(confirmation).toContain(field);
++  });
++
++  it("binds normal entitlement hashing and persistence to exact lineage", () => {
++    const authority = source(
++      "src/features/collaboration/utils/collaboration-financial-authority.persistence.ts",
++    );
++    expect(authority).toContain("fundingConfirmationId");
++    expect(authority).toContain("reserveInstructionId");
++    expect(authority).toContain("CANONICAL_PAYOUTS_V1");
++  });
++});
+diff --git a/src/features/collaboration/services/collaboration-securement.service.ts b/src/features/collaboration/services/collaboration-securement.service.ts
+index f2587f8..9c3d70c 100644
+--- a/src/features/collaboration/services/collaboration-securement.service.ts
++++ b/src/features/collaboration/services/collaboration-securement.service.ts
+@@ -233,6 +233,8 @@ export class CollaborationSecurementService {
+         },
+       });
+       if (
++        (row.authorityVersion === "CANONICAL_V1" &&
++          agreement.paymentRail === "PLATFORM_ESCROW") ||
+         this.brandWorkspace.isFinancialReadOnly(brandContext.membership.role)
+       ) {
+         const version = row.aggregateVersion + 1;
+diff --git a/src/features/collaboration/services/collaboration-settlement.service.ts b/src/features/collaboration/services/collaboration-settlement.service.ts
+index 548a7a9..6b413d6 100644
+--- a/src/features/collaboration/services/collaboration-settlement.service.ts
++++ b/src/features/collaboration/services/collaboration-settlement.service.ts
+@@ -137,6 +137,7 @@ export class CollaborationSettlementService {
+         resolutionType: "NORMAL_SUCCESS",
+         sourceFinancialRef: resolutionRecord.id,
+         effectiveAt: now,
++        ...(await this.requireExactProtectedFundingLineage(tx, row.id)),
+       });
+       await this.bump(tx, row);
+       await appendCommandEvent(tx, {
+@@ -571,6 +572,33 @@ export class CollaborationSettlementService {
+     return resolution;
+   }
+ 
++  private async requireExactProtectedFundingLineage(
++    tx: Prisma.TransactionClient,
++    collaborationId: string,
++  ) {
++    const rows = await tx.collaborationTrustedConfirmation.findMany({
++      where: {
++        collaborationId,
++        confirmationType: "ESCROW_FUNDING",
++        lineageMode: "CANONICAL_PAYOUTS_V1",
++        disposition: "COMPLETED_SUFFICIENT",
++        reserveInstruction: { supersededBy: { none: {} }, status: "REQUESTED" },
++      },
++      select: { id: true, reserveInstructionId: true },
++      take: 2,
++    });
++    if (rows.length !== 1 || !rows[0].reserveInstructionId) {
++      commandConflict(
++        "INVALID_STATE",
++        "Exactly one current protected-funding lineage is required",
++      );
++    }
++    return {
++      fundingConfirmationId: rows[0].id,
++      reserveInstructionId: rows[0].reserveInstructionId,
++    };
++  }
++
+   private async ensureEligibleSettlement(
+     tx: Prisma.TransactionClient,
+     row: SettlementRow,
+diff --git a/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts b/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts
+index eea3f64..3217794 100644
+--- a/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts
++++ b/src/features/collaboration/services/collaboration-trusted-confirmation.service.ts
+@@ -13,6 +13,19 @@ export type TrustedEscrowConfirmation = {
+   escrowLockRef: string;
+   confirmedAmount: number;
+   currency: string;
++  reserveInstructionId: string;
++  reserveRequestId: string;
++  reserveInstructionVersion: number;
++  reserveInstructionHash: string;
++  commercialAgreementId: string;
++  agreementVersion: number;
++  agreementHash: string;
++  payoutsApprovalRef: string;
++  reserveExecutionAttemptRef: string;
++  reserveLedgerTransactionId: string;
++  brandProfileId: string;
++  campaignId: string;
++  creatorProfileId: string;
+ };
+ 
+ /** Provider-neutral boundary. Provider request bodies never cross this service. */
+@@ -64,6 +77,25 @@ export class CollaborationTrustedConfirmationService {
+           confirmationType: "ESCROW_FUNDING",
+           confirmationId: input.confirmationId,
+           bodyDigest: input.bodyDigest.toLowerCase(),
++          lineageMode: "CANONICAL_PAYOUTS_V1",
++          reserveInstructionId: input.reserveInstructionId,
++          reserveRequestId: input.reserveRequestId,
++          reserveInstructionVersion: input.reserveInstructionVersion,
++          reserveInstructionHash: input.reserveInstructionHash,
++          commercialAgreementId: input.commercialAgreementId,
++          agreementVersion: input.agreementVersion,
++          agreementHash: input.agreementHash,
++          payoutsApprovalRef: input.payoutsApprovalRef,
++          reserveExecutionAttemptRef: input.reserveExecutionAttemptRef,
++          escrowLockId: input.escrowLockRef,
++          reserveLedgerTransactionId: input.reserveLedgerTransactionId,
++          brandProfileId: input.brandProfileId,
++          campaignId: input.campaignId,
++          creatorProfileId: input.creatorProfileId,
++          confirmedAmount: input.confirmedAmount,
++          currency: input.currency,
++          disposition: "COMPLETED_SUFFICIENT",
++          observedAt: new Date(),
+         },
+       });
+     } catch (error) {
+diff --git a/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts b/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts
+index db7d491..4e5cf65 100644
+--- a/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts
++++ b/src/features/collaboration/utils/collaboration-financial-authority.persistence.ts
+@@ -23,6 +23,8 @@ export async function appendFinancialAuthority(
+     resolutionType: string;
+     sourceFinancialRef: string;
+     effectiveAt: Date;
++    fundingConfirmationId?: string;
++    reserveInstructionId?: string;
+   },
+ ) {
+   if (!input.agreement.agreementHash) {
+@@ -101,6 +103,8 @@ export async function appendFinancialAuthority(
+       sourceFinancialRef: input.sourceFinancialRef,
+       supersedesInstructionId: prior?.id ?? null,
+       effectiveAt: input.effectiveAt.toISOString(),
++      fundingConfirmationId: input.fundingConfirmationId ?? null,
++      reserveInstructionId: input.reserveInstructionId ?? null,
+     };
+     await tx.collaborationFinancialAuthorityInstruction.create({
+       data: {
+@@ -122,6 +126,19 @@ export async function appendFinancialAuthority(
+         sourceFinancialRef: input.sourceFinancialRef,
+         supersedesInstructionId: prior?.id,
+         effectiveAt: input.effectiveAt,
++        fundingLineageMode:
++          definition.kind === "CREATOR_ENTITLEMENT" &&
++          input.resolutionType === "NORMAL_SUCCESS"
++            ? "CANONICAL_PAYOUTS_V1"
++            : "LEGACY_UNRECONCILED",
++        fundingConfirmationId:
++          definition.kind === "CREATOR_ENTITLEMENT"
++            ? input.fundingConfirmationId
++            : undefined,
++        reserveInstructionId:
++          definition.kind === "CREATOR_ENTITLEMENT"
++            ? input.reserveInstructionId
++            : undefined,
+       },
+     });
+   }

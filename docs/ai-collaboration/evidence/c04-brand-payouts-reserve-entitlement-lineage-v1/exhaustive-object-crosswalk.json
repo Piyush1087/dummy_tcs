@@ -1,0 +1,19 @@
+{
+  "schema":"c04.brand-payouts.lineage.crosswalk/1",
+  "base":{"sha":"fc4d4b59e2a44d7ddced6bc5dde5119c501ec275","tree":"083c52dc06c19a23f47491935b472ee5e62bd1c5","migrations":84},
+  "enums":[
+    {"name":"CollaborationFundingLineageMode","values":["LEGACY_UNRECONCILED","CANONICAL_PAYOUTS_V1"]},
+    {"name":"CollaborationFundingConfirmationDisposition","values":["COMPLETED_SUFFICIENT"]}
+  ],
+  "trustedConfirmationFields":["lineage_mode","reserve_instruction_id","reserve_request_id","reserve_instruction_version","reserve_instruction_hash","commercial_agreement_id","agreement_version","agreement_hash","payouts_approval_ref","reserve_execution_attempt_ref","escrow_lock_id","reserve_ledger_transaction_id","brand_profile_id","campaign_id","creator_profile_id","confirmed_amount","currency","disposition","observed_at"],
+  "authorityFields":["funding_lineage_mode","funding_confirmation_id","reserve_instruction_id"],
+  "foreignKeys":["reserve_instruction","commercial_agreement","escrow_lock","reserve_ledger_transaction","brand_profile","campaign","creator_profile","entitlement_confirmation","entitlement_reserve"],
+  "uniques":["one completed confirmation per reserve","approval ref","execution ref","reserve ledger transaction","one entitlement per confirmation"],
+  "indexes":["reserve plus disposition plus applied time","entitlement reserve plus kind plus version"],
+  "checks":["mode-complete trusted-confirmation tuple","mode-complete normal-entitlement tuple"],
+  "functions":["c04_validate_funding_lineage","c04_validate_entitlement_lineage"],
+  "triggers":["funding lineage insert validation","funding lineage update/delete denial","entitlement lineage insert/update/delete guard"],
+  "runtime":["canonical request-only branch","expanded trusted input/persistence","exact current lineage resolution","lineage in authority hash and persistence","targeted architecture tests"],
+  "ownership":{"C04":"reserve instruction, trusted confirmation, entitlement authority","Payouts":"opaque immutable approval and execution refs","canonicalEscrow":"lock, vault, ledger","database":"FK, uniqueness, tuple and semantic triggers","application":"aggregate command transaction and replay response"},
+  "legacy":"nullable columns plus explicit LEGACY_UNRECONCILED; no backfill; canonical Collaboration confirmation writes fail closed"
+}

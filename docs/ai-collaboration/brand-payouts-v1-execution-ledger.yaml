@@ -1372,7 +1372,7 @@ files_changed:
 
 uncheckpointed_work:
   phase: "C04_BP_EXACT_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION_PROPOSAL"
-  status: "PARENT_AUTHORIZED_PENDING_EXTERNAL_LOCAL_CODEX"
+  status: "C04_LINEAGE_PROPOSAL_COMPLETE_PENDING_HUMAN_APPROVAL"
   parent_approval: "APPROVE_C04_BOUNDED_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION"
   class_c_evidence: "docs/ai-collaboration/brand-payouts-bp-g10-m1-v4-class-c-review.md"
   class_c_evidence_sha: "a9977653c99bab9b5273e5f9cc0a0d44ca60c7b6"
@@ -1394,10 +1394,12 @@ uncheckpointed_work:
     - "CANONICAL_MERGE"
   m1_v1_to_v3: "NOT_APPROVED_SUPERSEDED"
   m1_v4: "CLASS_C_SENTINEL_NO_EXECUTABLE_PROPOSAL"
+  proposal_evidence: "docs/ai-collaboration/c04-brand-payouts-reserve-entitlement-lineage-correction-proposal-v1.md"
+  independent_class_c_blockers: []
   p4_base_status: "ACCEPTED_UNCHANGED"
   p4_base_sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
   migrations_created_or_applied: false
   source_repositories_clean: true
   provider_actions: []
 
-last_updated: "2026-09-07T06:30:00.000Z"
+last_updated: "2026-09-07T07:30:00.000Z"

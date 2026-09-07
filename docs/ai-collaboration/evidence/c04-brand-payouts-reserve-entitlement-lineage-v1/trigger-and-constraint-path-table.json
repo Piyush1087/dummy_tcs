@@ -1,0 +1,17 @@
+{
+  "schema":"c04.brand-payouts.lineage.paths/1",
+  "paths":[
+    {"table":"trusted confirmations","operation":"INSERT legacy","allowed":"only noncanonical/legacy authority","enforcement":"trigger plus all-null CHECK"},
+    {"table":"trusted confirmations","operation":"INSERT canonical","allowed":"complete exact current reserve/agreement/subject/lock/vault/ledger/economics tuple","enforcement":"FK + CHECK + trigger + unique"},
+    {"table":"trusted confirmations","operation":"UPDATE/DELETE","allowed":false,"enforcement":"append-only trigger"},
+    {"table":"financial authority","operation":"INSERT normal creator entitlement","allowed":"complete unique completed confirmation/current reserve lineage","enforcement":"CHECK + FK + trigger"},
+    {"table":"financial authority","operation":"INSERT refund/abnormal/recovery","allowed":"legacy lineage mode; not Payouts normal path","enforcement":"kind/effect tuple"},
+    {"table":"financial authority","operation":"UPDATE lineage/DELETE","allowed":false,"enforcement":"immutability trigger"}
+  ],
+  "unknownSafety":[
+    {"check":"confirmation mode tuple","nullable":"all lineage fields","rule":"explicit legacy all-null OR canonical all-required; UNKNOWN cannot satisfy either branch"},
+    {"check":"entitlement mode tuple","nullable":"confirmation/reserve IDs","rule":"explicit legacy both-null OR canonical both-required"}
+  ],
+  "lockOrder":["reserve instruction","agreement","lock","ledger","vault","confirmation unique identity"],
+  "collisionReview":"No matching c04_lineage object names exist in the immutable 84-migration prefix."
+}

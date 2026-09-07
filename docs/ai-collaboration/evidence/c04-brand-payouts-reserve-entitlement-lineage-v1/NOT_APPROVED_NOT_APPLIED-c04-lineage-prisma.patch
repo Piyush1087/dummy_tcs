@@ -1,0 +1,229 @@
+diff --git a/prisma/schema.prisma b/prisma/schema.prisma
+index ad4be0e..0d4f98c 100644
+--- a/prisma/schema.prisma
++++ b/prisma/schema.prisma
+@@ -3987,6 +3987,15 @@ enum CollaborationAuthorityVersion {
+   CANONICAL_V1
+ }
+ 
++enum CollaborationFundingLineageMode {
++  LEGACY_UNRECONCILED
++  CANONICAL_PAYOUTS_V1
++}
++
++enum CollaborationFundingConfirmationDisposition {
++  COMPLETED_SUFFICIENT
++}
++
+ enum CollaborationLifecycle {
+   ACTIVE
+   PAUSED
+@@ -4297,6 +4306,7 @@ model CollaborationCommercialAgreement {
+   campaignPaymentTermSnapshot       UcePayoutTerms?                              @map("campaign_payment_term_snapshot")
+   reserveInstructions               CollaborationReserveInstruction[]
+   financialAuthorityInstructions    CollaborationFinancialAuthorityInstruction[]
++  trustedFundingConfirmations       CollaborationTrustedConfirmation[]
+ 
+   @@index([negotiationState])
+   @@index([securementState])
+@@ -4305,31 +4315,33 @@ model CollaborationCommercialAgreement {
+ }
+ 
+ model CollaborationReserveInstruction {
+-  id                          String                            @id @default(uuid())
+-  requestId                   String                            @unique @map("request_id")
+-  collaborationId             String                            @map("collaboration_id")
+-  collaboration               Collaboration                     @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+-  commercialAgreementId       String                            @map("commercial_agreement_id")
+-  commercialAgreement         CollaborationCommercialAgreement  @relation(fields: [commercialAgreementId], references: [id], onDelete: Restrict)
+-  agreementVersion            Int                               @map("agreement_version")
+-  agreementHash               String                            @map("agreement_hash") @db.Char(64)
+-  instructionVersion          Int                               @map("instruction_version")
+-  instructionHash             String                            @map("instruction_hash") @db.Char(64)
+-  brandProfileId              String                            @map("brand_profile_id")
+-  campaignId                  String                            @map("campaign_id")
+-  creatorProfileId            String                            @map("creator_profile_id")
+-  currency                    String                            @db.VarChar(3)
+-  creatorFee                  Decimal                           @map("creator_fee") @db.Decimal(14, 2)
+-  platformCommissionAmount    Decimal                           @map("platform_commission_amount") @db.Decimal(14, 2)
+-  platformCommissionGstAmount Decimal                           @map("platform_commission_gst_amount") @db.Decimal(14, 2)
+-  reserveAmount               Decimal                           @map("reserve_amount") @db.Decimal(14, 2)
+-  requestedByUserId           String                            @map("requested_by_user_id")
+-  requestedAt                 DateTime                          @default(now()) @map("requested_at")
+-  status                      String                            @db.VarChar(40)
+-  idempotencyKey              String                            @map("idempotency_key")
+-  supersedesInstructionId     String?                           @map("supersedes_instruction_id")
+-  supersedesInstruction       CollaborationReserveInstruction?  @relation("ReserveInstructionSupersession", fields: [supersedesInstructionId], references: [id], onDelete: Restrict)
+-  supersededBy                CollaborationReserveInstruction[] @relation("ReserveInstructionSupersession")
++  id                             String                                       @id @default(uuid())
++  requestId                      String                                       @unique @map("request_id")
++  collaborationId                String                                       @map("collaboration_id")
++  collaboration                  Collaboration                                @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
++  commercialAgreementId          String                                       @map("commercial_agreement_id")
++  commercialAgreement            CollaborationCommercialAgreement             @relation(fields: [commercialAgreementId], references: [id], onDelete: Restrict)
++  agreementVersion               Int                                          @map("agreement_version")
++  agreementHash                  String                                       @map("agreement_hash") @db.Char(64)
++  instructionVersion             Int                                          @map("instruction_version")
++  instructionHash                String                                       @map("instruction_hash") @db.Char(64)
++  brandProfileId                 String                                       @map("brand_profile_id")
++  campaignId                     String                                       @map("campaign_id")
++  creatorProfileId               String                                       @map("creator_profile_id")
++  currency                       String                                       @db.VarChar(3)
++  creatorFee                     Decimal                                      @map("creator_fee") @db.Decimal(14, 2)
++  platformCommissionAmount       Decimal                                      @map("platform_commission_amount") @db.Decimal(14, 2)
++  platformCommissionGstAmount    Decimal                                      @map("platform_commission_gst_amount") @db.Decimal(14, 2)
++  reserveAmount                  Decimal                                      @map("reserve_amount") @db.Decimal(14, 2)
++  requestedByUserId              String                                       @map("requested_by_user_id")
++  requestedAt                    DateTime                                     @default(now()) @map("requested_at")
++  status                         String                                       @db.VarChar(40)
++  idempotencyKey                 String                                       @map("idempotency_key")
++  supersedesInstructionId        String?                                      @map("supersedes_instruction_id")
++  supersedesInstruction          CollaborationReserveInstruction?             @relation("ReserveInstructionSupersession", fields: [supersedesInstructionId], references: [id], onDelete: Restrict)
++  supersededBy                   CollaborationReserveInstruction[]            @relation("ReserveInstructionSupersession")
++  trustedFundingConfirmations    CollaborationTrustedConfirmation[]
++  financialAuthorityInstructions CollaborationFinancialAuthorityInstruction[]
+ 
+   @@unique([collaborationId, instructionVersion], map: "c04_reserve_collab_version_key")
+   @@unique([collaborationId, idempotencyKey], map: "c04_reserve_collab_idempotency_key")
+@@ -4362,6 +4374,11 @@ model CollaborationFinancialAuthorityInstruction {
+   supersededBy             CollaborationFinancialAuthorityInstruction[] @relation("FinancialAuthoritySupersession")
+   effectiveAt              DateTime                                     @map("effective_at")
+   createdAt                DateTime                                     @default(now()) @map("created_at")
++  fundingLineageMode       CollaborationFundingLineageMode              @default(LEGACY_UNRECONCILED) @map("funding_lineage_mode")
++  fundingConfirmationId    String?                                      @unique(map: "c04_entitlement_confirmation_key") @map("funding_confirmation_id")
++  fundingConfirmation      CollaborationTrustedConfirmation?            @relation(fields: [fundingConfirmationId], references: [id], onDelete: Restrict, onUpdate: Restrict)
++  reserveInstructionId     String?                                      @map("reserve_instruction_id")
++  reserveInstruction       CollaborationReserveInstruction?             @relation(fields: [reserveInstructionId], references: [id], onDelete: Restrict, onUpdate: Restrict)
+ 
+   @@unique([collaborationId, kind, instructionVersion], map: "c04_financial_collab_kind_version_key")
+   @@index([commercialAgreementId], map: "c04_financial_agreement_idx")
+@@ -4674,16 +4691,41 @@ model CollaborationProjectionOutbox {
+ }
+ 
+ model CollaborationTrustedConfirmation {
+-  id               String        @id @default(uuid())
+-  collaborationId  String        @map("collaboration_id")
+-  collaboration    Collaboration @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
+-  confirmationId   String        @map("confirmation_id")
+-  confirmationType String        @map("confirmation_type") @db.VarChar(80)
+-  bodyDigest       String        @map("body_digest") @db.Char(64)
+-  appliedAt        DateTime      @default(now()) @map("applied_at")
++  id                             String                                       @id @default(uuid())
++  collaborationId                String                                       @map("collaboration_id")
++  collaboration                  Collaboration                                @relation(fields: [collaborationId], references: [id], onDelete: Cascade)
++  confirmationId                 String                                       @map("confirmation_id")
++  confirmationType               String                                       @map("confirmation_type") @db.VarChar(80)
++  bodyDigest                     String                                       @map("body_digest") @db.Char(64)
++  appliedAt                      DateTime                                     @default(now()) @map("applied_at")
++  lineageMode                    CollaborationFundingLineageMode              @default(LEGACY_UNRECONCILED) @map("lineage_mode")
++  reserveInstructionId           String?                                      @map("reserve_instruction_id")
++  reserveInstruction             CollaborationReserveInstruction?             @relation(fields: [reserveInstructionId], references: [id], onDelete: Restrict, onUpdate: Restrict)
++  reserveRequestId               String?                                      @map("reserve_request_id")
++  reserveInstructionVersion      Int?                                         @map("reserve_instruction_version")
++  reserveInstructionHash         String?                                      @map("reserve_instruction_hash") @db.Char(64)
++  commercialAgreementId          String?                                      @map("commercial_agreement_id")
++  commercialAgreement            CollaborationCommercialAgreement?            @relation(fields: [commercialAgreementId], references: [id], onDelete: Restrict, onUpdate: Restrict)
++  agreementVersion               Int?                                         @map("agreement_version")
++  agreementHash                  String?                                      @map("agreement_hash") @db.Char(64)
++  payoutsApprovalRef             String?                                      @map("payouts_approval_ref")
++  reserveExecutionAttemptRef     String?                                      @map("reserve_execution_attempt_ref")
++  escrowLockId                   String?                                      @map("escrow_lock_id")
++  escrowLock                     CollaborationEscrowLock?                     @relation(fields: [escrowLockId], references: [id], onDelete: Restrict, onUpdate: Restrict)
++  reserveLedgerTransactionId     String?                                      @unique(map: "c04_lineage_ledger_key") @map("reserve_ledger_transaction_id")
++  reserveLedgerTransaction       EscrowTransactionLedger?                     @relation(fields: [reserveLedgerTransactionId], references: [id], onDelete: Restrict, onUpdate: Restrict)
++  brandProfileId                 String?                                      @map("brand_profile_id")
++  campaignId                     String?                                      @map("campaign_id")
++  creatorProfileId               String?                                      @map("creator_profile_id")
++  confirmedAmount                Decimal?                                     @map("confirmed_amount") @db.Decimal(15, 4)
++  currency                       String?                                      @db.VarChar(3)
++  disposition                    CollaborationFundingConfirmationDisposition?
++  observedAt                     DateTime?                                    @map("observed_at")
++  financialAuthorityInstructions CollaborationFinancialAuthorityInstruction[]
+ 
+   @@unique([confirmationType, confirmationId])
+   @@index([collaborationId, appliedAt])
++  @@index([reserveInstructionId, disposition, appliedAt], map: "c04_lineage_reserve_disposition_idx")
+   @@map("collaboration_trusted_confirmations")
+ }
+ 
+@@ -4921,22 +4963,23 @@ model CollaborationFundingLotAllocation {
+ }
+ 
+ model CollaborationEscrowLock {
+-  id                      String        @id @default(uuid()) @map("lock_id")
+-  collaborationId         String        @unique @map("collaboration_id")
+-  collaboration           Collaboration @relation(fields: [collaborationId], references: [id], onDelete: Restrict)
+-  brandProfileId          String        @map("brand_id")
+-  grossCreatorQuote       Decimal       @map("gross_creator_quote") @db.Decimal(15, 4)
+-  platformCommissionFee   Decimal       @map("platform_commission_fee") @db.Decimal(15, 4)
+-  platformCommissionGst   Decimal       @default(0) @map("platform_commission_gst") @db.Decimal(15, 4)
+-  totalEscrowLockedAmount Decimal       @map("total_escrow_locked_amount") @db.Decimal(15, 4)
+-  expectedTdsPercentage   Decimal       @default(0) @map("expected_tds_percentage") @db.Decimal(4, 2)
+-  calculatedTdsDeduction  Decimal       @default(0) @map("calculated_tds_deduction") @db.Decimal(15, 4)
+-  netCreatorPayoutPool    Decimal       @map("net_creator_payout_pool") @db.Decimal(15, 4)
+-  advanceTrancheDisbursed Boolean       @default(false) @map("advance_tranche_disbursed")
+-  finalTrancheDisbursed   Boolean       @default(false) @map("final_tranche_disbursed")
+-  lockReleasedViaRefund   Boolean       @default(false) @map("lock_released_via_refund")
+-  createdAt               DateTime      @default(now()) @map("created_at")
+-  updatedAt               DateTime      @updatedAt @map("updated_at")
++  id                          String                             @id @default(uuid()) @map("lock_id")
++  collaborationId             String                             @unique @map("collaboration_id")
++  collaboration               Collaboration                      @relation(fields: [collaborationId], references: [id], onDelete: Restrict)
++  brandProfileId              String                             @map("brand_id")
++  grossCreatorQuote           Decimal                            @map("gross_creator_quote") @db.Decimal(15, 4)
++  platformCommissionFee       Decimal                            @map("platform_commission_fee") @db.Decimal(15, 4)
++  platformCommissionGst       Decimal                            @default(0) @map("platform_commission_gst") @db.Decimal(15, 4)
++  totalEscrowLockedAmount     Decimal                            @map("total_escrow_locked_amount") @db.Decimal(15, 4)
++  expectedTdsPercentage       Decimal                            @default(0) @map("expected_tds_percentage") @db.Decimal(4, 2)
++  calculatedTdsDeduction      Decimal                            @default(0) @map("calculated_tds_deduction") @db.Decimal(15, 4)
++  netCreatorPayoutPool        Decimal                            @map("net_creator_payout_pool") @db.Decimal(15, 4)
++  advanceTrancheDisbursed     Boolean                            @default(false) @map("advance_tranche_disbursed")
++  finalTrancheDisbursed       Boolean                            @default(false) @map("final_tranche_disbursed")
++  lockReleasedViaRefund       Boolean                            @default(false) @map("lock_released_via_refund")
++  createdAt                   DateTime                           @default(now()) @map("created_at")
++  updatedAt                   DateTime                           @updatedAt @map("updated_at")
++  trustedFundingConfirmations CollaborationTrustedConfirmation[]
+ 
+   @@index([collaborationId])
+   @@index([brandProfileId])
+@@ -4944,23 +4987,24 @@ model CollaborationEscrowLock {
+ }
+ 
+ model EscrowTransactionLedger {
+-  id                         String                          @id @default(uuid()) @map("transaction_id")
+-  vaultId                    String                          @map("vault_id")
+-  vault                      BrandEscrowVault                @relation(fields: [vaultId], references: [id], onDelete: Restrict)
+-  brandProfileId             String                          @map("brand_id")
+-  collaborationId            String?                         @map("collaboration_id")
+-  transactionType            EscrowTransactionType           @map("transaction_type")
+-  payoutTrancheTarget        EscrowPayoutTranche?            @map("payout_tranche_target")
+-  amount                     Decimal                         @db.Decimal(15, 4)
+-  currency                   String                          @db.VarChar(3)
+-  gatewayProcessingSurcharge Decimal                         @default(0) @map("gateway_processing_surcharge") @db.Decimal(15, 4)
+-  gatewaySurchargeGst        Decimal                         @default(0) @map("gateway_surcharge_gst") @db.Decimal(15, 4)
+-  idempotencyKey             String                          @unique @map("idempotency_key")
+-  gatewayReferenceId         String?                         @unique @map("gateway_reference_id")
+-  transactionStatus          EscrowTransactionStatus         @default(PROCESSING_GATEWAY) @map("transaction_status")
+-  errorDiagnosticPayload     Json?                           @map("error_diagnostic_payload")
+-  createdAt                  DateTime                        @default(now()) @map("created_at")
++  id                         String                            @id @default(uuid()) @map("transaction_id")
++  vaultId                    String                            @map("vault_id")
++  vault                      BrandEscrowVault                  @relation(fields: [vaultId], references: [id], onDelete: Restrict)
++  brandProfileId             String                            @map("brand_id")
++  collaborationId            String?                           @map("collaboration_id")
++  transactionType            EscrowTransactionType             @map("transaction_type")
++  payoutTrancheTarget        EscrowPayoutTranche?              @map("payout_tranche_target")
++  amount                     Decimal                           @db.Decimal(15, 4)
++  currency                   String                            @db.VarChar(3)
++  gatewayProcessingSurcharge Decimal                           @default(0) @map("gateway_processing_surcharge") @db.Decimal(15, 4)
++  gatewaySurchargeGst        Decimal                           @default(0) @map("gateway_surcharge_gst") @db.Decimal(15, 4)
++  idempotencyKey             String                            @unique @map("idempotency_key")
++  gatewayReferenceId         String?                           @unique @map("gateway_reference_id")
++  transactionStatus          EscrowTransactionStatus           @default(PROCESSING_GATEWAY) @map("transaction_status")
++  errorDiagnosticPayload     Json?                             @map("error_diagnostic_payload")
++  createdAt                  DateTime                          @default(now()) @map("created_at")
+   refundInstruction          CollaborationRefundInstruction?
++  trustedFundingConfirmation CollaborationTrustedConfirmation?
+ 
+   @@index([vaultId])
+   @@index([brandProfileId, collaborationId, transactionType])

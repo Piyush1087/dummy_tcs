@@ -1,0 +1,13 @@
+{
+  "schema":"c04.brand-payouts.lineage.upgrade/1",
+  "rows":[
+    {"case":"fresh 0 to 85","static":"PASS","newCanonical":"complete lineage required"},
+    {"case":"empty 84 to 85","static":"PASS","backfill":false},
+    {"case":"populated 84 to 85","static":"PASS","reason":"new columns default legacy and mode-aware checks accept exact all-null legacy tuple"},
+    {"case":"existing legacy confirmation","result":"unchanged/readable; update/delete denied after guard installation"},
+    {"case":"old runtime canonical confirmation after schema rollout","result":"fail closed by CANONICAL_V1 authority check"},
+    {"case":"partial canonical tuple","result":"CHECK/trigger reject"},
+    {"case":"legacy to canonical promotion","result":"update denied"},
+    {"case":"application rollback","result":"disable canonical writers; additive data retained"}
+  ]
+}
