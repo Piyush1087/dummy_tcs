@@ -1371,24 +1371,33 @@ files_changed:
   provider_evidence: []
 
 uncheckpointed_work:
-  phase: "BP_G10_M1_V4_APPROVAL_GRADE_RECONCILIATION"
-  status: "CLASS_C_BLOCKED_UPSTREAM_C04_EXACT_RESERVE_ENTITLEMENT_LINEAGE_REQUIRED"
-  evidence: "docs/ai-collaboration/brand-payouts-bp-g10-m1-v4-class-c-review.md"
-  v2_disposition: "NOT_APPROVED_SUPERSEDED"
-  v3_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V4"
-  v3_evidence_sha: "e14657b250cb4324bd2e1785ac67f6c8aecdf098"
-  v3_sql_sha256: "352a866d9bb094b4a256ab3bc5612c51bbf6efd6f1ce8b6e218ffdfe94b861d7"
-  superseded_correction_assignment_sha: "63fb3faadaea77055d66113568bfe41c8b54daf2"
-  correction_assignment_sha: "c230ad2c4dda66afb0b813413e2ba8e7f4fc5fe4"
-  reconciliation_register: "R1_TO_R18_COMPLETE"
-  reconciliation_result: "CLASS_C"
+  phase: "C04_BP_EXACT_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION_PROPOSAL"
+  status: "PARENT_AUTHORIZED_PENDING_EXTERNAL_LOCAL_CODEX"
+  parent_approval: "APPROVE_C04_BOUNDED_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION"
+  class_c_evidence: "docs/ai-collaboration/brand-payouts-bp-g10-m1-v4-class-c-review.md"
+  class_c_evidence_sha: "a9977653c99bab9b5273e5f9cc0a0d44ca60c7b6"
   class_c_blockers:
     - "C04_NORMAL_CREATOR_ENTITLEMENT_HAS_NO_IMMUTABLE_RELATIONAL_LINK_TO_EXACT_RESERVE_INSTRUCTION_AND_AUTHORITATIVE_LOCK_CONFIRMATION"
-  m1_v4_executable_sql: false
-  m1_v4_prisma_patch: false
+  correction_assignment: "docs/ai-collaboration/c04-brand-payouts-exact-reserve-entitlement-lineage-correction-proposal-runner-v1.md"
+  correction_assignment_sha: "80399efdf05595cbf0ee320ea1f6b0623612fdd7"
+  authorized_scope:
+    - "ONE_CONSOLIDATED_C04_RECONCILIATION_AND_PREFLIGHT"
+    - "EXACT_ADDITIVE_C04_MIGRATION_PROPOSAL"
+    - "EXACT_C04_RUNTIME_PATCH_PROPOSAL"
+    - "STATIC_CROSS_REVIEW"
+  prohibited_scope:
+    - "BACKEND_SOURCE_MUTATION"
+    - "MIGRATION_CREATION_IN_BACKEND_OR_APPLICATION"
+    - "DATABASE_MUTATION"
+    - "P4A_P4B_P5A"
+    - "PROVIDER_ACTION"
+    - "CANONICAL_MERGE"
+  m1_v1_to_v3: "NOT_APPROVED_SUPERSEDED"
+  m1_v4: "CLASS_C_SENTINEL_NO_EXECUTABLE_PROPOSAL"
   p4_base_status: "ACCEPTED_UNCHANGED"
-  source_repositories_clean: true
+  p4_base_sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
   migrations_created_or_applied: false
+  source_repositories_clean: true
   provider_actions: []
 
-last_updated: "2026-09-07T05:00:00.000Z"
+last_updated: "2026-09-07T06:30:00.000Z"
