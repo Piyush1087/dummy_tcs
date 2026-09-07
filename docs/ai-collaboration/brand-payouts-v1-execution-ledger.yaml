@@ -1371,32 +1371,32 @@ files_changed:
   provider_evidence: []
 
 uncheckpointed_work:
-  phase: "C04_BP_EXACT_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION_PROPOSAL_V2"
-  status: "V1_NOT_APPROVED_BOUNDED_V2_CORRECTION_PENDING_EXTERNAL_LOCAL_CODEX"
+  phase: "C04_BP_EXACT_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION_PROPOSAL_V3"
+  status: "V2_NOT_APPROVED_FINAL_CONSOLIDATED_V3_CORRECTION_PENDING_EXTERNAL_LOCAL_CODEX"
   parent_approval: "APPROVE_C04_BOUNDED_RESERVE_ENTITLEMENT_LINEAGE_CORRECTION"
-  c04_sa_disposition: "NOT_APPROVED_BOUNDED_CORRECTION_REQUIRED"
   v1_proposal_evidence_sha: "cdcab07a7e641aa88c38e4dfec113d26a1462f85"
-  v1_proposal_tree: "9fcb1042af8b03acc565705e1a04b0afd8ee544f"
-  v1_sql_sha256: "91d997ce8d618b165e7cbdd07ea08c103f8647931b6ffe29cc26c7380e81a7ba"
-  v1_runtime_patch_sha256: "86346e8b0e627d5ff1b00a3c52fc304555b432a27375c55e2a901a972c2e1723"
-  v1_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V2"
-  v2_correction_assignment: "docs/ai-collaboration/c04-brand-payouts-lineage-proposal-v2-bounded-correction-runner-v1.md"
-  v2_correction_assignment_sha: "c539f196dda0c0e7f7b588ea114cfa05332e2bba"
-  v2_complete_correction_register:
-    - "CONFIRMATION_IDENTITY_ATOMIC_CLAIM_BEFORE_DOMAIN_MUTATION"
-    - "FULL_NORMALIZED_IMMUTABLE_REPLAY_TUPLE"
-    - "DIGEST_DERIVATION_AND_EXACT_DECIMAL_INPUT"
-    - "CROSS_COLLABORATION_SUBSTITUTION_CLOSURE"
-    - "RESERVE_CURRENTNESS_AND_SUPERSESSION_SERIALIZATION"
-    - "ENTITLEMENT_SELECTION_LOCKING_AND_HASH_PERSISTENCE_PARITY"
-    - "BOUNDED_EXTERNAL_PAYOUTS_REFERENCES"
-    - "PRISMA_DDL_RELATIONAL_PARITY"
-    - "BEHAVIORAL_REPLAY_CONCURRENCY_AND_CRASH_TESTS"
+  v2_proposal_evidence_sha: "95278dbbe33a925e5b852344aeb03d362d32a9e9"
+  v2_proposal_tree: "dac6b21ddb3dd9575fc4f15a75c68051011b5468"
+  v2_sql_sha256: "e17dc0cb62e861225b23a9d1a45576d01792feb90b109d4064352cdc301e2627"
+  v2_runtime_patch_sha256: "dc8be828b120792b172864a92e954115286a29716c62c380598f74c7e928ba82"
+  v2_disposition: "NOT_APPROVED_SUPERSEDED_PENDING_V3"
+  v3_correction_assignment: "docs/ai-collaboration/c04-brand-payouts-lineage-proposal-v3-final-approval-correction-runner-v1.md"
+  v3_correction_assignment_sha: "f0e28d687691f21c7da2177cc538ba36895d7ea8"
+  v3_complete_residual_register:
+    - "FUNDING_CONFIRMATION_REFERENCE_INCLUDED_IN_MUTATION_REPLAY_IDENTITY"
+    - "NO_COMMITTED_ORPHAN_CLAIM_OR_FALSE_APPLIED_DIRECT_SQL"
+    - "EXPLICIT_MIGRATION_ATOMICITY"
+    - "RUNTIME_DDL_REFERENCE_FORMAT_PARITY"
+    - "NON_NARROWING_AMOUNT_PRECISION_SCALE_PARITY"
+    - "CANONICAL_RESERVE_AND_ENTITLEMENT_IMMUTABILITY"
+    - "ENTITLEMENT_HASH_RECONSTRUCTION"
+    - "P2002_CONFLICT_CLASSIFICATION"
+    - "EXACT_POST_COMMIT_REALTIME"
+    - "APPROVAL_GRADE_BEHAVIORAL_TESTS"
   p4_base_status: "ACCEPTED_UNCHANGED"
   p4_base_sha: "5dc9eef4923ae383b94b36cbf9bbb632b1b84cf1"
-  backend_source_changed: false
   migrations_created_or_applied: false
-  postgres_ddl_applied: false
+  source_repositories_clean: true
   provider_actions: []
 
-last_updated: "2026-09-07T07:30:00.000Z"
+last_updated: "2026-09-07T08:00:00.000Z"
