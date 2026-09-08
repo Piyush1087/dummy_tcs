@@ -3,7 +3,7 @@
 **Architecture authority repo:** `Piyush1087/dummy_tcs`  
 **Branch:** `freeze/mvp-canonical-application-v1`  
 **Charter:** `docs/organization/charters/canonical_application_freeze_ai_worker_charter.md`  
-**Status:** ACTIVE — not `PASS — MVP_CANONICAL_APPLICATION_FREEZE_V1`
+**Status:** ACTIVE — `MVP_CANONICAL_APPLICATION_FREEZE_V1` written, **not** `PASS`
 
 This folder is the program-level freeze package. Each charter phase has its own folder and files. Do not reconstruct this work from chat.
 
@@ -25,6 +25,7 @@ This folder is the program-level freeze package. Each charter phase has its own 
 | `16-external-providers/` | §16 | External dependency register (names only) |
 | `17-environment/` | §17 | Environment/configuration manifest (names only) |
 | `18-validation/` | §18 | Whole-application validation evidence |
+| `MVP_CANONICAL_APPLICATION_FREEZE_V1.md` | §20 | Single freeze artifact (not PASS) |
 | `deferred/` | Parent lock | Accepted-elsewhere modules not pulled |
 | `out-of-mvp/` | Parent lock | Marketplace, Co-Pilot, C-06, Centre |
 
