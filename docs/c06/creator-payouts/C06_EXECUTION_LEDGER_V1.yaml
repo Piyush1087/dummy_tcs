@@ -129,3 +129,20 @@ recovery_runs:
       push_fetchback: PASS
       backend_worktree: CLEAN
       next_phase: P3
+    P3:
+      result: PASS
+      correction_count: 0
+      backend_sha: e9d71162b5d4720a2df3f58d69b4c4a5ce14f2de
+      backend_tree: 29413efa484119593cab63149944e8de94fdf8bb
+      focused_tests: "3 files passed; 24 tests passed; 0 failed"
+      c05_method_states: "7/7 PASS"
+      history_sources: "obligations, transfer attempts, reconciled receipts, settlement ledger, processed reversals"
+      no_history_table: PASS
+      pii_secret_denylist: PASS
+      changed_scope_lint: PASS
+      backend_build: PASS
+      c06_writes: 0
+      provider_method_actions: 0
+      push_fetchback: PASS
+      backend_worktree: CLEAN
+      next_phase: P4
