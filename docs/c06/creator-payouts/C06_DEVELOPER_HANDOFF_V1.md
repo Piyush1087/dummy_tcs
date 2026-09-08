@@ -3,8 +3,18 @@
 ## Status and integration boundary
 
 ```text
-IMPLEMENTATION_RESULT = READY_FOR_SA_FINAL_ACCEPTANCE
-C06_ACCEPTED = NO — SA FINAL ACCEPTANCE DECISION PENDING
+IMPLEMENTATION_RESULT =
+ACCEPTED_CREATOR_PAYOUT_PROVIDER_DISABLED
+
+C06_ACCEPTED =
+YES
+
+FINAL_ACCEPTANCE =
+C06_FINAL_ACCEPTANCE_V1
+
+NEXT_AUTHORIZED_BOUNDARY =
+DEVELOPER_INTEGRATION
+
 DEPLOYMENT = NOT_PERFORMED
 DEVELOPMENT_MERGE = NOT_PERFORMED
 ```
@@ -45,4 +55,4 @@ Final evidence records passing PostgreSQL 16 UTC financial-source tests, backend
 
 The historical P0 and P6 circuit-breaker evidence must remain in history. Those failures were resolved by separately authorized recovery runs and must not be rewritten or deleted.
 
-Only the C06 Systems Architect may issue final acceptance or authorize downstream integration.
+Final technical acceptance was issued by the Cloud C06 Systems Architect and is recorded in `C06_FINAL_ACCEPTANCE_V1.md`. The next authorized boundary is developer integration only.

@@ -10,10 +10,29 @@
 - P1–P5 phase evidence: the five phase-specific files under `evidence/`.
 - Historical P6 stop: `evidence/C06_P6_CIRCUIT_BREAKER_EVIDENCE_V1.md`.
 - Final consolidated result: `C06_FINAL_EXECUTION_REPORT_V1.md`.
+- Final SA acceptance: `C06_FINAL_ACCEPTANCE_V1.md`.
 - Machine-readable chronology: `C06_EXECUTION_LEDGER_V1.yaml`.
 - Integration boundary: `C06_DEVELOPER_HANDOFF_V1.md`.
 
 The circuit-breaker files are immutable historical observations. The final report and the appended `final_recovery` ledger section record the later authorized resolution.
+
+## Canonical authority chain
+
+```text
+Frozen Product/Architecture Authority
+→ execution and recovery evidence
+→ P7 evidence SHA cf7d7c3e12242add773b50f5b8ee96df662ca6d2
+→ C06_FINAL_ACCEPTANCE_V1.md
+```
+
+```text
+HISTORICAL_CIRCUIT_BREAKERS =
+PRESERVED
+RESOLVED
+NOT_CURRENT_BLOCKERS
+```
+
+The final acceptance artifact records the SA decision already issued outside Codex. It closes C06 implementation authority for the provider-disabled scope and advances only to developer integration.
 
 ## Implementation checkpoints
 

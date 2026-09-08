@@ -285,3 +285,35 @@ recovery_runs:
     P7:
       result: NOT_RUN
       reason: P6_REPEATED_GATE_FAILURE
+
+sa_acceptance_closeout:
+  record_type: EXTERNAL_SA_DECISION_ALREADY_ISSUED
+  recorded_by_codex_as_new_acceptance_decision: false
+  result: C06_ACCEPTED
+  acceptance_scope: CREATOR_PAYOUT_PROVIDER_DISABLED_ONLY
+  final_acceptance_artifact: C06_FINAL_ACCEPTANCE_V1.md
+  execution_evidence_sha: cf7d7c3e12242add773b50f5b8ee96df662ca6d2
+  backend_sha: 071272891041a0cf187f549c3ed82bba5dcbbb79
+  backend_tree: dc1c01ec3479fb3f14cb698e1e88aaa56db5ef66
+  frontend_sha: 7f72252fb5cd31f69da9ea59aa9ff81080ac4896
+  frontend_tree: c066d0ea3d3ce3842e097d385a657050c38d10e6
+  migrations_total: 86
+  c06_owned_migrations: 0
+  new_persistence: NONE
+  new_creator_ledger: false
+  new_financial_hash: false
+  c06_financial_writes: 0
+  dead_legacy_creator_payouts_service: DELETED_AND_ACCEPTED
+  creator_entry_dependency: REMOVED_AND_ACCEPTED
+  provider: DISABLED
+  provider_credentials: NONE
+  provider_method_actions: 0
+  razorpay_calls: 0
+  external_financial_network_calls: 0
+  kyc: NOT_C06_SCOPE
+  implementation_blockers: NONE
+  historical_circuit_breakers: PRESERVED_AND_RESOLVED
+  development_merge: NOT_PERFORMED
+  deployment: NOT_PERFORMED
+  next_authorized_boundary: DEVELOPER_INTEGRATION_ONLY
+  c06_implementation_authority: CLOSED

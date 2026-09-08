@@ -93,3 +93,15 @@ EXTERNAL_FINANCIAL_NETWORK_CALLS = ZERO
 ```
 
 No deployment or merge to `development` occurred. Final acceptance remains reserved to the C06 Systems Architect.
+
+## Subsequent SA disposition
+
+```text
+SUBSEQUENT_SA_DISPOSITION =
+C06_ACCEPTED
+
+SEE =
+C06_FINAL_ACCEPTANCE_V1.md
+```
+
+This note records the later SA decision without rewriting this runner report's historical result.
