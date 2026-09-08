@@ -62,3 +62,38 @@ provider:
   razorpay_calls: 0
   external_financial_network_calls: 0
 
+recovery_runs:
+  - run_id: C06_LOCAL_CODEX_P0_ENVIRONMENT_RECOVERY_RUNNER_V1_2026-09-08
+    authority_disposition: C06_SA_CIRCUIT_BREAKER_DISPOSITION_V1
+    mode: FRESH_ENVIRONMENT_PREFLIGHT_THEN_FRESH_P0
+    result: P0_PASS
+    last_updated: 2026-09-08T13:48:00+05:30
+    r0:
+      result: PASS
+      correction_count: 0
+      node: v20.20.2
+      npm: 10.8.2
+      docker_server: 29.7.2
+      postgresql: 16.15
+      timezone: UTC
+      database: c06_recovery
+      loopback_port: 55406
+      provider_credentials: NONE
+    P0:
+      result: PASS
+      correction_count: 1
+      correction: "Extended the initial readiness probe while the documented OpenSSL package was still installing in the already-running backend container."
+      backend_merge_sha: c4e4aa552bba09092fc1b3c25e5cbf95ef9ea73e
+      backend_validation_sha: 6c7612450ddf033a5ce44be761a4b37b05703eb7
+      frontend_merge_sha: 056f91af89eb35db6841e29194464ec93bcff241
+      migrations: 86
+      migration_86_sha256: 887e5bb6bd262a4dd02e42a798db55bd136d97bf6a923df7e6466573f11d1f84
+      backend_tests: "8 files passed; 68 tests passed; 5 skipped"
+      frontend_tests: "5 files passed; 47 tests passed"
+      backend_build: PASS
+      frontend_build: PASS
+      startup_smoke: PASS
+      api_smoke: PASS
+      backend_worktree: CLEAN
+      frontend_worktree: CLEAN
+      next_phase: P1
