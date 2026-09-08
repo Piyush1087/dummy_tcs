@@ -176,3 +176,33 @@ recovery_runs:
       push_fetchback: PASS
       frontend_worktree: CLEAN
       next_phase: P6
+    P6:
+      result: CIRCUIT_BREAKER
+      circuit_breaker: REPEATED_GATE_FAILURE
+      correction_count: 2
+      backend_head: e9d71162b5d4720a2df3f58d69b4c4a5ce14f2de
+      frontend_head: 108f0d58ddf3b9bde0a1d3b1d97442e5ff4a954c
+      postgres_16_utc: PASS
+      fresh_0_to_86: PASS
+      populated_85_to_86: PASS
+      migration_count: 86
+      migration_86_sha256: 887e5bb6bd262a4dd02e42a798db55bd136d97bf6a923df7e6466573f11d1f84
+      live_backend_tests: "4 files passed; 25 tests passed; 0 failed"
+      backend_full_suite: "213 files passed; 59 skipped; 6338 tests passed; 781 skipped; 0 failed"
+      frontend_terminal_suite: "127 files passed; 2 failed; 1030 tests passed; 2 failed"
+      frontend_failures:
+        - src/features/creator-onboarding/creator-entry-architecture.test.ts
+        - src/features/creator-onboarding/creator-settings-guard-scope.test.ts
+      backend_build: PASS
+      frontend_build: PASS
+      browser_widths: "390/767/768/1440 PASS; no horizontal overflow"
+      axe: SERIOUS_0_CRITICAL_0
+      browser_console_errors: 0
+      backend_push: NONE
+      frontend_push: NONE
+      backend_worktree: DIRTY_PRESERVED_FAILURE_EVIDENCE
+      frontend_worktree: DIRTY_PRESERVED_FAILURE_EVIDENCE
+      next_authorized_boundary: SA_REVIEW_ONLY
+    P7:
+      result: NOT_RUN
+      reason: P6_REPEATED_GATE_FAILURE
