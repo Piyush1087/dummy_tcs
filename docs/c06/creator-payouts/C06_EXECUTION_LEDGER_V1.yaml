@@ -97,3 +97,18 @@ recovery_runs:
       backend_worktree: CLEAN
       frontend_worktree: CLEAN
       next_phase: P1
+    P1:
+      result: PASS
+      correction_count: 0
+      backend_sha: def87a45a549f400ca94087924874b9ef763a3a9
+      backend_tree: 6d484f4cf9e20ea20ffde01b7a1c67e584952216
+      focused_tests: "3 files passed; 31 tests passed; 0 failed"
+      changed_scope_lint: PASS
+      backend_build: PASS
+      provider_credentials: NONE
+      provider_method_actions: 0
+      razorpay_calls: 0
+      external_financial_network_calls: 0
+      push_fetchback: PASS
+      backend_worktree: CLEAN
+      next_phase: P2
