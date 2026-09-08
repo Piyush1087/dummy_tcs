@@ -112,3 +112,20 @@ recovery_runs:
       push_fetchback: PASS
       backend_worktree: CLEAN
       next_phase: P2
+    P2:
+      result: PASS
+      correction_count: 0
+      backend_sha: 3e513d90486bbb7a2a24080d031ebe28539eaa3f
+      backend_tree: b37ad1b7373959b82581a5b9c6ee1b942a619140
+      focused_tests: "2 files passed; 15 tests passed; 0 failed"
+      net_due_boundaries: PASS
+      mixed_currency: PASS
+      summary_predicate_priority: PASS
+      changed_scope_lint: PASS
+      backend_build: PASS
+      database_writes: 0
+      provider_method_actions: 0
+      external_financial_network_calls: 0
+      push_fetchback: PASS
+      backend_worktree: CLEAN
+      next_phase: P3
