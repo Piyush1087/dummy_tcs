@@ -146,3 +146,17 @@ recovery_runs:
       push_fetchback: PASS
       backend_worktree: CLEAN
       next_phase: P4
+    P4:
+      result: PASS
+      correction_count: 0
+      frontend_sha: 5908235d98b4a9ef078c853079ddfa4913e5a5ab
+      frontend_tree: 736ff8f390d57e46ae4d453d038b196b3a9bc17f
+      focused_tests: "1 file passed; 4 tests passed; 0 failed"
+      typecheck: PASS
+      changed_scope_lint: PASS
+      frontend_build: PASS
+      build_advisory: "inherited chunk-size warning"
+      c06_write_methods: 0
+      push_fetchback: PASS
+      frontend_worktree: CLEAN
+      next_phase: P5
