@@ -2,9 +2,9 @@ run_id: C06_LOCAL_CODEX_SUPERFAST_EXECUTION_RUNNER_V1_2026-09-08
 authority_sha: 2d13f3973d5613839f29976be54491696e1b202a
 planning_handoff_sha: a6701bd7982d6a95cae15ef7499337583361a669
 mode: AUTONOMOUS_RUN_WITH_GATES
-result: CIRCUIT_BREAKER
-stop_reason: REPEATED_GATE_FAILURE
-last_updated: 2026-09-08T12:42:42.7438798+05:30
+result: READY_FOR_SA_FINAL_ACCEPTANCE
+stop_reason: null
+last_updated: 2026-09-09T00:08:14.1263954+05:30
 environment:
   os: Windows
   shell: PowerShell
@@ -61,6 +61,85 @@ provider:
   method_actions: 0
   razorpay_calls: 0
   external_financial_network_calls: 0
+
+final_recovery:
+  run_id: C06_P6_FORMAT_ONLY_LINT_RECOVERY_AND_P7_DURABLE_CLOSEOUT_RUNNER_V1_2026-09-09
+  result: READY_FOR_SA_FINAL_ACCEPTANCE
+  authority_before_sha: 0b7e5adcf0f4fb3ff3a8bc6079f20100d235df5e
+  historical_circuit_breakers_preserved:
+    - C06_P0_CIRCUIT_BREAKER_EVIDENCE_V1
+    - C06_P6_CIRCUIT_BREAKER_EVIDENCE_V1
+  P6:
+    result: COMPLETE
+    correction_count: 1
+    correction_scope: LINE_ENDING_NORMALIZATION_ONLY
+    formatting_target: src/features/creator-entry/creator-instagram-connection.architecture.test.ts
+    pre_format_raw_sha256: 54bad71715ccd3dbff7890159502c42e7c3f6a3e907f51cbaad5265dd6e010ab
+    post_format_raw_sha256: feadf11686bdeedd8bc34acc6e9a7e601920caf18f50f720b3e4d43dff38f529
+    pre_format_normalized_sha256: 6f513f76a9c33bd8337758148ba3996528c21821e71d7ece2458f0c3040fb3ca
+    post_format_normalized_sha256: 6f513f76a9c33bd8337758148ba3996528c21821e71d7ece2458f0c3040fb3ca
+    normalized_content_unchanged: true
+    only_line_endings_changed: true
+    exact_architecture_test: "1 file passed; 5 tests passed; 0 failed"
+    exact_file_lint: "0 errors; 0 warnings"
+    backend_changed_scope_lint: "0 errors; 0 warnings"
+    git_diff_check: PASS
+    safety_scan:
+      real_credential_signatures: 0
+      runtime_pii_denylist_hits: 0
+      provider_secret_hits: 0
+    reused_evidence:
+      targeted_http_cluster: "3 files passed; 28 tests passed; 0 failed"
+      backend_focused: "4 files passed; 29 tests passed; 0 failed"
+      postgresql_focused: "PASS; PostgreSQL 16 UTC"
+      frontend_focused: "4 files passed; 33 tests passed; 0 failed"
+      backend_build: PASS
+      backend_startup_api_smoke: PASS
+      backend_full_suite: "213 files passed; 59 skipped; 6338 tests passed; 781 skipped; 0 failed"
+      frontend_full_suite: "129 files passed; 1032 tests passed; 0 failed"
+      frontend_changed_scope_lint: PASS
+      browser: "390/767/768/1440 PASS; responsive, roles, states, drawer/focus"
+      axe: SERIOUS_0_CRITICAL_0
+      provider_network_deny: PASS
+    environment_observations:
+      postgresql_container_initial_state: "STOPPED; bounded recovery succeeded"
+      backend_cold_start: "Exceeded initial 45-second probe; subsequent startup succeeded"
+      http_loopback_tests: "Stable with explicit 30000ms boundary"
+    backend:
+      branch: c06/creator-payouts-provider-disabled-v1
+      starting_sha: e9d71162b5d4720a2df3f58d69b4c4a5ce14f2de
+      final_sha: 071272891041a0cf187f549c3ed82bba5dcbbb79
+      final_tree: dc1c01ec3479fb3f14cb698e1e88aaa56db5ef66
+      push_fetchback: PASS
+      worktree: CLEAN
+      dead_legacy_creator_payouts_service: DELETED
+      dead_legacy_service_references: 0
+      creator_entry_module_dependency: REMOVED
+      creator_platform_access_guard_from_c06: REMOVED
+      explicit_http_test_timeouts:
+        - src/features/campaign-applications/application-contract.test.ts
+        - src/features/campaign-applications/creator-brief-pack.test.ts
+    frontend:
+      branch: c06/creator-payouts-provider-disabled-v1
+      starting_sha: 108f0d58ddf3b9bde0a1d3b1d97442e5ff4a954c
+      final_sha: 7f72252fb5cd31f69da9ea59aa9ff81080ac4896
+      final_tree: c066d0ea3d3ce3842e097d385a657050c38d10e6
+      push_fetchback: PASS
+      worktree: CLEAN
+    invariants:
+      c06_writes: 0
+      migrations_total: 86
+      c06_owned_migrations: 0
+      new_persistence: NONE
+      new_creator_ledger: false
+      new_financial_hash: false
+      provider_credentials: NONE
+      provider_method_actions: 0
+      razorpay_calls: 0
+      external_financial_network_calls: 0
+  P7:
+    result: COMPLETE_PENDING_AUTHORITY_CHECKPOINT
+    next_authorized_boundary: SA_FINAL_ACCEPTANCE_REVIEW
 
 recovery_runs:
   - run_id: C06_LOCAL_CODEX_P0_ENVIRONMENT_RECOVERY_RUNNER_V1_2026-09-08
