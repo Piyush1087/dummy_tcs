@@ -1,0 +1,64 @@
+run_id: C06_LOCAL_CODEX_SUPERFAST_EXECUTION_RUNNER_V1_2026-09-08
+authority_sha: 2d13f3973d5613839f29976be54491696e1b202a
+planning_handoff_sha: a6701bd7982d6a95cae15ef7499337583361a669
+mode: AUTONOMOUS_RUN_WITH_GATES
+result: CIRCUIT_BREAKER
+stop_reason: REPEATED_GATE_FAILURE
+last_updated: 2026-09-08T12:42:42.7438798+05:30
+environment:
+  os: Windows
+  shell: PowerShell
+  node: v24.19.0
+  timezone: Asia/Calcutta
+  database_target: disposable PostgreSQL 16 UTC
+  database_started: false
+phases:
+  P0:
+    result: C06_P0_CONVERGENCE_CIRCUIT_BREAKER
+    next_phase: NONE
+    correction_count: 3
+    last_failure: "Backend startup smoke could not connect to disposable PostgreSQL at 127.0.0.1:59999 after the phase correction budget had been exhausted."
+    backend:
+      repository: Piyush1087/creator-commerce-backend-v2-clone
+      branch: c06/creator-payouts-provider-disabled-v1
+      starting_sha: 4e082f67953f0d6b55fa791f2cea03c8aef28119
+      donor_sha: a38102fd9662f1654c9572b19913b9e228385b73
+      merge_base: ec395bf5760b295dddd9c3f7e9c2f05485b6b743
+      local_merge_sha: defc98bc5a00b0765f8fff1f1f6412d64130367a
+      local_merge_tree: dba5c6436b7c426ad004b8479541ab9906ecbc3a
+      merge_parents:
+        - 4e082f67953f0d6b55fa791f2cea03c8aef28119
+        - a38102fd9662f1654c9572b19913b9e228385b73
+      pushed: false
+      worktree: DIRTY_UNCOMMITTED_P0_TEST_CORRECTION
+    frontend:
+      repository: Piyush1087/creator-commerce-frontend-v2-clone
+      branch: c06/creator-payouts-provider-disabled-v1
+      starting_sha: 29e78397fc66676d0134c45aa0bb6af173fbe12b
+      donor_sha: 25441dd4fd228bec4d6c9fe9f39c2297318b6167
+      merge_base: 323658d4b147b95b5629ff8d91fa90b8fe9077e4
+      local_merge_sha: b450ca5327e4d7d44ca6c3596d15efbe0899eaa6
+      local_merge_tree: a7cab1a9b266ac286b7ae26420dfb1f88a229427
+      merge_parents:
+        - 29e78397fc66676d0134c45aa0bb6af173fbe12b
+        - 25441dd4fd228bec4d6c9fe9f39c2297318b6167
+      pushed: false
+      worktree: CLEAN
+  P1: { result: NOT_RUN }
+  P2: { result: NOT_RUN }
+  P3: { result: NOT_RUN }
+  P4: { result: NOT_RUN }
+  P5: { result: NOT_RUN }
+  P6: { result: NOT_RUN }
+  P7: { result: NOT_RUN }
+migrations:
+  total: 86
+  c06_owned: 0
+  migration_86: 20260912100000_brand_payouts_wave_b_normal_path
+  migration_86_sha256: 887e5bb6bd262a4dd02e42a798db55bd136d97bf6a923df7e6466573f11d1f84
+provider:
+  credentials: NONE
+  method_actions: 0
+  razorpay_calls: 0
+  external_financial_network_calls: 0
+
