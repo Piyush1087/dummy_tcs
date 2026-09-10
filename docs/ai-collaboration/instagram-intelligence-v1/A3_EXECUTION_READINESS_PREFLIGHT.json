@@ -1,0 +1,42 @@
+{
+  "packet": "A3",
+  "result": "CIRCUIT_BREAKER",
+  "executedAt": "2026-09-10T20:15:00Z",
+  "startingAuthority": {
+    "authority": { "sha": "026c0d2217b1417a068bde62d4acb7c2ac7990c2", "tree": "65f435820aec1f68e9e9b51d6684442e8d4b4b70" },
+    "backend": { "sha": "978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da", "tree": "18c02098e75aac53696269f8b443f930c8adb514" },
+    "frontend": { "sha": "249de1a2fcaeffa013dbeb9d042f7387f8d3f972", "tree": "a8e3a5937e4001997736d0c05a0e06f1c99b7d1b" }
+  },
+  "checks": [
+    { "id": "git_worktrees", "result": "PASS", "proof": "Three isolated worktrees clean at entry; no destructive Git operation." },
+    { "id": "exact_refs", "result": "PASS", "proof": "Fetch succeeded; exact SHA/tree anchors unchanged; authority/backend are two accepted commits ahead of freeze and frontend equals freeze." },
+    { "id": "branch_push_model", "result": "FAIL", "proof": "Normal non-force publication was attempted once. Backend publication was cancelled by execution policy; frontend failed because no GitHub username/credential was available. Read-only ls-remote found neither remote packet branch." },
+    { "id": "node_package_tooling", "result": "FAIL", "proof": "Node v24.19.0, npm 11.9.0 and package-lock.json discovered. Frontend npm ci passed. Backend dependency graph, Prisma generation and build passed, but immutable npm ci completion could not be independently recorded after network approval cancellation. Repositories declare no engines/packageManager/.nvmrc/.node-version pin." },
+    { "id": "docker", "result": "FAIL", "proof": "docker, podman and nerdctl are absent after two bounded fallback checks." },
+    { "id": "postgresql", "result": "FAIL", "proof": "No disposable PostgreSQL can run: Docker and native psql/postgres/initdb/pg_ctl are absent." },
+    { "id": "migrations", "result": "FAIL", "proof": "Prisma Client 6.19.3 generation passed. Accepted migration head is 20260910122000_c03_application_handoff_notifications. Apply and migrate-status proof are blocked by unavailable PostgreSQL." },
+    { "id": "fixtures", "result": "PASS", "proof": "Deterministic account, image, carousel, Reel, full/partial/unavailable audience, authorization/transient error and two-account fixtures added and tested." },
+    { "id": "provider_neutral_di", "result": "PASS", "proof": "InstagramGraphClient is replaced at one Nest provider token; fixture smoke made no network/provider call." },
+    { "id": "backend_boot_health", "result": "FAIL", "proof": "Build passed. Boot attempts fail closed on required runtime configuration before listen; database health additionally cannot pass without PostgreSQL. No provider call occurred." },
+    { "id": "frontend_preview", "result": "FAIL", "proof": "135 test files/1076 tests passed; direct Vite bundle and HTTP preview returned 200. Declared npm run build fails at frozen CampaignDetailWorkspace.tsx:135 because PUBLIC_ROUTES is undefined." },
+    { "id": "authenticated_browser", "result": "FAIL", "proof": "No installed Chromium/Chrome browser binary and no runnable authenticated browser harness." },
+    { "id": "viewports", "result": "FAIL", "proof": "390, 767, 768 and desktop browser runs cannot execute without a browser binary/harness." },
+    { "id": "axe", "result": "FAIL", "proof": "No Axe dependency/harness and no browser binary." },
+    { "id": "role_action_authority", "result": "PASS", "proof": "Parent-frozen Instagram manual refresh contract test passed: BRAND_OWNER ALLOW, CAMPAIGN_MANAGER ALLOW, FINANCE_ADMIN DENY_READ_ONLY. Existing Brand Centre membership read authority remains shared; browser role proof remains blocked separately." },
+    { "id": "secret_scan", "result": "PASS", "proof": "Changed fixtures/tests and evidence contain no recognized token, private-key, signed-URL, or dotenv material; no values were recorded." },
+    { "id": "meta_runtime_configuration", "result": "PASS", "proof": "Names only discovered: INSTAGRAM_API_ID, INSTAGRAM_APP_SECRET, INSTAGRAM_GRAPH_VERSION, CREATOR_INSTAGRAM_REDIRECT_URI, SETTINGS_FIELD_ENCRYPTION_KEY, PUBLIC_API_BASE_URL, APP_FRONTEND_URL, CORS_ORIGINS. No value requested, printed or committed." },
+    { "id": "live_smoke", "result": "OPTIONAL_NOT_RUN", "proof": "Provider-neutral proof was sufficient; no live credential or Meta mutation was used." },
+    { "id": "push_fetch_back", "result": "FAIL", "proof": "Normal push capability unavailable; therefore remote fetch-back SHA/tree equality cannot be proven." }
+  ],
+  "correctionCycles": {
+    "environment": 2,
+    "result": "NO_PERMITTED_LOCAL_FALLBACK",
+    "attempts": ["Docker-to-native PostgreSQL fallback discovery", "system/browser/package binary and credential capability recheck"]
+  },
+  "localCheckpoint": {
+    "backendSha": "396c9ad96766fec957be68ab64589e89e70e77fb",
+    "backendTree": "6a35db9d580a1b6f9a0775371f3368bdd60a871d"
+  },
+  "nextPacket": "PROHIBITED",
+  "servicesAfterRun": "STOPPED"
+}

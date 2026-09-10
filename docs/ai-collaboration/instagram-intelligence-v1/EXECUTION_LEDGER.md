@@ -4,15 +4,15 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = A2
+CURRENT_PACKET = A3_CIRCUIT_BREAKER
 ```
 
 ## Repository authority
 
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
-| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | A2 checkpoint and machine registry ready for Child-SA review |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | A2 additive contracts plus DE A2/B1 boundary clarification committed and clean |
+| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | A3 circuit-breaker evidence ready for Child-SA review; remote publication unavailable |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | A3 provider-neutral fixture/harness committed locally at `396c9ad96766fec957be68ab64589e89e70e77fb`; remote publication unavailable |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | Clean local branch at exact anchor |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -22,8 +22,8 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | Packet | Status | Starting authority | Checkpoint artifact | Checkpoint SHA / tree | Acceptance evidence |
 |---|---|---|---|---|---|
 | A1 | `ACCEPTED` | Exact three freeze anchors in A1 checkpoint | `A1_EXACT_AUTHORITY_AND_CONVERGENCE.md` | dummy `3c924daac420ecfe2bce6533294522fb9821ad94` / `d53bb93ad99435a27df6033a7fae1459fd8342d6`; backend remained exact base | Fetch/tree/ancestry/dirty/worktree/remote-publication evidence in artifact |
-| A2 | `READY_FOR_CHILD_SA_REVIEW` | Accepted A1 dummy/backend checkpoints | `A2_CONTRACT_AND_SEMANTIC_REGISTRY.md` | backend `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` / `18c02098e75aac53696269f8b443f930c8adb514`; authority commit reported by runner | 31 tests, lint, build, frozen-bundle verification, strict parsers/fixtures, Parent refresh-action decision, two bounded correction cycles |
-| A3 | `NOT_STARTED` | Accepted A2 checkpoints | `A3_EXECUTION_READINESS_PREFLIGHT.md` | — | — |
+| A2 | `ACCEPTED` | Accepted A1 dummy/backend checkpoints | `A2_CONTRACT_AND_SEMANTIC_REGISTRY.md` | backend `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` / `18c02098e75aac53696269f8b443f930c8adb514`; authority `026c0d2217b1417a068bde62d4acb7c2ac7990c2` / `65f435820aec1f68e9e9b51d6684442e8d4b4b70` | 31 tests, lint, build, frozen-bundle verification, strict parsers/fixtures, Parent refresh-action decision, two bounded correction cycles |
+| A3 | `CIRCUIT_BREAKER` | Accepted A2 exact checkpoints | `A3_EXECUTION_READINESS_PREFLIGHT.md` + JSON | backend local `396c9ad96766fec957be68ab64589e89e70e77fb` / `6a35db9d580a1b6f9a0775371f3368bdd60a871d`; authority reported by runner | Docker/PostgreSQL/migration, declared frontend build, authenticated browser/viewports/Axe and remote push/fetch-back gates failed after bounded corrections; B1 prohibited |
 | B1 | `NOT_STARTED` | Accepted A3 checkpoints | `B1_INSTAGRAM_DE_FOUNDATION.md` | — | — |
 | B2 | `NOT_STARTED` | Accepted B1 checkpoint | `B2_PROVIDER_TRUTH_AND_PAGINATION.md` | — | — |
 | B3 | `NOT_STARTED` | Accepted B2 checkpoint | `B3_MEDIA_AND_MULTIMODAL_LANE.md` | — | — |
