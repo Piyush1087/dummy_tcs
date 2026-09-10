@@ -2,13 +2,81 @@
 
 ```text
 PACKET = A3
-RESULT = A3_CORRECTION_REQUIRED
+RESULT = A3_EXCEPTIONAL_CLOSEOUT_EVIDENCE_READY_FOR_REVIEW
 A3_ACCEPTED = NO
-B1 = PROHIBITED_PENDING_A3
+B1 = PROHIBITED
 CLOUD_ENVIRONMENT_DISCOVERY_CORRECTION_CYCLES = 0
 EXTERNAL_LOCAL_CORRECTION_CYCLES_USED = 2
+EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT = PARENT_AUTHORIZED
+EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 PROVIDER_OR_META_CALLS = NONE
 FEATURE_IMPLEMENTATION = NONE
+```
+
+## Parent-authorized exceptional accessibility closeout
+
+The one authorized non-cycle closeout preserved the complete A3-R2 parser,
+tests, and browser-harness diff and changed only the shared mobile bottom-nav
+active-label color from `var(--color-primary)` to the existing approved
+`var(--color-secondary)` token. At 390 and 767 px, the affected Offerings label
+changed from `rgb(52, 211, 153)` on `rgb(255, 255, 255)` (`1.92:1`) to
+`rgb(6, 31, 35)` on `rgb(255, 255, 255)` (`17.1:1`). Navigation structure,
+accessible name, active state, iconography, spacing, layout, typography, focus,
+breakpoints, desktop navigation, and Product semantics remain unchanged.
+
+Focused navigation/accessibility tests passed 3 files / 8 tests; focused Brand
+compatibility tests passed 3 files / 73 tests; the complete frontend suite passed
+136 files / 1083 tests with 1 gated file / 1 test skipped. Production build,
+typecheck, full lint, scoped lint, and `git diff --check` passed. The sanitized
+live Brand projection test passed 1/1. The unchanged backend passed 25/25
+Instagram/provider-neutral contract tests and 11/11 PostgreSQL authorization
+tests; 87 migrations are current, both health endpoints returned 200, and the
+database reported up.
+
+Authenticated Brand and Offerings rendering passed for Brand Owner, Campaign
+Manager, and Finance Admin with primary-tenant-only resolution. At 390, 767,
+768, and 1440 px, both routes passed navigation, keyboard, focus, heading order,
+and overflow checks. Axe serious/critical counts were 0/0 for every route and
+width. Brand had no lesser findings; Offerings truthfully retained 3 moderate
+and 0 minor findings at each width. No Meta, Instagram, or Graph call occurred.
+
+The reviewed frontend closeout commit is
+`97efcaae7ad69da6bd1c18ab8cebb44ca82c4c9e` with tree
+`18c7cb0edd173960d15fcc29d71583a1ea429586`. The backend remains unchanged at
+`4ab0e5f4ac124911a30ccc434934b6f645a4cded` with tree
+`747ca7878ea465e82d927c0ea22f1e86efe95b0f`. Final authority and fetch-back
+identities are supplied by the immutable runner report because a commit cannot
+self-encode its own identity.
+
+## Historical A3-R2 final compatibility correction
+
+Correction cycle 2 repaired the authenticated Brand response boundary without
+changing backend, Product semantics, UX, migrations, or B1. The frontend now
+strips unconsumed additive metadata only at the ten affected intelligence-field
+objects while continuing to validate every recognized field. Focused tests,
+the sanitized live backend response, the complete frontend suite, lint,
+typecheck, build, PostgreSQL migrations/authorization, backend health, all three
+authenticated roles, tenant isolation, keyboard/focus, and overflow passed.
+
+The mounted Offerings route exposed one serious Axe `color-contrast` violation
+on `.aurora-bottom-nav__item--active > span` at 390 and 767 px. Brand had zero
+serious/critical violations at all four widths; Offerings had zero critical at
+all widths and zero serious at 768/1440. Fixing the shared active-navigation
+visual styling is outside the authorized parser-only correction and the explicit
+prohibition on Offering/UX changes. Therefore the mandatory Axe gate is not
+waived, no frontend or authority commit was published, and the result is
+`A3_TRUE_CIRCUIT_BREAKER_CANDIDATE` pending Child-SA/Program-Orchestrator review.
+The backend and frontend processes were stopped and the uniquely labeled
+PostgreSQL container plus its tmpfs storage were removed.
+
+```text
+POSTMARK_SETUP = INITIAL_LOCAL_CONFIGURATION_NOT_A_CORRECTION
+SELECTOR_REPAIR = CORRECTION_CYCLE_1
+COMPATIBILITY_REPAIR = CORRECTION_CYCLE_2
+CORRECTION_CYCLES_USED = 2
+B1_STARTED = NO
+B1_AUTHORIZED = NO
+META_PROVIDER_CALLS = NONE
 ```
 
 ## External local reconstruction entry
@@ -29,7 +97,7 @@ EXTERNAL_LOCAL_ATTEMPT = A3_CORRECTION_CYCLE_0
 LOCAL_EXECUTION_STATUS = COMPLETE_WITH_MANDATORY_BROWSER_CONTRACT_FAILURE
 ```
 
-## External local outcome
+## Historical external local outcome before A3-R2
 
 The external runner completed every requested execution route without starting
 B1. PostgreSQL, migrations, backend health, role/tenant authorization, exact
@@ -55,7 +123,7 @@ live compatibility probe reports field paths and error categories only.
 | PostgreSQL/migrations | PASS | Disposable `postgres:17-alpine`, PostgreSQL 17.11, tmpfs storage, random loopback port, synthetic unreported credentials; 87 migrations applied from empty DB; Prisma status current. |
 | DB connectivity/extensions | PASS | `SELECT 1` succeeded; database `bs07_instagram_a3`; installed extension inventory contained `plpgsql`; no additional accepted migration required an extra extension. |
 | PostgreSQL authorization/tenant isolation | PASS | Existing `brand-workspace-authorization.postgres.test.ts`: 1 file / 11 tests passed, including active roles and cross-Brand isolation. |
-| Backend boot/health | PASS | Correction cycle 1 supplied repository-required Postmark configuration names with synthetic values; `GET /health/live` = 200/`ok`; `GET /health` = 200/`ok`, database `up`, zero errors. No provider call. |
+| Backend boot/health | PASS | Initial local setup supplied repository-required Postmark configuration names with synthetic values; this was not a correction cycle. `GET /health/live` = 200/`ok`; `GET /health` = 200/`ok`, database `up`, zero errors. No provider call. |
 | Auth fixtures/tenant routing | PASS | Two isolated Brand tenants and four active local users; Owner, Campaign Manager and Finance Admin each authenticated and resolved only the primary Brand; supplied second-tenant selector/header did not alter server-derived context. |
 | Responsive/keyboard/overflow | PASS | 390, 767, 768 and 1440 px structural runs passed; visible navigation 4/4/8/8; heading order `[1]`; mobile dialog focus and return passed at 390/767; no document horizontal overflow. |
 | Axe | PASS | At every required width: serious 0, critical 0, moderate 0, minor 0. |

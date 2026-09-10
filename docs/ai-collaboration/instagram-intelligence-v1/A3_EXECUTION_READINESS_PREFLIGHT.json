@@ -1,8 +1,99 @@
 {
   "packet": "A3",
-  "result": "A3_CORRECTION_REQUIRED",
+  "result": "A3_EXCEPTIONAL_CLOSEOUT_EVIDENCE_READY_FOR_REVIEW",
   "a3Accepted": false,
-  "b1": "PROHIBITED_PENDING_A3",
+  "b1": "PROHIBITED",
+  "exceptionalAccessibilityCloseout": {
+    "authorization": "PARENT_AUTHORIZED",
+    "classification": "EXCEPTIONAL_NON_CYCLE",
+    "attemptsAllowed": 1,
+    "attemptsUsed": 1,
+    "correctionCyclesUsed": 2,
+    "result": "A3_EXCEPTIONAL_CLOSEOUT_EVIDENCE_READY_FOR_REVIEW",
+    "rootCause": "The shared mobile bottom-navigation active label used the low-contrast primary token on a white surface.",
+    "sourceChange": {
+      "file": "src/layouts/app-shell/app-shell.css",
+      "selector": ".aurora-bottom-nav__item--active",
+      "beforeToken": "var(--color-primary)",
+      "afterToken": "var(--color-secondary)"
+    },
+    "contrast": [
+      { "width": 390, "target": ".aurora-bottom-nav__item--active > span", "beforeForeground": "rgb(52, 211, 153)", "afterForeground": "rgb(6, 31, 35)", "background": "rgb(255, 255, 255)", "beforeRatio": 1.92, "afterRatio": 17.1 },
+      { "width": 767, "target": ".aurora-bottom-nav__item--active > span", "beforeForeground": "rgb(52, 211, 153)", "afterForeground": "rgb(6, 31, 35)", "background": "rgb(255, 255, 255)", "beforeRatio": 1.92, "afterRatio": 17.1 }
+    ],
+    "frontendProof": {
+      "focusedNavigation": { "filesPassed": 3, "testsPassed": 8 },
+      "focusedCompatibility": { "filesPassed": 3, "testsPassed": 73 },
+      "completeSuite": { "filesPassed": 136, "filesSkipped": 1, "testsPassed": 1083, "testsSkipped": 1 },
+      "build": "PASS",
+      "typecheck": "PASS",
+      "lint": "PASS",
+      "scopedLint": "PASS",
+      "diffCheck": "PASS",
+      "liveBrandProjection": { "filesPassed": 1, "testsPassed": 1 }
+    },
+    "runtimeProof": {
+      "backendUnchanged": { "sha": "4ab0e5f4ac124911a30ccc434934b6f645a4cded", "tree": "747ca7878ea465e82d927c0ea22f1e86efe95b0f" },
+      "migrations": { "count": 87, "status": "CURRENT" },
+      "healthLive": { "http": 200, "status": "ok" },
+      "health": { "http": 200, "status": "ok", "database": "up" },
+      "instagramProviderNeutralContracts": { "filesPassed": 2, "testsPassed": 25 },
+      "postgresAuthorization": { "filesPassed": 1, "testsPassed": 11 },
+      "roles": ["BRAND_OWNER", "CAMPAIGN_MANAGER", "FINANCE_ADMIN"],
+      "tenantIsolation": "PASS",
+      "manualRefreshAuthority": { "BRAND_OWNER": "ALLOW", "CAMPAIGN_MANAGER": "ALLOW", "FINANCE_ADMIN": "DENY_READ_ONLY" },
+      "providerCalls": 0
+    },
+    "browser": {
+      "routes": ["Brand", "Offerings"],
+      "widths": [390, 767, 768, 1440],
+      "overflow": "PASS_ALL",
+      "keyboardFocus": "PASS_ALL",
+      "brandAxe": { "serious": [0, 0, 0, 0], "critical": [0, 0, 0, 0], "moderate": [0, 0, 0, 0], "minor": [0, 0, 0, 0] },
+      "offeringsAxe": { "serious": [0, 0, 0, 0], "critical": [0, 0, 0, 0], "moderate": [3, 3, 3, 3], "minor": [0, 0, 0, 0] }
+    },
+    "frontendFinal": { "sha": "97efcaae7ad69da6bd1c18ab8cebb44ca82c4c9e", "tree": "18c7cb0edd173960d15fcc29d71583a1ea429586" },
+    "publication": "NORMAL_PUSH_AND_FETCH_BACK_IDENTITIES_RECORDED_BY_IMMUTABLE_RUNNER_REPORT",
+    "b1Started": false,
+    "b1Authorized": false
+  },
+  "a3R2": {
+    "correctionCycle": 2,
+    "result": "A3_TRUE_CIRCUIT_BREAKER_CANDIDATE",
+    "parserCompatibility": "PASS",
+    "sanitizedLiveBackendPayload": "PASS",
+    "completeFrontendSuite": { "filesPassed": 135, "filesSkipped": 1, "testsPassed": 1078, "testsSkipped": 1 },
+    "authenticatedRoles": ["BRAND_OWNER", "CAMPAIGN_MANAGER", "FINANCE_ADMIN"],
+    "tenantIsolation": "PASS",
+    "manualRefreshAuthority": {
+      "BRAND_OWNER": "ALLOW",
+      "CAMPAIGN_MANAGER": "ALLOW",
+      "FINANCE_ADMIN": "DENY_READ_ONLY"
+    },
+    "browser": {
+      "widths": [390, 767, 768, 1440],
+      "brandSerious": [0, 0, 0, 0],
+      "brandCritical": [0, 0, 0, 0],
+      "offeringsSerious": [1, 1, 0, 0],
+      "offeringsCritical": [0, 0, 0, 0],
+      "blocker": "color-contrast at .aurora-bottom-nav__item--active > span",
+      "providerCalls": 0
+    },
+    "publication": "NOT_RUN_MANDATORY_GATE_FAILED",
+    "servicesAfterRun": "BACKEND_FRONTEND_STOPPED_DISPOSABLE_CONTAINER_REMOVED",
+    "backendUnchanged": {
+      "sha": "4ab0e5f4ac124911a30ccc434934b6f645a4cded",
+      "tree": "747ca7878ea465e82d927c0ea22f1e86efe95b0f"
+    },
+    "cycleAccounting": {
+      "postmarkSetup": "INITIAL_LOCAL_CONFIGURATION_NOT_A_CORRECTION",
+      "selectorRepair": 1,
+      "compatibilityRepair": 2,
+      "cyclesUsed": 2
+    },
+    "b1Started": false,
+    "b1Authorized": false
+  },
   "cloudEnvironmentDiscoveryCorrectionCycles": 0,
   "externalLocalAttempt": {
     "correctionCycle": 0,
