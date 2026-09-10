@@ -4,16 +4,20 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = A3_CIRCUIT_BREAKER
+CURRENT_PACKET = A3_CORRECTION_REQUIRED
+A3_ACCEPTED = NO
+B1 = PROHIBITED_PENDING_A3
+CLOUD_ENVIRONMENT_DISCOVERY_CORRECTION_CYCLES = 0
+EXTERNAL_LOCAL_CORRECTION_CYCLES_USED = 2
 ```
 
 ## Repository authority
 
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
-| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | A3 circuit-breaker evidence ready for Child-SA review; remote publication unavailable |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | A3 provider-neutral fixture/harness committed locally at `396c9ad96766fec957be68ab64589e89e70e77fb`; remote publication unavailable |
-| `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | A3-R1 compile repair committed locally at `fa463b0364291e1353c19b86e173053f3101ee9c` / `2693d807f4f322b0a38cf4f6d897b81a3df85ca7`; declared frontend build passes; remote publication remains unavailable |
+| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | External local A3 result is correction required; final authority commit/tree and fetch-back equality reported by runner because this ledger cannot self-encode its own commit SHA |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Published/fetched `4ab0e5f4ac124911a30ccc434934b6f645a4cded` / `747ca7878ea465e82d927c0ea22f1e86efe95b0f`; exact equality and frozen-base ancestry |
+| `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | Published/fetched `b16b016af0cdd0ade7189af953e22a92a3faa8ed` / `d4a0d7eaacb5e89541670b7dee31564c3d66c763`; exact equality and frozen-base ancestry |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
 
@@ -23,7 +27,7 @@ The exact authority checkpoint commit and tree containing this ledger are report
 |---|---|---|---|---|---|
 | A1 | `ACCEPTED` | Exact three freeze anchors in A1 checkpoint | `A1_EXACT_AUTHORITY_AND_CONVERGENCE.md` | dummy `3c924daac420ecfe2bce6533294522fb9821ad94` / `d53bb93ad99435a27df6033a7fae1459fd8342d6`; backend remained exact base | Fetch/tree/ancestry/dirty/worktree/remote-publication evidence in artifact |
 | A2 | `ACCEPTED` | Accepted A1 dummy/backend checkpoints | `A2_CONTRACT_AND_SEMANTIC_REGISTRY.md` | backend `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` / `18c02098e75aac53696269f8b443f930c8adb514`; authority `026c0d2217b1417a068bde62d4acb7c2ac7990c2` / `65f435820aec1f68e9e9b51d6684442e8d4b4b70` | 31 tests, lint, build, frozen-bundle verification, strict parsers/fixtures, Parent refresh-action decision, two bounded correction cycles |
-| A3 | `CIRCUIT_BREAKER` | Accepted A2 exact checkpoints | `A3_EXECUTION_READINESS_PREFLIGHT.md` + JSON | backend local `396c9ad96766fec957be68ab64589e89e70e77fb` / `6a35db9d580a1b6f9a0775371f3368bdd60a871d`; frontend A3-R1 `fa463b0364291e1353c19b86e173053f3101ee9c` / `2693d807f4f322b0a38cf4f6d897b81a3df85ca7`; authority reported by runner | A3-R1 remediated only the declared frontend build blocker (2 focused files/8 tests plus build pass). Docker/PostgreSQL/migration, backend health, authenticated browser/viewports/Axe and remote push/fetch-back gates remain blocked; B1 prohibited |
+| A3 | `CORRECTION_REQUIRED` | Accepted A2 exact checkpoints | `A3_EXECUTION_READINESS_PREFLIGHT.md` + JSON | backend published/fetched `4ab0e5f4ac124911a30ccc434934b6f645a4cded` / `747ca7878ea465e82d927c0ea22f1e86efe95b0f`; frontend published/fetched `b16b016af0cdd0ade7189af953e22a92a3faa8ed` / `d4a0d7eaacb5e89541670b7dee31564c3d66c763`; authority reported by runner | All local infrastructure, contract, migration, health, role/tenant, viewport, keyboard, overflow, Axe and publication routes executed. Authenticated Brand Centre runtime projection remains incompatible with the strict frontend parser; two external correction cycles used; B1 prohibited. |
 | B1 | `NOT_STARTED` | Accepted A3 checkpoints | `B1_INSTAGRAM_DE_FOUNDATION.md` | — | — |
 | B2 | `NOT_STARTED` | Accepted B1 checkpoint | `B2_PROVIDER_TRUTH_AND_PAGINATION.md` | — | — |
 | B3 | `NOT_STARTED` | Accepted B2 checkpoint | `B3_MEDIA_AND_MULTIMODAL_LANE.md` | — | — |
@@ -50,3 +54,4 @@ The exact authority checkpoint commit and tree containing this ledger are report
 - Every successor packet must name exact accepted predecessor SHAs and trees; a moving branch name alone is insufficient authority.
 - Remote publication must use normal non-force pushes followed by independent fetch-back. A blocked push is recorded; it must never be bypassed or retried with force.
 - No packet may silently broaden Product scope, provider permissions, workspace composition, Intelligence ownership, or lifecycle ownership.
+- The external local A3 runner made no B1/runtime/workspace implementation and did not alter the incompatible production Brand projection/parser because that correction requires renewed A3 authority.

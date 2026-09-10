@@ -1,13 +1,81 @@
 {
   "packet": "A3",
-  "result": "CIRCUIT_BREAKER",
+  "result": "A3_CORRECTION_REQUIRED",
+  "a3Accepted": false,
+  "b1": "PROHIBITED_PENDING_A3",
+  "cloudEnvironmentDiscoveryCorrectionCycles": 0,
+  "externalLocalAttempt": {
+    "correctionCycle": 0,
+    "status": "COMPLETE_WITH_MANDATORY_BROWSER_CONTRACT_FAILURE",
+    "result": "A3_CORRECTION_REQUIRED",
+    "correctionCyclesUsed": 2,
+    "reconstruction": {
+      "authority": { "patchSha256": "2275f0a6b1c7fc7eda272493e668621223405fce7f0e2e324fdf8548e8b0c288", "sha": "171221a54e9d478fd1fca047a4cbafca660e961c", "tree": "51fddcfb05956f0b408bda177248ac2fda58c722" },
+      "backend": { "patchSha256": "09fc20dc827356ad4e05da632fa8d7fa8ae183cc8b01e41889f894518c73f552", "sha": "4d813f7298b45a0462710650250179341708bc4d", "tree": "6a35db9d580a1b6f9a0775371f3368bdd60a871d" },
+      "frontend": { "patchSha256": "bf15b51a27b6609a2f020d9cc52a7d3acf328cf010e2c549238e3acdc72e2e8d", "sha": "24bac3eb7b1b554188627b3e7af4e3d1c0bed05b", "tree": "2693d807f4f322b0a38cf4f6d897b81a3df85ca7" }
+    }
+  },
+  "historicalCloudEvidence": true,
+  "externalExecutedAt": "2026-09-11T00:40:00+05:30",
+  "externalLocalEvidence": {
+    "tools": {
+      "os": "Microsoft Windows NT 10.0.26200.0",
+      "architecture": "X64",
+      "node": "v24.19.0",
+      "npm": "11.17.0",
+      "docker": "29.7.2",
+      "postgresql": "17.11",
+      "prismaClient": "6.19.3",
+      "chrome": "152.0.7977.83",
+      "edge": "152.0.4191.66",
+      "playwright": "1.63.0",
+      "axePlaywright": "4.13.0"
+    },
+    "checks": [
+      { "id": "inputs_bases_reconstruction", "result": "PASS", "proof": "Expected remotes, clean supplied roots, exact bases/trees, patch hashes, resulting trees and file inventories." },
+      { "id": "immutable_installs", "result": "PASS", "proof": "Backend and frontend npm ci exited 0; existing audit findings were not auto-fixed." },
+      { "id": "backend_build_contracts_lint", "result": "PASS", "proof": "Prisma generate and build passed; 3 focused files/33 tests; changed-file lint passed; pinned bbb0be3 frozen-bundle verification passed." },
+      { "id": "frontend_test_build", "result": "PASS", "proof": "135 files/1076 tests and production build passed; build passed again after A3 harness dependencies." },
+      { "id": "postgresql_migrations", "result": "PASS", "proof": "Disposable PostgreSQL 17.11 tmpfs database; 87 migrations applied; status current; SELECT 1; plpgsql extension only." },
+      { "id": "postgresql_authorization", "result": "PASS", "proof": "Existing Brand workspace PostgreSQL suite: 1 file/11 tests, including active memberships and cross-Brand isolation." },
+      { "id": "backend_health", "result": "PASS", "proof": "health/live and health HTTP 200; database up; zero errors; synthetic configuration values not recorded." },
+      { "id": "provider_neutral", "result": "PASS", "proof": "Single InstagramGraphClient override; provider browser request count 0; no Meta/Graph credentials or calls." },
+      { "id": "role_tenant_context", "result": "PASS", "proof": "Owner, Campaign Manager and Finance Admin authenticated into primary Brand only; supplied second-tenant selector/header ignored." },
+      { "id": "responsive_keyboard_axe", "result": "PASS", "proof": "390/767/768/1440: no overflow, visible navigation, heading order, keyboard focus; mobile focus return; Axe serious/critical/moderate/minor all zero." },
+      { "id": "authenticated_brand_projection", "result": "FAIL", "proof": "Frontend runtime contract rejects backend Intelligence projection unrecognized keys and renders a sanitized Brand information error." },
+      { "id": "manual_refresh_roles", "result": "PASS", "proof": "BRAND_OWNER ALLOW; CAMPAIGN_MANAGER ALLOW; FINANCE_ADMIN DENY_READ_ONLY." },
+      { "id": "secret_scan", "result": "PASS", "proof": "Transfer/planned content/screenshots checked; no secret values or tracked runtime artifacts." },
+      { "id": "backend_push_fetch_back", "result": "PASS", "proof": "local/remote SHA 4ab0e5f4ac124911a30ccc434934b6f645a4cded; tree 747ca7878ea465e82d927c0ea22f1e86efe95b0f; equality and ancestry pass." },
+      { "id": "frontend_push_fetch_back", "result": "PASS", "proof": "local/remote SHA b16b016af0cdd0ade7189af953e22a92a3faa8ed; tree d4a0d7eaacb5e89541670b7dee31564c3d66c763; equality and ancestry pass." },
+      { "id": "authority_push_fetch_back", "result": "PENDING_SELF_IDENTITY", "proof": "Final commit identity is supplied by the runner after normal push/fetch-back." },
+      { "id": "live_graph", "result": "OPTIONAL_NOT_RUN", "proof": "Provider-neutral only." }
+    ],
+    "blocker": {
+      "classification": "A3_CORRECTION_REQUIRED",
+      "summary": "Existing backend Brand projection and frontend strict Intelligence-field parser are not runtime-compatible on the authenticated Brand Centre route.",
+      "paths": [
+        "visualIdentity.style",
+        "brandIdentity.description",
+        "brandIdentity.positioning",
+        "brandIdentity.valueProposition",
+        "brandIdentity.values",
+        "brandIdentity.personality",
+        "brandIdentity.differentiation",
+        "brandIdentity.communication",
+        "audience.state",
+        "serviceability.state"
+      ]
+    },
+    "b1Started": false,
+    "b1Authorized": false
+  },
   "executedAt": "2026-09-10T20:15:00Z",
   "startingAuthority": {
     "authority": { "sha": "026c0d2217b1417a068bde62d4acb7c2ac7990c2", "tree": "65f435820aec1f68e9e9b51d6684442e8d4b4b70" },
     "backend": { "sha": "978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da", "tree": "18c02098e75aac53696269f8b443f930c8adb514" },
     "frontend": { "sha": "249de1a2fcaeffa013dbeb9d042f7387f8d3f972", "tree": "a8e3a5937e4001997736d0c05a0e06f1c99b7d1b" }
   },
-  "checks": [
+  "historicalCloudChecks": [
     { "id": "git_worktrees", "result": "PASS", "proof": "Three isolated worktrees clean at entry; no destructive Git operation." },
     { "id": "exact_refs", "result": "PASS", "proof": "At original A3 entry, fetch succeeded and exact SHA/tree anchors were unchanged; authority/backend were two accepted commits ahead of freeze and frontend equalled freeze. A3-R1 now adds the separately recorded one-file frontend repair commit." },
     { "id": "branch_push_model", "result": "FAIL", "proof": "Normal non-force publication was attempted once. Backend publication was cancelled by execution policy; frontend failed because no GitHub username/credential was available. Read-only ls-remote found neither remote packet branch." },
@@ -28,7 +96,7 @@
     { "id": "live_smoke", "result": "OPTIONAL_NOT_RUN", "proof": "Provider-neutral proof was sufficient; no live credential or Meta mutation was used." },
     { "id": "push_fetch_back", "result": "FAIL", "proof": "Normal push capability unavailable; therefore remote fetch-back SHA/tree equality cannot be proven." }
   ],
-  "correctionCycles": {
+  "historicalCloudCorrectionCycles": {
     "environment": 2,
     "result": "NO_PERMITTED_LOCAL_FALLBACK",
     "attempts": ["Docker-to-native PostgreSQL fallback discovery", "system/browser/package binary and credential capability recheck"]
