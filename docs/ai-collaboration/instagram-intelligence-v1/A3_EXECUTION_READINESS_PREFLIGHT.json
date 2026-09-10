@@ -9,7 +9,7 @@
   },
   "checks": [
     { "id": "git_worktrees", "result": "PASS", "proof": "Three isolated worktrees clean at entry; no destructive Git operation." },
-    { "id": "exact_refs", "result": "PASS", "proof": "Fetch succeeded; exact SHA/tree anchors unchanged; authority/backend are two accepted commits ahead of freeze and frontend equals freeze." },
+    { "id": "exact_refs", "result": "PASS", "proof": "At original A3 entry, fetch succeeded and exact SHA/tree anchors were unchanged; authority/backend were two accepted commits ahead of freeze and frontend equalled freeze. A3-R1 now adds the separately recorded one-file frontend repair commit." },
     { "id": "branch_push_model", "result": "FAIL", "proof": "Normal non-force publication was attempted once. Backend publication was cancelled by execution policy; frontend failed because no GitHub username/credential was available. Read-only ls-remote found neither remote packet branch." },
     { "id": "node_package_tooling", "result": "FAIL", "proof": "Node v24.19.0, npm 11.9.0 and package-lock.json discovered. Frontend npm ci passed. Backend dependency graph, Prisma generation and build passed, but immutable npm ci completion could not be independently recorded after network approval cancellation. Repositories declare no engines/packageManager/.nvmrc/.node-version pin." },
     { "id": "docker", "result": "FAIL", "proof": "docker, podman and nerdctl are absent after two bounded fallback checks." },
@@ -18,7 +18,7 @@
     { "id": "fixtures", "result": "PASS", "proof": "Deterministic account, image, carousel, Reel, full/partial/unavailable audience, authorization/transient error and two-account fixtures added and tested." },
     { "id": "provider_neutral_di", "result": "PASS", "proof": "InstagramGraphClient is replaced at one Nest provider token; fixture smoke made no network/provider call." },
     { "id": "backend_boot_health", "result": "FAIL", "proof": "Build passed. Boot attempts fail closed on required runtime configuration before listen; database health additionally cannot pass without PostgreSQL. No provider call occurred." },
-    { "id": "frontend_preview", "result": "FAIL", "proof": "135 test files/1076 tests passed; direct Vite bundle and HTTP preview returned 200. Declared npm run build fails at frozen CampaignDetailWorkspace.tsx:135 because PUBLIC_ROUTES is undefined." },
+    { "id": "frontend_preview", "result": "PASS", "proof": "The original A3 run passed 135 test files/1076 tests plus direct Vite bundle and HTTP preview. Bounded A3-R1 added only the missing canonical PUBLIC_ROUTES import; 2 focused files/8 tests and the declared npm run build passed." },
     { "id": "authenticated_browser", "result": "FAIL", "proof": "No installed Chromium/Chrome browser binary and no runnable authenticated browser harness." },
     { "id": "viewports", "result": "FAIL", "proof": "390, 767, 768 and desktop browser runs cannot execute without a browser binary/harness." },
     { "id": "axe", "result": "FAIL", "proof": "No Axe dependency/harness and no browser binary." },
@@ -33,9 +33,19 @@
     "result": "NO_PERMITTED_LOCAL_FALLBACK",
     "attempts": ["Docker-to-native PostgreSQL fallback discovery", "system/browser/package binary and credential capability recheck"]
   },
+  "prerequisiteRemediation": {
+    "packet": "A3-R1",
+    "result": "PASS",
+    "startingFrontend": { "sha": "249de1a2fcaeffa013dbeb9d042f7387f8d3f972", "tree": "a8e3a5937e4001997736d0c05a0e06f1c99b7d1b" },
+    "frontendCheckpoint": { "sha": "fa463b0364291e1353c19b86e173053f3101ee9c", "tree": "2693d807f4f322b0a38cf4f6d897b81a3df85ca7" },
+    "diff": ["src/features/creator-campaigns/components/CampaignDetailWorkspace.tsx"],
+    "proof": "Canonical PUBLIC_ROUTES import only; 2 focused files/8 tests passed; declared npm run build passed; no Campaign behavior or UX change."
+  },
   "localCheckpoint": {
     "backendSha": "396c9ad96766fec957be68ab64589e89e70e77fb",
-    "backendTree": "6a35db9d580a1b6f9a0775371f3368bdd60a871d"
+    "backendTree": "6a35db9d580a1b6f9a0775371f3368bdd60a871d",
+    "frontendSha": "fa463b0364291e1353c19b86e173053f3101ee9c",
+    "frontendTree": "2693d807f4f322b0a38cf4f6d897b81a3df85ca7"
   },
   "nextPacket": "PROHIBITED",
   "servicesAfterRun": "STOPPED"
