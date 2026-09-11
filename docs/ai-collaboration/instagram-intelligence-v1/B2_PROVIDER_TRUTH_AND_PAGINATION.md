@@ -19,7 +19,7 @@ not claim Program acceptance and does not authorize B3.
 
 | Repository | Branch | Accepted predecessor | Published B2 identity |
 |---|---|---|---|
-| Backend | `program/instagram-intelligence-v1-backend` | `0725a36fa39c4a599e88cd008fddfacf21a9e44c` / `dc98b3af4d1f1ab225a8d5b1d983d0c50c10d781` | `a3252f2fed0a9d826f947221aab3dd8fd28aeaf5` / `3a7af59f5a129557bdeec952f2975890d09bd548` |
+| Backend | `program/instagram-intelligence-v1-backend` | `0725a36fa39c4a599e88cd008fddfacf21a9e44c` / `dc98b3af4d1f1ab225a8d5b1d983d0c50c10d781` | R1-corrected `a9e756b28e9da630e9792538c61f695b10bb28c9` / `f878d424d72d1e1cea3c939440d9ab3cb5a54ab1` |
 | Frontend | `program/instagram-intelligence-v1-frontend` | `97efcaae7ad69da6bd1c18ab8cebb44ca82c4c9e` / `18c7cb0edd173960d15fcc29d71583a1ea429586` | unchanged |
 
 The backend commit was published by normal non-force push. A subsequent
@@ -49,9 +49,10 @@ downgrade, add Facebook Pages/Login, or add scopes.
 
 ## Frozen v26 read contract
 
-Profile reads request provider ID, username, name, account type, profile image
-availability, and the three account counts. Provider ID and username are
-required for a successful identity result. Optional missing fields remain
+Profile reads request provider ID, username, name, account type, and the three
+account counts. R1 removed the raw profile-image locator from both request and
+result contracts; an unexpected provider `profile_picture_url` is ignored.
+Provider ID and username are required for a successful identity result. Optional missing fields remain
 `UNAVAILABLE`; a returned numeric zero is `OBSERVED_ZERO`; no timestamp is
 synthesized.
 
@@ -136,8 +137,10 @@ the additive, typed `RATE_LIMIT` classification and its propagated error type.
   never returned or logged. Malformed, foreign-host, and looped cursors become
   explicit provider failure.
 - Explicit empty first-page success is `AVAILABLE`/`EMPTY_SUCCESS`; malformed
-  or failed first page is `UNAVAILABLE`; later failure is `PARTIAL`; 500 rows
-  is `PARTIAL`/`CAP_REACHED`; traversal exhaustion is `AVAILABLE`.
+  or failed first page is `UNAVAILABLE`; later failure is `PARTIAL`. R1 makes
+  continuation truth authoritative at the cap: exactly 500 rows with no
+  continuation is `AVAILABLE`/`EXHAUSTED`; a valid continuation or additional
+  retained current-page row is `PARTIAL`/`CAP_REACHED`.
 - Fixture replay with the same input produces byte-equivalent normalized JSON.
 
 Provider failure taxonomy independently retains authorization revalidation,
@@ -230,12 +233,59 @@ No direct Creator consumer was changed. No frontend file was changed.
 
 ```text
 B2_PRIMARY_RUNS_USED = 1
-B2_CORRECTION_CYCLES_USED = 0
+B2_CORRECTION_CYCLES_USED = 1
 LIVE_GRAPH_CALLS = NONE
 META_PROVIDER_MUTATIONS = NONE
 B3_STARTED = NO
 B3_AUTHORIZED = NO
 ```
 
-Ordinary compile/test iteration remained inside the primary run. No gate was
-weakened and no review-issued correction cycle was consumed.
+Ordinary compile/test iteration remained inside the primary run. The subsequent
+Child-SA/Program-Orchestrator review identified two bounded provider-truth
+defects; the following R1 section preserves their history and correction proof.
+
+## B2 correction R1 of 2 — provider-truth closeout
+
+The published pre-R1 checkpoint requested and returned the raw
+`profile_picture_url`, and assigned `CAP_REACHED` before checking whether a
+500-item/10-child response was actually exhausted. R1 corrected only those two
+verified defects.
+
+- `profile_picture_url` is absent from the requested profile fields and from
+  `InstagramProfileTruth`. Unexpected provider locator material is ignored and
+  cannot appear in serialized output or the success-path log.
+- Media and child pages are fully inspected for retained current-page overflow,
+  then the safe cursor is parsed and validated without making another request.
+  Invalid, foreign, or looped continuation remains explicit pagination failure.
+- Exactly 500 media or 10 children with no continuation is
+  `AVAILABLE`/`EXHAUSTED`.
+- Exactly the cap with a valid continuation, or retained current-page data
+  beyond the cap, is `PARTIAL`/`CAP_REACHED`.
+- No request follows a terminal exhausted, capped, or pagination-failure
+  decision. Caps, ordering, deduplication, optional-field semantics, and all
+  provider/Settings compatibility contracts remain unchanged.
+
+R1 changed exactly three backend files: the provider types, provider client,
+and complete provider fixture test. The fixture file passed 34 of 34 tests; the
+full focused B2/contract/compatibility matrix passed 10 files / 117 tests.
+Scoped lint, production build, Prisma generation/validation, and diff integrity
+passed. Clean PostgreSQL 17.11 applied all 88 migrations and reported current;
+the B2 Settings port passed 1/1, B1 writer 7/7, Settings reconciliation 22/22,
+and legacy Settings 27/27.
+
+Schema, migrations, migration-88 checksum, dependencies, lockfile, B1 writer,
+Creator sources, permissions, provider version, Settings lifecycle, and
+frontend are unchanged. R1 backend publication used a normal non-force push;
+independent fetch-back proved SHA/tree equality and retained
+`a3252f2fed0a9d826f947221aab3dd8fd28aeaf5` ancestry.
+
+```text
+B2_CORRECTION_CYCLE = R1 OF 2
+B2_PRIMARY_RUNS_USED = 1
+B2_CORRECTION_CYCLES_USED = 1
+B2_ACCEPTED = NO
+B2_EVIDENCE_READY = YES
+B3 = PROHIBITED
+LIVE_GRAPH_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+```

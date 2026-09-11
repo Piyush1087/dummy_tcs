@@ -9,6 +9,8 @@ A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = EVIDENCE_READY_FOR_CHILD_SA_REVIEW
 B3 = PROHIBITED
+B2_PRIMARY_RUNS_USED = 1
+B2_CORRECTION_CYCLES_USED = 1
 CLOUD_ENVIRONMENT_DISCOVERY_CORRECTION_CYCLES = 0
 EXTERNAL_LOCAL_CORRECTION_CYCLES_USED = 2
 EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT = PARENT_AUTHORIZED_NON_CYCLE
@@ -20,7 +22,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
 | `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | B1 evidence is ready for review; final authority commit/tree and fetch-back equality are reported by the runner because this ledger cannot self-encode its own commit SHA |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Published/fetched B2 `a3252f2fed0a9d826f947221aab3dd8fd28aeaf5` / `3a7af59f5a129557bdeec952f2975890d09bd548`; exact equality and B1 predecessor ancestry |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Published/fetched B2 R1 `a9e756b28e9da630e9792538c61f695b10bb28c9` / `f878d424d72d1e1cea3c939440d9ab3cb5a54ab1`; exact equality and accepted B2/B1 predecessor ancestry |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | Reviewed closeout commit `97efcaae7ad69da6bd1c18ab8cebb44ca82c4c9e` / tree `18c7cb0edd173960d15fcc29d71583a1ea429586`; normal publication/fetch-back reported by runner |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -33,7 +35,7 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | A2 | `ACCEPTED` | Accepted A1 dummy/backend checkpoints | `A2_CONTRACT_AND_SEMANTIC_REGISTRY.md` | backend `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` / `18c02098e75aac53696269f8b443f930c8adb514`; authority `026c0d2217b1417a068bde62d4acb7c2ac7990c2` / `65f435820aec1f68e9e9b51d6684442e8d4b4b70` | 31 tests, lint, build, frozen-bundle verification, strict parsers/fixtures, Parent refresh-action decision, two bounded correction cycles |
 | A3 | `ACCEPTED` | Accepted A2 exact checkpoints | `A3_EXECUTION_READINESS_PREFLIGHT.md` + JSON | backend unchanged `4ab0e5f4ac124911a30ccc434934b6f645a4cded` / `747ca7878ea465e82d927c0ea22f1e86efe95b0f`; frontend closeout `97efcaae7ad69da6bd1c18ab8cebb44ca82c4c9e` / `18c7cb0edd173960d15fcc29d71583a1ea429586`; authority `15ee0bcb23fe32e28e874a951f4e962db1b1cf7c` / `57205bda567c611401be430da69a2f274503b2d1` | Program-Orchestrator acceptance in the B1 authorization superseded only the prior operational status; immutable A3 evidence was not rewritten. |
 | B1 | `ACCEPTED` | Accepted A3 checkpoints | `B1_INSTAGRAM_DE_FOUNDATION.md` | backend `0725a36fa39c4a599e88cd008fddfacf21a9e44c` / `dc98b3af4d1f1ab225a8d5b1d983d0c50c10d781`; authority identity reported by runner | Program-Orchestrator B2 execution authority records the subsequent B1 acceptance. The immutable B1 artifact remains unchanged. |
-| B2 | `EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted B1 checkpoint | `B2_PROVIDER_TRUTH_AND_PAGINATION.md` | backend `a3252f2fed0a9d826f947221aab3dd8fd28aeaf5` / `3a7af59f5a129557bdeec952f2975890d09bd548`; authority identity reported by runner | Official v26 reconciliation, lossless provider reads, Settings-owned credential fences, deterministic pagination/children fixtures, clean PostgreSQL migration and port proof, compatibility regressions, hygiene, normal publication, and fetch-back equality all passed. B2 is not self-accepted; B3 remains prohibited. |
+| B2 | `EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted B1 checkpoint | `B2_PROVIDER_TRUTH_AND_PAGINATION.md` | backend R1 `a9e756b28e9da630e9792538c61f695b10bb28c9` / `f878d424d72d1e1cea3c939440d9ab3cb5a54ab1`; authority identity reported by runner | R1 of 2 removed the profile-image locator and corrected cap-versus-exhaustion precedence. Provider fixtures 34/34, focused matrix 117/117, PostgreSQL regressions, hygiene, normal publication, and fetch-back equality passed. B2 is not self-accepted; B3 remains prohibited. |
 | B3 | `NOT_STARTED` | Accepted B2 checkpoint | `B3_MEDIA_AND_MULTIMODAL_LANE.md` | — | — |
 | B4 | `NOT_STARTED` | Accepted B3 checkpoints | `B4_FIRST_VERTICAL_SLICE.md` | — | — |
 | C1 | `NOT_STARTED` | Accepted B4 checkpoints | `C1_SYNC_COORDINATOR.md` | — | — |
@@ -68,6 +70,7 @@ The exact authority checkpoint commit and tree containing this ledger are report
 - B1 remains provider-neutral. Its runtime-sequencing recovery used one primary
   run and zero correction runs, preserved the shared Capture/Evidence invariant,
   made no Meta/Instagram/Graph request, and did not start B2.
-- B2 used one primary run and zero correction cycles. It added only read-side
-  provider truth and Settings-owned internal ports, made no live Graph request,
-  preserved B1 and all lifecycle ownership, and did not start B3.
+- B2 used one primary run and correction R1 of at most two. R1 changed only the
+  two reviewed provider-truth defects: raw profile-image locator exposure and
+  cap-versus-exhaustion precedence. It made no live Graph request, preserved B1
+  and all lifecycle ownership, and did not start B3.
