@@ -19,7 +19,7 @@ not claim Program acceptance and does not authorize B3.
 
 | Repository | Branch | Accepted predecessor | Published B2 identity |
 |---|---|---|---|
-| Backend | `program/instagram-intelligence-v1-backend` | `0725a36fa39c4a599e88cd008fddfacf21a9e44c` / `dc98b3af4d1f1ab225a8d5b1d983d0c50c10d781` | `ad46b9dd46886eab883614fca60f7b10114a3233` / `5dfea7efbdccce751edd652cbf481a11faa60751` |
+| Backend | `program/instagram-intelligence-v1-backend` | `0725a36fa39c4a599e88cd008fddfacf21a9e44c` / `dc98b3af4d1f1ab225a8d5b1d983d0c50c10d781` | `a3252f2fed0a9d826f947221aab3dd8fd28aeaf5` / `3a7af59f5a129557bdeec952f2975890d09bd548` |
 | Frontend | `program/instagram-intelligence-v1-frontend` | `97efcaae7ad69da6bd1c18ab8cebb44ca82c4c9e` / `18c7cb0edd173960d15fcc29d71583a1ea429586` | unchanged |
 
 The backend commit was published by normal non-force push. A subsequent
@@ -160,7 +160,7 @@ Prisma generated client `6.19.3`; Docker client/server `29.7.2`; PostgreSQL
 | Production build | `npm run build` | PASS, exit 0 |
 | Scoped lint | `npx eslint` over all 13 changed TypeScript paths | PASS, exit 0 |
 | Diff integrity | `git diff --check` and staged equivalent | PASS, exit 0 |
-| Focused static/contract/compatibility suite | `npx vitest run --config vitest.config.ts` over B2 provider/ports, Instagram reconciliation, both installed contract/preflight tests, Settings readiness/access, Creator AI sync, and B1 persistence/identity architecture | PASS, 10 files / 101 tests |
+| Focused static/contract/compatibility suite | `npx vitest run --config vitest.config.ts` over B2 provider/ports, Instagram reconciliation, both installed contract/preflight tests, Settings readiness/access, Creator AI sync, and B1 persistence/identity architecture | PASS, 10 files / 115 tests |
 | B2 real PostgreSQL port | focused B2 port PostgreSQL test with `B2_INSTAGRAM_DATABASE_URL` | PASS, 1 file / 1 test |
 | B1 writer PostgreSQL regression | focused unchanged writer test with `B1_INSTAGRAM_DATABASE_URL` | PASS, 1 file / 7 tests |
 | Settings reconciliation PostgreSQL | focused test with `BS06_DATABASE_TEST=true` | PASS, 1 file / 22 tests |
