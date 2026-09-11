@@ -1,7 +1,9 @@
 # Instagram Intelligence C3 — Per-media semantics and likely collaboration
 
-**Status:** `EVIDENCE_READY_FOR_CHILD_SA_REVIEW`  
-**Execution date:** 2026-09-12  
+**Status:** `EVIDENCE_READY_FOR_CHILD_SA_REVIEW`
+
+**Execution date:** 2026-09-12
+
 **Scope:** resumed C3 only; no C4, frontend, API, provider acquisition, scheduler, or canonical-domain mutation
 
 ## Exact authority and implementation identity
@@ -103,9 +105,12 @@ The PostgreSQL fixture proved a mixed IMAGE/CAROUSEL/REEL/VIDEO corpus, one obse
 
 ## Scope/accounting
 
-`C3_RESUMED_PRIMARY_RUNS_USED = 1`  
-`C3_NORMAL_CORRECTION_CYCLES_USED = 0`  
-`C3_R0_CORRECTION_CYCLES_USED = 1`  
-`C3_ACCEPTED = NO`  
-`C4 = PROHIBITED_PENDING_C3_ACCEPTANCE`
+`C3_RESUMED_PRIMARY_RUNS_USED = 1`
 
+`C3_NORMAL_CORRECTION_CYCLES_USED = 0`
+
+`C3_R0_CORRECTION_CYCLES_USED = 1`
+
+`C3_ACCEPTED = NO`
+
+`C4 = PROHIBITED_PENDING_C3_ACCEPTANCE`
