@@ -1,8 +1,8 @@
 # Instagram Intelligence C2 — Deterministic Foundations
 
-**Execution status:** `EVIDENCE_READY_FOR_CHILD_SA_REVIEW`  
-**Program acceptance:** not self-declared  
-**Primary runs:** 1  
+**Execution status:** `EVIDENCE_READY_FOR_CHILD_SA_REVIEW`
+**Program acceptance:** not self-declared
+**Primary runs:** 1
 **Correction cycles:** 0
 
 ## Exact starting authority
@@ -124,4 +124,3 @@ raw-media persistence, Campaign change, semantic interpretation, Signal,
 Pattern, Learning, recommendation, ranking, C3/C4, consumer/API, frontend, or
 immutable B4 artifact change occurred. The final authority commit cannot encode
 its own identity; the runner report records its independently fetched SHA/tree.
-
