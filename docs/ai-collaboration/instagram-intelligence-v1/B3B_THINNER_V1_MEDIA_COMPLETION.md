@@ -1,8 +1,8 @@
 # Instagram Intelligence B3B — Thinner V1 Media Completion
 
-**Execution status:** `EVIDENCE_READY_FOR_CHILD_SA_REVIEW`  
-**Program acceptance:** not self-declared  
-**Primary runs:** 1  
+**Execution status:** `EVIDENCE_READY_FOR_CHILD_SA_REVIEW`
+**Program acceptance:** not self-declared
+**Primary runs:** 1
 **Correction cycles:** 0
 
 ## Exact starting authority
@@ -116,4 +116,3 @@ Graph call, live model call, provider mutation, raw-media persistence, or second
 DE/Evidence lifecycle was introduced. C2 remains prohibited pending external
 B3B review. V1.1 continues to defer multi-frame/video/audio/transcript analysis,
 full carousel sweeps, and higher-order media semantics.
-
