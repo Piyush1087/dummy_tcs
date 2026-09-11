@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = B3B_EVIDENCE_READY_FOR_CHILD_SA_REVIEW
+CURRENT_PACKET = C2_EVIDENCE_READY_FOR_CHILD_SA_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -12,11 +12,15 @@ B3A = ACCEPTED
 B3A_ACCEPTED = YES
 B4 = ACCEPTED
 B4_ACCEPTED = YES
-B3B = EVIDENCE_READY_FOR_CHILD_SA_REVIEW
-B3B_ACCEPTED = NO
+B3B = ACCEPTED
+B3B_ACCEPTED = YES
 B3B_PRIMARY_RUNS_USED = 1
 B3B_CORRECTION_CYCLES_USED = 0
-C2 = PROHIBITED_PENDING_B3B_REVIEW
+C2 = EVIDENCE_READY_FOR_CHILD_SA_REVIEW
+C2_ACCEPTED = NO
+C2_PRIMARY_RUNS_USED = 1
+C2_CORRECTION_CYCLES_USED = 0
+C3 = PROHIBITED_PENDING_C2_REVIEW
 B4_PRIMARY_RUNS_USED = 1
 B4_CORRECTION_CYCLES_USED = 2
 LIVE_GRAPH_CALLS = NONE
@@ -35,7 +39,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
 | `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | B3B evidence artifact/ledger final commit and tree reported by runner after normal publication |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | B3B `60a0ab2b8fb142115eccf93c3c82e72d473ca94b` / `686e665bc350e17fad5a81f8c52b77825e067cc2`; normal publication and fetch-back equality passed |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | C2 `bb8acafb63b74419a7188c52fe1a154b44904c73` / `f9c3e2e6cffb2c749f9911ebea093edd79ba428e`; normal publication and fetch-back equality passed |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | B4 implementation `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; publication/fetch-back reported by runner |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -51,8 +55,8 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | B2 | `ACCEPTED` | Accepted B1 checkpoint | `B2_PROVIDER_TRUTH_AND_PAGINATION.md` | backend R1 `a9e756b28e9da630e9792538c61f695b10bb28c9` / `f878d424d72d1e1cea3c939440d9ab3cb5a54ab1`; authority `2757910b36d31dc2d4f2d7357799744fd6a7e1a9` / `d7d8da4d4f2d1812561eefbd5dfd00502fd12913` | Parent-transmitted Program authority accepted B2 and authorized bounded B3A. Immutable B2 evidence remains unchanged. |
 | B3A | `ACCEPTED` | Accepted B2 checkpoint | `B3A_MINIMUM_IMAGE_MEDIA_PATH.md` + optimized execution plan | backend `2005bf4371210f5515635530da7f3d26cbaf9005` / `6eccbda2dcfcb85638d15d19a52d95be8aa4392f`; authority `70add5add8e600359b728d1cbb728c700f50acc2` / `46db74306200c2a87bd8f62186105bd0534e8858` | Parent-transmitted B4 execution authority records B3A acceptance without rewriting its immutable evidence. |
 | B4 | `ACCEPTED` | Accepted B3A checkpoints | `B4_FIRST_AUTHENTICATED_VERTICAL_SLICE.md` | backend R2 `4ebe7d95f33f14d3e650bcfa54a117bfd56373e1` / `97791d71bbced9b7eedd44f9af80df4e31353738`; frontend `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `8265b094be937c8909e3aeb350253a96ad35ebe5` / `dc36ad76ba5f21d9eaafee3b523e20c4f26ab69d`; source `c98b4edfa64b6711d290947ea61236573e029dd2` / `15be1c29422b0079acce3c9220e0413eab750df8` | Parent-transmitted B3B execution authority records B4 acceptance without rewriting its immutable B4 evidence. |
-| B3B | `EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted B4 checkpoint | `B3B_THINNER_V1_MEDIA_COMPLETION.md` | backend `60a0ab2b8fb142115eccf93c3c82e72d473ca94b` / `686e665bc350e17fad5a81f8c52b77825e067cc2`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; final authority identity reported by runner | All-eligible light Evidence, deterministic max-24 selection, IMAGE/carousel-child/cover-only still inspection, 65,536-byte streamed locator bound, PostgreSQL replay/isolation/deletion, and publication gates passed. Not self-accepted; C2 prohibited. |
-| C2 | `NOT_STARTED` | Accepted B3B checkpoint | `C2_DETERMINISTIC_FOUNDATIONS.md` | — | — |
+| B3B | `ACCEPTED` | Accepted B4 checkpoint | `B3B_THINNER_V1_MEDIA_COMPLETION.md` | backend `60a0ab2b8fb142115eccf93c3c82e72d473ca94b` / `686e665bc350e17fad5a81f8c52b77825e067cc2`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `d59a130164dd31fc38261cb855dea54a5c57b7d2` / `bcb4d754c9f13b035986cb3d61d2a61b7fc2f9ec` | Parent-transmitted C2 execution authority records B3B acceptance without rewriting immutable B3B evidence. |
+| C2 | `EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted B3B checkpoint | `C2_DETERMINISTIC_FOUNDATIONS.md` | backend `bb8acafb63b74419a7188c52fe1a154b44904c73` / `f9c3e2e6cffb2c749f9911ebea093edd79ba428e`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; final authority identity reported by runner | Versioned exact rational foundations, current/source fencing, historical lineage, Evidence/Observation support, replay/isolation/deletion, clean PostgreSQL 88, 68 focused tests, build/lint/diff/scan, and publication gates passed. Not self-accepted; C3 prohibited. |
 | C3 | `NOT_STARTED` | Accepted C2 checkpoint | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | — | — |
 | C4 | `NOT_STARTED` | Accepted C3 checkpoint | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | — |
 | C1 | `NOT_STARTED` | Post-C4 separate authority | `C1_SYNC_COORDINATOR.md` | — | — |
@@ -115,3 +119,12 @@ The exact authority checkpoint commit and tree containing this ledger are report
   completed the 65,536-byte streamed locator gate, and persisted only bounded
   source-native light/visual Evidence. No live provider/model call or raw media
   persistence occurred. C2 remains prohibited pending B3B review.
+- C2 used one primary run and zero correction cycles. Contract
+  `instagram-c2-deterministic-foundations-v1` uses exact integer/rational
+  arithmetic, six-place round-half-up serialization, explicit numerator and
+  denominator, safe audience-denominator policy, and one/two/three-plus snapshot
+  eligibility with a 14-day boundary. It persists bounded derived Evidence and
+  Semantic Observations through the existing complete support relation, changes
+  no schema or capability, and remains RESULT-only. Clean PostgreSQL applied all
+  88 migrations, 68 focused predecessor/C2 tests passed, and no live provider or
+  model call occurred. C3 is prohibited pending C2 review.
