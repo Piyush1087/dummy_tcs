@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = C3_R0_EVIDENCE_READY_FOR_CHILD_SA_REVIEW
+CURRENT_PACKET = C3_RESUMED_EVIDENCE_READY_FOR_CHILD_SA_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -20,11 +20,14 @@ C2 = ACCEPTED
 C2_ACCEPTED = YES
 C2_PRIMARY_RUNS_USED = 1
 C2_CORRECTION_CYCLES_USED = 0
-C3_R0 = EVIDENCE_READY_FOR_CHILD_SA_REVIEW
-C3_R0_ACCEPTED = NO
+C3_R0 = ACCEPTED
+C3_R0_ACCEPTED = YES
 C3_R0_PRIMARY_RUNS_USED = 1
 C3_R0_CORRECTION_CYCLES_USED = 1
-C3 = PAUSED_PENDING_C3_R0_ACCEPTANCE
+C3 = EVIDENCE_READY_FOR_CHILD_SA_REVIEW
+C3_ACCEPTED = NO
+C3_RESUMED_PRIMARY_RUNS_USED = 1
+C3_NORMAL_CORRECTION_CYCLES_USED = 0
 C4 = PROHIBITED
 B4_PRIMARY_RUNS_USED = 1
 B4_CORRECTION_CYCLES_USED = 2
@@ -62,8 +65,8 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | B4 | `ACCEPTED` | Accepted B3A checkpoints | `B4_FIRST_AUTHENTICATED_VERTICAL_SLICE.md` | backend R2 `4ebe7d95f33f14d3e650bcfa54a117bfd56373e1` / `97791d71bbced9b7eedd44f9af80df4e31353738`; frontend `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `8265b094be937c8909e3aeb350253a96ad35ebe5` / `dc36ad76ba5f21d9eaafee3b523e20c4f26ab69d`; source `c98b4edfa64b6711d290947ea61236573e029dd2` / `15be1c29422b0079acce3c9220e0413eab750df8` | Parent-transmitted B3B execution authority records B4 acceptance without rewriting its immutable B4 evidence. |
 | B3B | `ACCEPTED` | Accepted B4 checkpoint | `B3B_THINNER_V1_MEDIA_COMPLETION.md` | backend `60a0ab2b8fb142115eccf93c3c82e72d473ca94b` / `686e665bc350e17fad5a81f8c52b77825e067cc2`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `d59a130164dd31fc38261cb855dea54a5c57b7d2` / `bcb4d754c9f13b035986cb3d61d2a61b7fc2f9ec` | Parent-transmitted C2 execution authority records B3B acceptance without rewriting immutable B3B evidence. |
 | C2 | `ACCEPTED` | Accepted B3B checkpoint | `C2_DETERMINISTIC_FOUNDATIONS.md` | backend `bb8acafb63b74419a7188c52fe1a154b44904c73` / `f9c3e2e6cffb2c749f9911ebea093edd79ba428e`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `c89a717ef356142d48236213481dd496b14a9234` / `c0ef4bf53c8170bcb59527fff78d20a33b54f737` | Parent-transmitted C3 authority records C2 acceptance without rewriting immutable C2 evidence. |
-| C3-R0 | `EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted C2 checkpoint | `C3_R0_SHARED_EVIDENCE_MODEL_DERIVATION_PROVENANCE.md` | backend `896a8d23e9956cf35faf627dc6738d358995981f` / `5fc55603a7fba155372290d1bbb44c18628000ac`; frontend unchanged; final authority identity reported by runner | Exact five-class provenance, additive migration 89, durable parent Evidence lineage, preserved same-capability support, clean/upgrade PostgreSQL proof, regressions, and normal publication passed. Not self-accepted. |
-| C3 | `PAUSED_PENDING_C3_R0_ACCEPTANCE` | Accepted C2 checkpoint plus accepted C3-R0 recovery | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | — | Initial execution correctly stopped for shared-provenance scope expansion; no C3 semantics were implemented. |
+| C3-R0 | `ACCEPTED` | Accepted C2 checkpoint | `C3_R0_SHARED_EVIDENCE_MODEL_DERIVATION_PROVENANCE.md` | backend `896a8d23e9956cf35faf627dc6738d358995981f` / `5fc55603a7fba155372290d1bbb44c18628000ac`; authority `41cebd920d2578745d25cc2cfe581da3b4bbfc23` / `9ad5c4d8b90e8eda7cc48586e395bb74fcb4ad5e`; frontend unchanged | Parent-transmitted resumed C3 authority records C3-R0 acceptance without rewriting its immutable evidence. |
+| C3 | `EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted C3-R0 checkpoint | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | backend `2b56fc4eea16c52a5cb544aedefa0d7ce809b425` / `7bdca009a11b34bb682eafbe320e14c550dabb27`; frontend unchanged; final authority identity reported by runner | Initial scope stop retained as valid discovery. Resumed C3 implements strict per-media semantics, exact persisted C2 consumption, deterministic likely-collab, capability-owned MODEL_DERIVATION Evidence, replay/failure safety, and canonical non-ownership. 108 focused predecessor/C3 tests plus final 24-test C3 rerun passed. Not self-accepted. |
 | C4 | `NOT_STARTED` | Accepted C3 checkpoint | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | — |
 | C1 | `NOT_STARTED` | Post-C4 separate authority | `C1_SYNC_COORDINATOR.md` | — | — |
 | D1 | `NOT_STARTED` | Accepted C4 checkpoints | `D1_SOURCE_ISOLATED_GENERATIONS.md` | — | — |
@@ -141,4 +144,16 @@ The exact authority checkpoint commit and tree containing this ledger are report
   ObservationSupport; and represented cross-capability lineage only through
   target Evidence provenance. Clean and 88→89 PostgreSQL paths passed, migration
   88 stayed byte-identical, and no C3 semantics or live provider/model call
-  occurred. C3 remains paused pending R0 acceptance; C4 remains prohibited.
+  occurred. At that checkpoint C3 remained paused pending R0 acceptance; C4
+  remained prohibited.
+- Parent-transmitted resumed authority accepted C3-R0 and authorized C3. The
+  resumed C3 run used one primary run and zero normal correction cycles. It
+  preserves field-level AVAILABLE/UNKNOWN state, LOW/MEDIUM model confidence,
+  the exact likely-collab decision matrix, canonical Creator/Collaboration
+  non-ownership, and unique exact-name-only Offering linking. Four
+  capability-owned MODEL_DERIVATION Evidence slices use relevant exact parent
+  subsets and same-capability ObservationSupport. Clean PostgreSQL applied all
+  89 migrations; 108 focused predecessor/C3 tests passed, followed by the final
+  24-test C3 rerun. No live Graph/model call, raw media persistence, schema,
+  migration, frontend, API, Object/current, or C4 work occurred. C3 awaits
+  Child-SA/Program-Orchestrator review; C4 remains prohibited.
