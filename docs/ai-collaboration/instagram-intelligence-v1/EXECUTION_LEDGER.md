@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = E1_BRAND_CENTRE_NAVIGATION_EVIDENCE_READY_FOR_REVIEW
+CURRENT_PACKET = E2_E3_COMBINED_EVIDENCE_READY_FOR_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -54,17 +54,31 @@ D_COMBINED_ACCEPTED = YES
 D_COMBINED_PRIMARY_RUNS_USED = 1
 D_COMBINED_CORRECTION_CYCLES_USED = 0
 HIDDEN_BRAND_LANE = ACCEPTED_FOR_V1
-WAVE_E = E1_EVIDENCE_READY_AWAITING_ACCEPTANCE
+WAVE_E = E2_E3_COMBINED_EVIDENCE_READY_AWAITING_ACCEPTANCE
 WAVE_E_DOES_NOT_CONSUME_D_COMBINED = YES
 PLANNED_SEQUENCE = C1_ACCEPTANCE -> D_COMBINED -> E1 -> E2_E3_COMBINED -> E4
-E1 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
-E1_ACCEPTED = NO
+E1 = ACCEPTED
+E1_ACCEPTED = YES
 E1_EVIDENCE_READY = YES
 E1_DEPENDENCY = ACCEPTED_C4_C1_D_COMBINED_CURRENT_CHECKPOINTS
 E1_PRIMARY_RUNS_USED = 1
 E1_CORRECTION_CYCLES_USED = 0
 E1_PREDECESSOR_RECOVERY_RUNS_USED = 2
-E1_PREDECESSOR_BOOT_RECOVERY = EVIDENCE_READY_AWAITING_ACCEPTANCE
+E1_PREDECESSOR_BOOT_RECOVERY = ACCEPTED
+E2_E3_COMBINED = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
+E2_E3_COMBINED_ACCEPTED = NO
+E2_E3_COMBINED_EVIDENCE_READY = YES
+E2_E3_COMBINED_PRIMARY_RUNS_USED = 1
+E2_E3_COMBINED_CORRECTION_CYCLES_USED = 1
+INSTAGRAM_WORKSPACE = SINGULAR_NO_INNER_TABS
+INSTAGRAM_WORKSPACE_WINDOW = FIXED_30_DAYS_V1
+MANUAL_REFRESH = C1_ROLE_AND_COOLDOWN_GOVERNED
+SETTINGS_MUTATIONS = DEEP_LINK_ONLY
+SEMANTIC_EDITING = NOT_SUPPORTED
+HIDDEN_BRAND_LANE_DISPLAY = PROHIBITED
+E4_DETAIL_DRILLDOWN = NOT_STARTED
+E4 = NOT_STARTED
+WAVE_F = NOT_STARTED
 BACKEND_RECOVERY_1 = INSTAGRAM_DE_CONTRACT_IMPORT_INITIALIZATION_ORDER_ONLY
 BACKEND_RECOVERY_2 = BRAND_SETTINGS_CONSUMER_BOUNDED_NEST_MODULE_WIRING
 BACKEND_MIGRATIONS = UNCHANGED_AT_90
@@ -85,9 +99,9 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
-| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | C1 evidence/ledger final commit and tree reported by runner after normal publication |
+| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | E2/E3 combined evidence/ledger final commit and tree reported by runner after normal publication |
 | `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | E1 predecessor recovery `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; normal publication and fetch-back equality passed |
-| `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E1 `e36b8755deb4d584150bcaa0097e62f4c0f44d34` / `f263ea3eb92d476c6b8313263165e6512bbc7436`; normal publication and fetch-back equality passed |
+| `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E2/E3 combined `e99ef1eb04615213a93250714be85f21c47aeefc` / `cb48092812129c06c75971787f8b801eef0c4d35`; normal publication and fetch-back equality passed |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
 
@@ -114,8 +128,8 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | D2 | `SUPERSEDED_BY_D_COMBINED` | — | — | — | No implementation performed. |
 | D3 | `SUPERSEDED_BY_D_COMBINED` | — | — | — | No implementation performed. |
 | D_COMBINED | `ACCEPTED` | Accepted C1 checkpoint | `D_COMBINED_HIDDEN_BRAND_LANE.md` | backend `006346d39e253cca31a979804c9f17f45761027b` / tree `9924d09210ef0fe5435a7998ff01851961b3708e`; frontend unchanged; authority `cd22693faa7eceb1593f2cfed7a1160ca0d783cf` / tree `8dcc052d29455e433ab089715e439e45103549a2` | Parent-transmitted E1 recovery authority records D_COMBINED acceptance without rewriting immutable D_COMBINED evidence. |
-| E1 | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted C4, C1 and D_COMBINED checkpoints | `E1_BRAND_CENTRE_NAVIGATION.md` | backend recovery `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e36b8755deb4d584150bcaa0097e62f4c0f44d34` / tree `f263ea3eb92d476c6b8313263165e6512bbc7436`; final authority identity reported by runner | Shared six-workspace shell, exact 767/768 boundary, role-safe authenticated browser matrix and predecessor boot recovery passed; not self-accepted. |
-| E2_E3_COMBINED | `NOT_STARTED` | Accepted E1 checkpoint | future packet | — | — |
+| E1 | `ACCEPTED` | Accepted C4, C1 and D_COMBINED checkpoints | `E1_BRAND_CENTRE_NAVIGATION.md` | backend recovery `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e36b8755deb4d584150bcaa0097e62f4c0f44d34` / tree `f263ea3eb92d476c6b8313263165e6512bbc7436`; authority `2e0497601491bd7d63e7b307a4fdc3e70cf30948` / tree `84223c102cd9445898ca8c48f7757cdce768b3e6` | Parent-transmitted E2/E3 authority records E1 and its predecessor boot recovery accepted without rewriting immutable E1 evidence. |
+| E2_E3_COMBINED | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted E1 checkpoint | `E2_E3_COMBINED_INSTAGRAM_WORKSPACE.md` | backend unchanged `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e99ef1eb04615213a93250714be85f21c47aeefc` / tree `cb48092812129c06c75971787f8b801eef0c4d35`; final authority identity reported by runner | Singular fixed-30-day workspace, strict consumer parser, lifecycle/current preservation, C1 refresh authority, role/tenant isolation, four-width browser and Axe gates passed; not self-accepted. |
 | E4 | `NOT_STARTED` | Accepted E2_E3_COMBINED checkpoint | `E4_RESPONSIVE_ACCESSIBILITY.md` | — | — |
 | F1 | `NOT_STARTED` | Accepted E4 checkpoints | `F1_BACKEND_INTEGRATED_ACCEPTANCE.md` | — | — |
 | F2 | `NOT_STARTED` | Accepted F1 checkpoints | `F2_BROWSER_CROSS_DOMAIN_DELETE_ACCEPTANCE.md` | — | — |
@@ -286,3 +300,15 @@ The exact authority checkpoint commit and tree containing this ledger are report
   authenticated API smoke, 390/767/768/1440 browser navigation and Axe gates
   passed. No schema, migration, dependency, provider/model call, raw-media
   persistence, E2/E3, E4 or Wave F work occurred. E1 awaits review.
+- Parent-transmitted E2/E3 combined authority accepted E1 and its bounded
+  predecessor boot recovery. E2/E3 adds only the singular fixed-30-day
+  Instagram workspace to the accepted E1 shell, consumes the complete C4/C1
+  aggregate through a strict parser, preserves current data across transient
+  failures, and delegates lifecycle mutation to Settings. C1-governed manual
+  refresh, role/tenant isolation, exact 390/767/768/1440 rendering, keyboard
+  focus, no-overflow and zero-serious/critical Axe gates passed. Frontend is
+  published at `e99ef1eb04615213a93250714be85f21c47aeefc` / tree
+  `cb48092812129c06c75971787f8b801eef0c4d35`; backend remained byte-identical.
+  One primary run and one bounded correction cycle were used. No dependency,
+  schema, migration, backend, live provider/model call, raw-media persistence,
+  hidden Brand display, E4 or Wave F work occurred. E2/E3 awaits review.
