@@ -20,7 +20,7 @@ WAVE_F = NOT_STARTED
 | Repository | Starting SHA / tree | Published E4 SHA / tree |
 |---|---|---|
 | Backend | `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / `67d2642871899fda9e7bd9248b8d56892c3d6e6d` | unchanged |
-| Frontend | `e99ef1eb04615213a93250714be85f21c47aeefc` / `cb48092812129c06c75971787f8b801eef0c4d35` | `b8f4f966bd7772cc5d716f8e2134401eeeb0bb4c` / `45f3dfad39bfc2a616f09faf27aa45c055097dda` |
+| Frontend | `e99ef1eb04615213a93250714be85f21c47aeefc` / `cb48092812129c06c75971787f8b801eef0c4d35` | `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` |
 | Authority | `24834cda2d139dc956e574e54a6ca943e58301fa` / `139949eea31ee24ac399ebc38ad02a84a5e2888c` | final SHA/tree reported by the runner after normal publication |
 
 Starting local and fetched-remote identities, trees and accepted ancestry were
