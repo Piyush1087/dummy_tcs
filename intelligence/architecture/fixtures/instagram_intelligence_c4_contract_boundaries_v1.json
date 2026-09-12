@@ -2,6 +2,67 @@
   "fixture_set": "instagram_intelligence_c4_contract_boundaries",
   "version": "1.0",
   "status": "FROZEN",
+  "path_alignment": {
+    "authority": "C4-R1_OWNED_PATH_ALIGNMENT_AUTHORITY_RECOVERY",
+    "root_path": "$",
+    "root_semantics": "COMPLETE_OBJECT_SHAPED_BASE_VALUE",
+    "non_root_grammar": "$/f/components/f/<registeredComponent>",
+    "container_ownership_path_added": false,
+    "objects": [
+      {
+        "object_id": "instagram_content_behavior",
+        "mappings": [
+          {"component": "window", "path": "$/f/components/f/window", "assembled_location": "components.window"},
+          {"component": "corpus_summary", "path": "$/f/components/f/corpus_summary", "assembled_location": "components.corpus_summary"},
+          {"component": "posting_cadence", "path": "$/f/components/f/posting_cadence", "assembled_location": "components.posting_cadence"},
+          {"component": "format_mix", "path": "$/f/components/f/format_mix", "assembled_location": "components.format_mix"},
+          {"component": "theme_patterns", "path": "$/f/components/f/theme_patterns", "assembled_location": "components.theme_patterns"},
+          {"component": "caption_patterns", "path": "$/f/components/f/caption_patterns", "assembled_location": "components.caption_patterns"},
+          {"component": "creative_structure_patterns", "path": "$/f/components/f/creative_structure_patterns", "assembled_location": "components.creative_structure_patterns"},
+          {"component": "offering_presence_patterns", "path": "$/f/components/f/offering_presence_patterns", "assembled_location": "components.offering_presence_patterns"},
+          {"component": "creator_presence_patterns", "path": "$/f/components/f/creator_presence_patterns", "assembled_location": "components.creator_presence_patterns"},
+          {"component": "representative_media_refs", "path": "$/f/components/f/representative_media_refs", "assembled_location": "components.representative_media_refs"},
+          {"component": "bounded_learnings", "path": "$/f/components/f/bounded_learnings", "assembled_location": "components.bounded_learnings"},
+          {"component": "coverage", "path": "$/f/components/f/coverage", "assembled_location": "components.coverage"}
+        ]
+      },
+      {
+        "object_id": "instagram_audience_profile",
+        "mappings": [
+          {"component": "window", "path": "$/f/components/f/window", "assembled_location": "components.window"},
+          {"component": "follower_audience", "path": "$/f/components/f/follower_audience", "assembled_location": "components.follower_audience"},
+          {"component": "engaged_audience", "path": "$/f/components/f/engaged_audience", "assembled_location": "components.engaged_audience"},
+          {"component": "distribution_concentration", "path": "$/f/components/f/distribution_concentration", "assembled_location": "components.distribution_concentration"},
+          {"component": "material_differences", "path": "$/f/components/f/material_differences", "assembled_location": "components.material_differences"},
+          {"component": "limitations", "path": "$/f/components/f/limitations", "assembled_location": "components.limitations"},
+          {"component": "coverage", "path": "$/f/components/f/coverage", "assembled_location": "components.coverage"},
+          {"component": "summary", "path": "$/f/components/f/summary", "assembled_location": "components.summary"}
+        ]
+      },
+      {
+        "object_id": "instagram_organic_performance_profile",
+        "mappings": [
+          {"component": "window", "path": "$/f/components/f/window", "assembled_location": "components.window"},
+          {"component": "account_results", "path": "$/f/components/f/account_results", "assembled_location": "components.account_results"},
+          {"component": "metric_coverage", "path": "$/f/components/f/metric_coverage", "assembled_location": "components.metric_coverage"},
+          {"component": "format_baselines", "path": "$/f/components/f/format_baselines", "assembled_location": "components.format_baselines"},
+          {"component": "response_distribution", "path": "$/f/components/f/response_distribution", "assembled_location": "components.response_distribution"},
+          {"component": "high_response_cohorts", "path": "$/f/components/f/high_response_cohorts", "assembled_location": "components.high_response_cohorts"},
+          {"component": "low_response_cohorts", "path": "$/f/components/f/low_response_cohorts", "assembled_location": "components.low_response_cohorts"},
+          {"component": "content_performance_signals", "path": "$/f/components/f/content_performance_signals", "assembled_location": "components.content_performance_signals"},
+          {"component": "snapshot_change", "path": "$/f/components/f/snapshot_change", "assembled_location": "components.snapshot_change"},
+          {"component": "representative_media_refs", "path": "$/f/components/f/representative_media_refs", "assembled_location": "components.representative_media_refs"},
+          {"component": "bounded_learnings", "path": "$/f/components/f/bounded_learnings", "assembled_location": "components.bounded_learnings"},
+          {"component": "coverage", "path": "$/f/components/f/coverage", "assembled_location": "components.coverage"}
+        ]
+      }
+    ],
+    "invalid_old_form": {
+      "path": "$/f/corpus_summary",
+      "assembled_location": "corpus_summary",
+      "strict_schema_result": "REJECTED_UNKNOWN_TOP_LEVEL_PROPERTY"
+    }
+  },
   "cases": [
     {"id": "complete_object", "valid": true, "object_id": "instagram_content_behavior", "state": "CURRENT", "readiness": "READY", "components": {"window": "AVAILABLE", "corpus_summary": "AVAILABLE", "posting_cadence": "AVAILABLE", "format_mix": "AVAILABLE", "theme_patterns": "AVAILABLE", "caption_patterns": "AVAILABLE", "creative_structure_patterns": "AVAILABLE", "offering_presence_patterns": "AVAILABLE", "creator_presence_patterns": "AVAILABLE", "representative_media_refs": "AVAILABLE", "bounded_learnings": "AVAILABLE", "coverage": "AVAILABLE"}},
     {"id": "partial_object", "valid": true, "object_id": "instagram_audience_profile", "state": "PARTIAL_CURRENT", "readiness": "PARTIAL", "components": {"window": "AVAILABLE", "follower_audience": "AVAILABLE", "engaged_audience": "UNKNOWN", "distribution_concentration": "UNKNOWN", "material_differences": "INTENTIONALLY_ABSENT", "limitations": "AVAILABLE", "coverage": "AVAILABLE", "summary": "AVAILABLE"}},

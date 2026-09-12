@@ -9,6 +9,13 @@
     "object_contract_version": "1.0",
     "output_contract_version": "1.0"
   },
+  "path_map_authority": {
+    "correction": "C4-R1_OWNED_PATH_ALIGNMENT_AUTHORITY_RECOVERY",
+    "root_path": "$",
+    "non_root_grammar": "$/f/components/f/<registeredComponent>",
+    "container_ownership_path_added": false,
+    "supersedes": "C4-R0_NON_ROOT_$/f/<component>_PATH_MAP"
+  },
   "activation": {
     "b4_content_processor_1_0": "IMMUTABLE_HISTORICALLY_VERIFIABLE",
     "c4_content_processor_1_1": "SOLE_ACTIVE_OWNER_AT_C4_ACTIVATION",
@@ -40,7 +47,7 @@
       "object_contract_version": "1.0",
       "public_payload_output_contract_version": "1.0",
       "authority_root": "intelligence/engines/instagram_intelligence/branches/content_behavior_complete",
-      "owned_paths": ["$", "$/f/window", "$/f/corpus_summary", "$/f/posting_cadence", "$/f/format_mix", "$/f/theme_patterns", "$/f/caption_patterns", "$/f/creative_structure_patterns", "$/f/offering_presence_patterns", "$/f/creator_presence_patterns", "$/f/representative_media_refs", "$/f/bounded_learnings", "$/f/coverage"],
+      "owned_paths": ["$", "$/f/components/f/window", "$/f/components/f/corpus_summary", "$/f/components/f/posting_cadence", "$/f/components/f/format_mix", "$/f/components/f/theme_patterns", "$/f/components/f/caption_patterns", "$/f/components/f/creative_structure_patterns", "$/f/components/f/offering_presence_patterns", "$/f/components/f/creator_presence_patterns", "$/f/components/f/representative_media_refs", "$/f/components/f/bounded_learnings", "$/f/components/f/coverage"],
       "input_capabilities": ["instagram.media_inventory", "instagram.media_insights", "instagram.caption_context", "instagram.media_visual_observations", "instagram.media_creator_signals", "instagram.media_offering_signals"]
     },
     {
@@ -55,7 +62,7 @@
       "object_contract_version": "1.0",
       "public_payload_output_contract_version": "1.0",
       "authority_root": "intelligence/engines/instagram_intelligence/branches/audience_profile",
-      "owned_paths": ["$", "$/f/window", "$/f/follower_audience", "$/f/engaged_audience", "$/f/distribution_concentration", "$/f/material_differences", "$/f/limitations", "$/f/coverage", "$/f/summary"],
+      "owned_paths": ["$", "$/f/components/f/window", "$/f/components/f/follower_audience", "$/f/components/f/engaged_audience", "$/f/components/f/distribution_concentration", "$/f/components/f/material_differences", "$/f/components/f/limitations", "$/f/components/f/coverage", "$/f/components/f/summary"],
       "input_capabilities": ["instagram.account_profile", "instagram.audience_followers", "instagram.audience_engaged"]
     },
     {
@@ -70,7 +77,7 @@
       "object_contract_version": "1.0",
       "public_payload_output_contract_version": "1.0",
       "authority_root": "intelligence/engines/instagram_intelligence/branches/performance",
-      "owned_paths": ["$", "$/f/window", "$/f/account_results", "$/f/metric_coverage", "$/f/format_baselines", "$/f/response_distribution", "$/f/high_response_cohorts", "$/f/low_response_cohorts", "$/f/content_performance_signals", "$/f/snapshot_change", "$/f/representative_media_refs", "$/f/bounded_learnings", "$/f/coverage"],
+      "owned_paths": ["$", "$/f/components/f/window", "$/f/components/f/account_results", "$/f/components/f/metric_coverage", "$/f/components/f/format_baselines", "$/f/components/f/response_distribution", "$/f/components/f/high_response_cohorts", "$/f/components/f/low_response_cohorts", "$/f/components/f/content_performance_signals", "$/f/components/f/snapshot_change", "$/f/components/f/representative_media_refs", "$/f/components/f/bounded_learnings", "$/f/components/f/coverage"],
       "input_capabilities": ["instagram.account_profile", "instagram.media_inventory", "instagram.media_insights", "instagram.caption_context", "instagram.media_visual_observations", "instagram.media_creator_signals", "instagram.media_offering_signals"],
       "derived_inputs": ["accepted_c2_deterministic_derivations", "accepted_c3_semantic_observations"]
     }
@@ -78,6 +85,8 @@
   "ownership_proof": {
     "active_objects": 3,
     "active_unique_owned_paths": 35,
+    "root_paths": 3,
+    "non_root_paths": 32,
     "missing_registered_component_paths": 0,
     "extra_component_paths": 0,
     "duplicate_active_owners": 0

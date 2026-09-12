@@ -1,6 +1,6 @@
 # Instagram Intelligence C4-R0 — Executable Contract Authority
 
-**Status:** `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE`
+**Status:** `ACCEPTED_EXCEPT_PATH_MAP_SUPERSEDED_BY_C4_R1`
 
 **Execution date:** 2026-09-12
 
@@ -9,6 +9,10 @@
 ## Accepted circuit breaker and starting identity
 
 The Program accepted `C4_EXECUTABLE_CONTRACT_AUTHORITY_REQUIRED` as a true circuit breaker. This recovery started from exact authority `087bfa526264e2388188e473738643078758cdcb` / tree `4bd633b64d1fc3915c98293b4eb295ab992cca50`, backend `c592d7b1731b15cce9609efafbe7d689a5ca8744` / tree `922ad1bb363ce85c3dd73cee1daf65062d99b0a0`, and frontend `bc8523183ae4892c0b538474d2f5444a1ea356d8` / tree `7f3016c01500083ae2f536ebd0540219c9228dd7`. All local/fetched identities matched and all worktrees were clean.
+
+## C4-R1 path-map erratum
+
+C4-R0's non-root `$/f/<component>` addresses are superseded by C4-R1's canonical `$/f/components/f/<component>` addresses. The Object root `$`, processor and contract identities, component sets, thresholds, provenance rules, and every other C4-R0 invariant remain unchanged. The corrected machine register and C4-R1 path-alignment fixture are authoritative for owned semantic paths. No `$/f/components` container ownership path is introduced.
 
 ## Frozen executable authority
 

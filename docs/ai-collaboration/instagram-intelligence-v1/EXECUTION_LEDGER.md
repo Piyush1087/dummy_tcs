@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = C4_R0_EXECUTABLE_CONTRACT_AUTHORITY_EVIDENCE_READY_FOR_REVIEW
+CURRENT_PACKET = C4_R1_OWNED_PATH_ALIGNMENT_AUTHORITY_EVIDENCE_READY_FOR_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -31,11 +31,16 @@ C3_NORMAL_CORRECTION_CYCLES_USED = 2
 C4_CIRCUIT_BREAKER = ACCEPTED
 C4_PRIMARY_RUNS_USED = 1
 C4_CORRECTION_CYCLES_USED = 0
-C4_R0 = EVIDENCE_READY_FOR_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW
-C4_R0_ACCEPTED = NO
+C4_R0 = PRESERVED_EXCEPT_PATH_MAP
+C4_R0_PATH_MAP = SUPERSEDED_BY_C4_R1
+C4_R0_ACCEPTED = YES
 C4_R0_PRIMARY_RUNS_USED = 1
 C4_R0_CORRECTION_CYCLES_USED = 0
-C4 = PROHIBITED_PENDING_C4_R0_ACCEPTANCE
+C4_AUTHORITY_RECOVERY_PACKETS_USED = 2
+C4_RESUMED_RUNS_USED = 1
+C4_R1 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
+C4_R1_ACCEPTED = NO
+C4 = PROHIBITED_PENDING_C4_R1_ACCEPTANCE
 C1 = NOT_STARTED
 D_COMBINED = MANDATORY_V1_NOT_STARTED
 WAVE_E = NOT_STARTED
@@ -77,8 +82,9 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | C2 | `ACCEPTED` | Accepted B3B checkpoint | `C2_DETERMINISTIC_FOUNDATIONS.md` | backend `bb8acafb63b74419a7188c52fe1a154b44904c73` / `f9c3e2e6cffb2c749f9911ebea093edd79ba428e`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `c89a717ef356142d48236213481dd496b14a9234` / `c0ef4bf53c8170bcb59527fff78d20a33b54f737` | Parent-transmitted C3 authority records C2 acceptance without rewriting immutable C2 evidence. |
 | C3-R0 | `ACCEPTED` | Accepted C2 checkpoint | `C3_R0_SHARED_EVIDENCE_MODEL_DERIVATION_PROVENANCE.md` | backend `896a8d23e9956cf35faf627dc6738d358995981f` / `5fc55603a7fba155372290d1bbb44c18628000ac`; authority `41cebd920d2578745d25cc2cfe581da3b4bbfc23` / `9ad5c4d8b90e8eda7cc48586e395bb74fcb4ad5e`; frontend unchanged | Parent-transmitted resumed C3 authority records C3-R0 acceptance without rewriting its immutable evidence. |
 | C3 | `ACCEPTED` | Accepted C3-R0 checkpoint; correction-1 predecessor `6de358233cba92652057817cfd215f16ec8523ce` | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | backend correction 2 `c592d7b1731b15cce9609efafbe7d689a5ca8744` / `922ad1bb363ce85c3dd73cee1daf65062d99b0a0`; frontend unchanged; authority `087bfa526264e2388188e473738643078758cdcb` / `4bd633b64d1fc3915c98293b4eb295ab992cca50` | Parent-transmitted C4 authority records C3 acceptance after two correction cycles without rewriting immutable C3 evidence. |
-| C4-R0 | `EVIDENCE_READY_FOR_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | Accepted C4 executable-contract circuit breaker; authority `087bfa526264e2388188e473738643078758cdcb` | `C4_R0_EXECUTABLE_CONTRACT_AUTHORITY.md` | Final authority identity reported by runner | Three frozen C4 processor authorities; exact 35-path ownership; B4 1.0 immutable; backend/frontend unchanged. Not self-accepted. |
-| C4 | `PROHIBITED_PENDING_C4_R0_ACCEPTANCE` | Accepted C3 checkpoint plus accepted C4-R0 authority required | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | Initial run stopped before mutation at accepted executable-contract circuit breaker. |
+| C4-R0 | `ACCEPTED_EXCEPT_PATH_MAP_SUPERSEDED_BY_C4_R1` | Accepted C4 executable-contract circuit breaker; authority `087bfa526264e2388188e473738643078758cdcb` | `C4_R0_EXECUTABLE_CONTRACT_AUTHORITY.md` | authority `fb6bc8ca1ef7b3852026c3b684dc625cda974879` / tree `0bd3f79b97134f79b4cd7d68766e091bd6d369a3` | Three frozen C4 processor authorities and B4 1.0 immutability preserved. Its erroneous non-root path map is superseded only by C4-R1. |
+| C4-R1 | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted C4-R0 authority `fb6bc8ca1ef7b3852026c3b684dc625cda974879` / tree `0bd3f79b97134f79b4cd7d68766e091bd6d369a3` | `C4_R1_OWNED_PATH_ALIGNMENT_AUTHORITY.md` | Final authority identity reported by runner | Authority-only correction from `$/f/<component>` to `$/f/components/f/<component>`; real codec/assembler/strict-schema validation; backend/frontend unchanged. Not self-accepted. |
+| C4 | `PROHIBITED_PENDING_C4_R1_ACCEPTANCE` | Accepted C3 checkpoint plus accepted C4-R0 invariants and accepted C4-R1 path map required | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | Resumed run found the C4-R0 path/schema/assembler conflict and stopped without implementation. |
 | C1 | `NOT_STARTED` | Post-C4 separate authority | `C1_SYNC_COORDINATOR.md` | — | — |
 | D1 | `NOT_STARTED` | Accepted C4 checkpoints | `D1_SOURCE_ISOLATED_GENERATIONS.md` | — | — |
 | D2 | `NOT_STARTED` | Accepted D1 checkpoint | `D2_INSTAGRAM_BRAND_SOURCE_PROFILES.md` | — | — |
@@ -197,3 +203,11 @@ The exact authority checkpoint commit and tree containing this ledger are report
   and the activation rule that keeps B4 1.0 historical while making content 1.1
   the sole active C4 owner. Backend and frontend remain unchanged. C4, C1,
   D_COMBINED, and Wave E remain prohibited pending separate acceptance.
+- Parent-transmitted resumed C4 authority accepted C4-R0, then the resumed run
+  correctly stopped without a commit because C4-R0's `$/f/<component>` paths
+  assembled invalid top-level fields against the strict public Object schema.
+  C4-R1 is the second authority recovery packet: it preserves every other C4-R0
+  invariant and supersedes only non-root ownership with the canonical
+  `$/f/components/f/<component>` grammar. C4 remains prohibited pending C4-R1
+  acceptance. Accounting remains one primary run, one resumed run, two authority
+  recovery packets, and zero normal correction cycles.

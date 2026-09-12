@@ -3,8 +3,11 @@
   "status": "A2_ADDITIVE_TECHNICAL_CONTRACT",
   "source_scope": "INSTAGRAM_OWNED",
   "c4_executable_authority": {
-    "status": "FROZEN_PENDING_C4_R0_ACCEPTANCE",
+    "status": "C4_R1_PATH_MAP_EVIDENCE_READY_PENDING_ACCEPTANCE",
     "register": "intelligence/architecture/instagram_intelligence_c4_executable_authority_v1.json",
+    "path_map_correction": "C4-R1_OWNED_PATH_ALIGNMENT_AUTHORITY_RECOVERY",
+    "non_root_path_grammar": "$/f/components/f/<registeredComponent>",
+    "c4_r0_path_map": "SUPERSEDED_BY_C4_R1",
     "active_processor_count_at_c4_activation": 3,
     "active_unique_owned_path_count": 35,
     "b4_content_processor_1_0": "IMMUTABLE_HISTORICAL",
