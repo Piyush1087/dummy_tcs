@@ -1,6 +1,6 @@
 # Instagram Intelligence C3 — Per-media semantics and likely collaboration
 
-**Status:** `CORRECTION_1_EVIDENCE_READY_FOR_CHILD_SA_REVIEW`
+**Status:** `CORRECTION_2_EVIDENCE_READY_FOR_CHILD_SA_REVIEW`
 
 **Execution date:** 2026-09-12
 
@@ -121,11 +121,27 @@ Verification: immutable `npm ci` left `package.json` and `package-lock.json` byt
 
 The bounded backend correction was normally pushed and fetched back equal at `6de358233cba92652057817cfd215f16ec8523ce` / tree `c369d9b8fd8d15210916825da52e3715fd904a9e`; the accepted C3 predecessor is an ancestor. No live Graph/model call, schema/migration, capability, public contract, frontend, API, canonical mutation, current/Object, or C4 work occurred.
 
+## C3 correction cycle 2 — token boundaries and deterministic canonicalization
+
+Correction cycle 2 started from exact backend `6de358233cba92652057817cfd215f16ec8523ce` / tree `c369d9b8fd8d15210916825da52e3715fd904a9e`, authority `41ff597bebd30c9326d54bf87bc95313f5994d92` / tree `c363cebba23f6b8777f6a21f22980f01d34b6102`, and unchanged frontend `bc8523183ae4892c0b538474d2f5444a1ea356d8` / tree `7f3016c01500083ae2f536ebd0540219c9228dd7`. Local/fetched equality, clean worktrees, migration identity, and correction-cycle-1 ancestry passed before mutation.
+
+Mention tokenization now admits only bounded Instagram-style handles at textual/token boundaries. Email domains, embedded word/identifier fragments, `foo.@maker`, URL path/query fragments, and repeated email-like fragments produce no mention. Genuine mentions at caption start or after whitespace, parentheses, quotes, commas, and ordinary punctuation are Unicode-normalized, lowercased, deduplicated, and code-point sorted. `MENTION_ONLY` remains deterministic-only; model candidates still cannot emit it.
+
+One shared normalized phrase-boundary matcher now grounds exact Offering names and collaboration-cue support. It normalizes Unicode, case, and whitespace, requires a contiguous phrase with complete token boundaries, accepts punctuation-delimited phrases, and rejects larger-word/token substrings such as `Serum A` in `Serum Advanced`, `MySerum A`, or `Serum` in `SerumPlus`. No fuzzy, stemming, semantic-similarity, or generalized search behavior was added.
+
+Semantic values are grouped by normalized label identity, union all admitted support modalities, code-point sort the union, recalculate refs/confidence server-side, and select a deterministic display label. Every permutation of the same logical candidates produces identical normalized output and canonical hash; CAPTION plus VISUAL yields one value, exactly two refs, and MEDIUM. Candidate-provided confidence does not override the server result.
+
+Exact duplicate cues now collapse deterministically by modality, normalized support span, and signal class. The same modality/span under different classes fails closed with `AMBIGUOUS_CUE_CLASSIFICATION` independent of array order. One source span remains one vote. The missing regression confirms deterministic mention plus joint visual appearance without an explicit cue remains `POSSIBLE_COLLAB` / LOW; partnership disclosure plus a distinct joint appearance remains `LIKELY_COLLAB` / MEDIUM; provider relation and HIGH remain unavailable.
+
+Cycle-1 presence grounding, complete negatives, source-grounded exact Offering ownership, same-media changed-input failure preservation, field-parent subsets, C3-R0 provenance, same-capability support, C2 no-recalculation, isolation, replay, and Settings deletion remain green. A clean PostgreSQL 17 database applied all 89 migrations and reported current. The final matrix passed 128 non-C3-PostgreSQL tests serially plus 3/3 isolated C3 PostgreSQL tests (131 total across the same 18 files); focused semantic/model tests were 44/44. Immutable install, Prisma generate/validate, production build, scoped ESLint, diff check, and secret/forbidden-artifact scans passed. Migration 89 remains `12b5a234d322235199dc8ad1173fc4835517ed0a3ed5a6ff910aa48165f118a8`.
+
+The cycle-2 backend correction was normally pushed and fetched back equal at `c592d7b1731b15cce9609efafbe7d689a5ca8744` / tree `922ad1bb363ce85c3dd73cee1daf65062d99b0a0`; correction cycle 1 is an ancestor. No schema, migration, capability, public contract, frontend, API, provider, canonical-domain, raw-media, current/Object, or C4 change occurred.
+
 ## Scope/accounting
 
 `C3_RESUMED_PRIMARY_RUNS_USED = 1`
 
-`C3_NORMAL_CORRECTION_CYCLES_USED = 1`
+`C3_NORMAL_CORRECTION_CYCLES_USED = 2`
 
 `C3_R0_CORRECTION_CYCLES_USED = 1`
 
