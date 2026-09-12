@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = C3_RESUMED_EVIDENCE_READY_FOR_CHILD_SA_REVIEW
+CURRENT_PACKET = C3_CORRECTION_1_EVIDENCE_READY_FOR_CHILD_SA_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -27,7 +27,7 @@ C3_R0_CORRECTION_CYCLES_USED = 1
 C3 = EVIDENCE_READY_FOR_CHILD_SA_REVIEW
 C3_ACCEPTED = NO
 C3_RESUMED_PRIMARY_RUNS_USED = 1
-C3_NORMAL_CORRECTION_CYCLES_USED = 0
+C3_NORMAL_CORRECTION_CYCLES_USED = 1
 C4 = PROHIBITED
 B4_PRIMARY_RUNS_USED = 1
 B4_CORRECTION_CYCLES_USED = 2
@@ -47,7 +47,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
 | `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | C3-R0 artifact/ledger final commit and tree reported by runner after normal publication |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | C3-R0 `896a8d23e9956cf35faf627dc6738d358995981f` / `5fc55603a7fba155372290d1bbb44c18628000ac`; normal publication and fetch-back equality passed |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | C3 correction 1 `6de358233cba92652057817cfd215f16ec8523ce` / `c369d9b8fd8d15210916825da52e3715fd904a9e`; normal publication and fetch-back equality passed |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | B4 implementation `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; publication/fetch-back reported by runner |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -66,7 +66,7 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | B3B | `ACCEPTED` | Accepted B4 checkpoint | `B3B_THINNER_V1_MEDIA_COMPLETION.md` | backend `60a0ab2b8fb142115eccf93c3c82e72d473ca94b` / `686e665bc350e17fad5a81f8c52b77825e067cc2`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `d59a130164dd31fc38261cb855dea54a5c57b7d2` / `bcb4d754c9f13b035986cb3d61d2a61b7fc2f9ec` | Parent-transmitted C2 execution authority records B3B acceptance without rewriting immutable B3B evidence. |
 | C2 | `ACCEPTED` | Accepted B3B checkpoint | `C2_DETERMINISTIC_FOUNDATIONS.md` | backend `bb8acafb63b74419a7188c52fe1a154b44904c73` / `f9c3e2e6cffb2c749f9911ebea093edd79ba428e`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `c89a717ef356142d48236213481dd496b14a9234` / `c0ef4bf53c8170bcb59527fff78d20a33b54f737` | Parent-transmitted C3 authority records C2 acceptance without rewriting immutable C2 evidence. |
 | C3-R0 | `ACCEPTED` | Accepted C2 checkpoint | `C3_R0_SHARED_EVIDENCE_MODEL_DERIVATION_PROVENANCE.md` | backend `896a8d23e9956cf35faf627dc6738d358995981f` / `5fc55603a7fba155372290d1bbb44c18628000ac`; authority `41cebd920d2578745d25cc2cfe581da3b4bbfc23` / `9ad5c4d8b90e8eda7cc48586e395bb74fcb4ad5e`; frontend unchanged | Parent-transmitted resumed C3 authority records C3-R0 acceptance without rewriting its immutable evidence. |
-| C3 | `EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted C3-R0 checkpoint | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | backend `2b56fc4eea16c52a5cb544aedefa0d7ce809b425` / `7bdca009a11b34bb682eafbe320e14c550dabb27`; frontend unchanged; final authority identity reported by runner | Initial scope stop retained as valid discovery. Resumed C3 implements strict per-media semantics, exact persisted C2 consumption, deterministic likely-collab, capability-owned MODEL_DERIVATION Evidence, replay/failure safety, and canonical non-ownership. 108 focused predecessor/C3 tests plus final 24-test C3 rerun passed. Not self-accepted. |
+| C3 | `CORRECTION_1_EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted C3-R0 checkpoint; C3 evidence-ready predecessor `2b56fc4eea16c52a5cb544aedefa0d7ce809b425` | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | backend correction 1 `6de358233cba92652057817cfd215f16ec8523ce` / `c369d9b8fd8d15210916825da52e3715fd904a9e`; frontend unchanged; final authority identity reported by runner | Strict presence modality support, source-grounded exact Offering linkage, deterministic-only MENTION_ONLY, cue class/modality/source admission, field-parent subset checks, and PostgreSQL same-media changed-input failure preservation. 111 focused tests passed. Not self-accepted. |
 | C4 | `NOT_STARTED` | Accepted C3 checkpoint | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | — |
 | C1 | `NOT_STARTED` | Post-C4 separate authority | `C1_SYNC_COORDINATOR.md` | — | — |
 | D1 | `NOT_STARTED` | Accepted C4 checkpoints | `D1_SOURCE_ISOLATED_GENERATIONS.md` | — | — |
@@ -157,3 +157,13 @@ The exact authority checkpoint commit and tree containing this ledger are report
   24-test C3 rerun. No live Graph/model call, raw media persistence, schema,
   migration, frontend, API, Object/current, or C4 work occurred. C3 awaits
   Child-SA/Program-Orchestrator review; C4 remains prohibited.
+- C3 correction cycle 1 used the one authorized normal correction cycle. It
+  replaced scalar presence candidates with strict state/support-modality
+  candidates, grounded exact Offering links and every model cue in admitted
+  source material, made MENTION_ONLY deterministic-only, and proved in real
+  PostgreSQL that changed-input same-media failure publishes no replacement and
+  preserves prior rows plus peer replay. It changed no schema, migration,
+  capability, public contract, frontend, API, provider boundary, or canonical
+  domain. Backend publication/fetch-back equality passed at
+  `6de358233cba92652057817cfd215f16ec8523ce` /
+  `c369d9b8fd8d15210916825da52e3715fd904a9e`; C4 remains prohibited.

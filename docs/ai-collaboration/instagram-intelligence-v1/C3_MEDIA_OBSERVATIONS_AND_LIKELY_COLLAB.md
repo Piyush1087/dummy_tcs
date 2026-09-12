@@ -1,6 +1,6 @@
 # Instagram Intelligence C3 — Per-media semantics and likely collaboration
 
-**Status:** `EVIDENCE_READY_FOR_CHILD_SA_REVIEW`
+**Status:** `CORRECTION_1_EVIDENCE_READY_FOR_CHILD_SA_REVIEW`
 
 **Execution date:** 2026-09-12
 
@@ -103,11 +103,29 @@ Environment: Windows NT `10.0.26200.0` AMD64; Node `v24.19.0`; npm `11.17.0`; Do
 
 The PostgreSQL fixture proved a mixed IMAGE/CAROUSEL/REEL/VIDEO corpus, one observation per successful eligible media, unselected caption-only behavior, representative-child and cover limitations, exact C2 membership/hash consumption, four target-capability derived rows per success, same-capability support, partial peer failure, replay stability, Brand/account/generation/C2 substitution rejection, no current/ObjectGeneration write, no canonical-domain mutation, Settings deletion of target Instagram C3 data, and survival of other-Brand data.
 
+## C3 correction cycle 1 — semantic-evidence grounding
+
+Correction cycle 1 started from exact backend `2b56fc4eea16c52a5cb544aedefa0d7ce809b425` / tree `7bdca009a11b34bb682eafbe320e14c550dabb27`, authority `fcac0f97e9cb8e5f76784ddc2263125d5631e4cb` / tree `ed9c8ad6689660cdbf5941d50fc4385b92a8d736`, and unchanged frontend `bc8523183ae4892c0b538474d2f5444a1ea356d8` / tree `7f3016c01500083ae2f536ebd0540219c9228dd7`. Local/fetched equality, clean status, and predecessor ancestry passed before work.
+
+The internal creator/Offering presence candidates are now strict `{ state, supportModalities }` objects. Positive states require one or more deduplicated, admitted, available caption/visual modalities; `EXPLICIT_EMPTY` cannot support a positive; `UNKNOWN` requires no modalities and emits no refs; and `NOT_OBSERVED` requires exactly caption plus a complete selected-image visual inspection. Final field refs come only from the declared modalities.
+
+An exact canonical Offering ID now additionally requires the exact normalized Offering name to occur in at least one declared, admitted source modality. Unique same-Brand catalog identity without source occurrence remains `null` / `NONE` / `OFFERING_MATCH_UNVERIFIED`. No Offering is created or changed.
+
+`MENTION_ONLY` was removed from model candidate output. It is produced only by deterministic extraction of an actual admitted caption `@mention`, with the caption Evidence ref and LOW/POSSIBLE semantics. Cue admission now enforces the class/modality matrix, verifies normalized support text in the declared admitted caption or bounded visual observation, rejects unavailable or empty support, and collapses duplicate modality/source spans to one vote. Provider relation and HIGH remain unavailable.
+
+Capability slices retain C3-R0 `MODEL_DERIVATION` lineage and same-capability ObservationSupport. Every field Evidence ref was checked as a subset of its derived slice's parent refs; parent sets include only the caption/C2, inspection visual, creator, or Offering Evidence used by that slice and never the derived row itself.
+
+A real PostgreSQL 17 sequence persisted 12 C3 Evidence rows, 12 Semantic Observations, and 12 support rows for three successful peers (four slices each). After the selected image received a later visual Evidence identity and its model fixture failed, no replacement C3 row was published: the 12/12/12 counts remained fixed; that media's four refs, hashes, keys, support rows, and provenance were byte-for-byte equal; the other eight peer refs were unchanged; and exact replay of the prior successful identity returned the same four refs without mutation. Settings deletion reduced the target Brand's Instagram Evidence/Observation/support counts to zero while preserving the other Brand.
+
+Verification: immutable `npm ci` left `package.json` and `package-lock.json` byte-identical (the pre-existing audit result remains 52 advisories: 4 low, 24 moderate, 23 high, 1 critical); Prisma generate/validate passed; a clean disposable database applied all 89 migrations and reported current; 111/111 focused B1/B2/B3A/B3B/B4/C2/C3-R0/C3 tests passed across 18 files; production build, scoped ESLint, and `git diff --check` passed. The scoped secret and forbidden-artifact scan found zero matches. Migration 89 remains `12b5a234d322235199dc8ad1173fc4835517ed0a3ed5a6ff910aa48165f118a8`.
+
+The bounded backend correction was normally pushed and fetched back equal at `6de358233cba92652057817cfd215f16ec8523ce` / tree `c369d9b8fd8d15210916825da52e3715fd904a9e`; the accepted C3 predecessor is an ancestor. No live Graph/model call, schema/migration, capability, public contract, frontend, API, canonical mutation, current/Object, or C4 work occurred.
+
 ## Scope/accounting
 
 `C3_RESUMED_PRIMARY_RUNS_USED = 1`
 
-`C3_NORMAL_CORRECTION_CYCLES_USED = 0`
+`C3_NORMAL_CORRECTION_CYCLES_USED = 1`
 
 `C3_R0_CORRECTION_CYCLES_USED = 1`
 
