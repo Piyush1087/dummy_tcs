@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = C4_R1_OWNED_PATH_ALIGNMENT_AUTHORITY_EVIDENCE_READY_FOR_REVIEW
+CURRENT_PACKET = C4_SECOND_RESUMED_IMPLEMENTATION_EVIDENCE_READY_FOR_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -37,10 +37,11 @@ C4_R0_ACCEPTED = YES
 C4_R0_PRIMARY_RUNS_USED = 1
 C4_R0_CORRECTION_CYCLES_USED = 0
 C4_AUTHORITY_RECOVERY_PACKETS_USED = 2
-C4_RESUMED_RUNS_USED = 1
-C4_R1 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
-C4_R1_ACCEPTED = NO
-C4 = PROHIBITED_PENDING_C4_R1_ACCEPTANCE
+C4_RESUMED_RUNS_USED = 2
+C4_R1 = ACCEPTED
+C4_R1_ACCEPTED = YES
+C4 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
+C4_ACCEPTED = NO
 C1 = NOT_STARTED
 D_COMBINED = MANDATORY_V1_NOT_STARTED
 WAVE_E = NOT_STARTED
@@ -83,8 +84,8 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | C3-R0 | `ACCEPTED` | Accepted C2 checkpoint | `C3_R0_SHARED_EVIDENCE_MODEL_DERIVATION_PROVENANCE.md` | backend `896a8d23e9956cf35faf627dc6738d358995981f` / `5fc55603a7fba155372290d1bbb44c18628000ac`; authority `41cebd920d2578745d25cc2cfe581da3b4bbfc23` / `9ad5c4d8b90e8eda7cc48586e395bb74fcb4ad5e`; frontend unchanged | Parent-transmitted resumed C3 authority records C3-R0 acceptance without rewriting its immutable evidence. |
 | C3 | `ACCEPTED` | Accepted C3-R0 checkpoint; correction-1 predecessor `6de358233cba92652057817cfd215f16ec8523ce` | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | backend correction 2 `c592d7b1731b15cce9609efafbe7d689a5ca8744` / `922ad1bb363ce85c3dd73cee1daf65062d99b0a0`; frontend unchanged; authority `087bfa526264e2388188e473738643078758cdcb` / `4bd633b64d1fc3915c98293b4eb295ab992cca50` | Parent-transmitted C4 authority records C3 acceptance after two correction cycles without rewriting immutable C3 evidence. |
 | C4-R0 | `ACCEPTED_EXCEPT_PATH_MAP_SUPERSEDED_BY_C4_R1` | Accepted C4 executable-contract circuit breaker; authority `087bfa526264e2388188e473738643078758cdcb` | `C4_R0_EXECUTABLE_CONTRACT_AUTHORITY.md` | authority `fb6bc8ca1ef7b3852026c3b684dc625cda974879` / tree `0bd3f79b97134f79b4cd7d68766e091bd6d369a3` | Three frozen C4 processor authorities and B4 1.0 immutability preserved. Its erroneous non-root path map is superseded only by C4-R1. |
-| C4-R1 | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted C4-R0 authority `fb6bc8ca1ef7b3852026c3b684dc625cda974879` / tree `0bd3f79b97134f79b4cd7d68766e091bd6d369a3` | `C4_R1_OWNED_PATH_ALIGNMENT_AUTHORITY.md` | Final authority identity reported by runner | Authority-only correction from `$/f/<component>` to `$/f/components/f/<component>`; real codec/assembler/strict-schema validation; backend/frontend unchanged. Not self-accepted. |
-| C4 | `PROHIBITED_PENDING_C4_R1_ACCEPTANCE` | Accepted C3 checkpoint plus accepted C4-R0 invariants and accepted C4-R1 path map required | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | Resumed run found the C4-R0 path/schema/assembler conflict and stopped without implementation. |
+| C4-R1 | `ACCEPTED` | Accepted C4-R0 authority `fb6bc8ca1ef7b3852026c3b684dc625cda974879` / tree `0bd3f79b97134f79b4cd7d68766e091bd6d369a3` | `C4_R1_OWNED_PATH_ALIGNMENT_AUTHORITY.md` | authority `a7c691047ab6802098d3c4a84e73cc3fe95d753a` / tree `9492fe376bf2389192e6eacafafecca86105598a` | Parent-transmitted second-resumption authority accepted C4-R1. Its sole correction from `$/f/<component>` to `$/f/components/f/<component>` is now executable authority. |
+| C4 | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted C3 checkpoint, preserved C4-R0 invariants, and accepted C4-R1 path map | `C4_THREE_OBJECTS_AND_COMPLETE_CONSUMER.md` | backend `56c3251e399fc50706f3f0844d64b4318530d37e` / tree `43b4451a0750e4afec59634a70d75fbec60dd3cb`; frontend `dfd08cf95c043049b40847416edea786bb77fe9f` / tree `50ad0be4ac391ad131681a4a5ce5c8d5ee05606d`; final authority identity reported by runner | Three active processors, exact 35-path shared current, strict aggregate/media consumers, B4-current handoff, replay/failure/isolation/delete proof, PostgreSQL 17 and authenticated production-browser evidence complete. Not self-accepted. |
 | C1 | `NOT_STARTED` | Post-C4 separate authority | `C1_SYNC_COORDINATOR.md` | — | — |
 | D1 | `NOT_STARTED` | Accepted C4 checkpoints | `D1_SOURCE_ISOLATED_GENERATIONS.md` | — | — |
 | D2 | `NOT_STARTED` | Accepted D1 checkpoint | `D2_INSTAGRAM_BRAND_SOURCE_PROFILES.md` | — | — |
@@ -211,3 +212,17 @@ The exact authority checkpoint commit and tree containing this ledger are report
   `$/f/components/f/<component>` grammar. C4 remains prohibited pending C4-R1
   acceptance. Accounting remains one primary run, one resumed run, two authority
   recovery packets, and zero normal correction cycles.
+- Parent-transmitted second-resumption authority accepted C4-R1 and authorized
+  C4 implementation. The second resumed run activated exactly three verified
+  processor bundles at immutable authority `a7c691047ab6802098d3c4a84e73cc3fe95d753a`,
+  materialized exactly 35 corrected Object-scoped paths through shared
+  generation/transition/current infrastructure, upgraded the authenticated
+  aggregate and media-detail consumers, and made only bounded frontend response
+  compatibility changes. PostgreSQL 17 applied all 89 existing migrations with
+  migration 89 byte-identical; focused C4 and predecessor gates, production
+  builds, lint, strict schemas, B4 handoff, replay, sibling-failure preservation,
+  isolation, Settings delete-data, and authenticated 1440px browser smoke passed.
+  No schema, migration, dependency, live Graph/model call, provider mutation,
+  raw-media persistence, C1, D_COMBINED, or Wave E work occurred. C4 awaits
+  Child-SA/Program-Orchestrator review. Accounting is one primary run, two
+  authority recovery packets, two resumed runs, and zero correction cycles.
