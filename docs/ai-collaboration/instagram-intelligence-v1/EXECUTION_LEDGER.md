@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = C3_CORRECTION_2_EVIDENCE_READY_FOR_CHILD_SA_REVIEW
+CURRENT_PACKET = C4_R0_EXECUTABLE_CONTRACT_AUTHORITY_EVIDENCE_READY_FOR_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -24,11 +24,21 @@ C3_R0 = ACCEPTED
 C3_R0_ACCEPTED = YES
 C3_R0_PRIMARY_RUNS_USED = 1
 C3_R0_CORRECTION_CYCLES_USED = 1
-C3 = EVIDENCE_READY_FOR_CHILD_SA_REVIEW
-C3_ACCEPTED = NO
+C3 = ACCEPTED
+C3_ACCEPTED = YES
 C3_RESUMED_PRIMARY_RUNS_USED = 1
 C3_NORMAL_CORRECTION_CYCLES_USED = 2
-C4 = PROHIBITED
+C4_CIRCUIT_BREAKER = ACCEPTED
+C4_PRIMARY_RUNS_USED = 1
+C4_CORRECTION_CYCLES_USED = 0
+C4_R0 = EVIDENCE_READY_FOR_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW
+C4_R0_ACCEPTED = NO
+C4_R0_PRIMARY_RUNS_USED = 1
+C4_R0_CORRECTION_CYCLES_USED = 0
+C4 = PROHIBITED_PENDING_C4_R0_ACCEPTANCE
+C1 = NOT_STARTED
+D_COMBINED = MANDATORY_V1_NOT_STARTED
+WAVE_E = NOT_STARTED
 B4_PRIMARY_RUNS_USED = 1
 B4_CORRECTION_CYCLES_USED = 2
 LIVE_GRAPH_CALLS = NONE
@@ -66,8 +76,9 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | B3B | `ACCEPTED` | Accepted B4 checkpoint | `B3B_THINNER_V1_MEDIA_COMPLETION.md` | backend `60a0ab2b8fb142115eccf93c3c82e72d473ca94b` / `686e665bc350e17fad5a81f8c52b77825e067cc2`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `d59a130164dd31fc38261cb855dea54a5c57b7d2` / `bcb4d754c9f13b035986cb3d61d2a61b7fc2f9ec` | Parent-transmitted C2 execution authority records B3B acceptance without rewriting immutable B3B evidence. |
 | C2 | `ACCEPTED` | Accepted B3B checkpoint | `C2_DETERMINISTIC_FOUNDATIONS.md` | backend `bb8acafb63b74419a7188c52fe1a154b44904c73` / `f9c3e2e6cffb2c749f9911ebea093edd79ba428e`; frontend unchanged `bc8523183ae4892c0b538474d2f5444a1ea356d8` / `7f3016c01500083ae2f536ebd0540219c9228dd7`; authority `c89a717ef356142d48236213481dd496b14a9234` / `c0ef4bf53c8170bcb59527fff78d20a33b54f737` | Parent-transmitted C3 authority records C2 acceptance without rewriting immutable C2 evidence. |
 | C3-R0 | `ACCEPTED` | Accepted C2 checkpoint | `C3_R0_SHARED_EVIDENCE_MODEL_DERIVATION_PROVENANCE.md` | backend `896a8d23e9956cf35faf627dc6738d358995981f` / `5fc55603a7fba155372290d1bbb44c18628000ac`; authority `41cebd920d2578745d25cc2cfe581da3b4bbfc23` / `9ad5c4d8b90e8eda7cc48586e395bb74fcb4ad5e`; frontend unchanged | Parent-transmitted resumed C3 authority records C3-R0 acceptance without rewriting its immutable evidence. |
-| C3 | `CORRECTION_2_EVIDENCE_READY_FOR_CHILD_SA_REVIEW` | Accepted C3-R0 checkpoint; correction-1 predecessor `6de358233cba92652057817cfd215f16ec8523ce` | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | backend correction 2 `c592d7b1731b15cce9609efafbe7d689a5ca8744` / `922ad1bb363ce85c3dd73cee1daf65062d99b0a0`; frontend unchanged; final authority identity reported by runner | Correction 1 preserved. Bounded mention boundaries, exact phrase grounding, order-independent semantic union, ambiguous cue fail-closed handling, and missing mention-plus-joint regression passed with 131 focused tests. Not self-accepted. |
-| C4 | `NOT_STARTED` | Accepted C3 checkpoint | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | — |
+| C3 | `ACCEPTED` | Accepted C3-R0 checkpoint; correction-1 predecessor `6de358233cba92652057817cfd215f16ec8523ce` | `C3_MEDIA_OBSERVATIONS_AND_LIKELY_COLLAB.md` | backend correction 2 `c592d7b1731b15cce9609efafbe7d689a5ca8744` / `922ad1bb363ce85c3dd73cee1daf65062d99b0a0`; frontend unchanged; authority `087bfa526264e2388188e473738643078758cdcb` / `4bd633b64d1fc3915c98293b4eb295ab992cca50` | Parent-transmitted C4 authority records C3 acceptance after two correction cycles without rewriting immutable C3 evidence. |
+| C4-R0 | `EVIDENCE_READY_FOR_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | Accepted C4 executable-contract circuit breaker; authority `087bfa526264e2388188e473738643078758cdcb` | `C4_R0_EXECUTABLE_CONTRACT_AUTHORITY.md` | Final authority identity reported by runner | Three frozen C4 processor authorities; exact 35-path ownership; B4 1.0 immutable; backend/frontend unchanged. Not self-accepted. |
+| C4 | `PROHIBITED_PENDING_C4_R0_ACCEPTANCE` | Accepted C3 checkpoint plus accepted C4-R0 authority required | `C4_INSTAGRAM_INTELLIGENCE_OBJECTS.md` | — | Initial run stopped before mutation at accepted executable-contract circuit breaker. |
 | C1 | `NOT_STARTED` | Post-C4 separate authority | `C1_SYNC_COORDINATOR.md` | — | — |
 | D1 | `NOT_STARTED` | Accepted C4 checkpoints | `D1_SOURCE_ISOLATED_GENERATIONS.md` | — | — |
 | D2 | `NOT_STARTED` | Accepted D1 checkpoint | `D2_INSTAGRAM_BRAND_SOURCE_PROFILES.md` | — | — |
@@ -178,3 +189,11 @@ The exact authority checkpoint commit and tree containing this ledger are report
   `922ad1bb363ce85c3dd73cee1daf65062d99b0a0`. No live call, schema, migration,
   capability, public contract, frontend, API, canonical-domain, or C4 change
   occurred. C3 awaits review; C4 remains prohibited.
+- Parent-transmitted C4 authority accepted C3 after its two correction cycles.
+  The first C4 run correctly stopped before mutation at the accepted
+  `C4_EXECUTABLE_CONTRACT_AUTHORITY_REQUIRED` circuit breaker and consumed one
+  primary run with zero correction cycles. C4-R0 adds only three immutable
+  executable authority source sets, exact 35-path ownership, boundary fixtures,
+  and the activation rule that keeps B4 1.0 historical while making content 1.1
+  the sole active C4 owner. Backend and frontend remain unchanged. C4, C1,
+  D_COMBINED, and Wave E remain prohibited pending separate acceptance.

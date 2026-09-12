@@ -2,6 +2,14 @@
   "registry_version": "1.0",
   "status": "A2_ADDITIVE_TECHNICAL_CONTRACT",
   "source_scope": "INSTAGRAM_OWNED",
+  "c4_executable_authority": {
+    "status": "FROZEN_PENDING_C4_R0_ACCEPTANCE",
+    "register": "intelligence/architecture/instagram_intelligence_c4_executable_authority_v1.json",
+    "active_processor_count_at_c4_activation": 3,
+    "active_unique_owned_path_count": 35,
+    "b4_content_processor_1_0": "IMMUTABLE_HISTORICAL",
+    "c4_content_processor_1_1": "SOLE_ACTIVE_OWNER_AT_C4_ACTIVATION"
+  },
   "data_extraction": {
     "source_class": "INSTAGRAM_OWNED",
     "resource_types": ["INSTAGRAM_ACCOUNT", "INSTAGRAM_MEDIA"],

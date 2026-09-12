@@ -1,0 +1,22 @@
+{
+  "fixture_set": "instagram_intelligence_c4_contract_boundaries",
+  "version": "1.0",
+  "status": "FROZEN",
+  "cases": [
+    {"id": "complete_object", "valid": true, "object_id": "instagram_content_behavior", "state": "CURRENT", "readiness": "READY", "components": {"window": "AVAILABLE", "corpus_summary": "AVAILABLE", "posting_cadence": "AVAILABLE", "format_mix": "AVAILABLE", "theme_patterns": "AVAILABLE", "caption_patterns": "AVAILABLE", "creative_structure_patterns": "AVAILABLE", "offering_presence_patterns": "AVAILABLE", "creator_presence_patterns": "AVAILABLE", "representative_media_refs": "AVAILABLE", "bounded_learnings": "AVAILABLE", "coverage": "AVAILABLE"}},
+    {"id": "partial_object", "valid": true, "object_id": "instagram_audience_profile", "state": "PARTIAL_CURRENT", "readiness": "PARTIAL", "components": {"window": "AVAILABLE", "follower_audience": "AVAILABLE", "engaged_audience": "UNKNOWN", "distribution_concentration": "UNKNOWN", "material_differences": "INTENTIONALLY_ABSENT", "limitations": "AVAILABLE", "coverage": "AVAILABLE", "summary": "AVAILABLE"}},
+    {"id": "unavailable_capability", "valid": true, "component_state": "UNKNOWN", "reason_code": "AUDIENCE_NOT_SUPPORTED", "numeric_value": null},
+    {"id": "privacy_suppressed_audience", "valid": true, "component_state": "UNKNOWN", "reason_code": "AUDIENCE_PRIVACY_SUPPRESSED", "numeric_value": null},
+    {"id": "observed_metric_zero", "valid": true, "availability": "OBSERVED_ZERO", "value": 0},
+    {"id": "provider_unavailable_metric", "valid": true, "availability": "UNAVAILABLE", "value": null},
+    {"id": "one_post_corpus", "valid": true, "sample_size": 1, "signals": [], "learnings": []},
+    {"id": "minimum_signal_threshold", "valid": true, "sample_size": 3, "metric_coverage_percent": 50, "comparative_cohort_sizes": [3, 3], "publication_date_count": 1, "confidence": "LOW"},
+    {"id": "below_threshold_signal", "valid": true, "sample_size": 2, "signal_state": "INTENTIONALLY_ABSENT"},
+    {"id": "medium_signal_threshold", "valid": true, "sample_size": 5, "metric_coverage_percent": 70, "comparative_cohort_sizes": [3, 3], "publication_date_count": 2, "confidence": "MEDIUM"},
+    {"id": "performance_band_minimum", "valid": true, "comparable_post_count": 4, "band_state": "AVAILABLE"},
+    {"id": "below_threshold_snapshot_change", "valid": true, "valid_snapshot_count": 2, "elapsed_days": 14, "state": "INTENTIONALLY_ABSENT"},
+    {"id": "valid_trend_threshold", "valid": true, "valid_snapshot_count": 3, "elapsed_days": 14, "state": "AVAILABLE"},
+    {"id": "learning_with_supporting_signals", "valid": true, "confidence": "MEDIUM", "supporting_signal_ids": ["signal:example"], "evidence_refs": ["evidence:reused-from-signal"]},
+    {"id": "learning_without_supporting_signals", "valid": false, "supporting_signal_ids": [], "rejection_code": "SUPPORTING_SIGNAL_REQUIRED"}
+  ]
+}
