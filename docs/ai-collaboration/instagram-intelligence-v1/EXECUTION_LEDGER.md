@@ -329,3 +329,17 @@ The exact authority checkpoint commit and tree containing this ledger are report
   run and one bounded correction cycle were used. No dependency, schema,
   migration, backend, live provider/model call, raw-media persistence, hidden
   Brand display, mutation or Wave F work occurred. E4 awaits review.
+- Parent-transmitted F1/F2 combined authority accepted E4 and authorized one
+  consolidated integrated acceptance run without weakening either internal
+  gate. All 90 migrations applied cleanly to disposable PostgreSQL 17; current
+  Settings/provider, Capture/Evidence/media safety, C2/C3/C4/C1, hidden Brand,
+  isolation, deletion and failure-preservation suites passed. The real
+  production backend/frontend browser matrix passed at 390/767/768/1440 with
+  authenticated role authority, media detail, Settings-only deletion and
+  post-delete `NO_CURRENT` proof. Serious/critical Axe findings were zero; the
+  three existing lower-severity workspace landmark findings are recorded in the
+  evidence artifact. Backend and frontend remain byte-identical at their
+  accepted tips. Two bounded harness/environment correction cycles were used.
+  No schema, migration, dependency, Product/UX, live provider/model, raw-media
+  or F3 work occurred. F1/F2 await Child-SA/Program-Orchestrator review; F3
+  remains prohibited.
