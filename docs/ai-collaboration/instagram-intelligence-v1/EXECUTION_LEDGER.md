@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = C1_SYNC_COORDINATOR_EVIDENCE_READY_FOR_REVIEW
+CURRENT_PACKET = D_COMBINED_HIDDEN_BRAND_LANE_EVIDENCE_READY_FOR_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -42,14 +42,18 @@ C4_R1 = ACCEPTED
 C4_R1_ACCEPTED = YES
 C4 = ACCEPTED
 C4_ACCEPTED = YES
-C1 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
-C1_ACCEPTED = NO
+C1 = ACCEPTED
+C1_ACCEPTED = YES
 C1_PRIMARY_RUNS_USED = 1
 C1_CORRECTION_CYCLES_USED = 0
 D1 = SUPERSEDED_BY_D_COMBINED
 D2 = SUPERSEDED_BY_D_COMBINED
 D3 = SUPERSEDED_BY_D_COMBINED
-D_COMBINED = MANDATORY_V1_NOT_STARTED
+D_COMBINED = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
+D_COMBINED_ACCEPTED = NO
+D_COMBINED_PRIMARY_RUNS_USED = 1
+D_COMBINED_CORRECTION_CYCLES_USED = 0
+HIDDEN_BRAND_LANE = MANDATORY_V1_IMPLEMENTED_AWAITING_ACCEPTANCE
 WAVE_E = NOT_STARTED
 WAVE_E_DOES_NOT_CONSUME_D_COMBINED = YES
 PLANNED_SEQUENCE = C1_ACCEPTANCE -> D_COMBINED -> E1 -> E2_E3_COMBINED -> E4
@@ -73,7 +77,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
 | `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | C1 evidence/ledger final commit and tree reported by runner after normal publication |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | C1 `6fd0b9077d46fde08b2de3ed05f2dc4db3f18a98` / `172171898b728c4e6a1c2b801e66ccc5b959c01b`; accepted C4 predecessor; publication/fetch-back reported by runner |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | D_COMBINED `006346d39e253cca31a979804c9f17f45761027b` / `9924d09210ef0fe5435a7998ff01851961b3708e`; accepted C1 predecessor; publication/fetch-back reported by runner |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | C1 unchanged `dfd08cf95c043049b40847416edea786bb77fe9f` / `50ad0be4ac391ad131681a4a5ce5c8d5ee05606d` |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -96,11 +100,11 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | C4-R0 | `ACCEPTED_EXCEPT_PATH_MAP_SUPERSEDED_BY_C4_R1` | Accepted C4 executable-contract circuit breaker; authority `087bfa526264e2388188e473738643078758cdcb` | `C4_R0_EXECUTABLE_CONTRACT_AUTHORITY.md` | authority `fb6bc8ca1ef7b3852026c3b684dc625cda974879` / tree `0bd3f79b97134f79b4cd7d68766e091bd6d369a3` | Three frozen C4 processor authorities and B4 1.0 immutability preserved. Its erroneous non-root path map is superseded only by C4-R1. |
 | C4-R1 | `ACCEPTED` | Accepted C4-R0 authority `fb6bc8ca1ef7b3852026c3b684dc625cda974879` / tree `0bd3f79b97134f79b4cd7d68766e091bd6d369a3` | `C4_R1_OWNED_PATH_ALIGNMENT_AUTHORITY.md` | authority `a7c691047ab6802098d3c4a84e73cc3fe95d753a` / tree `9492fe376bf2389192e6eacafafecca86105598a` | Parent-transmitted second-resumption authority accepted C4-R1. Its sole correction from `$/f/<component>` to `$/f/components/f/<component>` is now executable authority. |
 | C4 | `ACCEPTED` | Accepted C3 checkpoint, preserved C4-R0 invariants, and accepted C4-R1 path map | `C4_THREE_OBJECTS_AND_COMPLETE_CONSUMER.md` | backend `56c3251e399fc50706f3f0844d64b4318530d37e` / tree `43b4451a0750e4afec59634a70d75fbec60dd3cb`; frontend `dfd08cf95c043049b40847416edea786bb77fe9f` / tree `50ad0be4ac391ad131681a4a5ce5c8d5ee05606d`; authority `fd74212218d551e3ca68e72ce79c32c876e59c77` / tree `223be7ffcf9dee5557affd029882348026071fdd` | Parent-transmitted C1 execution authority records C4 acceptance without rewriting immutable C4 evidence. |
-| C1 | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted C4 exact checkpoints | `C1_SYNC_COORDINATOR.md` | backend `6fd0b9077d46fde08b2de3ed05f2dc4db3f18a98` / tree `172171898b728c4e6a1c2b801e66ccc5b959c01b`; frontend unchanged; final authority identity reported by runner | Durable cadence, post-commit scheduling, generation/account fences, manual role/cooldown API, atomic claim/heartbeat/reclaim, backoff, current preservation, downstream C4 execution, deletion, PostgreSQL 17 migration paths and provider-neutral regressions passed. Not self-accepted. |
+| C1 | `ACCEPTED` | Accepted C4 exact checkpoints | `C1_SYNC_COORDINATOR.md` | backend `6fd0b9077d46fde08b2de3ed05f2dc4db3f18a98` / tree `172171898b728c4e6a1c2b801e66ccc5b959c01b`; frontend unchanged; authority `d7cbbe690b8143ef549fe7d0c8710eada1b98f7e` / tree `6b66fe6e5e8b89558f5e73c69dcf91b3ec2c2985` | Parent-transmitted D_COMBINED authority records C1 acceptance without rewriting immutable C1 evidence. |
 | D1 | `SUPERSEDED_BY_D_COMBINED` | — | — | — | No implementation performed. |
 | D2 | `SUPERSEDED_BY_D_COMBINED` | — | — | — | No implementation performed. |
 | D3 | `SUPERSEDED_BY_D_COMBINED` | — | — | — | No implementation performed. |
-| D_COMBINED | `MANDATORY_V1_NOT_STARTED` | Accepted C1 checkpoint after review | future packet | — | Hidden Brand lane is mandatory for V1. |
+| D_COMBINED | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted C1 checkpoint | `D_COMBINED_HIDDEN_BRAND_LANE.md` | backend `006346d39e253cca31a979804c9f17f45761027b` / tree `9924d09210ef0fe5435a7998ff01851961b3708e`; frontend unchanged; final authority identity reported by runner | Mandatory hidden source-isolated generation-only lane, existing processor reuse, deterministic latest-successful read, C1 hook and Settings deletion passed; not self-accepted. |
 | E1 | `NOT_STARTED` | Accepted C4/current checkpoint after D_COMBINED sequencing | `E1_BRAND_CENTRE_NAVIGATION.md` | — | Sole owner of shared peer-navigation convergence. |
 | E2_E3_COMBINED | `NOT_STARTED` | Accepted E1 checkpoint | future packet | — | — |
 | E4 | `NOT_STARTED` | Accepted E2_E3_COMBINED checkpoint | `E4_RESPONSIVE_ACCESSIBILITY.md` | — | — |
@@ -248,3 +252,17 @@ The exact authority checkpoint commit and tree containing this ledger are report
   one primary run and zero correction cycles. No live provider/model call, raw
   media persistence, D_COMBINED, Wave E or Wave F work occurred. C1 awaits
   Child-SA/Program-Orchestrator review.
+- Parent-transmitted D_COMBINED authority accepted C1 and authorized only the
+  mandatory hidden Brand lane. D_COMBINED reuses the existing Brand Character,
+  Brand Communication and Visual Style implementations behind immutable source
+  profile 1.1, publishes `INSTAGRAM_OWNED` generation history without current,
+  candidate or transition writes, and reads latest successful results by exact
+  source with deterministic cutoff/finalization/generation-ID ordering. Exact
+  source/account/generation/window/Capture and recursive Evidence lineage gates,
+  repeated-Evidence semantic sufficiency, C1 integration, replay/failure
+  preservation and Settings target-only deletion passed. Backend checkpoint is
+  `006346d39e253cca31a979804c9f17f45761027b` /
+  `9924d09210ef0fe5435a7998ff01851961b3708e`; frontend is unchanged. One
+  primary run and zero correction cycles were used. No schema, migration,
+  dependency, public API, frontend, live provider/model call, raw-media
+  persistence, Wave E or Wave F work occurred. D_COMBINED awaits review.
