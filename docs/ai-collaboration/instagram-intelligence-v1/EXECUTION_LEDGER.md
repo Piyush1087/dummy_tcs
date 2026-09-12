@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = E2_E3_COMBINED_EVIDENCE_READY_FOR_REVIEW
+CURRENT_PACKET = E4_EVIDENCE_READY_FOR_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -54,7 +54,7 @@ D_COMBINED_ACCEPTED = YES
 D_COMBINED_PRIMARY_RUNS_USED = 1
 D_COMBINED_CORRECTION_CYCLES_USED = 0
 HIDDEN_BRAND_LANE = ACCEPTED_FOR_V1
-WAVE_E = E2_E3_COMBINED_EVIDENCE_READY_AWAITING_ACCEPTANCE
+WAVE_E = E4_EVIDENCE_READY_AWAITING_ACCEPTANCE
 WAVE_E_DOES_NOT_CONSUME_D_COMBINED = YES
 PLANNED_SEQUENCE = C1_ACCEPTANCE -> D_COMBINED -> E1 -> E2_E3_COMBINED -> E4
 E1 = ACCEPTED
@@ -65,8 +65,8 @@ E1_PRIMARY_RUNS_USED = 1
 E1_CORRECTION_CYCLES_USED = 0
 E1_PREDECESSOR_RECOVERY_RUNS_USED = 2
 E1_PREDECESSOR_BOOT_RECOVERY = ACCEPTED
-E2_E3_COMBINED = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
-E2_E3_COMBINED_ACCEPTED = NO
+E2_E3_COMBINED = ACCEPTED
+E2_E3_COMBINED_ACCEPTED = YES
 E2_E3_COMBINED_EVIDENCE_READY = YES
 E2_E3_COMBINED_PRIMARY_RUNS_USED = 1
 E2_E3_COMBINED_CORRECTION_CYCLES_USED = 1
@@ -76,8 +76,12 @@ MANUAL_REFRESH = C1_ROLE_AND_COOLDOWN_GOVERNED
 SETTINGS_MUTATIONS = DEEP_LINK_ONLY
 SEMANTIC_EDITING = NOT_SUPPORTED
 HIDDEN_BRAND_LANE_DISPLAY = PROHIBITED
-E4_DETAIL_DRILLDOWN = NOT_STARTED
-E4 = NOT_STARTED
+E4_DETAIL_DRILLDOWN = ROUTE_DRIVEN_MEDIA_DETAIL
+E4 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
+E4_ACCEPTED = NO
+E4_EVIDENCE_READY = YES
+E4_PRIMARY_RUNS_USED = 1
+E4_CORRECTION_CYCLES_USED = 1
 WAVE_F = NOT_STARTED
 BACKEND_RECOVERY_1 = INSTAGRAM_DE_CONTRACT_IMPORT_INITIALIZATION_ORDER_ONLY
 BACKEND_RECOVERY_2 = BRAND_SETTINGS_CONSUMER_BOUNDED_NEST_MODULE_WIRING
@@ -99,9 +103,9 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
-| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | E2/E3 combined evidence/ledger final commit and tree reported by runner after normal publication |
+| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | E4 evidence/ledger final commit and tree reported by runner after normal publication |
 | `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | E1 predecessor recovery `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; normal publication and fetch-back equality passed |
-| `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E2/E3 combined `e99ef1eb04615213a93250714be85f21c47aeefc` / `cb48092812129c06c75971787f8b801eef0c4d35`; normal publication and fetch-back equality passed |
+| `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E4 `b8f4f966bd7772cc5d716f8e2134401eeeb0bb4c` / `45f3dfad39bfc2a616f09faf27aa45c055097dda`; normal publication and fetch-back equality passed |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
 
@@ -129,8 +133,8 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | D3 | `SUPERSEDED_BY_D_COMBINED` | — | — | — | No implementation performed. |
 | D_COMBINED | `ACCEPTED` | Accepted C1 checkpoint | `D_COMBINED_HIDDEN_BRAND_LANE.md` | backend `006346d39e253cca31a979804c9f17f45761027b` / tree `9924d09210ef0fe5435a7998ff01851961b3708e`; frontend unchanged; authority `cd22693faa7eceb1593f2cfed7a1160ca0d783cf` / tree `8dcc052d29455e433ab089715e439e45103549a2` | Parent-transmitted E1 recovery authority records D_COMBINED acceptance without rewriting immutable D_COMBINED evidence. |
 | E1 | `ACCEPTED` | Accepted C4, C1 and D_COMBINED checkpoints | `E1_BRAND_CENTRE_NAVIGATION.md` | backend recovery `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e36b8755deb4d584150bcaa0097e62f4c0f44d34` / tree `f263ea3eb92d476c6b8313263165e6512bbc7436`; authority `2e0497601491bd7d63e7b307a4fdc3e70cf30948` / tree `84223c102cd9445898ca8c48f7757cdce768b3e6` | Parent-transmitted E2/E3 authority records E1 and its predecessor boot recovery accepted without rewriting immutable E1 evidence. |
-| E2_E3_COMBINED | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted E1 checkpoint | `E2_E3_COMBINED_INSTAGRAM_WORKSPACE.md` | backend unchanged `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e99ef1eb04615213a93250714be85f21c47aeefc` / tree `cb48092812129c06c75971787f8b801eef0c4d35`; final authority identity reported by runner | Singular fixed-30-day workspace, strict consumer parser, lifecycle/current preservation, C1 refresh authority, role/tenant isolation, four-width browser and Axe gates passed; not self-accepted. |
-| E4 | `NOT_STARTED` | Accepted E2_E3_COMBINED checkpoint | `E4_RESPONSIVE_ACCESSIBILITY.md` | — | — |
+| E2_E3_COMBINED | `ACCEPTED` | Accepted E1 checkpoint | `E2_E3_COMBINED_INSTAGRAM_WORKSPACE.md` | backend unchanged `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e99ef1eb04615213a93250714be85f21c47aeefc` / tree `cb48092812129c06c75971787f8b801eef0c4d35`; authority `24834cda2d139dc956e574e54a6ca943e58301fa` / tree `139949eea31ee24ac399ebc38ad02a84a5e2888c` | Parent-transmitted E4 authority records E2/E3 accepted without rewriting immutable E2/E3 evidence. |
+| E4 | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted E2_E3_COMBINED checkpoint | `E4_MEDIA_DETAIL_DRILLDOWN.md` | backend unchanged `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `b8f4f966bd7772cc5d716f8e2134401eeeb0bb4c` / tree `45f3dfad39bfc2a616f09faf27aa45c055097dda`; final authority identity reported by runner | Route-driven consumer-safe detail, exact 767/768 modal presentation, active-role and tenant isolation, 321 regressions, four-width loading/success/error Axe zero at every impact, no backend/dependency/live-call change; not self-accepted. |
 | F1 | `NOT_STARTED` | Accepted E4 checkpoints | `F1_BACKEND_INTEGRATED_ACCEPTANCE.md` | — | — |
 | F2 | `NOT_STARTED` | Accepted F1 checkpoints | `F2_BROWSER_CROSS_DOMAIN_DELETE_ACCEPTANCE.md` | — | — |
 | F3 | `NOT_STARTED` | Accepted F2 checkpoints | `F3_FINAL_HANDOFF.md` | — | — |
@@ -312,3 +316,16 @@ The exact authority checkpoint commit and tree containing this ledger are report
   One primary run and one bounded correction cycle were used. No dependency,
   schema, migration, backend, live provider/model call, raw-media persistence,
   hidden Brand display, E4 or Wave F work occurred. E2/E3 awaits review.
+- Parent-transmitted E4 authority accepted E2/E3 and authorized only the media
+  detail drill-down. E4 consumes the unchanged C4 `1.0` media-detail endpoint
+  through a strict parser and authenticated route-keyed reader, preserves the
+  singular E2/E3 workspace, and presents one modal full-screen sheet through
+  767 px or bounded right drawer from 768 px. All active Brand roles read only
+  their authorized context; inactive, non-member, second-tenant and anonymous
+  non-disclosure passed. The final 390/767/768/1440 loading/success/error Axe
+  matrix had zero findings at every impact. Frontend is published at
+  `b8f4f966bd7772cc5d716f8e2134401eeeb0bb4c` / tree
+  `45f3dfad39bfc2a616f09faf27aa45c055097dda`; backend stayed exact. One primary
+  run and one bounded correction cycle were used. No dependency, schema,
+  migration, backend, live provider/model call, raw-media persistence, hidden
+  Brand display, mutation or Wave F work occurred. E4 awaits review.
