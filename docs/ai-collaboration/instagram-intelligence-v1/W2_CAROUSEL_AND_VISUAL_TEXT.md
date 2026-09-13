@@ -120,3 +120,49 @@ Week 2 used one primary run and zero formal correction cycles. No schema,
 migration, dependency, frontend, public API, new provider permission, live
 provider/model call, raw-media persistence, Creator implementation, Week 3,
 development merge or deployment occurred.
+
+## Correction 1 — modality-partial truth
+
+Status: `READY_FOR_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW`
+
+The Program Orchestrator required one bounded Week 2 correction while accepting
+the Week 2 architecture, ownership and product boundaries. Starting backend,
+frontend and authority checkpoints were independently fetched, clean and exact
+at `36dbcb216ad3fa2e979c0d2778ae6675d6355cbd`,
+`5866d0ac82f742957f53a8db2144a9a166628b75` and
+`24d42f50ae42fa9d7426348a1966324d13081b0d` respectively.
+
+Visual description and visual-text/OCR now settle and validate independently.
+A supported child persists one parent-owned Evidence item when either modality
+succeeds, with independent visual state/reason, visual-text state/reason and
+overall AVAILABLE/PARTIAL/UNKNOWN truth. OCR failure never becomes
+EXPLICIT_EMPTY; visual failure never becomes a visual negative. Coverage and
+replay now preserve independent visual/OCR inspected and unavailable counts,
+unsupported count, complete visual scope, complete visual-text scope and
+complete-video scope. Replay no longer requires the modality counts to match
+and repeats no child acquisition or model work. C3 retains exact positive child
+Evidence while combined negatives fail closed when any rule-required modality
+or video scope is incomplete.
+
+The visual-text finalizer rechecks every span after NFKC, whitespace
+normalization and deduplication; compatibility expansion past 160 characters is
+rejected without truncation. Focused unit/contract tests passed 61/61. Clean
+disposable PostgreSQL 17 applied all 90 migrations; the final Week 2 lineage
+suite passed 2/2 and the broader affected PostgreSQL predecessor matrix passed
+22/22. The modality-partial fixture persisted Resource 2, Capture 2, artifact
+4, Evidence 3, capability execution 2, capability resource 2, capability
+Evidence 3, semantic Observation 2, ObservationSupport 2 and provider link 4;
+exact replay changed none and repeated no acquisition or model work.
+
+Immutable install, Prisma generate/validate, production build, scoped ESLint,
+Prettier, diff checks, exact pinned Brand bundle verification and added-line
+secret/locator/forbidden-artifact scans passed. Schema, all 90 migrations,
+dependency manifests/lockfile, Dockerfile, public API, frontend and Week 1 are
+unchanged. No live Graph/model call, provider mutation, raw-media persistence,
+Creator implementation, Week 3 work, development merge or deployment occurred.
+
+The final backend checkpoint is
+`d6b76c2272bf73756e8544526421cdee5fbcc08c` / tree
+`f6d022a924124c5c16b41f4e9cddf2ecd0793270`; normal non-force publication and
+independent fetch-back SHA/tree equality passed. Week 2 remains evidence-ready,
+not self-accepted. Correction cycles used: 1.

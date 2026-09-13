@@ -437,3 +437,18 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
   migration, dependency, public API, frontend, live provider/model call,
   provider mutation, raw-media persistence, Creator implementation, Week 3,
   development merge or deployment occurred. Week 2 awaits review.
+- Parent-transmitted Week 2 correction 1 preserves the accepted Week 2
+  architecture while separating descriptive visual and visual-text/OCR truth.
+  Either valid modality now persists exact parent-owned child Evidence;
+  failures remain modality-specific, EXPLICIT_EMPTY remains OCR-only truth,
+  coverage and replay retain independent counters/scopes, and C3 negatives
+  require every rule-required modality to be complete. NFKC-expanded spans are
+  rechecked against the 160-character persisted bound. Clean PostgreSQL 17
+  applied all 90 migrations; focused unit tests passed 61/61 and affected
+  PostgreSQL predecessor tests passed 22/22. Backend evidence checkpoint is
+  `d6b76c2272bf73756e8544526421cdee5fbcc08c` / tree
+  `f6d022a924124c5c16b41f4e9cddf2ecd0793270`; frontend is unchanged. One Week
+  2 correction cycle is used. No schema, migration, dependency, Docker, public
+  API, frontend, provider permission, live provider/model call, raw-media
+  persistence, Creator implementation, Week 3, development merge or deployment
+  occurred. Week 2 remains evidence-ready pending review.

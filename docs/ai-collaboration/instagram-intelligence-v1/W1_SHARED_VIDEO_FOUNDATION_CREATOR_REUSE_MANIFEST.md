@@ -127,3 +127,16 @@ C4 current regression and Settings deletion/isolation tests. A future Creator
 packet must provide its own selection, authorization, source lineage, semantic
 finalizer, replay identity, consumer contract and delete-data proof. Creator
 implementation remains not started and not authorized by Week 2.
+
+### Week 2 correction 1 compatibility clarification
+
+The reusable visual-text contract at backend checkpoint
+`d6b76c2272bf73756e8544526421cdee5fbcc08c` rechecks each normalized span after
+NFKC/whitespace normalization and rejects any expansion beyond 160 characters;
+it never truncates source text. A future Creator-owned adapter must settle
+descriptive visual and OCR results independently, preserve a valid modality
+when its peer fails, keep EXPLICIT_EMPTY distinct from UNKNOWN, and maintain
+independent inspected/unavailable counts and completeness scopes. These are
+reusable modality-truth requirements, not authority to reuse the Brand-bound
+Week 2 pipeline, replay identity, Evidence writer, cue finalizer, C3/C4 logic,
+Settings fence or deletion adapter. Creator implementation remains not started.
