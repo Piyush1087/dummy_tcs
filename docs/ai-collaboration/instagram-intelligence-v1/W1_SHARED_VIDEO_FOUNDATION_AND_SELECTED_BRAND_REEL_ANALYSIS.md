@@ -88,9 +88,14 @@ Each frame identity binds Brand, provider account, authorization generation,
 provider media ID, source Capture/Evidence manifest, verified video SHA-256,
 acquisition/frame-selection versions, frame ordinal and requested timestamp,
 frame dimensions/size/hash, low-level observation contract/profile/model,
-C3 profile, and window/cutoff identity. Exact successful replay returns stable
-references without repeating locator, download, probe, extraction, or model
-work. Changed-profile failure cannot replace prior valid evidence/current.
+C3 profile, and window/cutoff identity. At the originally published checkpoint,
+exact successful replay returned stable references only after repeating locator
+and download acquisition. Correction 1 adds a current non-secret Settings fence
+and a deterministic pre-acquisition replay manifest, so executions written by
+the corrected path return stable references without locator, download, probe,
+extraction, or model work. A bounded post-acquisition lookup remains only for
+compatibility with the originally published rows. Changed-profile failure cannot
+replace prior valid evidence/current.
 
 Only structured metadata and low-level observations are persisted. Raw video,
 raw frame bytes, base64, signed locators, temporary paths, provider payloads,
@@ -111,6 +116,31 @@ unchanged.
 Settings target delete-data purges the target Brand's new video Evidence and
 task-scoped temporary files through the accepted lifecycle. PostgreSQL tests
 prove another tenant and unrelated website evidence survive.
+
+## Correction 1: replay and bounded memory
+
+Correction 1 preserves the accepted Week 1 Product and lifecycle boundaries. A
+current Settings query validates Brand, Instagram provider, provider account,
+authorization generation, active/connected status, verified identity, and
+first-party profile capability without selecting the encrypted credential or
+calling the provider. Only then may the pipeline look up the deterministic
+pre-acquisition manifest. Its identity binds Brand, provider account,
+authorization generation, provider media, admitted source Capture/Evidence,
+window cutoff, video/frame profiles, observation contract/prompt, and model
+provider/identity/profile. Actual acquisition still adds the verified video
+SHA-256 to the full persisted execution identity.
+
+The persisted bounded metadata now carries the original requested, extracted,
+and observed frame counts plus `AVAILABLE`/`PARTIAL` truth. Replay rejects
+zero-Evidence failures and inconsistent metadata, recovers Evidence references
+in frame order, and never derives coverage from Evidence count. The corrected
+partial proof is `6 requested / 3 extracted / 2 observed / PARTIAL` in unit
+tests and `6 / 2 / 2 / PARTIAL` against PostgreSQL.
+
+MP4 signature validation now reads only the required 12-byte prefix. Streamed
+100 MiB enforcement, declared/chunked/dishonest length rejection, MIME and MP4
+signature checks, FFprobe validation, decoder bounds, and cleanup are unchanged.
+No schema, migration, dependency, Dockerfile, public API, or frontend changed.
 
 ## Verification
 
@@ -140,3 +170,11 @@ independent fetch-back equality are recorded in the immutable runner report.
 No live Graph call, live model call, provider mutation, raw-media persistence,
 new migration, frontend change, Creator implementation, Week 2 work,
 development merge, or deployment occurred.
+
+Correction 1 is published at backend
+`112e9a9a567c5a258cd52d493d9758ef5270e6c2` / tree
+`29ae2b8392325eb3f0626b93982c6a96142cd709`. Its focused changed-surface suite
+passed 32/32, the expanded current non-PostgreSQL matrix passed 440/440, and the
+clean PostgreSQL 17 predecessor matrix passed 29/29 after all 90 migrations.
+Prisma generate/validate, production build, scoped ESLint, Prettier, and diff
+checks passed. Correction 1 remains evidence-ready and is not self-accepted.

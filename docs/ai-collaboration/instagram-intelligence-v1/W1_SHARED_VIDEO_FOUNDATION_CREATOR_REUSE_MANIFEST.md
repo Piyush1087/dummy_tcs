@@ -8,6 +8,9 @@ Status: `BRAND_W1_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_AUTHORIZED`
   `67d2642871899fda9e7bd9248b8d56892c3d6e6d`.
 - Backend Week 1 result: `4eb459d01d45e21f63fd7e85e0eb57784c0c1b83` /
   `2c96a589a48a214c9c2980961dfe3a7a8885b926`.
+- Backend Week 1 correction 1 result:
+  `112e9a9a567c5a258cd52d493d9758ef5270e6c2` /
+  `29ae2b8392325eb3f0626b93982c6a96142cd709`.
 
 ## Reusable provider-neutral foundation
 
@@ -50,6 +53,11 @@ Bookworm `ffmpeg` package in the backend container, proven with FFmpeg/FFprobe
 The reusable layer never persists data. The consuming subject adapter owns
 authorization fencing, source Capture/Evidence lineage, low-level model
 selection, semantic integration, replay identity, and Settings/subject deletion.
+For the Brand adapter, corrected exact replay retains a current non-secret
+Settings authorization fence, uses a deterministic pre-acquisition manifest,
+and recovers the original bounded coverage metadata and ordered Evidence refs.
+The shared downloader validates only the 12-byte MP4 prefix and never buffers a
+complete accepted video merely for signature validation.
 Temporary video and frames are unique to one isolation scope and must be removed
 after success, partial completion, failure, abort, timeout, or explicit subject
 deletion. Consumer-visible data must never contain signed locators, raw bytes,
