@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = E4_EVIDENCE_READY_FOR_REVIEW
+CURRENT_PACKET = WEEK_1_SHARED_VIDEO_FOUNDATION_AUTHORIZED_NOT_STARTED
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -77,12 +77,19 @@ SETTINGS_MUTATIONS = DEEP_LINK_ONLY
 SEMANTIC_EDITING = NOT_SUPPORTED
 HIDDEN_BRAND_LANE_DISPLAY = PROHIBITED
 E4_DETAIL_DRILLDOWN = ROUTE_DRIVEN_MEDIA_DETAIL
-E4 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
-E4_ACCEPTED = NO
+E4 = ACCEPTED
+E4_ACCEPTED = YES
 E4_EVIDENCE_READY = YES
 E4_PRIMARY_RUNS_USED = 1
 E4_CORRECTION_CYCLES_USED = 1
-WAVE_F = NOT_STARTED
+WAVE_F = ACCEPTED
+F1 = ACCEPTED
+F2 = ACCEPTED
+F3 = ACCEPTED
+INSTAGRAM_INTELLIGENCE_V1 = TECHNICALLY_ACCEPTED
+POST_V1_INCREMENTAL_REEL_CHARTER = ACCEPTED
+WEEK_1_SHARED_VIDEO_FOUNDATION = AUTHORIZED_NOT_STARTED
+WEEKS_2_TO_8 = PLANNED_NOT_AUTHORIZED
 BACKEND_RECOVERY_1 = INSTAGRAM_DE_CONTRACT_IMPORT_INITIALIZATION_ORDER_ONLY
 BACKEND_RECOVERY_2 = BRAND_SETTINGS_CONSUMER_BOUNDED_NEST_MODULE_WIRING
 BACKEND_MIGRATIONS = UNCHANGED_AT_90
@@ -103,7 +110,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
-| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | E4 evidence/ledger final commit and tree reported by runner after normal publication |
+| `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | F3 accepted at `261bd1d4ddb6ffe4cb3a06ab00b83f3b0a9ef320` / `4305067d3d29d0d5429a29e103cf2ab5b3e92249`; post-V1 weekly charter published as its descendant |
 | `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | E1 predecessor recovery `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; normal publication and fetch-back equality passed |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E4 `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49`; normal publication and fetch-back equality passed |
 
@@ -134,14 +141,30 @@ The exact authority checkpoint commit and tree containing this ledger are report
 | D_COMBINED | `ACCEPTED` | Accepted C1 checkpoint | `D_COMBINED_HIDDEN_BRAND_LANE.md` | backend `006346d39e253cca31a979804c9f17f45761027b` / tree `9924d09210ef0fe5435a7998ff01851961b3708e`; frontend unchanged; authority `cd22693faa7eceb1593f2cfed7a1160ca0d783cf` / tree `8dcc052d29455e433ab089715e439e45103549a2` | Parent-transmitted E1 recovery authority records D_COMBINED acceptance without rewriting immutable D_COMBINED evidence. |
 | E1 | `ACCEPTED` | Accepted C4, C1 and D_COMBINED checkpoints | `E1_BRAND_CENTRE_NAVIGATION.md` | backend recovery `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e36b8755deb4d584150bcaa0097e62f4c0f44d34` / tree `f263ea3eb92d476c6b8313263165e6512bbc7436`; authority `2e0497601491bd7d63e7b307a4fdc3e70cf30948` / tree `84223c102cd9445898ca8c48f7757cdce768b3e6` | Parent-transmitted E2/E3 authority records E1 and its predecessor boot recovery accepted without rewriting immutable E1 evidence. |
 | E2_E3_COMBINED | `ACCEPTED` | Accepted E1 checkpoint | `E2_E3_COMBINED_INSTAGRAM_WORKSPACE.md` | backend unchanged `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `e99ef1eb04615213a93250714be85f21c47aeefc` / tree `cb48092812129c06c75971787f8b801eef0c4d35`; authority `24834cda2d139dc956e574e54a6ca943e58301fa` / tree `139949eea31ee24ac399ebc38ad02a84a5e2888c` | Parent-transmitted E4 authority records E2/E3 accepted without rewriting immutable E2/E3 evidence. |
-| E4 | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | Accepted E2_E3_COMBINED checkpoint | `E4_MEDIA_DETAIL_DRILLDOWN.md` | backend unchanged `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `5866d0ac82f742957f53a8db2144a9a166628b75` / tree `7c095290ffdef4c84f37382bc594bef536c92a49`; final authority identity reported by runner | Route-driven consumer-safe detail, exact 767/768 modal presentation, active-role and tenant isolation, 321 regressions, four-width loading/success/error Axe zero at every impact, no backend/dependency/live-call change; not self-accepted. |
-| F1 | `NOT_STARTED` | Accepted E4 checkpoints | `F1_BACKEND_INTEGRATED_ACCEPTANCE.md` | — | — |
-| F2 | `NOT_STARTED` | Accepted F1 checkpoints | `F2_BROWSER_CROSS_DOMAIN_DELETE_ACCEPTANCE.md` | — | — |
-| F3 | `NOT_STARTED` | Accepted F2 checkpoints | `F3_FINAL_HANDOFF.md` | — | — |
+| E4 | `ACCEPTED` | Accepted E2_E3_COMBINED checkpoint | `E4_MEDIA_DETAIL_DRILLDOWN.md` | backend unchanged `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3` / tree `67d2642871899fda9e7bd9248b8d56892c3d6e6d`; frontend `5866d0ac82f742957f53a8db2144a9a166628b75` / tree `7c095290ffdef4c84f37382bc594bef536c92a49` | Parent-transmitted F1/F2 authority accepted E4 after its evidence-ready report. |
+| F1 | `ACCEPTED` | Accepted E4 checkpoints | `F1_F2_COMBINED_INTEGRATED_ACCEPTANCE.md` | backend/frontend unchanged at accepted E4 tips; authority predecessor to F3 `9356269285d0ee87d85f17dd4e1894233526c1d3` / `f2361bf27d062a64a7acf04ea654ec2a6a47ce5c` | Combined F1 backend/cross-packet internal gate passed and was accepted before F3. |
+| F2 | `ACCEPTED` | Accepted F1 internal gate | `F1_F2_COMBINED_INTEGRATED_ACCEPTANCE.md` | same accepted F1/F2 checkpoint | Combined authenticated browser/role/state internal gate passed and was accepted before F3. |
+| F3 | `ACCEPTED` | Accepted F1/F2 checkpoint | `F3_FINAL_EVIDENCE_AND_DEVELOPER_HANDOFF.md` | authority `261bd1d4ddb6ffe4cb3a06ab00b83f3b0a9ef320` / `4305067d3d29d0d5429a29e103cf2ab5b3e92249`; backend/frontend unchanged | Final evidence and developer handoff accepted; optional live Graph read remained non-blocking and not run. |
+
+## Post-V1 incremental Reel capability ledger
+
+Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V1.md](./INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V1.md)
+
+| Week | Packet | Status | Accepted predecessor | Successor |
+| --- | --- | --- | --- | --- |
+| 1 | Shared video foundation + selected Brand Reel analysis | `AUTHORIZED_NOT_STARTED` | backend `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3`; frontend `5866d0ac82f742957f53a8db2144a9a166628b75`; authority `261bd1d4ddb6ffe4cb3a06ab00b83f3b0a9ef320` | Week 2 prohibited pending acceptance |
+| 2 | Carousel + visual-text pack | `PLANNED_NOT_AUTHORIZED` | accepted Week 1 | Week 3 |
+| 3 | Creator foundation adoption | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation plus Creator SA authority | Week 4 |
+| 4 | Speech foundation | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation | Week 5 |
+| 5 | Temporal structure | `PLANNED_NOT_AUTHORIZED` | accepted frames plus speech as applicable | Week 6 |
+| 6 | Brand-Led Campaign Recommendation beta | `PLANNED_NOT_AUTHORIZED` | accepted Brand Reel semantics and Campaign consumer authority | Week 7 |
+| 7 | Collaboration compliance foundation | `PLANNED_NOT_AUTHORIZED` | accepted media modalities and canonical brief/submission contracts | Week 8 |
+| 8 | Compliance completion + rollout hardening | `PLANNED_NOT_AUTHORIZED` | accepted Week 7 | final incremental-program review |
 
 ## Immutable execution notes
 
-- Campaign objective vocabulary is `PULSE`, `PROOF`, `PRODUCTION`, `PUSH`.
+- Campaign objective vocabulary is `AWARENESS`, `TRUST`, `ASSETS`, `ACTION`.
+  `PULSE`, `PROOF`, `PRODUCTION`, `PUSH` is legacy vocabulary only.
 - C04 is Creator/Collaboration vocabulary and contract authority only for this program. Its divergent branches are not wholesale merge targets.
 - Every successor packet must name exact accepted predecessor SHAs and trees; a moving branch name alone is insufficient authority.
 - Remote publication must use normal non-force pushes followed by independent fetch-back. A blocked push is recorded; it must never be bypassed or retried with force.
