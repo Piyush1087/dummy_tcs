@@ -9,8 +9,8 @@ Status: `BRAND_W1_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_AUTHORIZED`
 - Backend Week 1 result: `4eb459d01d45e21f63fd7e85e0eb57784c0c1b83` /
   `2c96a589a48a214c9c2980961dfe3a7a8885b926`.
 - Backend Week 1 correction 1 result:
-  `112e9a9a567c5a258cd52d493d9758ef5270e6c2` /
-  `29ae2b8392325eb3f0626b93982c6a96142cd709`.
+  `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` /
+  `ef8e762e26892481da590f418df6ab4d5193b42a`.
 
 ## Reusable provider-neutral foundation
 

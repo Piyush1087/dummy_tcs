@@ -63,8 +63,10 @@ validation now opens the file and reads only 12 bytes; it performs no whole-file
 
 ## Publication
 
-Backend correction: `112e9a9a567c5a258cd52d493d9758ef5270e6c2` /
-tree `29ae2b8392325eb3f0626b93982c6a96142cd709`. Normal push and independent
+Backend correction: `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` /
+tree `ef8e762e26892481da590f418df6ab4d5193b42a`. The first commit owns the
+bounded source/tests and its child adds explicit zero generation/current row
+counts to the PostgreSQL proof. Normal pushes and independent
 fetch-back SHA/tree equality passed; the accepted starting SHA is an ancestor.
 The authority checkpoint containing this file is reported by the runner because
 a commit cannot encode its own identity.

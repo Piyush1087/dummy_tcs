@@ -171,9 +171,10 @@ No live Graph call, live model call, provider mutation, raw-media persistence,
 new migration, frontend change, Creator implementation, Week 2 work,
 development merge, or deployment occurred.
 
-Correction 1 is published at backend
-`112e9a9a567c5a258cd52d493d9758ef5270e6c2` / tree
-`29ae2b8392325eb3f0626b93982c6a96142cd709`. Its focused changed-surface suite
+Correction 1 is published as the ordered implementation and explicit row-count
+proof commits, ending at backend
+`c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` / tree
+`ef8e762e26892481da590f418df6ab4d5193b42a`. Its focused changed-surface suite
 passed 32/32, the expanded current non-PostgreSQL matrix passed 440/440, and the
 clean PostgreSQL 17 predecessor matrix passed 29/29 after all 90 migrations.
 Prisma generate/validate, production build, scoped ESLint, Prettier, and diff

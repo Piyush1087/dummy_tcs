@@ -119,7 +119,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
 | `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | F3 accepted at `261bd1d4ddb6ffe4cb3a06ab00b83f3b0a9ef320` / `4305067d3d29d0d5429a29e103cf2ab5b3e92249`; post-V1 weekly charter published as its descendant |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Week 1 correction 1 `112e9a9a567c5a258cd52d493d9758ef5270e6c2` / `29ae2b8392325eb3f0626b93982c6a96142cd709`; normal publication and fetch-back equality passed |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Week 1 correction 1 `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` / `ef8e762e26892481da590f418df6ab4d5193b42a`; normal publication and fetch-back equality passed |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E4 `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49`; normal publication and fetch-back equality passed |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -160,7 +160,7 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
 
 | Week | Packet | Status | Accepted predecessor | Successor |
 | --- | --- | --- | --- | --- |
-| 1 | Shared video foundation + selected Brand Reel analysis | `CORRECTION_1_EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | recovered authority `55efc544234758b2c694b3d5fbd3bdcf8b8877da`; corrected backend `112e9a9a567c5a258cd52d493d9758ef5270e6c2` / `29ae2b8392325eb3f0626b93982c6a96142cd709`; frontend unchanged `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` | Week 2 prohibited pending acceptance |
+| 1 | Shared video foundation + selected Brand Reel analysis | `CORRECTION_1_EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | recovered authority `55efc544234758b2c694b3d5fbd3bdcf8b8877da`; corrected backend `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` / `ef8e762e26892481da590f418df6ab4d5193b42a`; frontend unchanged `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` | Week 2 prohibited pending acceptance |
 | 2 | Carousel + visual-text pack | `PLANNED_NOT_AUTHORIZED` | accepted Week 1 | Week 3 |
 | 3 | Creator foundation adoption | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation plus Creator SA authority | Week 4 |
 | 4 | Speech foundation | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation | Week 5 |
@@ -409,8 +409,8 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
   recovers original bounded partial coverage and ordered Evidence refs. Clean
   PostgreSQL 17 applied all 90 migrations and the focused predecessor matrix
   passed 29/29; the expanded current non-PostgreSQL matrix passed 440/440.
-  Backend correction is `112e9a9a567c5a258cd52d493d9758ef5270e6c2` /
-  tree `29ae2b8392325eb3f0626b93982c6a96142cd709`. One correction cycle was
+  Backend correction ends at `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` /
+  tree `ef8e762e26892481da590f418df6ab4d5193b42a`. One correction cycle was
   used. No schema, migration, dependency, Dockerfile, frontend, public API,
   live provider/model call, provider mutation, raw-media persistence, Week 2,
   development merge or deployment occurred. Week 1 remains evidence-ready and
