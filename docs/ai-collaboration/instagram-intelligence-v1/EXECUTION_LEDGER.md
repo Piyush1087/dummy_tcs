@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = WEEK_1_SHARED_VIDEO_FOUNDATION_AUTHORIZED_NOT_STARTED
+CURRENT_PACKET = WEEK_1_SHARED_VIDEO_FOUNDATION_EVIDENCE_READY_AWAITING_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -88,7 +88,14 @@ F2 = ACCEPTED
 F3 = ACCEPTED
 INSTAGRAM_INTELLIGENCE_V1 = TECHNICALLY_ACCEPTED
 POST_V1_INCREMENTAL_REEL_CHARTER = ACCEPTED
-WEEK_1_SHARED_VIDEO_FOUNDATION = AUTHORIZED_NOT_STARTED
+WEEK_1_SHARED_VIDEO_FOUNDATION = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
+W1 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
+W1_ACCEPTED = NO
+W1_EVIDENCE_READY = YES
+W1_STARTING_STATE_RECOVERY_RUNS_USED = 1
+W1_PRIMARY_IMPLEMENTATION_RUNS_USED = 1
+W1_CORRECTION_CYCLES_USED = 0
+W2 = PROHIBITED
 WEEKS_2_TO_8 = PLANNED_NOT_AUTHORIZED
 BACKEND_RECOVERY_1 = INSTAGRAM_DE_CONTRACT_IMPORT_INITIALIZATION_ORDER_ONLY
 BACKEND_RECOVERY_2 = BRAND_SETTINGS_CONSUMER_BOUNDED_NEST_MODULE_WIRING
@@ -152,7 +159,7 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
 
 | Week | Packet | Status | Accepted predecessor | Successor |
 | --- | --- | --- | --- | --- |
-| 1 | Shared video foundation + selected Brand Reel analysis | `AUTHORIZED_NOT_STARTED` | backend `d5b9de557ed983a9c3af26b1edc305ba8b77d6f3`; frontend `5866d0ac82f742957f53a8db2144a9a166628b75`; authority `261bd1d4ddb6ffe4cb3a06ab00b83f3b0a9ef320` | Week 2 prohibited pending acceptance |
+| 1 | Shared video foundation + selected Brand Reel analysis | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE` | recovered authority `55efc544234758b2c694b3d5fbd3bdcf8b8877da`; backend result `4eb459d01d45e21f63fd7e85e0eb57784c0c1b83` / `2c96a589a48a214c9c2980961dfe3a7a8885b926`; frontend unchanged `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` | Week 2 prohibited pending acceptance |
 | 2 | Carousel + visual-text pack | `PLANNED_NOT_AUTHORIZED` | accepted Week 1 | Week 3 |
 | 3 | Creator foundation adoption | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation plus Creator SA authority | Week 4 |
 | 4 | Speech foundation | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation | Week 5 |
@@ -377,3 +384,20 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
   `F3_ACCEPTED = NO`, and `INSTAGRAM_INTELLIGENCE_V1 =
   TECHNICAL_CLOSEOUT_AWAITING_FINAL_REVIEW`. No live model call, Meta/provider
   mutation, raw-media persistence, development merge or deployment occurred.
+- Parent-transmitted post-V1 Week 1 authority required one exact starting-state
+  recovery. The runner proved the clean authority tip was the direct parent of
+  the fetched accepted checkpoint and fast-forwarded only that branch with
+  `git merge --ff-only`. The resumed primary implementation adds the reusable
+  provider-neutral video locator, bounded secure acquisition, container-packaged
+  FFmpeg/FFprobe decoder, deterministic six-timestamp frame profile, no-retention
+  temporary store, fail-closed frame observer and Brand-only Settings/B3B/C3
+  integration. Clean PostgreSQL 17 applied all 90 existing migrations; W1 and
+  C3 lineage/replay/deletion tests, current C4 generation, and focused provider,
+  B3A/B3B/C2/C3/C4/C1/hidden-Brand/Settings regressions passed. Backend evidence
+  checkpoint is `4eb459d01d45e21f63fd7e85e0eb57784c0c1b83` / tree
+  `2c96a589a48a214c9c2980961dfe3a7a8885b926`; frontend is unchanged. One
+  starting-state recovery run, one primary implementation run and zero formal
+  correction cycles were used. No new migration or npm dependency, live
+  provider/model call, provider mutation, raw-media persistence, Creator
+  implementation, Week 2 work, development merge or deployment occurred. Week
+  1 awaits Child-SA/Program-Orchestrator review; Week 2 remains prohibited.
