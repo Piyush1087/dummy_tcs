@@ -1,6 +1,6 @@
 # Week 1 Shared Video Foundation — Creator Reuse Manifest
 
-Status: `BRAND_W1_ACCEPTED_W2_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_AUTHORIZED`
+Status: `BRAND_W1_W2_ACCEPTED_W4_SPEECH_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_STARTED`
 
 ## Checkpoints
 
@@ -13,6 +13,12 @@ Status: `BRAND_W1_ACCEPTED_W2_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_AUTHORIZ
   `ef8e762e26892481da590f418df6ab4d5193b42a`.
 - Backend Week 2 result: `36dbcb216ad3fa2e979c0d2778ae6675d6355cbd` /
   `b0ce0192ef259758792979b4e136f0867f87654e`.
+- Backend Week 2 correction 1 / accepted predecessor:
+  `d6b76c2272bf73756e8544526421cdee5fbcc08c` /
+  `f6d022a924124c5c16b41f4e9cddf2ecd0793270`.
+- Backend Week 4 evidence checkpoint:
+  `1b0a1e6f35911a10d4319abcea15c7f8f989a3b0` /
+  `104e0fe76fd3a1d16c76032f2e8f735949990412`.
 
 ## Reusable provider-neutral foundation
 
@@ -140,3 +146,32 @@ independent inspected/unavailable counts and completeness scopes. These are
 reusable modality-truth requirements, not authority to reuse the Brand-bound
 Week 2 pipeline, replay identity, Evidence writer, cue finalizer, C3/C4 logic,
 Settings fence or deletion adapter. Creator implementation remains not started.
+
+## Week 4 domain-neutral speech foundation
+
+The future Creator adapter may reuse the domain-neutral
+`InstagramAudioExtractorPort`, `FfmpegInstagramAudioExtractor`,
+`InstagramSpeechTranscriptionPort`, strict transcript candidate/finalizer and
+unavailable/provider adapter seams under `src/features/instagram/media/video/`.
+The fixed profile is temporary WAV, signed 16-bit PCM, mono, 16 kHz, at most
+6,291,456 bytes, with at most 120 normalized timestamped segments, 500
+characters per segment and 20,000 characters total. FFmpeg uses argv execution
+without a shell, bounded process output, timeout/abort propagation, regular
+task-owned files and terminal cleanup. Transcript/audio content is untrusted
+data only; raw audio, base64, locators, prompts and model reasoning are not
+durable.
+
+Reusable configuration names are `INSTAGRAM_VIDEO_FFMPEG_PATH`,
+`GEMINI_API_KEY` and `INSTAGRAM_SPEECH_MODEL_ID`; no value is recorded. The
+Brand-only rollout name `INSTAGRAM_SELECTED_VIDEO_SPEECH_ENABLED` is not a
+Creator Product decision. The production Debian Bookworm container supplies
+FFmpeg/FFprobe 5.1.9 and needs no new npm dependency.
+
+Creator must not reuse `InstagramW4SpeechPipelineService`, Brand Settings
+authorization, the 30-day/24-post selection, Brand replay identity, Offering
+snapshot/matching, Capture/Evidence policy, C3/C4/current integration, Settings
+deletion adapter or Brand operational policy. A later Creator-owned packet must
+supply its own authorization-generation fence, selection/rollout, provider
+configuration, source lineage, cue semantics, replay, retention/deletion,
+tenant isolation and consumer authority. Week 4 did not start or modify Creator
+implementation.
