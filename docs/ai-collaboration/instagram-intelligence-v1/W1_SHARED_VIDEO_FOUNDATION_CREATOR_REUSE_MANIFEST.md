@@ -17,8 +17,8 @@ Status: `BRAND_W1_W2_ACCEPTED_W4_SPEECH_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NO
   `d6b76c2272bf73756e8544526421cdee5fbcc08c` /
   `f6d022a924124c5c16b41f4e9cddf2ecd0793270`.
 - Backend Week 4 evidence checkpoint:
-  `1b0a1e6f35911a10d4319abcea15c7f8f989a3b0` /
-  `104e0fe76fd3a1d16c76032f2e8f735949990412`.
+  `41fbe7c888208829f10ae49703da690d02f10d0f` /
+  `0ba5cc6880120bbb294048261ea81c1a7704738d`.
 
 ## Reusable provider-neutral foundation
 

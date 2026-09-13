@@ -11,7 +11,7 @@ self-accept Week 4. Week 5 remains prohibited.
 
 | Repository | Starting SHA / tree | Result SHA / tree | Result |
 | --- | --- | --- | --- |
-| backend | `d6b76c2272bf73756e8544526421cdee5fbcc08c` / `f6d022a924124c5c16b41f4e9cddf2ecd0793270` | `1b0a1e6f35911a10d4319abcea15c7f8f989a3b0` / `104e0fe76fd3a1d16c76032f2e8f735949990412` | clean normal push and independent fetch-back equality |
+| backend | `d6b76c2272bf73756e8544526421cdee5fbcc08c` / `f6d022a924124c5c16b41f4e9cddf2ecd0793270` | `41fbe7c888208829f10ae49703da690d02f10d0f` / `0ba5cc6880120bbb294048261ea81c1a7704738d` | clean normal push and independent fetch-back equality |
 | frontend | `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` | unchanged | clean local/fetched equality |
 | authority | `96bf2b910a9da0f62e9d9004c4a37a5afc05cf5c` / `4ff24240fbf8e2e75e63a758f15debc137265518` | containing commit reported by runner | clean normal publication required |
 

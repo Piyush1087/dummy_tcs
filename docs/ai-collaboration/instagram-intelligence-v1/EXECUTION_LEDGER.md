@@ -130,7 +130,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
 | `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | F3 accepted at `261bd1d4ddb6ffe4cb3a06ab00b83f3b0a9ef320` / `4305067d3d29d0d5429a29e103cf2ab5b3e92249`; post-V1 weekly charter published as its descendant |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Week 4 `1b0a1e6f35911a10d4319abcea15c7f8f989a3b0` / `104e0fe76fd3a1d16c76032f2e8f735949990412`; normal publication and fetch-back equality passed |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Week 4 final `41fbe7c888208829f10ae49703da690d02f10d0f` / `0ba5cc6880120bbb294048261ea81c1a7704738d`; normal publication and fetch-back equality passed |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E4 `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49`; normal publication and fetch-back equality passed |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -174,7 +174,7 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
 | 1 | Shared video foundation + selected Brand Reel analysis | `ACCEPTED` | recovered authority `55efc544234758b2c694b3d5fbd3bdcf8b8877da`; corrected backend `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` / `ef8e762e26892481da590f418df6ab4d5193b42a`; frontend unchanged `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` | Parent-transmitted Program-Orchestrator adjudication accepted Week 1 after correction 1 and authorized Week 2. |
 | 2 | Carousel + visual-text pack | `ACCEPTED` | accepted Week 1; corrected backend `d6b76c2272bf73756e8544526421cdee5fbcc08c` / `f6d022a924124c5c16b41f4e9cddf2ecd0793270`; frontend unchanged | Parent-transmitted Program-Orchestrator adjudication accepted Week 2 after correction 1. |
 | 3 | Creator foundation adoption | `DEFERRED_NOT_STARTED` | accepted shared foundation plus Creator SA authority | Deferred without implementation; does not block Week 4. |
-| 4 | Speech foundation | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | accepted Week 2; backend `1b0a1e6f35911a10d4319abcea15c7f8f989a3b0` / `104e0fe76fd3a1d16c76032f2e8f735949990412`; frontend unchanged | Week 5 prohibited pending acceptance. |
+| 4 | Speech foundation | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | accepted Week 2; backend `41fbe7c888208829f10ae49703da690d02f10d0f` / `0ba5cc6880120bbb294048261ea81c1a7704738d`; frontend unchanged | Week 5 prohibited pending acceptance. |
 | 5 | Temporal structure | `PLANNED_NOT_AUTHORIZED` | accepted frames plus speech as applicable | Week 6 |
 | 6 | Brand-Led Campaign Recommendation beta | `PLANNED_NOT_AUTHORIZED` | accepted Brand Reel semantics and Campaign consumer authority | Week 7 |
 | 7 | Collaboration compliance foundation | `PLANNED_NOT_AUTHORIZED` | accepted media modalities and canonical brief/submission contracts | Week 8 |
@@ -469,8 +469,8 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
   Instagram rows. The focused unit/regression and PostgreSQL predecessor
   matrices, production-container FFmpeg extraction, build/lint/format/diff and
   forbidden-artifact scans passed. Backend evidence checkpoint is
-  `1b0a1e6f35911a10d4319abcea15c7f8f989a3b0` / tree
-  `104e0fe76fd3a1d16c76032f2e8f735949990412`; frontend is unchanged. One
+  `41fbe7c888208829f10ae49703da690d02f10d0f` / tree
+  `0ba5cc6880120bbb294048261ea81c1a7704738d`; frontend is unchanged. One
   primary run and zero formal correction cycles were used. No live provider or
   model call, provider mutation, raw-media persistence, Creator implementation,
   frontend/public-API change, development merge, deployment or Week 5 work
