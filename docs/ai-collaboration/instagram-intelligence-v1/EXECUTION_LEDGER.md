@@ -4,7 +4,7 @@
 PROGRAM = INSTAGRAM_INTELLIGENCE_V1
 PLAN_AUTHORITY = INSTAGRAM_INTELLIGENCE_DEFINITIVE_ARCHITECTURE_AND_FINITE_EXECUTION_PLAN_V1_1
 EXECUTION_MODEL = ONE_INDEPENDENTLY_REVIEWABLE_PACKET_AT_A_TIME
-CURRENT_PACKET = WEEK_1_SHARED_VIDEO_FOUNDATION_EVIDENCE_READY_AWAITING_REVIEW
+CURRENT_PACKET = WEEK_2_CAROUSEL_AND_VISUAL_TEXT_EVIDENCE_READY_AWAITING_REVIEW
 A3_ACCEPTED = YES
 B1 = ACCEPTED
 B2 = ACCEPTED
@@ -88,16 +88,21 @@ F2 = ACCEPTED
 F3 = ACCEPTED
 INSTAGRAM_INTELLIGENCE_V1 = TECHNICALLY_ACCEPTED
 POST_V1_INCREMENTAL_REEL_CHARTER = ACCEPTED
-WEEK_1_SHARED_VIDEO_FOUNDATION = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
-W1 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_ACCEPTANCE
-W1_ACCEPTED = NO
+WEEK_1_SHARED_VIDEO_FOUNDATION = ACCEPTED
+W1 = ACCEPTED
+W1_ACCEPTED = YES
 W1_EVIDENCE_READY = YES
 W1_STARTING_STATE_RECOVERY_RUNS_USED = 1
 W1_PRIMARY_IMPLEMENTATION_RUNS_USED = 1
 W1_CORRECTION_1 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW
 W1_CORRECTION_CYCLES_USED = 1
-W2 = PROHIBITED
-WEEKS_2_TO_8 = PLANNED_NOT_AUTHORIZED
+W2 = EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW
+W2_ACCEPTED = NO
+W2_EVIDENCE_READY = YES
+W2_PRIMARY_RUNS_USED = 1
+W2_CORRECTION_CYCLES_USED = 0
+W3 = PROHIBITED
+WEEKS_3_TO_8 = PLANNED_NOT_AUTHORIZED
 BACKEND_RECOVERY_1 = INSTAGRAM_DE_CONTRACT_IMPORT_INITIALIZATION_ORDER_ONLY
 BACKEND_RECOVERY_2 = BRAND_SETTINGS_CONSUMER_BOUNDED_NEST_MODULE_WIRING
 BACKEND_MIGRATIONS = UNCHANGED_AT_90
@@ -119,7 +124,7 @@ EXCEPTIONAL_ACCESSIBILITY_CLOSEOUT_ATTEMPTS_USED = 1
 | Repository | Implementation branch | A1 starting SHA | A1 starting tree | Current packet state |
 |---|---|---|---|---|
 | `Piyush1087/dummy_tcs` | `program/instagram-intelligence-v1-authority` | `3c924daac420ecfe2bce6533294522fb9821ad94` | `d53bb93ad99435a27df6033a7fae1459fd8342d6` | F3 accepted at `261bd1d4ddb6ffe4cb3a06ab00b83f3b0a9ef320` / `4305067d3d29d0d5429a29e103cf2ab5b3e92249`; post-V1 weekly charter published as its descendant |
-| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Week 1 correction 1 `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` / `ef8e762e26892481da590f418df6ab4d5193b42a`; normal publication and fetch-back equality passed |
+| `Piyush1087/creator-commerce-backend-v2-clone` | `program/instagram-intelligence-v1-backend` | `978a0dba5b0bdf5e16e3ebe96057bb6b8c0c84da` | `18c02098e75aac53696269f8b443f930c8adb514` | Week 2 `36dbcb216ad3fa2e979c0d2778ae6675d6355cbd` / `b0ce0192ef259758792979b4e136f0867f87654e`; normal publication and fetch-back equality passed |
 | `Piyush1087/creator-commerce-frontend-v2-clone` | `program/instagram-intelligence-v1-frontend` | `249de1a2fcaeffa013dbeb9d042f7387f8d3f972` | `a8e3a5937e4001997736d0c05a0e06f1c99b7d1b` | E4 `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49`; normal publication and fetch-back equality passed |
 
 The exact authority checkpoint commit and tree containing this ledger are reported by the Local Codex runner and must be copied into the next accepted packet's starting-authority record. A commit cannot self-encode its own SHA.
@@ -160,8 +165,8 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
 
 | Week | Packet | Status | Accepted predecessor | Successor |
 | --- | --- | --- | --- | --- |
-| 1 | Shared video foundation + selected Brand Reel analysis | `CORRECTION_1_EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | recovered authority `55efc544234758b2c694b3d5fbd3bdcf8b8877da`; corrected backend `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` / `ef8e762e26892481da590f418df6ab4d5193b42a`; frontend unchanged `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` | Week 2 prohibited pending acceptance |
-| 2 | Carousel + visual-text pack | `PLANNED_NOT_AUTHORIZED` | accepted Week 1 | Week 3 |
+| 1 | Shared video foundation + selected Brand Reel analysis | `ACCEPTED` | recovered authority `55efc544234758b2c694b3d5fbd3bdcf8b8877da`; corrected backend `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` / `ef8e762e26892481da590f418df6ab4d5193b42a`; frontend unchanged `5866d0ac82f742957f53a8db2144a9a166628b75` / `7c095290ffdef4c84f37382bc594bef536c92a49` | Parent-transmitted Program-Orchestrator adjudication accepted Week 1 after correction 1 and authorized Week 2. |
+| 2 | Carousel + visual-text pack | `EVIDENCE_READY_AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW` | accepted Week 1; backend `36dbcb216ad3fa2e979c0d2778ae6675d6355cbd` / `b0ce0192ef259758792979b4e136f0867f87654e`; frontend unchanged | Week 3 prohibited pending acceptance |
 | 3 | Creator foundation adoption | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation plus Creator SA authority | Week 4 |
 | 4 | Speech foundation | `PLANNED_NOT_AUTHORIZED` | accepted shared foundation | Week 5 |
 | 5 | Temporal structure | `PLANNED_NOT_AUTHORIZED` | accepted frames plus speech as applicable | Week 6 |
@@ -415,3 +420,20 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
   live provider/model call, provider mutation, raw-media persistence, Week 2,
   development merge or deployment occurred. Week 1 remains evidence-ready and
   awaits Child-SA/Program-Orchestrator review.
+- Parent-transmitted Week 2 authority records the Program Orchestrator's
+  acceptance of Week 1 after correction 1 and authorizes only bounded carousel
+  child inspection plus visual text. Week 2 reuses one parent media Resource and
+  one completed Capture per sweep, represents every returned child through the
+  provider bound, inspects IMAGE children fully and VIDEO/REEL covers only,
+  validates bounded NFKC-normalized visual text, derives only atomic CTA,
+  product and disclosure observations, and admits exact ordered child Evidence
+  into the existing C3/C4 path. Clean PostgreSQL 17 applied all 90 unchanged
+  migrations; replay, row stability, exact child support, failure preservation,
+  tenant/account/generation isolation and Settings target-only deletion passed.
+  Backend evidence checkpoint is
+  `36dbcb216ad3fa2e979c0d2778ae6675d6355cbd` / tree
+  `b0ce0192ef259758792979b4e136f0867f87654e`; frontend is unchanged. One
+  primary run and zero formal correction cycles were used. No schema,
+  migration, dependency, public API, frontend, live provider/model call,
+  provider mutation, raw-media persistence, Creator implementation, Week 3,
+  development merge or deployment occurred. Week 2 awaits review.

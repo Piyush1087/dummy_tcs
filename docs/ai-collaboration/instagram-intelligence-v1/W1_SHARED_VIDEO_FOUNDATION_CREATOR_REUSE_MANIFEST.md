@@ -1,6 +1,6 @@
 # Week 1 Shared Video Foundation — Creator Reuse Manifest
 
-Status: `BRAND_W1_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_AUTHORIZED`
+Status: `BRAND_W1_ACCEPTED_W2_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_AUTHORIZED`
 
 ## Checkpoints
 
@@ -11,6 +11,8 @@ Status: `BRAND_W1_EVIDENCE_READY_CREATOR_IMPLEMENTATION_NOT_AUTHORIZED`
 - Backend Week 1 correction 1 result:
   `c634387e06cff5e20fd2588b3a9d1d1d6a78a21a` /
   `ef8e762e26892481da590f418df6ab4d5193b42a`.
+- Backend Week 2 result: `36dbcb216ad3fa2e979c0d2778ae6675d6355cbd` /
+  `b0ce0192ef259758792979b4e136f0867f87654e`.
 
 ## Reusable provider-neutral foundation
 
@@ -94,3 +96,34 @@ It must not treat Brand acceptance as Creator Product or schema authority.
 Focused compatibility evidence is in the video architecture, locator,
 foundation, Brand W1 pipeline, B3B, C3 sampled-frame, PostgreSQL lineage, and
 Settings deletion tests. Creator implementation was not started.
+
+## Week 2 domain-neutral visual-text addition
+
+The new `src/features/instagram/media/instagram-visual-text.ts` contract is
+safe for a separately authorized Creator adapter to reuse. It contains only the
+provider-neutral visual-text model port, unavailable fail-closed adapter,
+strict candidate validation, NFKC normalization, deterministic ordering and
+deduplication. Its fixed limits are 20 spans, 160 characters per span and 1,600
+characters total. Image text is untrusted source data and the model request
+marks it data-only. There is no new configuration name or dependency.
+
+The existing provider-neutral temporary image artifact/store and contained
+image acquisition primitives may remain reusable only behind a Creator-owned
+authorization and deletion adapter. The existing provider child bound remains
+10. Week 2 Brand orchestration limits concurrency to three and maximum bounded
+work to 24 selected posts times 10 children; those corpus decisions remain
+Brand authority rather than reusable Creator Product policy.
+
+Creator must not reuse `InstagramW2CarouselPipelineService`, the Brand Settings
+authorization fence, B3B selection/integration, the Week 2 cue finalizer, Brand
+Offering matching, C3/C4 admission/current, Capture/Evidence policy or Settings
+deletion adapter. Those files bind Brand account/generation identity, the
+30-day/24-post corpus, Campaign/Collaboration/Offering non-ownership and the
+existing three-Object runtime.
+
+Week 2 compatibility proof is in the visual-text contract tests, Week 2 unit
+and PostgreSQL suites, B3B selected-carousel routing, C3 exact-child grounding,
+C4 current regression and Settings deletion/isolation tests. A future Creator
+packet must provide its own selection, authorization, source lineage, semantic
+finalizer, replay identity, consumer contract and delete-data proof. Creator
+implementation remains not started and not authorized by Week 2.
