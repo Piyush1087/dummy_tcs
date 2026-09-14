@@ -48,13 +48,22 @@ This is the single ledger for Creator Content V0.
 
 `P1 = ACCEPTED`
 
-### P2 — authorized
+### P2 — accepted
 
-`P2 = AUTHORIZED`
+- Backend checkpoint: `08c4dec1eb8a1c9a545c8da4cc08dfe0d3ceb1b4` /
+  `0df1e3ccc379332dde1cbe57a7d1cf9e14d6cce4`.
+- One `creator_content` Object and exactly eight frozen paths use the existing
+  owner-scoped Evidence/generation/CAS-current runtime.
+- Provider-neutral PostgreSQL, replay, failure-current, isolation, purge,
+  daily coordinator, build and static gates passed.
+- Schema, 101 migrations and dependencies remain unchanged.
+- Evidence: `P2_CREATOR_CONTENT_BACKEND_VERTICAL_SLICE.md`.
 
-### P3 — prohibited pending P2
+`P2 = ACCEPTED`
 
-`P3 = PROHIBITED_PENDING_P2_ACCEPTANCE`
+### P3 — authorized
+
+`P3 = AUTHORIZED`
 
 ### P4 — prohibited pending P3
 
