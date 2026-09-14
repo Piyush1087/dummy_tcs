@@ -102,8 +102,9 @@ Correction 1 preserves the accepted Week 4 behavior and corrects only the
 audio/transcript provenance chain. Backend starting identity
 `41fbe7c888208829f10ae49703da690d02f10d0f` / tree
 `0ba5cc6880120bbb294048261ea81c1a7704738d` now descends normally to
-`5ab123e0d8735d541260b4144d88113bd9cfbd30` / tree
-`6cf69573a42252aa1317672be857679d1316d529`.
+`fef32afb0fdef52f00c7c22b3d0a85967a68fded` / tree
+`7ef6bd705b55ef82836b3f57f06a2832a867e781` through three ordered,
+normal-pushed correction/test-format commits.
 
 The existing Instagram Capture writer now exposes one narrowly typed,
 Week-4-only external deterministic-source parent contract. It canonicalizes,

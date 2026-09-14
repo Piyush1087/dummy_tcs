@@ -485,8 +485,8 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
   current at 91 migrations; focused PostgreSQL tests passed 36/36 and focused
   non-PostgreSQL predecessor tests passed 163/163. Backend publication and
   fetch-back equality passed at
-  `5ab123e0d8735d541260b4144d88113bd9cfbd30` / tree
-  `6cf69573a42252aa1317672be857679d1316d529`. One Week 4 correction cycle was
+  `fef32afb0fdef52f00c7c22b3d0a85967a68fded` / tree
+  `7ef6bd705b55ef82836b3f57f06a2832a867e781`. One Week 4 correction cycle was
   used. No schema, migration, dependency, Dockerfile, frontend, public API,
   live provider/model call, provider mutation, raw-media persistence, Week 5,
   development merge or deployment occurred. Week 4 remains evidence-ready
