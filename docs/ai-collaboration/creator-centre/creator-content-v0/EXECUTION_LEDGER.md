@@ -20,18 +20,21 @@ This is the single ledger for Creator Content V0.
 
 ## Packet state
 
-### P0 — evidence ready
+### P0 — accepted
 
 - Authority lineages converged by ordinary non-force merge.
 - Product clarification is incorporated into the executable freeze.
 - Backend/frontend remain exact at accepted predecessors.
-- P1 is not accepted or started by this ledger entry.
+- Executable-freeze commit: `36dfa86035b3637ad8d6c0825f1f8c158cd1c885` /
+  `c1b6b80bf7d80b08c784f60699c86041202b8e10`.
+- Backend/frontend unchanged; schema, dependencies and 101 migrations unchanged.
+- Technical SA review: PASS. P1 is authorized.
 
-`P0 = EVIDENCE_READY_PENDING_TECHNICAL_SA_ACCEPTANCE`
+`P0 = ACCEPTED`
 
-### P1 — not started
+### P1 — authorized
 
-`P1 = NOT_STARTED`
+`P1 = AUTHORIZED`
 
 ### P2 — prohibited pending P1
 
@@ -44,4 +47,3 @@ This is the single ledger for Creator Content V0.
 ### P4 — prohibited pending P3
 
 `P4 = PROHIBITED_PENDING_P3_ACCEPTANCE`
-

@@ -4,7 +4,7 @@
 
 ## Disposition
 
-`P0 = EVIDENCE_READY_PENDING_TECHNICAL_SA_ACCEPTANCE`
+`P0 = ACCEPTED`
 
 The accepted Creator Audience implementation authority and frozen Creator
 Content Product/technical authority are converged without discarding either
@@ -128,3 +128,10 @@ P1 generalizes the internal semantic-address owner discriminator from
 and no public API change. No migration is expected. A required schema change or
 inability to preserve accepted Brand/Audience behavior is a circuit breaker.
 
+## Accepted checkpoint
+
+- Authority executable-freeze commit: `36dfa86035b3637ad8d6c0825f1f8c158cd1c885`.
+- Tree: `c1b6b80bf7d80b08c784f60699c86041202b8e10`.
+- Backend and frontend remained byte-identical to their accepted predecessors.
+- Both authority parents are retained and reachable.
+- Diff integrity passed and no source, schema, dependency or migration changed.
