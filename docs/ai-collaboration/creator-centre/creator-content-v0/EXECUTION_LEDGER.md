@@ -78,6 +78,28 @@ This is the single ledger for Creator Content V0.
 
 `P3 = ACCEPTED`
 
-### P4 — authorized
+### P4 — accepted
 
-`P4 = AUTHORIZED`
+- Backend final checkpoint: `5f7712108886305b40cbcf1c0d89f5ecdc22ab24` /
+  `343e03b3c5bd6ee1749259841f622e1f7012cb75`.
+- Frontend final checkpoint: `7edd26d3cdad0ec84083884b34039952368a1295` /
+  `0cc596ca1ef1d1c4a51857125547de156e487c8b`.
+- Clean PostgreSQL 17 migration apply/status, provider-DI acquisition,
+  owner-scoped Capture/Evidence, deterministic calculation, shared current,
+  replay, failure-current, isolation/purge, authenticated production API/UI,
+  role, responsive, keyboard/focus, Axe, build and hygiene gates passed.
+- Migration count remains 101; schema and dependencies remain unchanged.
+- Live Graph/model calls and provider mutations: none.
+- Evidence: `P4_INTEGRATED_ACCEPTANCE_AND_CLOSEOUT.md`.
+
+`P4 = ACCEPTED`
+
+## Final state
+
+`CREATOR_CONTENT_V0 = TECHNICALLY_ACCEPTED`
+
+`DEVELOPMENT_MERGE = NOT_PERFORMED`
+
+`DEPLOYMENT = NOT_PERFORMED`
+
+`NEXT_BOUNDARY = PARENT / CREATOR PRODUCT PROGRAM REVIEW`
