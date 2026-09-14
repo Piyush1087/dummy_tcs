@@ -475,3 +475,19 @@ Authority: [INSTAGRAM_INTELLIGENCE_INCREMENTAL_REEL_CAPABILITY_RELEASE_CHARTER_V
   model call, provider mutation, raw-media persistence, Creator implementation,
   frontend/public-API change, development merge, deployment or Week 5 work
   occurred. Week 4 awaits Child-SA/Program-Orchestrator review.
+- Parent-authorized Week 4 correction 1 preserves the accepted speech scope
+  and corrects only provenance lineage. The exact admitted source-media
+  Evidence now parents deterministic FFmpeg audio Evidence; that audio
+  Evidence exclusively parents model-derived transcript Evidence and its
+  same-capability Observation support. Complete transactional source-parent
+  validation rejects nonexistent, cross-Brand, account, generation, media,
+  Capture and circular substitutions atomically. Clean PostgreSQL 17 remained
+  current at 91 migrations; focused PostgreSQL tests passed 36/36 and focused
+  non-PostgreSQL predecessor tests passed 163/163. Backend publication and
+  fetch-back equality passed at
+  `5ab123e0d8735d541260b4144d88113bd9cfbd30` / tree
+  `6cf69573a42252aa1317672be857679d1316d529`. One Week 4 correction cycle was
+  used. No schema, migration, dependency, Dockerfile, frontend, public API,
+  live provider/model call, provider mutation, raw-media persistence, Week 5,
+  development merge or deployment occurred. Week 4 remains evidence-ready
+  pending Child-SA/Program-Orchestrator review.

@@ -93,3 +93,57 @@ They exclude media content and credentials.
 Week 4 used one primary run and zero formal correction cycles. No Week 3 or
 Creator implementation, Week 5 work, frontend/public API change, provider
 permission, development merge, production migration or deployment occurred.
+
+## Provenance lineage correction 1
+
+Status: `READY_FOR_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW`
+
+Correction 1 preserves the accepted Week 4 behavior and corrects only the
+audio/transcript provenance chain. Backend starting identity
+`41fbe7c888208829f10ae49703da690d02f10d0f` / tree
+`0ba5cc6880120bbb294048261ea81c1a7704738d` now descends normally to
+`5ab123e0d8735d541260b4144d88113bd9cfbd30` / tree
+`6cf69573a42252aa1317672be857679d1316d529`.
+
+The existing Instagram Capture writer now exposes one narrowly typed,
+Week-4-only external deterministic-source parent contract. It canonicalizes,
+deduplicates and sorts the complete source Evidence set, then validates inside
+the same persistence transaction that every parent exists and belongs to the
+same Brand, exact Instagram media Resource, active provider account,
+authorization generation, provider integration and completed source Capture
+with authoritative `capturedAt`. Different tenant/account/generation/media or
+Capture lineage, nonexistent parents, and Week 4 self/circular parents fail
+atomically. Existing callers retain their prior default provider provenance.
+
+Canonical persisted lineage is now:
+
+```text
+exact admitted source-media Evidence
+  -> audio technical Evidence / DETERMINISTIC_DERIVATION
+  -> transcript Evidence / MODEL_DERIVATION
+  -> same-capability transcript ObservationSupport
+```
+
+Fresh PostgreSQL 17 applied and reported current all 91 unchanged migrations.
+The real-source proof used two admitted source Evidence rows deliberately
+supplied out of order with a duplicate and recovered the exact sorted parent
+set. The stable target matrix contained one Resource, two completed Captures,
+one bounded artifact, four Evidence rows, one semantic Observation and one
+support row. Exact replay preserved all refs and counts while repeating zero
+download, probe, audio-extraction or model work. A failed changed-source run
+preserved prior rows. The seven-case invalid-parent matrix passed atomically;
+Settings target deletion removed source/audio/transcript lineage and temporary
+media while another Brand and an owned-website Resource survived.
+
+Focused predecessor PostgreSQL tests passed 36/36. Focused provider-neutral,
+B3A/B3B, C2/C3/C4/C1, Week 1, Week 2 and Week 4 non-PostgreSQL tests passed
+163/163. Immutable install, Prisma generate/validate, production build, scoped
+ESLint/Prettier and `git diff --check` passed. Package/lockfile, schema, all
+migrations and Dockerfile are unchanged. Secret, signed-locator, raw-media and
+forbidden-artifact scans passed. Live Graph/model calls and Meta mutations were
+none. Correction cycle 1 is evidence-ready and does not self-accept Week 4;
+Week 5 remains prohibited.
+
+The correction prompt is archived content-complete under `runner-prompts/`.
+After CRLF/LF and terminal-blank-line normalization its SHA-256 is
+`4da170b73819e99986b94267d43e15f051e7eb5f5fa809bada9f751df9908128`.
