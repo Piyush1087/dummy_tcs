@@ -73,6 +73,26 @@ This is the single ledger for the Creator Audience V0 implementation program.
 
 `P2 = ACCEPTED`
 
-### P3 — not started
+### P3 — accepted
+
+- Frontend: `24a97eafd2da4e6f98282b10916adb5758c3017f` /
+  `0c3079c1dc83a29da29393e04ad85169fba88e61`.
+- Backend unchanged at P2: `1eba8f80c5f98bcd2bc5b015985a4b01292ed81d` /
+  `bf1f561dccbca15c1c3faa79a22820863192aafe`.
+- Strict authenticated/no-store client, Zod contract, last-good preservation,
+  frozen hierarchy, truthful cohort/denominator states, and Settings-only
+  recovery PASS.
+- Focused frontend matrix: 33/33 PASS; related authenticated route/platform
+  guard matrix: 23/23 PASS; production build, lint, format, diff, and secret
+  gates PASS.
+- Authenticated Chromium production-preview matrix at 390/767/768/1440:
+  responsive navigation, hierarchy, keyboard/focus, and overflow PASS; Axe
+  serious/critical 0 at every width.
+- Correction cycles: 1 (browser review corrected the new nested landmark and
+  reran the local-stage production preview).
+- Publication/fetch-back: exact local/remote SHA and tree equality; P0 ancestry
+  PASS.
+
+`P3 = ACCEPTED`
 
 ### P4 — not started
