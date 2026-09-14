@@ -24,15 +24,30 @@ This is the single ledger for the Creator Audience V0 implementation program.
 - Authority convergence parent: `c12aa8204a48ce8751c17632ed4c1cb854644be4` / `d0c12f2c08daf553df682cdb6fa4aa539ffbb5f8`.
 - PostgreSQL: clean 98/98; current-MVP 94→98; donor 91→98.
 - Correction cycles: 1 (staged schema snapshot corrected by normal follow-up commit; no rewrite).
-- Publication/fetch-back: pending this ledger commit.
+- Authority evidence commit: `d39cb576b7c1473cbe3d602a5d7c2197f3132913` /
+  `2d4b556a038012d022eaca9c9e6f17d67922d5c6`.
+- Publication/fetch-back: exact local/remote SHA and tree equality.
 
 `P0 = ACCEPTED`
 
-### P1 — not started
+### P1 — accepted
+
+- Backend: `175d4c150c12306ecd1577df10ebcc05b9035af6` /
+  `ca0ffecdbfceac38204da23bf257d04a23949de7`.
+- Frontend unchanged: `777c74cb7ca978053d9c10dcab29b282bc2dbea8` /
+  `a3d6a32f566eeed9b608a7b5a2a4d1ec0b238e6f`.
+- PostgreSQL: clean 100/100 and populated P0 98→100; deterministic Brand
+  backfill and Creator/Brand isolation PASS.
+- Full affected Brand regression: 114 files and 964 tests passed; focused
+  enabled P1 PostgreSQL suite passed 2/2.
+- Correction cycles: 1 (task-only migration rehearsal corrections).
+- Publication/fetch-back: backend exact local/remote SHA and tree equality;
+  authority evidence is published by the commit containing this ledger entry.
+
+`P1 = ACCEPTED`
 
 ### P2 — not started
 
 ### P3 — not started
 
 ### P4 — not started
-
