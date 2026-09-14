@@ -82,7 +82,7 @@ WRITE FULL AUTHORITY TO GITHUB
 
 Do not render multi-thousand-token execution prompts inline unless Parent explicitly asks.
 
-The Brand Centre SA and Creator Orchestrator already have an established working relationship. Do not repeat role orientation on every slice. Each new technical slice should still begin with a bounded donor/reuse/current-state preflight before implementation unless a later accepted architecture explicitly eliminates that need.
+The Brand Centre SA and Creator Orchestrator already have an established working relationship. Because this Creator Orchestrator context is being transferred, perform one bounded role/authority comprehension audit before the first next implementation preflight is accepted. Do not repeat that audit on every later slice if the same technical SA retains the accepted understanding. Each new technical slice must still begin with a bounded donor/reuse/current-state preflight before implementation unless a later accepted architecture explicitly eliminates that need.
 
 ---
 
@@ -129,7 +129,7 @@ Parent has explicitly frozen the intended ordering:
 8. Media Kit — final
 ```
 
-Portfolio remains part of the durable Creator Centre IA. Its exact implementation placement belongs within the later `other Instagram-linked intelligence / remaining Creator Centre` review because it is expected to consume canonical Collaboration proof plus Instagram performance/content context.
+Portfolio remains part of the durable Creator Centre IA but is deferred. It acquires no implementation position from this handoff and must not be inserted into the frozen order unless Parent/user later makes an explicit Product decision.
 
 Do not implement Operational Setup, Rate Card or Media Kit ahead of the Instagram-linked Intelligence sequence merely because their Product decisions may already be frozen.
 
@@ -201,7 +201,7 @@ Audience V0 is closed. Do not reopen it unless a later Product requirement creat
 
 ---
 
-## 6. Content V0 — Product frozen; implementation program currently in flight
+## 6. Content V0 — Product frozen and technically accepted; Product review pending
 
 ### Product authority
 
@@ -260,22 +260,48 @@ Key Product decisions:
 
 ### Current implementation status
 
-As of this handoff:
-
 ```text
 CONTENT V0 PRODUCT = FROZEN
-TECHNICAL PREFLIGHT = ACCEPTED
-AUTONOMOUS P0 → P4 IMPLEMENTATION = AUTHORIZED / UNDERWAY
-FINAL TECHNICAL ACCEPTANCE = NOT YET PROVIDED TO CREATOR ORCHESTRATOR
+P0 → P4 = TECHNICALLY ACCEPTED
+FINAL TECHNICAL ACCEPTANCE = PUBLISHED
+CREATOR PRODUCT POST-IMPLEMENTATION REVIEW = PENDING
+
+BACKEND_SHA =
+5f7712108886305b40cbcf1c0d89f5ecdc22ab24
+
+BACKEND_TREE =
+343e03b3c5bd6ee1749259841f622e1f7012cb75
+
+FRONTEND_SHA =
+7edd26d3cdad0ec84083884b34039952368a1295
+
+FRONTEND_TREE =
+0cc596ca1ef1d1c4a51857125547de156e487c8b
+
+PROGRAM_AUTHORITY_SHA =
+5df3bff917dd294f3f86642809c66558e37a3b8c
+
+PROGRAM_AUTHORITY_TREE =
+2bcbde3e893adb5f7675ed894e2065651554f7f4
+
+MIGRATIONS = 101
+SCHEMA / MIGRATION CHANGE = NONE
 ```
 
-Do **not** mark Content V0 implementation completed merely from the execution authorization.
+Final return:
 
-The expected final return from Brand Centre / Instagram Intelligence SA is:
+```text
+branch =
+program/creator-content-v0-authority
 
-`CREATOR_CONTENT_V0_FINAL_ACCEPTANCE_AND_PRODUCT_LEARNING_HANDOFF_V1`
+path =
+docs/ai-collaboration/creator-centre/creator-content-v0/
+CREATOR_CONTENT_V0_FINAL_ACCEPTANCE_AND_PRODUCT_LEARNING_HANDOFF_V1.md
+```
 
-### First required action when Creator Orchestrator resumes after that report is available
+No merge to `development` and no deployment was authorized or performed.
+
+### First required action when Creator Orchestrator resumes
 
 1. Read the complete final technical acceptance + implementation-learning handoff.
 2. Verify the accepted backend/frontend/program authority SHAs, migration count, remaining technical debt and Product implications.
@@ -638,7 +664,28 @@ Product deep dive
 → immutable Product register in dummy_tcs
 ```
 
-### Step B — bounded technical understanding / donor audit
+### Step B — one-time role comprehension, then bounded technical understanding / donor audit
+
+Before the first new Instagram-linked Creator Intelligence implementation after this transfer, the handoff must require the existing Brand Centre / Instagram Intelligence SA to confirm:
+
+```text
+ROLE_COMPREHENSION =
+ACCEPTED | CORRECTION_REQUIRED
+
+PRODUCT_AUTHORITY_UNDERSTANDING =
+ACCEPTED | CORRECTION_REQUIRED
+
+AUDIENCE_CONTENT_BASE_UNDERSTANDING =
+ACCEPTED | CORRECTION_REQUIRED
+
+SHARED_RUNTIME_REUSE_DIRECTION =
+ACCEPTED | CORRECTION_REQUIRED
+
+IMPLEMENTATION =
+NOT_AUTHORIZED
+```
+
+The handoff must include the immutable Product register, accepted Audience and Content backend/frontend/program checkpoints, current bases to revalidate, shared donors, exact role split, exclusions, required reuse matrix, migration/schema/provider/security/frontend implications, finite-plan requirements and circuit breakers.
 
 Do not immediately tell the technical SA to code.
 
@@ -721,7 +768,7 @@ When this handoff is given to the existing Creator Orchestrator chat:
 4. Read Work Preferences + Rate Card Product authority for context, but do not initiate their implementation yet.
 5. Read Media Kit non-authoritative composition and preserve the accepted CTA/trust decisions above.
 6. Return one concise comprehension/orientation report only if Parent asks or if a material contradiction is detected.
-7. **Primary next event:** receive and review `CREATOR_CONTENT_V0_FINAL_ACCEPTANCE_AND_PRODUCT_LEARNING_HANDOFF_V1` from Brand Centre / Instagram Intelligence SA.
+7. **Primary next action:** read and review the already-published `CREATOR_CONTENT_V0_FINAL_ACCEPTANCE_AND_PRODUCT_LEARNING_HANDOFF_V1` from `program/creator-content-v0-authority`.
 8. After Content is technically accepted and its learning is reviewed, resume Product decision discussion for **Creator Brand**.
 9. Then follow the explicit implementation order in Section 4.
 
@@ -742,9 +789,9 @@ CREATOR_ORCHESTRATOR_CONTEXT = READY
 
 AUDIENCE_V0 = PRODUCT + TECHNICALLY ACCEPTED
 
-CONTENT_V0 = PRODUCT FROZEN / AUTONOMOUS IMPLEMENTATION IN FLIGHT
+CONTENT_V0 = PRODUCT + TECHNICALLY ACCEPTED / POST-IMPLEMENTATION PRODUCT REVIEW PENDING
 
-CREATOR_BRAND = NEXT PRODUCT AFTER CONTENT FINAL LEARNING REVIEW
+CREATOR_BRAND = NEXT PRODUCT AFTER CONTENT POST-IMPLEMENTATION PRODUCT REVIEW
 
 AUDIENCE_V1 = AFTER CONTENT + CREATOR BRAND
 
@@ -755,6 +802,8 @@ RATE_CARD = PRODUCT FROZEN / IMPLEMENTATION LATER
 MEDIA_KIT = FINAL / FULL PRODUCT NOT YET FROZEN
 
 BRAND_CENTRE_SA_RELATIONSHIP = ESTABLISHED
+
+BRAND_CENTRE_SA_ONE_TIME_ROLE_COMPREHENSION_AUDIT = REQUIRED BEFORE FIRST NEXT IMPLEMENTATION
 
 THIRD TECHNICAL SA = NOT RECOMMENDED
 ```
