@@ -95,4 +95,29 @@ This is the single ledger for the Creator Audience V0 implementation program.
 
 `P3 = ACCEPTED`
 
-### P4 — not started
+### P4 — accepted
+
+- Backend P4: `885e1a57a2c0fff75db162216900684303256b9f` /
+  `fffe8bd7fcbe99020ab6f4c50c1c5f91af78015e`.
+- Frontend P4: `39799c75abc89e47d6a3526fb05f83d4cfbef585` /
+  `4d76d7766d82153c60fafd6963f64740b729e9de`.
+- Clean PostgreSQL 17 apply: 101/101 current. Accepted populated 98→101
+  converged-predecessor upgrade retained.
+- Production backend boot and `/health/live` plus database-backed `/health`:
+  HTTP 200 PASS.
+- Guarded shared-repository fixture → real authenticated backend API →
+  production-built UI: PASS; exact lineage 1 Resource / 1 completed Capture /
+  8 Evidence / 1 Object / 6 generations / 6 current.
+- Real browser matrix at 390/767/768/1440: authenticated API/UI, shell
+  navigation, keyboard/focus, overflow PASS; Axe serious/critical 0.
+- Backend focused 92 tests plus PostgreSQL 2/2 and owner-scope 3/3 PASS;
+  frontend focused 33 plus related guard 23 PASS.
+- Secret/forbidden artifact, schema/dependency identity, no-live-call,
+  no-public-mutation, no-development-merge, and no-deployment gates PASS.
+- Backend/frontend normal publication and independent fetch-back equality PASS.
+- Correction cycles: 1 bounded local harness/configuration reconciliation; no
+  Product, schema, API, or feature correction.
+
+`P4 = ACCEPTED`
+
+`CREATOR_AUDIENCE_V0_IMPLEMENTATION = EVIDENCE_COMPLETE_PENDING_FINAL_ACCEPTANCE`
