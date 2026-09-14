@@ -106,23 +106,22 @@ ORGANIC REPOSTING RIGHTS
 BRANDED COLLABORATION
 ```
 
-### UGC requirement
+### UGC treatment
 
-Creator Rate Card V0 must also support a Creator-facing `UGC Video` commercial item because UGC is an explicit Brand/Campaign commercial/content requirement in the existing Campaign experience.
+UGC is **not** a separate Deliverable format.
 
-However, current frozen Add Brief authority does not expose `UGC_VIDEO` as a canonical Deliverable format; UGC appears in Campaign UX/examples rather than as one of the frozen four Deliverable formats.
+UGC is a Campaign/use-case variation of the same Campaign → Brief → Deliverable construct where publication on the Creator's own social handle is not required.
 
-Therefore:
+Therefore Creator Rate Card V0 must **not** create a separate `UGC Video` atomic rate item or a new `UGC_VIDEO` Deliverable type.
+
+Creator willingness is represented instead as a Work Preferences toggle:
 
 ```text
-UGC VIDEO = PRODUCT REQUIRED IN RATE CARD V0
-
-EXACT SHARED DOMAIN MAPPING = TECHNICAL / PRODUCT RECONCILIATION REQUIRED
+Open to UGC projects
+YES / NO
 ```
 
-Do not introduce a conflicting parallel Campaign Deliverable enum merely to implement Rate Card.
-
-The later Rate Card technical preflight must determine the correct shared mapping and return any material Campaign-domain conflict to Product authority.
+For a UGC project, content usage rights are required by default. Exact final rights scope, duration and any paid-amplification authorization remain opportunity/agreement-specific and must be explicit in the final Campaign/quote/Collaboration terms.
 
 ---
 
@@ -141,7 +140,6 @@ Reel
 Story
 Carousel
 Photoshoot / static asset creation
-UGC Video
 ```
 
 ### 5.1 Reel
@@ -184,17 +182,6 @@ Reference scope:
 ```
 
 Exact quantity/production requirements remain opportunity-specific.
-
-### 5.5 UGC Video
-
-Reference scope:
-
-```text
-1 UGC Video
-reference duration: approximately 15–20 seconds
-```
-
-UGC Video does not automatically imply publication on the Creator's own account. Publication, usage and paid-media rights must be explicitly agreed where applicable.
 
 ---
 
@@ -279,20 +266,27 @@ The actual rights fee/scope may be negotiated in the opportunity-specific quote/
 
 No usage right is granted merely because the Rate Card says the Creator is open to it.
 
+UGC projects are the specific exception to the generic availability toggle: when the Creator elects to take UGC projects, content usage rights are expected by default for that UGC use case, while exact duration/scope remains agreement-specific.
+
 ---
 
-## 8. Gifting / barter preference
+## 8. Gifting / barter and UGC project preferences
 
-Rate Card may display the Creator's canonical Work Preferences value:
+Rate Card may display the Creator's canonical Work Preferences values:
 
 ```text
 Open to gifting / barter collaborations
 YES / NO
+
+Open to UGC projects
+YES / NO
 ```
 
-This value is owned by the Work Preferences amendment and must not be duplicated as a second canonical Rate Card field.
+These values are owned by Work Preferences and must not be duplicated as second canonical Rate Card fields.
 
-`YES` means willing to consider, not automatic acceptance.
+`YES` means willing to consider the corresponding opportunity type, not automatic acceptance.
+
+UGC `YES` does not create a separate Deliverable format or separate monetary Rate Card line item.
 
 ---
 
@@ -485,7 +479,8 @@ Rate Card V0 excludes:
 - rush fees;
 - automatic Campaign eligibility blocking based on Rate Card;
 - automatic quote sending;
-- direct C04 implementation.
+- direct C04 implementation;
+- a separate UGC Deliverable/rate item.
 
 ---
 
@@ -497,11 +492,11 @@ Rate Card V0 is Product-acceptable only when:
 2. Creator may enable/disable atomic items without creating a binding commercial offer;
 3. Campaign commercial and payment terms always supersede Rate Card when applying to Campaigns;
 4. Rate Card mismatch does not block Campaign application;
-5. Reel, Story, Carousel, Photoshoot/static creation and UGC Video Product needs are represented, with UGC domain mapping explicitly reconciled before implementation;
+5. Reel, Story, Carousel and Photoshoot/static creation Product needs are represented without introducing a separate UGC Deliverable/rate item;
 6. Link-in-Bio has one starting amount plus one positive duration;
 7. Partnership/Spark Ad has one starting amount plus one positive authorization duration;
-8. Content usage rights expose YES/NO plus optional positive duration and are never implicitly granted;
-9. gifting/barter preference is projected from canonical Work Preferences;
+8. Content usage rights expose YES/NO plus optional positive duration and are never implicitly granted outside the agreed scope; UGC projects default to requiring content usage rights;
+9. gifting/barter and UGC-project willingness are projected from canonical Work Preferences;
 10. currency is auto-resolved, not manually entered;
 11. preferred payment terms use accepted Campaign advance-percentage and net-term vocabulary;
 12. standardized conditions make Rate Card's non-binding/reference nature clear;
@@ -518,6 +513,8 @@ CREATOR_RATE_CARD_V0_PRODUCT = FROZEN
 
 WORK_PREFERENCES_GIFTING_BARTER_AMENDMENT = FROZEN
 
+WORK_PREFERENCES_UGC_PROJECT_AMENDMENT = FROZEN
+
 RATE_CARD_PACKAGES = DEFERRED_V2
 
 LOCALIZED_FX_DISPLAY = DEFERRED_FUTURE_REQUIREMENT
@@ -527,4 +524,4 @@ CAMPAIGN_NDA_REQUIREMENT = SEPARATE FUTURE BRAND REQUIREMENT
 TECHNICAL CURRENT-STATE / REUSE PREFLIGHT = NOT YET AUTHORIZED BY THIS DOCUMENT ALONE
 ```
 
-The future technical preflight must specifically reconcile the UGC Video Product requirement and Rate Card presentation categories against the current frozen Campaign/Brief/Deliverable domain before implementation.
+The future technical preflight must reconcile Rate Card presentation categories against the current frozen Campaign/Brief/Deliverable domain while preserving UGC as a use-case preference rather than a separate Deliverable type.
