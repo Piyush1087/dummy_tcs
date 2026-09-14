@@ -32,15 +32,19 @@ This is the single ledger for the Creator Audience V0 implementation program.
 
 ### P1 — accepted
 
-- Backend: `175d4c150c12306ecd1577df10ebcc05b9035af6` /
+- Backend foundation: `175d4c150c12306ecd1577df10ebcc05b9035af6` /
   `ca0ffecdbfceac38204da23bf257d04a23949de7`.
+- Backend final: `843faa5cf6936c0a5e8895a703cf8bdf3921e246` /
+  `1867832be3cdace0f3a065925ba57e77bff6f756`.
 - Frontend unchanged: `777c74cb7ca978053d9c10dcab29b282bc2dbea8` /
   `a3d6a32f566eeed9b608a7b5a2a4d1ec0b238e6f`.
-- PostgreSQL: clean 100/100 and populated P0 98→100; deterministic Brand
+- PostgreSQL: clean 101/101 and populated P0 98→101; deterministic Brand
   backfill and Creator/Brand isolation PASS.
 - Full affected Brand regression: 114 files and 964 tests passed; focused
   enabled P1 PostgreSQL suite passed 2/2.
-- Correction cycles: 1 (task-only migration rehearsal corrections).
+- Correction cycles: 2 (task-only migration rehearsal correction; then
+  nullable-Brand-key owner-scope lineage/uniqueness correction found by the
+  required pre-P2 repository review).
 - Publication/fetch-back: backend exact local/remote SHA and tree equality;
   authority evidence is published by the commit containing this ledger entry.
 
