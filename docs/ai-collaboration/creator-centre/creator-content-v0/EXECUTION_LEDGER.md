@@ -32,13 +32,25 @@ This is the single ledger for Creator Content V0.
 
 `P0 = ACCEPTED`
 
-### P1 — authorized
+### P1 — accepted
 
-`P1 = AUTHORIZED`
+- The transfer reconstruction is accepted under
+  `CREATOR_CONTENT_V0_TRANSFER_EXPECTED_TREE_ERRATUM_AND_RESUME_V1`; correct
+  authority tree: `d9626044136e51140103d538092a89cfa174b8f6`.
+- The erratum consumed no correction cycle.
+- Backend checkpoint: `39e4737e71b8aa22260587da8ed557fc73c09460` /
+  `c92e14327950f422493a4ccfb22ac14f70d0282a`.
+- Schema, 101 migrations, dependencies, public contracts and frontend remained
+  unchanged.
+- Brand and Creator Audience compatibility, PostgreSQL owner isolation,
+  generation/current CAS, replay, build and static gates passed.
+- Evidence: `P1_SHARED_SEMANTIC_OWNER_SCOPE_NEUTRALIZATION.md`.
 
-### P2 — prohibited pending P1
+`P1 = ACCEPTED`
 
-`P2 = PROHIBITED_PENDING_P1_ACCEPTANCE`
+### P2 — authorized
+
+`P2 = AUTHORIZED`
 
 ### P3 — prohibited pending P2
 
