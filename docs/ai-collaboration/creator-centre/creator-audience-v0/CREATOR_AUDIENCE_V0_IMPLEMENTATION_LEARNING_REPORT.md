@@ -22,9 +22,11 @@
 - The stateless Instagram Graph client, provider error classification,
   professional-account eligibility, accepted metric/breakdown vocabulary,
   provider category bound, and low-level response hardening remain shared.
-- Existing Data Extraction/Evidence and Intelligence generation/current tables,
-  CAS/transition behavior, and the Instagram sync job table remain the only
-  persistence/runtime surfaces.
+- Existing Data Extraction/Evidence and the shared verified Intelligence
+  execution/worker/bundle/generation/transition/CAS/current services remain the
+  only persistence/runtime surfaces. The correction demonstrated that sharing
+  tables is insufficient: domain adapters must also traverse the canonical
+  runtime services.
 - The Aurora shell, authenticated fetch/session path, Settings connection
   lifecycle, and production health routes were reused.
 
@@ -42,9 +44,9 @@
 
 - Settings-compatible Creator credential/fence adapter and server-side actor →
   workspace → canonical Owner subject resolution.
-- Deterministic Audience normalization, Highlights finalizer, shared-current
-  repository adapter, strict authenticated consumer, and internal exact Creator
-  Instagram purge.
+- Deterministic Audience normalization, Highlights finalizer, a verified
+  Creator Audience processor bundle and persistence hook, strict authenticated
+  consumer, and internal exact Creator Instagram purge.
 - Creator Insights/Audience route, durable shell destination, strict Zod client,
   last-good hook, truthful state UI, and bounded browser acceptance harnesses.
 
@@ -62,6 +64,12 @@
   simpler without weakening production validation.
 - The frontend bundle retains a pre-existing large-chunk advisory. Audience
   adds no dependency and is not the source of that architectural debt.
+- A browser fixture that writes directly to a feature repository can prove UI
+  rendering while missing production-path defects. Integrated acceptance now
+  begins at the Settings-compatible provider DI boundary and invokes the real
+  pipeline before API/UI assertions.
+- Freshness must be derived from authoritative timestamps at every read; storing
+  a once-computed freshness label silently makes long-lived current inaccurate.
 
 ## Reusable seams for future Creator Insights
 

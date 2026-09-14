@@ -4,8 +4,8 @@
 
 ## Checkpoints
 
-- Backend: `885e1a57a2c0fff75db162216900684303256b9f` / `fffe8bd7fcbe99020ab6f4c50c1c5f91af78015e`.
-- Frontend: `39799c75abc89e47d6a3526fb05f83d4cfbef585` / `4d76d7766d82153c60fafd6963f64740b729e9de`.
+- Backend: `7028d1fcbd467175a5358fce92ad2edd63ea44cd` / `dbc9b8e00936d4ecbc700b516b17ad8ce78f2d17`.
+- Frontend: `4ca6141face77821f546a13bdde12c8c41780a6f` / `f14d5076021a97137f505a91c81736021a8dc30a`.
 - Authority parent before this handoff: `13ee2cdf6c17bdc06637364d322ec0b08c4841ce` / `881540fb45a72a631dd0d7d652728f5e265f85e8`.
 - Definitive branches are `program/creator-audience-v0-backend`,
   `program/creator-audience-v0-frontend`, and
@@ -25,6 +25,13 @@
   Credential decryption stays inside acquisition after replay misses.
 - Scheduling: the existing Instagram sync coordinator and hourly dispatcher;
   no Audience scheduler or manual refresh exists.
+- Publication: Creator owns source-specific DE acquisition/read mapping only.
+  Intelligence publication goes through `IntelligenceExecutionService`, the
+  shared worker, verified Creator Audience bundle, persistence hook, generation
+  repository, canonical current locks, transition validation, and CAS.
+- Final Capture completion transactionally revalidates exact Creator,
+  integration, account, authorization generation, active status, and provider
+  capability after provider work and before Evidence/current publication.
 
 ## Data and truth contract
 
@@ -34,7 +41,11 @@ country, and city. `capturedAt` is successful acquisition time. Empty versus
 privacy suppression remains `PROVIDER_EMPTY_OR_THRESHOLD_SUPPRESSED`; category
 cap remains 45; stale threshold remains 192 hours.
 
-The DTO is strict and versioned as `creator_audience_v0.1`. Percentages require
+The DTO is strict and versioned as `creator_audience_v0.1`. Freshness is
+calculated dynamically at read time and becomes stale at the inclusive 192-hour
+boundary. Shared/sync failure is projected separately from preserved same-account
+current; a different account cannot inherit the old account's current.
+Percentages require
 an explicit valid denominator. Cohort availability depends on usable
 demographic dimensions, not the account follower count. Highlights use the
 deterministic 5/10-point rules and are capped at three. Failure preserves current.

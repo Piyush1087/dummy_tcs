@@ -50,7 +50,7 @@ This is the single ledger for the Creator Audience V0 implementation program.
 
 `P1 = ACCEPTED`
 
-### P2 — accepted
+### P2 — implementation complete; final runtime correction evidence ready
 
 - Backend: `1eba8f80c5f98bcd2bc5b015985a4b01292ed81d` /
   `bf1f561dccbca15c1c3faa79a22820863192aafe`.
@@ -71,7 +71,14 @@ This is the single ledger for the Creator Audience V0 implementation program.
   by the required narrow lifecycle port after the architecture gate rejected it).
 - Publication/fetch-back: exact local/remote SHA and tree equality; P1 ancestry PASS.
 
-`P2 = ACCEPTED`
+Final review reopened runtime acceptance after finding that the Creator feature
+bypassed the shared verified execution/transition/current path. Correction 1
+routes publication through that shared path, adds the persistence-time Settings
+fence, and proves exact replay, degradation, and current preservation. Corrected
+backend: `7028d1fcbd467175a5358fce92ad2edd63ea44cd` /
+`dbc9b8e00936d4ecbc700b516b17ad8ce78f2d17`.
+
+`P2_RUNTIME_CORRECTION_EVIDENCE_READY = YES`
 
 ### P3 — accepted
 
@@ -95,7 +102,7 @@ This is the single ledger for the Creator Audience V0 implementation program.
 
 `P3 = ACCEPTED`
 
-### P4 — accepted
+### P4 — integrated correction evidence ready
 
 - Backend P4: `885e1a57a2c0fff75db162216900684303256b9f` /
   `fffe8bd7fcbe99020ab6f4c50c1c5f91af78015e`.
@@ -105,13 +112,16 @@ This is the single ledger for the Creator Audience V0 implementation program.
   converged-predecessor upgrade retained.
 - Production backend boot and `/health/live` plus database-backed `/health`:
   HTTP 200 PASS.
-- Guarded shared-repository fixture → real authenticated backend API →
-  production-built UI: PASS; exact lineage 1 Resource / 1 completed Capture /
-  8 Evidence / 1 Object / 6 generations / 6 current.
+- Corrected guarded provider-DI production pipeline → DE/Capture/Evidence →
+  shared verified runtime → real authenticated backend API → production-built
+  UI: PASS; exact lineage 1 Resource / 1 completed Capture / 8 Evidence / 1
+  shared execution / 1 processor execution and attempt / 1 Object / 6
+  generations / 1 action / 6 transition outcomes / 6 current.
 - Real browser matrix at 390/767/768/1440: authenticated API/UI, shell
   navigation, keyboard/focus, overflow PASS; Axe serious/critical 0.
-- Backend focused 92 tests plus PostgreSQL 2/2 and owner-scope 3/3 PASS;
-  frontend focused 33 plus related guard 23 PASS.
+- Correction-focused shared runtime/Creator tests 34 PASS; affected PostgreSQL
+  changed-surface manifest 321 PASS with exact historical/obsolete exclusions.
+- Frontend full suite 1,223 PASS with one existing skip; production build PASS.
 - Secret/forbidden artifact, schema/dependency identity, no-live-call,
   no-public-mutation, no-development-merge, and no-deployment gates PASS.
 - Backend/frontend normal publication and independent fetch-back equality PASS.
@@ -119,6 +129,14 @@ This is the single ledger for the Creator Audience V0 implementation program.
   authority trailing-blank-line diff-check correction); no Product, schema,
   API, or feature correction.
 
-`P4 = ACCEPTED`
+Final review found that the original P4 fixture inserted through a feature-owned
+repository path rather than invoking the production pipeline. Correction 1
+replaces that route with a guarded provider-neutral production-path fixture and
+proves success, subsequent provider failure with preserved current, and stale
+read truth through the authenticated API and production UI. Corrected frontend
+harness: `4ca6141face77821f546a13bdde12c8c41780a6f` /
+`f14d5076021a97137f505a91c81736021a8dc30a`.
+
+`P4_INTEGRATED_CORRECTION_EVIDENCE_READY = YES`
 
 `CREATOR_AUDIENCE_V0_IMPLEMENTATION = EVIDENCE_COMPLETE_PENDING_FINAL_ACCEPTANCE`
