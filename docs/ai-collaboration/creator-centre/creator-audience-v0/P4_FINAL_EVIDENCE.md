@@ -116,8 +116,8 @@ HTTP 401.
   Collaboration, AI Match, Marketplace, Persona, or edit capability was started.
 - No `development` merge and no deployment occurred.
 
-P4 used one bounded operational correction cycle: the first boot/browser
-invocations were reconciled to the repository's required local mail-template
-configuration, exact PostgreSQL `localhost` guard, and expected unauthenticated
-startup-refresh 401. No Product, schema, API, or feature correction was needed.
-
+P4 used two bounded correction cycles. The first reconciled boot/browser
+invocations to the repository's required local mail-template configuration,
+exact PostgreSQL `localhost` guard, and expected unauthenticated startup-refresh
+401. The second removed trailing blank lines detected by the authority
+publication diff gate. No Product, schema, API, or feature correction was needed.

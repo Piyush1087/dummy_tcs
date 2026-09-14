@@ -115,8 +115,9 @@ This is the single ledger for the Creator Audience V0 implementation program.
 - Secret/forbidden artifact, schema/dependency identity, no-live-call,
   no-public-mutation, no-development-merge, and no-deployment gates PASS.
 - Backend/frontend normal publication and independent fetch-back equality PASS.
-- Correction cycles: 1 bounded local harness/configuration reconciliation; no
-  Product, schema, API, or feature correction.
+- Correction cycles: 2 (local harness/configuration reconciliation, then
+  authority trailing-blank-line diff-check correction); no Product, schema,
+  API, or feature correction.
 
 `P4 = ACCEPTED`
 

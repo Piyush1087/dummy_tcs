@@ -93,5 +93,4 @@ introduced.
   keeping future visible hierarchy and terminology under Product authority.
 - Consider a separately authorized local/offline boot provider mode if repeated
   acceptance work justifies removing unrelated mail configuration from health
-  smoke prerequisites.
-
+smoke prerequisites.
