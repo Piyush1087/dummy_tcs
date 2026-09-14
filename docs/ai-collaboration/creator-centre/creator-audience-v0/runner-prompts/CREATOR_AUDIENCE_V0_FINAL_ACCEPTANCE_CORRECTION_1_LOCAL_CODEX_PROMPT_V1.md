@@ -553,4 +553,3 @@ FOR CREATOR AUDIENCE V0 FINAL ACCEPTANCE REVIEW
 ```
 
 If the correction requires schema migration, Product reinterpretation, a parallel runtime, or cannot preserve Brand behavior, stop with the exact circuit breaker and smallest required decision.
-
