@@ -61,10 +61,23 @@ This is the single ledger for Creator Content V0.
 
 `P2 = ACCEPTED`
 
-### P3 — authorized
+### P3 — accepted
 
-`P3 = AUTHORIZED`
+- Backend proof checkpoint: `64a9c5e755c6f2d8ba4bc87aab850fcaf7dc0be9` /
+  `1a0f4ecddc6865a80cf9ac366c4c0b581d232465`.
+- Frontend checkpoint: `5464fe7530588368c0eaab41782ca79d82b32b7a` /
+  `e48aa9da4830c5a35964c242b42dec4af4838302`.
+- Audience and Content are peer Creator Insights sections under the accepted
+  shell, with explicit Owner/Manager/Assistant Content read authority.
+- Strict parser/client/view, full frontend regression, production build,
+  responsive browser, keyboard/focus, zero-Axe-finding, current-preservation
+  and static gates passed.
+- Schema, migrations, dependencies and public backend contract remain
+  unchanged.
+- Evidence: `P3_CREATOR_INSIGHTS_CONTENT_FRONTEND.md`.
 
-### P4 — prohibited pending P3
+`P3 = ACCEPTED`
 
-`P4 = PROHIBITED_PENDING_P3_ACCEPTANCE`
+### P4 — authorized
+
+`P4 = AUTHORIZED`
