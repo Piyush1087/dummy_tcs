@@ -50,7 +50,28 @@ This is the single ledger for the Creator Audience V0 implementation program.
 
 `P1 = ACCEPTED`
 
-### P2 — not started
+### P2 — accepted
+
+- Backend: `1eba8f80c5f98bcd2bc5b015985a4b01292ed81d` /
+  `bf1f561dccbca15c1c3faa79a22820863192aafe`.
+- Frontend unchanged: `777c74cb7ca978053d9c10dcab29b282bc2dbea8` /
+  `a3d6a32f566eeed9b608a7b5a2a4d1ec0b238e6f`.
+- PostgreSQL: 101/101 current; exact 1 Resource → 1 completed Capture →
+  8 Evidence → 1 Object → 6 component generations → 6 current components.
+- Replay counts stable; later failure preserves current; exact
+  Creator/account/generation authorization fence PASS.
+- One shared hourly dispatcher: immediate initial/reconnect due processing and
+  weekly plus deterministic 0–30 minute jitter PASS; no manual Audience refresh.
+- Owner/Manager/Assistant read-only route matrix, missingness/denominator/
+  highlight truth matrix, and exact Creator Instagram purge with Creator website
+  preservation PASS.
+- Focused suite: 108 tests PASS; enabled P2 PostgreSQL 2/2 and owner-scope
+  PostgreSQL 3/3 PASS; build, Prisma, lint, format, diff, and secret gates PASS.
+- Correction cycles: 1 (direct initial-connect coordinator dependency replaced
+  by the required narrow lifecycle port after the architecture gate rejected it).
+- Publication/fetch-back: exact local/remote SHA and tree equality; P1 ancestry PASS.
+
+`P2 = ACCEPTED`
 
 ### P3 — not started
 
