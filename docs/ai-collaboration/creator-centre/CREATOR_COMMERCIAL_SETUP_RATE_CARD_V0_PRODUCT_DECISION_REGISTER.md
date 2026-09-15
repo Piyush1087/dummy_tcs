@@ -211,18 +211,12 @@ V0 supports exactly one reference Link-in-Bio rate:
 
 ```text
 Starting from <amount>
-Duration: <durationDays>
+Reference duration: 7 days
 ```
 
-One duration is stored/displayed, not multiple tiers.
+The 7-day duration is the fixed V0 Rate Card baseline. Do not create multiple duration tiers or a separate duration selector in V0.
 
-Default V0 reference duration may initialize to:
-
-```text
-7 days
-```
-
-but the implementation may allow the Creator to set one positive duration value.
+A later opportunity-specific quote/agreement may use another duration and amount.
 
 ### 7.2 Partnership / Spark Ad authorization
 
@@ -230,18 +224,12 @@ V0 supports exactly one reference paid-amplification authorization rate:
 
 ```text
 Starting from <amount>
-Authorization duration: <authorizationDays>
+Reference authorization duration: 15 days
 ```
 
-One duration is stored/displayed, not multiple tiers.
+The 15-day duration is the fixed V0 Rate Card baseline. Do not create multiple duration tiers or a separate duration selector in V0.
 
-Default V0 reference duration may initialize to:
-
-```text
-15 days
-```
-
-but the implementation may allow the Creator to set one positive duration value.
+A later opportunity-specific quote/agreement may use another duration and amount.
 
 ### 7.3 Content usage rights
 
@@ -493,8 +481,8 @@ Rate Card V0 is Product-acceptable only when:
 3. Campaign commercial and payment terms always supersede Rate Card when applying to Campaigns;
 4. Rate Card mismatch does not block Campaign application;
 5. Reel, Story, Carousel and Photoshoot/static creation Product needs are represented without introducing a separate UGC Deliverable/rate item;
-6. Link-in-Bio has one starting amount plus one positive duration;
-7. Partnership/Spark Ad has one starting amount plus one positive authorization duration;
+6. Link-in-Bio has one starting amount with the fixed V0 reference duration of 7 days;
+7. Partnership/Spark Ad has one starting amount with the fixed V0 reference authorization duration of 15 days;
 8. Content usage rights expose YES/NO plus optional positive duration and are never implicitly granted outside the agreed scope; UGC projects default to requiring content usage rights;
 9. gifting/barter and UGC-project willingness are projected from canonical Work Preferences;
 10. currency is auto-resolved, not manually entered;
