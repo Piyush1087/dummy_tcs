@@ -21,7 +21,9 @@ P0 = ACCEPTED — strict contracts/predecessor matrix 53 PASS; build/typecheck/l
 Backend checkpoint ff25153cd37008c02e6a7ab3c77fd509d2a5b408 / f2c2030669efa759c60fec9ed41f21d04c7d7d19.
 Normal backend push and independent fetch-back SHA/tree equality PASS; clean. Two files, 541 added lines.
 Authority P0 checkpoint is the commit containing this ledger/evidence/archive; resolve its exact SHA/tree after publication.
-P1 = NOT_STARTED
+P1 = ACCEPTED — verified deterministic derived execution, current/CAS, exact replay, partial/failure preservation, authorization/isolation/purge and focused PostgreSQL gates PASS; 161 unique focused tests, build/lint/format/diff/secret checks PASS.
+Backend checkpoint 4b37a302d06f06324e52c461647e669a9d5769d2 / b41d179587e16b63e243ba4bb68b71a95c264a6c; normal push and independent fetch-back equality/ancestry/clean status PASS.
+Authority predecessor P0 cb92615cc53d34f63936cfcfadc70aae74a943da / 78caa5cd6621dd5d3df226f5178b8ff623c30825; containing P1 authority checkpoint resolved after publication. See P1_AUDIENCE_V1_BACKEND_INTELLIGENCE_AND_PERSISTENCE.md.
 P2 = NOT_STARTED
 P3 = NOT_STARTED
 P4_EVIDENCE_READY = NO
