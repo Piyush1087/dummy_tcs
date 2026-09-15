@@ -27,7 +27,8 @@ Authority predecessor P0 cb92615cc53d34f63936cfcfadc70aae74a943da / 78caa5cd6621
 P2 = ACCEPTED — real authenticated built runtime, three roles/inactive/anonymous/query-isolation, state truth, readonly/no-acquisition and exact replay gates PASS; 109 focused tests, build/type/lint/format/diff/secret PASS. Retained-input SQL row-order canonicalization corrected without weakening source re-admission; see P2_AUTHENTICATED_CONSUMER_AND_RUNTIME.md.
 Backend d99cce6f8d7730e8eff7f7cc734ba8813bf822e7 / c0101e6a5a07e156f6c46e2a328a8e948cdbc915; normal push and independent fetch-back SHA/tree equality/ancestry/clean PASS.
 Frontend exact start unchanged. Authority predecessor P1 2216997cebd3d1683deca1317d1656b21ae921df / 688a477e9bed769cbc89e294c33852591276afcc; containing P2 authority SHA/tree resolved after publication. Primary 1; formal cycles 0.
-P3 = NOT_STARTED
+P3 = ACCEPTED — strict V1 in-place frontend, frozen hierarchy, source-native missingness/cohorts, supported-only context/history and narrow authenticated Team access alignment; 140 tests / 19 files PASS, production build/type/lint/format/diff/secret PASS.
+Frontend d5910537b1e323e399cb5966a57910b478c08d18 / f83713cb0022d0c948943caa3240bc74db6f39bc; normal push and independent fetch-back SHA/tree equality/start ancestry/clean PASS. Authority predecessor P2 9495d22547214554cce2363f05bd708c510415db / f2378cba9ee5fd960e6a01aaf524831dc2b3911e. See P3_CREATOR_AUDIENCE_V1_FRONTEND.md.
 P4_EVIDENCE_READY = NO
 
 ## Scope and authority reconciliation
