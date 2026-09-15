@@ -45,7 +45,7 @@ Explicit Parent authorization permits technical predecessor canonicalization aft
 | Packet | State | Primary runs | Formal corrections |
 | --- | --- | ---: | ---: |
 | P0 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
-| P1 | NOT_STARTED | 0 | 0 |
+| P1 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
 | P2 | NOT_STARTED | 0 | 0 |
 | P3 | NOT_STARTED | 0 | 0 |
 | P4 | NOT_STARTED | 0 | 0 |
@@ -61,5 +61,7 @@ Backend P0 normal publication and independent fetch-back PASS: `24c781f292fa8027
 `P0_CORRECTION_CYCLES_USED = 0`
 
 ## Boundaries
+
+P0 authority publication/fetch-back passed at `5aa43e619fe9a2d09ea5360429931b107ea796e9` / tree `8513c31b4086f81a8d7d13fd88d5406f11e1c868`. P1 backend normal publication/fetch-back passed at `5f3894880194a4a8c4af6958c071481d180ce6ec` / tree `4d057eacf12e8919b836c0ac3e74a038079d5843`, parent P0 backend. Clean worktree and exact original ancestry. [P1 evidence](P1_CANONICAL_WORK_PREFERENCES_AND_MANUAL_API.md). P2 may proceed only after this authority checkpoint is normally published and independently fetched equal.
 
 Audience V1, Portfolio, Media Kit, quotes and later capabilities NOT_STARTED. Live Graph/model calls and Meta mutations NONE. Development merge/deployment NOT_PERFORMED. No secrets, credentials, bank details or runtime configuration values are included.
