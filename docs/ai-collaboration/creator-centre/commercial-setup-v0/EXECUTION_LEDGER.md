@@ -42,13 +42,13 @@ Explicit Parent authorization permits technical predecessor canonicalization aft
 
 ## Packet state
 
-| Packet | State | Primary runs | Formal corrections |
-| --- | --- | ---: | ---: |
-| P0 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
-| P1 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
-| P2 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
-| P3 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
-| P4 | NOT_STARTED | 0 | 0 |
+| Packet | State                               | Primary runs | Formal corrections |
+| ------ | ----------------------------------- | -----------: | -----------------: |
+| P0     | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION |            1 |                  0 |
+| P1     | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION |            1 |                  0 |
+| P2     | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION |            1 |                  0 |
+| P3     | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION |            1 |                  0 |
+| P4     | EVIDENCE_READY_FOR_FINAL_REVIEW     |            1 |                  0 |
 
 Original P0 stop: Parent-resolved Product-authority circuit breaker, zero correction cycles. Recovery 1 stop: Parent-resolved authority-contract circuit breaker, zero correction cycles. Recovery 2 resumes preserved worktrees. In-run test-table argument-shape and line-ending fixes are deterministic harness/format repairs, not formal correction cycles.
 
@@ -77,3 +77,25 @@ All 37 changed-surface tests PASS; final full frontend 1347 PASS / one existing 
 `P3_EVIDENCE_READY = YES`
 
 P4 proceeds only after the containing P3 authority checkpoint is normally pushed and independently fetched equal. P4 prepared verification retains earlier populated 102→103→104 preservation evidence and adds fresh104 migrations/API plus populated external-ownership digest/purge proof; no checkpoint or fixture reset/reconstruction.
+
+## P4 final closeout
+
+P3 authority fetched equal/clean at `b464c102670f7f4de27d03ff6afc6a2134c6e53e` / tree `3e8fb4ddbc7bc92333719d353431fb27baaf92a0`. P4 backend test-only checkpoint normally published/fetched equal and clean at `3504a3cc8f0dc684431b73046f5796f157708f68` / tree `de4b3ba41d3c6d96645f115a5d780660991a27c3`, parent P2 backend. One additional integrated PostgreSQL test file / 222 insertions; production/frontend/schema/dependencies unchanged from accepted packet checkpoints.
+
+Fresh final104 migration deployment/status and19 actual commercial DB/API tests PASS. Populated ordered102→103→104 preservation remains exact (195 original /197 P1 predecessor tables). Final integrated edits/rebind/purge1 PASS: all195 external counts/sorted digests, populated Campaign/Collaboration/CreatorBrand and other Creator canonical rows preserved. Final complete unchanged serialized shared50/50 PASS; initial concurrent-load timeouts disclosed in P4. Final frontend1347 PASS / one existing gate-specific skip and both28-case browser matrices PASS; focused37 PASS plus visible409 draft/error-focus/row-stability proof PASS.
+
+Final Prisma generate/validate, production build, scoped lint/format/diff, pinned-source frozen contracts and88-file planned-source/evidence/configured-value leakage scan PASS. Production health/live200 statusok, health200 databaseup. No live Graph/model/Meta mutation. All source102 migrations/package/lock/Docker/C04/Campaign/payout identities preserved except authorized separate103/104 models/migrations/backreferences and explicit commercial Team action additions.
+
+Task services stopped; uniquely labeled tmpfs PostgreSQL container removed, no durable volume; developer PostgreSQL untouched. Synthetic ignored backend/frontend configuration removed. Runner policy rejected recursive build cleanup; regular task-only untracked/secret-free/unused build directories are retained as the original prompt's explicit non-blocking hygiene exception. Non-secret accepted102 Prisma source archive remains outside repositories; ignored repository dependencies/unused duplicate Prisma temporary DLLs retained and disclosed. No runtime secret, browser state/log/media artifact is tracked or included.
+
+`P4_EVIDENCE_READY = YES`
+
+`WORK_PREFERENCES_V2_EVIDENCE_READY = YES`
+
+`RATE_CARD_V2_EVIDENCE_READY = YES`
+
+`COMBINED_COMMERCIAL_SETUP_EVIDENCE_READY = YES`
+
+`FINAL_ACCEPTANCE = AWAITING_CHILD_SA_PROGRAM_ORCHESTRATOR_REVIEW`
+
+P0–P4 primary runs1 each / formal correction cycles0 each; prior authority stops Parent-resolved circuit breakers, not corrections. No later capability/development merge/deployment. [P4 evidence](P4_INTEGRATED_ACCEPTANCE_AND_CLOSEOUT.md), [developer handoff](CREATOR_COMMERCIAL_SETUP_AND_RATE_CARD_V0_DEVELOPER_HANDOFF.md), [Product learning handoff](CREATOR_COMMERCIAL_SETUP_AND_RATE_CARD_V0_FINAL_ACCEPTANCE_AND_PRODUCT_LEARNING_HANDOFF_V1.md). Containing authority SHA/tree are returned after independent fetch-back to avoid self-reference.
