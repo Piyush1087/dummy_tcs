@@ -1,6 +1,6 @@
 # Creator Brand V0 — execution ledger
 
-One canonical Creator Brand ledger. Parent authorization is `7e54d3980ca3454263600e44766041dbb58e0a06`. The historical P0 prompt narrowed that run to P0; subsequent explicit Technical-SA adjudication accepted P0 and authorized the preserved P1 implementation and correction-1 closeout only. P2/P3/P4 remain prohibited.
+One canonical Creator Brand ledger. Parent authorization is `7e54d3980ca3454263600e44766041dbb58e0a06`. The historical P0 prompt narrowed that run to P0. Subsequent explicit Technical-SA adjudication accepted P0, then P1 including its correction-1 hygiene disposition, and authorized P2 through the relayed P2 prompt archived below. P3/P4 remain prohibited. Historical P0/P1 evidence statements retain their publication context.
 
 ## P0 — accepted by Technical-SA
 
@@ -33,7 +33,7 @@ NEXT_ACTION = PARENT RETURNS IMMUTABLE REPORT FOR TECHNICAL REVIEW
 
 P0's ignored build-output/dependency-junction cleanup refusal was explicitly adjudicated non-blocking local hygiene, correction cycles 0. Those ignored artifacts were not inherited into published trees; old P0 paths, shared dependency stores and user work remain untouched.
 
-## P1 — evidence-ready, not self-accepted; correction 1 closeout
+## P1 — accepted by Technical-SA; historical correction 1 closeout
 
 - The immutable primary report established PASS for Product/schema/additive migration 102, clean PostgreSQL, exact populated 101→102 upgrade (193 predecessor table counts/digests), 8 P1 PostgreSQL/API tests, 18 predecessor PostgreSQL tests, 146 focused unit/contract tests, role/tenant/actor isolation, manual-no-Intelligence, retention, production build/boot/health and hygiene.
 - Only primary cleanup/publication/authority closeout was incomplete. Explicit correction 1 authorizes state verification, bounded cleanup, publication and this single-lineage authority closeout. No backend source/schema/migration/test edit was made.
@@ -48,11 +48,12 @@ P0's ignored build-output/dependency-junction cleanup refusal was explicitly adj
 ```text
 P0 = ACCEPTED_BY_TECHNICAL_SA
 P0_CORRECTION_CYCLES_USED = 0
-P1_ACCEPTED = NO — AWAITING CHILD-SA / PROGRAM-ORCHESTRATOR REVIEW
-P1_EVIDENCE_READY = YES — SUBJECT TO FINAL AUTHORITY FETCH-BACK PROOF
+P1 = ACCEPTED_BY_TECHNICAL_SA
+P1_ACCEPTED = YES — EXPLICIT P2 PREDECESSOR ADJUDICATION
+P1_EVIDENCE_READY = YES
 P1_PRIMARY_RUNS_USED = 1
 P1_CORRECTION_CYCLES_USED = 1
-P2 = PROHIBITED
+P2 = AUTHORIZED_FOR_EXTERNAL_LOCAL_CODEX
 CLEANUP_DISPOSITION = NON_BLOCKING_LOCAL_RUNNER_HYGIENE_EXCEPTION
 LIVE_GRAPH_CALLS = NONE
 LIVE_MODEL_CALLS = NONE
@@ -62,4 +63,38 @@ MIGRATION_COUNT = 102
 DEVELOPMENT_MERGE = NOT_PERFORMED
 DEPLOYMENT = NOT_PERFORMED
 NEXT_ACTION = PARENT RETURNS IMMUTABLE CORRECTION REPORT FOR TECHNICAL REVIEW
+```
+
+## P2 — evidence-ready, not self-accepted
+
+- Exact fresh-worktree starting checkpoints, Product pins and accepted ancestry independently verified. No old P1 `dist`, `accepted-101`, dependency junction or unreconciled Product register was used.
+- Read-only current Content admission binds eight components, completed Capture, exact source Evidence/parents, Creator subject/workspace and current non-secret Settings account/generation/capabilities. No reacquisition or Content recalculation.
+- Frozen P0 bundle hash `5f8c179abd6d9a6e146d9322d93a961f80467183889c6d49f801dfb15410472c` retained. Only runtime registration activated; exactly one derived, unprotected Object and five components use shared execution, generation, validation and CAS-current.
+- Strict provider-neutral semantic DI defaults unavailable/fail-closed. Deterministic server support/confidence/taxonomy/candidate-ID finalization, exact replay, truthful insufficient replacement and semantic/validation/finalization failure-current preservation proved.
+- Existing GET/PUT now project five-family state and explicitly confirm server-held candidates. Owner/Manager USE/EDIT and Assistant read-only proved; active actor, expected revision, idempotency, target-only mutation, source/current verification and immutable provenance enforced. Canonical truth is never auto-applied or purged.
+- Final focused gates PASS: 201 unit/contract tests in 22 files; 50 PostgreSQL tests in 7 files; Prisma generate/validate, production build, production-scope TypeScript, boot/health, scoped ESLint/Prettier and diff checks. All 102 migrations apply cleanly; status current; no extra extension required.
+- Backend normal push/fetch-back PASS: `6206f43c6a13c304c971b810e1dd99a20aaaa11f` / `533f543612b856cfaf3b57769fe0b5541b803c3f`; direct parent accepted P1 `7a78ffec1dd6a413d0a2478a8f706dfa95393a05`. Inventory exactly 25 files, 3,272 insertions/41 deletions.
+- Frontend unchanged and fetched equality PASS: `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`. Packages, lockfile, schema, all migrations, Dockerfile/decoder and unrelated domain source unchanged.
+- Task services and uniquely named tmpfs PostgreSQL container/databases removed; ports 6052/55434 have zero listeners; synthetic ignored `.env` removed; temporary fixture media cleaned. One safe literal ignored `backend/dist` removal attempt was policy-blocked. The regular non-reparse, non-secret/non-media/non-DB directory is outside publication, has no remaining service and is unused: NON_BLOCKING_LOCAL_RUNNER_HYGIENE_EXCEPTION explicitly permitted by the P2 prompt. No bypass/retry.
+- Exact prompt archive normalization/digest equality, full proof matrix/commands and inventory are in `P2_CONTENT_BACKED_SUGGESTIONS_AND_CONFIRMATION.md`. Final containing-authority commit SHA/tree and independent fetch-back are resolved in the immutable report, avoiding a self-referential commit hash.
+
+```text
+P0 = ACCEPTED
+P1 = ACCEPTED_BY_TECHNICAL_SA
+P1_PRIMARY_RUNS_USED = 1
+P1_CORRECTION_CYCLES_USED = 1
+P2_ACCEPTED = NO — AWAITING CHILD-SA / PROGRAM-ORCHESTRATOR REVIEW
+P2_EVIDENCE_READY = YES — SUBJECT TO FINAL AUTHORITY FETCH-BACK PROOF
+P2_PRIMARY_RUNS_USED = 1
+P2_CORRECTION_CYCLES_USED = 0
+P3 = PROHIBITED
+P4 = NOT_STARTED
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = NONE
+MIGRATION_COUNT = 102
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE P2 REPORT FOR TECHNICAL REVIEW
 ```
