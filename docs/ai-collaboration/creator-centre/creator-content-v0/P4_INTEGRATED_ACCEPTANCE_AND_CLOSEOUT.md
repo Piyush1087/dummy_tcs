@@ -4,9 +4,9 @@
 
 ## Disposition
 
-`P4 = ACCEPTED`
+`P4 = CORRECTED_EVIDENCE_READY`
 
-The complete provider-neutral vertical is technically accepted. No development merge or deployment was performed.
+The corrected provider-neutral vertical is evidence-ready for Child-SA / Program-Orchestrator review. No development merge or deployment was performed. Correction 1 evidence in `P2_P4_CORRECTION_1_EVIDENCE.md` supersedes the whole-semantic fixture and 30-day provider-inventory proof below; those results remain historical only.
 
 ## Integrated vertical
 
@@ -69,4 +69,4 @@ No authenticated-page console or uncaught page errors occurred. External network
 - Frontend: `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`.
 - Each branch was normally pushed and independently fetched with exact SHA/tree equality and accepted predecessor ancestry.
 
-`CREATOR_CONTENT_V0 = TECHNICALLY_ACCEPTED`
+`CREATOR_CONTENT_V0_TECHNICAL_ACCEPTANCE = AWAITING_CHILD_SA_REVIEW`

@@ -4,7 +4,9 @@
 
 ## Disposition
 
-`P2 = ACCEPTED`
+`P2 = CORRECTED_EVIDENCE_READY`
+
+Correction 1 supersedes the original runner acceptance claim. P0/P1 remain accepted; P2 requires Child-SA / Program-Orchestrator review. See `P2_P4_CORRECTION_1_EVIDENCE.md` for the corrected production binding, real 90-day provider request and final proof. The original evidence below is historical and is not sufficient acceptance evidence: its inventory used the Brand default window and its integration replaced the whole semantic analyzer.
 
 The backend publishes one Creator-owned `creator_content` Object through the existing owner-scoped Data Extraction, Evidence, verified bundle, generation, transition/CAS and current runtime. The public route is read-only and server-resolves the Creator subject.
 

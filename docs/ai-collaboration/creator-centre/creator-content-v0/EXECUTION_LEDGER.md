@@ -59,7 +59,7 @@ This is the single ledger for Creator Content V0.
 - Schema, 101 migrations and dependencies remain unchanged.
 - Evidence: `P2_CREATOR_CONTENT_BACKEND_VERTICAL_SLICE.md`.
 
-`P2 = ACCEPTED`
+`P2 = CORRECTED_EVIDENCE_READY`
 
 ### P3 — accepted
 
@@ -76,7 +76,7 @@ This is the single ledger for Creator Content V0.
   unchanged.
 - Evidence: `P3_CREATOR_INSIGHTS_CONTENT_FRONTEND.md`.
 
-`P3 = ACCEPTED`
+`P3 = CORRECTED_EVIDENCE_READY`
 
 ### P4 — accepted
 
@@ -92,14 +92,48 @@ This is the single ledger for Creator Content V0.
 - Live Graph/model calls and provider mutations: none.
 - Evidence: `P4_INTEGRATED_ACCEPTANCE_AND_CLOSEOUT.md`.
 
-`P4 = ACCEPTED`
+`P4 = CORRECTED_EVIDENCE_READY`
 
 ## Final state
 
-`CREATOR_CONTENT_V0 = TECHNICALLY_ACCEPTED`
+`CREATOR_CONTENT_V0_TECHNICAL_ACCEPTANCE = AWAITING_CHILD_SA_REVIEW`
 
 `DEVELOPMENT_MERGE = NOT_PERFORMED`
 
 `DEPLOYMENT = NOT_PERFORMED`
 
 `NEXT_BOUNDARY = PARENT / CREATOR PRODUCT PROGRAM REVIEW`
+
+## P2/P4 correction 1 — superseding current disposition
+
+Parent correction-1 authority preserves P0/P1 acceptance, rejects the original P2/P4 proof and preserves P3 implementation pending corrected integration. Earlier accepted headings/evidence above are historical runner claims, not current technical acceptance. No transfer reconstruction was repeated and the authority-tree erratum consumed no correction cycle.
+
+- Exact starting backend: `5f7712108886305b40cbcf1c0d89f5ecdc22ab24` / `343e03b3c5bd6ee1749259841f622e1f7012cb75`.
+- Exact starting frontend: `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`.
+- Exact starting authority: `5df3bff917dd294f3f86642809c66558e37a3b8c` / `2bcbde3e893adb5f7675ed894e2065651554f7f4`.
+- Corrected backend: `0fa145ac6a021337929e87b9eb9e0c67ebc82b7e` / `750065a56a4a060c125a9bee7ddc9fb842204e7e`; normal push and independent fetched equality PASS; original starting checkpoint remains ancestor.
+- Frontend unchanged at the exact starting SHA/tree; normal up-to-date push and independent fetched equality PASS.
+- Explicit provider Content 90-day request, unchanged Brand default 30-day request, production multimodal semantic binding and source/derived Evidence lineage corrected.
+- Focused unit/donor matrix 307 PASS / 21 database-gated skips; actual PostgreSQL Content 4, Audience 6, shared owner scope 3 PASS; all 101 migrations clean-applied/current on each guarded database.
+- Production API/UI at 390/767/768/1440, keyboard/focus/overflow, all three Content read roles, inactive/unauthenticated denial, current-preserving failure and zero Axe findings PASS. Inherited test-only Manager/Assistant entry-state projection is preserved/disclosed, not a production entry-routing fix.
+- Build, scoped lint/format, diff, pinned frozen Brand bundle verification, secret/forbidden artifact checks and cleanup PASS. Schema/migrations/dependencies/Docker/decoder configuration unchanged; live provider/model calls NONE.
+- Evidence: `P2_P4_CORRECTION_1_EVIDENCE.md`; prompt archived under the existing `runner-prompts/` directory, content equality verified (line endings/final newline normalized only).
+- Authority publication is this ledger/evidence commit; record its resolved SHA/tree and independently fetched equality in the immutable runner report to avoid a self-referential commit hash.
+
+`P0 = ACCEPTED`
+
+`P1 = ACCEPTED`
+
+`P2 = CORRECTED_EVIDENCE_READY`
+
+`P3 = CORRECTED_EVIDENCE_READY`
+
+`P4 = CORRECTED_EVIDENCE_READY`
+
+`CREATOR_CONTENT_V0_TECHNICAL_ACCEPTANCE = AWAITING_CHILD_SA_REVIEW`
+
+`CORRECTION_CYCLES_USED = 1`
+
+`DEVELOPMENT_MERGE = NOT_PERFORMED`
+
+`DEPLOYMENT = NOT_PERFORMED`

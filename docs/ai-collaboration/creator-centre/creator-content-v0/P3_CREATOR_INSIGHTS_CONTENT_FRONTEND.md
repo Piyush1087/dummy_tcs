@@ -4,7 +4,9 @@
 
 ## Disposition
 
-`P3 = ACCEPTED`
+`P3 = CORRECTED_EVIDENCE_READY`
+
+The frontend implementation is preserved byte-for-byte at the published checkpoint. Its corrected backend/API integration was rerun under correction 1; see `P2_P4_CORRECTION_1_EVIDENCE.md`. This is evidence-ready, not a runner declaration of technical acceptance.
 
 Creator Insights now exposes Audience and Content as peer in-workspace sections. Content is a read-only, authenticated projection of the strict backend V0 consumer contract and does not add a second Creator navigation system.
 

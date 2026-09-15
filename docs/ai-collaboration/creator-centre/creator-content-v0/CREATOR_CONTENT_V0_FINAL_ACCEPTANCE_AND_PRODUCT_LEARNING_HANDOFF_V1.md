@@ -2,7 +2,7 @@
 
 ## Acceptance
 
-P0, P1, P2, P3 and P4 are technically accepted on the published program branches. This acceptance is an implementation checkpoint, not a merge, deployment, or authorization for the deferred Creator Insights roadmap.
+P0 and P1 are accepted. Correction 1 supersedes the original runner P2/P3/P4 acceptance claim: P2, preserved P3 and P4 are `CORRECTED_EVIDENCE_READY`, pending Child-SA / Program-Orchestrator technical review. See `P2_P4_CORRECTION_1_EVIDENCE.md`. No merge, deployment or authorization for the deferred Creator Insights roadmap is implied.
 
 ## Frozen Product facts delivered
 
