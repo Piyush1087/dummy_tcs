@@ -1,6 +1,34 @@
 # Creator Brand V0 — execution ledger
 
-One canonical Creator Brand ledger. Parent authorization is `7e54d3980ca3454263600e44766041dbb58e0a06`. The historical P0 prompt narrowed that run to P0. Subsequent explicit Technical-SA adjudication accepted P0, P1 including its correction-1 hygiene disposition, and P2. The relayed P3 access-gate correction authorizes the full source-independent P3 frontend and resolves the primary runner's guard-conflict candidate. P3 is evidence-ready, not runner-accepted. P4 remains prohibited. Historical predecessor evidence statements retain their publication context.
+One canonical Creator Brand ledger. Parent authorization is `7e54d3980ca3454263600e44766041dbb58e0a06`. The historical P0 prompt narrowed that run to P0. Subsequent explicit Technical-SA adjudication accepted P0, P1 including its correction-1 hygiene disposition, and P2. The P3 access-gate correction resolved the primary guard-conflict candidate. The explicit P4 adjudication ACCEPTS P0/P1/P2/P3 and authorizes verification-only P4. P4 is evidence-ready awaiting external review, not runner-accepted. Historical predecessor evidence statements below retain their publication context.
+
+## Current P4 closeout — evidence-ready awaiting external review
+
+- P0/P1/P2/P3 ACCEPTED by explicit P4 adjudication; accepted source-independent P3 shell/Team/action architecture preserved. No P4 backend/frontend source, schema, migration, dependency, lockfile or Docker edit.
+- Exact backend6206f43c6a13c304c971b810e1dd99a20aaaa11f/tree533f543612b856cfaf3b57769fe0b5541b803c3f; frontendc505c0679e39effdd9608e319112591d5ae4c079/tree18dd8ed798aae509baa7d0d51ab8e31d7ac2dbbd; authority start ea3fe45e0cb16977684b4dbbb68be8f91a8d9a86/tree19603220605fc64674c8bb8695bd6715ddb97ea9. All starts/ancestors/30registered worktree cleanliness verified.
+- Mandatory integrated gates PASS: clean102; populated101→102 exact193predecessor tables; production boot/health; source-independent full manual roles/API; canonical Owner/actor/CAS/idempotency/immutable audit; five-family exact Evidence/sufficiency/Use/Edit; replay/failure/current/purge/cross-domain preservation;50required PG tests;222focused backend final passing basis;139focused frontend;1310fullfrontend/1existing skip;390/767/768/1440 realauth with Axe0/0/0/nooverflow/console0. Initial inherited/config/timing failures disclosed in P4 artifact; original assertions/timeouts unchanged, isolated final required suites passed.
+- Only authorized P4 evidence/developer/learning/single-ledger/exact-prompt files change. Full commands/row counts/version/byte identities/diagnostics in P4_INTEGRATED_ACCEPTANCE_AND_IMMUTABLE_CLOSEOUT.md; source map and debt in developer/learning handoffs.
+- Task backend/frontend/browser stopped; uniquely named tmpfs PostgreSQL container/databases removed; ignored synthetic configuration deleted; task ports zero. Three verified ignored/source-only output deletion attempts policy-blocked, exact paths/content safety recorded; no bypass or Git inclusion. No live Graph/model/provider mutation, raw-media persistence, merge/deploy/new workspace.
+- Normal authority push/independent fetch SHA/tree equality, accepted authority/both predecessor ancestors, unchanged backend/frontend fetched equality and normalized exact prompt digest are resolved in the immutable report, avoiding self-reference. No runner acceptance.
+
+```text
+P0 = ACCEPTED
+P1 = ACCEPTED
+P2 = ACCEPTED
+P3 = ACCEPTED
+P4 = EVIDENCE_READY_AWAITING_TECHNICAL_SA_REVIEW
+P4_ACCEPTED = NO — AWAITING CHILD-SA / PROGRAM-ORCHESTRATOR REVIEW
+PRIMARY_RUNS_P0_P1_P2_P3_P4 = 1 / 1 / 1 / 1 / 1
+CORRECTION_CYCLES_P0_P1_P2_P3_P4 = 0 / 1 / 0 / 1 / 0
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = NONE
+MIGRATION_COUNT = 102
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE P4 REPORT FOR FINAL REVIEW
+```
 
 ## P0 — accepted by Technical-SA
 
