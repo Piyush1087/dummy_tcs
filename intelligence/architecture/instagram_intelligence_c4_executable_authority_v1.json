@@ -1,0 +1,120 @@
+{
+  "authority_id": "instagram_intelligence_c4_executable_authority",
+  "version": "1.0",
+  "status": "FROZEN",
+  "owner_engine": "instagram_intelligence",
+  "source_scope": "INSTAGRAM_OWNED",
+  "authority": "CREATOR_SHOP_DERIVED",
+  "public_payload_contract": {
+    "object_contract_version": "1.0",
+    "output_contract_version": "1.0"
+  },
+  "path_map_authority": {
+    "correction": "C4-R1_OWNED_PATH_ALIGNMENT_AUTHORITY_RECOVERY",
+    "root_path": "$",
+    "non_root_grammar": "$/f/components/f/<registeredComponent>",
+    "container_ownership_path_added": false,
+    "supersedes": "C4-R0_NON_ROOT_$/f/<component>_PATH_MAP"
+  },
+  "activation": {
+    "b4_content_processor_1_0": "IMMUTABLE_HISTORICALLY_VERIFIABLE",
+    "c4_content_processor_1_1": "SOLE_ACTIVE_OWNER_AT_C4_ACTIVATION",
+    "simultaneous_active_ownership": false,
+    "legacy_b4_current_readable": true,
+    "first_successful_c4_content_generation": "ATOMICALLY_SUPERSEDES_B4_CURRENT",
+    "failed_first_c4_content_execution": "PRESERVES_B4_CURRENT"
+  },
+  "publication_rules": {
+    "generated_state": ["PARTIAL_CURRENT", "CURRENT"],
+    "generated_readiness": ["PARTIAL", "READY"],
+    "generated_freshness": ["CURRENT"],
+    "generated_current_preserved": false,
+    "generated_at": "NON_NULL_AUTHORITATIVE_TIMESTAMP",
+    "projection_only": ["NO_CURRENT", "UNKNOWN_FRESHNESS", "STALE", "CURRENT_PRESERVED_TRUE"],
+    "component_states": ["AVAILABLE", "EXPLICIT_NULL", "UNKNOWN", "NOT_INSPECTED", "INTENTIONALLY_ABSENT"],
+    "all_registered_components_required": true
+  },
+  "processors": [
+    {
+      "bundle_id": "instagram_intelligence.instagram_content_behavior",
+      "processor_id": "instagram_content_behavior",
+      "processor_version": "1.1",
+      "output_contract_id": "instagram_content_behavior_output_contract",
+      "output_contract_version": "1.1",
+      "evidence_contract_id": "instagram_content_behavior_evidence",
+      "evidence_contract_version": "1.1",
+      "object_id": "instagram_content_behavior",
+      "object_contract_version": "1.0",
+      "public_payload_output_contract_version": "1.0",
+      "authority_root": "intelligence/engines/instagram_intelligence/branches/content_behavior_complete",
+      "owned_paths": ["$", "$/f/components/f/window", "$/f/components/f/corpus_summary", "$/f/components/f/posting_cadence", "$/f/components/f/format_mix", "$/f/components/f/theme_patterns", "$/f/components/f/caption_patterns", "$/f/components/f/creative_structure_patterns", "$/f/components/f/offering_presence_patterns", "$/f/components/f/creator_presence_patterns", "$/f/components/f/representative_media_refs", "$/f/components/f/bounded_learnings", "$/f/components/f/coverage"],
+      "input_capabilities": ["instagram.media_inventory", "instagram.media_insights", "instagram.caption_context", "instagram.media_visual_observations", "instagram.media_creator_signals", "instagram.media_offering_signals"]
+    },
+    {
+      "bundle_id": "instagram_intelligence.instagram_audience_profile",
+      "processor_id": "instagram_audience_profile",
+      "processor_version": "1.0",
+      "output_contract_id": "instagram_audience_profile_output_contract",
+      "output_contract_version": "1.0",
+      "evidence_contract_id": "instagram_audience_profile_evidence",
+      "evidence_contract_version": "1.0",
+      "object_id": "instagram_audience_profile",
+      "object_contract_version": "1.0",
+      "public_payload_output_contract_version": "1.0",
+      "authority_root": "intelligence/engines/instagram_intelligence/branches/audience_profile",
+      "owned_paths": ["$", "$/f/components/f/window", "$/f/components/f/follower_audience", "$/f/components/f/engaged_audience", "$/f/components/f/distribution_concentration", "$/f/components/f/material_differences", "$/f/components/f/limitations", "$/f/components/f/coverage", "$/f/components/f/summary"],
+      "input_capabilities": ["instagram.account_profile", "instagram.audience_followers", "instagram.audience_engaged"]
+    },
+    {
+      "bundle_id": "instagram_intelligence.instagram_organic_performance_profile",
+      "processor_id": "instagram_organic_performance_profile",
+      "processor_version": "1.0",
+      "output_contract_id": "instagram_organic_performance_profile_output_contract",
+      "output_contract_version": "1.0",
+      "evidence_contract_id": "instagram_organic_performance_profile_evidence",
+      "evidence_contract_version": "1.0",
+      "object_id": "instagram_organic_performance_profile",
+      "object_contract_version": "1.0",
+      "public_payload_output_contract_version": "1.0",
+      "authority_root": "intelligence/engines/instagram_intelligence/branches/performance",
+      "owned_paths": ["$", "$/f/components/f/window", "$/f/components/f/account_results", "$/f/components/f/metric_coverage", "$/f/components/f/format_baselines", "$/f/components/f/response_distribution", "$/f/components/f/high_response_cohorts", "$/f/components/f/low_response_cohorts", "$/f/components/f/content_performance_signals", "$/f/components/f/snapshot_change", "$/f/components/f/representative_media_refs", "$/f/components/f/bounded_learnings", "$/f/components/f/coverage"],
+      "input_capabilities": ["instagram.account_profile", "instagram.media_inventory", "instagram.media_insights", "instagram.caption_context", "instagram.media_visual_observations", "instagram.media_creator_signals", "instagram.media_offering_signals"],
+      "derived_inputs": ["accepted_c2_deterministic_derivations", "accepted_c3_semantic_observations"]
+    }
+  ],
+  "ownership_proof": {
+    "active_objects": 3,
+    "active_unique_owned_paths": 35,
+    "root_paths": 3,
+    "non_root_paths": 32,
+    "missing_registered_component_paths": 0,
+    "extra_component_paths": 0,
+    "duplicate_active_owners": 0
+  },
+  "thresholds": {
+    "signal_minimum_sample": 3,
+    "signal_minimum_metric_coverage_percent": 50,
+    "comparative_cohort_minimum_per_cohort": 3,
+    "medium_signal_minimum_sample": 5,
+    "medium_signal_minimum_coverage_percent": 70,
+    "medium_signal_minimum_publication_dates": 2,
+    "high_signal_confidence_allowed": false,
+    "high_learning_confidence_allowed": false,
+    "learning_requires_supporting_signal_ids": true,
+    "learning_new_arithmetic_allowed": false,
+    "learning_causal_claim_allowed": false,
+    "audience_difference_percentage_points": {"material_minimum": 10, "notable_minimum": 5},
+    "performance_band_minimum_comparable_posts": 4,
+    "trend_minimum_valid_snapshots": 3,
+    "trend_minimum_elapsed_days": 14
+  },
+  "evidence_rules": {
+    "required_lineage": ["brand_subject", "integration", "provider_account", "authorization_generation", "window_or_audience_snapshot", "media_identity_where_applicable", "capture_or_execution", "source_evidence_identity", "c2_or_c3_identity_and_hash_where_applicable"],
+    "provenance_classes": ["PROVIDER_MEDIATED_FETCH", "DETERMINISTIC_DERIVATION", "MODEL_DERIVATION"],
+    "model_inference_is_provider_truth": false,
+    "model_inference_is_deterministic_derivation": false,
+    "fabricate_unavailable_evidence": false
+  },
+  "canonical_domain_exclusions": ["brand_intelligence_canonical_state", "offering_canonical_state", "campaign", "campaign_performance", "creator_identity", "collaboration_identity_or_status", "settings_integration_lifecycle"],
+  "campaign_objective_authority": ["PULSE", "PROOF", "PRODUCTION", "PUSH"]
+}
