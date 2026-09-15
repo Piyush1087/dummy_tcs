@@ -16,7 +16,7 @@ The prior Product-authority stop is preserved as a correctly raised circuit brea
 | P0 recovery | ACCEPTED under mandatory autonomous packet gates | P0_AUTHORITY_DONOR_PROVIDER_AND_EXECUTABLE_CONTRACTS.md |
 | P1 | ACCEPTED under mandatory autonomous packet gates | P1_CANONICAL_PORTFOLIO_PERSISTENCE_AND_MUTATION_API.md |
 | P2 | ACCEPTED under mandatory autonomous packet gates | P2_INSTAGRAM_DISCOVERY_C04_VERIFICATION_AND_CONSUMER.md |
-| P3 | NOT_STARTED | Existing-shell Portfolio frontend |
+| P3 | ACCEPTED under mandatory autonomous packet gates | P3_CREATOR_PORTFOLIO_V3_FRONTEND.md |
 | P4 | NOT_STARTED | Integrated acceptance and immutable closeout |
 
 ## Settings-owned deferred debts
@@ -41,3 +41,5 @@ P0 backend `6d8d040ad4867d483b3263b4b18cdacaad061896` / tree `a9b39e6c1e1f9d6764
 P0 authority `acff9bd9c84fbf08ca1d18b6cdad02d47ca84dd1` / tree `7f3336b52cd52619b20d357d5458abb8a2e5e102`. P1 backend `627b9865c887af5bf86d6a834f04593f0f27f42e` / tree `5e12af994b439401a2a5dfa8db0b97970540b55f`; normal push/fetch equality, P0 ancestry and cleanliness PASS. P1_PRIMARY_RUNS_USED = 1; P1_FORMAL_CORRECTION_CYCLES_USED = 0. Fresh105 and populated104→105 migration gates, focused tests, production build and hygiene all PASS. P2 proceeds autonomously after authority publication; no final self-acceptance.
 
 P1 authority `e0f8a47f5f1d1c7f4ccfefeede8aa583d53ff5a2` / tree `c769a2b515c4d12bdb5c0db0d57ff776e7db74ed`. P2 backend `6b3a32bb469ceb777469db54026999a58bf151f6` / tree `8365d242be8f4fa3219201ce13d7ca8c631bb631`; normal push and independent fetch-back exact SHA/tree equality, P1 ancestry and clean status PASS. P2_PRIMARY_RUNS_USED = 1; P2_FORMAL_CORRECTION_CYCLES_USED = 0. Final 72 focused assertions, fresh105 PostgreSQL/API29, production health/build/lint/format/hygiene PASS. P3 continues autonomously after authority publication. No final self-acceptance.
+
+P2 authority `0427f13c926494fc39a64b2b0e2d755ddd67cf9c` / tree `a9d2475676d8d2284d94d7595a7cc32e701d961e`. P3 frontend `006316c3998b373391576fe80ed04044e0c6511b` / tree `25624714cc19d6d5026679f60fc22410dabeb055`; normal push/fetch exact SHA/tree equality, accepted Audience V1 frontend ancestry and clean status PASS. P3_PRIMARY_RUNS_USED = 1; P3_FORMAL_CORRECTION_CYCLES_USED = 0. Focused frontend205 and final own42 assertions, typecheck/production build/scoped zero-warning lint/format/diff/scan PASS. P4 now proceeds autonomously; final acceptance remains pending SA/Program review.
