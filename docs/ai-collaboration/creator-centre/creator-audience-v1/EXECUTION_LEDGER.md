@@ -29,7 +29,12 @@ Backend d99cce6f8d7730e8eff7f7cc734ba8813bf822e7 / c0101e6a5a07e156f6c46e2a328a8
 Frontend exact start unchanged. Authority predecessor P1 2216997cebd3d1683deca1317d1656b21ae921df / 688a477e9bed769cbc89e294c33852591276afcc; containing P2 authority SHA/tree resolved after publication. Primary 1; formal cycles 0.
 P3 = ACCEPTED — strict V1 in-place frontend, frozen hierarchy, source-native missingness/cohorts, supported-only context/history and narrow authenticated Team access alignment; 140 tests / 19 files PASS, production build/type/lint/format/diff/secret PASS.
 Frontend d5910537b1e323e399cb5966a57910b478c08d18 / f83713cb0022d0c948943caa3240bc74db6f39bc; normal push and independent fetch-back SHA/tree equality/start ancestry/clean PASS. Authority predecessor P2 9495d22547214554cce2363f05bd708c510415db / f2378cba9ee5fd960e6a01aaf524831dc2b3911e. See P3_CREATOR_AUDIENCE_V1_FRONTEND.md.
-P4_EVIDENCE_READY = NO
+P4_EVIDENCE_READY = YES — fresh PostgreSQL17.11 /104 migrations CURRENT, actual provider-neutral accepted Source→DE/Evidence/grounded Content→V1 shared runtime/current→real authenticated API→production UI; 40 role/state browser cases at390/767/768/1440, all Axe severities/console/page errors/overflow/outbound external traffic0; keyboard/menu focus return PASS.
+Focused backend173 /21files and frontend172 /27files PASS, including supplemental required Brand/Commercial shared-shell predecessor gates22 /5files completing P3 during closeout. Final backend build/typecheck and frontend production build/lint/format/diff/secret PASS. No gate waived; ordinary test/fixture/font/spacing corrections inside primary, formal cycles0.
+Final backend6f000bd9364f48d338ae88cec78dcfed0f4fd522 /374f02a8181505038fbb0c084ca33de0ad97ae46; frontend36d75f4eceded7e9e35aaa280b544164d086ca05 /eb9c4471a5a7db6228b2f8c4c234834c5671d828; both normal pushed/independently fetched SHA-tree equal, accepted ancestry/clean PASS. Authority predecessor P3 010ea35050f4ec201426eeb2d02ef61afb3d3a7f /7d714189deb0b776701fab9814c77c8ef17871c4; containing final authority commit resolved after publication in immutable report.
+Runtime, browser, ports and task-only tmpfs databases/container cleaned; unrelated developer PostgreSQL5432 preserved. Source/schema/migrations/dependencies/Docker/decoder/frozen bundles unchanged apart from authorized V1 implementation. See P4 evidence/JSON inventories/developer and Product-learning handoffs.
+CREATOR_AUDIENCE_V1_EVIDENCE_READY = YES
+CREATOR_AUDIENCE_V1_TECHNICALLY_ACCEPTED = NO — awaiting Technical SA / Program Orchestrator final review.
 
 ## Scope and authority reconciliation
 

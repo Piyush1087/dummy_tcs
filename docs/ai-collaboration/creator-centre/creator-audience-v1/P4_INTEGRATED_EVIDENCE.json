@@ -1,0 +1,1143 @@
+{
+  "gate": "P4_INTEGRATED_ACCEPTANCE",
+  "result": "PASS",
+  "reviewState": "EVIDENCE_READY_NOT_SELF_ACCEPTED",
+  "backend": "6f000bd9364f48d338ae88cec78dcfed0f4fd522",
+  "frontend": "36d75f4eceded7e9e35aaa280b544164d086ca05",
+  "browser": {
+    "matrix": [
+      {
+        "fixture": "owner",
+        "role": "OWNER",
+        "width": 390,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "manager",
+        "role": "MANAGER",
+        "width": 390,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "assistant",
+        "role": "ASSISTANT",
+        "width": 390,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "partial",
+        "role": "OWNER",
+        "width": 390,
+        "status": "PARTIAL",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "empty",
+        "role": "OWNER",
+        "width": 390,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "stale",
+        "role": "OWNER",
+        "width": 390,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "preserved",
+        "role": "OWNER",
+        "width": 390,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "processing",
+        "role": "OWNER",
+        "width": 390,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "disconnected",
+        "role": "OWNER",
+        "width": 390,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "capability",
+        "role": "OWNER",
+        "width": 390,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "owner",
+        "role": "OWNER",
+        "width": 767,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "manager",
+        "role": "MANAGER",
+        "width": 767,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "assistant",
+        "role": "ASSISTANT",
+        "width": 767,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "partial",
+        "role": "OWNER",
+        "width": 767,
+        "status": "PARTIAL",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "empty",
+        "role": "OWNER",
+        "width": 767,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "stale",
+        "role": "OWNER",
+        "width": 767,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "preserved",
+        "role": "OWNER",
+        "width": 767,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "processing",
+        "role": "OWNER",
+        "width": 767,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "disconnected",
+        "role": "OWNER",
+        "width": 767,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "capability",
+        "role": "OWNER",
+        "width": 767,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "owner",
+        "role": "OWNER",
+        "width": 768,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "manager",
+        "role": "MANAGER",
+        "width": 768,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "assistant",
+        "role": "ASSISTANT",
+        "width": 768,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "partial",
+        "role": "OWNER",
+        "width": 768,
+        "status": "PARTIAL",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "empty",
+        "role": "OWNER",
+        "width": 768,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "stale",
+        "role": "OWNER",
+        "width": 768,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "preserved",
+        "role": "OWNER",
+        "width": 768,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "processing",
+        "role": "OWNER",
+        "width": 768,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "disconnected",
+        "role": "OWNER",
+        "width": 768,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "capability",
+        "role": "OWNER",
+        "width": 768,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "owner",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "manager",
+        "role": "MANAGER",
+        "width": 1440,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "assistant",
+        "role": "ASSISTANT",
+        "width": 1440,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "partial",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "PARTIAL",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "empty",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "stale",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "preserved",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "processing",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "disconnected",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "READY",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      },
+      {
+        "fixture": "capability",
+        "role": "OWNER",
+        "width": 1440,
+        "status": "UNAVAILABLE",
+        "apiToUi": "PASS",
+        "keyboard": "PASS",
+        "focus": "PASS",
+        "overflow": 0,
+        "axe": {
+          "serious": 0,
+          "critical": 0,
+          "lesser": 0
+        },
+        "consoleErrors": 0,
+        "pageErrors": 0,
+        "externalTraffic": 0,
+        "inheritedFontCssLocallyFulfilled": 9
+      }
+    ],
+    "anonymous": 401,
+    "inactive": 403,
+    "externalTraffic": 0,
+    "offlineFontFixture": "Inherited font CSS locally fulfilled; declared fallback fonts, zero outbound requests"
+  },
+  "artifacts": {
+    "location": "C:/Users/piyus/Documents/Codex/2026-09-10/markdown-instagram-intelligence-external-local-codex/work/creator-audience-v1/evidence/p4-browser-final",
+    "sha256": [
+      {
+        "file": "assistant-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "assistant-1440.png",
+        "sha256": "6ec18f8188303d1b8ac68f5aea9eb482f7e35fac111ead65e2500718df82f0b3"
+      },
+      {
+        "file": "assistant-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "assistant-390.png",
+        "sha256": "df6da69356e0689bb8d800eb1a43f4a81d6dab5133367c1a42bf83d8cc82ccff"
+      },
+      {
+        "file": "assistant-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "assistant-767.png",
+        "sha256": "15a5e6f76ecbc68abe09400a2fed95df9f7a2c90a64d19e677063571b532beec"
+      },
+      {
+        "file": "assistant-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "assistant-768.png",
+        "sha256": "4d2c69caa3013435f2815af071bedf93b1100de3b2641c3eac0ad99494d621ac"
+      },
+      {
+        "file": "browser-matrix.json",
+        "sha256": "94f1e918a99d01699d3ce5f8746097e84e89eb571fbe4305395ee84d6ac57be9"
+      },
+      {
+        "file": "capability-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "capability-1440.png",
+        "sha256": "1e989c5f1f7a2200c2116cec3f98d3e88a4d4c7495eea4a3e028093faaa28516"
+      },
+      {
+        "file": "capability-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "capability-390.png",
+        "sha256": "ccfa91c2dbd461c039c148015ebdb4ff85a39f090f58438f0409917dca9affaf"
+      },
+      {
+        "file": "capability-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "capability-767.png",
+        "sha256": "f6634d59bb13edad77fd6c5d319c3acd43089423f5031a04cd761f1e3b2275a2"
+      },
+      {
+        "file": "capability-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "capability-768.png",
+        "sha256": "48fa45c5a94dbe1d1f9252720ed0b99874609468cc7f8bb28131cc5e355b3bb3"
+      },
+      {
+        "file": "disconnected-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "disconnected-1440.png",
+        "sha256": "02ec68b14c52f2ed2d8d3ecc470becd8c10a1dc3585557deee18dc54ab84b13a"
+      },
+      {
+        "file": "disconnected-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "disconnected-390.png",
+        "sha256": "e37afb7d137cc5e8350d950f3468dbfcce7ea433e27b3faf532805f4d1eeaf44"
+      },
+      {
+        "file": "disconnected-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "disconnected-767.png",
+        "sha256": "51576df229bddf273d5d38edc44df56c20863d7d38283c2fa57f751bb72014d5"
+      },
+      {
+        "file": "disconnected-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "disconnected-768.png",
+        "sha256": "9f6dafe9bf0084764b202a85b8e9566d60f021bd6aced20ef206c4f188086115"
+      },
+      {
+        "file": "empty-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "empty-1440.png",
+        "sha256": "3f9c930f191049cdb845ab2a912686aa05873008ed54c2392e86dbe8eb3f9dbe"
+      },
+      {
+        "file": "empty-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "empty-390.png",
+        "sha256": "5161151c237c12a3e6b6c58864416040645ef58ddfbde9f8b726571be3fdd25e"
+      },
+      {
+        "file": "empty-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "empty-767.png",
+        "sha256": "f1da093ab76da2b680e46b3ee69b45ed1947d46421c282cc65fb47604bc99298"
+      },
+      {
+        "file": "empty-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "empty-768.png",
+        "sha256": "0ab9e2e7f56aaebd9c47089c96126b8cf79c28f427f6698c7e0cecc956b39dc8"
+      },
+      {
+        "file": "manager-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "manager-1440.png",
+        "sha256": "6ec18f8188303d1b8ac68f5aea9eb482f7e35fac111ead65e2500718df82f0b3"
+      },
+      {
+        "file": "manager-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "manager-390.png",
+        "sha256": "df6da69356e0689bb8d800eb1a43f4a81d6dab5133367c1a42bf83d8cc82ccff"
+      },
+      {
+        "file": "manager-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "manager-767.png",
+        "sha256": "15a5e6f76ecbc68abe09400a2fed95df9f7a2c90a64d19e677063571b532beec"
+      },
+      {
+        "file": "manager-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "manager-768.png",
+        "sha256": "4d2c69caa3013435f2815af071bedf93b1100de3b2641c3eac0ad99494d621ac"
+      },
+      {
+        "file": "owner-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "owner-1440.png",
+        "sha256": "6ec18f8188303d1b8ac68f5aea9eb482f7e35fac111ead65e2500718df82f0b3"
+      },
+      {
+        "file": "owner-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "owner-390.png",
+        "sha256": "df6da69356e0689bb8d800eb1a43f4a81d6dab5133367c1a42bf83d8cc82ccff"
+      },
+      {
+        "file": "owner-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "owner-767.png",
+        "sha256": "15a5e6f76ecbc68abe09400a2fed95df9f7a2c90a64d19e677063571b532beec"
+      },
+      {
+        "file": "owner-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "owner-768.png",
+        "sha256": "4d2c69caa3013435f2815af071bedf93b1100de3b2641c3eac0ad99494d621ac"
+      },
+      {
+        "file": "partial-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "partial-1440.png",
+        "sha256": "aae32a3edf7655c479369fcabab9acada3af80115d1bc79e21745e6c2e8798c7"
+      },
+      {
+        "file": "partial-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "partial-390.png",
+        "sha256": "cd2705e579d50e4a539c877751cd085b50ada041701c4ed7c847df5fac26214a"
+      },
+      {
+        "file": "partial-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "partial-767.png",
+        "sha256": "99f59f98b84a100009387b45ef7520cc604aa905cdd8de8785b6a359419e87b7"
+      },
+      {
+        "file": "partial-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "partial-768.png",
+        "sha256": "03c0dff88f9f7fe7ee9f390b48a6b63976f91b72b40defd2b465df77886a5a00"
+      },
+      {
+        "file": "preserved-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "preserved-1440.png",
+        "sha256": "a632f21fd5b1a3e0548da3bbb6457247e3c3f26b1c802adccd9961f55c6ec29b"
+      },
+      {
+        "file": "preserved-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "preserved-390.png",
+        "sha256": "c1034e26686772de43f8ddaf729d30135ae5fa3b0de427667a1647979e6ea1ce"
+      },
+      {
+        "file": "preserved-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "preserved-767.png",
+        "sha256": "8fe708856f5a65f871965ea0637fd7e972ec49895c2740d4b6320edebb893454"
+      },
+      {
+        "file": "preserved-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "preserved-768.png",
+        "sha256": "75f60735ad4ce1a7050e6420bf102163d1a3e9703501c6b6f4057c93245d9ae6"
+      },
+      {
+        "file": "processing-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "processing-1440.png",
+        "sha256": "f068af54317bf74dda39fef15453667b35e8604e0eb55ba8c06b4fa76d5e7593"
+      },
+      {
+        "file": "processing-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "processing-390.png",
+        "sha256": "faea8f833f060f10efa75ede0e3fc1f43658ded3b6df8f607a4b151e0e0f11dc"
+      },
+      {
+        "file": "processing-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "processing-767.png",
+        "sha256": "987d60bbece5586830c1a764a9618ea5a37e259ec4788324c48bf2945fc891fb"
+      },
+      {
+        "file": "processing-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "processing-768.png",
+        "sha256": "b2c46e7c5f82ba83abf0a82ac7a0bffa850a01059a68e82a3bdb33df117ef29a"
+      },
+      {
+        "file": "stale-1440-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "stale-1440.png",
+        "sha256": "0ff3df3db9312fb8b4b6361df788c79384497106d63e0ebb819daedd0e97febd"
+      },
+      {
+        "file": "stale-390-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "stale-390.png",
+        "sha256": "5501bd5eb1afdec2594a1fc76de26e7b776fd74bf2faa625adc86c6eecf3cdf8"
+      },
+      {
+        "file": "stale-767-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "stale-767.png",
+        "sha256": "4a8a680c57a99196ef5bd7051561aed42e9338583c77fb2d4f6399a55e05b49a"
+      },
+      {
+        "file": "stale-768-axe.json",
+        "sha256": "e9e9cc024fd31c1fa72cd550579f9b055cbbedcd75d0c07b4cb36c9ea72522f9"
+      },
+      {
+        "file": "stale-768.png",
+        "sha256": "f6eaf000d9d03b7afc6d53698381a000c896733caa0805168b78a05dd16ed193"
+      }
+    ]
+  },
+  "postgres": {
+    "version": "17.11",
+    "migrationsApplied": 104,
+    "migrationStatus": "CURRENT",
+    "ephemeral": "tmpfs; no durable volume; task container removed",
+    "fixtureRowCounts": {
+      "scopes": 6,
+      "resources": 6,
+      "captures": 10,
+      "evidence": 80,
+      "observations": 8,
+      "support": 8,
+      "executions": 18,
+      "objects": 17,
+      "components": 88,
+      "transitions": 88,
+      "current": 58
+    },
+    "replayAdditionalRows": 0,
+    "replayAdditionalCalls": 0,
+    "readonlyAdditionalRows": 0,
+    "invalidCaptureLineage": 0,
+    "modelDerivationEvidence": 8,
+    "invalidObservationSupport": 0,
+    "v1Objects": 8,
+    "invalidV0SourceGenerationLinks": 0,
+    "v1EvidenceReferences": 256,
+    "invalidEvidenceLinks": 0
+  },
+  "focusedTests": {
+    "backend": 173,
+    "backendFiles": 21,
+    "frontend": 172,
+    "frontendFiles": 27
+  },
+  "liveGraphCalls": 0,
+  "liveModelCalls": 0,
+  "metaProviderMutations": 0,
+  "formalCorrectionCycles": 0
+}
