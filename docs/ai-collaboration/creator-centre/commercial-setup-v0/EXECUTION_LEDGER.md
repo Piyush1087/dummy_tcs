@@ -46,7 +46,7 @@ Explicit Parent authorization permits technical predecessor canonicalization aft
 | --- | --- | ---: | ---: |
 | P0 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
 | P1 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
-| P2 | NOT_STARTED | 0 | 0 |
+| P2 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
 | P3 | NOT_STARTED | 0 | 0 |
 | P4 | NOT_STARTED | 0 | 0 |
 
@@ -62,6 +62,8 @@ Backend P0 normal publication and independent fetch-back PASS: `24c781f292fa8027
 
 ## Boundaries
 
-P0 authority publication/fetch-back passed at `5aa43e619fe9a2d09ea5360429931b107ea796e9` / tree `8513c31b4086f81a8d7d13fd88d5406f11e1c868`. P1 backend normal publication/fetch-back passed at `5f3894880194a4a8c4af6958c071481d180ce6ec` / tree `4d057eacf12e8919b836c0ac3e74a038079d5843`, parent P0 backend. Clean worktree and exact original ancestry. [P1 evidence](P1_CANONICAL_WORK_PREFERENCES_AND_MANUAL_API.md). P2 may proceed only after this authority checkpoint is normally published and independently fetched equal.
+P0 authority publication/fetch-back passed at `5aa43e619fe9a2d09ea5360429931b107ea796e9` / tree `8513c31b4086f81a8d7d13fd88d5406f11e1c868`. P1 backend normal publication/fetch-back passed at `5f3894880194a4a8c4af6958c071481d180ce6ec` / tree `4d057eacf12e8919b836c0ac3e74a038079d5843`, parent P0 backend. Clean worktree and exact original ancestry. [P1 evidence](P1_WORK_PREFERENCES_CANONICAL_PERSISTENCE_AND_API.md). P1 authority publication/fetch-back passed at `7ae6dc70587821d30d4be422d90bf0cb1e9197ce` / tree `dcce61e8489ea92b0993c9af0d57e0320610e0c0`.
+
+P2 backend normal publication/fetch-back passed at `4baa9768fb01845aa4a907b82b54d46101559487` / tree `1ab92e21c3e7167f18b8b66efeec1cf4cdc9d219`, parent P1 backend. [P2 evidence](P2_RATE_CARD_CANONICAL_PERSISTENCE_AND_API.md). P3 proceeds only after this authority checkpoint is normally published and independently fetched equal. The P1 evidence filename is normalized to the original prompt's required canonical artifact name; history and content remain preserved.
 
 Audience V1, Portfolio, Media Kit, quotes and later capabilities NOT_STARTED. Live Graph/model calls and Meta mutations NONE. Development merge/deployment NOT_PERFORMED. No secrets, credentials, bank details or runtime configuration values are included.

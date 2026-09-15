@@ -1,4 +1,4 @@
-# P1 — canonical Work Preferences and manual API
+# P1 — Work Preferences canonical persistence and API
 
 P1 passes for the explicitly authorized autonomous progression, not final Product acceptance. Primary runs 1; formal corrections 0. P0 published backend `24c781f292fa80278d35056826db0903aff198e6` and authority `5aa43e619fe9a2d09ea5360429931b107ea796e9` were preserved.
 
