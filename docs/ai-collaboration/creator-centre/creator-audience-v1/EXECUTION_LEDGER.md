@@ -24,7 +24,9 @@ Authority P0 checkpoint is the commit containing this ledger/evidence/archive; r
 P1 = ACCEPTED — verified deterministic derived execution, current/CAS, exact replay, partial/failure preservation, authorization/isolation/purge and focused PostgreSQL gates PASS; 161 unique focused tests, build/lint/format/diff/secret checks PASS.
 Backend checkpoint 4b37a302d06f06324e52c461647e669a9d5769d2 / b41d179587e16b63e243ba4bb68b71a95c264a6c; normal push and independent fetch-back equality/ancestry/clean status PASS.
 Authority predecessor P0 cb92615cc53d34f63936cfcfadc70aae74a943da / 78caa5cd6621dd5d3df226f5178b8ff623c30825; containing P1 authority checkpoint resolved after publication. See P1_AUDIENCE_V1_BACKEND_INTELLIGENCE_AND_PERSISTENCE.md.
-P2 = NOT_STARTED
+P2 = ACCEPTED — real authenticated built runtime, three roles/inactive/anonymous/query-isolation, state truth, readonly/no-acquisition and exact replay gates PASS; 109 focused tests, build/type/lint/format/diff/secret PASS. Retained-input SQL row-order canonicalization corrected without weakening source re-admission; see P2_AUTHENTICATED_CONSUMER_AND_RUNTIME.md.
+Backend d99cce6f8d7730e8eff7f7cc734ba8813bf822e7 / c0101e6a5a07e156f6c46e2a328a8e948cdbc915; normal push and independent fetch-back SHA/tree equality/ancestry/clean PASS.
+Frontend exact start unchanged. Authority predecessor P1 2216997cebd3d1683deca1317d1656b21ae921df / 688a477e9bed769cbc89e294c33852591276afcc; containing P2 authority SHA/tree resolved after publication. Primary 1; formal cycles 0.
 P3 = NOT_STARTED
 P4_EVIDENCE_READY = NO
 
