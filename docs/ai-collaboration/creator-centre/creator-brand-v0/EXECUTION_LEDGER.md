@@ -1,6 +1,6 @@
 # Creator Brand V0 — execution ledger
 
-One canonical Creator Brand ledger. Parent authorization is `7e54d3980ca3454263600e44766041dbb58e0a06`. The historical P0 prompt narrowed that run to P0. Subsequent explicit Technical-SA adjudication accepted P0, then P1 including its correction-1 hygiene disposition, and authorized P2 through the relayed P2 prompt archived below. P3/P4 remain prohibited. Historical P0/P1 evidence statements retain their publication context.
+One canonical Creator Brand ledger. Parent authorization is `7e54d3980ca3454263600e44766041dbb58e0a06`. The historical P0 prompt narrowed that run to P0. Subsequent explicit Technical-SA adjudication accepted P0, P1 including its correction-1 hygiene disposition, and P2. The relayed P3 access-gate correction authorizes the full source-independent P3 frontend and resolves the primary runner's guard-conflict candidate. P3 is evidence-ready, not runner-accepted. P4 remains prohibited. Historical predecessor evidence statements retain their publication context.
 
 ## P0 — accepted by Technical-SA
 
@@ -65,7 +65,7 @@ DEPLOYMENT = NOT_PERFORMED
 NEXT_ACTION = PARENT RETURNS IMMUTABLE CORRECTION REPORT FOR TECHNICAL REVIEW
 ```
 
-## P2 — evidence-ready, not self-accepted
+## P2 — accepted by Technical-SA; historical primary evidence
 
 - Exact fresh-worktree starting checkpoints, Product pins and accepted ancestry independently verified. No old P1 `dist`, `accepted-101`, dependency junction or unreconciled Product register was used.
 - Read-only current Content admission binds eight components, completed Capture, exact source Evidence/parents, Creator subject/workspace and current non-secret Settings account/generation/capabilities. No reacquisition or Content recalculation.
@@ -83,11 +83,11 @@ P0 = ACCEPTED
 P1 = ACCEPTED_BY_TECHNICAL_SA
 P1_PRIMARY_RUNS_USED = 1
 P1_CORRECTION_CYCLES_USED = 1
-P2_ACCEPTED = NO — AWAITING CHILD-SA / PROGRAM-ORCHESTRATOR REVIEW
+P2_ACCEPTED = YES — EXPLICIT P3 PREDECESSOR ADJUDICATION
 P2_EVIDENCE_READY = YES — SUBJECT TO FINAL AUTHORITY FETCH-BACK PROOF
 P2_PRIMARY_RUNS_USED = 1
 P2_CORRECTION_CYCLES_USED = 0
-P3 = PROHIBITED
+P3 = AUTHORIZED_BY_BINDING_ACCESS_GATE_CORRECTION
 P4 = NOT_STARTED
 LIVE_GRAPH_CALLS = NONE
 LIVE_MODEL_CALLS = NONE
@@ -97,4 +97,36 @@ MIGRATION_COUNT = 102
 DEVELOPMENT_MERGE = NOT_PERFORMED
 DEPLOYMENT = NOT_PERFORMED
 NEXT_ACTION = PARENT RETURNS IMMUTABLE P2 REPORT FOR TECHNICAL REVIEW
+```
+
+## P3 — access-gate correction 1 evidence-ready
+
+- Sole Product V2/handoff/Amendment 1 pins and exact accepted P0/P1/P2 ancestry preserved. The primary P3 circuit-breaker candidate is RESOLVED: the Technical-SA source-dependent guard instruction was incorrect, not a Product conflict. Creator Brand now uses authenticated shell + existing active Team context + CREATOR_BRAND_READ, outside unchanged RequireCreatorPlatformAccess. No backend delta or second actor/subject model.
+- Exact fresh starting backend 6206f43c6a13c304c971b810e1dd99a20aaaa11f / 533f543612b856cfaf3b57769fe0b5541b803c3f; frontend 7edd26d3cdad0ec84083884b34039952368a1295 / 0cc596ca1ef1d1c4a51857125547de156e487c8b; authority 26feb12690e0031e3e0cce328b12eebcfaf62670 / be4b3afd49c4a823a4949c3079e0fcf1255b1360. Local/fetched equality and all registered worktree cleanliness verified before mutation. Old P2 ignored outputs were not inputs.
+- Full P3 canonical fields, manual-first setup, strict consumer/commands, stable retry UUIDs, revision conflict review, server-only confirmed replacement, target-only Use/Edit, five inline suggestion families and truthful source/transport states implemented. Campaign's exact 30 archetypes/max-five unchanged; Creator max-three; no Bio suggestion/auto-apply/palette HEX fabrication/UGC willingness inference.
+- 139 focused frontend tests in 19 files PASS; 45 unchanged backend authorization tests in four files PASS, including all 14 Creator Entry access tests. Production builds, typecheck, scoped formatter/diff checks PASS. Scoped ESLint: zero errors, eight disclosed non-blocking development warnings.
+- Clean PostgreSQL 17.11 disposable tmpfs route: all 102 accepted migrations applied, status current, connectivity/health PASS; only plpgsql 1.0. Actual production-built browser at 390/767/768/1440: real auth/Team/GET/PUT, no-source Owner setup, Manager edits/Use/Edit, Assistant read/PUT 403, anonymous 401, inactive/missing Team/Brand 403, exact canonical Owner subject, disconnect preservation, last-good after invalid GET, drawer/sidebar/five-bottom navigation, keyboard/focus/overflow PASS. Axe serious/critical/lesser 0/0/0 and browser console/page errors zero at every width.
+- Frontend normal push/independent fetch-back PASS: c505c0679e39effdd9608e319112591d5ae4c079 / 18dd8ed798aae509baa7d0d51ab8e31d7ac2dbbd, direct accepted frontend parent. Exactly 24 files, 3,486 insertions/zero deletions. Backend unchanged local/fetched equality exact; schema/migrations/dependencies/Docker/Entry/Audience/Content/Campaign/Settings source unchanged.
+- Planned/staged/committed secret/forbidden-artifact scans PASS; synthetic configuration values excluded. Services stopped, only task-owned disposable container removed, synthetic ignored configuration deleted, temporary fixture media cleaned; no browser traces/screenshots/state published. Normal ignored dependency/build products are excluded from Git.
+- Full evidence/commands/inventory: P3_CREATOR_BRAND_FRONTEND.md. Content-complete original P3 and correction prompts archived in runner-prompts. Correction normalized source/archive SHA256 7a75e4cc1ccf75447814b00a36d4abe40bd5156e2fed9241a02e798928e704c5; original exact pinned SHA256 692bbf6a84193804b7fd78372f4724af3bcb47321ae54b6bf1381bc74d6cfa5d. LF and one terminal newline normalization only.
+- Final containing authority commit/tree/fetch-back/both required ancestry are resolved in the immutable runner report, avoiding self-reference. No self-acceptance.
+
+```text
+P0 = ACCEPTED
+P1 = ACCEPTED
+P2 = ACCEPTED
+P3_PRIMARY_CIRCUIT_BREAKER_CANDIDATE = RESOLVED_BY_BINDING_ACCESS_GATE_CORRECTION
+P3_ACCEPTED = NO — AWAITING CHILD-SA / PROGRAM-ORCHESTRATOR REVIEW
+P3_EVIDENCE_READY = YES — SUBJECT TO FINAL AUTHORITY FETCH-BACK PROOF
+P3_PRIMARY_RUNS_USED = 1
+P3_CORRECTION_CYCLES_USED = 1
+P4 = PROHIBITED_PENDING_TECHNICAL_SA_REVIEW
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = NONE
+MIGRATION_COUNT = 102
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE P3 CORRECTION REPORT FOR TECHNICAL REVIEW
 ```
