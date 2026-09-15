@@ -47,7 +47,7 @@ Explicit Parent authorization permits technical predecessor canonicalization aft
 | P0 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
 | P1 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
 | P2 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
-| P3 | NOT_STARTED | 0 | 0 |
+| P3 | ACCEPTED_FOR_AUTONOMOUS_PROGRESSION | 1 | 0 |
 | P4 | NOT_STARTED | 0 | 0 |
 
 Original P0 stop: Parent-resolved Product-authority circuit breaker, zero correction cycles. Recovery 1 stop: Parent-resolved authority-contract circuit breaker, zero correction cycles. Recovery 2 resumes preserved worktrees. In-run test-table argument-shape and line-ending fixes are deterministic harness/format repairs, not formal correction cycles.
@@ -67,3 +67,13 @@ P0 authority publication/fetch-back passed at `5aa43e619fe9a2d09ea5360429931b107
 P2 backend normal publication/fetch-back passed at `4baa9768fb01845aa4a907b82b54d46101559487` / tree `1ab92e21c3e7167f18b8b66efeec1cf4cdc9d219`, parent P1 backend. [P2 evidence](P2_RATE_CARD_CANONICAL_PERSISTENCE_AND_API.md). P3 proceeds only after this authority checkpoint is normally published and independently fetched equal. The P1 evidence filename is normalized to the original prompt's required canonical artifact name; history and content remain preserved.
 
 Audience V1, Portfolio, Media Kit, quotes and later capabilities NOT_STARTED. Live Graph/model calls and Meta mutations NONE. Development merge/deployment NOT_PERFORMED. No secrets, credentials, bank details or runtime configuration values are included.
+
+## P3 publication and progression
+
+P2 authority independently fetched equal at `6a0cbe24debe88e284c1a9a3c2b84998905234ad` / tree `2ee2d09c541194e3a641fe4882d885ca163d848a`. P3 frontend published/fetched equal at `e6e7ae8ea9f5f98f882f52230e4cae163bda1e89` / tree `c77fd43a13251f3c0ba6733f5070fe49412bba1e`; parent exact original frontend start. 27 files / 3299 insertions. [P3 evidence](P3_COMMERCIAL_SETUP_FRONTEND.md).
+
+All 37 changed-surface tests PASS; final full frontend 1347 PASS / one existing environment-gated skip, 168 passed files / one skipped. Typecheck/build/scoped lint/format/diff/27-file staged secret scan PASS. Authenticated 28-case width/role/bank matrix and final read-only matrix PASS; all serious/critical/lesser Axe counts zero, zero overflow/console/page errors. Additional real-browser injected409 proof: draft retained, retry fenced, visible error focus, stable rows PASS. In-primary implementation/harness/contrast/focus repairs are disclosed in P3 evidence; no formal correction packet used. P3 is accepted only for the granted autonomous progression; final combined Product acceptance awaits Technical-SA / Program-Orchestrator review.
+
+`P3_EVIDENCE_READY = YES`
+
+P4 proceeds only after the containing P3 authority checkpoint is normally pushed and independently fetched equal. P4 prepared verification retains earlier populated 102→103→104 preservation evidence and adds fresh104 migrations/API plus populated external-ownership digest/purge proof; no checkpoint or fixture reset/reconstruction.
