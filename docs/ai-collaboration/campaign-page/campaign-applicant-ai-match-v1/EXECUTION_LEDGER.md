@@ -103,3 +103,34 @@ Published report:
 Next boundary:
 
 `PARENT_PROGRAM_ORCHESTRATOR_AND_APPLICANT_MATCH_TECHNICAL_SA_P0_REVIEW_ONLY`
+
+## P0 Resumption Technical Review — 2026-09-16
+
+Status: `ACCEPTABLE_WITH_CORRECTION`
+
+Accepted:
+
+- Campaign objective unblock and immutable checkpoints;
+- authority/convergence DAG;
+- donor and shared-runtime reuse directions;
+- pre-C03 implementation candidates and future C03-descendant P1 base;
+- four-dimension arithmetic and creator-relative performance direction;
+- C03 V2 as a separately governed pre-P1 dependency.
+
+Correction required:
+
+1. C03 V2 must freeze the complete `CampaignObjectiveHandoffV1` union, not only `AVAILABLE`.
+2. Match-specific objective/target unavailability must not become a new Application-submission gate.
+3. Campaign must expose a strict available/unavailable targeting handoff for C03 to copy without reinterpreting raw persistence.
+4. Every semantic criterion needs exact criterion-specific score anchors, evidence thresholds, conflict rules and deterministic explanation selection.
+5. The 24-hour dependency policy needs exact versioned jitter, boundary, late-start and load semantics.
+
+No backend/frontend implementation, migration, P1-P4, live call, merge or deployment is authorized.
+
+Required runner prompt:
+
+`runner-prompts/CAMPAIGN_APPLICANT_AI_MATCH_P0_RESUMPTION_CORRECTION_1_LOCAL_CODEX_EXECUTION_V1.md`
+
+Next boundary:
+
+`EXTERNAL_LOCAL_CODEX_P0_RESUMPTION_CORRECTION_1`
