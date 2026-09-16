@@ -719,20 +719,6 @@ BLOCKERS =
 15. Exact regression plan.
 16. Stop boundary.
 
-The remainder of the older numbered outline is superseded by this expanded structure.
-
-2. Executive verdict.
-3. Complete module/route/API coverage table.
-4. Gatekeeper/onboarding authority-versus-runtime analysis.
-5. Campaign base-versus-objective-delta analysis.
-6. C03/C04/Settings/Team ancestry proof.
-7. Brand Centre and shared-platform coverage.
-8. Payout and provider-boundary coverage.
-9. Omitted donor list.
-10. Required revisions to the implementation sequence.
-11. Exact additional regression plan.
-12. Stop boundary.
-
 End with:
 
 ```text
