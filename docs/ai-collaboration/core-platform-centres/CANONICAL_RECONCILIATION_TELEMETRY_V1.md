@@ -60,20 +60,28 @@ The runner must also separate inspection, implementation, dependency installatio
 |---|---|---|---:|---|---|---|
 | CR-001 | Read-only preflight — immutable authority integrity gate | External Local Codex | 4 minutes, user-reported | `BLOCKED_MISSING_IMMUTABLE_AUTHORITY_OBJECTS` | Detected six unreachable Creator Brand pointers before unsafe topology analysis | None |
 | CR-002 | Blocker review and GitHub authority verification | Assistant/Parent review lane | approximately 3 minutes measured | `DOCS_ONLY_POINTER_CORRECTION_REQUIRED` | Proved the accepted objects exist under the correct SHAs; classified the issue as consolidated-register transcription defects; published bounded correction request | Authority prompt only |
+| CR-003 | Consolidated-register V2 docs-only correction and complete pointer-integrity pass | Orchestrator 1 | 5 minutes 56 seconds | `PASS` | Published controlling V2 register; verified 121/121 immutable pointers, 27/27 commit-tree tuples, 7/7 final-acceptance path/blob tuples and 112/112 module references | One authority document |
+| CR-004 | Parent review, V2 fetch-back verification and timed preflight-rerun preparation | Assistant/Parent review lane | approximately 1 minute measured | `READY_TO_RERUN_READ_ONLY_PREFLIGHT` | Verified V2 blob and corrected tuples; published V2 runner prompt with mandatory timing fields | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
 LOCAL_CODEX_ACTIVE_TIME = 4 minutes
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 3 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 7 minutes
+ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 4 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 13 minutes 56 seconds
 LOCAL_CODEX_RUNS = 1
-ASSISTANT_REVIEW_CYCLES = 1
+ORCHESTRATOR_CORRECTION_CYCLES = 1
+ASSISTANT_REVIEW_CYCLES = 2
 BLOCKER_CYCLES = 1
+BLOCKERS_CLOSED = 1
+RUNNER_PROMPTS_PUBLISHED = 2
+RUNNER_PROMPTS_EXECUTED = 1
 IMPLEMENTATION_RUNS = 0
 CORRECTION_IMPLEMENTATION_RUNS = 0
 RUNTIME_VALIDATION_RUNS = 0
-CANONICAL_REPOSITORY_MUTATIONS = 0
+CANONICAL_RUNTIME_REPOSITORY_MUTATIONS = 0
+AUTHORITY_DOCS_CHANGED = 1
 ```
 
 The authority-integrity stop is counted as productive preflight work, not wasted execution.
@@ -92,8 +100,21 @@ CREATOR_BRAND_REACCEPTANCE_REQUIRED =
 NO
 
 REQUIRED_REMEDY =
-Docs-only superseding acceptance-register correction,
-followed by complete pointer-integrity verification and a full preflight rerun
+Docs-only superseding acceptance-register correction
+
+REMEDY_STATUS =
+COMPLETED
+
+CONTROLLING_REGISTER =
+CORE_PLATFORM_CENTRES_CONSOLIDATED_ACCEPTANCE_REGISTER_V2
+commit 346ae2a5ec58506870036db832223c996311fc29
+blob c9e0343794aad4a46e27882b58b98381dd4c9dcf
+
+ALL_REGISTER_POINTER_INTEGRITY =
+PASS — 121 / 121 reachable
+
+NEXT_ACTION =
+Run the complete timed read-only preflight from the beginning
 ```
 
 ## 7. Update rule
