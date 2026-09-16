@@ -62,3 +62,22 @@
 - P1→P4 autonomous implementation: authorized.
 - Runner prompt raw SHA-256: `bd50719f8c0991cb8dc925167a1d5dd507402adea2fd55cd8b52d62f0c3a7e91`
 - Backend/frontend mutation had not started at this authority checkpoint.
+
+### Convergence checkpoint
+
+- Backend convergence commit/tree: `ebe1b4a8faa6dab59fb924b4c42be8f9e3f1e6f2` / `5398273a97223873e5f97db66163e8829eb81a51`.
+- Backend exact parents: freeze `129b291ecbca4a1e79451215a81726000cfb5bff`; Instagram `fef32afb0fdef52f00c7c22b3d0a85967a68fded`.
+- Frontend convergence commit/tree: `3d04cd9c84585218fcdc0f1412662a165c38400c` / `a3d6a32f566eeed9b608a7b5a2a4d1ec0b238e6f`.
+- Frontend exact parents: freeze `6ea628b09817c4784a248658ddfc0202a13fbb00`; Instagram `5866d0ac82f742957f53a8db2144a9a166628b75`.
+- Both branches were pushed normally and independently fetched with exact local/remote SHA/tree equality.
+- Backend converged migration directory count: `98`; inventory SHA-256: `153f480d7e3346001d42eaf12796240302ce58f80beb850f4116b21f17f843ee`.
+- Backend build and Prisma generate/validate passed; focused convergence tests: 45 passed.
+- Frontend build passed; focused convergence tests: 50 passed.
+
+### Run B circuit breaker
+
+- `BLOCKER = CAMPAIGN_OBJECTIVE_AUTHORITY_GAP`
+- P1, P2, P3 and P4 remain not started.
+- The converged Campaign model exposes legacy objective vocabularies but no accepted exact total mapping to `AWARENESS | TRUST | ASSETS | ACTION`.
+- The runner prompt forbids inventing that mapping inside Reporting.
+- No Reporting implementation, schema migration, API or frontend mutation was made after convergence.
