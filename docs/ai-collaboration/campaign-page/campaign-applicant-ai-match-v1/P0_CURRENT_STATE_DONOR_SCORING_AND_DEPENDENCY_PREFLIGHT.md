@@ -1,15 +1,19 @@
 # Campaign Applicant AI Match V1 — P0 Current-State, Donor, Scoring and Dependency Preflight
 
-Status: `EVIDENCE_READY_FOR_TECHNICAL_SA_REVIEW`  
+`CAMPAIGN_APPLICANT_AI_MATCH_P0_CORRECTION_1`
+
+Status: `STOPPED_AT_P0_CORRECTION_1_OBJECTIVE_AUTHORITY_CIRCUIT_BREAKER`
 Runner: External Local Codex  
 Date: 2026-09-16  
 Scope: authority/current-state/donor/shared-runtime audit and finite P1–P4 design only. No backend or frontend source was changed.
 
 ## 1. Decision summary
 
-P0 is viable. The backend and frontend Creator Portfolio V3 tips are the smallest executable implementation bases because they already contain the canonical freeze, C03/C04, shared Intelligence, Instagram, Creator Audience V1, Creator Content V0, Creator Brand V0 and Portfolio V3 ancestries. Match must extend the shared Intelligence runtime with a real `APPLICATION` subject; it must not create a synthetic Brand/Offering subject or a parallel scheduler.
+The non-objective P0 architecture remains viable. The backend and frontend Creator Portfolio V3 tips are still the smallest convergence candidates because they already contain the accepted Brand Campaign runtime, canonical freeze, C03/C04, shared Intelligence, Instagram, Creator Audience V1, Creator Content V0, Creator Brand V0 and Portfolio V3 ancestries. Match must extend the shared Intelligence runtime with a real `APPLICATION` subject; it must not create a synthetic Brand/Offering subject or a parallel scheduler.
 
-One required P1 compatibility correction was found. `C03_APPLICATION_SNAPSHOT_V1` freezes objective, Brand, asset, Offering, Brief, deliverables, commercial context and Creator identity, but does not freeze Campaign targeting. P1 must add `C03_APPLICATION_SNAPSHOT_V2` for new applications, with strict target fields. V1 snapshots cannot be reconstructed from mutable Campaign rows and therefore produce accepted `UNAVAILABLE/APPLICATION_SNAPSHOT_VERSION_UNSUPPORTED`. This is a safe additive adapter path, not a C03 authority gap.
+Correction 1 found a blocking authority mismatch. C03 snapshots `campaignContext.objective` from `UceCampaignStrategy.coreObjective`. The accepted executable field is owned by Brand Campaign and typed by Prisma enum `UceCampaignObjective = BRAND_AWARENESS | TRAFFIC_CLICKS | SALES_CONVERSIONS`. No accepted executable Brand Campaign field or exact total mapping establishes Product's canonical `AWARENESS | TRUST | ASSETS | ACTION`. The JSON draft/canonical-definition compatibility vocabulary is not accepted as a Match mapping source. Match must not invent a translation. Therefore `APPLICANT_AI_MATCH_AUTHORITY_CONFLICT` is active and P1 remains unauthorized.
+
+`C03_APPLICATION_SNAPSHOT_V1` also does not freeze Campaign targeting. The required compatibility change is C03-owned: a new ApplicationSnapshot version must copy accepted Campaign-owned target facts into the immutable snapshot in the same Application-submit transaction. V1 snapshots cannot be reconstructed from later mutable Campaign rows. Geography, age and gender have accepted Campaign persistence sources; affinity does not have an accepted typed immutable persistence source and is unavailable in Match until Campaign authority supplies one.
 
 Clarification V1 controls all conflicts: four scored dimensions; Commercial/Work globally not applicable; one initial evaluation only; no refresh or re-evaluation; donor lifecycle causes never enter Match artifacts.
 
@@ -33,18 +37,23 @@ authority main 3415a8b7ef155e115b77da3335795ff8ab05de3f
   -> program/campaign-applicant-ai-match-v1-authority
 
 backend canonical freeze 129b291ecbca4a1e79451215a81726000cfb5bff
+  -> accepted Brand Campaign snapshot cd446fb4bd356fe03faf16c6c7a282a55cebcf08
+     named merge 29224609d18e876776841802a47fc54434b82ceb
+     reconciliation f7eb11bc72051f034f7d46ff2ad5c6b4d4b9e0fd
   -> C03 aebeb85 -> C04 fc4d4b59
   -> Brand Intelligence e066265 / Product Intelligence f3a2d7
   -> Instagram fef32afb -> Audience 6f000bd -> Content 0fa145ac
   -> Creator Brand 6206f43 -> Portfolio V3 aaae1e3062137eda30e13e2fd7bcddbb1b239842
 
 frontend canonical freeze 6ea628b
+  -> accepted Brand Campaign snapshot c83ab8bab02ace8872a53de81cc8ffe79ccda832
+     named merge d39c5ee8d9763882359148dd77e34c72dd6a5061
   -> C03 82ed3c9 -> C04 106de998 -> Product Intelligence 6bc965
   -> Instagram 5866d0 -> Audience 36d75f -> Content 7edd26d
   -> Creator Brand c505c067 -> Portfolio V3 9631e8b261f02f331dcf84f09dfd61dcc28eea83
 ```
 
-Every listed predecessor is an ancestor of its Portfolio tip. Read-only merge-tree previews for `main + C03`, `main + Portfolio`, and `C03 + Portfolio` were conflict-free. Backend candidate tree is `458517fa01a50f43f0b1cd8a948767e4f7600d50`; frontend candidate tree is `25a89b63cec1a576ef605076c717a7cc447e5acc`. The discarded Campaign Intelligence Integration branch is excluded. Development and production are excluded. Portfolio/C04 are capability-gated enhancers, not required dependencies.
+Every listed Brand Campaign and C03 predecessor is an ancestor of its Portfolio tip. The accepted Campaign Reporting convergence commits are not ancestors of Portfolio, but add no missing Brand Campaign objective authority: their merge bases are the already-contained accepted Instagram tips, and the accepted Reporting run stopped on the same objective-authority gap. They are not additional Match implementation bases. Read-only merge-tree previews for `main + C03`, `main + Portfolio`, and `C03 + Portfolio` were conflict-free. Backend candidate tree is `458517fa01a50f43f0b1cd8a948767e4f7600d50`; frontend candidate tree is `25a89b63cec1a576ef605076c717a7cc447e5acc`. The discarded Campaign Intelligence Integration branch is excluded. Development and production are excluded. Portfolio/C04 are capability-gated enhancers, not required dependencies. These are convergence candidates only; the active circuit breaker prevents implementation-base acceptance.
 
 ## 4. C03 Application and immutable request fence
 
@@ -56,7 +65,7 @@ Executable truth:
 - Terminalization locks and CASes `(applicationId,status=PENDING,statusVersion)`. Approval provisions the C04 Collaboration in the same transaction through `sourceApplicationId`.
 - Brand list/approve/reject authority remains C03. P3 adds server-derived `availableActions`; Match never derives or gates decisions. Approve/Reject requires `Idempotency-Key`; the current frontend omission is a P3 correction.
 
-`ApplicantAIMatchRequestAdapterV1` accepts only a canonical `PENDING` application with exactly one supported immutable snapshot. It strictly parses the snapshot, canonicalizes it, and derives:
+`ApplicantAIMatchRequestAdapterV1` may accept only a canonical `PENDING` application with exactly one supported immutable snapshot and a Product-canonical Campaign objective supplied by future accepted Brand Campaign authority. It strictly parses the snapshot, canonicalizes it, and derives:
 
 ```text
 snapshotHash = SHA256(JCS({snapshotId, applicationId, schemaVersion,
@@ -67,7 +76,45 @@ requestIdentity = SHA256("applicant-ai-match-v1\0" + applicationId + "\0" + snap
 
 Strings are Unicode NFKC; object keys are lexicographically sorted; numeric forms are canonical decimal; arrays retain authored order except Brief deliverables, which sort by `(displayOrder,id)`. Actor and attribution context are excluded from scoring input. Commercial context may be retained as non-scoring audit context but is not copied into a donor manifest or evaluator input.
 
-P1 adds `C03_APPLICATION_SNAPSHOT_V2` with immutable target `{ageMin,ageMax,gender,affinityIds,geographies}` and objective mapping `PULSE->AWARENESS`, `PROOF->TRUST`, `PRODUCTION->ASSETS`, `PUSH->ACTION` under `ApplicantAIMatchObjectiveAdapterV1`. It does not mutate V1 snapshots. Unsupported/malformed snapshots accept no-score `UNAVAILABLE`.
+The exact required C03-owned compatibility contract is:
+
+```ts
+type C03ApplicationSnapshotV2MatchContext = {
+  schemaVersion: "C03_APPLICATION_SNAPSHOT_V2";
+  objective: "AWARENESS" | "TRUST" | "ASSETS" | "ACTION";
+  targeting: {
+    targetingVersion: number;
+    geography: {
+      state: "AVAILABLE";
+      values: Array<{
+        scope: "LOCALITY" | "REGION" | "COUNTRY" | "GLOBAL";
+        label: string;
+        countryCode: string | null;
+        locality: string | null;
+        region: string | null;
+        radiusKm: number | null;
+        isPrimary: boolean;
+      }>;
+    };
+    age: { state: "AVAILABLE"; min: number; max: number };
+    gender: { state: "AVAILABLE" | "NOT_APPLICABLE"; value: "FEMALE" | "MALE" | null };
+    affinity: { state: "UNAVAILABLE"; ids: [] };
+  };
+};
+```
+
+Ownership is split precisely: Brand Campaign owns objective and targeting source semantics; C03 owns ApplicationSnapshot schema/version, strict source read, transactional copy, immutability and ready event. C03 must create V2 beside the Application in the existing submission transaction after locking the exact Campaign/targeting rows. It must copy only the accepted fields below and must never derive objective or affinities. V1 snapshots remain immutable and fail closed as unsupported for Match. This contract cannot become executable until Brand Campaign publishes an accepted canonical objective field/enum.
+
+Accepted target sources on the Brand Campaign runtime are:
+
+| Match target | Exact executable persistence | Admission into C03 V2 |
+|---|---|---|
+| Geography | `UceCampaignTargeting.targetLocations String[]`, written from strictly validated `audience_geographies` as canonical JSON strings | parse each through the accepted strict `LOCALITY | REGION | COUNTRY | GLOBAL` Campaign geography schema, reject malformed/duplicate-conflicting entries, rename fields only through the versioned C03 projection, and freeze the complete structured values without flattening |
+| Age | `UceCampaignTargeting.audienceAgeMin Int` and `audienceAgeMax Int` | require accepted bounds and `min <= max`, then freeze exact integers |
+| Gender | `UceCampaignTargeting.audienceGender String`, Campaign validation enum `ALL | FEMALE | MALE` | `ALL -> NOT_APPLICABLE`; otherwise freeze exact authorized value; unknown value fails closed |
+| Affinity | wizard/canonical-definition JSON can contain `audience_affinity_ids`, but `UceCampaignTargeting` has no affinity column/reference/versioned immutable relation and C03 V1 freezes none | `UNAVAILABLE` with empty IDs; no JSON recovery and no invented `affinityIds` |
+
+`targetingVersion` is copied for provenance but does not make later mutable rows historical authority. Only the transactionally created C03 V2 snapshot is the Match fence.
 
 Late publication uses one transaction: lock Application and Match execution; require Application still `PENDING` with captured `statusVersion`; require manifest frozen and no current; insert complete immutable result graph; CAS current from null; commit. Terminalization that wins first cancels waiting/calculation. Match that loses rejects publication and leaves no current. A terminal Application never waits for Match and its C03 action succeeds independently.
 
@@ -126,10 +173,10 @@ All weights are integer basis points relative to their table. State is `AVAILABL
 
 | Stable ID | Dimension / weight | Inputs and admission | Exact evaluator; anchors/sample | Evidence and codes |
 |---|---:|---|---|---|
-| `AUD_GEO_V1` | Audience 35 | V2 target geographies + current Audience country/city denominator | choose FOLLOWERS else ENGAGED; use most-specific authored level; normalize country ISO-3166-1 alpha-2 and city NFKC/casefold/space; score `100*targetBucketCount/knownDenominator`; union/dedupe targets | manifest + buckets; `AUDIENCE_GEO_UNAVAILABLE`, `AUDIENCE_DENOMINATOR_INVALID`, `AUDIENCE_BUCKET_CONFLICT` |
+| `AUD_GEO_V1` | Audience 35 | V2 structured target geographies + current Audience country/city denominator | choose FOLLOWERS else ENGAGED; `GLOBAL` alone is NOT_APPLICABLE; `REGION` is UNAVAILABLE absent an accepted region hierarchy; compare `COUNTRY` directly to country and `LOCALITY` directly to city, choosing the most-specific directly comparable authored scope; normalize country ISO-3166-1 alpha-2 and locality NFKC/casefold/space; score `100*targetBucketCount/knownDenominator`; union/dedupe targets at that scope | manifest + buckets; `AUDIENCE_GEO_UNAVAILABLE`, `AUDIENCE_REGION_MAPPING_UNAVAILABLE`, `AUDIENCE_DENOMINATOR_INVALID`, `AUDIENCE_BUCKET_CONFLICT` |
 | `AUD_AGE_V1` | Audience 25 | target age range + current age buckets | weighted overlap count / known age denominator; closed bucket prorates by inclusive integer-year overlap; open-ended bucket admitted only for exact compatible open target; round only output | bucket refs; `AGE_BUCKET_UNSUPPORTED`, `AGE_DENOMINATOR_INVALID` |
 | `AUD_GENDER_V1` | Audience 20 | explicitly authored FEMALE/MALE target + authorized provider buckets | exact authorized token map to FEMALE/MALE/UNKNOWN; selected count/known denominator; target ALL is N/A; never infer Creator gender | bucket refs; `GENDER_NOT_TARGETED`, `GENDER_BUCKET_UNAUTHORIZED` |
-| `AUD_AFFINITY_V1` | Audience 20 | authored affinity IDs + Content/Creator Brand evidence observations | semantic rubric 0/25/50/75/100: strong counterevidence / weak counterevidence / mixed / multiple aligned / repeated multi-source aligned; min 2 refs from 2 posts | exact refs; `AFFINITY_EVIDENCE_INSUFFICIENT`, `SENSITIVE_TRAIT_REJECTED` |
+| `AUD_AFFINITY_V1` | Audience 20 | no accepted immutable Campaign affinity source | always `UNAVAILABLE` in the current convergence candidate; no score/model invocation | `CAMPAIGN_AFFINITY_SOURCE_UNAVAILABLE`; future admission requires separate Campaign authority and a C03 snapshot-version contract |
 | `CNT_REQUIRED_FORMAT_V1` | Content 35 | required Brief formats + current Content items | map `REEL_VIDEO->REEL`, `PHOTOSHOOT->IMAGE`, `BANNER_CAROUSEL->CAROUSEL_ALBUM`; Story unsupported; per supported format count score 1=60,2=75,3–4=90,>=5=100; mean supported formats; coverage supported/required | item refs; `REQUIRED_FORMAT_UNAVAILABLE`, `FORMAT_MAPPING_UNSUPPORTED` |
 | `CNT_BRIEF_ALIGN_V1` | Content 35 | bounded Brief intent/guidance + admitted Content observations | semantic 0/25/50/75/100 from evidenced contradiction to repeated direct alignment; min 2 posts and 2 refs | `BRIEF_ALIGNMENT_EVIDENCE_INSUFFICIENT`, `SEMANTIC_CONFLICT` |
 | `CNT_CONSISTENCY_V1` | Content 15 | themes/structures/visual observations | dominant compatible pattern share across >=4 posts on >=2 dates: <=20%=0, <=40=25, <=60=50, <=80=75, >80=100 | post refs; `CREATIVE_SAMPLE_INSUFFICIENT` |
@@ -170,12 +217,12 @@ Window is the donor's current 90-day content set, limited by its accepted latest
 
 Commercial removal leaves these applicable weights and exact normalized fractions:
 
-| Objective adapter | Audience | Content | Brand | Performance | denominator |
+| Product objective | Audience | Content | Brand | Performance | denominator |
 |---|---:|---:|---:|---:|---:|
-| AWARENESS / PULSE | 35 | 20 | 15 | 20 | 90 |
-| TRUST / PROOF | 25 | 25 | 25 | 15 | 90 |
-| ASSETS / PRODUCTION | 15 | 35 | 25 | 10 | 85 |
-| ACTION / PUSH | 30 | 20 | 15 | 25 | 90 |
+| AWARENESS | 35 | 20 | 15 | 20 | 90 |
+| TRUST | 25 | 25 | 25 | 15 | 90 |
+| ASSETS | 15 | 35 | 25 | 10 | 85 |
+| ACTION | 30 | 20 | 15 | 25 | 90 |
 
 Use integer fractions throughout and `roundHalfUp(n/d)=floor((2n+d)/(2d))` once at dimension output, coverage output and final score. Dimension availability requires AVAILABLE applicable subweight >=50%. Overall coverage is `sum(objectiveWeight*dimensionCoverage)/sum(applicableObjectiveWeight)`. READY requires coverage >=60% and numeric Audience or Content. Overall score is over numeric available dimension weights only.
 
@@ -283,7 +330,7 @@ Product `MATCH-01..13` and `MATCH-16..22` retain their original non-conflicting 
 | MATCH-31 | Commercial weight absent; four weights normalize exactly |
 | MATCH-32 | donor lifecycle cause absent from manifest/output/UI |
 
-Additional mandatory cases: cross-tenant Application/Creator/Evidence substitution rejected; stale snapshot hash/version rejected; V1 snapshot accepted UNAVAILABLE; malformed/oversized/unknown/sensitive/proxy semantic output rejected; deterministic-only readiness can succeed with semantic criteria unavailable; Approve/Reject available during PROCESSING/UNAVAILABLE subject to C03 authority; Marketplace score never copied; wrong objective mapping rejected; enum migration split; lease expiry replay remains one current; application terminal before request creates no subject execution.
+Additional mandatory cases: cross-tenant Application/Creator/Evidence substitution rejected; stale snapshot hash/version rejected; V1 snapshot rejected as unsupported; absent canonical objective source trips the authority circuit breaker; affinity remains unavailable without an accepted immutable source; malformed/oversized/unknown/sensitive/proxy semantic output rejected; deterministic-only readiness can succeed with semantic criteria unavailable; Approve/Reject available during PROCESSING/UNAVAILABLE subject to C03 authority; Marketplace score never copied; enum migration split; lease expiry replay remains one current; application terminal before request creates no subject execution.
 
 ## 16. Validation evidence and invariants
 
@@ -298,14 +345,15 @@ Security controls: exact tenant/subject/Evidence ownership before scoring; no se
 
 ## 17. Technical-SA decisions requested
 
-Accept or boundedly correct:
+Resolve before any acceptance:
 
-1. Portfolio backend/frontend tips as implementation bases.
-2. additive C03 snapshot V2 and fail-closed V1 treatment.
-3. APPLICATION shared subject and two-step enum migration.
-4. 24-hour wait policy and retry schedule.
-5. three candidate registries and exact rubric anchors.
-6. Portfolio/C04 optional admission; default C04 not admitted.
-7. Creator Audience/Creator Brand/Portfolio predecessor acceptance status for Match consumption.
+1. Brand Campaign owner must publish one exact executable field/enum with total values `AWARENESS | TRUST | ASSETS | ACTION`; no Match-owned mapping is permitted.
+2. After that authority exists, accept or boundedly correct Portfolio backend/frontend tips as implementation bases.
+3. Accept the C03-owned additive snapshot V2 contract, fail-closed V1 treatment, and affinity-unavailable rule.
+4. APPLICATION shared subject and two-step enum migration.
+5. 24-hour wait policy and retry schedule.
+6. three candidate registries and exact rubric anchors.
+7. Portfolio/C04 optional admission; default C04 not admitted.
+8. Creator Audience/Creator Brand/Portfolio predecessor acceptance status for Match consumption.
 
-No defined P0 circuit breaker remains. P1–P4 are `NOT_STARTED`.
+Circuit breaker: `APPLICANT_AI_MATCH_AUTHORITY_CONFLICT`. Exact cause: Product-canonical Campaign objective cannot be established from accepted executable Brand Campaign authority without an unauthorized mapping. P1–P4 are `NOT_STARTED` and not authorized.

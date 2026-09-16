@@ -28,3 +28,30 @@ Transferred archive digests:
 - Runner prompt `31a722cfe618f806c378723b3b1dc490e7e23e692e61aace7a663b63b7ab95b6` (byte-identical; no newline normalization)
 
 Next: Parent returns the immutable P0 report to the Applicant AI Match Technical SA. P1 requires explicit authorization.
+
+## P0 Correction 1 — 2026-09-16
+
+Status: `STOPPED_AT_OBJECTIVE_AUTHORITY_CIRCUIT_BREAKER`
+
+- Verified immutable starting authority commit `1582814740c845b729eb1e388d7699177d095e5a` and tree `fd9f863599b2b846f1862b5c3b4a0926ed4ad4c1` after fetch/prune.
+- Read the complete authority package and preserved transferred archives byte-identically.
+- Reconciled accepted Brand Campaign runtime authority into the convergence proof.
+- Proved C03 snapshot objective source is Brand Campaign `UceCampaignStrategy.coreObjective`, typed by accepted executable enum `UceCampaignObjective = BRAND_AWARENESS | TRAFFIC_CLICKS | SALES_CONVERSIONS`.
+- Found no accepted executable field or exact total mapping to Product-canonical `AWARENESS | TRUST | ASSETS | ACTION`; no mapping was invented.
+- Reclassified target freezing as a C03-owned ApplicationSnapshot compatibility change over Campaign-owned source semantics.
+- Specified exact C03 V2 target contract: Campaign `targetLocations`, `audienceAgeMin`, `audienceAgeMax`, `audienceGender` are copied transactionally; affinity is unavailable because no accepted typed immutable persistence source exists.
+- Recomputed DAG: accepted Brand Campaign backend snapshot/named/reconciliation SHAs and frontend snapshot/named merge are already ancestors of Portfolio V3 candidates. Campaign Reporting convergence adds no missing objective authority and is not a Match base.
+- No backend/frontend source, migration, provider/model, development/production merge or deployment action occurred.
+
+Circuit breaker:
+
+```text
+RESULT = APPLICANT_AI_MATCH_AUTHORITY_CONFLICT
+CAUSE = PRODUCT_CANONICAL_CAMPAIGN_OBJECTIVE_NOT_ESTABLISHED_IN_ACCEPTED_EXECUTABLE_BRAND_CAMPAIGN_AUTHORITY
+P1 = NOT_STARTED
+P2 = NOT_STARTED
+P3 = NOT_STARTED
+P4 = NOT_STARTED
+```
+
+Required unblock: Brand Campaign authority must publish an exact executable canonical objective field/enum whose complete values are `AWARENESS | TRUST | ASSETS | ACTION`. Applicant Match may then resume P0 review against that exact accepted SHA/tree; it may not own a legacy translation.
