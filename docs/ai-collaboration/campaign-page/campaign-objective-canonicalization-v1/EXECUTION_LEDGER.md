@@ -105,9 +105,11 @@ Historical record only. Every conflicting Run A design/disposition is superseded
 
 - Output branch: `program/campaign-objective-canonicalization-v1-authority`
 - Required parent: `3f102f45a6819e62842dd0f7b9fc64f578486274`
-- Correction publication commit/tree: recorded after the correction commit.
+- Correction publication commit: `6b4d2f43d9238dba0546a0b4ee97c352606ef31b`
+- Correction publication tree: `59694fc6d420f061747b1e3c65f1dcdb36066060`
 - Push mode: normal, non-force.
-- Independent fetch-back: recorded after publication.
+- Independent fetch-back: local and `origin/program/campaign-objective-canonicalization-v1-authority` commit/tree were exactly equal at the correction publication checkpoint.
+- The final ledger-evidence descendant is the branch checkpoint returned with the report.
 
 ### Final return
 
