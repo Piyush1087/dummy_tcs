@@ -1,0 +1,26 @@
+# Campaign Reporting V1 — P0 Technical-SA Acceptance and P1→P4 Authorization
+
+The Campaign Reporting Technical SA has reviewed the published P0 package and adjudicates:
+
+```text
+P0 = ACCEPTED
+
+IMPLEMENTATION_BASES_AND_CONVERGENCE_SEQUENCE = ACCEPTED
+
+C04_OBLIGATION_IDENTITY = ACCEPTED
+
+C04_NUMERATOR_MAPPING =
+APPROVED | AUTO_APPROVED
+
+MATERIALITY_REGISTRY =
+CampaignReportingMaterialityRegistryV1 / cr-mat-1.0
+ACCEPTED
+
+REPORT_REFRESH_COOLDOWN =
+15_MINUTES
+VERSIONED_TECHNICAL_CONFIGURATION
+
+P1_TO_P4_AUTONOMOUS_IMPLEMENTATION = AUTHORIZED
+```
+
+This is copied exactly from Section 1 of `CAMPAIGN_REPORTING_P1_P4_AUTONOMOUS_LOCAL_CODEX_EXECUTION_PROMPT_V1.md`, without reinterpretation.

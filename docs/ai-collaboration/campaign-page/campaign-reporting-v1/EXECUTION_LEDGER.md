@@ -51,3 +51,14 @@
 - Push mode: normal, non-force.
 - Fetch-back: local and `origin/program/campaign-reporting-v1-authority` SHA/tree were exactly equal at the publication checkpoint.
 - The immutable external return carries the final evidence-checkpoint branch SHA/tree.
+
+## Run B / P1→P4 authorization
+
+- Runner: External Local Codex
+- Date: 2026-09-16 Asia/Calcutta
+- P0 authority checkpoint: `29488282baf227500db97b319049994f50f0c51a`
+- P0 authority tree: `db95535ab9eed6aacf08d782b5859fe06aeebad2`
+- P0 Technical-SA adjudication: accepted exactly as transferred.
+- P1→P4 autonomous implementation: authorized.
+- Runner prompt raw SHA-256: `bd50719f8c0991cb8dc925167a1d5dd507402adea2fd55cd8b52d62f0c3a7e91`
+- Backend/frontend mutation had not started at this authority checkpoint.
