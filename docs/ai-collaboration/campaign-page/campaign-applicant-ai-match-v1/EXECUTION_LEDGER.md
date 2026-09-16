@@ -134,3 +134,26 @@ Required runner prompt:
 Next boundary:
 
 `EXTERNAL_LOCAL_CODEX_P0_RESUMPTION_CORRECTION_1`
+
+## P0 Resumption Correction 1 Execution — 2026-09-16
+
+Status: `READY_FOR_APPLICANT_AI_MATCH_TECHNICAL_SA_FINAL_REVIEW`
+
+- Verified launch authority SHA `f382dccb9a35e4fcd2dc4a91bf74a2ee911f5a6c`, tree `b374d1b1d1ba517537219c45f253d5007ac23324`, remote equality, prior-report ancestry, and clean task-owned audit worktrees.
+- Read the complete correction runner, Technical-SA review, launch ledger, and every named Git-hosted authority; preserved all accepted non-conflicting P0 findings.
+- Corrected C03 V2 to freeze the complete `CampaignObjectiveHandoffV1` available/unavailable union with all exact reasons.
+- Defined the Campaign-owned `CampaignTargetingHandoffV1`; geography, age, and gender use accepted targeting persistence, while affinity remains explicitly unavailable with empty IDs.
+- Prohibited Match objective/target availability from becoming a new Application-submission gate and defined exact submission/outbox/result consequences.
+- Completed `APPLICANT_AI_MATCH_SEMANTIC_SCORING_REGISTRY_V1` with criterion-specific inputs, thresholds, anchors, conflicts, self-declaration caps, strict finalization, and deterministic explanations.
+- Completed `APPLICANT_AI_MATCH_DEPENDENCY_WAIT_POLICY_V1` with a 24-hour half-open horizon, deterministic jitter, event-first CAS, one outstanding retry, exact technical retries, late-start behavior, current-result rules, and bounded load.
+- Confirmed the shared Intelligence runtime is reused; its current owner-scoped terminal failure path requires an additive APPLICATION retry/wait extension in P1 and is not treated as already sufficient.
+- Backend/frontend source changed: no. New migration: none. C03/Applicant Match implementation: none.
+- Live Graph/model/provider calls, production-data access, development/production merge, and deployment: none.
+
+Published report:
+
+`CAMPAIGN_APPLICANT_AI_MATCH_P0_RESUMPTION_CORRECTION_1_REPORT_V1.md`
+
+Next boundary:
+
+`PARENT_PROGRAM_ORCHESTRATOR_AND_APPLICANT_MATCH_TECHNICAL_SA_FINAL_P0_REVIEW_ONLY`
