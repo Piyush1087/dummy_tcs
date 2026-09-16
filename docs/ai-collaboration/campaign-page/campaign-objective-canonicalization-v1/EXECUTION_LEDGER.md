@@ -138,3 +138,54 @@ Historical record only. Every conflicting Run A design/disposition is superseded
 ### Disposition
 
 The stopped implementation run remains a valid authority-gate stop and provides no implementation checkpoint. A new runner invocation must use the immutable descendant SHA/tree published for this repaired package and read the Git-hosted execution prompt completely.
+
+## Run D / Bounded implementation
+
+- Runner: Local Codex
+- Date: 2026-09-16 Asia/Calcutta
+- Scope: accepted Brand Campaign canonical-objective backend/frontend implementation and local acceptance evidence
+- Authority input: `1bf8697567d2f611cdbcf909a11361363fede85d`, tree `7584b34d4851c07d9b1ad27ffcda513729a49194`
+- Authority gate: exact SHA/tree, required files, accepted-preflight ancestry, and clean worktree verified
+- Product contract: `AWARENESS | TRUST | ASSETS | ACTION`
+
+### Published implementation checkpoints
+
+- Backend branch: `program/campaign-objective-canonicalization-v1-backend`
+- Backend SHA: `d7ff0f33d12b45d378c02a9d2adfbc2e05eb6b18`
+- Backend tree: `b45e314404dd2318bf74f2e13de04669539c9dda`
+- Frontend branch: `program/campaign-objective-canonicalization-v1-frontend`
+- Frontend SHA: `0662cd6963859d9e46abe53910b174d4826adaa3`
+- Frontend tree: `02243e16ed283810936fdaee0601981fe316688d`
+- Both feature branches were pushed normally and independently cloned back with exact SHA/tree equality.
+
+### Acceptance disposition
+
+- Dedicated enum migration boundary: PASS
+- Separate general definition-hash migration boundary: PASS
+- PostgreSQL 17.11 clean-database and representative-upgrade paths: PASS
+- Legacy row preserved without mapping/backfill: PASS
+- Backend focused/broader tests, changed-file lint, build, and startup health: PASS
+- Frontend typecheck, tests, changed-file lint, build: PASS
+- Authenticated Playwright desktop and 390px browser proof with zero unexpected errors: PASS
+- Changed-file secret scan: PASS
+- Repository-wide lint debt remains documented in the implementation report; no unrelated lint file was changed.
+
+### Scope confirmation
+
+- C03 source changed: no
+- Applicant Match source changed: no
+- ApplicationSnapshot V1 or historical reporting rows changed: no
+- Provider/model calls: none
+- Production data access: none
+- Development/production merge: none
+- Deployment: none
+
+### Publication
+
+- Report: `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_REPORT_V1.md`
+- Authority publication is a normal descendant of the verified input checkpoint.
+- Final authority SHA/tree and independent fetch-back are recorded in the runner return because the commit cannot self-report its own immutable identity.
+
+### Final return
+
+`BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_REPORT_V1`
