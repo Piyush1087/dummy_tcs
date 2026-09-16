@@ -46,4 +46,8 @@
 
 ### Publication checkpoints
 
-Publication/fetch-back evidence is appended after each normal non-force checkpoint; the immutable external return carries the final branch SHA/tree.
+- Authority publication commit: `88a47f91a4bc9d78618b7037afe49d46359e5838`
+- Authority publication tree: `b7b660c9e3c43372562f4ec194b368761d957dd5`
+- Push mode: normal, non-force.
+- Fetch-back: local and `origin/program/campaign-reporting-v1-authority` SHA/tree were exactly equal at the publication checkpoint.
+- The immutable external return carries the final evidence-checkpoint branch SHA/tree.
