@@ -1,0 +1,160 @@
+# Creator Brand V0 — execution ledger
+
+One canonical Creator Brand ledger. Parent authorization is `7e54d3980ca3454263600e44766041dbb58e0a06`. The historical P0 prompt narrowed that run to P0. Subsequent explicit Technical-SA adjudication accepted P0, P1 including its correction-1 hygiene disposition, and P2. The P3 access-gate correction resolved the primary guard-conflict candidate. The explicit P4 adjudication ACCEPTS P0/P1/P2/P3 and authorizes verification-only P4. P4 is evidence-ready awaiting external review, not runner-accepted. Historical predecessor evidence statements below retain their publication context.
+
+## Current P4 closeout — evidence-ready awaiting external review
+
+- P0/P1/P2/P3 ACCEPTED by explicit P4 adjudication; accepted source-independent P3 shell/Team/action architecture preserved. No P4 backend/frontend source, schema, migration, dependency, lockfile or Docker edit.
+- Exact backend6206f43c6a13c304c971b810e1dd99a20aaaa11f/tree533f543612b856cfaf3b57769fe0b5541b803c3f; frontendc505c0679e39effdd9608e319112591d5ae4c079/tree18dd8ed798aae509baa7d0d51ab8e31d7ac2dbbd; authority start ea3fe45e0cb16977684b4dbbb68be8f91a8d9a86/tree19603220605fc64674c8bb8695bd6715ddb97ea9. All starts/ancestors/30registered worktree cleanliness verified.
+- Mandatory integrated gates PASS: clean102; populated101→102 exact193predecessor tables; production boot/health; source-independent full manual roles/API; canonical Owner/actor/CAS/idempotency/immutable audit; five-family exact Evidence/sufficiency/Use/Edit; replay/failure/current/purge/cross-domain preservation;50required PG tests;222focused backend final passing basis;139focused frontend;1310fullfrontend/1existing skip;390/767/768/1440 realauth with Axe0/0/0/nooverflow/console0. Initial inherited/config/timing failures disclosed in P4 artifact; original assertions/timeouts unchanged, isolated final required suites passed.
+- Only authorized P4 evidence/developer/learning/single-ledger/exact-prompt files change. Full commands/row counts/version/byte identities/diagnostics in P4_INTEGRATED_ACCEPTANCE_AND_IMMUTABLE_CLOSEOUT.md; source map and debt in developer/learning handoffs.
+- Task backend/frontend/browser stopped; uniquely named tmpfs PostgreSQL container/databases removed; ignored synthetic configuration deleted; task ports zero. Three verified ignored/source-only output deletion attempts policy-blocked, exact paths/content safety recorded; no bypass or Git inclusion. No live Graph/model/provider mutation, raw-media persistence, merge/deploy/new workspace.
+- Normal authority push/independent fetch SHA/tree equality, accepted authority/both predecessor ancestors, unchanged backend/frontend fetched equality and normalized exact prompt digest are resolved in the immutable report, avoiding self-reference. No runner acceptance.
+
+```text
+P0 = ACCEPTED
+P1 = ACCEPTED
+P2 = ACCEPTED
+P3 = ACCEPTED
+P4 = EVIDENCE_READY_AWAITING_TECHNICAL_SA_REVIEW
+P4_ACCEPTED = NO — AWAITING CHILD-SA / PROGRAM-ORCHESTRATOR REVIEW
+PRIMARY_RUNS_P0_P1_P2_P3_P4 = 1 / 1 / 1 / 1 / 1
+CORRECTION_CYCLES_P0_P1_P2_P3_P4 = 0 / 1 / 0 / 1 / 0
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = NONE
+MIGRATION_COUNT = 102
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE P4 REPORT FOR FINAL REVIEW
+```
+
+## P0 — accepted by Technical-SA
+
+- Product V2 `2d561da03ae5df296443f32f79f24264cc8a9361`; technical handoff `0db5974c562aea96568c4e12b240cbb1ef5cd09d`; Amendment 1 `07917b2191a6de3f0c8ffb86500abc597478fc2b`.
+- Authority starts at exact Parent authorization, normally merges exact corrected Content authority `cb9ee23118eafb2dc156c25eb09702ea93252db4`. Conflict-free merge `346cdc4b9a48f845f31a086cb9544f7d39f25ff9`, tree `ad54481b36ffe13e2c72efc5841ec1588bbe29ba`, parents exactly those two commits. Both histories preserved; common ancestor `179ba0860cba0d256b5ee13757f308ebe99a078d`.
+- Backend base `0fa145ac6a021337929e87b9eb9e0c67ebc82b7e` / `750065a56a4a060c125a9bee7ddc9fb842204e7e`; P0 contract commit `3a919c2a9a8263c4734df87bda3ed21e092420cf` / `fc888dd548ef85246438327588c07bfe835d9e83`.
+- Frontend new P0 branch is unchanged at `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`; no meaningless commit.
+- Strict canonical/profile/revision/mutation/role contracts and exactly five derived suggestion ownership slices frozen. No persistence, mutation runtime, read adapter, processor, scheduler, UI or provider/model call added. Bundle registration execution is disabled.
+- Canonical Campaign archetype artifact reused with exact blob/LF SHA256; 30 active IDs; Creator empty/unconfigured or 1..3 confirmed; unchanged Campaign 1..5; UGC archetype never implies willingness.
+- Final focused matrix 81 PASS; production build/typecheck, scoped lint/format/diff, exact pinned Brand bundle verification and secret/forbidden-artifact scans PASS. Schema/migrations/dependencies/predecessor runtime/frontend unchanged; migrations remain 101.
+- Evidence and executable inventory/hashes: `P0_AUTHORITY_CONVERGENCE_AND_EXECUTABLE_CONTRACTS.md`.
+- Exact relayed prompt archived under `runner-prompts/`; normalized source/archive SHA256 both `cdffe701ad7263ee81a44c41cc0614387368544679ea10f82050b8c2dac1bf44` (LF and one terminal newline only).
+- Normal publication/fetch-back and final containing-authority commit SHA/tree are resolved in the immutable runner report, avoiding an impossible self-referential commit hash. No readiness result is valid without that fetch-back proof.
+
+```text
+P0 = ACCEPTED_BY_TECHNICAL_SA
+P0_ACCEPTED = YES — EXPLICIT TECHNICAL-SA ADJUDICATION
+P0_EVIDENCE_READY = YES
+P0_PRIMARY_RUNS_USED = 1
+P0_CORRECTION_CYCLES_USED = 0
+P1 = AUTHORIZED_BY_SUBSEQUENT_RELAY
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = NONE
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE REPORT FOR TECHNICAL REVIEW
+```
+
+P0's ignored build-output/dependency-junction cleanup refusal was explicitly adjudicated non-blocking local hygiene, correction cycles 0. Those ignored artifacts were not inherited into published trees; old P0 paths, shared dependency stores and user work remain untouched.
+
+## P1 — accepted by Technical-SA; historical correction 1 closeout
+
+- The immutable primary report established PASS for Product/schema/additive migration 102, clean PostgreSQL, exact populated 101→102 upgrade (193 predecessor table counts/digests), 8 P1 PostgreSQL/API tests, 18 predecessor PostgreSQL tests, 146 focused unit/contract tests, role/tenant/actor isolation, manual-no-Intelligence, retention, production build/boot/health and hygiene.
+- Only primary cleanup/publication/authority closeout was incomplete. Explicit correction 1 authorizes state verification, bounded cleanup, publication and this single-lineage authority closeout. No backend source/schema/migration/test edit was made.
+- Exact recovery: backend `3a919c2a9a8263c4734df87bda3ed21e092420cf` / `fc888dd548ef85246438327588c07bfe835d9e83`, authorized 18 paths, 1,425 insertions/17 deletions; migration byte SHA256 `ec6484427c24d5755549ff9e71bae989f5ff592a6fc5da953ca07494b8744452`; 102 migration directories and unchanged predecessor order.
+- Recovery aggregate SHA256 `34cde6ebca18b4a50cbe34727af0c9716b44f0b7b74086463b6101c5641a73c4`. Full deterministic normalized-file manifest, raw-byte non-mutation baselines, commands and primary-preservation basis are in `P1_CANONICAL_PERSISTENCE_AND_MANUAL_API.md`.
+- Correction minimum revalidation PASS: Prisma generate/validate, production build, 70 focused tests, scoped ESLint/Prettier, complete dirty/cached diff checks, stage/commit secret/forbidden-artifact scans. No PostgreSQL/browser/boot matrix was needlessly replayed.
+- Backend normal push/independent fetch-back PASS: `7a78ffec1dd6a413d0a2478a8f706dfa95393a05` / `3a12c2dccdb408d2c7d0c510ec2b7feabf2518e3`; direct parent accepted P0 `3a919c2a9a8263c4734df87bda3ed21e092420cf`; clean tracked worktree; committed migration count/hash exact.
+- Frontend remains unchanged at `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`; no meaningless commit.
+- CLEANUP_DISPOSITION = NON_BLOCKING_LOCAL_RUNNER_HYGIENE_EXCEPTION. One safe literal removal attempt per verified task-owned ignored `backend/dist` and outside-repository `accepted-101` was policy-blocked. Both are regular non-reparse, non-secret/non-media/non-DB, unused, outside the staged tree, and unable to alter publication. Exact absolute paths and Parent-safe native cleanup commands are in the P1 artifact and immutable report. Task backend/container/database are stopped/removed; ports have zero listeners.
+- Correction prompt archived content-complete in `runner-prompts/`; normalized source/archive content and SHA256 equality PASS: `1eec7e91d392513a782e46c24f6a1900c14c0cbccb804991dee92086ad950872`. The fenced recovery manifest independently rehashed to its recorded digest. Final authority SHA/tree/fetch-back/both ancestry proofs are resolved in the immutable report (no self-referential commit hash).
+
+```text
+P0 = ACCEPTED_BY_TECHNICAL_SA
+P0_CORRECTION_CYCLES_USED = 0
+P1 = ACCEPTED_BY_TECHNICAL_SA
+P1_ACCEPTED = YES — EXPLICIT P2 PREDECESSOR ADJUDICATION
+P1_EVIDENCE_READY = YES
+P1_PRIMARY_RUNS_USED = 1
+P1_CORRECTION_CYCLES_USED = 1
+P2 = AUTHORIZED_FOR_EXTERNAL_LOCAL_CODEX
+CLEANUP_DISPOSITION = NON_BLOCKING_LOCAL_RUNNER_HYGIENE_EXCEPTION
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = 1
+MIGRATION_COUNT = 102
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE CORRECTION REPORT FOR TECHNICAL REVIEW
+```
+
+## P2 — accepted by Technical-SA; historical primary evidence
+
+- Exact fresh-worktree starting checkpoints, Product pins and accepted ancestry independently verified. No old P1 `dist`, `accepted-101`, dependency junction or unreconciled Product register was used.
+- Read-only current Content admission binds eight components, completed Capture, exact source Evidence/parents, Creator subject/workspace and current non-secret Settings account/generation/capabilities. No reacquisition or Content recalculation.
+- Frozen P0 bundle hash `5f8c179abd6d9a6e146d9322d93a961f80467183889c6d49f801dfb15410472c` retained. Only runtime registration activated; exactly one derived, unprotected Object and five components use shared execution, generation, validation and CAS-current.
+- Strict provider-neutral semantic DI defaults unavailable/fail-closed. Deterministic server support/confidence/taxonomy/candidate-ID finalization, exact replay, truthful insufficient replacement and semantic/validation/finalization failure-current preservation proved.
+- Existing GET/PUT now project five-family state and explicitly confirm server-held candidates. Owner/Manager USE/EDIT and Assistant read-only proved; active actor, expected revision, idempotency, target-only mutation, source/current verification and immutable provenance enforced. Canonical truth is never auto-applied or purged.
+- Final focused gates PASS: 201 unit/contract tests in 22 files; 50 PostgreSQL tests in 7 files; Prisma generate/validate, production build, production-scope TypeScript, boot/health, scoped ESLint/Prettier and diff checks. All 102 migrations apply cleanly; status current; no extra extension required.
+- Backend normal push/fetch-back PASS: `6206f43c6a13c304c971b810e1dd99a20aaaa11f` / `533f543612b856cfaf3b57769fe0b5541b803c3f`; direct parent accepted P1 `7a78ffec1dd6a413d0a2478a8f706dfa95393a05`. Inventory exactly 25 files, 3,272 insertions/41 deletions.
+- Frontend unchanged and fetched equality PASS: `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`. Packages, lockfile, schema, all migrations, Dockerfile/decoder and unrelated domain source unchanged.
+- Task services and uniquely named tmpfs PostgreSQL container/databases removed; ports 6052/55434 have zero listeners; synthetic ignored `.env` removed; temporary fixture media cleaned. One safe literal ignored `backend/dist` removal attempt was policy-blocked. The regular non-reparse, non-secret/non-media/non-DB directory is outside publication, has no remaining service and is unused: NON_BLOCKING_LOCAL_RUNNER_HYGIENE_EXCEPTION explicitly permitted by the P2 prompt. No bypass/retry.
+- Exact prompt archive normalization/digest equality, full proof matrix/commands and inventory are in `P2_CONTENT_BACKED_SUGGESTIONS_AND_CONFIRMATION.md`. Final containing-authority commit SHA/tree and independent fetch-back are resolved in the immutable report, avoiding a self-referential commit hash.
+
+```text
+P0 = ACCEPTED
+P1 = ACCEPTED_BY_TECHNICAL_SA
+P1_PRIMARY_RUNS_USED = 1
+P1_CORRECTION_CYCLES_USED = 1
+P2_ACCEPTED = YES — EXPLICIT P3 PREDECESSOR ADJUDICATION
+P2_EVIDENCE_READY = YES — SUBJECT TO FINAL AUTHORITY FETCH-BACK PROOF
+P2_PRIMARY_RUNS_USED = 1
+P2_CORRECTION_CYCLES_USED = 0
+P3 = AUTHORIZED_BY_BINDING_ACCESS_GATE_CORRECTION
+P4 = NOT_STARTED
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = NONE
+MIGRATION_COUNT = 102
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE P2 REPORT FOR TECHNICAL REVIEW
+```
+
+## P3 — access-gate correction 1 evidence-ready
+
+- Sole Product V2/handoff/Amendment 1 pins and exact accepted P0/P1/P2 ancestry preserved. The primary P3 circuit-breaker candidate is RESOLVED: the Technical-SA source-dependent guard instruction was incorrect, not a Product conflict. Creator Brand now uses authenticated shell + existing active Team context + CREATOR_BRAND_READ, outside unchanged RequireCreatorPlatformAccess. No backend delta or second actor/subject model.
+- Exact fresh starting backend 6206f43c6a13c304c971b810e1dd99a20aaaa11f / 533f543612b856cfaf3b57769fe0b5541b803c3f; frontend 7edd26d3cdad0ec84083884b34039952368a1295 / 0cc596ca1ef1d1c4a51857125547de156e487c8b; authority 26feb12690e0031e3e0cce328b12eebcfaf62670 / be4b3afd49c4a823a4949c3079e0fcf1255b1360. Local/fetched equality and all registered worktree cleanliness verified before mutation. Old P2 ignored outputs were not inputs.
+- Full P3 canonical fields, manual-first setup, strict consumer/commands, stable retry UUIDs, revision conflict review, server-only confirmed replacement, target-only Use/Edit, five inline suggestion families and truthful source/transport states implemented. Campaign's exact 30 archetypes/max-five unchanged; Creator max-three; no Bio suggestion/auto-apply/palette HEX fabrication/UGC willingness inference.
+- 139 focused frontend tests in 19 files PASS; 45 unchanged backend authorization tests in four files PASS, including all 14 Creator Entry access tests. Production builds, typecheck, scoped formatter/diff checks PASS. Scoped ESLint: zero errors, eight disclosed non-blocking development warnings.
+- Clean PostgreSQL 17.11 disposable tmpfs route: all 102 accepted migrations applied, status current, connectivity/health PASS; only plpgsql 1.0. Actual production-built browser at 390/767/768/1440: real auth/Team/GET/PUT, no-source Owner setup, Manager edits/Use/Edit, Assistant read/PUT 403, anonymous 401, inactive/missing Team/Brand 403, exact canonical Owner subject, disconnect preservation, last-good after invalid GET, drawer/sidebar/five-bottom navigation, keyboard/focus/overflow PASS. Axe serious/critical/lesser 0/0/0 and browser console/page errors zero at every width.
+- Frontend normal push/independent fetch-back PASS: c505c0679e39effdd9608e319112591d5ae4c079 / 18dd8ed798aae509baa7d0d51ab8e31d7ac2dbbd, direct accepted frontend parent. Exactly 24 files, 3,486 insertions/zero deletions. Backend unchanged local/fetched equality exact; schema/migrations/dependencies/Docker/Entry/Audience/Content/Campaign/Settings source unchanged.
+- Planned/staged/committed secret/forbidden-artifact scans PASS; synthetic configuration values excluded. Services stopped, only task-owned disposable container removed, synthetic ignored configuration deleted, temporary fixture media cleaned; no browser traces/screenshots/state published. Normal ignored dependency/build products are excluded from Git.
+- Full evidence/commands/inventory: P3_CREATOR_BRAND_FRONTEND.md. Content-complete original P3 and correction prompts archived in runner-prompts. Correction normalized source/archive SHA256 7a75e4cc1ccf75447814b00a36d4abe40bd5156e2fed9241a02e798928e704c5; original exact pinned SHA256 692bbf6a84193804b7fd78372f4724af3bcb47321ae54b6bf1381bc74d6cfa5d. LF and one terminal newline normalization only.
+- Final containing authority commit/tree/fetch-back/both required ancestry are resolved in the immutable runner report, avoiding self-reference. No self-acceptance.
+
+```text
+P0 = ACCEPTED
+P1 = ACCEPTED
+P2 = ACCEPTED
+P3_PRIMARY_CIRCUIT_BREAKER_CANDIDATE = RESOLVED_BY_BINDING_ACCESS_GATE_CORRECTION
+P3_ACCEPTED = NO — AWAITING CHILD-SA / PROGRAM-ORCHESTRATOR REVIEW
+P3_EVIDENCE_READY = YES — SUBJECT TO FINAL AUTHORITY FETCH-BACK PROOF
+P3_PRIMARY_RUNS_USED = 1
+P3_CORRECTION_CYCLES_USED = 1
+P4 = PROHIBITED_PENDING_TECHNICAL_SA_REVIEW
+LIVE_GRAPH_CALLS = NONE
+LIVE_MODEL_CALLS = NONE
+META_PROVIDER_MUTATIONS = NONE
+NEW_MIGRATIONS = NONE
+MIGRATION_COUNT = 102
+DEVELOPMENT_MERGE = NOT_PERFORMED
+DEPLOYMENT = NOT_PERFORMED
+NEXT_ACTION = PARENT RETURNS IMMUTABLE P3 CORRECTION REPORT FOR TECHNICAL REVIEW
+```

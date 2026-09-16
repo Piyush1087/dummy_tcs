@@ -1,0 +1,93 @@
+{
+  "checkpoints": {
+    "p0": {
+      "backend": {
+        "sha": "ff25153cd37008c02e6a7ab3c77fd509d2a5b408",
+        "tree": "f2c2030669efa759c60fec9ed41f21d04c7d7d19"
+      },
+      "authority": {
+        "sha": "cb92615cc53d34f63936cfcfadc70aae74a943da",
+        "tree": "78caa5cd6621dd5d3df226f5178b8ff623c30825"
+      },
+      "frontend": {
+        "sha": "e6e7ae8ea9f5f98f882f52230e4cae163bda1e89",
+        "tree": "c77fd43a13251f3c0ba6733f5070fe49412bba1e"
+      }
+    },
+    "p1": {
+      "backendSha": "4b37a302d06f06324e52c461647e669a9d5769d2",
+      "backendTree": "b41d179587e16b63e243ba4bb68b71a95c264a6c",
+      "authoritySha": "2216997cebd3d1683deca1317d1656b21ae921df",
+      "authorityTree": "688a477e9bed769cbc89e294c33852591276afcc"
+    },
+    "p2": {
+      "backendSha": "d99cce6f8d7730e8eff7f7cc734ba8813bf822e7",
+      "backendTree": "c0101e6a5a07e156f6c46e2a328a8e948cdbc915",
+      "authoritySha": "9495d22547214554cce2363f05bd708c510415db",
+      "authorityTree": "f2378cba9ee5fd960e6a01aaf524831dc2b3911e"
+    },
+    "p3": {
+      "frontendSha": "d5910537b1e323e399cb5966a57910b478c08d18",
+      "frontendTree": "f83713cb0022d0c948943caa3240bc74db6f39bc",
+      "authoritySha": "010ea35050f4ec201426eeb2d02ef61afb3d3a7f",
+      "authorityTree": "7d714189deb0b776701fab9814c77c8ef17871c4"
+    },
+    "p4": {
+      "backendSha": "6f000bd9364f48d338ae88cec78dcfed0f4fd522",
+      "backendTree": "374f02a8181505038fbb0c084ca33de0ad97ae46",
+      "frontendSha": "36d75f4eceded7e9e35aaa280b544164d086ca05",
+      "frontendTree": "eb9c4471a5a7db6228b2f8c4c234834c5671d828"
+    }
+  },
+  "implementations": {
+    "backend": {
+      "root": "C:/Users/piyus/Documents/Codex/2026-09-10/markdown-instagram-intelligence-external-local-codex/work/creator-audience-v1/backend",
+      "start": "3504a3cc8f0dc684431b73046f5796f157708f68",
+      "cumulativeInventoryAndStatistics": "A\tscripts/creator-audience-v1-integrated-runtime.mjs\nA\tscripts/creator-audience-v1-publication-scan.mjs\nM\tsrc/features/brand-intelligence/brand-intelligence.module.ts\nM\tsrc/features/brand-intelligence/contracts/registry/contract-runtime.registry.test.ts\nM\tsrc/features/brand-intelligence/contracts/registry/contract-runtime.registry.ts\nM\tsrc/features/brand-intelligence/contracts/validation/semantic.validator.ts\nM\tsrc/features/brand-intelligence/execution/executor/processor-executor.registry.ts\nM\tsrc/features/brand-intelligence/execution/processor-persistence.router.test.ts\nM\tsrc/features/brand-intelligence/execution/processor-persistence.router.ts\nA\tsrc/features/brand-intelligence/projection/owner-scoped-current.read.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.architecture.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.calculator.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.calculator.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.consumer.service.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.consumer.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.content-test-fixture.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.contract.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.contract.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.persistence.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.pipeline.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.postgres.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.processor.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.runtime.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.source.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.test-fixture.ts\nM\tsrc/features/creator-audience/creator-audience-credential-fence.service.test.ts\nM\tsrc/features/creator-audience/creator-audience-credential-fence.service.ts\nM\tsrc/features/creator-audience/creator-audience-persistence.hook.ts\nM\tsrc/features/creator-audience/creator-audience-pipeline.service.ts\nM\tsrc/features/creator-audience/creator-audience.controller.ts\nM\tsrc/features/creator-audience/creator-audience.module.ts\nM\tsrc/features/creator-brand/creator-brand-content-source.adapter.ts\nM\tsrc/features/creator-brand/creator-brand-current.reader.ts\nA\tsrc/features/creator-content/creator-content-current-source.adapter.ts\nM\tsrc/features/creator-content/creator-content-pipeline.service.ts\nM\tsrc/features/data-extraction/evidence/ownership/intelligence-owner-scope.repository.ts\n 36 files changed, 5787 insertions(+), 620 deletions(-)",
+      "packets": [
+        {
+          "sha": "ff25153cd37008c02e6a7ab3c77fd509d2a5b408",
+          "inventoryAndStatistics": "COMMIT ff25153cd37008c02e6a7ab3c77fd509d2a5b408 PARENT 3504a3cc8f0dc684431b73046f5796f157708f68\n\nA\tsrc/features/creator-audience-v1/creator-audience-v1.contract.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.contract.ts\n 2 files changed, 541 insertions(+)"
+        },
+        {
+          "sha": "4b37a302d06f06324e52c461647e669a9d5769d2",
+          "inventoryAndStatistics": "COMMIT 4b37a302d06f06324e52c461647e669a9d5769d2 PARENT ff25153cd37008c02e6a7ab3c77fd509d2a5b408\n\nM\tsrc/features/brand-intelligence/brand-intelligence.module.ts\nM\tsrc/features/brand-intelligence/contracts/registry/contract-runtime.registry.test.ts\nM\tsrc/features/brand-intelligence/contracts/registry/contract-runtime.registry.ts\nM\tsrc/features/brand-intelligence/contracts/validation/semantic.validator.ts\nM\tsrc/features/brand-intelligence/execution/executor/processor-executor.registry.ts\nM\tsrc/features/brand-intelligence/execution/processor-persistence.router.test.ts\nM\tsrc/features/brand-intelligence/execution/processor-persistence.router.ts\nA\tsrc/features/brand-intelligence/projection/owner-scoped-current.read.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.architecture.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.calculator.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.calculator.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.content-test-fixture.ts\nM\tsrc/features/creator-audience-v1/creator-audience-v1.contract.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.persistence.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.pipeline.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.postgres.test.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.processor.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.runtime.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.source.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.test-fixture.ts\nM\tsrc/features/creator-audience/creator-audience-credential-fence.service.test.ts\nM\tsrc/features/creator-audience/creator-audience-credential-fence.service.ts\nM\tsrc/features/creator-audience/creator-audience-persistence.hook.ts\nM\tsrc/features/creator-audience/creator-audience-pipeline.service.ts\nM\tsrc/features/creator-brand/creator-brand-content-source.adapter.ts\nM\tsrc/features/creator-brand/creator-brand-current.reader.ts\nA\tsrc/features/creator-content/creator-content-current-source.adapter.ts\nM\tsrc/features/creator-content/creator-content-pipeline.service.ts\nM\tsrc/features/data-extraction/evidence/ownership/intelligence-owner-scope.repository.ts\n 29 files changed, 3842 insertions(+), 616 deletions(-)"
+        },
+        {
+          "sha": "d99cce6f8d7730e8eff7f7cc734ba8813bf822e7",
+          "inventoryAndStatistics": "COMMIT d99cce6f8d7730e8eff7f7cc734ba8813bf822e7 PARENT 4b37a302d06f06324e52c461647e669a9d5769d2\n\nA\tscripts/creator-audience-v1-integrated-runtime.mjs\nA\tsrc/features/creator-audience-v1/creator-audience-v1.consumer.service.ts\nA\tsrc/features/creator-audience-v1/creator-audience-v1.consumer.test.ts\nM\tsrc/features/creator-audience-v1/creator-audience-v1.postgres.test.ts\nM\tsrc/features/creator-audience-v1/creator-audience-v1.source.ts\nM\tsrc/features/creator-audience/creator-audience.controller.ts\nM\tsrc/features/creator-audience/creator-audience.module.ts\n 7 files changed, 1303 insertions(+), 4 deletions(-)"
+        },
+        {
+          "sha": "6f000bd9364f48d338ae88cec78dcfed0f4fd522",
+          "inventoryAndStatistics": "COMMIT 6f000bd9364f48d338ae88cec78dcfed0f4fd522 PARENT d99cce6f8d7730e8eff7f7cc734ba8813bf822e7\n\nM\tscripts/creator-audience-v1-integrated-runtime.mjs\nA\tscripts/creator-audience-v1-publication-scan.mjs\n 2 files changed, 101 insertions(+)"
+        }
+      ]
+    },
+    "frontend": {
+      "root": "C:/Users/piyus/Documents/Codex/2026-09-10/markdown-instagram-intelligence-external-local-codex/work/creator-audience-v1/frontend",
+      "start": "e6e7ae8ea9f5f98f882f52230e4cae163bda1e89",
+      "cumulativeInventoryAndStatistics": "A\tscripts/p4-creator-audience-v1-integrated-browser-proof.mjs\nM\tsrc/features/creator-audience/api/creator-audience-client.test.ts\nM\tsrc/features/creator-audience/components/creator-audience-workspace.test.tsx\nM\tsrc/features/creator-audience/components/creator-audience-workspace.tsx\nM\tsrc/features/creator-audience/contracts/creator-audience.schema.test.ts\nM\tsrc/features/creator-audience/contracts/creator-audience.schema.ts\nM\tsrc/features/creator-audience/creator-audience.css\nA\tsrc/features/creator-audience/hooks/use-creator-audience.test.tsx\nM\tsrc/features/creator-audience/hooks/use-creator-audience.ts\nM\tsrc/routes/app-routes.tsx\nA\tsrc/routes/creator-audience-v1-access.architecture.test.ts\n 11 files changed, 1077 insertions(+), 91 deletions(-)",
+      "packets": [
+        {
+          "sha": "d5910537b1e323e399cb5966a57910b478c08d18",
+          "inventoryAndStatistics": "COMMIT d5910537b1e323e399cb5966a57910b478c08d18 PARENT e6e7ae8ea9f5f98f882f52230e4cae163bda1e89\n\nM\tsrc/features/creator-audience/api/creator-audience-client.test.ts\nM\tsrc/features/creator-audience/components/creator-audience-workspace.test.tsx\nM\tsrc/features/creator-audience/components/creator-audience-workspace.tsx\nM\tsrc/features/creator-audience/contracts/creator-audience.schema.test.ts\nM\tsrc/features/creator-audience/contracts/creator-audience.schema.ts\nM\tsrc/features/creator-audience/creator-audience.css\nA\tsrc/features/creator-audience/hooks/use-creator-audience.test.tsx\nM\tsrc/features/creator-audience/hooks/use-creator-audience.ts\nM\tsrc/routes/app-routes.tsx\nA\tsrc/routes/creator-audience-v1-access.architecture.test.ts\n 10 files changed, 679 insertions(+), 91 deletions(-)"
+        },
+        {
+          "sha": "36d75f4eceded7e9e35aaa280b544164d086ca05",
+          "inventoryAndStatistics": "COMMIT 36d75f4eceded7e9e35aaa280b544164d086ca05 PARENT d5910537b1e323e399cb5966a57910b478c08d18\n\nA\tscripts/p4-creator-audience-v1-integrated-browser-proof.mjs\nM\tsrc/features/creator-audience/creator-audience.css\n 2 files changed, 398 insertions(+)"
+        }
+      ]
+    }
+  },
+  "authority": {
+    "root": "C:/Users/piyus/Documents/Codex/2026-09-10/markdown-instagram-intelligence-external-local-codex/work/creator-audience-v1/authority",
+    "containingFinalCommit": "Resolved after publication in immutable report",
+    "plannedAdditionalFiles": [
+      "P4_INTEGRATED_ACCEPTANCE_AND_CLOSEOUT.md",
+      "CREATOR_AUDIENCE_V1_DEVELOPER_HANDOFF.md",
+      "CREATOR_AUDIENCE_V1_FINAL_ACCEPTANCE_AND_PRODUCT_LEARNING_HANDOFF_V1.md",
+      "P4_INTEGRATED_EVIDENCE.json",
+      "P4_CHANGED_FILE_INVENTORY_AND_CHECKPOINTS.json"
+    ]
+  }
+}
