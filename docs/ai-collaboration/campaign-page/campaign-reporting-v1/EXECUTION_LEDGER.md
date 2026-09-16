@@ -81,3 +81,9 @@
 - The converged Campaign model exposes legacy objective vocabularies but no accepted exact total mapping to `AWARENESS | TRUST | ASSETS | ACTION`.
 - The runner prompt forbids inventing that mapping inside Reporting.
 - No Reporting implementation, schema migration, API or frontend mutation was made after convergence.
+
+### Final stopped-run state
+
+- Backend, frontend and authority worktrees are clean and exactly track their published branches.
+- Task-owned ignored `dist/` build outputs remain in the backend and frontend worktrees because the attempted exact-path deletion was blocked by execution policy; they are untracked/ignored and do not affect any published tree.
+- No task-owned database, container, browser, server or external process was started, so none required runtime cleanup.
