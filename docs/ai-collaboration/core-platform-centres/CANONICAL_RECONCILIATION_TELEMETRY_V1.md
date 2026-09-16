@@ -72,20 +72,21 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-012 | Gate A blocker review and Gate A0 fixture-prompt publication | Assistant/Parent review lane | approximately 6 minutes measured | `GATE_A0_READY_FOR_EXECUTION` | Classified the stop as test infrastructure rather than reconciliation failure and published a bounded prompt for an immutable deterministic synthetic migration-94 fixture | Runner prompt only |
 | CR-013 | Gate A0 synthetic migration-94 fixture creation and publication | External Local Codex | 17 minutes 35.446 seconds | `PASS` | Published deterministic 44-row/24-table migration-94 fixture, reproduced it in two independent PostgreSQL databases, and immutably published fixture and authority evidence | Dedicated backend test-infrastructure branch plus one authority evidence document |
 | CR-014 | Gate A0 Parent review and independent publication verification | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A0_ACCEPTED` | Verified published blobs, exact three-file/one-file diff boundaries, manifest coherence, SQL safety boundaries, deterministic evidence, and readiness for an independently authorized Gate A rerun | None |
+| CR-015 | Gate A V3 fixture-pinned rerun prompt publication | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A_V3_READY_FOR_EXECUTION` | Published a full rerun prompt requiring immutable fixture verification, clean-106 and populated 94→106 paths, all twelve post-upgrade assertion groups, delayed branch publication and Parent-review stop | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
 LOCAL_CODEX_ACTIVE_TIME = 59 minutes 7.613 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 41 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 1 hour 46 minutes 3.613 seconds
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 46 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 1 hour 51 minutes 3.613 seconds
 LOCAL_CODEX_RUNS = 5
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 8
+ASSISTANT_REVIEW_CYCLES = 9
 BLOCKER_CYCLES = 2
 BLOCKERS_CLOSED = 2
-RUNNER_PROMPTS_PUBLISHED = 7
+RUNNER_PROMPTS_PUBLISHED = 8
 RUNNER_PROMPTS_EXECUTED = 5
 IMPLEMENTATION_RUNS = 1
 CORRECTION_IMPLEMENTATION_RUNS = 0
@@ -131,7 +132,7 @@ GATE_A_RESULT =
 PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Separately authorize Gate A rerun from the unchanged freeze using the pinned fixture; prove clean 106 and populated 94→106 paths before branch publication
+Execute Gate A V3 from the unchanged freezes using the pinned fixture; prove clean 106 and populated 94→106 paths plus all twelve post-upgrade assertion groups before branch publication
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
