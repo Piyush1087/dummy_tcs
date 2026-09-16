@@ -53,9 +53,11 @@
 
 - Output branch: `program/campaign-objective-canonicalization-v1-authority`
 - Parent commit: `f3f2cf5869c29cbb2ed3433088d6555d69b4575b`
-- Publication commit/tree: recorded below after commit.
+- Publication commit: `1ee3865fafbe713f80b013ff26d15e96f012f690`
+- Publication tree: `de39602437338b42ab675cd8d3f6128360ee77d8`
 - Push mode: normal, non-force.
-- Independent fetch-back: recorded below after publication.
+- Independent fetch-back: local and `origin/program/campaign-objective-canonicalization-v1-authority` commit/tree were exactly equal at the publication checkpoint.
+- The final ledger-evidence descendant is the branch checkpoint returned with the report.
 
 ### Final return
 
