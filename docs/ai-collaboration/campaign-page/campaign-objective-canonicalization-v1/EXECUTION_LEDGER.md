@@ -189,3 +189,48 @@ The stopped implementation run remains a valid authority-gate stop and provides 
 ### Final return
 
 `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_REPORT_V1`
+
+## Run E / Parent review and Correction 1 authorization
+
+- Role: Parent Program Orchestrator with bounded Campaign SA review
+- Date: 2026-09-16
+- Reviewed authority report: `115ac4ea16bc1a4b89c247afc189f11c69d69288`, tree `698c0e77bde55c40f18b1c02c7670b3fd251fdce`
+- Reviewed backend: `d7ff0f33d12b45d378c02a9d2adfbc2e05eb6b18`, tree `b45e314404dd2318bf74f2e13de04669539c9dda`
+- Reviewed frontend: `0662cd6963859d9e46abe53910b174d4826adaa3`, tree `02243e16ed283810936fdaee0601981fe316688d`
+- Immutable publication, ancestry, scope, and changed-file inventories: verified
+
+### Parent findings
+
+- Campaign core implementation is acceptable with correction; the overall checkpoint is not yet accepted.
+- The Campaign-owned application projection drops the objective contract and Campaign-definition fence fields required for the future C03 handoff.
+- The legacy Reporting consumer can apply its awareness-style default to canonical `TRUST`, `ASSETS`, and `ACTION`.
+- Definition-integrity failure requires `CAMPAIGN_DEFINITION_INTEGRITY_INVALID` and must not be collapsed into missing/legacy objective reasons.
+
+### Campaign SA completion
+
+- Complete `CampaignObjectiveHandoffV1`: required now.
+- Unavailable reasons: `CANONICAL_OBJECTIVE_REQUIRED | LEGACY_OBJECTIVE_UNRESOLVED | CAMPAIGN_DEFINITION_INTEGRITY_INVALID`.
+- Reporting boundary: temporary fail closed.
+- Campaign Reporting metric/Product semantics: outside Campaign SA authority.
+- Backend correction: required.
+- Frontend correction: not required.
+- Product conflict: none.
+
+### Correction 1 authorization
+
+- Scope: backend only.
+- Backend parent: `d7ff0f33d12b45d378c02a9d2adfbc2e05eb6b18`.
+- Frontend remains immutable at `0662cd6963859d9e46abe53910b174d4826adaa3`.
+- Add the complete Campaign-owned application handoff.
+- Add a bounded fail-closed guard preventing legacy Reporting semantics for all four canonical objectives.
+- No new migration, frontend, C03, Applicant Match, Reporting metric definition, provider, production-data, merge, or deployment work is authorized.
+
+### Added authority-package files
+
+- `CAMPAIGN_SA_CANONICAL_OBJECTIVE_BOUNDARY_REVIEW_COMPLETION_V1.md`
+- `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_PARENT_REVIEW_V1.md`
+- `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_CORRECTION_1_LOCAL_CODEX_EXECUTION_V1.md`
+
+### Next boundary
+
+`BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_CORRECTION_1_REPORT_V1` returned for Parent/Program Orchestrator final acceptance review.

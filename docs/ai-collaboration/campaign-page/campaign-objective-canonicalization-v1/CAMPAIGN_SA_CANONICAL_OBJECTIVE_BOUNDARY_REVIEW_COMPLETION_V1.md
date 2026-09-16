@@ -1,0 +1,97 @@
+# Campaign SA Canonical Objective Boundary Review Completion V1
+
+Identifier: CAMPAIGN_SA_CANONICAL_OBJECTIVE_BOUNDARY_REVIEW_COMPLETION_V1
+
+    DEFINITION_INTEGRITY_REASON =
+    CAMPAIGN_DEFINITION_INTEGRITY_INVALID
+
+    FINAL_UNAVAILABLE_REASON_UNION =
+    CANONICAL_OBJECTIVE_REQUIRED
+    | LEGACY_OBJECTIVE_UNRESOLVED
+    | CAMPAIGN_DEFINITION_INTEGRITY_INVALID
+
+    REPORTING_BOUNDARY_RECOMMENDATION =
+    TEMPORARY_FAIL_CLOSED
+
+    CAMPAIGN_SA_REPORTING_SEMANTICS_AUTHORITY =
+    NONE
+
+    BACKEND_CORRECTION_REQUIRED =
+    YES
+
+    FRONTEND_CORRECTION_REQUIRED =
+    NO
+
+    PRODUCT_CONFLICTS =
+    NONE
+
+    TECHNICAL_CONFLICTS =
+    1. CAMPAIGN APPLICATION HANDOFF CURRENTLY DROPS REQUIRED
+       CAMPAIGN-OWNED OBJECTIVE CONTRACT / DEFINITION FENCE FIELDS.
+
+    2. LEGACY CAMPAIGN REPORTING MAY APPLY DEFAULT / AWARENESS-STYLE
+       SEMANTICS TO CANONICAL TRUST / ASSETS / ACTION OBJECTIVES.
+
+    3. DEFINITION-INTEGRITY FAILURE MUST NOT BE MISCLASSIFIED AS
+       LEGACY REAUTHORING OR MISSING CANONICAL OBJECTIVE.
+
+    NEXT_RECOMMENDED_BOUNDARY =
+    AUTHORIZE ONE BOUNDED CAMPAIGN-BACKEND CORRECTION:
+
+    A. PRESERVE THE COMPLETE CampaignObjectiveHandoffV1 THROUGH THE
+       CAMPAIGN-OWNED APPLICATION PROJECTION.
+
+    B. AVAILABLE IS PERMITTED ONLY WHEN ALL OF THE FOLLOWING ARE VALID
+       AND MUTUALLY CONSISTENT:
+       - objective =
+         AWARENESS | TRUST | ASSETS | ACTION
+       - objectiveContract =
+         CAMPAIGN_OBJECTIVE_V1
+       - campaignDefinition.version PRESENT
+       - campaignDefinition.snapshotRef PRESENT
+       - campaignDefinition.hash PRESENT
+       - stored/recomputed definition integrity agrees
+       - objective and Campaign definition describe the same
+         accepted Campaign definition.
+
+    C. RETURN:
+       CAMPAIGN_DEFINITION_INTEGRITY_INVALID
+       WHEN ANY DEFINITION-INTEGRITY REQUIREMENT FAILS, INCLUDING:
+       - definition/objective disagreement
+       - missing definition version
+       - missing snapshotRef
+       - missing definition hash
+       - stored/recomputed hash mismatch
+       - tampered/corrupt Campaign definition
+
+    D. DO NOT MAP AN INTEGRITY FAILURE TO:
+       CANONICAL_OBJECTIVE_REQUIRED
+       OR
+       LEGACY_OBJECTIVE_UNRESOLVED.
+
+    E. ADD A TEMPORARY FAIL-CLOSED BOUNDARY TO LEGACY REPORTING:
+       CANONICAL AWARENESS / TRUST / ASSETS / ACTION CAMPAIGNS MUST NOT
+       RECEIVE INFERRED LEGACY OR DEFAULT REPORTING SEMANTICS.
+
+    F. WHERE THE LEGACY REPORTING PATH DOES NOT HAVE AN EXPLICITLY
+       ACCEPTED CANONICAL CONTRACT:
+       REPORTING = UNAVAILABLE
+
+    G. DO NOT DEFINE:
+       - TRUST metrics
+       - ASSETS metrics
+       - ACTION metrics
+       - canonical Reporting dashboard semantics
+       inside this Campaign correction.
+
+    H. DO NOT MODIFY:
+       - C03
+       - Applicant Match
+       - Campaign Reporting Product authority
+       - frontend
+       - objective revision architecture
+       - legacy-objective mappings
+
+    THEN =
+    RETURN THE CORRECTED CAMPAIGN CANONICAL-OBJECTIVE CHECKPOINT
+    TO PARENT / PROGRAM ORCHESTRATOR FOR FINAL ACCEPTANCE.
