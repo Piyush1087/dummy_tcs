@@ -73,24 +73,26 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-013 | Gate A0 synthetic migration-94 fixture creation and publication | External Local Codex | 17 minutes 35.446 seconds | `PASS` | Published deterministic 44-row/24-table migration-94 fixture, reproduced it in two independent PostgreSQL databases, and immutably published fixture and authority evidence | Dedicated backend test-infrastructure branch plus one authority evidence document |
 | CR-014 | Gate A0 Parent review and independent publication verification | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A0_ACCEPTED` | Verified published blobs, exact three-file/one-file diff boundaries, manifest coherence, SQL safety boundaries, deterministic evidence, and readiness for an independently authorized Gate A rerun | None |
 | CR-015 | Gate A V3 fixture-pinned rerun prompt publication | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A_V3_READY_FOR_EXECUTION` | Published a full rerun prompt requiring immutable fixture verification, clean-106 and populated 94→106 paths, all twelve post-upgrade assertion groups, delayed branch publication and Parent-review stop | Runner prompt only |
+| CR-016 | Gate A V3 fixture-pinned validation rerun | External Local Codex | 43 minutes 29.488 seconds | `CIRCUIT_BREAKER` | Revalidated freeze baseline, fixture authority and clean-106 migration path; exposed 11 checked-in assertion failures across shared registries, Creator Home, Instagram wiring, C04 vocabulary and Creator permissions before branch creation | None |
+| CR-017 | Accepted-test regression triage and read-only diagnostic prompt | Assistant/Parent review lane | approximately 8 minutes measured | `READ_ONLY_DIAGNOSTIC_READY` | Independently inspected failing target tests and runtime surfaces, identified shared-boundary risks, and published an authority/provenance diagnostic before permitting correction | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
-LOCAL_CODEX_ACTIVE_TIME = 59 minutes 7.613 seconds
+LOCAL_CODEX_ACTIVE_TIME = 1 hour 42 minutes 37.101 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 46 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 1 hour 51 minutes 3.613 seconds
-LOCAL_CODEX_RUNS = 5
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 54 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 2 hours 42 minutes 33.101 seconds
+LOCAL_CODEX_RUNS = 6
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 9
-BLOCKER_CYCLES = 2
+ASSISTANT_REVIEW_CYCLES = 10
+BLOCKER_CYCLES = 3
 BLOCKERS_CLOSED = 2
-RUNNER_PROMPTS_PUBLISHED = 8
-RUNNER_PROMPTS_EXECUTED = 5
-IMPLEMENTATION_RUNS = 1
+RUNNER_PROMPTS_PUBLISHED = 9
+RUNNER_PROMPTS_EXECUTED = 6
+IMPLEMENTATION_RUNS = 2
 CORRECTION_IMPLEMENTATION_RUNS = 0
-RUNTIME_VALIDATION_RUNS = 2
+RUNTIME_VALIDATION_RUNS = 3
 CANONICAL_RUNTIME_REPOSITORY_MUTATIONS = 0
 AUTHORITY_DOCS_CHANGED = 1
 ```
@@ -110,7 +112,7 @@ commit 346ae2a5ec58506870036db832223c996311fc29
 blob c9e0343794aad4a46e27882b58b98381dd4c9dcf
 
 CURRENT_BLOCKER_SOURCE =
-NONE
+Accepted backend target fails 11 checked-in tests across shared Intelligence registry, Creator Home migration ownership, Instagram provider/module wiring, C04 securement vocabulary and Creator role/action expectations
 
 CLOSED_RUNTIME_INFRASTRUCTURE_BLOCKER =
 Missing authorized deterministic populated migration-94 fixture for the independent 94→106 PostgreSQL upgrade proof
@@ -132,7 +134,7 @@ GATE_A_RESULT =
 PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Execute Gate A V3 from the unchanged freezes using the pinned fixture; prove clean 106 and populated 94→106 paths plus all twelve post-upgrade assertion groups before branch publication
+Execute the bounded read-only authority/provenance diagnostic for all 11 failures; Parent-review the classification before authorizing any corrective checkpoint
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
