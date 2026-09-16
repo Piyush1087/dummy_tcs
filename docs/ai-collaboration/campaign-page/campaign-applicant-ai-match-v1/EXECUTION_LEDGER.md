@@ -186,3 +186,22 @@ Required runner prompt:
 Next boundary:
 
 `EXTERNAL_LOCAL_CODEX_P0_RESUMPTION_CORRECTION_2`
+
+## P0 Resumption Correction 2 Scope Expansion — 2026-09-16
+
+Status: `AUTHORIZED_NOT_EXECUTED`
+
+- A final pre-launch cross-contract review found additional executable-fidelity gaps beyond the four issues in the first Correction 2 prompt.
+- `runner-prompts/CAMPAIGN_APPLICANT_AI_MATCH_P0_RESUMPTION_CORRECTION_2_LOCAL_CODEX_EXECUTION_V1.md` is superseded and must not be executed.
+- The consolidated scope includes exact C03 V2 schema/status/identity/context fidelity; Campaign targeting definition integrity; reliable Match-ready signal ownership; terminal Application fencing; manifest-freeze ordering; wait/load proof; deterministic fractional-coverage disposition; semantic failure handling; immutable request/version identity; and the owner-governed post-P0 sequence.
+- No Product behavior was changed. No backend/frontend source, migration, implementation, provider call, merge or deployment was authorized.
+- P1 through P4 remain not started and unauthorized.
+- No attachments are required; every input is Git-hosted at the immutable launch checkpoint.
+
+Required runner prompt:
+
+`runner-prompts/CAMPAIGN_APPLICANT_AI_MATCH_P0_RESUMPTION_CORRECTION_2_LOCAL_CODEX_EXECUTION_V2.md`
+
+Next boundary:
+
+`EXTERNAL_LOCAL_CODEX_P0_RESUMPTION_CORRECTION_2`
