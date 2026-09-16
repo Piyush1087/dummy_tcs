@@ -469,7 +469,7 @@ No canonical branch has been selected or mutated by this register.
 
 PAUSE_AUTHORITY_SHA = 2358578de79a99cef1aae88f9c5059e19c0e9ef5  
 LAST_ACCEPTED_AUTHORITY = P0  
-LAST_ACCEPTED_AUTHORITY_SHA = 3b62...  
+LAST_ACCEPTED_AUTHORITY_SHA = 3b62be76a4412f7f657e66291b253bf9918b76f9  
 ACCEPTED_IMPLEMENTATION = NONE  
 POST_P0_STATUS = UNAUTHORIZED_NOT_STARTED  
 RESUMPTION_STATUS = HELD
@@ -483,13 +483,13 @@ On later authorized resumption:
 ### Campaign Performance / Reporting Intelligence
 
 PAUSE_AUTHORITY_SHA = ab31144a40c921af448fb745745d1df122d8211a  
-LAST_ACCEPTED_AUTHORITY_SHA = cf1d09...  
+LAST_ACCEPTED_AUTHORITY_SHA = cf1d09bdcc37012e1dc6076caf2db8bb28a7b8b5  
 ACCEPTED_IMPLEMENTATION = NONE  
 RESUMPTION_STATUS = HELD
 
 HISTORICAL_NON_RESUMABLE_IMPLEMENTATION =
-- Backend head: ebe1...
-- Frontend head: 3d04...
+- Backend head: ebe1b4a8faa6dab59fb924b4c42be8f9e3f1e6f2
+- Frontend head: 3d04cd9c84585218fcdc0f1412662a165c38400c
 - These heads are historical reference only and do not become accepted implementation authority.
 
 No Campaign Intelligence runtime, correction, acceptance, Local Codex instruction or resumption is authorized by this register.
