@@ -65,20 +65,21 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-005 | Full read-only reconciliation preflight rerun | External Local Codex | 9 minutes 36.173 seconds | `PREFLIGHT_READY` | Selected exact freeze bases, established 108-migration target, mapped seven-module/C06/Campaign deltas and resolved collision authorities | None |
 | CR-006 | Parent review and Gate A implementation-prompt preparation | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A_READY_FOR_EXECUTION` | Accepted staged implementation direction and published a bounded seven-module/106-migration Gate A prompt | Runner prompt only |
 | CR-007 | Whole-application coverage challenge and Gate A hold | Assistant/Parent review lane | approximately 5 minutes measured | `BASELINE_COVERAGE_ADDENDUM_REQUIRED` | Identified that Gatekeeper/onboarding, broader Campaign, Settings and other baseline surfaces need explicit authority/runtime/ancestry classification before implementation | Runner prompt only |
+| CR-008 | Complete historical build-inventory expansion | Assistant/Parent review lane | approximately 11 minutes measured | `EXHAUSTIVE_COVERAGE_AUDIT_REQUIRED` | Expanded the audit to Brand/Creator onboarding, Chat, Brand/Product Intelligence, Campaign’s three workspaces, billing, Creator Centre and skipped/paused programs; superseded narrower coverage V1 | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
 LOCAL_CODEX_ACTIVE_TIME = 13 minutes 36.173 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 14 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 33 minutes 32.173 seconds
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 25 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 44 minutes 32.173 seconds
 LOCAL_CODEX_RUNS = 2
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 4
+ASSISTANT_REVIEW_CYCLES = 5
 BLOCKER_CYCLES = 1
 BLOCKERS_CLOSED = 1
-RUNNER_PROMPTS_PUBLISHED = 4
+RUNNER_PROMPTS_PUBLISHED = 5
 RUNNER_PROMPTS_EXECUTED = 2
 IMPLEMENTATION_RUNS = 0
 CORRECTION_IMPLEMENTATION_RUNS = 0
@@ -117,7 +118,7 @@ ALL_REGISTER_POINTER_INTEGRITY =
 PASS — 121 / 121 reachable
 
 NEXT_ACTION =
-Run the read-only baseline whole-application coverage addendum; Gate A implementation remains held until Parent review confirms the disposition of Gatekeeper/onboarding, base Campaign, Collaboration, Settings and other baseline MVP areas
+Run the superseding complete historical build inventory and whole-application coverage addendum V2; Gate A remains held until Parent review confirms every material workstream is classified
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
