@@ -10,8 +10,12 @@ Campaign Intelligence status: PAUSED
 
 ## 1. Consolidated disposition
 
+CORE_PLATFORM_CENTRES_ACCEPTANCE_PROGRAM_STATUS = COMPLETE  
+CORE_PLATFORM_CENTRES_ACCEPTANCE_PROGRAM_STATUS = COMPLETE  
 CONSOLIDATED_STATUS = COMPLETE  
 ALL_SEVEN_MODULES_ACCEPTED = YES  
+SEPARATE_ACCEPTANCE_RECORDS = VERIFIED  
+OUTSTANDING_ACCEPTANCE_BLOCKERS = NONE  
 CANONICAL_RECONCILIATION_PREFLIGHT_READY = YES  
 CANONICAL_RECONCILIATION_STARTED = NO  
 CURRENT_CANONICAL_APPLICATION_MIGRATION_COUNT = NOT_YET_ESTABLISHED  
@@ -458,7 +462,7 @@ The following are inputs to the later reconciliation program, not newly accepted
 - Settings ownership of connection lifecycle, business email, bank-country/readiness inputs and future user-facing deletion policy.
 - Shared Data Extraction/Evidence and shared Intelligence contracts.
 - Team, workspace, Creator, Brand, organization, provider-account, integration, generation and authorization-generation identity.
-- Current canonical/freeze branches and the repository-wide active migration inventory, which must be recovered before mutation.
+- The exact freeze/mvp-canonical-application-v1 backend and frontend obligations, current canonical branches and repository-wide active migration inventory, which must be recovered before mutation.
 - All seven accepted backend/frontend checkpoints and their immutable acceptance records.
 
 No canonical branch has been selected or mutated by this register.
@@ -487,10 +491,25 @@ LAST_ACCEPTED_AUTHORITY_SHA = cf1d09bdcc37012e1dc6076caf2db8bb28a7b8b5
 ACCEPTED_IMPLEMENTATION = NONE  
 RESUMPTION_STATUS = HELD
 
+HISTORICAL_REPORTING_HEADS_DISPOSITION = HISTORICAL_NON_RESUMABLE
 HISTORICAL_NON_RESUMABLE_IMPLEMENTATION =
 - Backend head: ebe1b4a8faa6dab59fb924b4c42be8f9e3f1e6f2
 - Frontend head: 3d04cd9c84585218fcdc0f1412662a165c38400c
-- These heads are historical reference only and do not become accepted implementation authority.
+- These heads are historical reference only, do not become accepted implementation authority and are not canonical-reconciliation inputs.
+
+CAMPAIGN_INTELLIGENCE_RESUMPTION_RULE =
+MODULE ACCEPTANCE → CANONICAL RECONCILIATION → IMMUTABLE RECONCILED CHECKPOINT → CAMPAIGN INTELLIGENCE DELTA PREFLIGHT → EXPLICIT PARENT RESUMPTION AUTHORIZATION
+
+Campaign Intelligence must not resume from its old execution base. The future delta preflight must compare accepted pre-pause authority with the new reconciled canonical authority, inspect only affected contracts/P0 sections and must not automatically restart Applicant Match P0.
+
+DONOR_REFRESH_REQUIREMENTS =
+- Creator Content: DONOR_AUTHORITY_REFRESH_REQUIRED.
+- Creator Brand: DONOR_AUTHORITY_REFRESH_REQUIRED.
+- Creator Audience: DONOR_AUTHORITY_REFRESH_REQUIRED.
+- Instagram/shared Evidence/shared Intelligence: REVALIDATION_REQUIRED.
+- Creator Portfolio: UNKNOWN_REQUIRES_RESUMPTION_DELTA_REVIEW unless accepted consumer authority proves consumption.
+- Commercial Setup/Rate Card: EXCLUDED_FROM_APPLICANT_AI_MATCH_V1.
+- Creator Media Kit: EXCLUDED_FROM_APPLICANT_AI_MATCH_V1.
 
 No Campaign Intelligence runtime, correction, acceptance, Local Codex instruction or resumption is authorized by this register.
 
