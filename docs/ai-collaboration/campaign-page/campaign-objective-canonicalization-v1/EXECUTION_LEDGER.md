@@ -114,3 +114,27 @@ Historical record only. Every conflicting Run A design/disposition is superseded
 ### Final return
 
 `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_PREFLIGHT_CORRECTION_1_REPORT_V1`
+
+## Run C / Authority Package Correction 2
+
+- Role: Parent Program Orchestrator authority-package repair
+- Date: 2026-09-16
+- Required parent: `5c88e2e54f7b69c362871be6a2816fc55ac2be6a`, tree `711c4b19c0f983902e61fd1206c8ef699d3fbc6e`
+- Trigger: the implementation runner correctly stopped because the referenced Campaign SA feedback file was absent from the accepted Git checkpoint
+- Repair: publish the complete feedback under its exact filename and publish the full implementation runner prompt in the same authority package
+- Product/architecture change: none
+- Backend/frontend mutation: none
+- Migration creation/application: none
+- C03/Applicant Match work: none
+- Provider/model calls: none
+- Development/production merge or deployment: none
+
+### Added authority-package files
+
+- `CAMPAIGN_SA_CANONICAL_OBJECTIVE_FEEDBACK_V1.md`
+- `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_LOCAL_CODEX_EXECUTION_V1.md`
+- `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_AUTHORITY_PACKAGE_CORRECTION_2_REPORT_V1.md`
+
+### Disposition
+
+The stopped implementation run remains a valid authority-gate stop and provides no implementation checkpoint. A new runner invocation must use the immutable descendant SHA/tree published for this repaired package and read the Git-hosted execution prompt completely.
