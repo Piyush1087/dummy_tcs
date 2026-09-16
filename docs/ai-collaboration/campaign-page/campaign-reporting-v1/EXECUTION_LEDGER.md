@@ -87,3 +87,22 @@
 - Backend, frontend and authority worktrees are clean and exactly track their published branches.
 - Task-owned ignored `dist/` build outputs remain in the backend and frontend worktrees because the attempted exact-path deletion was blocked by execution policy; they are untracked/ignored and do not affect any published tree.
 - No task-owned database, container, browser, server or external process was started, so none required runtime cleanup.
+
+## Parent Pause Pending Canonical Reconciliation — 2026-09-16
+
+Status: `PAUSED_BY_PARENT`
+
+- P0 acceptance/authorization checkpoint `cf1d09bdcc37012e1dc6076caf2db8bb28a7b8b5`, tree `617817e26ec528d9e77b28807d81b3344ccc7c7a`, is preserved as the last accepted pre-pause authority.
+- Later objective-gap and stopped-run commits are preserved as verified status evidence, not Reporting implementation acceptance.
+- Campaign Reporting V1 has no implementation checkpoint, migration, API, frontend, provider invocation, merge, or deployment.
+- Backend `ebe1b4a8faa6dab59fb924b4c42be8f9e3f1e6f2` and frontend `3d04cd9c84585218fcdc0f1412662a165c38400c` are frozen historical convergence heads and non-resumable.
+- Prior P1-P4 authorization is suspended.
+- Canonical code reconciliation must complete and be Parent-accepted before this workstream resumes.
+
+Authority register:
+
+`CAMPAIGN_REPORTING_PAUSE_AND_RESUMPTION_REGISTER_V1.md`
+
+```text
+NO_FURTHER_EXECUTION_UNTIL_RESUMED
+```
