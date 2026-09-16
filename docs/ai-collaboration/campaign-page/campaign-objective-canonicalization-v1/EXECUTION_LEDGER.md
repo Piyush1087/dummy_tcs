@@ -234,3 +234,52 @@ The stopped implementation run remains a valid authority-gate stop and provides 
 ### Next boundary
 
 `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_CORRECTION_1_REPORT_V1` returned for Parent/Program Orchestrator final acceptance review.
+
+## Run F / Implementation Correction 1
+
+- Runner: Local Codex
+- Date: 2026-09-16 Asia/Calcutta
+- Scope: bounded backend-only complete objective handoff and temporary legacy Reporting fail-closed guard
+- Authority input: `3466d3b56a441257079a8cfdfd68c28ec82fbaf7`, tree `a35210365fdaa61b9a516170c5a0ea13e8115b4f`
+- Authority gate: exact SHA/tree, required implementation-report ancestry, branch equality, required files, and clean worktree verified
+
+### Published correction checkpoint
+
+- Backend branch: `program/campaign-objective-canonicalization-v1-backend`
+- Required parent: `d7ff0f33d12b45d378c02a9d2adfbc2e05eb6b18`, tree `b45e314404dd2318bf74f2e13de04669539c9dda`
+- Backend final SHA: `3c1c523a178c452023add9745628ecff8a6e5e55`
+- Backend final tree: `0138efccc1d83ad5c558571b971731e0c45499ec`
+- Normal push and independent fresh-clone fetch-back: PASS
+- Frontend remained immutable at `0662cd6963859d9e46abe53910b174d4826adaa3`, tree `02243e16ed283810936fdaee0601981fe316688d`
+
+### Acceptance disposition
+
+- Complete Campaign-owned `CampaignObjectiveHandoffV1`: PASS
+- Exact unavailable-reason classification: PASS
+- Compatibility `campaign.objective` agreement only for AVAILABLE: PASS
+- Legacy-to-canonical mapping: none
+- Canonical Reporting dashboard and refresh fail closed with `CAMPAIGN_REPORTING_CANONICAL_OBJECTIVE_UNAVAILABLE`: PASS
+- Focused tests: 52 passed
+- Broader tests: 183 passed; 43 existing environment-guarded C03 tests skipped
+- Correction-owned lint, build, startup health, diff check, and secret scan: PASS
+- Migration count: 107 before and after; schema/migration diff: none
+
+### Scope confirmation
+
+- Frontend change: none
+- C03 change: none
+- Applicant Match change: none
+- Provider/model call: none
+- Production-data access: none
+- Development/production merge: none
+- Deployment: none
+
+### Publication
+
+- Report: `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_IMPLEMENTATION_CORRECTION_1_REPORT_V1.md`
+- Authority publication is a normal descendant of the verified input checkpoint.
+- Final authority SHA/tree and independent fetch-back are recorded in the runner return because a commit cannot include its own immutable identity.
+
+### Next boundary
+
+`PARENT_PROGRAM_ORCHESTRATOR_FINAL_ACCEPTANCE_REVIEW_ONLY`
