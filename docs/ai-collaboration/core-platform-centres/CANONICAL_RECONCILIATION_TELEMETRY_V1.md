@@ -70,24 +70,26 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-010 | Coverage-result review and Gate A V2 publication | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A_V2_READY` | Corrected stage-specific C06 route semantics, confirmed Creator Chat deferred, and published whole-application baseline-preservation plus seven-module Gate A | Runner prompt only |
 | CR-011 | Gate A baseline validation and attempted seven-module convergence | External Local Codex | 21 minutes 20.630 seconds | `CIRCUIT_BREAKER` | Passed immutable identities, static 94→106 migration integrity, 6,612 backend tests, 1,132 frontend tests, builds and boundary checks; exposed absence of an authorized populated migration-94 fixture before branch creation | None |
 | CR-012 | Gate A blocker review and Gate A0 fixture-prompt publication | Assistant/Parent review lane | approximately 6 minutes measured | `GATE_A0_READY_FOR_EXECUTION` | Classified the stop as test infrastructure rather than reconciliation failure and published a bounded prompt for an immutable deterministic synthetic migration-94 fixture | Runner prompt only |
+| CR-013 | Gate A0 synthetic migration-94 fixture creation and publication | External Local Codex | 17 minutes 35.446 seconds | `PASS` | Published deterministic 44-row/24-table migration-94 fixture, reproduced it in two independent PostgreSQL databases, and immutably published fixture and authority evidence | Dedicated backend test-infrastructure branch plus one authority evidence document |
+| CR-014 | Gate A0 Parent review and independent publication verification | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A0_ACCEPTED` | Verified published blobs, exact three-file/one-file diff boundaries, manifest coherence, SQL safety boundaries, deterministic evidence, and readiness for an independently authorized Gate A rerun | None |
 
 ## 5. Current cumulative telemetry
 
 ```text
-LOCAL_CODEX_ACTIVE_TIME = 41 minutes 32.167 seconds
+LOCAL_CODEX_ACTIVE_TIME = 59 minutes 7.613 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 36 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 1 hour 23 minutes 28.167 seconds
-LOCAL_CODEX_RUNS = 4
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 41 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 1 hour 46 minutes 3.613 seconds
+LOCAL_CODEX_RUNS = 5
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 7
+ASSISTANT_REVIEW_CYCLES = 8
 BLOCKER_CYCLES = 2
-BLOCKERS_CLOSED = 1
+BLOCKERS_CLOSED = 2
 RUNNER_PROMPTS_PUBLISHED = 7
-RUNNER_PROMPTS_EXECUTED = 4
+RUNNER_PROMPTS_EXECUTED = 5
 IMPLEMENTATION_RUNS = 1
 CORRECTION_IMPLEMENTATION_RUNS = 0
-RUNTIME_VALIDATION_RUNS = 1
+RUNTIME_VALIDATION_RUNS = 2
 CANONICAL_RUNTIME_REPOSITORY_MUTATIONS = 0
 AUTHORITY_DOCS_CHANGED = 1
 ```
@@ -107,7 +109,10 @@ commit 346ae2a5ec58506870036db832223c996311fc29
 blob c9e0343794aad4a46e27882b58b98381dd4c9dcf
 
 CURRENT_BLOCKER_SOURCE =
-No authorized deterministic populated migration-94 fixture exists for the independent 94→106 PostgreSQL upgrade proof
+NONE
+
+CLOSED_RUNTIME_INFRASTRUCTURE_BLOCKER =
+Missing authorized deterministic populated migration-94 fixture for the independent 94→106 PostgreSQL upgrade proof
 
 PRODUCT_OR_ARCHITECTURE_DEFECT =
 NO
@@ -115,17 +120,18 @@ NO
 RUNTIME_IMPLEMENTATION_DEFECT =
 NO
 
-REQUIRED_REMEDY =
-Create, validate, immutably publish and Parent-review a fully synthetic migration-94 fixture on dedicated test-infrastructure and authority branches
-
-REMEDY_STATUS =
-GATE_A0_PROMPT_PUBLISHED; EXECUTION_PENDING
+FIXTURE_REMEDY =
+PASS AND PARENT-VERIFIED
+backend fixture commit 7a70d074eb2f3109b697c953bfa8a722bf69caf4
+SQL blob 2dc29cfed740ddd2ad4780081f68296f98c20065
+SQL SHA-256 fe27a4fed67a5cb02b507efc7dc86aaf4a17c2b281ec660f95a92f16bc488706
+authority evidence commit 5826c82606c77383810a0dfdc5757ca4a4ece006
 
 GATE_A_RESULT =
-CIRCUIT_BREAKER BEFORE BRANCH CREATION
+PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Execute Gate A0, stop for Parent review, then separately authorize Gate A rerun from the unchanged freeze using the pinned fixture
+Separately authorize Gate A rerun from the unchanged freeze using the pinned fixture; prove clean 106 and populated 94→106 paths before branch publication
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
