@@ -157,3 +157,32 @@ Published report:
 Next boundary:
 
 `PARENT_PROGRAM_ORCHESTRATOR_AND_APPLICANT_MATCH_TECHNICAL_SA_FINAL_P0_REVIEW_ONLY`
+
+## P0 Resumption Correction 1 Technical Final Review — 2026-09-16
+
+Status: `ACCEPTABLE_WITH_CORRECTION`
+
+Accepted:
+
+- nonblocking Application submission and immutable unavailable Match context;
+- Campaign ownership of strict targeting projection and C03 consumer-only behavior;
+- deterministic maximum-two explanation-selection direction;
+- versioned 24-hour dependency-wait policy, event-first CAS, single shared-runtime retry and bounded-load direction;
+- C03 V2 as a separately governed pre-P1 dependency.
+
+Correction required:
+
+1. Preserve the exact executable `CampaignObjectiveHandoffV1` fields (`status`, `objectiveContract`, nested `campaignDefinition`) instead of the report's renamed/flattened variant.
+2. Correct targeting persistence sources to `targetLocations`, `audienceAgeMin`, `audienceAgeMax`, and `audienceGender`.
+3. Remove terminal Match `PARTIAL`; Match states remain exactly `PROCESSING | READY | UNAVAILABLE`.
+4. Replace overlapping semantic score predicates with mutually exclusive, exhaustive deterministic finalization rules and boundary fixtures.
+
+No backend/frontend implementation, migration, Campaign targeting work, C03 V2, Applicant Match P1-P4, live call, merge or deployment is authorized.
+
+Required runner prompt:
+
+`runner-prompts/CAMPAIGN_APPLICANT_AI_MATCH_P0_RESUMPTION_CORRECTION_2_LOCAL_CODEX_EXECUTION_V1.md`
+
+Next boundary:
+
+`EXTERNAL_LOCAL_CODEX_P0_RESUMPTION_CORRECTION_2`
