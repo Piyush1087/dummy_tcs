@@ -66,21 +66,23 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-006 | Parent review and Gate A implementation-prompt preparation | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A_READY_FOR_EXECUTION` | Accepted staged implementation direction and published a bounded seven-module/106-migration Gate A prompt | Runner prompt only |
 | CR-007 | Whole-application coverage challenge and Gate A hold | Assistant/Parent review lane | approximately 5 minutes measured | `BASELINE_COVERAGE_ADDENDUM_REQUIRED` | Identified that Gatekeeper/onboarding, broader Campaign, Settings and other baseline surfaces need explicit authority/runtime/ancestry classification before implementation | Runner prompt only |
 | CR-008 | Complete historical build-inventory expansion | Assistant/Parent review lane | approximately 11 minutes measured | `EXHAUSTIVE_COVERAGE_AUDIT_REQUIRED` | Expanded the audit to Brand/Creator onboarding, Chat, Brand/Product Intelligence, Campaign’s three workspaces, billing, Creator Centre and skipped/paused programs; superseded narrower coverage V1 | Runner prompt only |
+| CR-009 | Complete historical build and whole-application coverage audit | External Local Codex | 6 minutes 35.364 seconds | `PASS_WITH_PLAN_REVISION` | Classified all material workstreams; found no omitted accepted donor and zero unclassified workstreams; required explicit baseline preservation gates | None |
+| CR-010 | Coverage-result review and Gate A V2 publication | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A_V2_READY` | Corrected stage-specific C06 route semantics, confirmed Creator Chat deferred, and published whole-application baseline-preservation plus seven-module Gate A | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
-LOCAL_CODEX_ACTIVE_TIME = 13 minutes 36.173 seconds
+LOCAL_CODEX_ACTIVE_TIME = 20 minutes 11.537 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 25 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 44 minutes 32.173 seconds
-LOCAL_CODEX_RUNS = 2
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 30 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 56 minutes 7.537 seconds
+LOCAL_CODEX_RUNS = 3
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 5
+ASSISTANT_REVIEW_CYCLES = 6
 BLOCKER_CYCLES = 1
 BLOCKERS_CLOSED = 1
-RUNNER_PROMPTS_PUBLISHED = 5
-RUNNER_PROMPTS_EXECUTED = 2
+RUNNER_PROMPTS_PUBLISHED = 6
+RUNNER_PROMPTS_EXECUTED = 3
 IMPLEMENTATION_RUNS = 0
 CORRECTION_IMPLEMENTATION_RUNS = 0
 RUNTIME_VALIDATION_RUNS = 0
@@ -118,7 +120,7 @@ ALL_REGISTER_POINTER_INTEGRITY =
 PASS — 121 / 121 reachable
 
 NEXT_ACTION =
-Run the superseding complete historical build inventory and whole-application coverage addendum V2; Gate A remains held until Parent review confirms every material workstream is classified
+Execute Gate A V2: establish whole-application baseline preservation evidence at migration 94, absorb the accepted seven-module chain through Media Kit at migration 106, revalidate the baseline, and stop for Parent review
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
