@@ -283,3 +283,34 @@ The stopped implementation run remains a valid authority-gate stop and provides 
 ### Next boundary
 
 `PARENT_PROGRAM_ORCHESTRATOR_FINAL_ACCEPTANCE_REVIEW_ONLY`
+
+## Run G / Parent Final Acceptance
+
+- Role: Parent Program Orchestrator
+- Date: 2026-09-16
+- Reviewed authority report: `5b6ec0c23b9c3eca8e45ac88f23dd81f9f831310`, tree `ec122158ee643e955fbcb99cf803de8cb36819eb`
+- Reviewed backend: `3c1c523a178c452023add9745628ecff8a6e5e55`, tree `0138efccc1d83ad5c558571b971731e0c45499ec`
+- Reviewed frontend: `0662cd6963859d9e46abe53910b174d4826adaa3`, tree `02243e16ed283810936fdaee0601981fe316688d`
+- Remote branch equality and required ancestry: verified
+- Exact backend correction diff and tests: reviewed
+
+### Final disposition
+
+- Campaign canonical-objective V1: accepted.
+- Backend correction checkpoint: accepted.
+- Frontend checkpoint: accepted unchanged.
+- Complete Campaign-owned objective handoff: accepted.
+- Dedicated definition-integrity reason: accepted.
+- Temporary canonical-objective Reporting fail-closed boundary: accepted.
+- Further Campaign correction required: no.
+
+### Preserved boundaries
+
+- Canonical Campaign Reporting semantics remain undefined and unavailable.
+- C03 ApplicationSnapshot V2 remains unimplemented and separately governed.
+- Applicant Match P1-P4 remain unauthorized.
+- No merge or deployment is authorized.
+
+### Next boundary
+
+`APPLICANT_MATCH_P0_RESUMPTION_AUTHORITY_PACKAGE_PREPARATION`
