@@ -47,9 +47,12 @@ Most implementation risk concentrated in preserving shared Brand behavior, corre
 
 Review real Creator comprehension of the fixed Snapshot → Highlights → What You Create → Performance → Representatives → Data Status hierarchy and the usefulness of the strict sample/materiality gates. Any next slice should begin with an explicit Product register deciding whether longitudinal change, richer media semantics, or Portfolio curation is the priority; none should be inferred from this technical acceptance.
 
-## Published implementation checkpoint
+## Current corrected implementation checkpoint
 
-- Backend: `5f7712108886305b40cbcf1c0d89f5ecdc22ab24` / `343e03b3c5bd6ee1749259841f622e1f7012cb75`.
-- Frontend: `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`.
+- Corrected backend: `0fa145ac6a021337929e87b9eb9e0c67ebc82b7e` / `750065a56a4a060c125a9bee7ddc9fb842204e7e`.
+- Frontend, unchanged through Correction 1: `7edd26d3cdad0ec84083884b34039952368a1295` / `0cc596ca1ef1d1c4a51857125547de156e487c8b`.
+- Superseded historical backend: `5f7712108886305b40cbcf1c0d89f5ecdc22ab24` / `343e03b3c5bd6ee1749259841f622e1f7012cb75`. It remains the direct parent of the corrected backend and is not current runtime authority.
+- Governing corrective evidence: `P2_P4_CORRECTION_1_EVIDENCE.md`.
+- Lineage preserved: P0/P1 remain accepted; the P3 frontend implementation is unchanged; Correction 1 supersedes the deficient earlier P2/P4 production proof.
 
-`NEXT_BOUNDARY = PARENT / CREATOR PRODUCT PROGRAM REVIEW`
+`NEXT_BOUNDARY = CHILD-SA / PROGRAM-ORCHESTRATOR FINAL ACCEPTANCE REVIEW`
