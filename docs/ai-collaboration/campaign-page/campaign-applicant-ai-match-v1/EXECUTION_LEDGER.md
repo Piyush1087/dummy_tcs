@@ -55,3 +55,26 @@ P4 = NOT_STARTED
 ```
 
 Required unblock: Brand Campaign authority must publish an exact executable canonical objective field/enum whose complete values are `AWARENESS | TRUST | ASSETS | ACTION`. Applicant Match may then resume P0 review against that exact accepted SHA/tree; it may not own a legacy translation.
+
+## P0 Resumption Authorization — 2026-09-16
+
+Status: `AUTHORIZED_NOT_EXECUTED`
+
+- Parent-final Brand Campaign canonical-objective implementation is accepted at authority SHA `3a4aa77a4f0f40a472c657622f93ed459c82c12f`, tree `b6140a9905896980e9f6a2a4b8ac8d1d077201b7`.
+- Accepted Campaign backend is `3c1c523a178c452023add9745628ecff8a6e5e55`, tree `0138efccc1d83ad5c558571b971731e0c45499ec`.
+- Accepted Campaign frontend remains `0662cd6963859d9e46abe53910b174d4826adaa3`, tree `02243e16ed283810936fdaee0601981fe316688d`.
+- The prior Portfolio backend/frontend candidates are verified ancestors of those Campaign checkpoints.
+- The former canonical-objective authority conflict is cleared.
+- P0 resumption is authorized as a read-only delta audit and documentation publication only.
+- C03 ApplicationSnapshot V2 remains unimplemented and is a separately governed pre-P1 dependency.
+- The C03 V2 candidate must freeze the complete Campaign objective handoff, not objective alone.
+- Applicant Match P1 through P4 remain not started and unauthorized.
+- No attachments are required; the runner reads every input from the exact Git launch checkpoint.
+
+Required runner prompt:
+
+`runner-prompts/CAMPAIGN_APPLICANT_AI_MATCH_P0_RESUMPTION_LOCAL_CODEX_EXECUTION_V1.md`
+
+Next boundary:
+
+`EXTERNAL_LOCAL_CODEX_P0_RESUMPTION_EXECUTION`
