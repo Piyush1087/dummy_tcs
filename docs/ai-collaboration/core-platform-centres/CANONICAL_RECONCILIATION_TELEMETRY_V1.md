@@ -62,21 +62,23 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-002 | Blocker review and GitHub authority verification | Assistant/Parent review lane | approximately 3 minutes measured | `DOCS_ONLY_POINTER_CORRECTION_REQUIRED` | Proved the accepted objects exist under the correct SHAs; classified the issue as consolidated-register transcription defects; published bounded correction request | Authority prompt only |
 | CR-003 | Consolidated-register V2 docs-only correction and complete pointer-integrity pass | Orchestrator 1 | 5 minutes 56 seconds | `PASS` | Published controlling V2 register; verified 121/121 immutable pointers, 27/27 commit-tree tuples, 7/7 final-acceptance path/blob tuples and 112/112 module references | One authority document |
 | CR-004 | Parent review, V2 fetch-back verification and timed preflight-rerun preparation | Assistant/Parent review lane | approximately 1 minute measured | `READY_TO_RERUN_READ_ONLY_PREFLIGHT` | Verified V2 blob and corrected tuples; published V2 runner prompt with mandatory timing fields | Runner prompt only |
+| CR-005 | Full read-only reconciliation preflight rerun | External Local Codex | 9 minutes 36.173 seconds | `PREFLIGHT_READY` | Selected exact freeze bases, established 108-migration target, mapped seven-module/C06/Campaign deltas and resolved collision authorities | None |
+| CR-006 | Parent review and Gate A implementation-prompt preparation | Assistant/Parent review lane | approximately 5 minutes measured | `GATE_A_READY_FOR_EXECUTION` | Accepted staged implementation direction and published a bounded seven-module/106-migration Gate A prompt | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
-LOCAL_CODEX_ACTIVE_TIME = 4 minutes
+LOCAL_CODEX_ACTIVE_TIME = 13 minutes 36.173 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 4 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 13 minutes 56 seconds
-LOCAL_CODEX_RUNS = 1
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 9 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 28 minutes 32.173 seconds
+LOCAL_CODEX_RUNS = 2
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 2
+ASSISTANT_REVIEW_CYCLES = 3
 BLOCKER_CYCLES = 1
 BLOCKERS_CLOSED = 1
-RUNNER_PROMPTS_PUBLISHED = 2
-RUNNER_PROMPTS_EXECUTED = 1
+RUNNER_PROMPTS_PUBLISHED = 3
+RUNNER_PROMPTS_EXECUTED = 2
 IMPLEMENTATION_RUNS = 0
 CORRECTION_IMPLEMENTATION_RUNS = 0
 RUNTIME_VALIDATION_RUNS = 0
@@ -114,7 +116,13 @@ ALL_REGISTER_POINTER_INTEGRITY =
 PASS — 121 / 121 reachable
 
 NEXT_ACTION =
-Run the complete timed read-only preflight from the beginning
+Execute bounded Gate A: fast-forward the accepted seven-module linear chain from the exact freeze through Media Kit, validate migration 94 to 106, and stop for Parent review
+
+READ_ONLY_PREFLIGHT_RESULT =
+PREFLIGHT_READY
+
+EXPECTED_FINAL_RECONCILED_MIGRATION_COUNT =
+108
 ```
 
 ## 7. Update rule
