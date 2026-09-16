@@ -2,6 +2,8 @@
 
 ## Run A / read-only unblock preflight
 
+Historical record only. Every conflicting Run A design/disposition is superseded by Run B / Preflight Correction 1 below.
+
 - Runner: Local Codex
 - Date: 2026-09-16 Asia/Calcutta
 - Role: Brand-side Campaign authority only
@@ -62,3 +64,51 @@
 ### Final return
 
 `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_UNBLOCK_PREFLIGHT_REPORT_V1`
+
+## Run B / Preflight Correction 1
+
+- Runner: Local Codex
+- Date: 2026-09-16 Asia/Calcutta
+- Role: Brand-side Campaign authority only
+- Scope: documentation-only correction using accepted Campaign-SA decisions
+- Backend/frontend source mutation: none
+- Migration creation/application: none
+- C03 or Applicant Match implementation: not started
+- Provider/model calls: none
+- Development merge/deployment: none
+
+### Immutable input verification
+
+- Repository: `Piyush1087/dummy_tcs`
+- Branch: `program/campaign-objective-canonicalization-v1-authority`
+- Input commit: `3f102f45a6819e62842dd0f7b9fc64f578486274`
+- Input tree: `be9897f9fc77a268c4f70919eee6128900d44c37`
+- Input path: `docs/ai-collaboration/campaign-page/campaign-objective-canonicalization-v1/`
+- Fetch/prune completed; local and remote commit/tree matched the requested checkpoint exactly.
+- The complete two-file authority package was read before correction.
+
+### Corrected source proof and disposition
+
+- `UceCampaignStrategy.campaignId` is the primary key and Campaign foreign key: one strategy/objective row per Campaign.
+- `coreObjective` is already non-null `UceCampaignObjective` and is the converged executable field for create/edit/list/filter/read/reporting/application projection.
+- Reuse is safe; a second `canonicalObjective` field is rejected.
+- `UceCampaignObjective` will be extended additively with `AWARENESS | TRUST | ASSETS | ACTION`; old values remain compatibility-only.
+- Canonical endpoints accept/write only those four values and perform no legacy mapping.
+- `UceCampaignObjectiveRevision`, objective-specific revision state/table/ledger, objective re-author endpoint, and speculative remediation UI are rejected.
+- Current `canonicalDefinition.version` is reusable, but the audited aggregate has no persisted definition hash. The smallest accepted general fence is one nullable `UceCampaign.canonicalDefinitionHash`; snapshot reference is deterministic from Campaign id, definition version, and definition hash.
+- `CAMPAIGN_OBJECTIVE_REAUTHOR_REQUIRED` is permitted only as a bounded non-persisted compatibility reason.
+- Existing Campaigns follow exact-repair / disposable-reseed / ambiguous-preserve / real-production-Parent-Product escalation classification.
+- Existing DRAFT-only edit fences remain authoritative; canonicalization creates no locked-objective bypass.
+- C03 handoff has no objective revision id and freezes the exact objective, `CAMPAIGN_OBJECTIVE_V1`, whole-definition version/reference/hash.
+
+### Publication
+
+- Output branch: `program/campaign-objective-canonicalization-v1-authority`
+- Required parent: `3f102f45a6819e62842dd0f7b9fc64f578486274`
+- Correction publication commit/tree: recorded after the correction commit.
+- Push mode: normal, non-force.
+- Independent fetch-back: recorded after publication.
+
+### Final return
+
+`BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_PREFLIGHT_CORRECTION_1_REPORT_V1`

@@ -1,367 +1,348 @@
-# Brand Campaign Canonical Objective Unblock — Preflight Report V1
+# Brand Campaign Canonical Objective — Preflight Correction 1 Report V1
 
-Authority result: `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_UNBLOCK_PREFLIGHT_REPORT_V1`
+Authority result: `BRAND_CAMPAIGN_CANONICAL_OBJECTIVE_PREFLIGHT_CORRECTION_1_REPORT_V1`
 
-Status: `PREFLIGHT_ACCEPTED_IMPLEMENTATION_NOT_STARTED`
+Status: `CORRECTED_PREFLIGHT_ACCEPTED_IMPLEMENTATION_NOT_STARTED`
 
 Date: 2026-09-16 (Asia/Calcutta)
 
-Scope: Brand-side Campaign authority only. This publication defines the Campaign-owned objective contract and a finite implementation plan. It does not alter backend/frontend source, create or run a migration, start Applicant Match P1, merge development, call a provider/model, or deploy.
+This document supersedes every conflicting design in its parent version at commit `3f102f45a6819e62842dd0f7b9fc64f578486274`. In particular, it rejects a dedicated objective revision table, a second objective authority, a persisted `REAUTHOR_REQUIRED` state, a re-author endpoint, and a speculative Brand-facing remediation UI.
 
-## 1. Immutable input and review boundary
+Scope remains Brand-side Campaign authority and documentation only. No backend/frontend source was modified, no migration was created or run, no C03 or Applicant Match work began, no development branch was merged, no provider/model was called, and nothing was deployed.
 
-The complete Applicant Match authority package was read from:
+## 1. Immutable correction input
+
+The complete parent package was fetched, verified, and read from:
 
 - repository: `Piyush1087/dummy_tcs`
-- branch: `program/campaign-applicant-ai-match-v1-authority`
-- commit: `f3f2cf5869c29cbb2ed3433088d6555d69b4575b`
-- tree: `4763ea120cc66554cfb553c95a5b50c75e7d0c73`
-- path: `docs/ai-collaboration/campaign-page/campaign-applicant-ai-match-v1/`
+- branch: `program/campaign-objective-canonicalization-v1-authority`
+- commit: `3f102f45a6819e62842dd0f7b9fc64f578486274`
+- tree: `be9897f9fc77a268c4f70919eee6128900d44c37`
+- path: `docs/ai-collaboration/campaign-page/campaign-objective-canonicalization-v1/`
 
-The corrected Applicant Match P0 and its ledger were treated as the consumer contract and blocker record. This report does not rewrite Applicant Match authority. It supplies the missing upstream Brand Campaign authority.
+The executable audit bases remain:
 
-The executable-current-state audit used these clean, fetched Portfolio bases because both already contain the accepted Brand Campaign commits and the downstream C03 implementation:
+| Repository | Commit | Tree |
+|---|---|---|
+| `Piyush1087/creator-commerce-backend-v2-clone` | `aaae1e3062137eda30e13e2fd7bcddbb1b239842` | `458517fa01a50f43f0b1cd8a948767e4f7600d50` |
+| `Piyush1087/creator-commerce-frontend-v2-clone` | `9631e8b261f02f331dcf84f09dfd61dcc28eea83` | `25a89b63cec1a576ef605076c717a7cc447e5acc` |
 
-| Repository | Base commit | Tree | Accepted Campaign ancestry |
-|---|---|---|---|
-| `Piyush1087/creator-commerce-backend-v2-clone` | `aaae1e3062137eda30e13e2fd7bcddbb1b239842` | `458517fa01a50f43f0b1cd8a948767e4f7600d50` | `29224609d18e876776841802a47fc54434b82ceb` and reconciliation `f7eb11bc72051f034f7d46ff2ad5c6b4d4b9e0fd` are ancestors |
-| `Piyush1087/creator-commerce-frontend-v2-clone` | `9631e8b261f02f331dcf84f09dfd61dcc28eea83` | `25a89b63cec1a576ef605076c717a7cc447e5acc` | `d39c5ee8d9763882359148dd77e34c72dd6a5061` is an ancestor |
+The accepted Brand Campaign ancestry cited by the parent preflight remains present. This correction changes the planned contract, not the implementation bases or convergence ancestry.
 
-Campaign Reporting convergence commits `ebe1b4a8faa6dab59fb924b4c42be8f9e3f1e6f2` and `3d04cd9c84585218fcdc0f1412662a165c38400c` need not be merged into these bases: their accepted Campaign/Instagram parents are already in the Portfolio ancestry, and Reporting authority itself stopped at `CAMPAIGN_OBJECTIVE_AUTHORITY_GAP` without objective implementation.
+## 2. Corrected authority decision
 
-## 2. Executable objective reconciliation
-
-No currently executable representation is the Product contract `AWARENESS | TRUST | ASSETS | ACTION`.
-
-| Surface | Executable representation | Current behavior | Authority classification |
-|---|---|---|---|
-| Prisma enum `CampaignObjective` | `PULSE | PROOF | PUSH | PRODUCTION` | Created by Brand Centre migration; no accepted Campaign canonical persistence owner was found on the audited UCE strategy path. | Legacy naming; compatibility-only. |
-| Canonical wizard backend schema/readiness | `PULSE | PROOF | PRODUCTION | PUSH` | Validates autosave/publish payloads and selects KPIs. | Legacy canonical-wizard vocabulary; compatibility-only after migration. |
-| Canonical wizard frontend contracts/cards | `PULSE | PROOF | PRODUCTION | PUSH` | Frontend labels visually associate the values with Awareness, Trust, Assets and Action. | Compatibility-only. Labels are not an accepted executable mapping. |
-| `UceCampaignObjective` | `BRAND_AWARENESS | TRAFFIC_CLICKS | SALES_CONVERSIONS` | Non-null `UceCampaignStrategy.coreObjective`; used by legacy create/edit/filter/list/read/reporting APIs. | Legacy UCE vocabulary; compatibility-only. |
-| Canonical publish adapter | P values to three-value UCE enum | `PUSH -> SALES_CONVERSIONS`; every other P value -> `BRAND_AWARENESS`. | Lossy adapter; prohibited as canonical authority. |
-| `UceCampaign.canonicalDefinition` JSON | version `1.2`, includes the selected P value | Canonical-draft autosave and publish preserve wizard JSON. | Historical input evidence only; not a typed, immutable Campaign objective authority. |
-| `UceCampaignStrategy.platformDeliverables` JSON | `canonicalObjective: <P value>` | Canonical publish duplicates the P value in compatibility JSON. | Compatibility payload only; not authoritative. |
-| Campaign list/shell/page APIs | three-value `coreObjective` | Filters and renders the legacy UCE enum. | Compatibility read surface. |
-| Campaign application projection | `campaign.strategy.coreObjective` | Application eligibility projects the three-value legacy value. | Incorrect source for the Product objective; must be replaced for Snapshot V2. |
-| C03 Application submit | projected `campaign.objective` | Freezes that legacy value into `application_snapshot.campaignContext.objective`. | Immutable V1 historical snapshot only. Never reinterpret. |
-| Creator brief pack | snapshot `campaignContext.objective` | Reads immutable submitted application context. | Historical V1 consumer; never rewrite. |
-| `UceCampaignReportingSnapshot.primaryObjective` | three-value UCE enum | Canonical publish creates a legacy snapshot through the lossy adapter. | Historical compatibility-only and not a canonical objective source. |
-
-The P labels are suggestive but cannot authorize `PULSE -> AWARENESS`, `PROOF -> TRUST`, `PRODUCTION -> ASSETS`, or `PUSH -> ACTION`. The three-value enum cannot express all four Product meanings. Neither vocabulary may be translated into the canonical field automatically.
-
-### 2.1 Current endpoint and data-flow inventory
-
-The audited executable flows are:
-
-- Legacy create: `POST /api/v1/brand-uce/campaigns/wizard` accepts `marketing_objective` in the three-value enum, persists `UceCampaignStrategy.coreObjective`, and creates a reporting snapshot with the same value.
-- Legacy draft edit: `PATCH /api/v1/brand-uce/campaigns/{campaignId}/wizard` accepts the same three-value `marketing_objective` and updates `coreObjective`.
-- Legacy list/filter/read: `GET /api/v1/brand-uce/campaigns`, `GET /api/v1/brand-uce/campaigns/{campaignId}`, and Campaign page/workspace queries filter/project `strategy.coreObjective`.
-- Transitional canonical create: `POST /api/v1/brand-uce/campaigns/canonical-wizard` validates a P-valued `strategy.core_objective` and publishes through the lossy adapter.
-- Canonical draft create/read/autosave/publish: `POST /campaigns/canonical-drafts`, `GET /campaigns/canonical-drafts/{campaignId}`, `PATCH /campaigns/canonical-drafts/{campaignId}/field`, and `POST /campaigns/canonical-drafts/{campaignId}/publish` preserve the P value in `canonicalDefinition`; publish writes the lossy three-value strategy/reporting values.
-- Canonical readiness: `GET /campaigns/canonical-drafts/{campaignId}/readiness` reads a P value and resolves a P-keyed KPI table.
-- Lifecycle publish/go-live: `POST /campaigns/{campaignId}/publish` and `POST /campaigns/{campaignId}/go-live` do not supply a missing canonical Product objective fence.
-- Application read/submit: the Campaign application projection selects `strategy.coreObjective`; Application submit copies the projected Campaign context into the immutable snapshot.
-- Frontend canonical wizard, draft client, autosave, readiness and summaries send/render P values. Campaign list filters and legacy contracts send/render the three-value enum. Campaign page details render the server objective as an untyped string.
-
-The implementation must cover every item above: canonical flows move to the new contract; explicitly deprecated legacy flows stay isolated and cannot establish canonical authority.
-
-## 3. Canonical Campaign objective contract
-
-Brand Campaign now owns exactly this Product contract:
+There is one Campaign aggregate and one objective authority:
 
 ```text
-BrandCampaignObjectiveV1 = AWARENESS | TRUST | ASSETS | ACTION
+UceCampaign
+  -> exactly one UceCampaignStrategy (primary key campaignId)
+       -> coreObjective: UceCampaignObjective
 ```
 
-There are no aliases in the canonical type. `PULSE`, `PROOF`, `PRODUCTION`, `PUSH`, `BRAND_AWARENESS`, `TRAFFIC_CLICKS`, and `SALES_CONVERSIONS` are invalid values at every canonical write boundary.
+The canonical Product values are exactly:
 
-### 3.1 Persistence contract
+```text
+CAMPAIGN_OBJECTIVE_V1 = AWARENESS | TRUST | ASSETS | ACTION
+```
 
-The finite backend implementation shall add these enums and fields:
+The existing `UceCampaignObjective` enum is extended additively. The existing `UceCampaignStrategy.coreObjective` remains the single persisted objective field and the single Campaign objective authority.
+
+Legacy values remain in the same enum only for compatibility:
+
+- `BRAND_AWARENESS | TRAFFIC_CLICKS | SALES_CONVERSIONS`
+- `PULSE | PROOF | PRODUCTION | PUSH` remain legacy wizard/validation values and, where the separate `CampaignObjective` enum exists, compatibility-only values.
+
+No canonical API accepts a legacy value. No runtime or migration translates a legacy value to a canonical value. The visual resemblance between the P labels and the four Product meanings is not executable authority.
+
+## 3. Proof that `coreObjective` can be reused safely
+
+Reuse is accepted and required. A second `canonicalObjective` field is not permitted.
+
+Exact source/schema evidence:
+
+1. `UceCampaignStrategy.campaignId` is the model primary key and foreign key to `UceCampaign.id`; therefore there is at most one strategy/objective row per Campaign aggregate.
+2. `UceCampaignStrategy.coreObjective` is already non-null and typed as `UceCampaignObjective`.
+3. The originating UCE migration created `uce_campaign_strategy.core_objective` as a non-null `UceCampaignObjective` column and the strategy table primary key as `campaign_id`.
+4. Legacy create and draft edit write `coreObjective`; list/filter/shell/page/reporting read it; canonical publish currently writes it through a lossy adapter; Campaign application-read projects it. The executable paths already converge on this field.
+5. PostgreSQL enum evolution can add the four values without replacing the column, changing its ownership, creating a parallel field, or weakening nullability.
+6. Existing editing fences are compatible with reuse: canonical autosave and legacy edit both require `DRAFT`, recheck `DRAFT` under the Campaign lifecycle lock, and publish requires `DRAFT`. Reuse does not grant a new edit path.
+
+Audited locations on the backend base:
+
+- `prisma/schema.prisma`: `UceCampaign`, `UceCampaignStrategy`, `UceCampaignObjective`, and `UceCampaignReportingSnapshot` definitions;
+- `prisma/migrations/20260601120000_uce_universal_campaign_engine/migration.sql`: original enum, non-null `core_objective`, strategy primary key, and Campaign foreign key;
+- `src/features/brand-uce/services/canonical-campaign-create.service.ts`: DRAFT-only autosave/publish with lock recheck, versioned `canonicalDefinition`, lossy adapter, strategy and reporting writes;
+- `src/features/brand-uce/services/brand-uce-campaign.service.ts`: legacy create/edit/list/filter/shell/reporting and DRAFT-only edit checks;
+- `src/features/brand-uce/services/campaign-query.service.ts` and `canonical-campaign-application-read.service.ts`: Campaign page and application projections;
+- `src/features/campaign-applications/application-submit.service.ts`: immutable application context freeze.
+
+The current defect is vocabulary and write-boundary divergence, not absence of an objective field. Adding a second field would create dual authority and reconciliation risk. Accordingly:
 
 ```prisma
-enum UceCanonicalCampaignObjective {
+enum UceCampaignObjective {
+  // compatibility-only values retained
+  BRAND_AWARENESS
+  TRAFFIC_CLICKS
+  SALES_CONVERSIONS
+
+  // the only canonical values
   AWARENESS
   TRUST
   ASSETS
   ACTION
 }
 
-enum UceCampaignObjectiveAuthorityState {
-  CANONICAL
-  REAUTHOR_REQUIRED
-}
-
 model UceCampaignStrategy {
-  // existing ownership and strategy fields remain
-  canonicalObjective           UceCanonicalCampaignObjective?       @map("canonical_objective")
-  canonicalObjectiveVersion    Int                                  @default(0) @map("canonical_objective_version")
-  objectiveAuthorityState      UceCampaignObjectiveAuthorityState   @default(REAUTHOR_REQUIRED) @map("objective_authority_state")
-  canonicalObjectiveRevisionId String?                              @map("canonical_objective_revision_id")
-
-  // legacy compatibility only; made nullable so canonical writes need no invented translation
-  coreObjective UceCampaignObjective? @map("core_objective")
-}
-
-model UceCampaignObjectiveRevision {
-  id             String                        @id @default(uuid()) @map("objective_revision_id")
-  campaignId     String                        @map("campaign_id")
-  brandProfileId String                        @map("brand_profile_id")
-  version        Int                           @map("objective_version")
-  objective      UceCanonicalCampaignObjective
-  source         UceCampaignObjectiveRevisionSource
-  actorUserId    String                        @map("actor_user_id")
-  createdAt      DateTime                      @default(now()) @map("created_at")
-
-  @@unique([campaignId, version])
-  @@unique([campaignId, id])
-  @@index([brandProfileId, campaignId])
-  @@map("uce_campaign_objective_revision")
-}
-
-enum UceCampaignObjectiveRevisionSource {
-  INITIAL_CANONICAL_AUTHORING
-  EXPLICIT_REAUTHOR
+  campaignId    String               @id @map("campaign_id")
+  campaign      UceCampaign          @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  coreObjective UceCampaignObjective @map("core_objective")
+  // other existing strategy fields unchanged
 }
 ```
 
-The migration shall enforce database constraints equivalent to:
+The separate four-P `CampaignObjective` enum is not promoted. It may remain temporarily for compatibility consumers, but canonical code must not import or emit it.
 
-- `CANONICAL` requires non-null objective, revision id, and version greater than zero.
-- `REAUTHOR_REQUIRED` requires null objective, null revision id, and version zero.
-- the current strategy revision must belong to the same Campaign and brand fence;
-- `(campaign_id, objective_version)` is unique and monotonically incremented by the serialized command;
-- revision rows are append-only: update/delete is rejected by a database guard;
-- new Campaign publish and objective-dependent lifecycle transitions require `CANONICAL`.
+## 4. General Campaign-definition fence
 
-The authoritative scalar is `UceCampaignStrategy.canonicalObjective`, whose provenance and immutable version are the referenced revision row. `canonicalDefinition`, `platformDeliverables`, `coreObjective`, and reporting snapshots are explicitly non-authoritative.
+### 4.1 Current evidence
 
-### 3.2 Campaign API contract
+`UceCampaign.canonicalDefinition` is the existing whole-Campaign definition JSON. Canonical publish writes a version marker (`version: "1.2"`) into that JSON. Draft autosave may mutate it only while the Campaign is `DRAFT`; publish writes the final definition and changes status in the same Campaign-locked transaction. Non-draft objective editing is already rejected.
 
-All new or versioned canonical APIs use:
+The audited schema has no persisted Campaign-definition hash and no immutable definition snapshot table/reference. The existing version marker alone is insufficient for C03 to prove that the definition it saw has not changed.
 
-```json
-{
-  "objective": {
-    "state": "CANONICAL",
-    "value": "AWARENESS",
-    "version": 1,
-    "revisionId": "uuid"
-  }
+### 4.2 Smallest accepted additive fence
+
+Add one general field to the Campaign aggregate, not to an objective-specific table:
+
+```prisma
+model UceCampaign {
+  // existing fields unchanged
+  canonicalDefinition     Json?   @map("canonical_definition")
+  canonicalDefinitionHash String? @map("canonical_definition_hash") @db.VarChar(71)
 }
 ```
 
-Unresolved existing Campaigns read as:
+No separate objective version, objective state, objective revision id, revision table, or objective ledger is added.
 
-```json
-{
-  "objective": {
-    "state": "REAUTHOR_REQUIRED",
-    "value": null,
-    "version": 0,
-    "revisionId": null
-  }
-}
-```
+For a canonical definition:
 
-Canonical create/autosave/publish and edit accept only `strategy.objective` with a `BrandCampaignObjectiveV1` value. The old request key `strategy.core_objective` and all old enum values remain valid only on explicitly deprecated compatibility endpoints. They cannot populate, update, or infer the canonical field.
+- `definitionVersion` is the exact `canonicalDefinition.version` string;
+- `definitionHash` is `sha256:` plus 64 lowercase hexadecimal characters over the UTF-8 bytes of the accepted deterministic canonical-JSON serialization of the complete definition;
+- `definitionSnapshotRef` is the deterministic projection `uce-campaign-definition:<campaignId>:<definitionVersion>:<definitionHash>`; it need not be persisted as another column;
+- canonical-definition contract `2.0` contains `strategy.objective` with one exact `CAMPAIGN_OBJECTIVE_V1` value;
+- the final definition, hash, `coreObjective`, and transition out of `DRAFT` are written atomically under the existing Campaign lock;
+- after the Campaign leaves `DRAFT`, existing editability restrictions prohibit changing the objective or canonical definition. Canonicalization must not introduce a bypass.
 
-The explicit existing-row recovery command is:
+The serializer and hash helper are general Campaign-definition infrastructure. They must not contain objective-specific branching. The Campaign application projection recomputes the hash before exposure and fails closed on mismatch.
 
-```http
-POST /api/v1/brand-uce/campaigns/{campaignId}/objective/reauthor
-Idempotency-Key: <required>
+This is the minimum general fence needed by C03. If implementation proves that a current accepted general Campaign-definition hash already exists on a newer descendant base, reuse it and do not add the proposed column. Any request for a snapshot table or broader definition history requires renewed Campaign-SA authority.
 
-{
-  "contract": "BRAND_CAMPAIGN_OBJECTIVE_REAUTHOR_V1",
-  "objective": "AWARENESS",
-  "expectedState": "REAUTHOR_REQUIRED",
-  "expectedVersion": 0
-}
-```
+## 5. Corrected canonical API contract
 
-It requires the existing Campaign owner/manager edit authority, the composite brand/Campaign ownership fence, the Campaign lifecycle lock, a transaction-scoped idempotency record, compare-and-set of state/version, one append-only revision, current-strategy update, and an auditable domain event. Replays return the original result; key/payload mismatch is a conflict. A concurrent or stale request returns `409 OBJECTIVE_REVISION_CONFLICT`.
-
-The UI must show all four Product values with no legacy preselection. For existing drafts, the user selects before publish. For existing published/live/paused Campaigns, an explicit confirmation flow invokes re-authoring. Completed/archived Campaigns may remain unresolved unless an authorized Product flow explicitly reopens them; their immutable history is never changed.
-
-### 3.3 C03 ApplicationSnapshot V2 freeze contract
-
-C03 shall freeze exactly this Campaign-owned projection, obtained from the Campaign application-read boundary inside the application submit transaction:
+Canonical create, draft autosave, readiness, publish, read, list/filter, and any permitted canonical edit accept or return only:
 
 ```ts
-type CampaignObjectiveSnapshotV2 = Readonly<{
-  value: "AWARENESS" | "TRUST" | "ASSETS" | "ACTION";
-  version: number;       // positive UceCampaignObjectiveRevision.version
-  revisionId: string;    // immutable UceCampaignObjectiveRevision.id
+type CampaignObjectiveV1 = "AWARENESS" | "TRUST" | "ASSETS" | "ACTION";
+```
+
+The canonical request field remains the strategy objective field appropriate to the existing endpoint shape; implementation should converge on `strategy.objective`. The persistence adapter writes the same value, unchanged, to `UceCampaignStrategy.coreObjective` and the versioned whole-Campaign definition. The lossy `legacyObjective()` function is removed from canonical paths.
+
+Canonical read projection:
+
+```ts
+type CanonicalCampaignObjectiveProjection = Readonly<{
+  objective: CampaignObjectiveV1;
+  objectiveContract: "CAMPAIGN_OBJECTIVE_V1";
+  campaignDefinitionVersion: string;
+  campaignDefinitionSnapshotRef: string;
+  campaignDefinitionHash: `sha256:${string}`;
 }>;
 ```
 
-Source proof:
+The projection is available only when all of these are true:
 
-- value: `UceCampaignStrategy.canonicalObjective`;
-- version: `UceCampaignStrategy.canonicalObjectiveVersion`;
-- revision identity: `UceCampaignStrategy.canonicalObjectiveRevisionId`;
-- ownership: Brand Campaign UCE strategy/revision under the composite Campaign/brand fence.
+- `coreObjective` is one of the four canonical values;
+- the whole definition contains that same exact value;
+- the definition version is an accepted canonical Campaign definition version;
+- the stored and recomputed whole-definition hashes match;
+- the Campaign is at a lifecycle point from which the existing application policy permits projection.
 
-The Campaign application projection returns this only when `objectiveAuthorityState = CANONICAL` and the current strategy and revision agree. Otherwise the projection returns a typed unavailable reason `CAMPAIGN_OBJECTIVE_REAUTHOR_REQUIRED`; it must not fall back to `coreObjective` or JSON.
+Otherwise canonical objective is unavailable. A bounded response reason `CAMPAIGN_OBJECTIVE_REAUTHOR_REQUIRED` may be returned for a compatibility-readable legacy Campaign, but it is not persisted, is not a Campaign state, is not a lifecycle status, and is not an objective authority.
 
-C03 copies the three fields byte-for-byte into `ApplicationSnapshot V2.campaignContext.objective`. C03 does not map, normalize, or query them later. Existing ApplicationSnapshot V1 rows keep their original legacy objective forever and are never reclassified. Applicant Match remains unavailable for V1 and for V2 submissions missing the canonical objective fence.
+There is no dedicated objective re-author endpoint. There is no new Brand-facing remediation or confirmation UI. Existing Campaign edit endpoints and lifecycle restrictions remain authoritative; a locked objective stays locked.
 
-This publication establishes the missing objective authority. It does not authorize C03 or Applicant Match source changes.
+## 6. Legacy compatibility and existing Campaign treatment
 
-## 4. Existing-row and compatibility policy
+### 6.1 Compatibility boundary
 
-### 4.1 Safe data treatment
+- Existing compatibility endpoints may continue to read and, only where already authorized, accept old enum labels during the bounded compatibility period.
+- Canonical endpoints reject every old label at schema validation before persistence.
+- Compatibility responses clearly identify old values as legacy and never populate `CanonicalCampaignObjectiveProjection` from them.
+- Canonical list/filter paths filter the same `coreObjective` column but accept only the four canonical query values.
+- Legacy reporting snapshots remain historical. New canonical publish writes its exact four-value `coreObjective` to any still-required reporting field typed by the additively extended shared enum; it performs no mapping.
+- Existing ApplicationSnapshot V1 values remain byte-for-byte unchanged and are never reinterpreted.
 
-All rows that predate the canonical migration are initialized as:
+### 6.2 Four-way existing-row disposition
 
-```text
-objective_authority_state = REAUTHOR_REQUIRED
-canonical_objective = NULL
-canonical_objective_version = 0
-canonical_objective_revision_id = NULL
+Classification occurs through a controlled internal migration/pre-deploy audit, not through a user API or UI.
+
+| Class | Required evidence | Treatment |
+|---|---|---|
+| Exact immutable four-value evidence | An accepted immutable Campaign-definition source contains one literal canonical value, is bound to the same Campaign, and is protected by an existing immutable/version fence sufficient to prove equality. P labels and three-value labels do not qualify. | An internal explicit repair may copy that exact value to `coreObjective` and establish/recompute the general definition hash. This is semantic equality repair, not objective editing. Record operational audit evidence. |
+| Disposable non-production legacy Campaign | Environment/tenant and Product-approved operational evidence proves the Campaign is disposable and non-production. | Recreate/reseed using a canonical endpoint and four-value input. Do not map the old value. |
+| Ambiguous legacy Campaign | Only P values, three-value labels, mutable JSON, or conflicting/unfenced evidence exists, and there is no proof it is a real production Campaign requiring Product adjudication. | Preserve compatibility-readable data; canonical objective projection returns unavailable with bounded reason `CAMPAIGN_OBJECTIVE_REAUTHOR_REQUIRED`. Do not mutate lifecycle or objective. |
+| Proven real production ambiguous Campaign | Production provenance is proven but exact canonical meaning is not. | Stop and return `CAMPAIGN_PRODUCTION_OBJECTIVE_PARENT_PRODUCT_AUTHORITY_REQUIRED` for separate Parent Product authority. No repair, deletion, recreation, mapping, or Brand remediation flow. |
+
+The audited current code does not create exact four-value evidence: canonical wizard data uses P values and `coreObjective` uses the three-value enum. Therefore no current row may be presumed eligible for exact repair merely because labels look similar.
+
+### 6.3 Locked-objective rule
+
+Internal repair is permitted only when it copies an exact already-immutable four-value meaning. It must not choose or change meaning. If the Campaign is non-draft and the proposed operation would require a semantic choice, it is not repair; it is an objective edit and is prohibited absent separate Parent Product and Campaign-SA authority.
+
+## 7. C03 handoff contract
+
+After Campaign implementation and separate C03 authorization, C03 freezes exactly:
+
+```ts
+type CampaignObjectiveHandoffV1 = Readonly<{
+  objective: "AWARENESS" | "TRUST" | "ASSETS" | "ACTION";
+  objectiveContract: "CAMPAIGN_OBJECTIVE_V1";
+  campaignDefinition: Readonly<{
+    version: string;
+    snapshotRef: string;
+    hash: `sha256:${string}`;
+  }>;
+}>;
 ```
 
-There is no automatic backfill, including when a row contains a P value in JSON or a three-value `core_objective`. The only canonicalization path is an explicit authorized choice of one Product value. This is fail-closed and preserves the possibility that historical UI labels or lossy adapters do not represent the user's intended Product meaning.
+Sources:
 
-While unresolved:
+- objective: `UceCampaignStrategy.coreObjective` after exact canonical projection checks;
+- contract: literal `CAMPAIGN_OBJECTIVE_V1`;
+- definition version: `UceCampaign.canonicalDefinition.version`;
+- snapshot reference: deterministic whole-Campaign definition reference described in section 4;
+- hash: `UceCampaign.canonicalDefinitionHash`, recomputed and equality-checked before handoff.
 
-- canonical Campaign reads disclose `REAUTHOR_REQUIRED`;
-- canonical publish/go-live and objective-dependent read capabilities fail closed with `CAMPAIGN_OBJECTIVE_REAUTHOR_REQUIRED`;
-- new Application submission is unavailable where C03 V2 requires the canonical fence;
-- existing Campaign, application, reporting, and collaboration history remains readable through compatibility projections;
-- no immutable application snapshot or historical reporting snapshot is rewritten.
+C03 copies these values into its immutable ApplicationSnapshot V2 within its own accepted submission transaction. There is no `objectiveRevisionId`, no objective version counter, and no objective-specific persistence. C03 does not infer or map a value. This correction does not authorize C03 source work.
 
-### 4.2 Legacy classification
+## 8. Corrected schema and migration plan
 
-- `PULSE | PROOF | PRODUCTION | PUSH`: legacy canonical-wizard vocabulary, compatibility-only.
-- `BRAND_AWARENESS | TRAFFIC_CLICKS | SALES_CONVERSIONS`: legacy UCE strategy/list/reporting vocabulary, compatibility-only.
-- the current `legacyObjective()` adapter: prohibited from canonical paths and deleted only during the authorized implementation phase.
-- existing `UceCampaignReportingSnapshot.primaryObjective`: historical compatibility-only; not a Product objective.
+No migration is created by this preflight. The finite plan is:
 
-Deprecated read responses may expose a separately named `legacyObjective` with `authority: "COMPATIBILITY_ONLY"`. They must never label it `canonical`, use it for C03 V2, Applicant Match, or new Reporting decisions. Deprecated filters may continue to filter the legacy field during a bounded compatibility window; the new canonical filter targets only `canonicalObjective`.
+1. Add `AWARENESS`, `TRUST`, `ASSETS`, and `ACTION` to the existing PostgreSQL/Prisma `UceCampaignObjective` enum. Retain old labels. Respect PostgreSQL enum migration transaction constraints and prove empty-database plus upgrade paths.
+2. Add nullable general `uce_campaigns.canonical_definition_hash VARCHAR(71)` with a shape check: null or `^sha256:[0-9a-f]{64}$`. Do not add an objective table, objective field, objective state, or objective version.
+3. Introduce Campaign definition contract `2.0` with canonical `strategy.objective`; implement deterministic whole-definition serialization/hash in general Campaign infrastructure.
+4. Change canonical backend schemas, readiness configuration, create/autosave/publish/read/list/filter projections, and reporting write to the four values and direct `coreObjective` persistence. Remove the lossy adapter from canonical execution.
+5. Keep legacy validators/routes explicitly compatibility-scoped. They cannot create definition `2.0`, a definition hash, or a canonical projection.
+6. Run the four-way existing-row classification. The migration itself performs no lossy value update. Exact repairs and approved reseeds are controlled operational actions with evidence; production ambiguity triggers the Parent Product breaker.
+7. Change frontend canonical contracts/cards/readiness/autosave/list/page labels and filters to the four values. Do not build objective remediation UI. Compatibility-readable legacy Campaigns show objective unavailable without offering an edit.
+8. Prove the implementation, publish backend/frontend descendant commits normally, fetch them back independently, then publish Campaign implementation acceptance before any C03 handoff.
 
-The compatibility window ends only after telemetry proves no active supported caller sends old write values. Removal is a separately authorized migration. No dual-write is allowed because dual-writing would require the forbidden mapping.
+The schema keeps `coreObjective` non-null. Ambiguous rows retain their existing compatibility value in that field; availability is determined by the canonical projection predicate, not by nulling the field or persisting a parallel state.
 
-## 5. Schema and migration plan
+## 9. Backend and frontend implementation surface
 
-No migration is created by this preflight. The implementation uses additive, deploy-safe stages:
+### Backend
 
-1. **Schema A — types and revision table.** Create `UceCanonicalCampaignObjective`, authority-state and revision-source enums; create the append-only revision table with composite Campaign/brand foreign keys and unique constraints.
-2. **Schema B — strategy fence.** Add nullable canonical value/revision columns and non-null state/version defaults. Make legacy `core_objective` nullable. Add consistency check and indexes. Explicitly set every preexisting strategy row to `REAUTHOR_REQUIRED/NULL/0/NULL` in the migration; do not inspect JSON to backfill.
-3. **Backend contract deploy.** Add the typed canonical projection, new create/edit/reauthor commands, idempotency, locks, events, and fail-closed capability reasons. Preserve legacy reads behind explicit compatibility names.
-4. **Frontend contract deploy.** Replace P-valued Product controls with the four Product values, show re-authoring state and confirmation, and update create/edit/list/page/readiness contracts.
-5. **C03 dependency handoff.** After the Campaign contract is deployed and accepted, C03 may separately implement ApplicationSnapshot V2 against the exact projection above. This is outside this authority publication.
-6. **Compatibility retirement.** After supported callers and historical read needs are proven, publish a separate retirement authority before dropping old enum/columns or adapters.
+Base: `aaae1e3062137eda30e13e2fd7bcddbb1b239842` / tree `458517fa01a50f43f0b1cd8a948767e4f7600d50`, or a proven normal descendant retaining accepted Campaign ancestry.
 
-Every schema stage must pass `prisma format`, `prisma validate`, `prisma generate`, migration-history/inventory checks, PostgreSQL migration application from an empty database, and upgrade from a representative pre-migration database.
+Owned changes are limited to:
 
-## 6. Backend and frontend implementation surface
+- additive enum and general Campaign-definition hash schema/migration;
+- general canonical JSON/hash helper;
+- canonical Campaign validation, readiness, create/draft/publish/read/list/filter and reporting paths;
+- compatibility isolation for old validators/routes;
+- Campaign application-read projection for the C03 handoff;
+- internal classification/repair tooling only if separately operationally authorized;
+- focused contract, migration, PostgreSQL, service, authorization, lifecycle-lock and architecture tests.
 
-### Backend base
+Prohibited backend additions include `UceCampaignObjectiveRevision`, any objective ledger/table, `canonicalObjective`, `objectiveAuthorityState`, `canonicalObjectiveVersion`, `canonicalObjectiveRevisionId`, and an objective re-author controller/service.
 
-Implement from `aaae1e3062137eda30e13e2fd7bcddbb1b239842` / tree `458517fa01a50f43f0b1cd8a948767e4f7600d50`, or a normal descendant that proves those accepted Campaign ancestors are still present.
+### Frontend
 
-Minimum owned surfaces:
+Base: `9631e8b261f02f331dcf84f09dfd61dcc28eea83` / tree `25a89b63cec1a576ef605076c717a7cc447e5acc`, or a proven normal descendant retaining accepted Campaign ancestry.
 
-- `prisma/schema.prisma` and new forward-only migration directories;
-- canonical wizard/draft schemas and readiness resolver;
-- canonical Campaign create/publish service (remove the lossy adapter from canonical writes);
-- legacy Campaign DTO/service/list/query projections (rename and isolate compatibility fields);
-- Campaign application-read projection (canonical objective availability fence);
-- lifecycle/readiness gates and objective revision/idempotency event persistence;
-- contract, service, PostgreSQL, authorization, contention, migration, and architecture tests.
+Owned changes are limited to canonical wizard types/schema/mapping, four objective cards, draft/readiness clients, summaries, list/page/detail/filter contracts, compatibility unavailable presentation, and associated tests. No re-author/remediation flow is authorized.
 
-### Frontend base
+## 10. Required tests and evidence
 
-Implement from `9631e8b261f02f331dcf84f09dfd61dcc28eea83` / tree `25a89b63cec1a576ef605076c717a7cc447e5acc`, or a normal descendant with the accepted Campaign merge ancestor.
+Backend acceptance requires:
 
-Minimum owned surfaces:
+- Prisma enum contains all retained legacy values plus exactly the four canonical values;
+- every canonical request rejects all legacy/P labels and unknown strings;
+- each canonical value round-trips unchanged through draft, readiness, publish, `coreObjective`, whole definition, list/filter/read/reporting and application projection;
+- the lossy adapter is unreachable from canonical execution;
+- one strategy row per Campaign and non-null `coreObjective` remain enforced;
+- definition `2.0` deterministic serialization/hash golden tests, key-order invariance, mismatch/tamper rejection and deterministic snapshot reference tests;
+- atomic publish writes final definition/hash/objective under lock and no non-draft endpoint changes them;
+- compatibility routes cannot produce a canonical definition/hash/projection;
+- exact-evidence repair accepts only literal four-value immutable evidence and proves equality; P/three-value/conflicting/mutable evidence is rejected;
+- each existing-row class follows the disposition table, including production ambiguity breaker;
+- historical ApplicationSnapshot V1 and reporting rows are unchanged;
+- empty-database and representative-upgrade migration tests pass without automatic mapping.
 
-- canonical Campaign wizard types, Zod schema, request mapping, draft client and autosave/readiness controller;
-- objective cards and summaries;
-- Campaign list/page/detail contracts, formatting, filters and unavailable-state presentation;
-- explicit re-authoring UI and conflict/idempotent-retry behavior;
-- API contract and component/model/accessibility tests.
+Frontend acceptance requires:
 
-## 7. Required verification
+- canonical controls and payloads contain exactly `AWARENESS`, `TRUST`, `ASSETS`, `ACTION`;
+- no P or three-value option appears on canonical create/readiness/filter paths;
+- all four values hydrate, autosave, render, publish and filter correctly;
+- locked/non-draft Campaign UI offers no objective edit;
+- legacy compatibility rows render bounded objective-unavailable state and no remediation call to action;
+- canonical response containing a legacy/unknown value or invalid definition fence fails closed;
+- component, API contract, keyboard, screen-reader and error-state tests pass.
 
-Backend acceptance must include:
+Repository evidence requires clean builds, focused and relevant full tests, schema/migration inventory, clean worktrees, normal non-force pushes, and independent local/remote SHA/tree equality.
 
-- enum exhaustiveness proving exactly four canonical values and rejecting every legacy value;
-- canonical create, autosave, edit, publish, read, list and filter round trips for each value;
-- all preexisting rows migrate to `REAUTHOR_REQUIRED` with no revision and no inferred value;
-- re-author command authorization, brand/Campaign fence, lifecycle lock, idempotent replay, mismatch, contention, and monotonically increasing version tests;
-- revision update/delete database guard tests;
-- consistency/check/foreign-key violation tests;
-- canonical projection returns exact value/version/revision and fails closed for unresolved or inconsistent rows;
-- legacy endpoints cannot write the canonical field and canonical endpoints cannot accept legacy values;
-- no canonical path creates or requires a lossy legacy reporting objective;
-- existing ApplicationSnapshot V1 and reporting rows remain byte-for-byte unchanged;
-- C03 consumer contract fixture for the exact Snapshot V2 objective shape, without implementing C03 in this phase.
-
-Frontend acceptance must include:
-
-- four cards and request values exactly `AWARENESS`, `TRUST`, `ASSETS`, `ACTION`;
-- no P or three-value Product control, preselection, or canonical label;
-- draft hydration and publish for all four values;
-- unresolved existing Campaign displays a blocking re-author prompt and no guessed selection;
-- re-author success, retry, conflict, forbidden, stale-version and accessibility behavior;
-- canonical list/page/detail/filter labels and explicit compatibility-only rendering where retained;
-- contract failure when an unknown or legacy value appears in a canonical response.
-
-Repository acceptance must include clean builds, focused and full relevant test suites, schema/migration inventory evidence, clean worktrees, normal pushes, and independent fetch-back SHA/tree equality for backend, frontend, and authority publications.
-
-## 8. Circuit breakers
-
-Stop the objective implementation and return the named breaker if any condition occurs:
+## 11. Circuit breakers
 
 | Circuit breaker | Trigger |
 |---|---|
-| `CAMPAIGN_CANONICAL_OBJECTIVE_CONTRACT_DIVERGENCE` | Any canonical surface uses a value outside the exact four-value Product enum or renames a value. |
-| `CAMPAIGN_OBJECTIVE_LOSSY_MAPPING_REQUIRED` | A proposed path requires translating P or three-value legacy values into the canonical field. |
-| `CAMPAIGN_OBJECTIVE_REAUTHOR_AUTHORITY_MISSING` | Existing rows cannot be re-authored by a proven Campaign owner/manager authority and composite ownership fence. |
-| `CAMPAIGN_OBJECTIVE_REVISION_INTEGRITY_GAP` | Value/version/revision cannot be atomically serialized and proven immutable. |
-| `CAMPAIGN_OBJECTIVE_COMPATIBILITY_LEAK` | A compatibility field can reach C03 V2, Applicant Match, new Reporting authority, or a canonical API response as authoritative. |
-| `CAMPAIGN_OBJECTIVE_MIGRATION_SAFETY_GAP` | Upgrade would infer a value, rewrite immutable history, fail on existing rows, or require a destructive/non-forward-only operation. |
-| `CAMPAIGN_OBJECTIVE_BASE_DIVERGENCE` | Implementation bases no longer contain the accepted Brand Campaign ancestry or materially change the audited objective surfaces without renewed preflight. |
+| `CAMPAIGN_CANONICAL_OBJECTIVE_CONTRACT_DIVERGENCE` | A canonical path accepts/emits anything outside the exact four values or omits `CAMPAIGN_OBJECTIVE_V1`. |
+| `CAMPAIGN_OBJECTIVE_DUAL_AUTHORITY` | A second objective field, state, revision table, ledger, or alternate authoritative JSON path is introduced. |
+| `CAMPAIGN_OBJECTIVE_LOSSY_MAPPING_REQUIRED` | Implementation or migration requires translating a P/three-value label to a canonical value. |
+| `CAMPAIGN_DEFINITION_FENCE_INTEGRITY_GAP` | Whole-definition version/hash/reference cannot be produced atomically, recomputed, or kept immutable after the existing edit boundary closes. |
+| `CAMPAIGN_LOCKED_OBJECTIVE_EDIT_BYPASS` | Canonicalization makes an objective editable where current Campaign lifecycle rules prohibit it. |
+| `CAMPAIGN_PRODUCTION_OBJECTIVE_PARENT_PRODUCT_AUTHORITY_REQUIRED` | A proven real production Campaign has ambiguous canonical meaning. |
+| `CAMPAIGN_OBJECTIVE_COMPATIBILITY_LEAK` | A legacy value is exposed as canonical or reaches C03 V2, Applicant Match, or new Reporting authority. |
+| `CAMPAIGN_OBJECTIVE_BASE_DIVERGENCE` | Implementation bases lose accepted Campaign ancestry or materially change audited ownership/edit fences without renewed preflight. |
 
-Applicant Match retains its own blockers. Until a separately authorized C03 implementation publishes a valid ApplicationSnapshot V2 using this contract, Match must continue to return `APPLICANT_AI_MATCH_UNSUPPORTED_SNAPSHOT` for legacy snapshots and must not start P1 on them.
-
-## 9. Finite implementation sequence and convergence DAG
+## 12. Finite convergence DAG and sequence
 
 ```text
-accepted Brand Campaign backend: 29224609 + f7eb11bc
-                                     \
-backend Portfolio base aaae1e30 ------> Campaign objective backend branch
-                                         [Schema A -> Schema B -> API -> tests]
-                                                                  \
-                                                                   +--> normal Campaign objective convergence
-                                                                  /
-frontend Portfolio base 9631e8b2 -----> Campaign objective frontend branch
-                                         [contracts -> UI -> tests]
+accepted Brand Campaign ancestry
+          |
+backend Portfolio base aaae1e30
+          -> additive UceCampaignObjective values
+          -> general Campaign definition hash fence
+          -> canonical API/coreObjective convergence
+          -> compatibility isolation + tests
+                                            \
+                                             +-> Campaign objective implementation acceptance
+                                            /
+frontend Portfolio base 9631e8b2
+          -> four-value canonical contracts/UI
+          -> compatibility-unavailable presentation + tests
 
-Campaign objective convergence + this authority acceptance
-    -> separately authorized C03 ApplicationSnapshot V2 implementation
-    -> corrected Applicant Match P0 revalidation
-    -> only then Applicant Match P1 authorization
+Campaign implementation acceptance
+          -> separately authorized C03 ApplicationSnapshot V2 handoff
+          -> corrected Applicant Match P0 revalidation
+          -> only then possible Applicant Match P1 authorization
 ```
 
-The finite execution order is:
+Finite order:
 
-1. Re-fetch/prune and verify the exact implementation bases and accepted Campaign ancestors.
-2. Implement and prove Schema A and Schema B without backfill inference.
-3. Implement the backend canonical projection and commands, then the explicit compatibility boundary.
-4. Implement the frontend four-value authoring and re-authoring flows.
-5. Run the complete verification matrix and adversarial migration/contention tests.
-6. Publish backend and frontend descendant commits by normal push; independently fetch back and verify SHA/tree.
-7. Publish an implementation acceptance record on this authority line.
-8. Hand the exact Campaign projection to C03. Do not modify C03 in the Campaign phase.
-9. After C03 V2 publication, rerun Applicant Match P0 against the new immutable checkpoint. Do not infer P1 authorization from this preflight.
+1. Re-fetch/prune and verify implementation bases and accepted Campaign ancestry.
+2. Reconfirm no newer accepted general Campaign definition hash fence exists.
+3. Implement the additive enum migration and smallest general hash field.
+4. Implement backend canonical direct-write/read projection on `coreObjective` and definition fence.
+5. Implement compatibility isolation and four-way data classification; stop on production ambiguity.
+6. Implement frontend four-value canonical surfaces without remediation UI.
+7. Run the complete evidence matrix, including locked-objective and tamper tests.
+8. Publish/fetch-back backend and frontend descendants and obtain Campaign implementation acceptance.
+9. Hand off to separately authorized C03 work. Do not begin C03 or Applicant Match from this preflight.
 
-## 10. Disposition
+## 13. Corrected disposition
 
-The Brand Campaign canonical-objective authority gap is resolved at the contract/preflight level: the only canonical executable values are `AWARENESS | TRUST | ASSETS | ACTION`, and C03 has an exact Campaign-owned value/version/revision source to freeze.
+The preflight correction proves that `UceCampaignStrategy.coreObjective` is safely reusable as the single objective authority. The accepted design additively extends its enum and adds only the smallest missing general Campaign-definition hash fence. It does not create objective-specific history, state, endpoints, UI, or a second field.
 
-Implementation has not started. Existing Campaign rows remain semantically unresolved until explicit re-authoring. Therefore this report does not, by itself, clear Applicant Match P1 or alter the corrected Applicant Match circuit-breaker state.
+Contract/preflight is corrected. Implementation remains not started. C03 and Applicant Match remain outside this authority and retain their existing circuit breakers until separately accepted implementation checkpoints exist.
