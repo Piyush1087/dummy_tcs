@@ -205,3 +205,24 @@ Required runner prompt:
 Next boundary:
 
 `EXTERNAL_LOCAL_CODEX_P0_RESUMPTION_CORRECTION_2`
+
+## P0 Resumption Correction 2 V2 Execution — 2026-09-16
+
+Status: `READY_FOR_APPLICANT_AI_MATCH_TECHNICAL_SA_FINAL_P0_REVIEW`
+
+- Verified launch SHA `983c6b3436efd870cf907e74b44a7766b18b45aa`, tree `f048bb1f8157db211ea0421b7ad0ecedbd6c4bba`, direct parent `4e20e6d611ed1f59e39d03e5ff4ee21d3369c083`, remote equality, V2 prompt/review presence, accepted Campaign checkpoints, and clean isolated worktrees.
+- Executed only Correction 2 V2; V1 remained historical and superseded.
+- Read the complete Git-hosted authority set and inspected accepted Campaign objective/targeting, C03 submission/snapshot/event/outbox/terminalization, and shared Intelligence execution/current/CAS sources.
+- Corrected the exact executable objective handoff; actual targeting fields; PENDING/SUBMITTED distinction; canonical identities/contexts; one-insert V2 hash; Match-ready signal ownership; three-state Match lifecycle; all non-PENDING races; and manifest ordering.
+- Defined Campaign-owned same-definition targeting integrity, affinity unavailable, nonblocking submission, binary subcriterion coverage, exact deterministic evaluators, mutually exclusive seven-criterion semantic finalization, deterministic explanations, semantic failure dispositions, versioned request identity, and the owner-governed sequence.
+- Revalidated the 24-hour half-open wait policy and enforced one accepted wake per maximum-eight donor identities; maximum 338 claims remains valid.
+- Backend/frontend source changed: no. Migration: none. Campaign targeting/C03 V2/Applicant Match implementation: none. P1-P4: not started and unauthorized.
+- Live Graph/model/provider calls, production-data access, development/production merge, and deployment: none.
+
+Published report:
+
+`CAMPAIGN_APPLICANT_AI_MATCH_P0_RESUMPTION_CORRECTION_2_REPORT_V1.md`
+
+Next boundary:
+
+`PARENT_PROGRAM_ORCHESTRATOR_AND_APPLICANT_MATCH_TECHNICAL_SA_FINAL_P0_REVIEW_ONLY`
