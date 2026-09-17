@@ -80,20 +80,21 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-020 | Backend boundary-correction implementation prompt publication | Assistant/Parent review lane | approximately 7 minutes measured | `CORRECTION_IMPLEMENTATION_READY` | Published an exact 18-path correction prompt covering stronger test contracts, narrow/wide Instagram DI separation, full backend/database/frontend validation, immutable candidate publication and Parent-review stop | Runner prompt only |
 | CR-021 | Backend boundary correction implementation and validation | External Local Codex | 1 hour 9 minutes 48.101 seconds | `CIRCUIT_BREAKER` | Implemented exact 18-path candidate; passed 83 focused and 7,240 full backend tests, clean/populated migrations and frontend typecheck/tests/build; stopped before commit because immutable frontend target has one pre-existing unused-import lint error | None; validated backend candidate remains uncommitted locally |
 | CR-022 | Frontend lint blocker review | Assistant/Parent review lane | approximately 4 minutes measured | `ONE_FILE_FRONTEND_CORRECTION_REQUIRED` | Verified PUBLIC_ROUTES is imported but never used in CampaignDetailWorkspace; classified as a semantics-neutral one-line lint correction while preserving the validated backend candidate | None |
+| CR-023 | Correction-candidate resume/publication prompt | Assistant/Parent review lane | approximately 5 minutes measured | `RESUME_AND_PUBLISH_READY` | Published a continuation prompt that cryptographically gates the preserved backend worktree, permits one frontend unused-import correction, revalidates both repos, publishes both candidates and combined evidence, and stops before Gate A V4 | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
 LOCAL_CODEX_ACTIVE_TIME = 3 hours 4 minutes 9.381 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 10 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 20 minutes 5.381 seconds
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 15 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 25 minutes 5.381 seconds
 LOCAL_CODEX_RUNS = 8
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 13
+ASSISTANT_REVIEW_CYCLES = 14
 BLOCKER_CYCLES = 4
 BLOCKERS_CLOSED = 2
-RUNNER_PROMPTS_PUBLISHED = 10
+RUNNER_PROMPTS_PUBLISHED = 11
 RUNNER_PROMPTS_EXECUTED = 8
 IMPLEMENTATION_RUNS = 3
 CORRECTION_IMPLEMENTATION_RUNS = 0
@@ -139,7 +140,7 @@ GATE_A_RESULT =
 PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Authorize a one-file semantics-neutral frontend lint correction while preserving the exact validated 18-path backend candidate; revalidate and publish both correction checkpoints plus combined evidence, then stop before Gate A V4
+Execute the resume-and-publish prompt in the same local runner environment; verify the preserved backend candidate, apply the one-file frontend lint correction, publish both candidates and combined evidence, then stop before Gate A V4
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
