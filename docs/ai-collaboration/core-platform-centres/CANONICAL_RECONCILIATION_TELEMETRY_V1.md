@@ -83,20 +83,21 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-023 | Correction-candidate resume/publication prompt | Assistant/Parent review lane | approximately 5 minutes measured | `RESUME_AND_PUBLISH_READY` | Published a continuation prompt that cryptographically gates the preserved backend worktree, permits one frontend unused-import correction, revalidates both repos, publishes both candidates and combined evidence, and stops before Gate A V4 | Runner prompt only |
 | CR-024 | Correction candidate continuation preflight | External Local Codex | 2 minutes 9.874 seconds | `CIRCUIT_BREAKER` | Detected nonstandard mirror fetch refspec pruning the absent-remote local branch pointer; proved all 18 uncommitted candidate files remain recoverable and match complete expected blobs | None |
 | CR-025 | Dangling-HEAD recovery review | Assistant/Parent review lane | approximately 3 minutes measured | `LOCAL_REF_RECOVERY_SAFE` | Classified the failure as local Git metadata loss, not content loss; defined exact-base ref restoration and explicit fetch-back rules without reconstructing source | None |
+| CR-026 | Local-ref recovery and candidate-publication prompt | Assistant/Parent review lane | approximately 5 minutes measured | `RECOVERY_AND_PUBLICATION_READY` | Published a continuation that atomically restores only the missing local ref, verifies all 18 complete blobs, prohibits destructive prune-fetch behavior, applies the one-file frontend correction, revalidates and publishes both candidates plus combined evidence | Runner prompt only |
 
 ## 5. Current cumulative telemetry
 
 ```text
 LOCAL_CODEX_ACTIVE_TIME = 3 hours 6 minutes 19.255 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 18 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 30 minutes 15.255 seconds
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 23 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 35 minutes 15.255 seconds
 LOCAL_CODEX_RUNS = 9
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 15
+ASSISTANT_REVIEW_CYCLES = 16
 BLOCKER_CYCLES = 5
 BLOCKERS_CLOSED = 2
-RUNNER_PROMPTS_PUBLISHED = 11
+RUNNER_PROMPTS_PUBLISHED = 12
 RUNNER_PROMPTS_EXECUTED = 9
 IMPLEMENTATION_RUNS = 4
 CORRECTION_IMPLEMENTATION_RUNS = 0
@@ -142,7 +143,7 @@ GATE_A_RESULT =
 PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Parent authorizes recreation of the missing local backend ref at exact base da1d19d…, forbids broad prune fetches, then resumes one-file frontend correction, revalidation and candidate publication
+Execute the local-ref recovery prompt in the same preserved runner environment; verify all complete blobs, revalidate and publish both correction candidates plus combined evidence, then stop before Gate A V4
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
