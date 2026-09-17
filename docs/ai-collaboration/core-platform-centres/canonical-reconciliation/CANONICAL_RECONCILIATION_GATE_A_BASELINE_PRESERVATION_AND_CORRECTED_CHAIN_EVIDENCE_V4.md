@@ -251,6 +251,15 @@ invocation exercised repository-wide Prettier and reported 784 historical
 formatting findings; Gate A's mandatory backend command is `npm run lint:eslint`,
 which passed. No tracked file changed. Neither diagnostic is a product gate failure.
 
+The checked-in Playwright evidence generators were not claimed or executed as
+browser acceptance in this run. They require a coordinated locally seeded backend,
+frontend, module-specific fixture manifests/passwords, writable evidence locations,
+and an explicitly configured browser executable; that integrated browser fixture
+environment was not provisioned by Gate A V4. Responsive, keyboard/focus, route,
+guard, component, and accessibility assertions available in the repository-defined
+Vitest/Jest suites did run and pass. The integrated-browser proof remains an
+explicit later whole-application gate and is not silently converted into a pass.
+
 ## 6. Migration validation
 
 ### Inventory
