@@ -78,24 +78,26 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-018 | Gate A backend regression read-only diagnostic | External Local Codex | 11 minutes 44.179 seconds | `MIXED_CORRECTION_REQUIRED` | Reproduced all 11 failures, classified ten as stronger test rescoping and one as real Instagram DI composition overexposure; mapped all corrections to existing authority | None |
 | CR-019 | Diagnostic Parent review and correction-boundary assessment | Assistant/Parent review lane | approximately 5 minutes measured | `BOUNDED_CORRECTION_READY_FOR_AUTHORIZATION` | Confirmed no Product/schema/frontend change; correction requires a new immutable backend technical checkpoint and authority acceptance without rewriting the accepted historical target | None |
 | CR-020 | Backend boundary-correction implementation prompt publication | Assistant/Parent review lane | approximately 7 minutes measured | `CORRECTION_IMPLEMENTATION_READY` | Published an exact 18-path correction prompt covering stronger test contracts, narrow/wide Instagram DI separation, full backend/database/frontend validation, immutable candidate publication and Parent-review stop | Runner prompt only |
+| CR-021 | Backend boundary correction implementation and validation | External Local Codex | 1 hour 9 minutes 48.101 seconds | `CIRCUIT_BREAKER` | Implemented exact 18-path candidate; passed 83 focused and 7,240 full backend tests, clean/populated migrations and frontend typecheck/tests/build; stopped before commit because immutable frontend target has one pre-existing unused-import lint error | None; validated backend candidate remains uncommitted locally |
+| CR-022 | Frontend lint blocker review | Assistant/Parent review lane | approximately 4 minutes measured | `ONE_FILE_FRONTEND_CORRECTION_REQUIRED` | Verified PUBLIC_ROUTES is imported but never used in CampaignDetailWorkspace; classified as a semantics-neutral one-line lint correction while preserving the validated backend candidate | None |
 
 ## 5. Current cumulative telemetry
 
 ```text
-LOCAL_CODEX_ACTIVE_TIME = 1 hour 54 minutes 21.280 seconds
+LOCAL_CODEX_ACTIVE_TIME = 3 hours 4 minutes 9.381 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 6 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 3 hours 6 minutes 17.280 seconds
-LOCAL_CODEX_RUNS = 7
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 10 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 20 minutes 5.381 seconds
+LOCAL_CODEX_RUNS = 8
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 12
-BLOCKER_CYCLES = 3
+ASSISTANT_REVIEW_CYCLES = 13
+BLOCKER_CYCLES = 4
 BLOCKERS_CLOSED = 2
 RUNNER_PROMPTS_PUBLISHED = 10
-RUNNER_PROMPTS_EXECUTED = 7
-IMPLEMENTATION_RUNS = 2
+RUNNER_PROMPTS_EXECUTED = 8
+IMPLEMENTATION_RUNS = 3
 CORRECTION_IMPLEMENTATION_RUNS = 0
-RUNTIME_VALIDATION_RUNS = 3
+RUNTIME_VALIDATION_RUNS = 4
 CANONICAL_RUNTIME_REPOSITORY_MUTATIONS = 0
 AUTHORITY_DOCS_CHANGED = 1
 ```
@@ -115,7 +117,7 @@ commit 346ae2a5ec58506870036db832223c996311fc29
 blob c9e0343794aad4a46e27882b58b98381dd4c9dcf
 
 CURRENT_BLOCKER_SOURCE =
-Accepted backend target fails 11 checked-in tests across shared Intelligence registry, Creator Home migration ownership, Instagram provider/module wiring, C04 securement vocabulary and Creator role/action expectations
+Immutable frontend target has one pre-existing lint error: unused PUBLIC_ROUTES import in src/features/creator-campaigns/components/CampaignDetailWorkspace.tsx
 
 CLOSED_RUNTIME_INFRASTRUCTURE_BLOCKER =
 Missing authorized deterministic populated migration-94 fixture for the independent 94→106 PostgreSQL upgrade proof
@@ -137,7 +139,7 @@ GATE_A_RESULT =
 PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Execute the bounded backend correction prompt, publish the immutable candidate and implementation evidence, then stop for Parent review before Gate A V4
+Authorize a one-file semantics-neutral frontend lint correction while preserving the exact validated 18-path backend candidate; revalidate and publish both correction checkpoints plus combined evidence, then stop before Gate A V4
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
