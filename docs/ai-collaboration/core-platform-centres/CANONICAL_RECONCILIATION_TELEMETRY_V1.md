@@ -81,22 +81,24 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-021 | Backend boundary correction implementation and validation | External Local Codex | 1 hour 9 minutes 48.101 seconds | `CIRCUIT_BREAKER` | Implemented exact 18-path candidate; passed 83 focused and 7,240 full backend tests, clean/populated migrations and frontend typecheck/tests/build; stopped before commit because immutable frontend target has one pre-existing unused-import lint error | None; validated backend candidate remains uncommitted locally |
 | CR-022 | Frontend lint blocker review | Assistant/Parent review lane | approximately 4 minutes measured | `ONE_FILE_FRONTEND_CORRECTION_REQUIRED` | Verified PUBLIC_ROUTES is imported but never used in CampaignDetailWorkspace; classified as a semantics-neutral one-line lint correction while preserving the validated backend candidate | None |
 | CR-023 | Correction-candidate resume/publication prompt | Assistant/Parent review lane | approximately 5 minutes measured | `RESUME_AND_PUBLISH_READY` | Published a continuation prompt that cryptographically gates the preserved backend worktree, permits one frontend unused-import correction, revalidates both repos, publishes both candidates and combined evidence, and stops before Gate A V4 | Runner prompt only |
+| CR-024 | Correction candidate continuation preflight | External Local Codex | 2 minutes 9.874 seconds | `CIRCUIT_BREAKER` | Detected nonstandard mirror fetch refspec pruning the absent-remote local branch pointer; proved all 18 uncommitted candidate files remain recoverable and match complete expected blobs | None |
+| CR-025 | Dangling-HEAD recovery review | Assistant/Parent review lane | approximately 3 minutes measured | `LOCAL_REF_RECOVERY_SAFE` | Classified the failure as local Git metadata loss, not content loss; defined exact-base ref restoration and explicit fetch-back rules without reconstructing source | None |
 
 ## 5. Current cumulative telemetry
 
 ```text
-LOCAL_CODEX_ACTIVE_TIME = 3 hours 4 minutes 9.381 seconds
+LOCAL_CODEX_ACTIVE_TIME = 3 hours 6 minutes 19.255 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 15 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 25 minutes 5.381 seconds
-LOCAL_CODEX_RUNS = 8
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 18 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 30 minutes 15.255 seconds
+LOCAL_CODEX_RUNS = 9
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 14
-BLOCKER_CYCLES = 4
+ASSISTANT_REVIEW_CYCLES = 15
+BLOCKER_CYCLES = 5
 BLOCKERS_CLOSED = 2
 RUNNER_PROMPTS_PUBLISHED = 11
-RUNNER_PROMPTS_EXECUTED = 8
-IMPLEMENTATION_RUNS = 3
+RUNNER_PROMPTS_EXECUTED = 9
+IMPLEMENTATION_RUNS = 4
 CORRECTION_IMPLEMENTATION_RUNS = 0
 RUNTIME_VALIDATION_RUNS = 4
 CANONICAL_RUNTIME_REPOSITORY_MUTATIONS = 0
@@ -118,7 +120,7 @@ commit 346ae2a5ec58506870036db832223c996311fc29
 blob c9e0343794aad4a46e27882b58b98381dd4c9dcf
 
 CURRENT_BLOCKER_SOURCE =
-Immutable frontend target has one pre-existing lint error: unused PUBLIC_ROUTES import in src/features/creator-campaigns/components/CampaignDetailWorkspace.tsx
+Backend local correction branch pointer was pruned by nonstandard +refs/*:refs/* fetch mapping; dangling HEAD remains while all 18 candidate file contents are preserved and verified
 
 CLOSED_RUNTIME_INFRASTRUCTURE_BLOCKER =
 Missing authorized deterministic populated migration-94 fixture for the independent 94→106 PostgreSQL upgrade proof
@@ -140,7 +142,7 @@ GATE_A_RESULT =
 PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Execute the resume-and-publish prompt in the same local runner environment; verify the preserved backend candidate, apply the one-file frontend lint correction, publish both candidates and combined evidence, then stop before Gate A V4
+Parent authorizes recreation of the missing local backend ref at exact base da1d19d…, forbids broad prune fetches, then resumes one-file frontend correction, revalidation and candidate publication
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
