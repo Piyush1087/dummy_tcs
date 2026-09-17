@@ -84,24 +84,26 @@ The runner must also separate inspection, implementation, dependency installatio
 | CR-024 | Correction candidate continuation preflight | External Local Codex | 2 minutes 9.874 seconds | `CIRCUIT_BREAKER` | Detected nonstandard mirror fetch refspec pruning the absent-remote local branch pointer; proved all 18 uncommitted candidate files remain recoverable and match complete expected blobs | None |
 | CR-025 | Dangling-HEAD recovery review | Assistant/Parent review lane | approximately 3 minutes measured | `LOCAL_REF_RECOVERY_SAFE` | Classified the failure as local Git metadata loss, not content loss; defined exact-base ref restoration and explicit fetch-back rules without reconstructing source | None |
 | CR-026 | Local-ref recovery and candidate-publication prompt | Assistant/Parent review lane | approximately 5 minutes measured | `RECOVERY_AND_PUBLICATION_READY` | Published a continuation that atomically restores only the missing local ref, verifies all 18 complete blobs, prohibits destructive prune-fetch behavior, applies the one-file frontend correction, revalidates and publishes both candidates plus combined evidence | Runner prompt only |
+| CR-027 | Local-ref recovery, correction revalidation and candidate publication | External Local Codex | 28 minutes 21.621 seconds | `READY_FOR_PARENT_REVIEW` | Restored local ref, revalidated 18-file backend candidate and one-file frontend correction, published both immutable candidates and combined evidence with exact fetch-back | Backend/frontend correction branches plus one authority evidence document |
+| CR-028 | Correction-candidate Parent review and independent GitHub verification | Assistant/Parent review lane | approximately 5 minutes measured | `PARENT_ACCEPTANCE_RECOMMENDED` | Independently verified sole-parent topology, exact 18/1/1 path boundaries, evidence blob, frontend semantic diff, and narrow/wide Instagram module separation | None |
 
 ## 5. Current cumulative telemetry
 
 ```text
-LOCAL_CODEX_ACTIVE_TIME = 3 hours 6 minutes 19.255 seconds
+LOCAL_CODEX_ACTIVE_TIME = 3 hours 34 minutes 40.876 seconds
 ORCHESTRATOR_CORRECTION_TIME = 5 minutes 56 seconds
-ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 23 minutes
-KNOWN_ACTIVE_TIME_TOTAL = approximately 4 hours 35 minutes 15.255 seconds
-LOCAL_CODEX_RUNS = 9
+ASSISTANT_REVIEW_ACTIVE_TIME = approximately 1 hour 28 minutes
+KNOWN_ACTIVE_TIME_TOTAL = approximately 5 hours 8 minutes 36.876 seconds
+LOCAL_CODEX_RUNS = 10
 ORCHESTRATOR_CORRECTION_CYCLES = 1
-ASSISTANT_REVIEW_CYCLES = 16
+ASSISTANT_REVIEW_CYCLES = 17
 BLOCKER_CYCLES = 5
-BLOCKERS_CLOSED = 2
+BLOCKERS_CLOSED = 5
 RUNNER_PROMPTS_PUBLISHED = 12
-RUNNER_PROMPTS_EXECUTED = 9
-IMPLEMENTATION_RUNS = 4
+RUNNER_PROMPTS_EXECUTED = 10
+IMPLEMENTATION_RUNS = 5
 CORRECTION_IMPLEMENTATION_RUNS = 0
-RUNTIME_VALIDATION_RUNS = 4
+RUNTIME_VALIDATION_RUNS = 5
 CANONICAL_RUNTIME_REPOSITORY_MUTATIONS = 0
 AUTHORITY_DOCS_CHANGED = 1
 ```
@@ -121,7 +123,7 @@ commit 346ae2a5ec58506870036db832223c996311fc29
 blob c9e0343794aad4a46e27882b58b98381dd4c9dcf
 
 CURRENT_BLOCKER_SOURCE =
-Backend local correction branch pointer was pruned by nonstandard +refs/*:refs/* fetch mapping; dangling HEAD remains while all 18 candidate file contents are preserved and verified
+NONE — backend and frontend correction candidates are published, fetch-back verified, and independently reviewed; durable Parent acceptance publication is pending
 
 CLOSED_RUNTIME_INFRASTRUCTURE_BLOCKER =
 Missing authorized deterministic populated migration-94 fixture for the independent 94→106 PostgreSQL upgrade proof
@@ -143,7 +145,7 @@ GATE_A_RESULT =
 PRIOR ATTEMPT CIRCUIT_BREAKER BEFORE BRANCH CREATION
 
 NEXT_ACTION =
-Execute the local-ref recovery prompt in the same preserved runner environment; verify all complete blobs, revalidate and publish both correction candidates plus combined evidence, then stop before Gate A V4
+Publish immutable Parent acceptance of backend b14afa38… and frontend bdd03e03… as the superseding Gate A targets, then prepare Gate A V4
 
 READ_ONLY_PREFLIGHT_RESULT =
 PREFLIGHT_READY
