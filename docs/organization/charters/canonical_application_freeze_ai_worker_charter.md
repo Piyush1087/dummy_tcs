@@ -482,9 +482,11 @@ If the batch does not affect user-facing routes or the established final-gate sc
 
 If the batch affects shared shell, auth, routing, collaboration, payouts, campaign workflow or intelligence presentation used by the established matrix, update/reuse the final-gate harness and run the affected representative set followed by the required complete matrix.
 
-## 19. Pattern-level recovery and bounded retry policy
+## 19. Pattern-level recovery and Parent-reporting boundary
 
-The original reconciliation was slowed by one-defect-per-turn handling. This charter replaces it with bounded resilient recovery.
+The original reconciliation was slowed by shallow readiness checks and one-defect-per-turn reporting. Later execution improved when the worker inspected the localized environment more deeply, corrected execution-owned defects within authority and continued without returning every mechanical failure to the Parent.
+
+This charter makes that implemented approach the standing rule. It does not impose a universal numerical retry limit that has not been operationally validated.
 
 Classify failures as:
 
@@ -512,16 +514,9 @@ Stop immediately for:
 - production-data ambiguity;
 - live provider action outside authority.
 
-### 19.2 Authorized self-recovery
+### 19.2 Authorized local recovery
 
-Within the exact allowlist, the Local Codex worker may perform up to:
-
-```text
-TWO CORRECTIONS PER DEFECT FAMILY
-THREE TOTAL RECOVERY ITERATIONS PER RUN
-```
-
-for proven:
+Within the exact allowlist, the Local Codex worker should diagnose, correct and resume automatically for proven:
 
 - selector/harness defects;
 - validation fixture or audit defects;
@@ -529,14 +524,25 @@ for proven:
 - repository-local Git identity/ref/publication mechanics;
 - task-owned disposable infrastructure failures.
 
-After the second similar failure, do not patch only the next instance. Perform a dedicated pattern inspection across the localized environment and harness, correct the detected family, then rerun focused acceptance.
+These recoveries do not require an intermediate Parent response when all of the following remain true:
 
-If the third recovery iteration fails, stop for Parent review with:
+- the root cause is inside the worker's execution-owned surface;
+- the correction stays within the authorized path and behavior allowlist;
+- Product, architecture, authorization, schema, migration and provider meaning remain unchanged;
+- no protected checkpoint or production/shared resource is at risk;
+- the candidate and evidence remain reproducible.
 
-- corrections attempted;
+After a repeated or related failure, do not patch only the next visible symptom. Pause the expensive gate, inspect the localized defect family across the relevant harness, fixture, selectors, commands, Git mechanics or disposable runtime, correct the demonstrated pattern and rerun focused acceptance before resuming.
+
+A prompt may define a risk-based recovery budget for a particular run, but this charter does not prescribe a fixed number of retries or corrections. The worker must stop when continued recovery would require broader authority, create material uncertainty, risk protected state or cease to be cost-effective.
+
+When Parent review is genuinely required, return:
+
+- corrections attempted and their results;
 - affected family;
 - evidence of the pattern audit;
 - exact remaining blocker;
+- why further local recovery is unsafe or outside authority;
 - preserved candidate state.
 
 ### 19.3 Rerun policy
@@ -545,6 +551,7 @@ If the third recovery iteration fails, stop for Parent review with:
 - A partial complete matrix is diagnostic only.
 - After any application, fixture or harness change that can affect matrix results, the authoritative complete matrix restarts from its beginning.
 - Do not restart the complete matrix until the representative gate and pattern audit pass.
+- Record how many complete-matrix starts occurred and which defect caused each restart.
 
 ## 20. Standard isolated Git publication runner
 
@@ -805,7 +812,7 @@ LIVE_PROVIDER_ACTION_REQUIRED
 AWS_CHANGE_REQUIRED
 ```
 
-Harness, fixture, runner, Git-publication and task-owned infrastructure defects follow the bounded recovery policy before Parent escalation.
+Harness, fixture, runner, Git-publication and task-owned infrastructure defects follow the authorized local-recovery and Parent-reporting boundary before escalation.
 
 ## 30. Prohibited shortcuts
 
